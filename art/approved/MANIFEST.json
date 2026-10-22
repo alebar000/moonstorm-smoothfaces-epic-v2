@@ -1,1 +1,30 @@
-{"pieces": {}, "superseded": [], "applied_reviews": []}
+{
+  "pieces": {
+    "palette.characters": {
+      "path": "art/approved/palette/palette.characters.png",
+      "version": "v1",
+      "sha256": "81bec3c456284f86323464940a9916aac33529432e513c19902a5c4bff5782e1",
+      "category": "palette",
+      "kind": "ui",
+      "meta": "art/candidates/palette.characters/meta.json",
+      "approved_at": "2026-10-21T21:26:19",
+      "reason": ""
+    },
+    "palette.scenery": {
+      "path": "art/approved/palette/palette.scenery.png",
+      "version": "v3",
+      "sha256": "698906255fc56dc906cdc4f8ce052c9d6e2c72297130ff8510eb992757bbe089",
+      "category": "palette",
+      "kind": "ui",
+      "meta": "art/candidates/palette.scenery/meta.json",
+      "approved_at": "2026-10-21T21:38:16",
+      "reason": ""
+    }
+  },
+  "superseded": [],
+  "applied_reviews": [
+    "palette.characters@v1@approved@2026-10-21T21:26:19",
+    "palette.scenery@v1@rejected@2026-10-21T21:27:18",
+    "palette.scenery@v3@approved@2026-10-21T21:38:16"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "id": "palette.characters",
+  "category": "palette",
+  "kind": "ui",
+  "what": "4 Smoothface canon (#f9ecc2, #323232, #717171, #000000) + 8 k-means Aguilar +10% sat (#613e35, #004b81, #343e63, #9e1507, #9c793a, #e7bc57, #0c7a27, #848aa4)",
+  "hex_list": [
+    "#f9ecc2",
+    "#323232",
+    "#717171",
+    "#000000",
+    "#613e35",
+    "#004b81",
+    "#343e63",
+    "#9e1507",
+    "#9c793a",
+    "#e7bc57",
+    "#0c7a27",
+    "#848aa4"
+  ],
+  "target_height_px": null,
+  "height_fraction_of_smoothface": null,
+  "allowed_islands": 0,
+  "references": [
+    "art/references/ref_design_smoothface.png",
+    "art/references/ref_design_capdread.png"
+  ],
+  "versions": {
+    "v1": "k-means k=8 (+10% sat) on Aguilar colored art + 4 Smoothface canon fixed slots"
+  },
+  "status": "approved",
+  "proposed_version": "v1",
+  "approved_version": "v1"
+}

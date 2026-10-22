@@ -1,0 +1,25 @@
+{
+  "reviews": [
+    {
+      "id": "palette.characters",
+      "version": "v1",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-21T21:26:19"
+    },
+    {
+      "id": "palette.scenery",
+      "version": "v1",
+      "verdict": "rejected",
+      "reason": "Me hacen falta algunos colores unos 4 colores un poquito más claros y brillantes, talvez amarilloish, rojoish, y algunos azulitos. Está todo muy lúgubre. Recuerda que también tenemos circos y otros escenarios raros.",
+      "ts": "2026-10-21T21:27:18"
+    },
+    {
+      "id": "palette.scenery",
+      "version": "v3",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-21T21:38:16"
+    }
+  ]
+}

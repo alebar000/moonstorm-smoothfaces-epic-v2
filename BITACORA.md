@@ -52,4 +52,86 @@ se editan entradas anteriores (si algo cambió, nueva entrada que lo diga).
    - Ejecutado `npm install`; verificado `npx tsc --noEmit` y `npx vite build` con 0 errores.
    - Publicado en el repositorio privado nuevo `https://github.com/alebar000/moonstorm-smoothfaces-epic-v2.git` (rama `main`) y sincronizado también en `C:\AntiGravityStuff\Moonstorm2`.
 
+---
+
+## 2026-10-21 21:15 · Cambio manual de referencia `ref_room_z1s3_2010.png`
+
+- `pipeline/collect_references.py` había elegido `recovered/images/Z1S3-substampede_captainroom.png` (boceto en blanco y negro del 20-ago-2010, 98.9 % escala de grises y 1.1 % rectángulo guía rosado) porque su ruta era más corta que la del PSD coloreado del 26-oct-2010.
+- Por instrucción de Alex, se reemplazó `art/references/ref_room_z1s3_2010.png` a mano por `dr_stache_art/psd_composites/psd_2010-10-26_aguilar_Z1S3-substampede_captainroom_WIP_composite.jpg` convertido a PNG con el mismo nombre y marcado de solo lectura.
+
+### 2026-10-21 21:15 · palette.characters · v1
+- prompt: n/a (k-means k=8 con +10 % saturación sobre las 5 piezas coloreadas de Aguilar + 4 slots fijos Smoothface canon)
+- refs: dr_stache_art/psd_layers/smoothface-cutout003/*, dr_stache_art/email/email_2010-05-24_aguilar_stache004.png, dr_stache_art/email/email_2010-05-25_aguilar_stache004d.PNG, dr_stache_art/email/email_2010-07-01_aguilar_Ecstasy_of_Gold.png, dr_stache_art/email/email_2010-07-01_aguilar_Black_Hole_Sun.png, dr_stache_art/psd_composites/psd_2010-06-22_aguilar_test-cutout_composite.jpg
+- gates: n/a (lote P0 de extracción de paleta)
+- style-critic: n/a
+- anatomy-critic: n/a
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-21 21:15 · palette.scenery · v1
+- prompt: n/a (k-means k=12 con -25 % saturación sobre ref_room_z1s3_2010.png excluyendo blanco de papel y tinta)
+- refs: art/references/ref_room_z1s3_2010.png (de dr_stache_art/psd_composites/psd_2010-10-26_aguilar_Z1S3-substampede_captainroom_WIP_composite.jpg)
+- gates: n/a (lote P0 de extracción de paleta)
+- style-critic: n/a
+- anatomy-critic: n/a
+- estado: proposed
+- Alex: pendiente
+
+## 2026-10-21 · sesión 1 · lote P0
+- generadas: 2 · pasaron gates: n/a · pasaron críticos: n/a · en hoja: 2 · detenidas: 0
+- detenidas: ninguna
+- cambios a layout/: ninguno
+- cambios a src/: ninguno
+- cambios a pipeline/palette.json: ninguno (sigue en `"status": "provisional"`)
+- backlog: ninguna
+- siguiente lote propuesto: L0 (una vez que Alex apruebe `palette.characters` y `palette.scenery` y se actualice `pipeline/palette.json`)
+
+---
+
+### 2026-10-21 21:28 · veredicto · palette.characters v1 · approved
+- Alex: ""
+- acción: copiado a art/approved/palette/palette.characters.png (SHA-256 registrado en art/approved/MANIFEST.json)
+- calibración: no aplica
+
+### 2026-10-21 21:28 · veredicto · palette.scenery v1 · rejected
+- Alex: "Me hacen falta algunos colores unos 4 colores un poquito más claros y brillantes, talvez amarilloish, rojoish, y algunos azulitos. Está todo muy lúgubre. Recuerda que también tenemos circos y otros escenarios raros."
+- acción: movido a art/rejected/palette.scenery_v1/ ; siguiente versión v2 con FIX: muestreo balanceado por capas de escenario de 2010 (Z1S3 capas + Spook Castle + Desert) con deduplicación en Lab (min_dist >= 24) y -25 % saturación para incluir amarillos, rojizos y azules sin repetir marrones/grises
+- calibración: no aplica
+
+### 2026-10-21 21:30 · palette.scenery · v2
+- prompt: n/a (k-means k=28 con deduplicación perceptual en Lab min_dist>=24 a 12 colores y -25 % saturación sobre capas de Z1S3 + Spook Castle + Desert, total 24,500 px muestreados)
+- refs: art/references/ref_room_z1s3_2010.png, dr_stache_art/psd_layers/Z1S3-substampede_captainroom_WIP/002_scenery_beta.png, dr_stache_art/psd_layers/Z1S3-substampede_captainroom_WIP/005_sarco.png, dr_stache_art/psd_layers/Z1S3-substampede_captainroom_WIP/006_hanger.png, dr_stache_art/psd_layers/test-spook_castle/027_towers.png, dr_stache_art/psd_composites/psd_2010-06-23_morales_test-spook_castle_composite.jpg, dr_stache_art/psd_composites/psd_2010-06-23_morales_test-desert_foreign_legion_composite.jpg
+- gates: n/a (lote P0 de extracción de paleta)
+- style-critic: n/a
+- anatomy-critic: n/a
+- estado: rejected
+- Alex: "Estoy de acuerdo, pero podemos talvez mutear un pcoo los colores de fondo, para que no se vean tan vividos como los de personajes"
+
+### 2026-10-21 21:33 · palette.scenery · v3
+- prompt: n/a (mismos 12 centroides de v2 con saturación muteada S * 0.65, tope S <= 0.42 y V <= 0.84 para papel envejecido de fondo)
+- refs: art/references/ref_room_z1s3_2010.png, dr_stache_art/psd_layers/Z1S3-substampede_captainroom_WIP/002_scenery_beta.png, dr_stache_art/psd_layers/Z1S3-substampede_captainroom_WIP/005_sarco.png, dr_stache_art/psd_layers/Z1S3-substampede_captainroom_WIP/006_hanger.png, dr_stache_art/psd_layers/test-spook_castle/027_towers.png, dr_stache_art/psd_composites/psd_2010-06-23_morales_test-spook_castle_composite.jpg, dr_stache_art/psd_composites/psd_2010-06-23_morales_test-desert_foreign_legion_composite.jpg
+- gates: n/a (lote P0 de extracción de paleta)
+- style-critic: n/a
+- anatomy-critic: n/a
+- estado: approved
+- Alex: ""
+
+### 2026-10-21 21:38 · veredicto · palette.scenery v3 · approved
+- Alex: ""
+- acción: copiado a art/approved/palette/palette.scenery.png (SHA-256 registrado en art/approved/MANIFEST.json) y actualizado pipeline/palette.json con las dos paletas aprobadas y `"status": "approved"`
+- calibración: no aplica
+
+## 2026-10-21 · cierre sesión 1 · lote P0
+- generadas: 4 (palette.characters v1, palette.scenery v1, v2, v3) · pasaron gates: n/a · pasaron críticos: n/a · aprobadas: 2 (`palette.characters` v1, `palette.scenery` v3) · detenidas: 0
+- detenidas: ninguna
+- cambios a layout/: ninguno
+- cambios a src/: ninguno
+- cambios a pipeline/palette.json: actualizado con los 12 hex aprobados de `characters`, los 12 hex aprobados de `scenery` y `"status": "approved"`
+- backlog: ninguna
+- siguiente lote propuesto: L0 (`smoothface.torso`, `z1s3.prop.sarcophagus`, `z1s3.wall.panel_a`)
+
+
+
+
+
 

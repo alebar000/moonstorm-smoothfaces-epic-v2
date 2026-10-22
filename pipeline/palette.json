@@ -1,38 +1,38 @@
 {
-  "_comment": "Dos paletas: personajes (viva, saturada) y escenario (apagada, envejecida). Tinta y lápiz son comunes. Los hex de abajo son PROVISIONALES de ejemplo: en la sesión 1 el agente extrae los reales de las referencias, Alex los aprueba en la mesa de luz, y status pasa a 'approved'. Mientras sea 'provisional' el gate de paleta reporta pero no rechaza.",
-  "status": "provisional",
+  "_comment": "Dos paletas: personajes (4 canon Smoothface + 8 k-means Aguilar con +10% sat) y escenario (12 k-means 2010 con saturacion muteada S<=0.42). Tinta y lapiz son comunes. Aprobadas por Alex en el lote P0 (2026-10-21).",
+  "status": "approved",
   "common": {
     "ink_black":   "#1a1612",
     "pencil_grey": "#6e6a62"
   },
   "palettes": {
     "characters": {
-      "coat_crimson": "#b3202a",
-      "coat_shadow":  "#7d1420",
-      "skin_warm":    "#e8b386",
-      "skin_shadow":  "#c98a5e",
-      "brass_bright": "#e2b53a",
-      "navy":         "#243b6e",
-      "teal_bright":  "#2f8f8c",
-      "paper_white":  "#f6f1e4",
-      "mustard":      "#d9a21b",
-      "forest":       "#3a7a3f",
-      "violet":       "#6b3f8f",
-      "orange":       "#e2702a"
+      "sf_skin_cream": "#f9ecc2",
+      "sf_coat_grey":  "#323232",
+      "sf_pants_grey": "#717171",
+      "sf_shoe_black": "#000000",
+      "char_brown":    "#613e35",
+      "char_blue":     "#004b81",
+      "char_navy":     "#343e63",
+      "char_crimson":  "#9e1507",
+      "char_ochre":    "#9c793a",
+      "char_gold":     "#e7bc57",
+      "char_green":    "#0c7a27",
+      "char_slate":    "#848aa4"
     },
     "scenery": {
-      "hull_rust":    "#8a5a44",
-      "hull_rust_dk": "#5e3a2c",
-      "iron_grey":    "#6f6f6a",
-      "iron_dark":    "#4a4a46",
-      "wood_warm":    "#8c6a44",
-      "wood_dark":    "#5c4330",
-      "brass_old":    "#a88a4a",
-      "teal_faded":   "#5f8582",
-      "cream_aged":   "#d9ceb2",
-      "olive_shade":  "#5a5a40",
-      "sea_glass":    "#7fa3a6",
-      "maroon_faded": "#7d4a4a"
+      "scen_brass":     "#ab986e",
+      "scen_brick_red": "#9c5a5c",
+      "scen_sky_blue":  "#95b3d4",
+      "scen_iron_dark": "#2a2922",
+      "scen_hull_rust": "#605752",
+      "scen_warm_sand": "#c6a787",
+      "scen_slate":     "#728289",
+      "scen_wood":      "#998370",
+      "scen_navy":      "#4a697f",
+      "scen_coral":     "#d67c7c",
+      "scen_yellow":    "#d6d27c",
+      "scen_cream":     "#cbc2c2"
     }
   },
   "kind_to_palette": {

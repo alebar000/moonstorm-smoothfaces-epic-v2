@@ -1,0 +1,38 @@
+{
+  "id": "palette.scenery",
+  "category": "palette",
+  "kind": "ui",
+  "what": "12 k-means escenario v3 (mismos 12 tonos de v2, saturacion muteada S<=0.42 y V<=0.84): #ab986e, #9c5a5c, #95b3d4, #2a2922, #605752, #c6a787, #728289, #998370, #4a697f, #d67c7c, #d6d27c, #cbc2c2",
+  "hex_list": [
+    "#ab986e",
+    "#9c5a5c",
+    "#95b3d4",
+    "#2a2922",
+    "#605752",
+    "#c6a787",
+    "#728289",
+    "#998370",
+    "#4a697f",
+    "#d67c7c",
+    "#d6d27c",
+    "#cbc2c2"
+  ],
+  "target_height_px": null,
+  "height_fraction_of_smoothface": null,
+  "allowed_islands": 0,
+  "references": [
+    "art/references/ref_room_z1s3_2010.png"
+  ],
+  "versions": {
+    "v1": "k-means k=12 (-25% sat) on ref_room_z1s3_2010.png (Z1S3 WIP composite)",
+    "v2": "k-means k=28 -> 12 Lab-deduplicated (min_dist>=24, -25% sat) across Z1S3 layers + Spook Castle + Desert",
+    "v3": "v2 centroids muted further (S * 0.65, capped S <= 0.42, V <= 0.84) so scenery stays behind characters"
+  },
+  "status": "approved",
+  "proposed_version": "v3",
+  "last_rejection": {
+    "version": "v1",
+    "reason": "Me hacen falta algunos colores unos 4 colores un poquito más claros y brillantes, talvez amarilloish, rojoish, y algunos azulitos. Está todo muy lúgubre. Recuerda que también tenemos circos y otros escenarios raros."
+  },
+  "approved_version": "v3"
+}
