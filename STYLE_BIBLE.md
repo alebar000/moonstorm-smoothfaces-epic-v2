@@ -1,4 +1,4 @@
-# STYLE_BIBLE.md - Estilo visual congelado de Smoothface's Epic
+# STYLE_BIBLE.md — Estilo visual congelado de Smoothface's Epic
 
 Este archivo lo edita solo Alex. El agente lo lee en cada sesión y lo adjunta
 (junto con las imágenes de `art/references/`) a cada llamada al generador y a
@@ -6,77 +6,114 @@ cada crítico. Si una regla de aquí entra en conflicto con lo que "se ve
 mejor", gana la regla: el objetivo es que todo parezca hecho por la misma
 mano, no que cada pieza sea la más bonita posible.
 
-Las partes entre `[[ ]]` las completa Alex antes de la primera sesión.
-Mientras haya un `[[ ]]` sin llenar, no se genera nada.
+Decisiones tomadas por Alex el 2026-10-21. No hay huecos pendientes; las
+paletas se aprueban en la sesión 1 (ver §3).
 
 ---
 
-## 1. Las referencias (la verdad, por encima de cualquier adjetivo)
+## 1. Las dos fuentes, y qué aporta cada una
 
-Copiar en `art/references/` y nombrar exactamente así:
+- **Diseño: los bocetos a lápiz de José David Aguilar (xygvot).** Qué es cada
+  personaje, qué ropa lleva, qué proporciones, qué cara. Un boceto define el
+  *qué*; si el boceto tiene tricornio, hay tricornio.
+- **Construcción: la idea del cutout de Cristián Morales
+  (`smoothface-cutout003.psd`).** Cada parte del cuerpo es una pieza de papel
+  independiente, recortada con tijera y articulada. Esa idea es la correcta.
+  El acabado exacto de ese PSD no es la referencia de acabado; la referencia
+  de acabado es la descripción de §2 y el hero asset que Alex apruebe en L0.
 
-| archivo | qué es | para qué se usa |
+Referencias en `art/references/`, con estos nombres exactos:
+
+| archivo | qué es | se adjunta cuando |
 |---|---|---|
-| `ref_hero_smoothface_flat.png` | `smoothface-cutout003.psd` aplanado, de Cristián Morales | referencia maestra de estilo: tinta, papel, sombra, color |
-| `ref_hero_smoothface_layers/` | las capas del mismo PSD como PNG sueltos | plantilla de silueta y de despiece del rig |
-| `ref_room_z1s3_2010.png` | `Z1S3-substampede_captainroom.psd` aplanado | referencia de cómo se pinta un cuarto en este estilo |
-| `ref_sketch_capdread.png` | `capdread001.png` de José David Aguilar | diseño del personaje (no el estilo de acabado) |
-| `ref_sketch_[[otro]].png` | [[boceto adicional si hace falta]] | diseño |
-| `ref_gui_aguilar.jpg` | `GUImu003.jpg` | diseño de interfaz |
-| `ref_palette.png` | [[muestra de 12 colores recortada de las referencias]] | paleta; también en `pipeline/palette.json` |
+| `ref_design_smoothface.png` | boceto de Smoothface de Aguilar (o `smoothSplash.png` de LolDemo1) | se genera Smoothface |
+| `ref_design_capdread.png` | `capdread001.png` | se genera Captain Dread |
+| `ref_cutout_layers/` | capas de `smoothface-cutout003.psd` como PNG sueltos | se genera cualquier parte de cuerpo (plantilla de despiece y de silueta) |
+| `ref_room_z1s3_2010.png` | `Z1S3-substampede_captainroom.psd` aplanado | se genera escenario de Z1S3 (composición, no acabado) |
+| `ref_gui_aguilar.jpg` | `GUImu003.jpg` | se genera UI |
+| `ref_hero_*.png` | **se crea en L0**: el torso, el sarcófago y el panel aprobados por Alex, copiados aquí | siempre, desde L1 |
 
-Regla de oro para prompts: las referencias de **estilo** (fila 1–3) van en
-toda llamada. Las de **diseño** (bocetos) van solo cuando se genera ese
-personaje o esa interfaz. Un boceto a lápiz define *qué* es el personaje;
-nunca define *cómo* se termina.
+Hasta que L0 no esté aprobado, el acabado se describe solo con palabras (§2).
+Desde L1, el hero aprobado manda sobre las palabras.
 
-## 2. Descripción del estilo en palabras (para humanos y para el prompt)
+## 2. El acabado, en palabras
 
-Papel de construcción de colores planos, recortado con tijera: los bordes
-no son perfectamente lisos, tienen pequeñas esquinas rectas donde la tijera
-cambió de dirección. Cada pieza es una forma de papel de un solo color con
-textura sutil de fibra. Sobre el papel, un contorno de marcador negro grueso,
-dibujado a mano, con ligeras variaciones de presión y alguna línea que se
-pasa de la esquina. Sombreado con rayado diagonal a pluma (hatching) solo en
-las zonas de sombra, nunca gradientes suaves. Cada recorte proyecta una
-sombra dura, desplazada, como si estuviera pegado a unos milímetros del
-fondo. Nada de brillo, nada de degradados, nada de aerógrafo, nada de
-"render". Si se ve como una ilustración digital pulida, está mal. Si se ve
-como una obra de teatro de papel hecha por un niño muy talentoso con un
-marcador Sharpie, está bien.
+Cada pieza es un recorte de papel de construcción de un solo color, con una
+textura de fibra tan sutil que solo se nota de cerca. Sobre el papel, el
+dibujo está hecho a mano con marcador y lápiz, en el estilo de los bocetos
+de Aguilar: el contorno es de marcador negro, trazo a mano con variaciones
+de presión y algún extremo que se pasa; el sombreado es **lápiz suave**,
+gris, con la dirección del trazo visible, aplicado solo en las zonas de
+sombra, nunca gradientes digitales ni aerógrafo.
 
-[[Alex: ajustá este párrafo hasta que lo leas y pienses "sí, eso es".]]
+Los bordes del papel se comportan distinto según qué es la pieza:
 
-## 3. Reglas medibles (las verifica `pipeline/gates.py`)
+- **Personajes y sus partes (y las emociones): corte tosco.** Facetas de
+  tijera visibles, esquinas donde la tijera cambió de dirección, algún
+  borde que no sigue exactamente la tinta. Se nota que lo cortó una mano.
+- **Escenario, props y UI: corte limpio.** Preciso, apenas irregular, como
+  cortado con cúter sobre una regla. El cuarto es el teatro; los personajes
+  son las marionetas.
+
+El grosor de la tinta varía con la profundidad: **grueso en lo que está
+adelante, fino en lo que está al fondo** (valores en §3). Esto le da
+perspectiva al teatro de papel sin usar desenfoque.
+
+El color del papel también varía: **vivo y saturado en personajes, apagado
+y envejecido en escenario.** Dos paletas separadas; un personaje nunca usa
+colores de la paleta de escenario ni al revés, salvo la tinta y el lápiz,
+que son comunes.
+
+La sombra proyectada es **suave y corta**: la pieza apenas despega del
+fondo. La pone el motor; nunca está pintada en el PNG.
+
+Si se ve como una ilustración digital pulida, está mal. Si se ve como una
+obra de teatro de papel hecha con tijera, marcador y lápiz por alguien que
+dibuja muy bien, está bien.
+
+## 3. Reglas medibles (las verifica `pipeline/gates.py` con `pipeline/rules.json`)
 
 | regla | valor | tolerancia |
 |---|---|---|
-| Resolución de trabajo | 1 px = 1 px de juego a escala 1.0; alto de personaje de pie = ver `pipeline/heights.json` | ±4 % |
-| Grosor de línea de tinta | [[6]] px a escala 1.0 | 4–9 px |
-| Paleta | los [[12]] colores de `pipeline/palette.json` | ≤ 8 % de píxeles fuera de paleta (tolerancia ΔE [[18]]) |
-| Fondo | alfa 0 fuera de la pieza | 0 píxeles con alfa parcial fuera del borde de tinta |
-| Halo | ningún píxel claro (luminancia > 225) con alfa > 0 en el borde exterior | ≤ 0.3 % del perímetro |
-| Componentes | 1 componente conectado en el canal alfa | se permiten islas < 0.05 % del área si son intencionales (ej. gota) y están declaradas en `meta.json` |
-| Sombra proyectada | NO se dibuja en el asset; la pone el motor | 0 sombras en el PNG |
-| Textura de papel | sí, sutil | contraste de textura ≤ [[6]] % |
-| Tamaño mínimo | ningún objeto interactivo mide menos de [[90]] px en su lado mayor | - |
+| Lienzo de juego | 1600 × 900 vista; cuartos de 2400 px de ancho | — |
+| Alto de Smoothface de pie | 315 px (35 % de 900) | ±4 % (`pipeline/heights.json`) |
+| Tinta, personajes y primer plano | 6–9 px a escala 1.0 | gate `ink` por `kind` |
+| Tinta, muebles y props de piso | 4–7 px | |
+| Tinta, pared y fondo | 3–5 px | |
+| Paletas | 12 colores personajes + 12 escenario, en `pipeline/palette.json` | ≤ 8 % de píxeles fuera de paleta (ΔE ≤ 18) |
+| Paleta provisional | mientras `palette.json` diga `"status": "provisional"`, el gate reporta pero no rechaza | — |
+| Sombreado | lápiz: gradientes suaves permitidos hasta 40 % del área opaca; más es aerógrafo | gate `gradient` |
+| Fondo | alfa 0 fuera de la pieza | 0 píxeles con alfa parcial lejos del borde |
+| Halo / borde sticker | ningún píxel claro (lum > 225) en el anillo exterior ni en la banda de borde | ≤ 0.3 % anillo, ≤ 15 % banda |
+| Componentes | 1 componente conectado en alfa | islas solo si `allowed_islands` > 0 en `meta.json` |
+| Sombra proyectada | no en el PNG; en layout: `"shadow": {"offset": [3, 4], "blur": 6, "opacity": 0.35}` | — |
+| Textura de papel | sutil | contraste ≤ 6 % |
+| Tamaño mínimo de objeto interactivo | 70 px en su lado mayor | — |
 
-## 4. Tabla de alturas (lo que rompió la primera vez)
+Cómo se aprueban las paletas (sesión 1, antes de L0): el agente extrae 12
+colores dominantes de los bocetos coloreados de Aguilar y del hero
+provisional para personajes, y 12 de `ref_room_z1s3_2010.png` desaturada
+un 25 % para escenario; genera dos muestras `palette_characters.png` y
+`palette_scenery.png` y las deja en la mesa de luz. Alex aprueba o corrige
+los hex a mano. Al aprobar, `palette.json` pasa a `"status": "approved"` y
+el gate empieza a rechazar.
 
-Todos los personajes se miden de la planta de los pies a la coronilla, sin
-sombrero. La línea de pies (`foot_baseline`) es la misma coordenada en todos
-los sprites de un mismo personaje. Valores en `pipeline/heights.json`.
+## 4. Tabla de alturas
 
-| personaje | alto de pie (px, escala 1.0) | nota |
+De la planta de los pies a la coronilla, sin sombrero. Misma `foot_baseline`
+en todos los sprites de un personaje. Valores en `pipeline/heights.json`.
+
+| personaje | alto (px) | nota |
 |---|---|---|
-| Mr. Smoothface | [[420]] | referencia 1.0 |
-| Captain Dread | [[440]] | un poco más alto, más ancho |
-| (slice 2) A Baby | [[360]] | bajo y ancho |
-| (slice 2) Nihongo Nohondes | [[400]] | |
-| (slice 2) The Ventriloquist | [[450]] | delgado |
+| Mr. Smoothface | 315 | referencia 1.0 |
+| Captain Dread | 330 | más alto y más ancho |
+| (slice 2) A Baby | 270 | bajo y ancho |
+| (slice 2) Nihongo Nohondes | 300 | |
+| (slice 2) The Ventriloquist | 340 | delgado |
 
-Props: la altura relativa se declara en `meta.json` como fracción de la
-altura de Smoothface (ej. escritorio = 0.55, sarcófago = 1.15, puerta = 1.3).
+Props: altura relativa en `meta.json` como fracción de Smoothface
+(escritorio 0.55, sarcófago 1.15, puerta de mamparo 1.3, cama 0.7,
+mesa de cartas de primer plano 0.5).
 
 ## 5. Despiece estándar de un personaje (el rig)
 
@@ -96,23 +133,25 @@ en `rig.json`. Orden de dibujado de atrás hacia adelante:
 Emociones (nube de garabatos, rayos, signo de pregunta, bombilla, gota de
 sudor) son recortes aparte, nunca pintados dentro de una parte del cuerpo.
 
-Smoothface en particular: el despiece sigue las capas de
-`ref_hero_smoothface_layers/` (shoes, pants, body, head, eyes, brows, arm,
-hand, movs). Se generan las partes que faltan para tener **dos** brazos y
-**dos** manos; no se inventa una anatomía nueva.
+Smoothface: el despiece sigue las capas de `ref_cutout_layers/` (shoes,
+pants, body, head, eyes, brows, arm, hand, movs) y se completa hasta tener
+**dos** brazos y **dos** manos. La cara, las proporciones y la ropa salen
+del boceto de Aguilar; no se inventa una anatomía nueva.
 
-## 6. Lo que está prohibido (lista negra para el prompt)
+## 6. Lista negra (va literal en todo prompt)
 
-- Gradientes, glow, bloom, lens flare, 3D, "render", "octane", "unreal".
+- Gradientes digitales, glow, bloom, lens flare, 3D, "render", "octane", "unreal", aerógrafo.
 - Bordes blancos tipo sticker.
-- Sombras proyectadas dibujadas dentro del asset.
-- Fondos: ningún asset trae fondo, ni pared, ni piso, ni "ambiente".
-- Texto dentro de las imágenes (salvo carteles del juego, declarados).
+- Sombras proyectadas dentro del asset.
+- Fondos: ningún asset trae pared, piso ni "ambiente".
+- Texto dentro de las imágenes (salvo carteles del juego, declarados en `meta.json`).
 - Más de un objeto por imagen.
-- Reinterpretar el diseño: si el boceto tiene tricornio, hay tricornio.
+- Reinterpretar el diseño del boceto.
+- Colores de la paleta equivocada (personaje con tonos de escenario o al revés).
 
-## 7. Historial de cambios a este archivo
+## 7. Historial
 
 | fecha | cambio | motivo |
 |---|---|---|
-| 2026-10-20 | creado con huecos `[[ ]]` | reinicio v2 |
+| 2026-10-20 | creado con huecos | reinicio v2 |
+| 2026-10-21 | huecos llenados con las decisiones de Alex: diseño Aguilar + construcción cutout; borde tosco/limpio; tinta por profundidad; lápiz; dos paletas; 35 %; sombra suave; textura sutil | ronda de decisiones |

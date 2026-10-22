@@ -1,4 +1,4 @@
-# BACKLOG.md - Ideas y cambios diferidos
+# BACKLOG.md — Ideas y cambios diferidos
 
 Formato: `- YYYY-MM-DD | quién | idea | por qué se difirió`
 

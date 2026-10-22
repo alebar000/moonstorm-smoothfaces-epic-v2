@@ -1,7 +1,16 @@
 {
-  "_comment": "Umbrales de gates.py. Vienen de STYLE_BIBLE §3; Alex los ajusta ahí y aquí a la vez.",
+  "_comment": "Umbrales de gates.py. Vienen de STYLE_BIBLE §3. Tinta por kind: personajes/primer plano grueso, piso medio, pared fino. grad_max alto porque el sombreado es a lápiz; solo atrapa aerógrafo pesado.",
   "ink_lum": 50,
   "ink_chroma": 45,
+  "ink_by_kind": {
+    "body_part":  [6, 9],
+    "emotion":    [6, 9],
+    "foreground": [6, 9],
+    "prop":       [4, 7],
+    "floor":      [4, 7],
+    "ui":         [4, 7],
+    "wall":       [3, 5]
+  },
   "ink_min": 4,
   "ink_max": 9,
   "halo_lum": 225,
@@ -9,5 +18,5 @@
   "sticker_max": 0.15,
   "grad_lo": 6,
   "grad_hi": 40,
-  "grad_max": 0.12
+  "grad_max": 0.40
 }

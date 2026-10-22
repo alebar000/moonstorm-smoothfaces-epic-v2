@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-review_server.py - servidor local mínimo para la hoja de revisión humana.
+review_server.py — servidor local mínimo para la hoja de revisión humana.
 Sirve review_sheet.html, expone las piezas en estado "proposed" y escribe
 los veredictos de Alex en review/review.json. Sin dependencias externas.
 

@@ -1,4 +1,4 @@
-# AGENTS.md - Reglas del agente para Smoothface's Epic v2
+# AGENTS.md — Reglas del agente para Smoothface's Epic v2
 
 Este archivo se lee completo al inicio de cada sesión. Si alguna instrucción
 de una tarea contradice algo de aquí, gana este archivo y se pregunta a Alex.
@@ -50,14 +50,6 @@ plano. Estas reglas existen para que eso no vuelva a pasar.
 11. **Reportar con hechos, no con adjetivos.** "Generé 6 piezas, 4 pasaron
     gates, 2 están en la hoja de revisión" sí. "Quedó espectacular" no.
     El agente no sabe si quedó bien; eso lo sabe Alex.
-12. **`..\moonstorm` es estrictamente de solo lectura.** El repositorio vecino
-    (`..\moonstorm`, congelado en el tag `v0-pilot-2026-10-20`) jamás se modifica
-    ni se escribe en él; solo puede leerse si hace falta consultar algo del
-    piloto (por ejemplo, una pieza rechazada del piloto para calibrar `style-critic`
-    o `anatomy-critic`).
-13. **Cero em-dashes.** Nunca usar el carácter em-dash en código, documentación,
-    mensajes de commit ni respuestas. Usar guiones simples (`-`), dos puntos (`:`),
-    punto y coma (`;`) o paréntesis.
 
 ## Estructura de carpetas que el agente respeta
 
@@ -73,10 +65,9 @@ art/approved/<cat>/     piezas aprobadas + MANIFEST.json (solo lectura)
 art/rejected/<id>/      versiones rechazadas con motivo
 review/review.json      veredictos de Alex (lo escribe la hoja de revisión)
 layout/<room>.layout.json   posición, plano y parallax de cada objeto
-pipeline/               gates.py, approve.py, collect_references.py, heights.json, palette.json
+pipeline/               gates.py, approve.py, heights.json, palette.json
 .agents/skills/         un skill por trabajo
-src/                    motor TS + Canvas existente (no se toca hasta L13)
-..\moonstorm/           piloto v0 congelado (SOLO LECTURA)
+src/                    motor TS + Canvas existente
 ```
 
 ## Orden de producción (no se altera)

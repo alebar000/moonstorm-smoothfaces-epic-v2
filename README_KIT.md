@@ -1,4 +1,4 @@
-# Kit v2 - Smoothface's Epic, desde cero
+# Kit v2 — Smoothface's Epic, desde cero
 
 Esto es el andamiaje de gobernanza para la segunda corrida. No trae arte ni
 motor: trae las reglas, los skills, los gates automáticos y la mesa de luz
@@ -10,7 +10,7 @@ aprobación.
 | archivo | para qué |
 |---|---|
 | `AGENTS.md` | las 11 reglas del agente y el orden de producción. Se lee al inicio de cada sesión |
-| `STYLE_BIBLE.md` | el estilo congelado. **Tiene huecos `[[ ]]` que llenás vos antes de arrancar** |
+| `STYLE_BIBLE.md` | el estilo congelado, con las decisiones de Alex del 2026-10-21 (diseño Aguilar + construcción cutout, bordes tosco/limpio, tinta por profundidad, lápiz, dos paletas, 35 %) |
 | `SLICE.md` | alcance cerrado del slice 1 |
 | `BACKLOG.md` | ideas diferidas; ya trae las del piloto |
 | `BITACORA.md` | registro; ya trae la entrada del reinicio |
@@ -18,6 +18,7 @@ aprobación.
 | `.agents/skills/*/SKILL.md` | 7 skills: `style-bible`, `one-piece-generator`, `style-critic`, `anatomy-critic`, `review-gate`, `room-layout`, `bitacora` |
 | `pipeline/gates.py` | gates automáticos: `normalize`, `check`, `layout` |
 | `pipeline/rules.json`, `palette.json`, `heights.json` | umbrales, paleta y alturas. Los editás vos; `palette.json` trae valores de ejemplo que hay que reemplazar |
+| `pipeline/collect_references.py` | busca las referencias de 2010 en el repo, aplana PSD, exporta capas y las deja en `art/references/` con los nombres correctos |
 | `pipeline/approve.py` | aplica tus veredictos: mueve a `approved/` o `rejected/`, escribe `MANIFEST.json` |
 | `review/review_server.py` + `review_sheet.html` | la mesa de luz: `python review/review_server.py --root .` y abrí http://localhost:8765 |
 | `review/review.schema.json` | formato de `review.json` |
@@ -30,11 +31,12 @@ aprobación.
 2. Rama nueva o repo nuevo. Copiá este kit a la raíz (los archivos nuevos
    conviven con `src/`; los `.agents/skills` viejos se borran o se mueven a
    `_archive/`).
-3. Llená `STYLE_BIBLE.md` (todos los `[[ ]]`), copiá las referencias a
-   `art/references/` con los nombres de la tabla, y reemplazá
-   `pipeline/palette.json` con los 12 colores reales (sacados de
-   `ref_palette.png`; podés pedirle al agente que los extraiga y los
-   aprobás mirándolos). Revisá `pipeline/heights.json`.
+3. `python pipeline/collect_references.py --repo .` copia las referencias a
+   `art/references/` con los nombres de `STYLE_BIBLE.md §1` (necesita
+   `pip install psd-tools` para aplanar los PSD). Si reporta FALTA, copiá
+   ese archivo a mano. Las paletas se aprueban en el lote P0 de la primera
+   sesión (el agente las extrae, vos las aprobás en la mesa de luz); hasta
+   entonces `palette.json` es provisional y el gate solo reporta.
 4. Probá los gates con una pieza del piloto que te haya gustado y una que
    no: `python pipeline/gates.py check <png> --meta <meta.json>`. Si la
    buena falla o la mala pasa, ajustá `rules.json`.

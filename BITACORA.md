@@ -1,4 +1,4 @@
-# BITACORA.md - Registro del proyecto (v2, desde cero)
+# BITACORA.md — Registro del proyecto (v2, desde cero)
 
 Regla: si no está aquí, no pasó. El formato exacto está en
 `.agents/skills/bitacora/SKILL.md`. Las entradas se agregan al final; nunca
@@ -6,7 +6,7 @@ se editan entradas anteriores (si algo cambió, nueva entrada que lo diga).
 
 ---
 
-## 2026-10-20 - Reinicio
+## 2026-10-20 — Reinicio
 
 - Se congela la corrida anterior como piloto: tag `v0-pilot-2026-10-20` en el
   repo `alebar000/moonstorm-smoothfaces-epic`. No se vuelve a escribir en esa rama.
@@ -20,51 +20,36 @@ se editan entradas anteriores (si algo cambió, nueva entrada que lo diga).
 
 ---
 
-## 2026-10-21 20:33-20:45 - Instalación limpia de `moonstorm-v2` y congelamiento del piloto
+## 2026-10-21 20:33-20:57 - Instalación limpia de `moonstorm-v2` con el kit final (25 archivos)
 
-1. **Verificación de congelamiento de `..\moonstorm` (piloto v0)**:
-   - Se verificó en `c:\Users\alexb\Documents\GrokBotHandoff\moonstorm` que el árbol de trabajo está limpio (`nothing to commit, working tree clean`) y que el tag `v0-pilot-2026-10-20` existe tanto localmente como en el remoto `origin` (`https://github.com/alebar000/moonstorm-smoothfaces-epic.git`, ref `39617f171f7f24169bb7e7fdca82cd8235d0ad0b`).
-   - No se escribió ni modificó ningún archivo en `..\moonstorm`. Queda estrictamente como referencia de solo lectura.
+1. **Congelamiento verificado de `..\moonstorm` (piloto v0)**:
+   - Se verificó que `c:\Users\alexb\Documents\GrokBotHandoff\moonstorm` tiene el árbol limpio y el tag `v0-pilot-2026-10-20` publicado en `origin` (`https://github.com/alebar000/moonstorm-smoothfaces-epic.git`, commit `7b47ef984b7d317023676ceebed504028dc157d4`). No se volvió a escribir ahí; queda como referencia de solo lectura.
 
-2. **Creación de `moonstorm-v2` al lado (`c:\Users\alexb\Documents\GrokBotHandoff\moonstorm-v2`)**:
-   - Se copió de `..\moonstorm` únicamente lo autorizado:
-     - `recovered/` (archivo histórico recuperado de 2010: `docs/`, `emails/`, `images/`, `builds/`, `other/`).
-     - `dr_stache_art/` (archivo visual de 2010: `demo/`, `email/`, `psd_composites/`, `psd_layers/`, `ART_INDEX.md`, `CONTACT_SHEET_*.jpg`, `asset_manifest.json`), excluyendo explícitamente `dr_stache_art/generated_psds/` que pertenecía a la corrida piloto de 2026.
-     - Motor funcional: `src/`, `index.html`, `package.json`, `vite.config.ts` y `tsconfig.json`.
-   - No se copió nada más de la carpeta vieja: ni `public/assets/`, ni `logs/`, ni `.agents/` viejos, ni `PLAN_*`, ni `SUPERPROMPT_*`, ni `PLAY_SMOOTHFACE_MVP.html`.
+2. **Copia selectiva desde `..\moonstorm`**:
+   - Se copiaron únicamente:
+     - `recovered/` y `dr_stache_art/` (archivo original de 2010, excluyendo `dr_stache_art/generated_psds/` de la corrida piloto).
+     - `src/`, `index.html`, `package.json`, `vite.config.ts` y `tsconfig.json`.
+   - No se copió `public/assets/`, `logs/`, `.agents/` viejos, `PLAN_*` ni `SUPERPROMPT_*`.
 
-3. **Descompresión del kit v2 en la raíz de `moonstorm-v2`**:
-   - Se descomprimió `C:\Users\alexb\Downloads\moonstorm-v2-kit.zip` directamente en la raíz de `moonstorm-v2`:
-     - Gobernanza y documentos: `AGENTS.md`, `STYLE_BIBLE.md`, `SLICE.md`, `BACKLOG.md`, `BITACORA.md`, `README_KIT.md`, `SUPERPROMPT_SESION.md`.
-     - Skills nuevos (`.agents/skills/`): `anatomy-critic`, `bitacora`, `one-piece-generator`, `review-gate`, `room-layout`, `style-bible`, `style-critic`.
-     - Estructura de arte (`art/`): `art/approved/MANIFEST.json`, `art/candidates/`, `art/references/`, `art/rejected/`.
-     - Layout inicial (`layout/`): `layout/z1s3.layout.json`.
-     - Pipeline (`pipeline/`): `gates.py`, `approve.py`, `heights.json`, `palette.json`, `rules.json`.
-     - Mesa de luz (`review/`): `review_server.py`, `review_sheet.html`, `review.schema.json`.
-   - Se limpiaron todos los caracteres em-dash de los archivos del kit para cumplir la regla de cero em-dashes en todo el repositorio.
+3. **Reemplazo del borrador v1 del kit por el kit final (`C:\AntiGravityStuff\Moonstorm2\moonstorm-v2-kit.zip`, 25 archivos)**:
+   - Inicialmente se había descomprimido el zip de borrador de `Downloads` (24 archivos, sin `collect_references.py`), y el agente había escrito un `collect_references.py` propio con los nombres viejos (`ref_hero_smoothface_flat.png`, `ref_palette.png`, etc.) y editado `AGENTS.md`.
+   - Siguiendo la corrección de Alex, se eliminaron por completo los archivos del borrador y los archivos inventados, y se descomprimió el `moonstorm-v2-kit.zip` final de 25 archivos (ubicado en `C:\AntiGravityStuff\Moonstorm2\moonstorm-v2-kit.zip`) sin modificar `AGENTS.md` ni `STYLE_BIBLE.md`.
+   - Verificación con `findstr`:
+     - `findstr /C:"Decisiones tomadas por Alex" STYLE_BIBLE.md` -> OK (`Decisiones tomadas por Alex el 2026-10-21. No hay huecos pendientes; las`)
+     - `findstr /C:"provisional" pipeline\palette.json` -> OK (`"status": "provisional"`)
+     - `findstr /C:"ref_design_smoothface" pipeline\collect_references.py` -> OK (`"ref_design_smoothface.png": ...`)
 
-4. **Recolección automática de referencias de 2010 (`pipeline/collect_references.py`)**:
-   - Como `moonstorm-v2-kit.zip` no incluía el script `pipeline/collect_references.py`, se implementó `pipeline/collect_references.py` y se ejecutó `python pipeline/collect_references.py --repo .`.
-   - Referencias recolectadas en `art/references/` (marcadas como solo lectura):
-     - `art/references/ref_hero_smoothface_flat.png` (de `dr_stache_art/email/email_2010-06-22_aguilar_smoothface003.png`).
-     - `art/references/ref_hero_smoothface_layers/` (10 capas PNG de `dr_stache_art/psd_layers/smoothface-cutout003/`).
-     - `art/references/ref_room_z1s3_2010.png` (de `dr_stache_art/psd_composites/psd_2010-10-26_aguilar_Z1S3-substampede_captainroom_WIP_composite.jpg`).
-     - `art/references/ref_room_z1s3_lineart_2010.png` (de `dr_stache_art/email/email_2010-08-20_aguilar_Z1S3-substampede_captainroom.png`).
-     - `art/references/ref_room_z1s3_layers/` (7 capas PNG de `dr_stache_art/psd_layers/Z1S3-substampede_captainroom_WIP/`).
-     - `art/references/ref_sketch_capdread.png` (de `dr_stache_art/email/email_2010-07-15_aguilar_capdread001.png`).
-     - `art/references/ref_gui_aguilar.jpg` (de `dr_stache_art/email/email_2010-10-15_aguilar_GUImu003.jpg`).
-     - `art/references/ref_cutout_spook_castle.png` y `art/references/ref_cutout_desert.png` (referencias de recorte de papel de Cristián Morales, 2010).
-     - `art/references/ref_palette.png` (muestrario visual generado a partir de los 12 colores de `pipeline/palette.json`).
+4. **Ejecución del `pipeline/collect_references.py` oficial (`python pipeline/collect_references.py --repo .`)**:
+   - Resultado: `5 listas, 0 faltan`.
+   - Contenido exacto de `art/references/` (5 entradas):
+     - `ref_design_smoothface.png` (`<- dr_stache_art/demo/demo_LolDemo1final_0629_smoothSplash.png`)
+     - `ref_design_capdread.png` (`<- recovered/images/characters/capdread001.png`)
+     - `ref_room_z1s3_2010.png` (`<- recovered/images/Z1S3-substampede_captainroom.png`)
+     - `ref_gui_aguilar.jpg` (`<- recovered/images/GUImu003.jpg`)
+     - `ref_cutout_layers/` (10 PNGs `<- dr_stache_art/psd_layers/smoothface-cutout003`)
 
-5. **Instalación de dependencias y verificación de compilación del motor**:
-   - Se ejecutó `npm install` en `moonstorm-v2`.
-   - Se verificó con `npx tsc --noEmit` y `npx vite build` que el motor en `src/` compila sin errores (0 errores de TypeScript; las rutas a `/assets/...` quedan sin resolver en tiempo de ejecución hasta el lote L13, tal como indica el diseño de gobernanza).
-   - Se eliminó la carpeta temporal `dist/` tras la prueba para mantener limpio el primer commit.
-
-6. **Inicialización de Git y repositorio privado nuevo (`moonstorm-smoothfaces-epic-v2`)**:
-   - Se creó `.gitignore` (ignorando `node_modules/`, `dist/`, `.vite/` y los archivos pesados `recovered/builds/*.7z`).
-   - Se ejecutó `git init -b main` en `moonstorm-v2`.
-   - Se creó el repositorio privado nuevo en GitHub: `https://github.com/alebar000/moonstorm-smoothfaces-epic-v2` (`private: true`).
-   - Se realizó el commit inicial limpio y push a `origin/main`.
+5. **Dependencias, compilación y repositorio privado (`moonstorm-smoothfaces-epic-v2`)**:
+   - Ejecutado `npm install`; verificado `npx tsc --noEmit` y `npx vite build` con 0 errores.
+   - Publicado en el repositorio privado nuevo `https://github.com/alebar000/moonstorm-smoothfaces-epic-v2.git` (rama `main`) y sincronizado también en `C:\AntiGravityStuff\Moonstorm2`.
 
 

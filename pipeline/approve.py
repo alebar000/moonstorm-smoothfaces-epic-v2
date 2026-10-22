@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-approve.py - aplica los veredictos de review/review.json.
+approve.py — aplica los veredictos de review/review.json.
   approved -> copia a art/approved/<category>/<id>.png, hash SHA-256,
               entrada en MANIFEST.json, archivo de solo lectura
   rejected -> mueve la versión a art/rejected/<id>_<vN>/ con rejection.txt

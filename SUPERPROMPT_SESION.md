@@ -1,4 +1,4 @@
-# SUPERPROMPT_SESION.md - Cómo arranca cada sesión
+# SUPERPROMPT_SESION.md — Cómo arranca cada sesión
 
 Pegar esto (ajustando el lote) al inicio de cada sesión de agente. Si se usa
 `/goal`, el goal es el bloque entero; no se resume.
@@ -13,7 +13,8 @@ Reporta el estado en tres listas cortas:
 - rechazadas desde la última sesión, con el motivo literal de Alex
 - pendientes de revisión (en la hoja, sin veredicto)
 
-Si STYLE_BIBLE.md tiene algún [[ ]] sin llenar, detente y dímelo.
+Si art/references/ no tiene los archivos que STYLE_BIBLE §1 exige, detente y dímelo.
+Si pipeline/palette.json sigue "provisional" y el lote no es P0, detente y dímelo.
 Si review.json tiene piezas sin veredicto, detente y dímelo:
 no se generan piezas nuevas con piezas viejas sin revisar.
 
@@ -46,7 +47,8 @@ Al terminar el lote (o al quedarte sin piezas que puedas avanzar):
 
 | lote | piezas | gate de salida |
 |---|---|---|
-| L0 | hero: `smoothface.torso`, `prop.sarcophagus`, `wall.panel_a` | los 3 aprobados por Alex. Si no, se ajusta STYLE_BIBLE y se repite L0 |
+| P0 | paletas: extraer 12 colores de personajes y 12 de escenario de las referencias (k-means sobre bocetos coloreados / cuarto 2010 desaturado 25 %), dejar `palette_characters.png` y `palette_scenery.png` en la mesa de luz | Alex aprueba o corrige hex; `palette.json` pasa a `approved` |
+| L0 | hero: `smoothface.torso`, `z1s3.prop.sarcophagus`, `z1s3.wall.panel_a` | los 3 aprobados por Alex. Si no, se ajusta STYLE_BIBLE y se repite L0 |
 | L1 | Smoothface: cabeza, ojos ×3, cejas ×3, boca ×3 | aprobados |
 | L2 | Smoothface: 2 brazos, 2 manos ×3, 2 piernas, 2 zapatos, pantalón, mechón | aprobados; `rig.json` ensamblado y visto por Alex en el motor |
 | L3 | Smoothface: emociones ×5, props de mano (lupa, llave) | aprobados |

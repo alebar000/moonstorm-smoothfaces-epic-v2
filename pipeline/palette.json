@@ -1,18 +1,43 @@
 {
-  "_comment": "Paleta congelada. Alex la extrae de art/references/ref_palette.png (ver STYLE_BIBLE §1). Reemplazar estos valores de ejemplo. delta_e_tolerance es la distancia CIE76 máxima a un color de la paleta para contar como 'en paleta'.",
-  "colors": {
-    "ink_black":    "#1a1612",
-    "paper_cream":  "#e9dcc0",
-    "sub_rust":     "#8a3b1e",
-    "sub_teal":     "#2d6b6a",
-    "brass":        "#c9962b",
-    "wood_brown":   "#7a4a22",
-    "coat_crimson": "#8f1d22",
-    "shadow_olive": "#4a4a2e",
-    "sky_grey":     "#9aa3a6",
-    "paper_white":  "#f3ede0",
-    "skin_tan":     "#d9a876",
-    "gold_pale":    "#e4c777"
+  "_comment": "Dos paletas: personajes (viva, saturada) y escenario (apagada, envejecida). Tinta y lápiz son comunes. Los hex de abajo son PROVISIONALES de ejemplo: en la sesión 1 el agente extrae los reales de las referencias, Alex los aprueba en la mesa de luz, y status pasa a 'approved'. Mientras sea 'provisional' el gate de paleta reporta pero no rechaza.",
+  "status": "provisional",
+  "common": {
+    "ink_black":   "#1a1612",
+    "pencil_grey": "#6e6a62"
+  },
+  "palettes": {
+    "characters": {
+      "coat_crimson": "#b3202a",
+      "coat_shadow":  "#7d1420",
+      "skin_warm":    "#e8b386",
+      "skin_shadow":  "#c98a5e",
+      "brass_bright": "#e2b53a",
+      "navy":         "#243b6e",
+      "teal_bright":  "#2f8f8c",
+      "paper_white":  "#f6f1e4",
+      "mustard":      "#d9a21b",
+      "forest":       "#3a7a3f",
+      "violet":       "#6b3f8f",
+      "orange":       "#e2702a"
+    },
+    "scenery": {
+      "hull_rust":    "#8a5a44",
+      "hull_rust_dk": "#5e3a2c",
+      "iron_grey":    "#6f6f6a",
+      "iron_dark":    "#4a4a46",
+      "wood_warm":    "#8c6a44",
+      "wood_dark":    "#5c4330",
+      "brass_old":    "#a88a4a",
+      "teal_faded":   "#5f8582",
+      "cream_aged":   "#d9ceb2",
+      "olive_shade":  "#5a5a40",
+      "sea_glass":    "#7fa3a6",
+      "maroon_faded": "#7d4a4a"
+    }
+  },
+  "kind_to_palette": {
+    "body_part": "characters", "emotion": "characters",
+    "prop": "scenery", "wall": "scenery", "floor": "scenery", "foreground": "scenery", "ui": "scenery"
   },
   "delta_e_tolerance": 18,
   "max_off_palette_fraction": 0.08

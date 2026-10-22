@@ -16,39 +16,55 @@ fue una colección de piezas que "no parecían familia".
 
 1. Leer `STYLE_BIBLE.md` completo. Si hay algún `[[ ]]` sin llenar,
    detenerse y avisar a Alex; no improvisar valores.
-2. Listar `art/references/`. Verificar que existen al menos
-   `ref_hero_smoothface_flat.png`, `ref_room_z1s3_2010.png` y `ref_palette.png`.
-   Si falta alguna, detenerse y avisar.
+2. Listar `art/references/`. Verificar que existen `ref_cutout_layers/`,
+   `ref_design_smoothface.png`, `ref_design_capdread.png` y
+   `ref_room_z1s3_2010.png`. Si falta alguna, detenerse y avisar. Desde L1,
+   verificar además `ref_hero_*.png` (los tres aprobados en L0).
 3. Leer `art/approved/MANIFEST.json`. Las piezas aprobadas más parecidas a
    lo que se va a generar son referencias de **segundo nivel** (misma
    categoría: otra parte del mismo personaje, otro prop del mismo cuarto).
 4. Armar el **bloque de estilo** (abajo) y devolverlo al skill que lo pidió,
    junto con la lista de archivos de imagen que deben adjuntarse.
 
-## Bloque de estilo (plantilla; rellenar con el texto real del STYLE_BIBLE)
+## Bloque de estilo (se arma con §2 y §3 de STYLE_BIBLE.md; varía por `kind`)
 
 ```
-STYLE (non-negotiable, matches the attached reference images exactly):
-<párrafo de la sección 2 de STYLE_BIBLE.md, traducido al inglés sin
-cambiar ninguna palabra que describa el acabado>
-Ink outline ~<N>px, hand-drawn marker, slight pressure variation.
-Shading: diagonal pen hatching only in shadow areas. Flat construction-paper
-colors from this palette only: <hex list>. Subtle paper fiber texture.
-Scissor-cut edges with small straight facets. One isolated object.
-Transparent background. No cast shadow baked in.
+STYLE (non-negotiable, matches the attached references):
+Hand-drawn construction-paper cutout. Each piece is ONE flat color of
+construction paper with a very subtle fiber texture, cut out with scissors.
+Design and proportions come from the attached pencil sketch by the original
+artist; do not reinterpret it. Outline: black marker, hand-drawn, visible
+pressure variation, some strokes overshoot corners. Shading: SOFT PENCIL
+only, grey, visible stroke direction, only in shadow areas. No digital
+gradients, no airbrush, no glow, no 3D.
+<si kind es body_part o emotion:>
+EDGE: rough scissor cut, visible straight facets and corners where the
+scissors turned; the cut does not perfectly follow the ink.
+INK: thick marker, ~7 px at game scale.
+COLOR: vivid, saturated construction paper, ONLY from this character
+palette: <hex list characters + ink + pencil>.
+<si kind es prop, wall, floor, foreground o ui:>
+EDGE: clean, precise cut, as if with a craft knife along a ruler.
+INK: <wall: thin pen ~4 px | prop/floor/ui: medium marker ~5 px |
+foreground: thick marker ~7 px> at game scale.
+COLOR: muted, aged construction paper, ONLY from this scenery palette:
+<hex list scenery + ink + pencil>.
+One isolated object, transparent background (or flat #00FF00 if
+transparency is unsupported). No cast shadow baked in.
 FORBIDDEN: gradients, glow, bloom, 3D render, airbrush, white sticker
-border, any background, any text, more than one object, reinterpreting
-the design shown in the sketch reference.
+border, any background, any text, more than one object, colors from the
+other palette, reinterpreting the sketch.
 ```
 
 ## Referencias a adjuntar, según lo que se genera
 
 | se genera | adjuntar siempre | adjuntar además |
 |---|---|---|
-| parte de Smoothface | hero flat + la capa correspondiente de `ref_hero_smoothface_layers/` | partes aprobadas de Smoothface |
-| parte de otro personaje | hero flat + boceto de diseño de ese personaje | partes aprobadas de ese personaje |
-| prop o capa de cuarto | hero flat + `ref_room_z1s3_2010.png` | props aprobados del mismo cuarto |
-| UI | hero flat + `ref_gui_aguilar.jpg` | UI aprobada |
+| parte de Smoothface | `ref_design_smoothface.png` + la capa correspondiente de `ref_cutout_layers/` + `ref_hero_torso.png` | partes aprobadas de Smoothface |
+| parte de otro personaje | boceto de diseño de ese personaje + `ref_hero_torso.png` | partes aprobadas de ese personaje |
+| prop o capa de cuarto | `ref_hero_sarcophagus.png` o `ref_hero_wall_panel.png` + `ref_room_z1s3_2010.png` | props aprobados del mismo cuarto |
+| UI | `ref_hero_wall_panel.png` + `ref_gui_aguilar.jpg` | UI aprobada |
+| L0 (sin hero todavía) | el boceto de diseño (personaje) o `ref_room_z1s3_2010.png` (escenario); el acabado va solo en palabras | — |
 
 Nunca más de 5 imágenes de referencia por llamada; si hay más candidatas,
 preferir las aprobadas más recientes de la misma categoría.

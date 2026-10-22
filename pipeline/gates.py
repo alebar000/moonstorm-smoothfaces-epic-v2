@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-gates.py - chequeos automáticos, binarios y aburridos, para piezas de
+gates.py — chequeos automáticos, binarios y aburridos, para piezas de
 Smoothface's Epic. No hace nada creativo. Tres subcomandos:
 
   normalize  quita un fondo plano (chroma key), recorta con margen y
@@ -162,7 +162,7 @@ def gate_cropped_by_border(arr):
     touches = int(alpha[0, :].any()) + int(alpha[-1, :].any()) + int(alpha[:, 0].any()) + int(alpha[:, -1].any())
     return {"touches_border_sides": touches, "border_ok": touches == 0}
 
-def gate_palette(arr, pal):
+def gate_palette(arr, pal, kind="prop"):
     opaque = arr[:, :, 3] > 200
     px = arr[opaque][:, :3]
     if len(px) == 0:
@@ -170,15 +170,24 @@ def gate_palette(arr, pal):
     if len(px) > 60000:
         idx = np.random.default_rng(0).choice(len(px), 60000, replace=False)
         px = px[idx]
-    pal_rgb = np.array([hex2rgb(v) for v in pal["colors"].values()], np.uint8)
+    if "palettes" in pal:
+        which = pal.get("kind_to_palette", {}).get(kind, "scenery")
+        colors = dict(pal.get("common", {})); colors.update(pal["palettes"].get(which, {}))
+    else:
+        which = "single"; colors = pal["colors"]
+    pal_rgb = np.array([hex2rgb(v) for v in colors.values()], np.uint8)
     lab_px = rgb2lab(px)
     lab_pal = rgb2lab(pal_rgb)
     d = np.sqrt(((lab_px[:, None, :] - lab_pal[None, :, :]) ** 2).sum(axis=2)).min(axis=1)
     off = float((d > pal.get("delta_e_tolerance", 18)).mean())
-    return {"off_palette_fraction": round(off, 4),
-            "palette_ok": off <= pal.get("max_off_palette_fraction", 0.08)}
+    ok = off <= pal.get("max_off_palette_fraction", 0.08)
+    provisional = pal.get("status", "approved") == "provisional"
+    return {"palette_used": which, "off_palette_fraction": round(off, 4),
+            "palette_provisional": provisional,
+            "palette_ok": True if provisional else ok,
+            **({"palette_note": "paleta provisional: solo reporta"} if provisional else {})}
 
-def gate_ink_thickness(arr, rules):
+def gate_ink_thickness(arr, rules, kind="prop"):
     """Grosor típico de línea negra: 2 * mediana de la distancia al borde
     dentro de las zonas de tinta (distance transform)."""
     if cv2 is None:
@@ -196,8 +205,8 @@ def gate_ink_thickness(arr, rules):
     k = np.ones((3, 3), np.uint8)
     ridge = (dt >= cv2.dilate(dt, k) - 1e-3) & (dt > 0.5)
     thick = 2.0 * np.median(dt[ridge]) if ridge.any() else 0.0
-    lo, hi = rules.get("ink_min", 4), rules.get("ink_max", 9)
-    return {"ink_thickness_px": round(float(thick), 2), "ink_ok": lo <= thick <= hi}
+    lo, hi = rules.get("ink_by_kind", {}).get(kind, [rules.get("ink_min", 4), rules.get("ink_max", 9)])
+    return {"ink_thickness_px": round(float(thick), 2), "ink_range": [lo, hi], "ink_ok": lo <= thick <= hi}
 
 def gate_gradients(arr, rules):
     """Detecta sombreado suave: fracción de píxeles opacos cuya vecindad
@@ -245,8 +254,8 @@ def cmd_check(a):
     r.update(gate_components(arr, meta))
     r.update(gate_cropped_by_border(arr))
     if pal:
-        r.update(gate_palette(arr, pal))
-    r.update(gate_ink_thickness(arr, rules))
+        r.update(gate_palette(arr, pal, kind))
+    r.update(gate_ink_thickness(arr, rules, kind))
     r.update(gate_gradients(arr, rules))
     r.update(gate_height(arr, meta, heights))
 

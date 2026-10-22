@@ -1,4 +1,4 @@
-# SLICE.md - Alcance congelado del Slice 1
+# SLICE.md — Alcance congelado del Slice 1
 
 Fecha de congelamiento: ____________  (la pone Alex)
 Fecha estimada de cierre: ____________
