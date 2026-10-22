@@ -487,3 +487,255 @@ se editan entradas anteriores (si algo cambió, nueva entrada que lo diga).
 - Alex: "why a mouth? His mouth should be permanently covered"
 - acción: movido a art/rejected/smoothface.mouth.closed_v3/ y descartada la categoría `smoothface.mouth.*` por instrucción de Alex ("done, no mouth plz"): la boca de Mr. Smoothface permanece siempre cubierta por el cuello alto de `smoothface.torso`
 - calibración: no aplica
+
+
+---
+
+### 2026-10-21 23:48 · smoothface.brows.normal · v3
+- prompt: art/candidates/smoothface.brows.normal/prompt_v3.txt
+- refs: art/approved/smoothface/smoothface.brows.angry.png, art/approved/smoothface/smoothface.brows.surprised.png, art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/006_Layer_7_copy.png, art/references/ref_hero_torso.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: sin_objeciones
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-21 23:47 · smoothface.arm_front · v1
+- prompt: art/candidates/smoothface.arm_front/prompt_v1.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/009_arm.png, art/references/ref_hero_torso.png
+- gates: fail (ink: 2.8 px vs rango [6, 9])
+- style-critic: n/a (no pasó gates)
+- anatomy-critic: n/a (no pasó gates)
+- estado: candidate
+- Alex: pendiente
+
+### 2026-10-21 23:51 · smoothface.arm_front · v2
+- prompt: art/candidates/smoothface.arm_front/prompt_v2.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/009_arm.png, art/references/ref_hero_torso.png
+- gates: fail (ink: 4.39 px vs rango [6, 9])
+- style-critic: n/a (no pasó gates)
+- anatomy-critic: n/a (no pasó gates)
+- estado: candidate
+- Alex: pendiente
+
+### 2026-10-21 23:56 · smoothface.arm_front · v3
+- prompt: art/candidates/smoothface.arm_front/prompt_v3.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/009_arm.png, art/references/ref_hero_torso.png
+- gates: fail (ink: 4.39 px vs rango [6, 9]; halo: 0.0, off_palette: 0.0, components: 1, height: 90 px ok)
+- style-critic: sin_objeciones
+- anatomy-critic: sin_objeciones
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-21 23:45 · smoothface.arm_back · v1
+- prompt: art/candidates/smoothface.arm_back/prompt_v1.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/009_arm.png, art/references/ref_hero_torso.png
+- gates: fail (ink: 2.0 px vs rango [6, 9])
+- style-critic: n/a (no pasó gates)
+- anatomy-critic: n/a (no pasó gates)
+- estado: candidate
+- Alex: pendiente
+
+### 2026-10-21 23:50 · smoothface.arm_back · v2
+- prompt: art/candidates/smoothface.arm_back/prompt_v2.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/009_arm.png, art/references/ref_hero_torso.png
+- gates: fail (ink: 4.0 px vs rango [6, 9])
+- style-critic: n/a (no pasó gates)
+- anatomy-critic: n/a (no pasó gates)
+- estado: candidate
+- Alex: pendiente
+
+### 2026-10-21 23:57 · smoothface.arm_back · v3
+- prompt: art/candidates/smoothface.arm_back/prompt_v3.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/009_arm.png, art/references/ref_hero_torso.png
+- gates: fail (ink: 4.0 px vs rango [6, 9]; halo: 0.0, off_palette: 0.0, components: 1, height: 86 px ok)
+- style-critic: sin_objeciones
+- anatomy-critic: sin_objeciones
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-21 23:45 · smoothface.pants · v1
+- prompt: art/candidates/smoothface.pants/prompt_v1.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/003_pants.png, art/references/ref_hero_torso.png
+- gates: fail (halo: 0.0109, ink: 2.0 px vs rango [6, 9])
+- style-critic: n/a (no pasó gates)
+- anatomy-critic: n/a (no pasó gates)
+- estado: candidate
+- Alex: pendiente
+
+### 2026-10-21 23:48 · smoothface.pants · v2
+- prompt: art/candidates/smoothface.pants/prompt_v2.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/003_pants.png, art/references/ref_hero_torso.png
+- gates: fail (ink: 4.0 px vs rango [6, 9])
+- style-critic: n/a (no pasó gates)
+- anatomy-critic: n/a (no pasó gates)
+- estado: candidate
+- Alex: pendiente
+
+### 2026-10-21 23:56 · smoothface.pants · v3
+- prompt: art/candidates/smoothface.pants/prompt_v3.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/003_pants.png, art/references/ref_hero_torso.png
+- gates: fail (ink: 4.0 px vs rango [6, 9]; halo: 0.0, off_palette: 0.0, components: 1, height: 69 px ok)
+- style-critic: sin_objeciones
+- anatomy-critic: sin_objeciones
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-21 23:47 · smoothface.leg_front · v1
+- prompt: art/candidates/smoothface.leg_front/prompt_v1.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/003_pants.png, art/references/ref_hero_torso.png
+- gates: fail (ink: 2.0 px vs rango [6, 9])
+- style-critic: n/a (no pasó gates)
+- anatomy-critic: n/a (no pasó gates)
+- estado: candidate
+- Alex: pendiente
+
+### 2026-10-21 23:50 · smoothface.leg_front · v2
+- prompt: art/candidates/smoothface.leg_front/prompt_v2.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/003_pants.png, art/references/ref_hero_torso.png
+- gates: fail (ink: 2.0 px vs rango [6, 9])
+- style-critic: n/a (no pasó gates)
+- anatomy-critic: n/a (no pasó gates)
+- estado: candidate
+- Alex: pendiente
+
+### 2026-10-21 23:57 · smoothface.leg_front · v3
+- prompt: art/candidates/smoothface.leg_front/prompt_v3.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/003_pants.png, art/references/ref_hero_torso.png
+- gates: fail (ink: 4.0 px vs rango [6, 9]; halo: 0.0, off_palette: 0.0, components: 1, height: 58 px ok)
+- style-critic: sin_objeciones (1 minor: bottom trouser cuff tapers slightly inward)
+- anatomy-critic: sin_objeciones
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-21 23:47 · smoothface.leg_back · v1
+- prompt: art/candidates/smoothface.leg_back/prompt_v1.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/003_pants.png, art/references/ref_hero_torso.png
+- gates: fail (halo: 0.0054, ink: 2.0 px vs rango [6, 9])
+- style-critic: n/a (no pasó gates)
+- anatomy-critic: n/a (no pasó gates)
+- estado: candidate
+- Alex: pendiente
+
+### 2026-10-21 23:51 · smoothface.leg_back · v2
+- prompt: art/candidates/smoothface.leg_back/prompt_v2.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/003_pants.png, art/references/ref_hero_torso.png
+- gates: fail (ink: 2.0 px vs rango [6, 9]; halo: 0.0025 ok, off_palette: 0.0032 ok, components: 1, height: 58 px ok)
+- style-critic: sin_objeciones
+- anatomy-critic: sin_objeciones
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-21 23:57 · smoothface.leg_back · v3
+- prompt: art/candidates/smoothface.leg_back/prompt_v3.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/003_pants.png, art/references/ref_hero_torso.png
+- gates: fail (ink: 2.0 px vs rango [6, 9]; arte descartado a favor de v2 por bucle interno generado antes de HTTP 429 RESOURCE_EXHAUSTED en la API de imagen)
+- style-critic: n/a
+- anatomy-critic: n/a
+- estado: candidate
+- Alex: pendiente
+
+### 2026-10-21 23:45 · smoothface.shoe_front · v1
+- prompt: art/candidates/smoothface.shoe_front/prompt_v1.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/002_shoes.png, art/references/ref_hero_torso.png
+- gates: fail (halo: 0.0072, ink: 2.0 px vs rango [6, 9])
+- style-critic: n/a (no pasó gates)
+- anatomy-critic: n/a (no pasó gates)
+- estado: candidate
+- Alex: pendiente
+
+### 2026-10-21 23:50 · smoothface.shoe_front · v2
+- prompt: art/candidates/smoothface.shoe_front/prompt_v2.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/002_shoes.png, art/references/ref_hero_torso.png
+- gates: fail (ink: 2.8 px vs rango [6, 9]; halo: 0.0, off_palette: 0.0, components: 1, height: 47 px ok)
+- style-critic: sin_objeciones (1 minor: charcoal grey fill #4f4d4c instead of #000000 so outline remains distinct)
+- anatomy-critic: sin_objeciones
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-21 23:56 · smoothface.shoe_front · v3
+- prompt: art/candidates/smoothface.shoe_front/prompt_v3.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/002_shoes.png, art/references/ref_hero_torso.png
+- gates: fail (ink: 2.0 px vs rango [6, 9]; HTTP 429 RESOURCE_EXHAUSTED impidió reintento adicional; se propone v2 por mayor grosor de línea 2.8 px y mejor correspondencia con shoe_back)
+- style-critic: n/a
+- anatomy-critic: n/a
+- estado: candidate
+- Alex: pendiente
+
+### 2026-10-21 23:45 · smoothface.shoe_back · v1
+- prompt: art/candidates/smoothface.shoe_back/prompt_v1.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/002_shoes.png, art/references/ref_hero_torso.png
+- gates: fail (halo: 0.0101, ink: 2.0 px vs rango [6, 9])
+- style-critic: n/a (no pasó gates)
+- anatomy-critic: n/a (no pasó gates)
+- estado: candidate
+- Alex: pendiente
+
+### 2026-10-21 23:48 · smoothface.shoe_back · v2
+- prompt: art/candidates/smoothface.shoe_back/prompt_v2.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/002_shoes.png, art/references/ref_hero_torso.png
+- gates: fail (ink: 2.0 px vs rango [6, 9])
+- style-critic: n/a (no pasó gates)
+- anatomy-critic: n/a (no pasó gates)
+- estado: candidate
+- Alex: pendiente
+
+### 2026-10-21 23:58 · smoothface.shoe_back · v3
+- prompt: art/candidates/smoothface.shoe_back/prompt_v3.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/002_shoes.png, art/references/ref_hero_torso.png
+- gates: fail (ink: 2.0 px vs rango [6, 9]; halo: 0.0, off_palette: 0.0, components: 1, height: 47 px ok)
+- style-critic: sin_objeciones (1 minor: charcoal grey fill #57504e instead of #000000)
+- anatomy-critic: sin_objeciones
+- estado: proposed
+- Alex: pendiente
+
+## 2026-10-22 · sesión 3 · lote L2a (con reintento L1 smoothface.brows.normal v3)
+- generadas: 22 (1 pieza reintentada de L1 + 7 piezas de L2a × 3 versiones) · pasaron gates: 1 (`smoothface.brows.normal` v3 con `ink: 7.5 px`) · pasaron críticos: 8 (`sin_objeciones` en las 8 piezas tanto en `style-critic` como en `anatomy-critic`) · en hoja: 8 · detenidas en v3 por `gate_ink_thickness`: 7
+- detenidas: `smoothface.arm_front` (v3: `ink: 4.39 px` vs `[6, 9]` a 90 px de alto), `smoothface.arm_back` (v3: `ink: 4.0 px` vs `[6, 9]` a 86 px de alto), `smoothface.pants` (v3: `ink: 4.0 px` vs `[6, 9]` a 69 px de alto), `smoothface.leg_front` (v3: `ink: 4.0 px` vs `[6, 9]` a 58 px de alto), `smoothface.leg_back` (v2/v3: `ink: 2.0 px` vs `[6, 9]` a 58 px de alto), `smoothface.shoe_front` (v2/v3: `ink: 2.8 px` vs `[6, 9]` a 47 px de alto), `smoothface.shoe_back` (v3: `ink: 2.0 px` vs `[6, 9]` a 47 px de alto). Todas pasan `halo`, `sticker`, `partial_alpha`, `components`, `border`, `palette`, `gradient` y `height`. Además la API `gemini-3.1-flash-image` reportó HTTP 429 `RESOURCE_EXHAUSTED` al cierre de v3.
+- cambios a layout/: se añadió `review/layout_shots/l2a_full_puppet_preview/smoothface_l2a_rig_grid.png` y se conectaron las 7 piezas de L2a + `smoothface.brows.normal` v3 a la marioneta interactiva en `review/review_sheet.html` (eliminando la fila de boca).
+- cambios a src/: ninguno
+- backlog: ninguna
+- siguiente lote propuesto: L2b (`smoothface.hand_front.open`, `smoothface.hand_front.fist`, `smoothface.hand_front.point`, `smoothface.hand_back.open`, `smoothface.hand_back.fist`, `smoothface.hand_back.point`, `smoothface.hair_tuft`)
+
+
+---
+
+### 2026-10-22 07:41 · veredicto · smoothface.arm_front v3 · approved
+- Alex: ""
+- acción: copiado a art/approved/smoothface/smoothface.arm_front.png (SHA-256 registrado en art/approved/MANIFEST.json)
+- calibración: no aplica
+
+### 2026-10-22 07:41 · veredicto · smoothface.brows.normal v3 · approved
+- Alex: ""
+- acción: copiado a art/approved/smoothface/smoothface.brows.normal.png (SHA-256 registrado en art/approved/MANIFEST.json); lote L1 queda 100 % aprobado
+- calibración: no aplica
+
+### 2026-10-22 07:41 · veredicto · smoothface.leg_back v2 · approved
+- Alex: ""
+- acción: copiado a art/approved/smoothface/smoothface.leg_back.png (SHA-256 registrado en art/approved/MANIFEST.json)
+- calibración: no aplica
+
+### 2026-10-22 07:41 · veredicto · smoothface.leg_front v3 · approved
+- Alex: ""
+- acción: copiado a art/approved/smoothface/smoothface.leg_front.png (SHA-256 registrado en art/approved/MANIFEST.json)
+- calibración: no aplica
+
+### 2026-10-22 07:41 · veredicto · smoothface.pants v3 · approved
+- Alex: ""
+- acción: copiado a art/approved/smoothface/smoothface.pants.png (SHA-256 registrado en art/approved/MANIFEST.json)
+- calibración: no aplica
+
+### 2026-10-22 07:42 · veredicto · smoothface.shoe_back v3 · rejected
+- Alex: "Esto deberia estar viendo a la derecha 3/4, en lugar de a la izquierda 3/4. Y mejor si lo copias, no quiero dos zapatos diferentes."
+- acción: movido a art/rejected/smoothface.shoe_back_v3/ ; siguiente versión v4 orientada 3/4 a la derecha y copiada idéntica entre `shoe_front` y `shoe_back`
+- calibración: anatomy-critic dejó pasar zapatos orientados 3/4 a la izquierda cuando `smoothface.torso` mira 3/4 a la derecha; recalibrado `.agents/skills/anatomy-critic/SKILL.md` en puntos 5 (`View & Left/Right Facing Direction`: orientación horizontal contraria al torso aprobado es `blocker`) y 6 (`Paired Part Consistency`: zapatos par deben compartir exactamente el mismo diseño/copia)
+
+### 2026-10-22 07:42 · veredicto · smoothface.shoe_front v2 · rejected
+- Alex: "Ver lo que escribi en el otro"
+- acción: movido a art/rejected/smoothface.shoe_front_v2/ ; siguiente versión v3 orientada 3/4 a la derecha y compartida con `smoothface.shoe_back`
+- calibración: cubierta por la recalibración de `.agents/skills/anatomy-critic/SKILL.md` (puntos 5 y 6)
+
+### 2026-10-22 07:42 · veredicto · smoothface.arm_back v3 · rejected
+- Alex: "No entiendo este brazo. Hace falta el brazo del fondo y la mano, pero no en esta posicion."
+- acción: movido a art/rejected/smoothface.arm_back_v3/ ; siguiente versión v4 con silueta clara de brazo doblado en 3/4 hacia la derecha (hombro, codo doblado, antebrazo y puño de manga coherente con `smoothface.arm_front`) y posicionado emergiendo detrás del costado derecho del abrigo junto con su mano (`hand_back`)
+- calibración: anatomy-critic dejó pasar un cilindro vertical sin codo ni lectura de brazo; recalibrado `.agents/skills/anatomy-critic/SKILL.md` en punto 1 (`Identity & Recognizable Silhouette`: cilindro sin lectura anatómica de brazo doblado es `blocker`)

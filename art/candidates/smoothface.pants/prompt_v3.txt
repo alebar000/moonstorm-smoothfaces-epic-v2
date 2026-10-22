@@ -1,0 +1,15 @@
+STYLE (non-negotiable, matches the attached references):
+Hand-drawn construction-paper cutout. Each piece is ONE flat color of construction paper with a very subtle fiber texture, cut out with scissors. Design and proportions come from the attached pencil sketch by the original artist; do not reinterpret it. Outline: black marker (#1a1612), hand-drawn, visible pressure variation, some strokes overshoot corners. Shading: SOFT PENCIL only (#6e6a62), grey, visible stroke direction, only in shadow areas. No digital gradients, no airbrush, no glow, no 3D.
+EDGE: rough scissor cut, visible straight facets and corners where the scissors turned; the cut does not perfectly follow the ink.
+INK: thick marker, ~7.5 px at game scale (6-9 px range).
+COLOR: vivid, saturated construction paper, ONLY from this character palette: #323232, #717171, #000000, #f9ecc2, #c84228, #d9a441, #4a7c59, #3b5998, #8c4a7e, #e07a3c, #5c9ead, #a3b86c, #1a1612, #6e6a62.
+One isolated object, flat solid #00FF00 chroma-key green background filling the entire canvas around the cutout. No cast shadow baked in.
+FORBIDDEN: gradients, glow, bloom, 3D render, airbrush, white sticker border, any background, any text, more than one object, shoes, torso, thin internal black lines, colors from the other palette, reinterpreting the sketch.
+
+PIECE: smoothface.pants
+FIX FROM PREVIOUS VERSION: v2 failed gate_ink_thickness (measured 4.0 px, required 6-9 px) because thin internal dark lines (waistband seam and fly line) pulled the median ink thickness down to 4.0 px and the outer border was only ~24 px wide.
+WHAT: Mr. Smoothface's upper trousers / pelvis waist block cutout ONLY (NO shoes, NO feet, NO torso; 1 single connected component, allowed_islands: 0) in 3/4 front view facing left, matching the upper pelvis/hip section of `ref_cutout_layers/003_pants.png` and `ref_hero_torso.png`.
+CRITICAL INK & SCALE RULES:
+1. Draw the pelvis block COMPACT in the center of the 1024x1024 #00FF00 canvas (~360 px tall and ~390 px wide, leaving ~330 px of solid #00FF00 green margin on all four sides).
+2. Enclose 100% of the outer perimeter with a UNIFORMLY ULTRA-THICK hand-drawn black marker border (#1a1612, 38-44 px wide everywhere around the perimeter, which is ~11% of the object's height so it scales to ~7.5 px at 69 px game height).
+3. ZERO THIN INTERNAL BLACK OR DARK LINES: Do NOT draw any black or dark lines inside the pants (no dark waistband line, no dark fly line)! Fill the entire interior of the pelvis block with flat medium grey construction paper (#717171) and draw the subtle fly/waist shading ONLY in light-medium grey pencil (#6e6a62, luminance >= 100) so the ONLY dark ink in the entire image is the 40 px thick outer perimeter border. Zero grey pixels may protrude outside the black marker border.

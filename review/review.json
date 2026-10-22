@@ -97,6 +97,62 @@
       "verdict": "rejected",
       "reason": "why a mouth? His mouth should be permanently covered",
       "ts": "2026-10-21T23:36:11"
+    },
+    {
+      "id": "smoothface.arm_front",
+      "version": "v3",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T07:41:03"
+    },
+    {
+      "id": "smoothface.brows.normal",
+      "version": "v3",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T07:41:05"
+    },
+    {
+      "id": "smoothface.leg_back",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T07:41:42"
+    },
+    {
+      "id": "smoothface.leg_front",
+      "version": "v3",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T07:41:43"
+    },
+    {
+      "id": "smoothface.pants",
+      "version": "v3",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T07:41:44"
+    },
+    {
+      "id": "smoothface.shoe_back",
+      "version": "v3",
+      "verdict": "rejected",
+      "reason": "Esto deberia estar viendo a la derecha 3/4, en lugar de a la izquierda 3/4. Y mejor si lo copias, no quiero dos zapatos diferentes.",
+      "ts": "2026-10-22T07:42:15"
+    },
+    {
+      "id": "smoothface.shoe_front",
+      "version": "v2",
+      "verdict": "rejected",
+      "reason": "Ver lo que escribi en el otro",
+      "ts": "2026-10-22T07:42:28"
+    },
+    {
+      "id": "smoothface.arm_back",
+      "version": "v3",
+      "verdict": "rejected",
+      "reason": "No entiendo este brazo. Hace falta el brazo del fondo y la mano, pero no en esta posicion.",
+      "ts": "2026-10-22T07:42:47"
     }
   ]
 }

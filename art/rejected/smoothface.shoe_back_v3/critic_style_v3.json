@@ -1,0 +1,10 @@
+{
+  "verdict": "sin_objeciones",
+  "defects": [
+    {
+      "zone": "shoe body fill and toe cap",
+      "what": "The shoe body uses a medium-dark charcoal grey fill (#57504e) with a soft shaded toe cap and heel pull-tab rather than solid black (#000000) paper.",
+      "severity": "minor"
+    }
+  ]
+}

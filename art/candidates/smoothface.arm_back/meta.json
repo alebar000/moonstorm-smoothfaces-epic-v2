@@ -1,0 +1,24 @@
+{
+  "id": "smoothface.arm_back",
+  "category": "smoothface",
+  "kind": "body_part",
+  "what": "Mr. Smoothface rear (left) coat sleeve arm only (no hand attached): dark grey trench coat paper (#323232) slightly bent at the elbow in 3/4 view facing left, foreshortened companion to smoothface.arm_front, with upper shoulder overlap tab to tuck behind smoothface.torso and wrist cuff at the end",
+  "target_height_px": 86,
+  "height_fraction_of_smoothface": 0.273,
+  "pivot_hint": "upper shoulder joint tucking behind smoothface.torso; wrist cuff at lower-right/front end",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/ref_design_smoothface.png",
+    "art/references/ref_cutout_layers/009_arm.png",
+    "art/references/ref_hero_torso.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "rejected",
+  "proposed_version": "v3",
+  "last_rejection": {
+    "version": "v3",
+    "reason": "No entiendo este brazo. Hace falta el brazo del fondo y la mano, pero no en esta posicion."
+  }
+}

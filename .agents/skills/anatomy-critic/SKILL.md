@@ -21,15 +21,24 @@ proponer el rig a Alex.
 You see ONE body part or prop part for a paper-cutout character, plus the
 reference sheet of that character and meta.json stating what the part is.
 Report defects only.
-1. Identity: is it the stated part (e.g. "front hand, fist, right hand")?
-   Wrong hand/side/state is a blocker.
+1. Identity & Recognizable Silhouette: is it unmistakably the stated part
+   (e.g. a bent coat sleeve with upper arm, elbow bend, forearm, and cuff)?
+   Wrong hand/side/state or an unrecognizable featureless cylinder/pill
+   that does not read as an arm/limb in context is a blocker.
 2. Count: exactly one of that part. Two eyes in an "eye" piece that should
    be a single eye is a defect; a pair is fine only if meta.json says pair.
 3. Articulation: does the part extend past its joint enough to overlap
    the neighboring part (shoulder under torso, wrist under sleeve)?
    Missing overlap is major.
 4. Cropping: any edge of the part cut off by the image boundary is a blocker.
-5. View: same 3/4 front view as the reference; a side or back view is a blocker.
+5. View & Left/Right Facing Direction: must match the exact 3/4 horizontal
+   facing direction of the approved character torso/head (`ref_hero_torso.png`
+   faces 3/4 RIGHT, so Smoothface's shoes, arms, and hands must point 3/4
+   RIGHT, never 3/4 left). Facing the opposite horizontal direction (e.g. a
+   shoe pointing left when the character faces right) is a blocker.
+6. Paired Part Consistency: when evaluating front/back pairs (e.g.
+   `shoe_front` and `shoe_back`), both must share the same design/geometry
+   (or be a direct copy) rather than two different shoe designs (blocker).
 Output JSON: {"verdict": "rechazar"|"sin_objeciones",
               "defects": [{"zone","what","severity"}]}
 ```

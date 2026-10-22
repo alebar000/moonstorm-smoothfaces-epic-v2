@@ -1,0 +1,10 @@
+{
+  "verdict": "sin_objeciones",
+  "defects": [
+    {
+      "zone": "bottom trouser cuff",
+      "what": "The bottom trouser cuff tapers slightly inward rather than having the flared cuff described in meta.json.",
+      "severity": "minor"
+    }
+  ]
+}

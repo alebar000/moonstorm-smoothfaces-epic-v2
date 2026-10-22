@@ -1,0 +1,24 @@
+{
+  "id": "smoothface.shoe_front",
+  "category": "smoothface",
+  "kind": "body_part",
+  "what": "Mr. Smoothface single front (right) dress shoe: canonical black construction paper (#000000 / #1a1612) with grey pencil contour shading (#6e6a62) in 3/4 front view facing left, matching the right-side shoe of ref_cutout_layers/002_shoes.png and ref_design_smoothface.png, with flat sole and upper ankle overlap tab",
+  "target_height_px": 47,
+  "height_fraction_of_smoothface": 0.149,
+  "pivot_hint": "ankle top-center under smoothface.leg_front; flat sole baseline at bottom",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/ref_design_smoothface.png",
+    "art/references/ref_cutout_layers/002_shoes.png",
+    "art/references/ref_hero_torso.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "rejected",
+  "proposed_version": "v2",
+  "last_rejection": {
+    "version": "v2",
+    "reason": "Ver lo que escribi en el otro"
+  }
+}

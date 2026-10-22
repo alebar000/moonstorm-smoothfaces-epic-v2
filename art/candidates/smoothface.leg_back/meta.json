@@ -1,0 +1,21 @@
+{
+  "id": "smoothface.leg_back",
+  "category": "smoothface",
+  "kind": "body_part",
+  "what": "Mr. Smoothface rear (left) trouser leg only (no shoe): canonical medium grey construction paper (#717171) in 3/4 view facing left, slightly angled back pant leg derived from ref_cutout_layers/003_pants.png, with rounded upper hip overlap tab and bottom trouser cuff",
+  "target_height_px": 58,
+  "height_fraction_of_smoothface": 0.184,
+  "pivot_hint": "upper hip joint under smoothface.pants; bottom cuff above smoothface.shoe_back",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/ref_design_smoothface.png",
+    "art/references/ref_cutout_layers/003_pants.png",
+    "art/references/ref_hero_torso.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "approved",
+  "proposed_version": "v2",
+  "approved_version": "v2"
+}

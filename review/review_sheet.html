@@ -208,27 +208,33 @@
 
   // Interactive Rig state for Smoothface
   const DEFAULT_OFFSETS = {
-    shoes_ref: {x: 48, y: 356, w: 129, h: 47},
-    pants_ref: {x: 75, y: 306, w: 89, h: 69},
-    head:      {x: 132, y: 79, w: 144, h: 151},
-    eyes_normal: {x: 175, y: 143, w: 72, h: 58},
-    eyes_squint: {x: 174, y: 142, w: 81, h: 60},
-    eyes_closed: {x: 175, y: 143, w: 78, h: 58},
-    brows_normal:    {x: 178, y: 131, w: 84, h: 59},
+    shoe_back:  {x: 48,  y: 354, w: 78,  h: 57},
+    shoe_front: {x: 96,  y: 356, w: 68,  h: 57},
+    leg_back:   {x: 78,  y: 320, w: 49,  h: 68},
+    leg_front:  {x: 118, y: 322, w: 40,  h: 68},
+    pants:      {x: 78,  y: 282, w: 84,  h: 81},
+    arm_back:   {x: 216, y: 178, w: 56,  h: 100},
+    shoes_ref:  {x: 48,  y: 356, w: 129, h: 47},
+    pants_ref:  {x: 75,  y: 306, w: 89,  h: 69},
+    head:       {x: 132, y: 79,  w: 144, h: 151},
+    eyes_normal:  {x: 175, y: 143, w: 72, h: 58},
+    eyes_squint:  {x: 174, y: 142, w: 81, h: 60},
+    eyes_closed:  {x: 175, y: 143, w: 78, h: 58},
+    brows_normal:    {x: 174, y: 132, w: 96, h: 50},
     brows_angry:     {x: 178, y: 131, w: 84, h: 59},
     brows_surprised: {x: 179, y: 126, w: 76, h: 57},
-    mouth_closed:    {x: 183, y: 188, w: 56, h: 22},
-    torso:     {x: 27, y: 90, w: 255, h: 271},
-    hand_ref:  {x: 137, y: 134, w: 162, h: 98},
-    arm_ref:   {x: 165, y: 219, w: 116, h: 90}
+    torso:      {x: 27,  y: 90,  w: 255, h: 271},
+    hand_ref:   {x: 137, y: 134, w: 162, h: 98},
+    arm_front:  {x: 156, y: 210, w: 135, h: 108},
+    arm_ref:    {x: 165, y: 219, w: 116, h: 90}
   };
   let rigOffsets = JSON.parse(JSON.stringify(DEFAULT_OFFSETS));
   let rigState = {
     eyes: 'normal',      // 'normal' | 'squint' | 'closed' | 'none'
     brows: 'normal',     // 'normal' | 'angry' | 'surprised' | 'none'
-    mouth: 'hidden',     // 'hidden' | 'closed'
+    bodyMode: 'l2a',     // 'l2a' (nuevas piezas L2a) | 'ref2010' (capas 2010) | 'both'
     collarFront: true,   // true = collar overlaps lower face (2010 canon), false = head in front of torso
-    show2010Body: true,  // show 2010 shoes/pants/arm/hand for full posture context
+    showHand2010: true,  // show 2010 hand until L2b hands are generated
     highlightActive: true
   };
 
@@ -257,10 +263,6 @@
     else if (it.id === 'smoothface.brows.normal') rigState.brows = 'normal';
     else if (it.id === 'smoothface.brows.angry') rigState.brows = 'angry';
     else if (it.id === 'smoothface.brows.surprised') rigState.brows = 'surprised';
-    else if (it.id === 'smoothface.mouth.closed') {
-      rigState.mouth = 'closed';
-      rigState.collarFront = false;
-    }
   }
 
   function partImg(id, fallbackPath) {
@@ -287,26 +289,41 @@
   function buildSmoothfaceRigHTML(activeId, zoomH) {
     const scale = Math.max(0.55, Math.min(1.6, zoomH / 340));
     const wrapW = Math.round(310 * scale);
-    const wrapH = Math.round(410 * scale);
+    const wrapH = Math.round(415 * scale);
 
     const torsoSrc = partImg('smoothface.torso', 'art/approved/smoothface/smoothface.torso.png');
-    const headSrc  = partImg('smoothface.head', 'art/candidates/smoothface.head/v3.png');
+    const headSrc  = partImg('smoothface.head', 'art/approved/smoothface/smoothface.head.png');
     const eyeSrcs = {
-      normal: partImg('smoothface.eyes.normal', 'art/candidates/smoothface.eyes.normal/v3.png'),
-      squint: partImg('smoothface.eyes.squint', 'art/candidates/smoothface.eyes.squint/v3.png'),
-      closed: partImg('smoothface.eyes.closed', 'art/candidates/smoothface.eyes.closed/v3.png')
+      normal: partImg('smoothface.eyes.normal', 'art/approved/smoothface/smoothface.eyes.normal.png'),
+      squint: partImg('smoothface.eyes.squint', 'art/approved/smoothface/smoothface.eyes.squint.png'),
+      closed: partImg('smoothface.eyes.closed', 'art/approved/smoothface/smoothface.eyes.closed.png')
     };
     const browSrcs = {
-      normal:    partImg('smoothface.brows.normal', 'art/candidates/smoothface.brows.normal/v2.png'),
-      angry:     partImg('smoothface.brows.angry', 'art/candidates/smoothface.brows.angry/v3.png'),
-      surprised: partImg('smoothface.brows.surprised', 'art/candidates/smoothface.brows.surprised/v1.png')
+      normal:    partImg('smoothface.brows.normal', 'art/candidates/smoothface.brows.normal/v3.png'),
+      angry:     partImg('smoothface.brows.angry', 'art/approved/smoothface/smoothface.brows.angry.png'),
+      surprised: partImg('smoothface.brows.surprised', 'art/approved/smoothface/smoothface.brows.surprised.png')
     };
-    const mouthSrc = partImg('smoothface.mouth.closed', 'art/candidates/smoothface.mouth.closed/v3.png');
+    const shoeBackSrc  = partImg('smoothface.shoe_back',  'art/candidates/smoothface.shoe_back/v3.png');
+    const shoeFrontSrc = partImg('smoothface.shoe_front', 'art/candidates/smoothface.shoe_front/v2.png');
+    const legBackSrc   = partImg('smoothface.leg_back',   'art/candidates/smoothface.leg_back/v2.png');
+    const legFrontSrc  = partImg('smoothface.leg_front',  'art/candidates/smoothface.leg_front/v3.png');
+    const pantsSrc     = partImg('smoothface.pants',      'art/candidates/smoothface.pants/v3.png');
+    const armBackSrc   = partImg('smoothface.arm_back',   'art/candidates/smoothface.arm_back/v3.png');
+    const armFrontSrc  = partImg('smoothface.arm_front',  'art/candidates/smoothface.arm_front/v3.png');
 
     const layers = [];
-    if (rigState.show2010Body) {
-      layers.push({key:'shoes_ref', pid:'', src:'art/references/ref_cutout_layers/002_shoes.png', z:10, opacity:0.85});
-      layers.push({key:'pants_ref', pid:'', src:'art/references/ref_cutout_layers/003_pants.png', z:11, opacity:0.85});
+    if (rigState.bodyMode === 'ref2010' || rigState.bodyMode === 'both') {
+      const op = rigState.bodyMode === 'both' ? 0.45 : 0.9;
+      layers.push({key:'shoes_ref', pid:'', src:'art/references/ref_cutout_layers/002_shoes.png', z:5, opacity:op});
+      layers.push({key:'pants_ref', pid:'', src:'art/references/ref_cutout_layers/003_pants.png', z:6, opacity:op});
+    }
+    if (rigState.bodyMode === 'l2a' || rigState.bodyMode === 'both') {
+      layers.push({key:'shoe_back',  pid:'smoothface.shoe_back',  src:shoeBackSrc,  z:10, opacity:1});
+      layers.push({key:'leg_back',   pid:'smoothface.leg_back',   src:legBackSrc,   z:11, opacity:1});
+      layers.push({key:'shoe_front', pid:'smoothface.shoe_front', src:shoeFrontSrc, z:12, opacity:1});
+      layers.push({key:'leg_front',  pid:'smoothface.leg_front',  src:legFrontSrc,  z:13, opacity:1});
+      layers.push({key:'pants',      pid:'smoothface.pants',      src:pantsSrc,     z:14, opacity:1});
+      layers.push({key:'arm_back',   pid:'smoothface.arm_back',   src:armBackSrc,   z: activeId === 'smoothface.arm_back' ? 32 : 18, opacity:1});
     }
 
     const headZ = rigState.collarFront ? 20 : 35;
@@ -322,14 +339,17 @@
       const bk = 'brows_' + rigState.brows;
       layers.push({key:bk, pid:'smoothface.brows.' + rigState.brows, src:browSrcs[rigState.brows], z:faceZ + 1, opacity:1});
     }
-    if (rigState.mouth === 'closed') {
-      layers.push({key:'mouth_closed', pid:'smoothface.mouth.closed', src:mouthSrc, z:faceZ + 2, opacity:1});
-    }
     layers.push({key:'torso', pid:'smoothface.torso', src:torsoSrc, z:torsoZ, opacity:1});
 
-    if (rigState.show2010Body) {
+    if (rigState.showHand2010) {
       layers.push({key:'hand_ref', pid:'', src:'art/references/ref_cutout_layers/008_hand.png', z:40, opacity:0.85});
-      layers.push({key:'arm_ref',  pid:'', src:'art/references/ref_cutout_layers/009_arm.png',  z:41, opacity:0.85});
+    }
+    if (rigState.bodyMode === 'l2a' || rigState.bodyMode === 'both') {
+      layers.push({key:'arm_front', pid:'smoothface.arm_front', src:armFrontSrc, z:41, opacity:1});
+    }
+    if (rigState.bodyMode === 'ref2010' || rigState.bodyMode === 'both') {
+      const op = rigState.bodyMode === 'both' ? 0.45 : 0.9;
+      layers.push({key:'arm_ref', pid:'', src:'art/references/ref_cutout_layers/009_arm.png', z:42, opacity:op});
     }
 
     layers.sort((a, b) => a.z - b.z);
@@ -366,15 +386,16 @@
           </div>
           <span class="lbl">Cejas (Q-E):</span>
           <div class="rig-btns">
-            ${btn('brows','normal','Normal')}
+            ${btn('brows','normal','Normal (v3)')}
             ${btn('brows','angry','Angry')}
             ${btn('brows','surprised','Surprised')}
             ${btn('brows','none','Ocultar')}
           </div>
-          <span class="lbl">Boca:</span>
+          <span class="lbl">Cuerpo:</span>
           <div class="rig-btns">
-            ${btn('mouth','hidden','Oculta tras cuello (canon)')}
-            ${btn('mouth','closed','Closed (visible)')}
+            ${btn('bodyMode','l2a','Nuevas L2a')}
+            ${btn('bodyMode','ref2010','Capas 2010')}
+            ${btn('bodyMode','both','Superponer')}
           </div>
           <span class="lbl">Cuello:</span>
           <div class="rig-btns">
@@ -383,7 +404,7 @@
           </div>
           <span class="lbl">Opciones:</span>
           <div class="rig-btns">
-            <button type="button" class="${rigState.show2010Body?'on':''}" id="rig-toggle-body">Brazo/piernas 2010</button>
+            <button type="button" class="${rigState.showHand2010?'on':''}" id="rig-toggle-body">Mano ref 2010</button>
             <button type="button" class="${rigState.highlightActive?'on':''}" id="rig-toggle-hi">Resaltar pieza activa</button>
           </div>
         </div>
@@ -402,8 +423,6 @@
       b.onclick = () => {
         const g = b.dataset.rigGroup, v = b.dataset.rigVal;
         rigState[g] = v;
-        if (g === 'mouth' && v === 'closed') rigState.collarFront = false;
-        if (g === 'mouth' && v === 'hidden') rigState.collarFront = true;
         renderStage();
       };
     });
@@ -411,7 +430,7 @@
     if (cf) cf.onclick = () => { rigState.collarFront = true; renderStage(); };
     if (cb) cb.onclick = () => { rigState.collarFront = false; renderStage(); };
     const tb = $('#rig-toggle-body');
-    if (tb) tb.onclick = () => { rigState.show2010Body = !rigState.show2010Body; renderStage(); };
+    if (tb) tb.onclick = () => { rigState.showHand2010 = !rigState.showHand2010; renderStage(); };
     const th = $('#rig-toggle-hi');
     if (th) th.onclick = () => { rigState.highlightActive = !rigState.highlightActive; renderStage(); };
     const rs = $('#rig-reset');

@@ -1,0 +1,16 @@
+{
+  "style": {
+    "verdict": "sin_objeciones",
+    "defects": [
+      {
+        "zone": "shoe body fill and toe highlight",
+        "what": "The shoe body uses a medium-dark charcoal grey fill (#4f4d4c) with a soft lighter grey toe highlight rather than solid black (#000000) paper with dry pencil hatching.",
+        "severity": "minor"
+      }
+    ]
+  },
+  "anatomy": {
+    "verdict": "sin_objeciones",
+    "defects": []
+  }
+}

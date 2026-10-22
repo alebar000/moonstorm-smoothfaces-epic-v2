@@ -1,0 +1,21 @@
+{
+  "id": "smoothface.arm_front",
+  "category": "smoothface",
+  "kind": "body_part",
+  "what": "Mr. Smoothface front (right) coat sleeve arm only (no hand attached): dark grey trench coat paper (#323232) bent upward at the elbow in 3/4 view facing left, matching the exact silhouette and elbow crease lines of ref_cutout_layers/009_arm.png, with rounded upper shoulder overlap tab and open sleeve cuff for the front hand",
+  "target_height_px": 90,
+  "height_fraction_of_smoothface": 0.286,
+  "pivot_hint": "upper-left shoulder joint overlapping smoothface.torso; wrist cuff at upper-right end",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/ref_design_smoothface.png",
+    "art/references/ref_cutout_layers/009_arm.png",
+    "art/references/ref_hero_torso.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "approved",
+  "proposed_version": "v3",
+  "approved_version": "v3"
+}

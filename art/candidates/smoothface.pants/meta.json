@@ -1,0 +1,21 @@
+{
+  "id": "smoothface.pants",
+  "category": "smoothface",
+  "kind": "body_part",
+  "what": "Mr. Smoothface upper trousers/pelvis block: canonical medium grey construction paper (#717171) in 3/4 view facing left, matching the exact silhouette of ref_cutout_layers/003_pants.png, with waist overlap tab at top to tuck under smoothface.torso and subtle center seam fold",
+  "target_height_px": 69,
+  "height_fraction_of_smoothface": 0.219,
+  "pivot_hint": "top waist center under smoothface.torso; left and right hip sockets at bottom",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/ref_design_smoothface.png",
+    "art/references/ref_cutout_layers/003_pants.png",
+    "art/references/ref_hero_torso.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "approved",
+  "proposed_version": "v3",
+  "approved_version": "v3"
+}
