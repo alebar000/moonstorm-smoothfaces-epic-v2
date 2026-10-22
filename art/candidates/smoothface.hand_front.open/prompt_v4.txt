@@ -1,0 +1,13 @@
+corrección obligatoria de Alex sobre v3: "The middle image has a right hand (the closes to us) with only 4 fingers, while the left/back one has 5. And the right image has a wrong right hand, it was drawn as left."
+
+Hand-cut construction-paper cutout piece for a 2D character rig: Mr. Smoothface's front (closest to viewer, anatomical RIGHT) hand open in an expressive scheming villain gesture (`smoothface.hand_front.open`), in 3/4 view facing RIGHT, companion to `008_hand.png`, `ref_design_smoothface.png`, and `smoothface.arm_front.png`.
+
+CRITICAL ANATOMICAL RIGHT-HAND & 5-DIGIT RULES:
+- MUST HAVE EXACTLY 5 DIGITS (1 thumb + 4 fingers: index, middle, ring, pinky), matching the 5-digit count of the back hand (`smoothface.hand_back.open/v3.png`)! Do NOT draw a 4-finger cartoon hand!
+- MUST BE AN ANATOMICAL RIGHT HAND (closest to viewer, attached to `smoothface.arm_front`), viewed from the **DORSAL SIDE (BACK OF THE HAND)**:
+  - Wrist overlap tab is at the lower-left (tucking into the cuff of `smoothface.arm_front`).
+  - Because this is his RIGHT hand raised in front of him with the thumb on the upper-left (closest to his face) and the 4 fingers (index, middle, ring, pinky) splayed/curved to the right, the viewer sees the **SMOOTH BACK OF THE RIGHT HAND (DORSUM)** — NOT the palm!
+  - DO NOT draw palm lines or a thumb attached to the front palm (which would make it a left hand!). The smooth back of the hand (`#f9ecc2` cream paper) faces the viewer uninterrupted from wrist to knuckles, with the thumb extending from the upper-left side and the 4 fingers (index, middle, ring, pinky = 5 digits total!) extending and curving to the right.
+- Draw the hand COMPACT in the dead center of the `1024x1024` `#00FF00` canvas (`~285 px` tall, with `~360 px` of solid `#00FF00` green margin on all four sides).
+- Keep all 5 digits connected into ONE single solid silhouette (fill the narrow V-gaps between the digits with solid `#1a1612` black marker ink so there are NO `#00FF00` green holes inside the hand) and wrap 100% of the outer silhouette perimeter (including thick rounded black marker caps around all 5 fingertips and the wrist base) with a MASSIVE, UNIFORM `80-95 px` wide black marker border (`#1a1612` / `#000000`).
+- Use ONLY two colors inside the silhouette: flat warm skin cream (`#f9ecc2`, NO brownish/grey palm smudge!) and solid black marker (`#1a1612` / `#000000`). Zero `#f9ecc2` pixels outside the black border. Pure flat `#00FF00` background.

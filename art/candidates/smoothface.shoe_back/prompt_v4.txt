@@ -1,0 +1,3 @@
+PIECE: smoothface.shoe_back
+FIX FROM PREVIOUS VERSION: rejected by Alex with reason "Esto deberia estar viendo a la derecha 3/4, en lugar de a la izquierda 3/4. Y mejor si lo copias, no quiero dos zapatos diferentes."
+WHAT: Direct exact copy of `smoothface.shoe_front` (`v4`) oriented 3/4 to the right (heel on the left, bulbous rounded toe pointing down-right), copied identically per Alex's explicit instruction so both shoes are identical.

@@ -2,10 +2,10 @@
   "id": "smoothface.shoe_front",
   "category": "smoothface",
   "kind": "body_part",
-  "what": "Mr. Smoothface single front (right) dress shoe: canonical black construction paper (#000000 / #1a1612) with grey pencil contour shading (#6e6a62) in 3/4 front view facing left, matching the right-side shoe of ref_cutout_layers/002_shoes.png and ref_design_smoothface.png, with flat sole and upper ankle overlap tab",
+  "what": "Mr. Smoothface single dress shoe in 3/4 view facing RIGHT (heel on the left, bulbous rounded toe pointing down-right): dark charcoal/black construction paper (#323232 / #000000) with soft grey pencil highlight (#6e6a62) on the toe cap and bold black marker outline (#1a1612), with upper ankle overlap tab at top-left to tuck under the trouser leg. Identical pair copy shared with smoothface.shoe_back.",
   "target_height_px": 47,
   "height_fraction_of_smoothface": 0.149,
-  "pivot_hint": "ankle top-center under smoothface.leg_front; flat sole baseline at bottom",
+  "pivot_hint": "ankle top-left under smoothface.leg_front; flat sole baseline at bottom",
   "allowed_islands": 0,
   "references": [
     "art/references/ref_design_smoothface.png",
@@ -13,12 +13,15 @@
     "art/references/ref_hero_torso.png"
   ],
   "versions": {
-    "v1": "prompt_v1.txt"
+    "v1": "prompt_v1.txt",
+    "v4": "prompt_v4.txt"
   },
-  "status": "rejected",
-  "proposed_version": "v2",
+  "status": "approved",
+  "proposed_version": "v5",
   "last_rejection": {
     "version": "v2",
-    "reason": "Ver lo que escribi en el otro"
-  }
+    "reason": "Ver lo que escribi en el otro (Esto deberia estar viendo a la derecha 3/4, en lugar de a la izquierda 3/4. Y mejor si lo copias, no quiero dos zapatos diferentes.)"
+  },
+  "batch": "L2b",
+  "approved_version": "v5"
 }

@@ -1,0 +1,23 @@
+{
+  "id": "smoothface.hand_front.fist",
+  "category": "smoothface",
+  "kind": "body_part",
+  "what": "Mr. Smoothface front hand in a clenched villain fist (3/4 view facing RIGHT, matching ref_cutout_layers/008_hand.png and ref_design_smoothface.png): warm skin cream construction paper (#f9ecc2) with bold black marker outline (#1a1612) and subtle grey pencil shading (#6e6a62) on the curled finger knuckles and wrist overlap tab that tucks into the cuff of smoothface.arm_front.",
+  "target_height_px": 38,
+  "height_fraction_of_smoothface": 0.121,
+  "pivot_hint": "lower-left wrist base tucking into the cuff of smoothface.arm_front",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/ref_design_smoothface.png",
+    "art/references/ref_cutout_layers/008_hand.png",
+    "art/references/ref_hero_torso.png",
+    "art/approved/smoothface/smoothface.arm_front.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "approved",
+  "proposed_version": "v3",
+  "batch": "L2b",
+  "approved_version": "v3"
+}

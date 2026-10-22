@@ -1,0 +1,15 @@
+STYLE (non-negotiable, matches the attached references):
+Hand-drawn construction-paper cutout. Each piece is ONE flat color of construction paper with a very subtle fiber texture, cut out with scissors. Design and proportions come from the attached pencil sketch by the original artist; do not reinterpret it. Outline: black marker (#1a1612), hand-drawn, visible pressure variation, some strokes overshoot corners. Shading: SOFT PENCIL only (#6e6a62), grey, visible stroke direction, only in shadow areas. No digital gradients, no airbrush, no glow, no 3D.
+EDGE: rough scissor cut, visible straight facets and corners where the scissors turned; the cut does not perfectly follow the ink.
+INK: thick marker, ~7.5 px at game scale (6-9 px range).
+COLOR: vivid, saturated construction paper, ONLY from this character palette: #323232, #717171, #000000, #f9ecc2, #c84228, #d9a441, #4a7c59, #3b5998, #8c4a7e, #e07a3c, #5c9ead, #a3b86c, #1a1612, #6e6a62.
+One isolated object, flat solid #00FF00 chroma-key green background filling the entire canvas around the cutout. No cast shadow baked in.
+FORBIDDEN: gradients, glow, bloom, 3D render, airbrush, white sticker border, any background, any text, more than one object, two shoes, legs, thin internal black lines, shoe pointing left, notch or gap in top ankle edge, colors from the other palette, reinterpreting the sketch.
+
+PIECE: smoothface.shoe_front
+FIX FROM PREVIOUS VERSION: rejected by Alex with reason "Esto deberia estar viendo a la derecha 3/4, en lugar de a la izquierda 3/4. Y mejor si lo copias, no quiero dos zapatos diferentes."; also v4 had a two-tab notch on top and ink_thickness_px measured 2.0 px.
+WHAT: ONE single shoe cutout: Mr. Smoothface's classic villain dress shoe ONLY (NO second shoe, NO trouser leg; 1 single connected component, allowed_islands: 0) in 3/4 front view POINTING TO THE RIGHT (low heel block on the LEFT side of the image, bulbous rounded dress-shoe toe pointing DOWN-RIGHT on the RIGHT side of the image, and a SINGLE continuous rounded upper ankle dome on the top-left with NO notch or gap so the trouser leg overlaps it cleanly without any hole).
+CRITICAL INK & SCALE RULES:
+1. Draw the shoe VERY SMALL AND COMPACT in the dead center of the 1024x1024 #00FF00 canvas (~280 px tall and ~400 px wide, with ~370 px of solid #00FF00 green margin above and below).
+2. Enclose 100% of the outer silhouette perimeter with an EXAGGERATED, MASSIVE hand-drawn black marker border (#1a1612 / #000000, 65-75 px wide everywhere around the outer silhouette — 1/4 of the shoe's height — so it scales to ~7.5 px at 47 px game height).
+3. ZERO THIN INTERNAL BLACK LINES: Fill the interior inside the thick black border with flat dark charcoal/slate construction paper (#484848 / #383838) and soft grey pencil highlight (#6e6a62 / #717171) on the right-pointing toe cap, with NO internal black lines. Zero grey pixels may protrude outside the black marker border.

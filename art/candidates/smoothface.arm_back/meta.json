@@ -2,23 +2,27 @@
   "id": "smoothface.arm_back",
   "category": "smoothface",
   "kind": "body_part",
-  "what": "Mr. Smoothface rear (left) coat sleeve arm only (no hand attached): dark grey trench coat paper (#323232) slightly bent at the elbow in 3/4 view facing left, foreshortened companion to smoothface.arm_front, with upper shoulder overlap tab to tuck behind smoothface.torso and wrist cuff at the end",
+  "what": "Mr. Smoothface rear (far-right) trench coat sleeve arm only (no hand attached) in 3/4 view facing RIGHT: dark grey coat construction paper (#323232) clearly bent at the elbow (upper arm descending from shoulder overlap tab, bent elbow with grey pencil crease lines #6e6a62, forearm extending forward-right to a wrist cuff opening where smoothface.hand_back attaches), matching the style and construction of approved smoothface.arm_front.",
   "target_height_px": 86,
   "height_fraction_of_smoothface": 0.273,
-  "pivot_hint": "upper shoulder joint tucking behind smoothface.torso; wrist cuff at lower-right/front end",
+  "pivot_hint": "upper-left shoulder joint tucking behind smoothface.torso; wrist cuff at right end where smoothface.hand_back attaches",
   "allowed_islands": 0,
   "references": [
     "art/references/ref_design_smoothface.png",
     "art/references/ref_cutout_layers/009_arm.png",
-    "art/references/ref_hero_torso.png"
+    "art/references/ref_hero_torso.png",
+    "art/approved/smoothface/smoothface.arm_front.png"
   ],
   "versions": {
-    "v1": "prompt_v1.txt"
+    "v1": "prompt_v1.txt",
+    "v4": "prompt_v4.txt"
   },
-  "status": "rejected",
-  "proposed_version": "v3",
+  "status": "approved",
+  "proposed_version": "v4",
   "last_rejection": {
     "version": "v3",
     "reason": "No entiendo este brazo. Hace falta el brazo del fondo y la mano, pero no en esta posicion."
-  }
+  },
+  "batch": "L2b",
+  "approved_version": "v4"
 }

@@ -39,6 +39,18 @@ Report defects only.
 6. Paired Part Consistency: when evaluating front/back pairs (e.g.
    `shoe_front` and `shoe_back`), both must share the same design/geometry
    (or be a direct copy) rather than two different shoe designs (blocker).
+7. Hand Chirality (Right vs Left Hand) & Finger Count (5 digits):
+   - In 3/4 view facing RIGHT, `hand_front.*` (attached to `arm_front`, closest
+     to the viewer) is the character's anatomical RIGHT hand, whereas
+     `hand_back.*` (attached to `arm_back`, farthest from the viewer) is the
+     character's anatomical LEFT hand.
+   - When `hand_front.*` (RIGHT hand) is raised facing right with the thumb on
+     the upper-left, the viewer sees the DORSAL (back) side of the right hand:
+     showing curled fingertips or palm lines on the viewer-facing side with the
+     thumb on top/left makes it a LEFT hand (blocker).
+   - Both hands (`hand_front` and `hand_back`) must have the exact same digit
+     count: 5 digits (1 thumb + 4 fingers) when open. A hand with 4 digits when
+     the other has 5 digits is a blocker.
 Output JSON: {"verdict": "rechazar"|"sin_objeciones",
               "defects": [{"zone","what","severity"}]}
 ```

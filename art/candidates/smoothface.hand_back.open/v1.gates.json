@@ -1,0 +1,38 @@
+{
+  "file": "art/candidates/smoothface.hand_back.open/v1.png",
+  "ts": "2026-10-22T07:53:56",
+  "kind": "body_part",
+  "halo_fraction": 0.0117,
+  "halo_ok": false,
+  "sticker_border_fraction": 0.2703,
+  "sticker_ok": false,
+  "stray_partial_alpha": 0,
+  "partial_alpha_ok": true,
+  "components": 1,
+  "islands_significant": 0,
+  "specks": 0,
+  "components_ok": true,
+  "touches_border_sides": 0,
+  "border_ok": true,
+  "palette_used": "characters",
+  "off_palette_fraction": 0.0597,
+  "palette_provisional": false,
+  "palette_ok": true,
+  "ink_thickness_px": 2.0,
+  "ink_range": [
+    6,
+    9
+  ],
+  "ink_ok": false,
+  "soft_gradient_fraction": 0.1141,
+  "gradient_ok": true,
+  "measured_height_px": 40,
+  "target_height_px": 40,
+  "height_ok": true,
+  "failed": [
+    "halo",
+    "sticker",
+    "ink"
+  ],
+  "overall": "fail"
+}

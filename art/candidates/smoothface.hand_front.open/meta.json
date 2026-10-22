@@ -1,0 +1,23 @@
+{
+  "id": "smoothface.hand_front.open",
+  "category": "smoothface",
+  "kind": "body_part",
+  "what": "Mr. Smoothface front hand open in an expressive scheming villain gesture with fingers slightly splayed (3/4 view facing RIGHT, companion to ref_cutout_layers/008_hand.png): warm skin cream construction paper (#f9ecc2) with bold black marker outline (#1a1612), subtle grey pencil shading (#6e6a62), and a lower-left wrist overlap tab that tucks into the cuff of smoothface.arm_front.",
+  "target_height_px": 42,
+  "height_fraction_of_smoothface": 0.133,
+  "pivot_hint": "lower-left wrist base tucking into the cuff of smoothface.arm_front",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/ref_design_smoothface.png",
+    "art/references/ref_cutout_layers/008_hand.png",
+    "art/references/ref_hero_torso.png",
+    "art/approved/smoothface/smoothface.arm_front.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "approved",
+  "proposed_version": "v4",
+  "batch": "L2b",
+  "approved_version": "v4"
+}

@@ -1,0 +1,12 @@
+Hand-cut construction-paper cutout piece for a 2D character rig: Mr. Smoothface's back (far-right) hand open in an expressive scheming villain claw/open-palm gesture (`smoothface.hand_back.open`), in 3/4 view facing RIGHT, companion to `008_hand.png` and `ref_design_smoothface.png`, and matching the approved finish of `ref_hero_torso.png` and `smoothface.arm_front.png`.
+
+CRITICAL ORIENTATION & SHAPE RULES:
+- Draw ONLY ONE single hand cutout (NO sleeve, NO cuff, NO forearm; 1 single connected component).
+- 3/4 front view facing RIGHT: attaches at the cuff of `smoothface.arm_back`. It has a short wrist overlap tab on the lower-left and 4 chunky cartoon fingers + thumb open in a dramatic villain claw gesture toward the right / upper-right.
+- Draw the hand COMPACT in the dead center of the `1024x1024` `#00FF00` canvas (occupying only ~28% of the canvas height, `~285 px` tall, with `~360 px` of solid `#00FF00` green margin on all four sides).
+- Keep all fingers connected in ONE single solid silhouette (NO green `#00FF00` gaps inside the hand) and wrap 100% of the outer silhouette perimeter with an EXTREME, MASSIVE, UNIFORM hand-drawn black marker border (`#1a1612` / `#000000`, `80-95 px` wide everywhere on the 1024x1024 canvas, with ZERO thin spots on any fingertip) so that when scaled down to 40 px game height, the black border is 4.0+ px thick everywhere!
+- CRITICAL PALETTE FIX (v2 had `off_palette_fraction: 0.1089` due to a brownish-beige smudge in the center of the palm and thin grey finger lines): DO NOT draw any grey/brown smudge in the palm and DO NOT draw thin grey lines! Use ONLY TWO COLORS inside the silhouette:
+  1. Pure flat warm skin cream construction paper (`#f9ecc2`, NOT white `#ffffff`, NO brownish/tan shading smudge).
+  2. Pure solid black marker (`#1a1612` / `#000000`, `80-95 px` thick outer border and thick solid black wedges between the finger tips).
+- Zero `#f9ecc2` cream pixels may protrude outside the black marker border.
+- Isolated on a pure flat `#00FF00` chroma-key green background with zero drop shadow and zero stray specks.

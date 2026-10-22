@@ -1,0 +1,14 @@
+Hand-cut construction-paper cutout piece for a 2D character rig: Mr. Smoothface's front (closest to viewer, anatomical RIGHT) hand in a clenched villain fist (`smoothface.hand_front.fist`), in 3/4 view facing RIGHT, matching `008_hand.png` and `ref_design_smoothface.png` and the approved finish of `ref_hero_torso.png` and `smoothface.arm_front.png`.
+
+CRITICAL ANATOMICAL RIGHT-HAND (DORSAL VIEW) RULES:
+- This is Smoothface's anatomical RIGHT hand (the arm closest to the viewer, `arm_front`), raised in front of his chest facing right, exactly as shown in `ref_design_smoothface.png` and `008_hand.png`.
+- Because it is his RIGHT hand with the thumb on the upper-left (closest to his face) and knuckles facing right, the viewer sees the **BACK OF THE HAND (DORSAL SIDE)** — NOT the palm and NOT the curled fingertips!
+- DO NOT draw curled fingers facing the camera (showing curled fingers on the viewer's side with the thumb on top-left makes it a LEFT hand!).
+- Instead, draw the **DORSAL BACK** of the clenched right fist, matching `008_hand.png`:
+  - Short wrist overlap tab at the lower-left (tucking into the cuff of `smoothface.arm_front`).
+  - Rounded thumb bump on the upper-left edge.
+  - Rounded outer knuckle ridge along the upper-right and right edge (where the fingers curl AWAY from the viewer into the hidden palm on the back side).
+  - Smooth, flat warm skin cream construction paper (`#f9ecc2`) across the back of the hand facing the viewer, with at most one short bold black marker crease line at the base of the thumb bump.
+- Draw the fist COMPACT in the dead center of the `1024x1024` `#00FF00` canvas (`~290 px` tall, with `~360 px` of solid `#00FF00` green margin on all four sides).
+- Enclose 100% of the outer silhouette perimeter with a MASSIVE, UNIFORM hand-drawn black marker border (`#1a1612` / `#000000`, `80-95 px` wide everywhere around the outer silhouette).
+- Use ONLY flat warm skin cream (`#f9ecc2`, NOT white) and solid black marker (`#1a1612` / `#000000`). Zero cream pixels outside the black border. Pure flat `#00FF00` background.

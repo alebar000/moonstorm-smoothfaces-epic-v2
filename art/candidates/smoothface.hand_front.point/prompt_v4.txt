@@ -1,0 +1,16 @@
+corrección obligatoria de Alex sobre v3: "And the right image has a wrong right hand, it was drawn as left."
+
+Hand-cut construction-paper cutout piece for a 2D character rig: Mr. Smoothface's front (closest to viewer, anatomical RIGHT) hand pointing to the right (`smoothface.hand_front.point`), in 3/4 view facing RIGHT, companion to `008_hand.png`, `ref_design_smoothface.png`, and `smoothface.arm_front.png`.
+
+CRITICAL ANATOMICAL RIGHT-HAND (DORSAL VIEW) RULES:
+- Why v3 failed: v3 showed the curled middle, ring, and pinky fingertips facing the viewer while the index finger and thumb were at the top — which is anatomically a LEFT hand (palm facing viewer)!
+- This piece (`smoothface.hand_front.point`) is Mr. Smoothface's **ANATOMICAL RIGHT HAND** (closest to the viewer, attached to `smoothface.arm_front`) pointing to the right (`->`).
+- When you hold your RIGHT hand in front of your chest pointing to the right (`->`) with your index finger along the top edge, your palm faces AWAY from the viewer (inward toward your body), and the viewer sees the **BACK OF YOUR RIGHT HAND (DORSAL SIDE)**:
+  1. Wrist overlap tab at the lower-left (tucking into the cuff of `smoothface.arm_front`).
+  2. Thumb bump on the upper-left (along the upper-left base of the index finger).
+  3. Index finger extending straight out to the right (`->`) along the top edge.
+  4. Below the index finger, the middle, ring, and pinky fingers are curled **AWAY from the viewer** (tucked behind the hand into the hidden palm), so from the viewer's side we see ONLY the **smooth flat `#f9ecc2` back (dorsum) of the right hand** and the rounded **outer knuckle steps** along the lower-right edge!
+  5. **STRICTLY FORBIDDEN**: DO NOT draw curled finger tips, finger pads, fingernails, or palm creases facing the viewer below the index finger! The entire viewer-facing surface below the index finger is the smooth, continuous dorsal back of the right hand!
+- Draw the pointing right hand COMPACT in the dead center of the `1024x1024` `#00FF00` canvas (`~285 px` tall, `~420 px` wide, with `~300+ px` of solid `#00FF00` green margin on all four sides).
+- Enclose 100% of the outer silhouette perimeter with a MASSIVE, UNIFORM hand-drawn black marker border (`#1a1612` / `#000000`, `80-95 px` wide everywhere around the outer silhouette, including the tip of the pointing index finger and the wrist base).
+- Use ONLY flat warm skin cream (`#f9ecc2`, NOT white) and solid black marker (`#1a1612` / `#000000`). Zero `#f9ecc2` pixels outside the black border. Pure flat `#00FF00` background.

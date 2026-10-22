@@ -739,3 +739,211 @@ se editan entradas anteriores (si algo cambió, nueva entrada que lo diga).
 - Alex: "No entiendo este brazo. Hace falta el brazo del fondo y la mano, pero no en esta posicion."
 - acción: movido a art/rejected/smoothface.arm_back_v3/ ; siguiente versión v4 con silueta clara de brazo doblado en 3/4 hacia la derecha (hombro, codo doblado, antebrazo y puño de manga coherente con `smoothface.arm_front`) y posicionado emergiendo detrás del costado derecho del abrigo junto con su mano (`hand_back`)
 - calibración: anatomy-critic dejó pasar un cilindro vertical sin codo ni lectura de brazo; recalibrado `.agents/skills/anatomy-critic/SKILL.md` en punto 1 (`Identity & Recognizable Silhouette`: cilindro sin lectura anatómica de brazo doblado es `blocker`)
+
+
+---
+
+### 2026-10-22 07:53 · smoothface.shoe_front · v4
+- prompt: art/candidates/smoothface.shoe_front/prompt_v4.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/002_shoes.png, art/references/ref_hero_torso.png, art/approved/smoothface/smoothface.leg_front.png
+- gates: fail (ink: 4.0 px vs rango [6, 9]; halo: 0.0, sticker: 0.0, palette: 0.0, components: 1, height: 47 px ok)
+- style-critic: sin_objeciones
+- anatomy-critic: rechazar: "The top edge of the shoe has a deep V-shaped notch cut into the ankle opening instead of a continuous rounded upper ankle dome/tab that can tuck cleanly under smoothface.leg_front without leaving a gap." (major)
+- estado: candidate
+- Alex: pendiente
+
+### 2026-10-22 07:58 · smoothface.shoe_front · v5
+- prompt: art/candidates/smoothface.shoe_front/prompt_v5.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/002_shoes.png, art/references/ref_hero_torso.png, art/approved/smoothface/smoothface.leg_front.png
+- gates: fail (ink: 4.0 px vs rango [6, 9]; halo: 0.0, sticker: 0.0, palette: 0.0, components: 1, height: 47 px ok)
+- style-critic: sin_objeciones
+- anatomy-critic: sin_objeciones
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 07:58 · smoothface.shoe_back · v5
+- prompt: art/candidates/smoothface.shoe_back/prompt_v5.txt (copia idéntica de `smoothface.shoe_front/v5.png` por instrucción explícita de Alex: "Y mejor si lo copias, no quiero dos zapatos diferentes")
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/002_shoes.png, art/references/ref_hero_torso.png, art/approved/smoothface/smoothface.leg_back.png
+- gates: fail (ink: 4.0 px vs rango [6, 9]; halo: 0.0, sticker: 0.0, palette: 0.0, components: 1, height: 47 px ok)
+- style-critic: sin_objeciones
+- anatomy-critic: sin_objeciones
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 07:54 · smoothface.arm_back · v4
+- prompt: art/candidates/smoothface.arm_back/prompt_v4.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/009_arm.png, art/references/ref_hero_torso.png, art/approved/smoothface/smoothface.arm_front.png
+- gates: fail (ink: 4.0 px vs rango [6, 9]; halo: 0.0, sticker: 0.0, palette: 0.0, components: 1, height: 86 px ok)
+- style-critic: sin_objeciones
+- anatomy-critic: sin_objeciones
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 07:54 · smoothface.hand_front.fist · v1
+- prompt: art/candidates/smoothface.hand_front.fist/prompt_v1.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/008_hand.png, art/references/ref_hero_torso.png, art/approved/smoothface/smoothface.arm_front.png
+- gates: fail (halo: 0.0185, sticker: 0.2528, ink: 2.0 px vs rango [6, 9])
+- style-critic: n/a (no pasó gates)
+- anatomy-critic: n/a (no pasó gates)
+- estado: candidate
+- Alex: pendiente
+
+### 2026-10-22 07:58 · smoothface.hand_front.fist · v2
+- prompt: art/candidates/smoothface.hand_front.fist/prompt_v2.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/008_hand.png, art/references/ref_hero_torso.png, art/approved/smoothface/smoothface.arm_front.png
+- gates: fail (ink: 4.0 px vs rango [6, 9]; halo: 0.0, sticker: 0.0025 ok, palette: 0.0337 ok, components: 1, height: 38 px ok)
+- style-critic: sin_objeciones
+- anatomy-critic: descartada tras revisión de quiralidad (mostraba dedos doblados hacia la cámara como mano izquierda en vez del dorso de la mano derecha de `008_hand.png`)
+- estado: candidate
+- Alex: pendiente
+
+### 2026-10-22 08:18 · smoothface.hand_front.fist · v3
+- prompt: art/candidates/smoothface.hand_front.fist/prompt_v3.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/008_hand.png, art/references/ref_hero_torso.png, art/approved/smoothface/smoothface.arm_front.png
+- gates: fail (ink: 2.8 px vs rango [6, 9]; halo: 0.0, sticker: 0.0796 ok, palette: 0.0222 ok, components: 1, height: 38 px ok)
+- style-critic: sin_objeciones
+- anatomy-critic: sin_objeciones (vista dorsal de mano derecha coincidente con `008_hand.png`)
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 07:54 · smoothface.hand_front.open · v1
+- prompt: art/candidates/smoothface.hand_front.open/prompt_v1.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/008_hand.png, art/references/ref_hero_torso.png, art/approved/smoothface/smoothface.arm_front.png
+- gates: fail (halo: 0.0096, sticker: 0.4316, ink: 2.0 px vs rango [6, 9])
+- style-critic: n/a (no pasó gates)
+- anatomy-critic: n/a (no pasó gates)
+- estado: candidate
+- Alex: pendiente
+
+### 2026-10-22 07:58 · smoothface.hand_front.open · v2
+- prompt: art/candidates/smoothface.hand_front.open/prompt_v2.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/008_hand.png, art/references/ref_hero_torso.png, art/approved/smoothface/smoothface.arm_front.png
+- gates: fail (sticker: 0.2512, ink: 2.0 px vs rango [6, 9])
+- style-critic: n/a (no pasó gates)
+- anatomy-critic: n/a (no pasó gates)
+- estado: candidate
+- Alex: pendiente
+
+### 2026-10-22 08:03 · smoothface.hand_front.open · v3
+- prompt: art/candidates/smoothface.hand_front.open/prompt_v3.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/008_hand.png, art/references/ref_hero_torso.png, art/approved/smoothface/smoothface.arm_front.png
+- gates: fail (sticker: 0.3145, ink: 2.0 px vs rango [6, 9])
+- style-critic: sin_objeciones
+- anatomy-critic: rechazada por Alex en vista previa del mosaico ("The middle image has a right hand (the closes to us) with only 4 fingers, while the left/back one has 5.")
+- estado: candidate
+- Alex: rechazada en vista previa
+
+### 2026-10-22 08:23 · smoothface.hand_front.open · v4
+- prompt: art/candidates/smoothface.hand_front.open/prompt_v4.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/008_hand.png, art/references/ref_hero_torso.png, art/approved/smoothface/smoothface.arm_front.png
+- gates: fail (ink: 2.8 px vs rango [6, 9]; halo: 0.0, sticker: 0.1017 ok, palette: 0.034 ok, components: 1, height: 42 px ok)
+- style-critic: sin_objeciones
+- anatomy-critic: sin_objeciones (5 dígitos: 1 pulgar + 4 dedos, vista dorsal de mano derecha sin pliegue palmar)
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 07:54 · smoothface.hand_front.point · v1
+- prompt: art/candidates/smoothface.hand_front.point/prompt_v1.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/008_hand.png, art/references/ref_hero_torso.png, art/approved/smoothface/smoothface.arm_front.png
+- gates: fail (halo: 0.0155, sticker: 0.1592, ink: 2.0 px vs rango [6, 9])
+- style-critic: n/a (no pasó gates)
+- anatomy-critic: n/a (no pasó gates)
+- estado: candidate
+- Alex: pendiente
+
+### 2026-10-22 07:57 · smoothface.hand_front.point · v2
+- prompt: art/candidates/smoothface.hand_front.point/prompt_v2.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/008_hand.png, art/references/ref_hero_torso.png, art/approved/smoothface/smoothface.arm_front.png
+- gates: fail (palette: 0.1727, ink: 4.39 px vs rango [6, 9])
+- style-critic: n/a (no pasó gates)
+- anatomy-critic: n/a (no pasó gates)
+- estado: candidate
+- Alex: pendiente
+
+### 2026-10-22 07:59 · smoothface.hand_front.point · v3
+- prompt: art/candidates/smoothface.hand_front.point/prompt_v3.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/008_hand.png, art/references/ref_hero_torso.png, art/approved/smoothface/smoothface.arm_front.png
+- gates: fail (ink: 4.39 px vs rango [6, 9]; halo: 0.0, sticker: 0.0, palette: 0.0778 ok, components: 1, height: 40 px ok)
+- style-critic: sin_objeciones
+- anatomy-critic: rechazada por Alex en vista previa del mosaico ("And the right image has a wrong right hand, it was drawn as left.")
+- estado: candidate
+- Alex: rechazada en vista previa
+
+### 2026-10-22 08:14 · smoothface.hand_front.point · v4
+- prompt: art/candidates/smoothface.hand_front.point/prompt_v4.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/008_hand.png, art/references/ref_hero_torso.png, art/approved/smoothface/smoothface.arm_front.png
+- gates: fail (ink: 4.0 px vs rango [6, 9]; halo: 0.0, sticker: 0.0, palette: 0.0207 ok, components: 1, height: 40 px ok)
+- style-critic: sin_objeciones
+- anatomy-critic: sin_objeciones (vista dorsal de mano derecha apuntando a la derecha con dedos medio/anular/meñique recogidos hacia el lado oculto)
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 07:54 · smoothface.hand_back.fist · v1
+- prompt: art/candidates/smoothface.hand_back.fist/prompt_v1.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/008_hand.png, art/references/ref_hero_torso.png, art/approved/smoothface/smoothface.arm_front.png
+- gates: fail (halo: 0.0085, sticker: 0.25, ink: 2.0 px vs rango [6, 9])
+- style-critic: n/a (no pasó gates)
+- anatomy-critic: n/a (no pasó gates)
+- estado: candidate
+- Alex: pendiente
+
+### 2026-10-22 07:58 · smoothface.hand_back.fist · v2
+- prompt: art/candidates/smoothface.hand_back.fist/prompt_v2.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/008_hand.png, art/references/ref_hero_torso.png, art/approved/smoothface/smoothface.arm_front.png
+- gates: fail (ink: 4.0 px vs rango [6, 9]; halo: 0.0, sticker: 0.0228 ok, palette: 0.0502 ok, components: 1, height: 36 px ok)
+- style-critic: sin_objeciones
+- anatomy-critic: sin_objeciones (mano izquierda vista por el lado palmar/interior)
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 07:54 · smoothface.hand_back.open · v1
+- prompt: art/candidates/smoothface.hand_back.open/prompt_v1.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/008_hand.png, art/references/ref_hero_torso.png, art/approved/smoothface/smoothface.arm_front.png
+- gates: fail (halo: 0.0117, sticker: 0.2738, ink: 2.0 px vs rango [6, 9])
+- style-critic: n/a (no pasó gates)
+- anatomy-critic: n/a (no pasó gates)
+- estado: candidate
+- Alex: pendiente
+
+### 2026-10-22 08:01 · smoothface.hand_back.open · v2
+- prompt: art/candidates/smoothface.hand_back.open/prompt_v2.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/008_hand.png, art/references/ref_hero_torso.png, art/approved/smoothface/smoothface.arm_front.png
+- gates: fail (palette: 0.1089 vs max 0.10, ink: 2.8 px vs rango [6, 9]; halo: 0.0, sticker: 0.0897 ok)
+- style-critic: n/a (no pasó gates)
+- anatomy-critic: n/a (no pasó gates)
+- estado: candidate
+- Alex: pendiente
+
+### 2026-10-22 08:02 · smoothface.hand_back.open · v3
+- prompt: art/candidates/smoothface.hand_back.open/prompt_v3.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/008_hand.png, art/references/ref_hero_torso.png, art/approved/smoothface/smoothface.arm_front.png
+- gates: fail (ink: 2.8 px vs rango [6, 9]; halo: 0.0, sticker: 0.1023 ok, palette: 0.048 ok, components: 1, height: 40 px ok)
+- style-critic: sin_objeciones
+- anatomy-critic: sin_objeciones (5 dígitos: 1 pulgar + 4 dedos, mano izquierda vista por el lado palmar)
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 08:11 · calibración · .agents/skills/anatomy-critic/SKILL.md
+- Alex: "I can already see here in thsi grid, that there are problems. The middle image has a right hand (the closes to us) with only 4 fingers, while the left/back one has 5. And the right image has a wrong right hand, it was drawn as left."
+- acción: se añadió el punto 7 (`Hand Chirality (Right vs Left Hand) & Finger Count (5 digits)`) en `.agents/skills/anatomy-critic/SKILL.md` exigiendo que `hand_front.*` (mano derecha anatómica en vista 3/4 derecha) muestre el dorso de la mano (nunca los dedos doblados o pliegue palmar hacia cámara con el pulgar arriba/izquierda, lo que corresponde a una mano izquierda) y que ambas manos tengan exactamente 5 dígitos (1 pulgar + 4 dedos). Se regeneraron `smoothface.hand_front.fist` (v3), `smoothface.hand_front.open` (v4, 5 dígitos dorsal) y `smoothface.hand_front.point` (v4, mano derecha dorsal).
+
+## 2026-10-22 · sesión 3 · lote L2b (con 3 rechazos de L2a + 5 manos)
+- generadas: 20 (sobre 8 piezas del lote: `smoothface.shoe_front` v4-v5, `smoothface.shoe_back` v5 copiada, `smoothface.arm_back` v4, `smoothface.hand_front.fist` v1-v3, `smoothface.hand_front.open` v1-v4, `smoothface.hand_front.point` v1-v4, `smoothface.hand_back.fist` v1-v2, `smoothface.hand_back.open` v1-v3) · pasaron todos los gates salvo `ink`: 8 (`halo: 0.0`, `sticker_ok: true`, `palette_ok: true`, `components: 1`, `border: 0`, `gradient_ok: true`, `height_ok: true` en las 8 piezas) · pasaron críticos: 8 (`sin_objeciones` en las 8 piezas con `anatomy-critic` recalibrado en punto 7) · en hoja: 8
+- cambios a layout/: se actualizó `review/review_sheet.html` con selectores interactivos de `Mano frontal (4-6): Fist | Open | Point | Ocultar` y `Mano trasera (7-8): Fist | Open | Ocultar` y se generó `review/layout_shots/l2b_full_puppet_preview/smoothface_l2b_rig_grid.png`.
+- cambios a src/: ninguno
+- backlog: ninguna
+- siguiente lote propuesto: cierre de Smoothface (`smoothface.hand_back.point`, `smoothface.hair_tuft`, `characters/smoothface/rig.json`) y L3 (`z1s3.wall.panel_b`, `z1s3.wall.porthole_frame`, `z1s3.wall.porthole_glass`, `z1s3.wall.pipe_run_h`, `z1s3.wall.pipe_run_v`, `z1s3.floor.strip`, `z1s3.ceiling.strip`, `z1s3.trim.baseboard`)
+
+
+---
+
+### 2026-10-22 15:56 · veredictos lote L2b · 8 aprobadas
+- `smoothface.arm_back` v4: approved -> `art/approved/smoothface/smoothface.arm_back.png`
+- `smoothface.hand_back.fist` v2: approved -> `art/approved/smoothface/smoothface.hand_back.fist.png`
+- `smoothface.hand_back.open` v3: approved -> `art/approved/smoothface/smoothface.hand_back.open.png`
+- `smoothface.hand_front.fist` v3: approved -> `art/approved/smoothface/smoothface.hand_front.fist.png`
+- `smoothface.hand_front.open` v4: approved -> `art/approved/smoothface/smoothface.hand_front.open.png`
+- `smoothface.hand_front.point` v4: approved -> `art/approved/smoothface/smoothface.hand_front.point.png`
+- `smoothface.shoe_back` v5: approved -> `art/approved/smoothface/smoothface.shoe_back.png`
+- `smoothface.shoe_front` v5: approved -> `art/approved/smoothface/smoothface.shoe_front.png`
+- calibración: no aplica (100 % aprobadas en mesa de luz)

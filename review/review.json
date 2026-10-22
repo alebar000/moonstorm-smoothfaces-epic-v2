@@ -153,6 +153,62 @@
       "verdict": "rejected",
       "reason": "No entiendo este brazo. Hace falta el brazo del fondo y la mano, pero no en esta posicion.",
       "ts": "2026-10-22T07:42:47"
+    },
+    {
+      "id": "smoothface.arm_back",
+      "version": "v4",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T15:56:20"
+    },
+    {
+      "id": "smoothface.hand_back.fist",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T15:56:22"
+    },
+    {
+      "id": "smoothface.hand_back.open",
+      "version": "v3",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T15:56:23"
+    },
+    {
+      "id": "smoothface.hand_front.fist",
+      "version": "v3",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T15:56:24"
+    },
+    {
+      "id": "smoothface.hand_front.open",
+      "version": "v4",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T15:56:29"
+    },
+    {
+      "id": "smoothface.hand_front.point",
+      "version": "v4",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T15:56:30"
+    },
+    {
+      "id": "smoothface.shoe_back",
+      "version": "v5",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T15:56:32"
+    },
+    {
+      "id": "smoothface.shoe_front",
+      "version": "v5",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T15:56:32"
     }
   ]
 }

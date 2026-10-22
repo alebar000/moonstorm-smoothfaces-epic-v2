@@ -1,0 +1,15 @@
+STYLE (non-negotiable, matches the attached references):
+Hand-drawn construction-paper cutout. Each piece is ONE flat color of construction paper with a very subtle fiber texture, cut out with scissors. Design and proportions come from the attached pencil sketch by the original artist; do not reinterpret it. Outline: black marker (#1a1612), hand-drawn, visible pressure variation, some strokes overshoot corners. Shading: SOFT PENCIL only (#6e6a62), grey, visible stroke direction, only in shadow areas. No digital gradients, no airbrush, no glow, no 3D.
+EDGE: rough scissor cut, visible straight facets and corners where the scissors turned; the cut does not perfectly follow the ink.
+INK: thick marker, ~7.5 px at game scale (6-9 px range).
+COLOR: vivid, saturated construction paper, ONLY from this character palette: #323232, #717171, #000000, #f9ecc2, #c84228, #d9a441, #4a7c59, #3b5998, #8c4a7e, #e07a3c, #5c9ead, #a3b86c, #1a1612, #6e6a62.
+One isolated object, flat solid #00FF00 chroma-key green background filling the entire canvas around the cutout. No cast shadow baked in.
+FORBIDDEN: gradients, glow, bloom, 3D render, airbrush, white sticker border, any background, any text, more than one object, sleeve or arm attached, pure white #ffffff, warm brown/tan shading in the palm, thin internal black lines, colors from the other palette, reinterpreting the sketch.
+
+PIECE: smoothface.hand_front.open
+FIX FROM PREVIOUS VERSION: v2 failed sticker_border_fraction (0.1777) because the black border around the finger tips was too thin (<3 px at 42 px scale), and failed gate_palette (0.1295) because the palm smudge used warm tan-brown instead of neutral grey #6e6a62.
+WHAT: ONE single hand cutout: Mr. Smoothface's front hand open in an expressive scheming villain gesture with fingers slightly curved forward-right (NO sleeve, NO arm; 1 single connected component, allowed_islands: 0) in 3/4 view facing RIGHT, companion to `ref_cutout_layers/008_hand.png`.
+CRITICAL INK, PALETTE & SCALE RULES:
+1. Draw the open hand SMALL AND COMPACT in the dead center of the 1024x1024 #00FF00 canvas (~280 px tall and ~300 px wide, leaving ~370 px of solid #00FF00 green margin on all four sides).
+2. Fill the narrow gaps between the fingers with SOLID BLACK MARKER INK (#1a1612) and enclose 100% of the outer silhouette perimeter (especially around every fingertip, thumb tip, and wrist base!) with a MASSIVE, UNIFORMLY ULTRA-HEAVY black marker border (#1a1612 / #000000, 65-80 px wide everywhere around the outer silhouette — 1/4 of the hand's total height! — so zero #f9ecc2 cream pixels are within 4 px of the outer edge at 42 px game scale).
+3. Fill the interior strictly with flat warm skin cream construction paper (#f9ecc2) and ONLY neutral grey pencil lines (#6e6a62, NO brown or tan shading in the palm!).
