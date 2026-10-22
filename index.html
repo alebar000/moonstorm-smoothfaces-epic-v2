@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Smoothface's Epic - MoonStorm Studios</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Crimson+Pro:ital,wght@0,600;0,700;1,600&family=Patrick+Hand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/styles/main.css" />
+</head>
+<body>
+  <div id="game-root">
+    <!-- Floating Paper Cut-Out Top Inventory & Pouch Strip -->
+    <header id="hud-top-bar" class="hud-hidden">
+      <button class="hud-brand-badge" id="btn-open-menu" title="Return to Title Stage">
+        <img src="assets/ui/rmb_item.png" alt="" class="hud-mini-tile" />
+        <span class="brand-title">Title</span>
+      </button>
+
+      <div class="inventory-mode-group">
+        <button id="btn-mode-select" class="inv-mode-btn active" title="Use or Combine Pocket Items">
+          <img src="assets/ui/rmb_grab.png" alt="" class="mode-mini-icon" />
+          <span>Use</span>
+        </button>
+        <button id="btn-mode-inspect" class="inv-mode-btn" title="Look Closely at Pocket Item">
+          <img src="assets/ui/rmb_inspect.png" alt="" class="mode-mini-icon" />
+          <span>Look</span>
+        </button>
+      </div>
+
+      <div class="inventory-strip-wrapper">
+        <button id="inv-scroll-left" class="inv-arrow-btn" aria-label="Scroll Pockets Left">
+          <img src="assets/ui/arrow_plaque.png" alt="Left" class="arrow-img arrow-left" />
+        </button>
+        <div id="inventory-slots" class="inventory-slots"></div>
+        <button id="inv-scroll-right" class="inv-arrow-btn" aria-label="Scroll Pockets Right">
+          <img src="assets/ui/arrow_plaque.png" alt="Right" class="arrow-img arrow-right" />
+        </button>
+      </div>
+
+      <div id="active-item-banner" class="active-item-banner">
+        <span id="active-item-label">Pockets Empty</span>
+        <button id="btn-clear-item" class="clear-item-btn" style="display:none;" title="Put Away Item">&#10005;</button>
+      </div>
+
+      <div class="hud-utility-group">
+        <button id="btn-sketch-mode" class="hud-util-btn" title="Toggle 2010 Original Aguilar Ink Sketch vs. PSD Cut-Out Color (K)">
+          <img src="assets/ui/rmb_inspect.png" alt="" class="hud-mini-tile" /> 2010 Sketch
+        </button>
+        <button id="btn-street-sense" class="hud-util-btn" title="Peek at Everything in the Room (Hold TAB)">
+          <img src="assets/ui/rmb_inspect.png" alt="" class="hud-mini-tile" /> Peek
+        </button>
+        <button id="btn-evil-agenda" class="hud-util-btn" title="Rupert's Evil Notebook (H)">
+          <img src="assets/ui/wax_letter_compass.png" alt="" class="hud-mini-tile" /> Evil Plan
+        </button>
+        <button id="btn-island-map" class="hud-util-btn" title="Submarine Deck Chart (M)">
+          <img src="assets/ui/rmb_grab.png" alt="" class="hud-mini-tile" /> Chart
+        </button>
+        <button id="btn-open-config" class="hud-util-btn" title="Gramophone &amp; Stage Options (ESC)">
+          <img src="assets/ui/rmb_item.png" alt="" class="hud-mini-tile" /> Options
+        </button>
+      </div>
+    </header>
+
+    <!-- Full-Viewport Widescreen 2.5D Paper Cut-Out Stage (1600x900) -->
+    <main id="stage-container">
+      <canvas id="game-canvas" width="1600" height="900"></canvas>
+
+      <!-- Crooked Paper Cut-Out Room Signpost & Hover Label -->
+      <div id="room-banner" class="room-banner">Captain Dread's Cabin</div>
+      <div id="hotspot-tooltip" class="hotspot-tooltip" style="display:none;"></div>
+
+      <!-- Compact Cut-Out Mouse Helper Badge (Uses Hand-Drawn Mouse Icons, Zero LMB/RMB Text) -->
+      <div id="mouse-legend-pill" class="mouse-legend-pill hud-hidden">
+        <span class="mouse-hint-item">
+          <img src="assets/ui/mouse_left.png" alt="" class="mouse-cutout-icon" /> Walk / Act
+        </span>
+        <span class="mouse-hint-item">
+          <img src="assets/ui/mouse_right.png" alt="" class="mouse-cutout-icon" /> Actions
+        </span>
+      </div>
+
+      <!-- Paper Cut-Out Pop-Up Action Menu (GUImu003.jpg Tiles) -->
+      <div id="rmb-action-menu" class="rmb-action-menu" style="display:none;">
+        <div class="rmb-menu-header" id="rmb-target-title">Object</div>
+        <button class="rmb-verb-btn" data-verb="grab">
+          <img src="assets/ui/rmb_grab.png" alt="" class="verb-tile-img" />
+          <span>Take / Use</span>
+        </button>
+        <button class="rmb-verb-btn" data-verb="inspect">
+          <img src="assets/ui/rmb_inspect.png" alt="" class="verb-tile-img" />
+          <span>Look At</span>
+        </button>
+        <button class="rmb-verb-btn" data-verb="talk">
+          <img src="assets/ui/rmb_talk.png" alt="" class="verb-tile-img" />
+          <span>Talk To</span>
+        </button>
+        <button class="rmb-verb-btn rmb-verb-item" data-verb="item" id="rmb-use-item-btn" style="display:none;">
+          <img src="assets/ui/rmb_item.png" alt="" class="verb-tile-img" />
+          <span id="rmb-use-item-text">Use Item</span>
+        </button>
+      </div>
+
+      <!-- Paper Cut-Out Title Screen -->
+      <section id="main-menu-overlay" class="overlay-screen">
+        <div class="menu-hero-backdrop" style="background-image: url('assets/ui/title_hero_bg.png');"></div>
+        <div class="menu-vignette"></div>
+        <div class="menu-content-grid">
+          <div class="menu-left-column">
+            <div class="studio-crest">
+              <img src="assets/ui/logo_mss.jpg" alt="MoonStorm Studios" class="mss-crest-img" />
+              <div class="studio-meta">
+                <span class="studio-year">MOONSTORM STUDIOS PRESENTS</span>
+                <span class="studio-sub">A TALE OF VILLAINY, MOUSTACHES &amp; SUBMARINES</span>
+              </div>
+            </div>
+
+            <div class="game-logo-emblem-wrap">
+              <img src="assets/ui/title_logo_cutout.png" alt="Smoothface's Epic" class="game-logo-cutout-img" />
+            </div>
+
+            <div class="menu-tagline-scroll">
+              <p class="menu-tagline">
+                Born without a single whisker while his twin brother grew the most glorious moustache in London, <strong>Rupert &ldquo;Mr. Smoothface&rdquo; Stache</strong> boards the rusty pirate submarine <em>Substampede</em> to join the <strong>Malefic Gentlemen</strong>!
+              </p>
+            </div>
+
+            <div class="menu-button-stack">
+              <button id="btn-menu-start-intro" class="menu-primary-btn">
+                <img src="assets/ui/arrow_plaque.png" alt="" class="btn-cutout-arrow" />
+                <span>BEGIN THE TALE</span>
+              </button>
+              <button id="btn-menu-quick-play" class="menu-secondary-btn">
+                <img src="assets/ui/rmb_grab.png" alt="" class="btn-cutout-tile" />
+                <span>ABOARD THE SUBSTAMPEDE</span>
+              </button>
+              <div class="menu-scene-row">
+                <button class="menu-scene-chip" data-room="Z1S3">Captain's Cabin</button>
+                <button class="menu-scene-chip" data-room="Z1S1">Engine Room</button>
+                <button class="menu-scene-chip" data-room="Z1S2">Submarine Lounge</button>
+                <button class="menu-scene-chip" data-room="LOLDEMO">Spooky Castle</button>
+              </div>
+              <div class="menu-bottom-actions">
+                <button id="btn-menu-config" class="menu-Action-btn">
+                  <img src="assets/ui/rmb_item.png" alt="" class="btn-cutout-mini" />
+                  <span>Stage &amp; Gramophone</span>
+                </button>
+                <button id="btn-menu-credits" class="menu-Action-btn">
+                  <img src="assets/ui/wax_letter_compass.png" alt="" class="btn-cutout-mini" />
+                  <span>MoonStorm Crew</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-right-column">
+            <div class="menu-showcase-card">
+              <div class="showcase-top-ribbon">TONIGHT'S SUPERVILLAIN</div>
+              <canvas id="menu-puppet-canvas" width="440" height="480"></canvas>
+              <div class="showcase-caption">
+                <strong>RUPERT &ldquo;MR. SMOOTHFACE&rdquo; STACHE</strong>
+                <span>&ldquo;If I cannot grow a moustache, nobody shall!&rdquo;</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Hand-Painted 60 FPS Paper Puppet Theatre Intro Overlay (8 Live Animated Scenes) -->
+      <section id="intro-overlay" class="overlay-screen" style="display:none;">
+        <div class="intro-theatre-stage">
+          <div class="intro-visual-viewport">
+            <canvas id="intro-stage-canvas" width="960" height="540"></canvas>
+            <div class="intro-spotlight-fx"></div>
+          </div>
+
+          <img class="intro-proscenium-img" src="assets/intro/theatre_proscenium_overlay.png" alt="" />
+
+          <img class="intro-shield-emblem" src="assets/ui/title_logo_cutout.png" alt="Smoothface's Epic" />
+          <div class="intro-top-plaque">
+            <span id="intro-act-badge" class="intro-act-badge">SCENE I OF VIII: THE CELEBRITY BARBER OF LONDON</span>
+          </div>
+
+          <div class="intro-narration-box">
+            <div class="intro-speaker-tag" id="intro-speaker-tag">THE STORYTELLER</div>
+            <p id="intro-narration-text" class="intro-narration-text"></p>
+            <div class="intro-timeline-bar">
+              <div id="intro-timeline-fill" class="intro-timeline-fill"></div>
+            </div>
+            <div class="intro-progress-dots" id="intro-progress-dots"></div>
+          </div>
+
+          <div class="intro-wing-left">
+            <button id="btn-intro-playpause" class="intro-nav-btn intro-skip-plaque">
+              <span id="intro-playpause-label">&#10074;&#10074; Pause</span>
+            </button>
+            <button id="btn-intro-prev" class="intro-nav-btn intro-prev-plaque">
+              <img src="assets/ui/arrow_plaque.png" alt="" class="intro-arrow-img arrow-left" />
+              <span>Prev Scene</span>
+            </button>
+          </div>
+
+          <div class="intro-wing-right">
+            <button id="btn-intro-skip" class="intro-skip-btn intro-skip-plaque">
+              <span>Skip to Game &raquo;</span>
+            </button>
+            <button id="btn-intro-next" class="intro-nav-btn intro-next-plaque">
+              <span id="intro-next-label">Next Scene</span>
+              <img src="assets/ui/arrow_plaque.png" alt="" class="intro-arrow-img arrow-right" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- A Baby's Chocolate-Smeared Musical Vault Synthesizer -->
+      <section id="puzzle-keypad-modal" class="modal-backdrop" style="display:none;">
+        <div class="modal-card keypad-modal-card">
+          <div class="modal-header">
+            <div class="modal-title-with-prop">
+              <img src="assets/props/funky_vault_console.png" alt="" class="modal-vault-prop-icon" />
+              <h3>A BABY'S SECRET CANDY VAULT</h3>
+            </div>
+            <button id="btn-close-keypad" class="modal-close-btn">&#10005;</button>
+          </div>
+          <p class="keypad-instructions">
+            Three of the musical keys are covered in sticky chocolate fingerprints! Interrogate A Baby or Rapoleon for the 4-note disco password (using <strong>DO</strong>, <strong>TI&#9837;</strong>, and <strong>SOL</strong>) to pop open the vault door!
+          </p>
+          <div id="keypad-led-display" class="keypad-led-display">MELODY: [ _ _ _ _ ]</div>
+          <div id="keypad-keys-row" class="piano-keyboard-bed">
+            <!-- 8 Contiguous Ivory White Piano Keys (F4 to F5) -->
+            <div class="piano-white-keys">
+              <button class="synth-key piano-white-key" data-note="F4" data-solfege="FA">
+                <strong>FA</strong>
+                <small>F4</small>
+              </button>
+              <button class="synth-key piano-white-key choco-smudge" data-note="G4" data-solfege="SOL" title="Sticky Melted Chocolate Fingerprint!">
+                <strong>SOL</strong>
+                <small>G4 &bull; Choco</small>
+              </button>
+              <button class="synth-key piano-white-key" data-note="A4" data-solfege="LA">
+                <strong>LA</strong>
+                <small>A4</small>
+              </button>
+              <button class="synth-key piano-white-key" data-note="B4" data-solfege="TI">
+                <strong>TI</strong>
+                <small>B4</small>
+              </button>
+              <button class="synth-key piano-white-key choco-smudge" data-note="C5" data-solfege="DO" title="Sticky Melted Chocolate Fingerprint!">
+                <strong>DO</strong>
+                <small>C5 &bull; Choco</small>
+              </button>
+              <button class="synth-key piano-white-key" data-note="D5" data-solfege="RE">
+                <strong>RE</strong>
+                <small>D5</small>
+              </button>
+              <button class="synth-key piano-white-key" data-note="E5" data-solfege="MI">
+                <strong>MI</strong>
+                <small>E5</small>
+              </button>
+              <button class="synth-key piano-white-key" data-note="F5" data-solfege="FA">
+                <strong>FA</strong>
+                <small>F5</small>
+              </button>
+            </div>
+            <!-- 5 Raised Ebony Black Sharp/Flat Keys Overlaid at True Piano Positions -->
+            <div class="piano-black-keys">
+              <button class="synth-key piano-black-key" style="left: 9.2%;" data-note="Fs4" data-solfege="FA#">
+                <span>F&#9839;</span>
+              </button>
+              <button class="synth-key piano-black-key" style="left: 21.7%;" data-note="Gs4" data-solfege="SOL#">
+                <span>G&#9839;</span>
+              </button>
+              <button class="synth-key piano-black-key choco-smudge-black" style="left: 34.2%;" data-note="Bb4" data-solfege="TIb" title="Sticky Melted Chocolate Fingerprint!">
+                <strong>TI&#9837;</strong>
+                <small>Bb4 &bull; Choco</small>
+              </button>
+              <button class="synth-key piano-black-key" style="left: 59.2%;" data-note="Cs5" data-solfege="DO#">
+                <span>C&#9839;</span>
+              </button>
+              <button class="synth-key piano-black-key" style="left: 71.7%;" data-note="Eb5" data-solfege="MIb">
+                <span>E&#9837;</span>
+              </button>
+            </div>
+          </div>
+          <div class="keypad-footer">
+            <button id="btn-keypad-demo" class="hud-util-btn">&#127925; Whistle &ldquo;Funky Town&rdquo; Melody</button>
+            <button id="btn-keypad-reset" class="hud-util-btn">&#8634; Start Over</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stage & Gramophone Options Modal -->
+      <section id="config-modal" class="modal-backdrop" style="display:none;">
+        <div class="modal-card config-modal-card">
+          <div class="modal-header">
+            <h3>STAGE &amp; GRAMOPHONE OPTIONS</h3>
+            <button id="btn-close-config" class="modal-close-btn">&#10005;</button>
+          </div>
+          <div class="config-grid">
+            <div class="config-section">
+              <h4>Gramophone &amp; Voices</h4>
+              <label class="config-row">
+                <span>Main Volume</span>
+                <input type="range" id="cfg-master-vol" min="0" max="100" value="85" />
+                <span id="lbl-master-vol">85%</span>
+              </label>
+              <label class="config-row">
+                <span>Submarine Shanties &amp; Music</span>
+                <input type="range" id="cfg-music-vol" min="0" max="100" value="55" />
+                <span id="lbl-music-vol">55%</span>
+              </label>
+              <label class="config-row">
+                <span>Puppet Babble Voices</span>
+                <input type="range" id="cfg-voice-vol" min="0" max="100" value="90" />
+                <span id="lbl-voice-vol">90%</span>
+              </label>
+              <label class="config-row">
+                <span>Clanks, Sparks &amp; Steam</span>
+                <input type="range" id="cfg-sfx-vol" min="0" max="100" value="85" />
+                <span id="lbl-sfx-vol">85%</span>
+              </label>
+              <div class="voice-test-bar">
+                <button class="voice-test-btn" data-voice="smoothface">Smoothface</button>
+                <button class="voice-test-btn" data-voice="cap_dread">Cap. Dread</button>
+                <button class="voice-test-btn" data-voice="nihongo">Nihongo</button>
+                <button class="voice-test-btn" data-voice="a_baby">A Baby</button>
+                <button class="voice-test-btn" data-voice="siren">Siren!</button>
+              </div>
+            </div>
+
+            <div class="config-section">
+              <h4>Paper Stage &amp; Controls</h4>
+              <label class="config-toggle">
+                <input type="checkbox" id="cfg-lighting" checked />
+                <span>Swinging Cage Lamps &amp; Underwater Glow</span>
+              </label>
+              <label class="config-toggle">
+                <input type="checkbox" id="cfg-foreground" checked />
+                <span>Layered Paper Depth &amp; Shadows</span>
+              </label>
+              <label class="config-toggle">
+                <input type="checkbox" id="cfg-crt" />
+                <span>Old Television Scanlines</span>
+              </label>
+              <label class="config-toggle">
+                <input type="checkbox" id="cfg-debug-walkbox" />
+                <span>Show Floor Footpath Outlines</span>
+              </label>
+              <label class="config-toggle">
+                <input type="checkbox" id="cfg-dev-notes" checked />
+                <span>Show MoonStorm Archive Notes</span>
+              </label>
+              <div class="config-row" style="margin-top:10px;">
+                <span>Mouse Style</span>
+                <select id="cfg-control-mode" class="config-select">
+                  <option value="hybrid">Quick Click + Pop-Up Action Menu</option>
+                  <option value="classic">Always Open Pop-Up Action Menu</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button id="btn-reset-save" class="hud-util-btn danger-btn">&#8634; Restart Adventure</button>
+            <button id="btn-save-config" class="menu-primary-btn" style="padding:8px 22px;font-size:0.95rem;">Back to Stage</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Rupert's Illustrated Two-Page Evil Sketchbook & Da Vinci Contraption Blueprint Modal -->
+      <section id="agenda-modal" class="modal-backdrop" style="display:none;">
+        <div class="sketchbook-modal-card">
+          <button id="btn-close-agenda" class="modal-close-btn sketchbook-close-btn" title="Close Sketchbook">&#10005;</button>
+          <div id="agenda-content" class="sketchbook-spread-grid"></div>
+        </div>
+      </section>
+
+      <!-- Blackspit Island & Submarine Deck Chart Modal -->
+      <section id="map-modal" class="modal-backdrop" style="display:none;">
+        <div class="modal-card map-modal-card">
+          <div class="modal-header">
+            <div class="modal-title-with-prop">
+              <img src="assets/ui/wax_letter_compass.png" alt="" class="modal-vault-prop-icon" />
+              <h3>BLACKSPIT ISLAND &amp; SUBSTAMPEDE DECK CHART</h3>
+            </div>
+            <button id="btn-close-map" class="modal-close-btn">&#10005;</button>
+          </div>
+          <div class="map-modal-body">
+            <div class="map-art-frame">
+              <img src="assets/ui/blackspit_island_map.png" alt="Blackspit Island Chart" class="island-map-img" />
+              <button class="map-pin-badge" style="left:21%;top:82%;" data-room="Z1S3" title="Jump to Captain Dread's Cabin">&#9875; Port Machete / Sub</button>
+              <button class="map-pin-badge" style="left:46%;top:54%;" data-room="Z1S2" title="Jump to Submarine VIP Lounge">&#127914; Cirque / Lounge</button>
+              <button class="map-pin-badge" style="left:38%;top:22%;" data-room="LOLDEMO" title="Jump to Spooky Castle Prototype">&#127984; Evil Deeds / Castle</button>
+              <button class="map-pin-badge" style="left:79%;top:28%;" data-room="Z1S1" title="Jump to Submarine Engine Room">&#9889; Thundercano / Engine</button>
+            </div>
+            <div class="map-room-cards">
+              <button class="map-room-btn" data-room="Z1S3">
+                <img src="assets/rooms/z1s3_shell.png" alt="" class="map-room-thumb" />
+                <div class="map-room-info">
+                  <strong>Captain Dread's Cabin (Aft Deck)</strong>
+                  <span>Scavenge the Bag of Hammers, Tripod Portrait Stand, and Desk Super-Glue!</span>
+                </div>
+              </button>
+              <button class="map-room-btn" data-room="Z1S2">
+                <img src="assets/rooms/z1s2_shell.png" alt="" class="map-room-thumb" />
+                <div class="map-room-info">
+                  <strong>Submarine VIP Lounge &amp; Vault (Mid Deck)</strong>
+                  <span>Interrogate A Baby &amp; The Ventriloquist, then play &ldquo;Funky Town&rdquo; on the Candy Vault!</span>
+                </div>
+              </button>
+              <button class="map-room-btn" data-room="Z1S1">
+                <img src="assets/rooms/z1s1_shell.png" alt="" class="map-room-thumb" />
+                <div class="map-room-info">
+                  <strong>Submarine Engine Room (Lower Deck)</strong>
+                  <span>Witness the pedal snap (BAM!), grab Da Vinci's Blueprint, and install the Perpetual Machine!</span>
+                </div>
+              </button>
+              <button class="map-room-btn" data-room="LOLDEMO">
+                <img src="assets/loldemo/spook_castle_bg.jpg" alt="" class="map-room-thumb" />
+                <div class="map-room-info">
+                  <strong>Spooky Paper Castle (2010 Prototype)</strong>
+                  <span>Visit MoonStorm's original June 2010 cutout castle with the Two-Faced Sun &amp; Door Troll!</span>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Act I Finale & 2010 MoonStorm Studios Crew Credits Modal -->
+      <section id="victory-credits-modal" class="modal-backdrop" style="display:none;">
+        <div class="modal-card victory-modal-card">
+          <div class="modal-header">
+            <div class="modal-title-with-prop">
+              <img src="assets/props/perpetual_machine_cutout.png" alt="" class="modal-vault-prop-icon" />
+              <h3>ACT I COMPLETE: FULL STEAM TO BLACKSPIT ISLAND!</h3>
+            </div>
+            <button id="btn-close-victory" class="modal-close-btn">&#10005;</button>
+          </div>
+          <div class="victory-body">
+            <p class="victory-lead">
+              Powered by Leonardo da Vinci's <strong>Perpetual Movement Machine</strong>, the pirate submarine <em>Substampede</em> blasts across the shark-infested sea at 900 knots toward <strong>Port Machete</strong> and the <strong>Malefic Gentlemen Syndicate</strong>!
+            </p>
+            <div class="victory-credits-grid">
+              <div class="credits-col">
+                <h4>MOONSTORM STUDIOS (2010 CREW)</h4>
+                <ul>
+                  <li><strong>Alexander Barquero</strong>: Project Lead, Architecture &amp; Programming</li>
+                  <li><strong>Jose David Aguilar (xygvot)</strong>: Art Direction, Cut-Out Designs &amp; Story</li>
+                  <li><strong>Juan Vicente Garcia (Juancho)</strong>: Lead Engine OOP Design &amp; Mechanics</li>
+                  <li><strong>Luis F. Ledezma (Ledezman)</strong>: Torque 2D Demo, Collision &amp; Pathfinding</li>
+                  <li><strong>Cristian Morales</strong>: PSD Cut-Out Shading, Palettes &amp; Compositing</li>
+                  <li><strong>Brian &ldquo;BooT&rdquo;</strong>: Original Story Concept &amp; Worldbuilding</li>
+                </ul>
+              </div>
+              <div class="credits-col">
+                <h4>PILOT ACT I ACHIEVEMENTS</h4>
+                <div class="victory-badges">
+                  <div class="victory-badge">&#9881; Da Vinci Perpetual Contraption Built</div>
+                  <div class="victory-badge">&#127929; &ldquo;Funky Town&rdquo; Candy Vault Cracked</div>
+                  <div class="victory-badge">&#9986; Authentic 2010 Multi-Layer PSD Cut-Out Rigs</div>
+                  <div class="victory-badge">&#127984; Bonus Tribute: Spooky Castle (&ldquo;GOSU!&rdquo;)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button id="btn-victory-castle" class="hud-util-btn">&#127984; Visit 2010 Spooky Castle</button>
+            <button id="btn-victory-keep-playing" class="menu-primary-btn" style="padding:8px 22px;font-size:0.95rem;">Keep Exploring Submarine</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Floating Bottom Parchment Dialogue Scroll (Auto-hides while walking around!) -->
+    <footer id="hud-bottom-box" class="hud-hidden dialogue-collapsed">
+      <div class="portrait-frame-wrap">
+        <img id="speaker-portrait" src="assets/portraits/smoothface.png" alt="Speaker Portrait" />
+        <div id="voice-wave-indicator" class="voice-wave-indicator">
+          <span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+
+      <div class="dialogue-main-area">
+        <div class="dialogue-header-row">
+          <span id="speaker-name-badge" class="speaker-name-badge">MR. SMOOTHFACE</span>
+          <span id="dialogue-mood-tag" class="dialogue-mood-tag">SCHEMING</span>
+          <button id="btn-dismiss-dialogue" class="dialogue-dismiss-btn" title="Fold Scroll Away">&#10005;</button>
+        </div>
+        <div id="dialogue-text-content" class="dialogue-text-content">
+          So this rustbucket is the Substampede... Let us look around before my coat gets damp.
+        </div>
+        <div id="dialogue-choices-list" class="dialogue-choices-list"></div>
+      </div>
+    </footer>
+  </div>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

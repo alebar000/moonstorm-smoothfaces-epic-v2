@@ -1,0 +1,1584 @@
+THREAD 12962980917ab844  Platform Review Standard
+URL: https://mail.google.com/mail/?authuser=alexbarquero@gmail.com#all/thread-f:1339303571362592836
+Messages: 30
+
+======================================================================
+Date: 2010-06-23T02:16:58Z
+From: alexbarquero@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Platform Review Standard
+MsgID: 12962980917ab844
+
+Bueno gente, este es el review para que lo "llenen" con lo que hayan
+averiguado o averiguen más de las plataformas.
+
+En la medida de lo posible, traten de llenarlo para mañana late at night. Si
+no pudieran, avisen ahí para que alguien los apadrine o para extender un
+poco el plazo (un día).
+
+Traté de dejar solo aquellos puntos que son absolutamente necesarios para
+darnos una idea bastante amplia de la vara.
+
+Recapitulando:
+*Android*: Alex
+*Ipod/Iphone*: Juancho
+*PC (Steam, Direct Download)*: Aguilar
+*WiiWare/PSN Store/Xbox Live*: Ledezman (creo que no hay que entrar en mucho
+detalle con estos ya que se autodescartan si ocupan de un devKit o algo
+así).
+*Flash*: Morales
+*Ovi (Nokia)*: Boot
+
+Grosso :D
+
+_________________________________________________________________________________________________________________________________________________
+
+*
+*
+
+*PLATAFORMA*
+
+Nombre:
+
+*ASPECTOS TÉCNICOS*
+
+Ventajas:
+
+Desventajas o complejidad:
+
+Plataformas, SDK's o engines disponibles:
+
+*ASPECTOS ECONÓMICOS*
+
+Modelos de ventas disponibles:
+
+Costos de entrada (licencias, participación en el market, etc.):
+
+Si hay SDK's o Plataformas, costos?:
+
+Competencia en el mercado:
+
+Casos de éxito de juegos similares (point and click adventure):
+
+Casos de éxito de empresas similares (self financed garage development):
+
+_________________________________________________________________________________________________________________________________________________
+======================================================================
+Date: 2010-06-24T03:54:48Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Platform Review Standard
+MsgID: 12968184ee187d7a
+
+*PLATAFORMA*
+
+Nombre: Steam (PC)
+
+ *ASPECTOS TÉCNICOS*
+
+Ventajas:
+
+   - Friends list (word-of-mouth fuerte, como medio de difusión -Morales is
+   playing Dr. Stache: A Hairy Loss -> "wtf es eso mae?"/view store page)
+   - Ofrece la posibilidad de crear comunidades y foros oficiales enfocados
+   en los títulos que hostean
+   - Permite un modelo estilo shareware donde el público puede probar una
+   versión demo del juego por tiempos determinados (free weekends)
+   - Permite la restricción del juego a ciertas zonas
+   - Permite la fijación del precio del producto (puede variar por zona)
+   - Up-Time constante de los servidores
+   - Estadísticas de uso por parte del consumidor (horas jugadas,
+   achievements completados, terminación del juego, etc.)
+   - Estadísticas de consumo (mercado)
+   - Estadísticas de hardware del mercado y usuario meta
+   - Entrega de contenido en un solo canal (parches, DLC)
+   - Achievements (para algunas personas es importante o representa un valor
+   agregado que influye en la compra), requiere Steamworks
+
+ Desventajas o complejidad:
+
+   - Parches u otro contenido adicional debe ser hecho a la medida para la
+   plataforma
+   - Liberación de los parches es mediocre en la mayoría de los casos (Valve
+   tiene *una sola persona* encargada del manejo de este asunto para todo su
+   catálogo)
+   - Detalles sobre Steamworks así como el grado de dificultad que
+   represente la incorporación del mismo al proyecto no son hechos públicos.
+   - Detalles sobre el porcentaje percibido por Steam no es de dominio
+   público (especulaciones lo acercan al 30%-40% del total percibido)
+
+ Plataformas, SDK's o engines disponibles:
+
+   - Steamworks SDK es dado al desarrollador para la integración del mismo
+   (desarrollo de los achievements)
+
+*ASPECTOS ECONÓMICOS*
+
+Modelos de ventas disponibles:
+
+   - Digital
+
+Costos de entrada (licencias, participación en el market, etc.)
+
+   - Inicialmente, se requiere de la aprobación por parte de Valve misma
+   para poder ser colocado en Steam. Lo anterior se logra a través de un demo
+   que evalúa la empresa para
+   apreciar el potencial del producto (grado de diversión es, según destacan
+   ellos en su información a los interesados, lo más importante).
+   - Valve declaró en Enero del 2010 que posee más de 25 millones de cuentas
+   de usuario activas
+   - Se estima que posee alrededor del 70% del mercado de distribución
+   digital en PC
+
+ Si hay SDK's o Plataformas, costos?:
+
+   - Steamworks SDK es concedido de forma gratuita a discreción de Valve.
+
+Competencia en el mercado:
+
+   - Direct2Drive, Impulse, Gamers' Gate, Games for Windows Live: Games on
+   Demand, Metaboli, GOG.com,
+
+Casos de éxito de juegos similares (point and click adventure):
+
+   - Ben There, Dan That! (Zombie Cow)
+   - Time Gentlemen, Please! (Zombie Cow)
+
+ Casos de éxito de empresas similares (self financed garage development):
+
+   - *Ron Carmel, **2D Boy:* " <http://goog_854092157>Valve’s digital
+   distribution agreement is the simplest and most developer friendly agreement
+   I’ve seen so far, and we’ve signed over a dozen of those. Also, no other
+   digital distribution service I know of, PC or console, pays a higher cut of
+   the revenues out to developers.
+<http://goog_854092157>"<http://www.rockpapershotgun.com/2009/10/12/the-steamy-issue-of-digital-distribution/>
+   - *John Gibson, **President - Tripwire Interactive:* "We were able to
+   recoup our development costs for our first game within the first week of
+   sales, and sales were straight profit from that point on (...) I can say
+   with certainty that if it weren't for Steam, there would be no Tripwire
+   Interactive right now." (mismo artículo)
+   - *Dan Marshall, Zombie Cow:* " (...) I’ve got nothing but positive
+   things to say about Steam – the guys I dealt with were thoroughly charming
+   and helpful, and I feel far from exploited.” (mismo artículo)
+
+___________________________________________________________________________________________________________________
+
+*PLATAFORMA*
+
+Nombre: Direct Download
+
+ *ASPECTOS TÉCNICOS*
+
+Ventajas:
+
+   - Se percibe el 100% de las entradas
+   - Contacto directo con el público sin mediadores
+
+ Desventajas o complejidad:
+
+   - Montaje/Alquiler/Mantenimiento de granja de servidores
+   - Montaje de página web/servicios de pago/estructura
+
+ Plataformas, SDK's o engines disponibles:
+
+   - Programas de administración varían por paquete/empresa
+   - Servicio de pagos en línea (varía según forma de pago: PayPal,
+   GoogleCheckout, Visa, MasterCard, etc.)
+
+ *ASPECTOS ECONÓMICOS*
+
+Modelos de ventas disponibles:
+
+   - Digital
+
+Costos de entrada (licencias, participación en el market, etc.):
+
+   - RACSA: rack alquilado, 1U 33mb: ~$700/mes; espacio con servidor propio,
+   1U 33mb: ~$500/mes; TukySystems (ROFÑL): $150
+   - RACSA: ancho de banda para web hosting (de tráfico "normal"): $400/año
+   - Tarifas internacionales: dependientes del paquete seleccionado
+
+Si hay SDK's o Plataformas, costos?:
+
+   - Paquetes varían según demanda o estimación de demanda
+
+Competencia en el mercado:
+
+   - Ranking gringo
+   <http://webhostinggeeks.com/dedicatedserverhosting.html>
+   - Google AppEngine <http://code.google.com/appengine/>, Amazon
+WS<http://aws.amazon.com/>,
+   Microsoft Azure <http://www.microsoft.com/windowsazure/>
+
+Casos de éxito de juegos similares (point and click adventure):
+
+   - N/A
+
+Casos de éxito de empresas similares (self financed garage development):
+
+   - Wolfire utilizó Google AppEngine para el Humble Indie
+Bundle<http://blog.wolfire.com/2010/06/Hosting-the-Humble-Indie-Bundle-on-App-Engine>(más
+de $1 millón en ventas reportado)
+
+2010/6/22 Alexander Barquero <alexbarquero@gmail.com>
+======================================================================
+Date: 2010-06-24T04:07:58Z
+From: c0pp3r@b52clan.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Platform Review Standard
+MsgID: 12968245ae99c25e
+
+Estoy en una reunión en Tibas, mando mi parte en el transcurso de la
+madrugada. Gomen ne.
+
+Cristián Morales
+
+2010/6/23 Knife_Fighting_Monkey <fancyaccount@gmail.com>
+======================================================================
+Date: 2010-06-24T05:18:46Z
+From: jvgarcia@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Platform Review Standard
+MsgID: 1296864e025f112b
+
+*ePLATAFORMA*
+
+Nombre: Iphone/Ipod/Ipad (iOS)
+
+*ASPECTOS TÉCNICOS*
+
+Ventajas:
+
+   - Para bien o para mal, el iPhone y otros aparatos similares son gadgets
+   R-E-V-O-L-U-C-I-O-N-A-R-I-O-S, y forman parte de ese boom en el mercado
+   móvil. La escena de *smartphones *hoy en día es uno de los campos de
+   batalla más importantes entre las empresas de alta tecnología, y en general
+   la gente está invir... gastando bastante dinero por este lado.
+   - Por algún lado leí que los usuarios de iPhones son los que son más
+   anuentes a pagar por aplicaciones. De momento se me escapa dicho link, pero
+   por acá <http://metrics.admob.com/> hay algunas otras estadísticas
+   relevantes.
+   - Muchos juegos tienen problemas al lanzarse en iPhone debido a la
+   interfaz para controles. En nuestro caso, esto no debería ser tanto
+   problema, dado que la interacción del género (point and click) debería ser
+   suficientemente amigable con una pantalla tipo touch.
+   - A través del App Store de Apple le estaríamos llegando a básicamente
+   todo el user base de la plataforma, aún para países donde el iPhone no ha
+   sido oficialmente lanzado, como es el caso de Costa Rica.
+   - Los dispositivos meta son, en general, bastante uniformes, es decir, no
+   deberíamos tener mayores problemas de que algo corre en un iPhone pero no
+   corre en un iPad (algunas aplicaciones sí podrían requerir de más
+   procesamiento, como el upgrade del 3GS, pero dudo que nuestro juego sea muy
+   demandante en ese sentido).
+   - Con el iOS 4 han incluido un API que promete servicios similares a
+   Steam (achievements, friend lists, matchmaking, etc). Este API aún no está
+   funcionando IRL, pero actualmente creo que hay un preview para
+   desarroladores. Ver más información
+acá<http://developer.apple.com/technologies/iphone/whats-new.html>
+   .'
+   - El App Store también tiene cosas como bloqueo del app por países, y
+   otras facilidades que brindan esos marketplaces (posiblemente como las que
+   ya mencionó Aguilar para Steam).
+
+Desventajas o complejidad:
+
+   - Estaríamos entrado a territorio de Apple, y Apple pone sus reglas.
+    Para lanzarse en el App Store, hay que mandar la aplicación para que la
+   aprueben. Este proceso dura su rato, aparentemente dura como 1 semana en
+   promedio. En cualquier momento, si a Apple le da la gana, simplemente puede
+   quitar el App de ahí, y han habido casos sonados. Un juego no debería ser
+   muy polémico, pero bueno.
+   - Como puse anteriormente, hay un gran boom en el mercado móvil. Así
+   como la gente está comprando apps, pues también hay gente produciéndolos.
+    Según estadísticas de acá <http://148apps.biz/app-store-metrics/>, para
+   algún mes que hicieron los cálculos, se enviaron 88 juegos por día al App
+   Store, y hay como 220k+ aplicaciones. Como pueden ver, el App Store es un
+   mercado JARCOR competitivo. Otra estadística interesante es que según esa
+   página, el precio promedio para un juego es de $1.36 (creo que hay muchos
+   que son gratis).
+   - Para desarrollar para plataformas de Apple, hay que usar también una
+   plataforma de Apple, es decir, el SDK y todo eso para programar apps corre
+   única y exclusivamente en Macs.
+   - No contamos con muchos dispositivos como para hacer pruebas, aunque
+   tenemos un iPod Touch de Alex.
+   - Como es la plataforma en moda, noto una tendencia a que las
+   herramientas tienen un costo elevado.
+
+Plataformas, SDK's o engines disponibles:
+
+No lo he probado, pero en la página de OGRE veo que hay un port para iPhone
+(este es 3D).
+
+El engine que está probando Ledezma (Torque) también tiene versiones para
+iPhone.
+
+En esta página<http://maniacdev.com/2009/08/the-open-source-iphone-game-engine-comparison/>
+veo
+varias opciones. Ese Cocos2D ya lo había visto mencionado por ahí. El
+irrlicht engine también había visto unos tutoriales y eso, pero es un caso
+similar al de OGRE.\
+
+También está una versión de Unity3D. Entiendo que BooT ya era un pro con
+Unity.
+
+*ASPECTOS ECONÓMICOS*
+
+Modelos de ventas disponibles:
+
+EL modelo de venta es digital, básicamente a través del App Store. Creo que
+uno puede crear una aplicación e intentar distribuirla solo, pero sólo se
+podría usar en iPhones jailbroken, e imo, eso no tendría mucho sentido.
+
+Costos de entrada (licencias, participación en el market, etc.):
+
+Acá se pone un poco fea la vara. Para poder publicar apps en el App Store
+uno tiene que tener una cuenta de developer. Cada cuenta de developer
+cuesta $99, pero en esta caso nos cubriría a todos (es decir, la cuenta es
+para la empresa, no para un individuo), entonces tampoco es para tanto.
+
+Ocuparíamos al menos una Mac. La Mac más barata del mercado vale $999. Una
+MacBook Pro cuesta $1199, y bueno esos son precios gringos. Quizás
+podríamos jugárnosla desarrollando en Windows y luego compilando o
+empaquetando en Mac, en el caso de una plataforma que nos permita hacer eso,
+pero no sé si esto funcionará bien. Si varios queremos estar breteando en
+la vara, pues posiblemente ocuparíamos más compus.
+
+Si quisiéramos comprar algún otro dispositivo para hacer pruebas, pues
+habría que sumar eso. Un iPad cuesta $500 en su versión más barata, un iPod
+touch sale como en $180 el más barato (que vi en Amazon). Conseguir un
+iPhone es un dolor de pelotas.
+
+Si hay SDK's o Plataformas, costos?:
+
+La página que puse en el apartado anterior relacionado tenía algunos engines
+open source. También hay herramientas pagadas:
+
+La versión más barata de Unity para iPhone cuesta $300.
+
+El Torque para iPhone cuesta $700.
+
+Competencia en el mercado:
+
+Muchísima, como lo puse en el punto de desventajas.
+
+Casos de éxito de juegos similares (point and click adventure):
+
+Traté de buscar rápidamente alguno, y no encontré un caso específico, pero
+bueno, pronto viene Monkey Island Special Edition 2.
+
+Casos de éxito de empresas similares (self financed garage development):
+En realidad el modelo de negocio del App Store se presta para el "garage
+development". Acá
+<http://www.wired.com/gadgetlab/2008/09/indie-developer/>hay una
+historia específica, pero sin duda hay más. Ahora bien, por otro
+lado hay cierto efecto gold rush en la plataforma, y no es tan fácil pegarla
+tampoco. El cut de Apple es de 30%, que no pareciera ser TAN abusivo.
+
+2010/6/23 Cristián Morales <c0pp3r@b52clan.com>
+======================================================================
+Date: 2010-06-24T15:10:56Z
+From: skrybble@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: [MoonStorm Studios] Re: Platform Review Standard
+MsgID: 1296a82fd947160a
+
+*NOMBRE*
+OVI STORE
+
+*COSTOS*
+El registro como publisher cuesta 50 Euros.
+
+*PLATAFORMA*
+Nokia Mobile
+Nokia QT SDK - Symbian/S60
+
+*ASPECTOS TÉCNICOS DEL QT*
+
+VENTAJAS:
+- Multiplataforma.
+- Intuitive C++ class library.
+- Project and build management tools.
+- Visual debugger!
+
+DESVENTAJAS:
+- Precio de licencia.
+
+*ASPECTOS ECONÓMICOS*
+
+Modelos de ventas disponibles:
+Nokia Ovi Store.
+
+Costo de Licencia del QT:
+$3,695.00 QT - Desktop - Single OS.
+
+SDK's:
+Nokia QT SDK
+
+Plataformas:
+Symbian/S60, Maemo, MeeGo and Windows Mobile devices.
+
+*COMPETENCIA DEL MERCADO*
+
+Casos de éxito:
+- Angry Birds (Rovio Studios).
+
+Casos de éxito de empresas similares (self financed garage
+development):
+- Hay infinidad de aplicaciones, muy similar al iphone store.
+
+============================================================================
+
+*PLATAFORMA*
+Python - Symbian/S60
+
+*ASPECTOS TÉCNICOS*
+
+VENTAJAS:
+- cross-platfrom library.
+- Open Source.
+
+DESVENTAJAS:
+- La comunidad no es muy amplia.
+
+PLATAFORMA:
+SDL 1.2
+
+*ASPECTOS ECONÓMICOS*
+
+Modelos de ventas disponibles:
+Nokia Ovi Store.
+
+Costo de Licencia:
+Open Source
+
+SDK's:
+SDL 1.2
+
+Plataformas:
+Symbian
+
+*COMPETENCIA DEL MERCADO*
+
+Casos de éxito:
+- none so far lol
+
+Casos de éxito de empresas similares (self financed garage
+development):
+- http://www.pygame.org/project-Quantum+Man-1513-.html
+- http://www.pygame.org/project-Lands+of+Elderlore-294-.html
+
+============================================================================
+
+*PLATAFORMA*
+Java ME
+
+*ASPECTOS TÉCNICOS*
+
+VENTAJAS:
+- cross-platfrom.
+- Rich apps: advanced API for everything from emerging market life
+tools to 3D games.
+
+DESVENTAJAS:
+- Ninguna de peso como para hacerla notar acá.. =P
+
+PLATAFORMA:
+Java SDK
+
+*ASPECTOS ECONÓMICOS*
+
+Modelos de ventas disponibles:
+Nokia Ovi Store.
+
+Costo de Licencia:
+Open Source
+
+SDK's:
+SDL 1.2
+
+Plataformas:
+Mobile
+
+*COMPETENCIA DEL MERCADO*
+
+Casos de éxito:
+- The Sims 3
+- Bubble Town
+- Need for Speed Undercover
+
+Casos de éxito de empresas similares (self financed garage
+development):
+- Farm Frenzy
+- Froga
+
+Tuanis Mops!!
+======================================================================
+Date: 2010-06-24T17:54:49Z
+From: alexbarquero@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Re: Platform Review Standard
+MsgID: 1296b1909eb9c393
+
+*PLATAFORMA*
+
+Nombre:Android
+
+*ASPECTOS TÉCNICOS*
+
+Ventajas:
+
+   - Relativamente nueva
+   - Está "de moda"
+   - En boom de crecimiento
+   - Muchos de los juegos más famosos de iPhone/others los están empezando a
+   portear a Android
+   - Posiblemente, muchos engines que ya funcionan para PC o iPhone van a
+   moverse también a soportar Android
+   - El SDK de Android se puede usar sobre PC
+   - Existen emuladores para probar las apps, y Mesén tiene uno
+   - Es una comunidad relativamente abierta
+
+Desventajas o complejidad:
+
+   - No existen tantos engines o código de ejemplo como otras plataformas
+   - Si hay muchas diferencias en los dispositivos con OS Android, aunque se
+   está empezando a uniformar hacia un esquema muy tipo iPhone (como el caso de
+   los últimos HTC y el Nexus One, entre otros)
+   - Esto es una bronca especialmente cuando hay CPU's/GPU's diferentes, o
+   inclusive hay dispositivos que no tienen del todo pantalla táctil
+   - Tendríamos que hacer un McGyver con algún contacto en USA para poder
+   vender directamente en el Market, ya que Costa Rica todavía no tiene
+   autorización para vender (solo para publicar gratis :S)
+   - SE VIENE EL ESTALLIDO: está creciendo MUCHO, tanto así que la
+   competencia está a punto de ponerse feroz al estilo del AppStore de Iphone,
+   y no sabemos si es un mercado donde la gente está dispuesta a pagar tanto.
+
+Plataformas, SDK's o engines disponibles:
+
+   - De los que he visto, Unity viene con un dev kit para Android (Android
+   Pro) en el release 3.0 https://store.unity3d.com/shop/
+   - Otro seria Shiva3D http://www.stonetrip.com/
+   - Y otro es el jMonkeyEngine http://www.jmonkeyengine.com/home/
+   - Finalmente, ROKON ANDROID http://rokonandroid.com/
+
+*ASPECTOS ECONÓMICOS*
+
+Modelos de ventas disponibles:
+
+   - El Android Market y SE ACABÓ
+
+ Costos de entrada (licencias, participación en el market, etc.):
+
+   - El SDK es free. Para ser vendor en el Market hay que pagar 25dls, pero
+   está el toque aquel de "meterse por la cocina" para poder vender.
+   http://market.android.com/publish/signup
+   - Los maes se dejan un cut del 30% por cada venta, igual que Apple.
+
+Si hay SDK's o Plataformas, costos?:
+
+   - Unity Pro con Android Pro sale en $2700 (por cabeza?), y a los primeros
+   500 les regalan un Nexus One desbloqueado. (la oferta salió hace un par de
+   días).
+   - Shiva3D sale en €169 por cabeza la versión con la menor cantidad de
+   features pero con Android publishing (y además tiene publishing para otro
+   poco de cosas más).
+   - jMonkeyEngine es opensource
+   - Rokon es opensource
+
+Competencia en el mercado:
+
+   - About to BOOM
+
+Casos de éxito de juegos similares (point and click adventure):
+
+   - Solo vi uno, y está en flash, lol. The Several Journeys of REEMUS
+   http://androidpimps.com/games/the-several-journeys-of-reemus/
+
+Casos de éxito de empresas similares (self financed garage development):
+
+   - No es juego, pero ojo este artículo, tiene muchos pros y contras:
+   http://www.wired.com/gadgetlab/2010/03/android-developer/
+======================================================================
+Date: 2010-06-24T21:17:15Z
+From: c0pp3r@b52clan.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Re: Platform Review Standard
+MsgID: 1296bd2b46abb523
+
+PLATAFORMA: Flash
+
+ASPECTOS TÉCNICOS Ventajas: Alcance:
+
+· Todo el planeta tiene flash en la compu (Roughly 98% of users on
+the internet have some versión of the Flash player).
+Flexibilidad:
+
+· Permite la creación de cartoons, efectos de post-producción, si
+usamos esa shit bien bien, podríamos pimpear el sitio, aplicaciones
+Expedito:
+
+· Sencillo en comparación con las otras shits que estamos
+considerando
+
+· Animaciones, utilización de audio/video son super lineales
+
+Desventajas o complejidad:
+
+Edición de código
+
+· El “Flash ActionScript editor” tiene una shit que se llama “code
+hinting” que conforme uno va escribiendo, le recomienda posibles opciones de
+código. El problema de esto es que lo hace al final de la palabra que uno
+escribió, pero si se equivocó no hay nada que le haga ver ese error.
+
+· No indica errores en el código que no sean del Flash core library.
+
+· Para solucionar estos dos problemas anteriores, hay que usar
+FlashDevelop(open source) y Flex Builder($), unas shits que corrigen errores
+en el código.
+Memory management
+
+· Conforme escale la complejidad del juego, los requerimientos de la
+compu en que correrá, aumentan también. Flash no cuenta con ningún tipo de
+benchmarking. Nunca se sabe cuánto CPU o memoria va a consumir. O sea, no
+podríamos saber si nos estamos ajustando a los requerimientos mínimos que
+nos planteemos.
+
+· Para solucionar este problema anterior, hay que hacer una
+chambonada y correr el juego en la compu de Felipe y medir con Task Manager
+cuantos recursos está consumiendo y ver cuántos FPS da la crap (-_-´)
+
+· Para saber si hay chokepoints o clusterfucks en el juego, hay que
+ponerlo a correr en la compu de Felipe a ver si se pega.
+
+Debuggear contenido
+
+· Debuggear contenido cuando se trabaja con proyectos grandes es una
+crap por que “because SWFs do not store any breakpoint information by
+default, you can only step through code in theactive SWF” *(no sé cómo
+traducir esta shit)*
+
+· Conforme el proyecto aumente en complejidad, más hay que depender
+de archivos externos y más se complica todo.
+
+· Todo esto también afecta hacer “remote debugging”, entonces
+contenido que funciona bien en Flash, no corre bien “live”.
+
+· Para solucionar esto se puede usar el “trace” command de Flash,
+que es como ir probando a poquitos a ver a donde está el problema.
+
+· Tambien para solucionar este problema, hay una extensión de
+Firefox que se llama “Flash Tracer”. Esto ayuda a que la shit corra bien en
+Firefox, pero no asegura que corra bien en otros browsers (-_-´)
+No hay built-in Game Libraries
+
+· No tiene ni simulador de Physics
+
+· Ni sound manager para manejar efectos de sonido como fading
+
+· Hay que escribir estos libraries de cero, O SEA, que la ventaja de
+ser “expedito” se va al carajo al tener que lidiar con esto.
+
+· Para solucionar este problema hay que ponerle bonito con el
+copy/paste de contenido open source. La comunidad de Flash es bastante
+inmensa, así que no es algo catastrófico.
+
+ASPECTOS ECONÓMICOS
+ Modelos de ventas disponibles:
+
+*<cualquiera de estos limita considerablemente nuestra independencia, todos
+estos modelos van en función de promocionar el sitio host>*
+Vía Facebook- app
+
+· Enfocado en interacción social.
+
+· Revenues percibidos de la venta de “virtual goods”.
+
+· Posibles revenues con publicidad si hacemos que vayan a nuestro
+sitio.
+
+· Hay una mierda que se llama “clearspring.org” que convierte el
+juego flash en un widget
+
+Vía FlashGameLicense.com
+
+· Uno sube el sitio a la página de estos mops
+
+· Un “sponsor” ve el juego y nos manda una oferta
+
+Vía Kongregate.com
+
+· Requiere exclusividad por 1 semana.
+
+· Los maes hostean el sitio, y la plata viene de un percentage de
+ganancias de micro-transacciones por publicidad.
+
+· Mantenemos derechos sobre el juego.
+
+· Nos dan entre 25% y 50% de la micro-shit por click. (*50% si
+ponemos shit de Kongregate en el loading screen, etc)*
+
+· Si lo hosteamos solo con ellos nos dan 15% más.
+
+· Si al final del mes hacemos 25$, nos mandan un cheque, sino, la
+vara queda en un pot hasta que se llegue a los 25$.
+
+· Hay que mandar la info de todos nosotros, si somos gringos hay que
+hacer un despiche de impuestos y no sé qué.
+Vía hallpass.com
+
+· Hay que meterle al juego un tool (API) que manda los scores más
+altos al sitio
+
+· We are trying to get as many games, in as many different genres as
+possible and so we have a special going on, all API scripts added to games
+will get *50 dollars USD* via pay pal if they are accepted to the site*. It
+doesn't matter how many views or plays your game gets*,* it is a flat rate
+paid the same day your game goes live on the site.*
+
+Via Armorgames.com Vía newgrounds.com Vía addictinggames.com
+
+· No se detalles, había que suscribirse
+
+Si hay SDK's o Plataformas, costos?:
+
+· Adobe Flex [gratis] (open source, basic shit)
+
+· Adobe Flash Builder [$252] (supports “intelligent coding,
+debugging and visual design and features powerfull testing tolos that speed
+up development”)
+
+· irrFuscator ActionScript 3 Obfuscator [€149] (encripta la shit
+para que no nos la roben)
+
+Competencia en el mercado:
+
+· Si. Todas.
+
+Casos de éxito de juegos similares
+
+(point and click adventure):
+
+Threads of Reality
+
+· http://www.igf.com/php-bin/entry2010.php?id=126
+
+· 2010 IGF Main Competition**
+
+· *Threads of Reality is a point and click adventure game that
+departs from using puzzles in favor of using interactive items as barriers.*
+Morningstar**
+
+· http://www.kongregate.com/games/RedHerringLabs/morningstar
+
+· In this point-and-click adventure game your space ship crash-lands
+on a desolate planet. Your captain is wounded, your engineer: dead. You need
+to repair your vessel and solve the mystery of the planet to make it out of
+there alive.
+
+· 957,737 plays @ Kongregate
+
+Little Wheel
+
+· http://www.kongregate.com/games/fastgames/little-wheel
+
+· There was once a world of living robots. But one day a bad
+accident occured in the main power generator. The world fell into a deep
+sleep. Bring life back to the world!
+
+· 1,392,956 plays @ congregate
+
+Anika's Odyssey
+
+· http://www.kongregate.com/games/Trickysheep/anikas-odyssey
+
+· Anika’s Odyssey is a magical adventure deep into a lush and
+enchanted land. Break away from reality to enter a mystical world inspired
+by Aotearoa, New Zealand, as you meet the curious spirits and exotic
+creatures that inhabit this wondrous wilderness. Anika’s Odyssey is an
+enchanting point-and-click adventure game, full of a surprises and charm.
+Help Anika explore her colorful landscape as she journeys to reclaim her
+beloved friend.
+
+· 1,108,822 plays @ Kongregate
+
+Sprout
+
+· http://www.kongregate.com/games/customlogic/sprout
+
+· A storybook adventure staring a tiny seed pod. Journey from your
+tiny island home to the lush forests of your dreams; explore the hand-drawn
+landscape and meet some interesting friends along the way.
+
+· 577,813 plays @ congregate
+
+Journeys Of Remus
+
+·
+http://www.internetgames247.com/playnow-7234-Journeys%20Of%20Remus-Flash_Game.html
+
+A Small Favor and Another Small Favor
+
+· http://www.kongregate.com/games/zeebarf/a-small-favor
+
+· In a distant alien galaxy, where currency has been replaced with
+trade and favors, guide an assassin on a small favor to eliminate a
+prominent Senator.
+
+· 617,111 plays @ kongregate
+
+The Visitor
+
+· http://www.kongregate.com/games/zeebarf/the-visitor
+
+· 1,075,732 plays @ kongregate
+
+Casos de éxito de empresas similares
+
+(self financed garage development):
+Todos los anteriores son garaje. Machinarium(vía Psytech)
+
+· http://en.wikipedia.org/wiki/Machinarium
+
+· developed over a period of three years, by seven
+Czech<http://en.wikipedia.org/wiki/Czech_people>developers, who
+financed the project with their own savings. The marketing
+budget for the game was a scant $1,000
+
+· self-published on the PlayStation Network platform
+
+Cristián Morales
+
+2010/6/24 Alexander Barquero <alexbarquero@gmail.com>
+======================================================================
+Date: 2010-06-24T22:21:07Z
+From: ledezman@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Re: Platform Review Standard
+MsgID: 1296c0ce38b1f352
+
+*La mayoría de estas plataformas requieren algun tipo de DevKit, por lo
+tanto pintan chichen. EL partnership/approval de Sony/MS/Nintendo tampoco es
+trivial. Aqui algunos datos que encontré sobre las consolas.
+*
+
+*
+*
+
+*PLATAFORMA*
+
+Nombre:WiiWare
+
+*ASPECTOS TÉCNICOS*
+
+Ventajas:
+
+   -
+
+   Gran install-base. El Wii es la consola mejor vendida de esta generación.
+   -
+
+   Titulos pueden ser “self-published”
+   -
+
+   El control wiimote funciona muy bien con la mecánica de un juego pont &
+   click. Probablemente el mejor input method entre las 3 consolas.
+
+Desventajas o complejidad:
+
+   -
+
+   Si bien tiene gran install-base, estudios muestran que es el mercado mas
+   pequeño para este tipo de juegos comparado con XBLA o PSN.
+   -
+
+   Poca visibilidad para los juegos. No hay demos, no hay ratings. El mismo
+   WiiWare esta medio escondido en el Wii Menu.
+   -
+
+   Nintendo exige que el developer tenga oficinas para su empresa. No
+   aceptan “developers de garaje”
+   -
+
+   Experiencia pasada, éxito demostrado en videojuegos juega un papel muy
+   importante en la aprobación del título.
+
+Referencia: http://www.warioworld.com/apply/
+
+Plataformas, SDK's o engines disponibles:
+
+   -
+
+   Una vez aprobado por Nintendo, le permiten adquirir development kits, y
+   acceso a engines como los de Torque.
+
+*ASPECTOS ECONÓMICOS*
+
+Modelos de ventas disponibles:
+
+   -
+
+   WiiWare. Al parecer el cut para Nintendo es 30% según información en
+   foros. No confirmado.
+
+ Costos de entrada (licencias, participación en el market, etc.):
+
+   -
+
+   En caso de ser aprobado por Nintendo, los DevKits cuestan entre $2000 y
+   $10000 dependiendo del número de desarrolladores.
+
+Si hay SDK's o Plataformas, costos?:
+
+   -
+
+   Existen extensiones para los engines de Torque para Wii. Los precios no
+   están disponibles up-front y el total dependeria de cuales y/o cuántas
+   herramientas de Torque sean adquiridas.
+   http://www.torquepowered.com/products/torque-wii
+   -
+
+   Al parecer también se ha utilizado GameBryo para títulos de WiiWare. Los
+   precios de este engine tampoco son revelados en el sitio directamente.
+   http://www.develop-online.net/news/34994/WiiWare-dev-turns-to-Gamebryo
+   http://www.emergent.net/en/Gamebryo-LightSpeed/Gamebryo-Casual/
+
+Competencia en el mercado:
+
+   -
+
+   Hay cerca de 100 títulos para WiiWare disponibles. Muchos son de
+   “Publishers establecidos” como Square, Konami, incluso el mismo Nintendo.
+   -
+
+   En el área de point & clicks la competencia es Telltale Games.
+
+Casos de éxito de juegos similares (point and click adventure):
+
+   -
+
+   Telltale Games con sus juegos Strong Bad's Cool Game for Attractive
+   People y Tales of Monkey Island.
+
+Casos de éxito de empresas similares (self financed garage development):
+
+   -
+
+   2D Boy con su título World of Goo es el caso más exitoso.
+   http://2dboy.com/forum/index.php?topic=2746.0
+
+*
+*
+
+*
+*
+
+*PLATAFORMA*
+
+Nombre:Xbox Live
+
+*ASPECTOS TÉCNICOS*
+
+Ventajas:
+
+   -
+
+   Entre las 3 consolas, posee el mercado más grande con Xbox Live
+   Marketplace.
+   -
+
+   Existen SDKs básicos provistos por Microsoft que permitirían desarrollar
+   un indie game.
+   -
+
+   Xbox comparte bastantes características con las Windows PC entonces
+   existe una gran cantidad de engines disponibles.
+
+ Desventajas o complejidad:
+
+   -
+
+   Se sabe que el proceso de aprobación de Microsoft es tedioso o incluso
+   injusto. En algunos casos no aceptan el juego si esta disponible en otras
+   plataformas. (caso de 2DBoy y WoG)
+   -
+
+   Para poder publicar el juego en XBLA (no Creators Club) se requiere tener
+   un Publisher formal.
+   -
+
+   Según algunos developers el XNA community para indies no es lucrativo.
+   http://www.xboxist.com/xbox-360/games/xna-community-games-is-a-failed-experiment-010122.php
+   -
+
+   Solo algunos paises están aprobados por MS para publicar Indie
+Games: Australia,
+   Canada, Denmark, France, Germany, Ireland, Italy, Japan, Netherlands, New
+   Zealand, Norway, Singapore, Spain, Sweden, United Kingdom, and the United
+   States.
+
+Plataformas, SDK's o engines disponibles:
+
+   -
+
+   XNA, provisto por Microsoft.
+   -
+
+   Torque y Gamebryo.
+
+*ASPECTOS ECONÓMICOS*
+
+Modelos de ventas disponibles:
+
+   -
+
+   Xbox Live Marketplace
+   -
+
+   Xbox Live Indie Games
+   -
+
+   Indie games para el Creators Club Community pueden costar 80, 240 o 400
+   pts, cut para MS es de 30%, con un 10% a 30% más por advertising.
+   -
+
+   Para Indies el juego no puede ser de más de 150MB.
+   -
+
+   Para indies es obligatorio que el juego tenga un período de prueba de 8
+   minutos. Después de eso se le solicita al usuario si desea comprar el juego
+   o no.
+
+ Costos de entrada (licencias, participación en el market, etc.):
+
+   -
+
+   Para developers indie existe el XNA Game Studio Express que puede ser
+   descargado sin costo.
+   -
+
+   Teniendo XNA GSE desarrollar juegos para Xbox es necesario registrarse
+   con MS en el Creators Club Community. Costo $49 por 4 meses o $99 por año.
+
+Si hay SDK's o Plataformas, costos?:
+
+   -
+
+   XNA (Game Studio Express gratis).
+   -
+
+   Torque para Xbox. Precio no disponible, requiere ser un partner aprobado
+   por MS para obtener el middleware.
+   -
+
+   Gamberyo. No dan detalles del precio. En foros reportan que el costo para
+   prototipos es $15K, un full source commercial license de Gamebryo cuesta
+   $150K.
+
+Competencia en el mercado:
+
+   -
+
+   Enorme. Es el marketplace de consolas con mayor cantidad de aplicaciones.
+   Al rededor de 800 juegos 'indie' disponibles en Xbox Live Indie Games.
+
+Casos de éxito de juegos similares (point and click adventure):
+
+   -
+
+   Telltale Sam & Max series.
+
+Casos de éxito de empresas similares (self financed garage development):
+
+   -
+
+   Juegos máx exitosos en Xbox Live Indie Games: Zombies 2.0, Trino,
+   Fittest.
+   -
+
+   Más info sobre Indie Games:
+   http://en.wikipedia.org/wiki/Xbox_Live_Indie_Games
+
+ *PLATAFORMA*
+
+Nombre:PSN Store
+
+*ASPECTOS TÉCNICOS*
+
+Ventajas:
+
+   -
+
+   Sony no exije que el developer tenga un Publisher.
+
+Desventajas o complejidad:
+
+   -
+
+   No existe un 'programa para indies'.
+   -
+
+   Básicamente hay que registrarse con Sony como cualquier otro developer o
+   publisher.
+   -
+
+   Hay que comprar devkit, up front.
+   -
+
+   Registrarse con Sony requiere ser una empresa formal, con capital,
+   experiencia en el mercado demostrada, etc.
+
+Plataformas, SDK's o engines disponibles:
+
+   -
+
+   Playstation 3 Reference Tool (dev kit).
+   -
+
+   Varios engines como Torque, Unreal, Gamebryo.
+
+*ASPECTOS ECONÓMICOS*
+
+Modelos de ventas disponibles:
+
+   -
+
+   PSN Store.
+
+ Costos de entrada (licencias, participación en el market, etc.):
+
+   -
+
+    DevKit, cuesta alrededor de $2000. (Ha bajado, originalmente costaba
+   $10K).
+
+Si hay SDK's o Plataformas, costos?:
+
+   -
+
+   Torque, Unreal, Gamebryo. Como siempre los precios no los liberan
+   publicamente. Hay que ser un developer aprobado por Sony antes que nada.
+
+Competencia en el mercado:
+
+   -
+
+   Es el segundo marketplace para consolas luego de XBLA.
+
+Casos de éxito de juegos similares (point and click adventure):
+
+   -
+
+   Telltale hizo disponible Tales of Monkey Island para PSN.
+
+Casos de éxito de empresas similares (self financed garage development):
+
+   -
+
+   Luego de obstinarse con MS, 2Dboy intenta llevar World of Goo a PSN. Pero
+   aun no esta disponible.
+
+2010/6/24 Cristián Morales <c0pp3r@b52clan.com>
+======================================================================
+Date: 2010-06-24T22:26:57Z
+From: alexbarquero@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Re: Platform Review Standard
+MsgID: 1296c122af595c17
+
+Ok, estamos set.
+
+Let the discussion begin.
+
+2010/6/24 Ledezman <ledezman@gmail.com>
+======================================================================
+Date: 2010-06-24T22:28:04Z
+From: ledezman@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Re: Platform Review Standard
+MsgID: 1296c133a329e4d6
+
+Para un 1st try. Go PC.
+
+2010/6/24 Alexander Barquero <alexbarquero@gmail.com>
+======================================================================
+Date: 2010-06-25T06:53:29Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Re: Platform Review Standard
+MsgID: 1296de240099b61d
+
+Link de Steam (casos de éxito de garage devs):
+http://www.rockpapershotgun.com/2009/10/12/the-steamy-issue-of-digital-distribution/
+
+Este parche es traído a uds gracias a GOOGLE: google, cagándonos en sus
+vidas
+
+2010/6/24 Ledezman <ledezman@gmail.com>
+======================================================================
+Date: 2010-06-25T14:50:00Z
+From: jvgarcia@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Re: Platform Review Standard
+MsgID: 1296f96388d8f0b0
+
+Bueno, este es un nuevo wall of text, traído a uds por mi persona.
+
+Vamos a ver, en cuanto a plataforma, podré estar biased o lo que sea, pero
+para mí, sin mucho pensarlo, la opción debería ser PC. Por qué (y acá voy a
+volver a las preguntas que había planteado)?
+
+   - Me parece que el principal objetivo de este proyecto debería ser... el
+   proyecto en sí, completarlo. Todo lo demás (ventas, rep, etc.) me parece
+   que son ideales, y tampoco es que vamos a renunciar a ellas, pero me parece
+   que, siendo esta nuestra primera incursión en este mundillo, lo primero que
+   hay que hacer es precisamente terminar algo. de lo demás, pues quizás nos
+   podemos preocupar luego. No hay que perder de vista la calidad, y
+   simplemente tirar algo como para decir que lo terminamos, pero bueno, llegar
+   a un producto de *calidad*, imo, debería ser la prioridad número uno.
+   - PC es la plataforma que nos impone menos costos de entrada. Si
+   fueramos a distruibuir por Steam, Steam no tiene ningún costo de entrada
+   (más que el cut que se dejan, claro, tampoco es una caridad la vara). Si
+   fuéramos a distrubuirlo nosotros pues ocuparíamos un website, pero igual,
+   aunque lo hagamos por Steam, pues un website sería casi que necesario
+   también. Todos tenemos PCs, y el juego que estamos planteando debería ser
+   suficientemente liviano como para correr en la compu de todos, hasta en la
+   de Felipe.
+   - Es la platafoma que conocemos. Como jugadores de PC, posiblemente
+   tenemos una idea clara de qué queremos como tales, en un juego de PC. Una
+   vara como iPhone, pues no es que sea rocket surgery, pero bueno, no es lo
+   mismo que estar acostumbrado a la interacción con el chunche. Este no es un
+   factor tan importante, pero bueno, creo que algo de peso tiene.
+   - El empezar para PC no significa que tengamos que limitarnos a ella. Si
+   tuviéramos un éxito rotundo (*knocks on wood*)* *pues por qué no, podemos
+   pensar en hacer un port a otras cosas. Si con esta nos va bien, pero no
+   tanto, ya para la próxima podríamos decir, bueno, ya tenemos algo de
+   experiencia con el proceso, con el plan, etc., ahora sí, intentemos otras
+   varas.
+
+2010/6/25 Knife_Fighting_Monkey <fancyaccount@gmail.com>
+======================================================================
+Date: 2010-06-25T15:10:20Z
+From: alexbarquero@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Re: Platform Review Standard
+MsgID: 1296fa8cdac596ee
+
+Estoy de acuerdo con todos los puntos.
+
+Creo que PC pinta el mercado más factible, más que todo por la posibilidad
+de capearse cualquier tipo de barrera de entrada e irse directamente a la
+distribución digital por vias propias.
+
+IMO, go PC, FTW.
+
+2010/6/25 Juan V. García <jvgarcia@gmail.com>
+======================================================================
+Date: 2010-06-25T15:13:23Z
+From: skrybble@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: [MoonStorm Studios] Re: Platform Review Standard
+MsgID: 1296fab998e1641a
+
+Yo estoy deacuerdo con Juan..
+
+Me parece que lo que implica menos limitantes en estos momentos es el
+trabajo enfocado a PC..
+porque? di porque por ejemplo.. si decidimos trabajar en iphone por
+decir algo.. di no todos tenemos uno para estar probando,
+y aunque existen emuladores y tal, sea como sea no es lo mismo y lo
+mismo aplica para las consolas..
+
+Lo que talvez me deja un poco sin sabor es el steam.. aunque es una
+plataforma muuuy conocida e inmensa no es algo que todo mundo tiene,
+pero bueno
+para empezar está mas que bien, aparte por cosa nuestra podriamos
+montar un sitio, no necesita ser algo gigante.. inclusive podria hasta
+ser un landing page con info del proyecto, info de la compañia
+( nosotros ) y un link al steam.. se me ocurre.. que se yo.. la vara
+es tener Presencia!
+
+Es como lo que planteaba Alex el dia de la reunion, a mi parecer hay
+que tratar de mantener las cosas simples para tratar de hacerlas lo
+mejor posibles, el hecho que sea algo pequeño no quiere decir que no
+sea bueno de calidad o ambicioso en cuanto al resultado final del
+mismo.
+
+Bueno, pues eso.. a ver que opinan!
+
+Tuanix!
+======================================================================
+Date: 2010-06-25T15:42:00Z
+From: alexbarquero@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Re: Platform Review Standard
+MsgID: 1296fc5cba0c8b34
+
+Excelentes aportes.
+
+Morales y Aguilar, algunos closing commnents al respecto?
+
+2010/6/25 Brian - BooT <skrybble@gmail.com>
+======================================================================
+Date: 2010-06-25T16:38:32Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Re: Platform Review Standard
+MsgID: 1296ff9e7c9625cc
+
+Concuerdo con todos los puntos expuestos, a excepción de la anotación de
+boot en cuanto a que "no todo mundo tiene steam"... 25 millones de cuentas,
+mae... nigga please, es una exposición exagerada más bien diría yo, y aunque
+no asegure ventas al menos nos pone en el plano, que creo que ninguna otra
+de las opciones que hemos investigado nos ofrece en tal magnitud.
+Otro de los puntos a favor de Steam y a juzgar por las declaraciones de
+gente que ya lleva años en el mundo indie es que ofrece uno de los tratos
+"más justos" en cuanto a tajada de ingresos se refiere (y aunque este ya es
+un punto a pensar por el lado económico, que si bien es cierto no es
+imperativo en un principio, siempre es válido considerar).
+
+En lo personal hay varas de Steam que me revientan como usuario final, pero
+como desarrollador le veo más pros que contras.
+
+Para agregarle un clavo más al asunto, hacer énfasis en la parte de calidad
+que menciona Juancho: no hay perdón por ser noobs y aunque sea una vara de
+$1, $5 ó $60, es un mercado donde se exige bastante en este departamento. Es
+algo que debemos tener en cuenta siempre que trabajemos una tarea del
+proyecto.
+
+2010/6/25 Alexander Barquero <alexbarquero@gmail.com>
+======================================================================
+Date: 2010-06-25T16:54:35Z
+From: jvgarcia@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Re: Platform Review Standard
+MsgID: 12970085b7fe6f9c
+
+Para aclarar, desarrollar para PC no significa hacer un release exclusivo
+con Steam. No se si a Valve le cuadrara mas que la vara sea exclusiva, pero
+por ejemplo, Torchlight se vende retail, digital en el sitio de los maes, y
+por Steam tambien. Ahi la unica diferencia es si queremos usar el API de
+Steamworks... que de hecho creo que eso seria algo que deberiamos investigar
+un poco sobre el engine que vayamos a usar, ahora que lo pienso.
+
+Otra vara que seniala Aguilar es muy cierto, el mercado de PC puede ser
+facil en cuanto a entrada, pero bueno, no tenemos mas que ver que tan
+whiners somos nosotros mismos con los juegos para darnos cuenta de que se
+exige en terminos de calidad. Quizas usuarios de otras varas no les
+importen tanto ciertas varas, pero en PC posiblemente la gente mas
+"hardcore" si sea bastante critica, entonces hay que tratar de lograr
+calidad en varios sentidos: UI para PC (shortcuts, que el mouse funque bien,
+etc), una historia con sentido, buen humor, puzzles ingeniosos... en fin,
+hay que ponerle, keke. Y bueno, suele fijarse uno en varios detalles,
+entonces hay que tratar de ponerle atencion a todo eso.
+
+2010/6/25 Knife_Fighting_Monkey <fancyaccount@gmail.com>
+======================================================================
+Date: 2010-06-25T17:51:15Z
+From: skrybble@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: [MoonStorm Studios] Re: Platform Review Standard
+MsgID: 129703c20f8d328d
+
+excelentes comentarios!
+
+y me referia a que no todo mundo tiene steam porque yo no tengo cuenta
+xDD
+
+tuanix!
+======================================================================
+Date: 2010-06-25T17:52:15Z
+From: jvgarcia@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Re: Platform Review Standard
+MsgID: 129703d1338dbabc
+
+Que esta esperando? Si quiere una excelente excusa para dejar su salario
+botado en algun lado, justo ahora hay unas excelentes ofertas, lol. Pero
+bueno, como dije, no TIENE QUE ser solo en Steam.
+
+2010/6/25 Brian - BooT <skrybble@gmail.com>
+======================================================================
+Date: 2010-06-25T18:01:08Z
+From: c0pp3r@b52clan.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Re: Platform Review Standard
+MsgID: 1297045808f89852
+
+Estoy de acuerdo con PC, los argumentos que han planteado son bastante
+sólidos. Quisiera cerrar mis aportes a este thread con un adagio chino:
+
+    * 骑(qí)驴(lǘ)找(zhǎo)马(mǎ) (ride+mule+look for+horse)
+          o Literally: Riding a mule while looking for a horse.
+          o Meaning: Settle for what you have while looking for something
+better.
+
+Cristián Morales
+
+2010/6/25 Juan V. García <jvgarcia@gmail.com>
+======================================================================
+Date: 2010-06-28T15:07:02Z
+From: jvgarcia@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Re: Platform Review Standard
+MsgID: 1297f18ec6937b96
+
+Estamos de acuerdo con PC entonces? Que hay del engine? Como seleccionamos
+esa carajada?
+
+2010/6/25 Cristián Morales <c0pp3r@b52clan.com>
+======================================================================
+Date: 2010-06-28T15:28:34Z
+From: alexbarquero@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Re: Platform Review Standard
+MsgID: 1297f2c92b4b40c9
+
+Esa es la decisión complicada que se viene ahora, de la mano con la
+plataforma.
+
+IMO, deberiamos armar una lista con las alternativas, y probarlas todas,
+analizando especialmente el costo/beneficio, ya que aquí si habría que
+empezar a pensar en poner $$.
+
+Agréguenle a esta lista los que falten:
+
+https://spreadsheets.google.com/ccc?key=tgm-a1wyrI4nyWsJPJ77VGA&hl=en#gid=0
+
+2010/6/28 Juan V. García <jvgarcia@gmail.com>
+======================================================================
+Date: 2010-06-28T15:32:30Z
+From: ledezman@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Re: Platform Review Standard
+MsgID: 1297f306e1d64c35
+
+Como saben ya he estado jugando bastante con Torque 2D.... Hice varios
+tutoriales y he estado haciendole mas varas a aquel demo tonto de
+smoothface. Lo ultimo que agregue fue que el bicho se moviera usando mouse,
+(clicks) y que se moviera solo en el terreno verde. Voy a agregarle algunas
+tonteras mas al demo y luego lo mando.
+
+Definitivamente es un buen engine, pero bueno no es gratis. Pero creo que lo
+he probado bastante como para darse una idea.
+
+2010/6/28 Alexander Barquero <alexbarquero@gmail.com>
+======================================================================
+Date: 2010-06-28T15:33:07Z
+From: jvgarcia@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Re: Platform Review Standard
+MsgID: 1297f30cff3732ea
+
+Creo que sería bueno hacer una delimitación de engines, podríamos durar toda
+la vida evaluando.
+
+2010/6/28 Alexander Barquero <alexbarquero@gmail.com>
+======================================================================
+Date: 2010-06-28T15:38:01Z
+From: alexbarquero@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Re: Platform Review Standard
+MsgID: 1297f353b79dad70
+
+Eso fue lo que traté de hacer, solo puse los que de fijo nos servirían.
+
+Considera que deberíamos eliminar alguno de esos?
+
+2010/6/28 Juan V. García <jvgarcia@gmail.com>
+======================================================================
+Date: 2010-06-28T15:39:16Z
+From: jvgarcia@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Re: Platform Review Standard
+MsgID: 1297f36712e79298
+
+No, es que cuando lo abri no habia ninguna lista, heh.
+
+2010/6/28 Alexander Barquero <alexbarquero@gmail.com>
+======================================================================
+Date: 2010-06-28T16:28:09Z
+From: alexbarquero@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Re: Platform Review Standard
+MsgID: 1297f631e5b0b9ab
+
+Esta es la lista que puse...
+
+COnsideran que falta (o que sobra) alguno? Me parece que TODOS deberían ser
+considerados, y no se si me falta alguno...
+
+Adventure Game Studio
+Torque
+UDK
+Visionaire
+Unity
+Wintermute
+Flash
+Ogre
+Virtools
+
+2010/6/28 Juan V. García <jvgarcia@gmail.com>
+======================================================================
+Date: 2010-06-28T16:29:25Z
+From: alexbarquero@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Re: Platform Review Standard
+MsgID: 1297f64490279d97
+
+Aquí hay otros:
+
+http://gpwiki.org/index.php/Game_Engines
+
+2010/6/28 Alexander Barquero <alexbarquero@gmail.com>
+======================================================================
+Date: 2010-06-28T16:30:28Z
+From: alexbarquero@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Re: Platform Review Standard
+MsgID: 1297f653d6a263b5
+
+Ojo, está el de Popcap:
+http://sourceforge.net/projects/popcapframework/
+
+2010/6/28 Alexander Barquero <alexbarquero@gmail.com>
+======================================================================
+Date: 2010-06-28T16:30:05Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Re: Platform Review Standard
+MsgID: 1297f6591c3e22b8
+
+separen este teemaaa de la plataformaaaaaaa
+
+2010/6/28 Alexander Barquero <alexbarquero@gmail.com>

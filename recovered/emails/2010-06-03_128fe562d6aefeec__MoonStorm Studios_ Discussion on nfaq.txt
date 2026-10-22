@@ -1,0 +1,65 @@
+THREAD 128fe562d6aefeec  [MoonStorm Studios] Discussion on nfaq
+URL: https://mail.google.com/mail/?authuser=alexbarquero@gmail.com#all/thread-f:1337539827023675116
+Messages: 3
+
+======================================================================
+Date: 2010-06-03T15:03:00Z
+From: skrybble@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: [MoonStorm Studios] Discussion on nfaq
+MsgID: 128fe562d6aefeec
+
+Buenas
+
+Bueno yo tengo una duda..
+
+En el momento de estar trabajando en el desarrollo del game, se
+trabajaria de forma individual ( cada quien por su lado, en su casa,
+etc, comunicandose por inet ) o se estableceria un "x" lugar como
+"centro de desarrollo"
+
+Entiendo que puede ser bastante incomodo, más que todos trabajamos/
+estudiamos/tenemos obligaciones con la familia, etc.. pero pregunto
+esto por que debemos tomar en cuenta que en un desarrollo avanzado de
+la aplicación, los tiempos de compilacion se tornan bastante extensos
+y esto causa que por estar esperando uno se distraiga en otras cosas,
+pierda el hilo de lo que estaba haciendo, se va el tiempo, etc, etc..
+
+Por el contrario, estando todos ubicados en un mismo lugar permitiria
+armar un farm con las compus para el trabajo de compilado, porque eso
+de tirarme 20 minutos esperando que compile cada vez que agrego/muevo/
+modifico una luz no es algo que cause gracia.. al comienzo pues no
+molesta tanto, pero luego se vulve muy engorroso ya que atrasa
+bastante.
+
+ahí queda mi consulta..
+
+Tuanis!
+-BooT
+======================================================================
+Date: 2010-06-03T18:51:57Z
+From: jvgarcia@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: [MoonStorm Studios] Re: Discussion on nfaq
+MsgID: 128ff27cf811a1b6
+
+Creo que su pregunta en realidad encierra otro monton de preguntas,
+ja. Pero si, lo ideal al ponerse a trabajar ya mas en serio en esto
+seria tener un lugar comun. Otro problema que puede darse, por
+ejemplo, es cuando ya se tenga una cantidad considerable de assets
+para trabajar. Posiblemente estos assets vamos a querer tenerlos en
+el svn o lo que vayamos a usar, y diay, estar bajando todos esos
+assets... sia guebon. Igual, pues facilita mucho estar en el mismo
+lugar a la hora de ver diferentes cosas que se tengan que resolver en
+conjunto.
+======================================================================
+Date: 2010-09-15T20:44:46Z
+From: c0pp3r@b52clan.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: [MoonStorm Studios] Discussion on nfaq
+MsgID: 12b17247493209aa
+
+Are you a wizard?

@@ -1,0 +1,189 @@
+THREAD 12a3db6d6cc42292  [MoonStorm Studios] Sobre diferentes opciones para source control
+URL: https://mail.google.com/mail/?authuser=alexbarquero@gmail.com#all/thread-f:1343158376909251218
+Messages: 5
+
+======================================================================
+Date: 2010-08-04T15:27:23Z
+From: jvgarcia@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: [MoonStorm Studios] Sobre diferentes opciones para source control
+MsgID: 12a3db6d6cc42292
+
+Ok, como hablamos en la reunión de ayer, se hace importante ver esta
+cuestión cuanto antes, para estar listos para empezar a bretear con código,
+assets, y etc. Por la experiencia que varios en el equipo han tenido, y por
+su costo, Subversion resulta la opción que pareciera inmediata, no obstante,
+como comenté ayer, también he leído buenas cosas de Mercurial, y me dio
+curiosidad ver cuáles eran las principales diferencias. Voy a asumir que
+básicamente todos sabemos como funciona Subversion, aunque sé que no es
+necesariamente cierto.
+
+Básicamente Mercurial funciona con otro "paradigma" de hacer las cosas, y es
+un sistema distribuido de source control. Esto significa que no es
+necesario conectarse a un repositorio central para hacer commits y otras
+operaciones, sino que uno mismo puede ir administrando su repositorio local,
+y posteriormente "publica" sus cambios ya en un repositorio central para que
+otros los puedan ver. Algunos pros y cons:
+
+Pros:
+
+   - Si fuera del caso, uno podría hacer commits sin tubos, puede hacer
+   commits locales para tener diferentes versiones "locales" sin tener que
+   branchear, etc. En teoría esto podría reducir el uso de ancho de banda por
+   parte de todos.
+   - Como puedo bretear con commits locales, puedo llegar hasta tener una
+   vara que considero estable antes de publicarlo a la vara central, y así
+   posiblemente se evitan dolores de cabeza haciendo commits que quiebren la
+   vara.
+   - En teoría bretear con branches y varas así es más flexible que en SVN,
+   porque el branch sabe de donde salió.
+
+Cons:
+
+   - El esquema ese distribuido puede hacer que los commits centrales, por
+   llamarlos de alguna forma, sean problemáticos por varias razones. Para
+   empezar, podría darse el caso de que uno haga los commits centrales cada
+   muerto de obispo, y eso podría afectar a los otros tanto como commits que
+   quiebren la shit. Por otro lado, hacer las publicaciones podría ser medio
+   dolor de huevos también, mientras uno corrige conflictos, etc.
+   - La vara no hace diffs binarios (yo pensé que svn tampoco, pero
+   aparentemente sí). Esto no significa que uno pueda ver diferencias
+   visualmente, pero significa que svn sólo mantiene las diferencias entre las
+   diferentes versiones que guarda, mientras que Mercurial guarda todo, lo que
+   puede hacer que el repositorio se vuelva bastante grande.
+   - Por cosas como la anterior, puede ocupar bastante espacio en disco.
+
+Creo que estos son los principales. Otra vara es que con Mercurial no
+tenemos experiencia, que bueno, es más un con que un pro, pero podría darse
+que a chile le saquemos provecho a la vara nueva (clásico dilema viejo
+conocido/nuevo por conocer). Puedo ver cosas útiles y malas de los dos
+lados, no sé que piensan uds. Por ejemplo, para los carajos que bretean en
+assets, posiblemente sea tuanis Mercurial por la vara de commits locales,
+porque así pueden llevar versiones sin tener que estar commiteando las varas
+a la cuestión central cada vez que quieran hacer eso, pero como el diff
+binario de Mercurial aparentemente no existe o no es bueno, el espacio en su
+disco posiblemente sea comprometido. Con svn, cada vez que quiera una
+versión, pues tendrían que hacer un commit, y si es mucha vara quizás dure
+su rato, etc., pero por otro lado, pues posiblemente ocupe menos espacio,
+etc. Por favor hagan preguntas y/o opinen para ver qué decidimos. Al final
+también estamos atados a lo que podamos instalar funcionalmente (kek), pero
+bueno, igual creo que la discusión es válida. Ambos son gratis. Pueden
+googlear si les interesa,
+acá<http://koichitamura.blogspot.com/2008/06/mercurial-vs-subversion.html>,
+por ejemplo, hay algunas comparaciones.
+
+La otra vara es con Alex. Estábamos pensando que posiblemente se pueda usar
+lo que ya se tiene de b52clan.com para instalar esta vara. Otra
+posibiilidad es pues pagar por nuestro propio sitio también, y por último,
+podríamos usar el hosting que tengo por ahí, si es que les da la gana
+instalarme la vara.
+
+/discuss
+======================================================================
+Date: 2010-08-04T15:47:30Z
+From: alexbarquero@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Sobre diferentes opciones para source control
+MsgID: 12a3dc932849c11b
+
+¿No analizaron la opción que les dije?
+
+Se llama FishEye, y es de los míos maes de Confluence. Se monta sobre
+Subversion o Mercurial, entre otros, para agregar funcionalidad
+especialmente a equipos que no están IN SITU, como nosotros. Lean la madre,
+no se dura nada.
+
+http://www.atlassian.com/software/fisheye/
+
+Solo cuesta $10 por año.
+
+-----------------------------------
+
+Propiamente de las herramientas, no me gusta la idea de Mercurial y sus
+commits locales, eso no tiene sentido. No tenía idea que funcionaba así.
+
+Si a uno se le muere el tarro, si se va para la playa, o lo que sea y no
+hizo commit, se perdió toda la mierda.
+
+Si alguien más estaba tocando el mismo archivo (en caso de que los check-out
+no fueran exclusivos) al hacerle check-in el merge va a ser MUCHO MÁS
+COMPLICADO ya que posiblemente se guardó una gran cantidad de shit
+localmente, y esa creo que no es la idea.
+
+No lo veo en las ventajas tampoco. Si usted quiere tener versiones locales
+por X razón, copie y peque el archivo, le pone otro nombre y lo sube con ese
+otro nombre al repositorio central. Lo de hacer check-ins de cosas estables
+es un must, con o sin check-ins locales, no debería subirse nada que no esté
+"completado" o que por lo menos tenga llamados a mocks para que no rompa
+todo. Y lo de los branches, no quiero adelantarme pero no veo donde vamos a
+estar abusando de branches en nuestro esquema de trabajo por ahora.
+Cualquier asunto de branches que ocupemos, creo que se podría manejar con lo
+que ya SVN tiene.
+
+Con respecto al hosting de b52clan, es algo que cperez nos está dando for
+free. Lo único que se paga anualmente (~19$) es la licencia de GoogleApps
+para las cuentas de correo y la renovación del dominio (b52clan.com).
+
+Si quisieramos meterle shit, sería cuestión de preguntar en cuanto nos deja
+el hosting. Sinceramente, no le veo problema, ese mae es gato para ese tipo
+de cosas, y nos tiene confianza como para habilitarnos cuentas de
+administrador o SSH o lo que sea si ocuparamos hacer craps a un nivel más
+fino., Sería preguntarle costos nada más.
+
+2010/8/4 Juan V. García <jvgarcia@gmail.com>
+======================================================================
+Date: 2010-08-04T16:05:08Z
+From: jvgarcia@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Sobre diferentes opciones para source control
+MsgID: 12a3dd964a1684e9
+
+Si uno va a moverse, hace commit central y gg, la misma situación se puede
+dar en svn también. La idea del repositorio local es mejor que estar
+haciendo backups locales, imo, porque el mismo software le permite hacer
+rollbacks y aprovechar las ventajas de source control en sí. Estamos de
+acuerdo en que los commits pueden ser conflictivos por los puntos que se
+pusieron ahí, pero también es cuestión de como uno use las varas, eso puede
+pasar con svn si uno nunca hace commit. Ciertamente es más complicado, sólo
+presento la opción; Una vara que sí me parece tuanis de los commits locales
+es que los que estén trabajando assets posiblemente se compliquen menos con
+commits, que posiblemente sí sean pesados para ellos. Obviamente cada
+opción tiene sus pros y cons, se trata de ver desde todas las partes qué les
+parece.
+
+Lo de FishEye lo vi rápidamente, se ve interesante, aunque no sé qué tanto
+uso realmente le daríamos. De momento me concentro en poner a funcionar un
+repositorio, kek, luego podríamos ver qué tanto nos sirve esa herramienta, e
+igual se puede montar sobre las opciones discutidas acá.
+
+2010/8/4 Alexander Barquero <alexbarquero@gmail.com>
+======================================================================
+Date: 2010-08-18T02:44:03Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Sobre diferentes opciones para source control
+MsgID: 12a831569651223d
+
+¿en qué paró esto? ¿qué conchas hay que instalar y como se/que hay que
+configurar?
+
+2010/8/4 Juan V. García <jvgarcia@gmail.com>
+======================================================================
+Date: 2010-08-18T04:54:37Z
+From: alexbarquero@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Sobre diferentes opciones para source control
+MsgID: 12a838c7e99fee66
+
+Ya está la poronga.
+
+Yo les pasé su usuario password de Subversion.
+
+Instalen Tortoise en la compu y lixto.
+
+2010/8/17 Knife_Fighting_Monkey <fancyaccount@gmail.com>

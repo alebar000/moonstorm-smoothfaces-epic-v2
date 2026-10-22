@@ -1,0 +1,105 @@
+THREAD 1298267ca3e26e88  LolDemo1 build final. lol.
+URL: https://mail.google.com/mail/?authuser=alexbarquero@gmail.com#all/thread-f:1339863205910048392
+Messages: 6
+
+======================================================================
+Date: 2010-06-29T06:32:04Z
+From: ledezman@gmail.com
+To: jvgarcia@gmail.com, alexbarquero@gmail.com, fancyaccount@gmail.com, comele.bien@gmail.com, skrybble@gmail.com
+Cc: 
+Subject: LolDemo1 build final. lol.
+MsgID: 1298267ca3e26e88
+ATTACHMENT: LolDemo1.7z (application/octet-stream)
+
+Intente subirlo al grupo pero creo que no se subio bien. En fin aqui va el
+ultimo build de prueba for the lolz, que sirve mas o menos como evaluacion
+de torque. El level es el mismo que el anterior, gracias al psd que envio
+Aguilar.
+
+Ahora el input si es 'point & click", el bicho si camina solo en los hills
+verdes (con algunos bugs aveces kek), el cursor cambia contextualmente para
+indicar si se puede mover o hacer nada en el mapa. Splash screens for the
+lulz (pueden pasarlas haciendo click), y si caminan hacia la puerta del
+castillo y le hacen click les va a salir un troll que los owneara. Tambien
+le puse un lol soundtrack minimalista para probar audio.
+
+En fin espero les corra.
+======================================================================
+Date: 2010-06-29T16:57:01Z
+From: alexbarquero@gmail.com
+To: ledezman@gmail.com
+Cc: jvgarcia@gmail.com, fancyaccount@gmail.com, comele.bien@gmail.com, skrybble@gmail.com
+Subject: Re: LolDemo1 build final. lol.
+MsgID: 12984a3e67f5c759
+
+Mae, roflmao, que bien el troll :D
+
+Está gosu, se podría travesear más fo'sho
+
+2010/6/29 Ledezman <ledezman@gmail.com>
+======================================================================
+Date: 2010-06-30T01:27:31Z
+From: fancyaccount@gmail.com
+To: alexbarquero@gmail.com
+Cc: 
+Subject: Re: LolDemo1 build final. lol.
+MsgID: 129867797513663a
+
+niggas, explotó un tubo de la interné aquí en El Porve ayer en la noche,
+dicen que lo reparan entre hoy (martes) y el viernes, rofl.
+acabo de bajar la vaina y la voy a ver en la choza, mañana escribo feedback
+n shit y ver si subo otro "asset" con el estilo que terminó de montar
+Morales.
+ggs.
+
+2010/6/29 Alexander Barquero <alexbarquero@gmail.com>
+======================================================================
+Date: 2010-06-30T01:38:48Z
+From: alexbarquero@gmail.com
+To: ledezman@gmail.com
+Cc: jvgarcia@gmail.com, fancyaccount@gmail.com, comele.bien@gmail.com, skrybble@gmail.com
+Subject: Re: LolDemo1 build final. lol.
+MsgID: 12986819c2d429d3
+
+Aguilar dice:
+
+niggas, explotó un tubo de la interné aquí en El Porve ayer en la noche,
+dicen que lo reparan entre hoy (martes) y el viernes, rofl.
+acabo de bajar la vaina y la voy a ver en la choza, mañana escribo feedback
+n shit y ver si subo otro "asset" con el estilo que terminó de montar
+Morales.
+ggs.
+
+2010/6/29 Alexander Barquero <alexbarquero@gmail.com>
+======================================================================
+Date: 2010-06-30T04:01:29Z
+From: skrybble@gmail.com
+To: alexbarquero@gmail.com
+Cc: 
+Subject: Re: LolDemo1 build final. lol.
+MsgID: 12987043eb9f3a72
+
+ahhh mae está elegante ese demo..
+hahhaha buenisimo di maes mucho de lo que en realidad el point & click se
+basa está ahi..
+para mí, pinta bien la vara..
+
+ahora, me gustaria saber.. cuanto duró en la vara y que tan hardcore es?
+
+tuanis!
+
+El 29 de junio de 2010 19:38, Alexander Barquero
+<alexbarquero@gmail.com>escribió:
+======================================================================
+Date: 2010-06-30T17:50:22Z
+From: comele.bien@gmail.com
+To: alexbarquero@gmail.com
+Cc: ledezman@gmail.com, jvgarcia@gmail.com, fancyaccount@gmail.com, skrybble@gmail.com
+Subject: Re: LolDemo1 build final. lol.
+MsgID: 12989fb6bdfed29d
+
+Lol´d
+
+Cristián Morales
+
+2010/6/29 Alexander Barquero <alexbarquero@gmail.com>

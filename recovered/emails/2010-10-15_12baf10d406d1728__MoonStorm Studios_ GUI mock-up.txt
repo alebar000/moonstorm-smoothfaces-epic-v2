@@ -1,0 +1,60 @@
+THREAD 12baf10d406d1728  [MoonStorm Studios] GUI mock-up
+URL: https://mail.google.com/mail/?authuser=alexbarquero@gmail.com#all/thread-f:1349656077568644904
+Messages: 3
+
+======================================================================
+Date: 2010-10-15T08:45:14Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: [MoonStorm Studios] GUI mock-up
+MsgID: 12baf10d406d1728
+ATTACHMENT: GUImu003.jpg (image/jpeg)
+
+adjunto la shit, sino se lee/entiende algo, me dicen
+======================================================================
+Date: 2010-10-15T14:04:50Z
+From: jvgarcia@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] GUI mock-up
+MsgID: 12bb0351c349ac11
+
+Ok, algunas preguntas...
+
+En la parte de arriba va a estar el inventario, pero al sostener el click
+derecho el inventario tambien se va a abrir sobre la parte derecha? O sobre
+la misma parte de arriba se pueden ejecutar varias funciones usando el click
+derecho?
+
+En la parte de la caja de dialogo tambien se va a leer las descripciones de
+los objetos?
+
+2010/10/15 Knife_Fighting_Monkey <fancyaccount@gmail.com>
+======================================================================
+Date: 2010-10-15T18:57:24Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] GUI mock-up
+MsgID: 12bb14735b486283
+ATTACHMENT: fallout_inv_RMB.png (image/png)
+ATTACHMENT: fallout_world_RMB.png (image/png)
+
+ok, primero que todo, es solo una idea, kek
+
+el asunto de las funciones con el RMB es la misma shit que en el primer
+Fallout (adjunto pics), que en ese juego consiste en mantener presionado
+LMB.
+el inventario solamente aparece arriba, pero pifié al no poner una opción
+para RMB que lo "llame".
+la descripción de un objeto (ya sea de inventario o del escenario),
+aparecería en la caja del diálogo (que en ese momento estaría MIA y sería
+"llamada" para mostrar el texto referente al objeto).
+
+Otra vez, solo una idea para aprovechar que ya tendríamos una caja de
+diálogo, ya que no veo situación alguna donde despleguemos una conversación
+y el jugador tenga la opción de seleccionar objetos del escenario/inventario
+al mismo tiempo.
+
+2010/10/15 Juan V. García <jvgarcia@gmail.com>

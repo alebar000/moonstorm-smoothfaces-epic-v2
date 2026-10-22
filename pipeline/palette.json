@@ -1,0 +1,19 @@
+{
+  "_comment": "Paleta congelada. Alex la extrae de art/references/ref_palette.png (ver STYLE_BIBLE §1). Reemplazar estos valores de ejemplo. delta_e_tolerance es la distancia CIE76 máxima a un color de la paleta para contar como 'en paleta'.",
+  "colors": {
+    "ink_black":    "#1a1612",
+    "paper_cream":  "#e9dcc0",
+    "sub_rust":     "#8a3b1e",
+    "sub_teal":     "#2d6b6a",
+    "brass":        "#c9962b",
+    "wood_brown":   "#7a4a22",
+    "coat_crimson": "#8f1d22",
+    "shadow_olive": "#4a4a2e",
+    "sky_grey":     "#9aa3a6",
+    "paper_white":  "#f3ede0",
+    "skin_tan":     "#d9a876",
+    "gold_pale":    "#e4c777"
+  },
+  "delta_e_tolerance": 18,
+  "max_off_palette_fraction": 0.08
+}

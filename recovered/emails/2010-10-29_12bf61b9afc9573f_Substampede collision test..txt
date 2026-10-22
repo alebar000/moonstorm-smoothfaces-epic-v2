@@ -1,0 +1,53 @@
+THREAD 12bf61b9afc9573f  Substampede collision test.
+URL: https://mail.google.com/mail/?authuser=alexbarquero@gmail.com#all/thread-f:1350905863380490047
+Messages: 3
+
+======================================================================
+Date: 2010-10-29T03:50:22Z
+From: ledezman@gmail.com
+To: fancyaccount@gmail.com, comele.bien@gmail.com, alexbarquero@gmail.com, jvgarcia@gmail.com
+Cc: 
+Subject: Substampede collision test.
+MsgID: 12bf61b9afc9573f
+ATTACHMENT: SubstampedeTest1.7z (application/octet-stream)
+ATTACHMENT: SubstampedeTest1_TorqueProject.7z (application/octet-stream)
+
+Aqui una prueba con torque. Agarre el sketch, lo parti en pedazos en
+photoshop y luego lo volvi a 'armar' en torque. TIene algunos defectos al
+armarlo pero bueno no es relevante. La idea era partirlo como en 'paredes',
+'objetos' y que smoothface respete los 'boundaries' de donde puede caminar
+usando la deteccion de colisiones del engine.
+
+Funciona.. pero tiene issues. El mae choca con lo que tiene que chocar
+etc.... hice un hack puse que el boundaries de colisiones de smoothface
+fuera solo las patas, para que el mae no chocara con la jupa contra objetos
+que estan hacia 'atras en el background'. Si se le hace click en un area no
+caminable el bicho seguira hasta donde pueda, pero ahi se comporta extranho,
+cuando choca intenta como seguir el borde del objeto bueno ahi lo veran.
+
+Mando a cada correo por que el grupo moonstorm rechaza el attachment. Ahi va
+el folder de proyecto tambien por si lo quieren ojear con Torque.
+======================================================================
+Date: 2010-10-29T06:34:32Z
+From: comele.bien@gmail.com
+To: ledezman@gmail.com
+Cc: fancyaccount@gmail.com, alexbarquero@gmail.com, jvgarcia@gmail.com
+Subject: Re: Substampede collision test.
+MsgID: 12bf6b2281e5e492
+
+*GOSU!*
+
+Cristián Morales
+
+2010/10/28 Ledezman <ledezman@gmail.com>
+======================================================================
+Date: 2010-10-29T23:28:42Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: [MoonStorm Studios] Re: Substampede collision test.
+MsgID: 12bfa52acd6dda51
+
+*GROSO*, voy a bajarlo n shit!
+
+2010/10/29 Cristián Morales <comele.bien@gmail.com>

@@ -1,0 +1,18 @@
+THREAD 12956f0e81aa74fc  Android Game Dev
+URL: https://mail.google.com/mail/?authuser=alexbarquero@gmail.com#all/thread-f:1339098572308247804
+Messages: 1
+
+======================================================================
+Date: 2010-06-20T19:58:35Z
+From: alexbarquero@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Android Game Dev
+MsgID: 12956f0e81aa74fc
+
+Algunos links de interés (bastante buenos, los que les comenté ayer)
+http://www.rbgrn.net/content/54-getting-started-android-game-development
+http://www.rbgrn.net/content/215-light-racer-3d-development-journal
+
+All about Android
+http://code.google.com/android/index.html

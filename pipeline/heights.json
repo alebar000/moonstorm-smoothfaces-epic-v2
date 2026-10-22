@@ -1,0 +1,12 @@
+{
+  "_comment": "Alturas de pie en px a escala 1.0, de planta de pies a coronilla sin sombrero. Las edita solo Alex. Props declaran height_fraction_of_smoothface en su meta.json.",
+  "reference_character": "smoothface",
+  "characters": {
+    "smoothface": 420,
+    "capdread": 440,
+    "ababy": 360,
+    "nihongo": 400,
+    "ventriloquist": 450
+  },
+  "tolerance": 0.04
+}

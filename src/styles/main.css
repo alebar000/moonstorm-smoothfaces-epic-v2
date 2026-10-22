@@ -1,0 +1,1916 @@
+:root {
+  --brass-bright: #e3b65a;
+  --brass-mid: #b38332;
+  --brass-dark: #5e3f16;
+  --iron-bg: #16131a;
+  --iron-panel: #221d28;
+  --parchment: #f4ead2;
+  --parchment-dim: #cbbba0;
+  --ink-dark: #231308;
+  --ink-mid: #3d2412;
+  --crimson-accent: #9e2a2b;
+  --teal-glow: #3be8d8;
+  --font-display: 'Cinzel', Georgia, serif;
+  --font-body: 'Crimson Pro', Georgia, serif;
+  --font-mono: 'Patrick Hand', 'Crimson Pro', cursive;
+}
+
+* {
+  box-sizing: border-box;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #0b090e;
+  color: var(--parchment);
+  font-family: var(--font-body);
+  overflow: hidden;
+}
+
+#game-root {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #09070c;
+}
+
+.hud-hidden {
+  display: none !important;
+}
+
+/* =========================================================
+   FLOATING PAPER CUT-OUT TOP POUCH & COMMAND STRIP
+   ========================================================= */
+#hud-top-bar {
+  position: fixed;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-0.3deg);
+  height: 58px;
+  background: rgba(28, 19, 15, 0.86);
+  border: 3px solid #231308;
+  outline: 2px solid #e8d8b8;
+  border-radius: 12px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.82);
+  display: flex;
+  align-items: center;
+  padding: 4px 12px;
+  gap: 8px;
+  z-index: 35;
+  max-width: 98vw;
+}
+
+.hud-mini-tile {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.7));
+}
+
+.mode-mini-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.hud-brand-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 7px 22px;
+  background: url('/assets/ui/plaque_gold.png') center / 100% 100% no-repeat;
+  border: none;
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 0.82rem;
+  color: var(--ink-dark);
+  text-shadow: 0 1px 0 rgba(255, 240, 200, 0.65);
+  cursor: pointer;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.75));
+  transition: transform 0.14s, filter 0.14s;
+}
+.hud-brand-badge:hover {
+  transform: translateY(-2px) rotate(-1.5deg) scale(1.04);
+  filter: brightness(1.08) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.85));
+}
+
+.inventory-mode-group {
+  display: flex;
+  gap: 4px;
+}
+
+.inv-mode-btn {
+  background: url('/assets/ui/plaque_teal.png') center / 100% 100% no-repeat;
+  color: #e9fffb;
+  border: none;
+  padding: 6px 16px;
+  font-family: var(--font-mono);
+  font-size: 0.86rem;
+  font-weight: 700;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  filter: brightness(0.86) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.65));
+  transition: transform 0.12s, filter 0.12s;
+}
+.inv-mode-btn.active {
+  background: url('/assets/ui/plaque_gold.png') center / 100% 100% no-repeat;
+  color: var(--ink-dark);
+  text-shadow: 0 1px 0 rgba(255, 240, 200, 0.65);
+  transform: rotate(-1deg) scale(1.04);
+  filter: brightness(1.06) drop-shadow(0 3px 7px rgba(0, 0, 0, 0.75));
+}
+
+.inventory-strip-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  min-width: 260px;
+  max-width: 430px;
+  background: rgba(16, 11, 10, 0.65);
+  border: 2px dashed #8c6c42;
+  border-radius: 8px;
+  padding: 2px 6px;
+}
+
+.inv-arrow-btn {
+  background: transparent;
+  border: none;
+  width: 30px;
+  height: 40px;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.14s, filter 0.14s;
+}
+.inv-arrow-btn:hover {
+  transform: scale(1.12);
+  filter: brightness(1.12);
+}
+.arrow-img {
+  width: 26px;
+  height: 32px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.75));
+}
+.arrow-left {
+  transform: scaleX(-1);
+}
+
+.inventory-slots {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  flex: 1;
+  height: 46px;
+}
+.inventory-slots::-webkit-scrollbar {
+  display: none;
+}
+
+.inv-slot {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  background-color: #241914;
+  background-image: url('/assets/ui/slot_frame.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.8));
+  transition: transform 0.14s, filter 0.14s, background-color 0.14s;
+}
+.inv-slot:hover {
+  transform: translateY(-2px) rotate(2deg) scale(1.08);
+  filter: brightness(1.1) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.9));
+}
+.inv-slot.selected {
+  background-color: #1c494b;
+  transform: rotate(-2deg) scale(1.08);
+  filter: drop-shadow(0 0 10px rgba(59, 232, 216, 0.75));
+}
+.inv-slot img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  filter: drop-shadow(1px 2px 2px rgba(0, 0, 0, 0.85));
+}
+
+.active-item-banner {
+  min-width: 155px;
+  padding: 7px 22px;
+  background: url('/assets/ui/plaque_parchment.png') center / 100% 100% no-repeat;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--ink-dark);
+  text-shadow: 0 1px 0 rgba(255, 245, 220, 0.7);
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.75));
+}
+.clear-item-btn {
+  background: var(--crimson-accent);
+  color: #fff;
+  border: 1px solid #ffd2d2;
+  border-radius: 4px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  font-size: 0.72rem;
+  line-height: 1;
+}
+
+.hud-utility-group {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.hud-util-btn {
+  background: url('/assets/ui/plaque_teal.png') center / 100% 100% no-repeat;
+  color: #f4ead2;
+  border: none;
+  padding: 7px 16px;
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.95);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.75));
+  transition: transform 0.14s, filter 0.14s;
+}
+.hud-util-btn:hover {
+  color: #fff;
+  transform: translateY(-2px) rotate(1deg) scale(1.04);
+  filter: brightness(1.12) drop-shadow(0 4px 10px rgba(0, 0, 0, 0.85));
+}
+.hud-util-btn.active-toggle {
+  background: url('/assets/ui/plaque_gold.png') center / 100% 100% no-repeat;
+  color: var(--ink-dark);
+  text-shadow: 0 1px 0 rgba(255, 240, 200, 0.75);
+  transform: rotate(-1deg) scale(1.04);
+}
+
+/* =========================================================
+   FULL-SCREEN SPACIOUS STAGE CONTAINER & 1600x900 CANVAS
+   ========================================================= */
+#stage-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #08060a;
+}
+
+#game-canvas {
+  width: 100vw;
+  height: 100vh;
+  object-fit: fill;
+  display: block;
+  cursor: pointer;
+}
+
+body.crt-enabled #stage-container::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.28) 50%),
+    linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+  background-size: 100% 3px, 6px 100%;
+  z-index: 18;
+}
+
+.room-banner {
+  position: absolute;
+  top: 72px;
+  left: 18px;
+  transform: rotate(-1.4deg);
+  background: url('/assets/ui/plaque_parchment.png') center / 100% 100% no-repeat;
+  border: none;
+  padding: 10px 38px;
+  font-family: var(--font-display);
+  font-size: 0.84rem;
+  font-weight: 900;
+  letter-spacing: 0.03em;
+  color: var(--ink-dark);
+  text-shadow: 0 1px 0 rgba(255, 245, 220, 0.75);
+  pointer-events: none;
+  filter: drop-shadow(0 5px 12px rgba(0, 0, 0, 0.8));
+  z-index: 12;
+}
+
+/* Cut-Out Mouse Helper Pill (Bottom-Right Corner) */
+.mouse-legend-pill {
+  position: absolute;
+  bottom: 14px;
+  right: 18px;
+  transform: rotate(1.1deg);
+  background: url('/assets/ui/plaque_parchment.png') center / 100% 100% no-repeat;
+  padding: 8px 28px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-family: var(--font-mono);
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--ink-dark);
+  pointer-events: none;
+  filter: drop-shadow(0 5px 12px rgba(0, 0, 0, 0.85));
+  z-index: 20;
+}
+.mouse-hint-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.mouse-cutout-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.55));
+}
+
+.hotspot-tooltip {
+  position: absolute;
+  pointer-events: none;
+  background: url('/assets/ui/plaque_gold.png') center / 100% 100% no-repeat;
+  color: var(--ink-dark);
+  text-shadow: 0 1px 0 rgba(255, 240, 200, 0.7);
+  border: none;
+  padding: 10px 26px;
+  font-family: var(--font-mono);
+  font-size: 0.96rem;
+  font-weight: 700;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  filter: drop-shadow(0 5px 14px rgba(0, 0, 0, 0.88));
+  z-index: 25;
+  transform: translate(-50%, -125%) rotate(-1deg);
+}
+.tooltip-Hints,
+.tooltip-mouse-icons {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.84rem;
+  color: var(--ink-mid);
+}
+.mouse-hint-icon,
+.tooltip-mouse-icons img {
+  width: 20px !important;
+  height: 20px !important;
+  max-width: 20px !important;
+  max-height: 20px !important;
+  object-fit: contain;
+  vertical-align: middle;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.55));
+}
+
+/* =========================================================
+   PAPER CUT-OUT POP-UP ACTION MENU (GUImu003.jpg Cut-Out Tiles)
+   ========================================================= */
+.rmb-action-menu {
+  position: absolute;
+  width: 228px;
+  background: #f4ead2;
+  border: 3px solid #231308;
+  outline: 3px solid #f7f0e0;
+  border-radius: 10px;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.92);
+  padding: 8px;
+  z-index: 40;
+  transform: rotate(-1.2deg);
+  animation: rmbPop 0.14s cubic-bezier(0.18, 1.25, 0.4, 1);
+}
+
+@keyframes rmbPop {
+  from {
+    opacity: 0;
+    transform: scale(0.84) rotate(-4deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(-1.2deg);
+  }
+}
+
+.rmb-menu-header {
+  background: url('/assets/ui/plaque_parchment.png') center / 100% 100% no-repeat;
+  font-family: var(--font-mono);
+  font-size: 0.90rem;
+  font-weight: 700;
+  color: var(--ink-dark);
+  text-align: center;
+  padding: 7px 22px;
+  margin-bottom: 6px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rmb-verb-btn {
+  width: 100%;
+  background: url('/assets/ui/plaque_gold.png') center / 100% 100% no-repeat;
+  color: var(--ink-dark);
+  text-shadow: 0 1px 0 rgba(255, 240, 200, 0.65);
+  border: none;
+  padding: 6px 20px 6px 16px;
+  margin-bottom: 5px;
+  font-family: var(--font-mono);
+  font-size: 0.96rem;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.75));
+  transition: transform 0.12s, filter 0.12s;
+}
+.rmb-verb-btn:last-child {
+  margin-bottom: 0;
+}
+.rmb-verb-btn:hover {
+  filter: brightness(1.1) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.9));
+  transform: translateX(3px) rotate(0.8deg) scale(1.03);
+}
+.rmb-verb-item {
+  background: url('/assets/ui/plaque_teal.png') center / 100% 100% no-repeat;
+  color: #f4ead2;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.95);
+}
+.verb-tile-img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.7));
+}
+
+/* =========================================================
+   FLOATING AUTO-HIDING PARCHMENT DIALOGUE SCROLL
+   ========================================================= */
+#hud-bottom-box {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(0.25deg);
+  width: min(1100px, 94vw);
+  min-height: 158px;
+  max-height: 192px;
+  background: url('/assets/ui/scroll_parchment_tall.png') center / 100% 100% no-repeat;
+  border: none;
+  filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.92));
+  display: flex;
+  align-items: center;
+  padding: 14px 36px 14px 26px;
+  gap: 16px;
+  z-index: 35;
+  transition: transform 0.26s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.22s ease;
+}
+
+#hud-bottom-box.dialogue-collapsed {
+  transform: translate(-50%, 135%) scale(0.95);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.portrait-frame-wrap {
+  width: 112px;
+  min-width: 112px;
+  height: 112px;
+  background: url('/assets/ui/portrait_porthole_frame.png') center / 100% 100% no-repeat;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.8));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.portrait-frame-wrap img {
+  width: 76px;
+  height: 76px;
+  object-fit: contain;
+  border-radius: 10px;
+  transition: transform 0.08s;
+}
+
+.voice-wave-indicator {
+  position: absolute;
+  bottom: 14px;
+  right: 16px;
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 14px;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+.voice-wave-indicator.speaking {
+  opacity: 1;
+}
+.voice-wave-indicator span {
+  width: 3px;
+  height: 6px;
+  background: var(--teal-glow);
+  border-radius: 1px;
+  animation: waveBounce 0.32s infinite ease-in-out alternate;
+}
+.voice-wave-indicator span:nth-child(2) { animation-delay: 0.08s; height: 12px; }
+.voice-wave-indicator span:nth-child(3) { animation-delay: 0.16s; height: 9px; }
+.voice-wave-indicator span:nth-child(4) { animation-delay: 0.24s; height: 14px; }
+
+@keyframes waveBounce {
+  from { transform: scaleY(0.35); }
+  to { transform: scaleY(1.15); }
+}
+
+.dialogue-main-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.dialogue-header-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.speaker-name-badge {
+  background: url('/assets/ui/plaque_gold.png') center / 100% 100% no-repeat;
+  padding: 5px 26px;
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 0.80rem;
+  color: var(--ink-dark);
+  text-shadow: 0 1px 0 rgba(255, 240, 200, 0.7);
+  letter-spacing: 0.04em;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.6));
+}
+
+.dialogue-mood-tag {
+  background: url('/assets/ui/plaque_teal.png') center / 100% 100% no-repeat;
+  font-family: var(--font-mono);
+  font-size: 0.84rem;
+  font-weight: 700;
+  padding: 4px 20px;
+  color: #e9fffb;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9);
+}
+
+.dialogue-dismiss-btn {
+  margin-left: auto;
+  background: var(--crimson-accent);
+  color: #fff;
+  border: 2px solid #231308;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.dialogue-text-content {
+  font-size: 1.14rem;
+  font-weight: 700;
+  line-height: 1.26;
+  color: var(--ink-dark);
+  margin: 3px 0;
+  min-height: 44px;
+  text-shadow: 0 1px 0 rgba(255, 248, 230, 0.7);
+}
+
+.dialogue-choices-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  max-height: 92px;
+  overflow-y: auto;
+  padding: 2px 0;
+}
+
+.dialogue-choice-btn {
+  background: url('/assets/ui/plaque_gold.png') center / 100% 100% no-repeat;
+  color: var(--ink-dark);
+  text-shadow: 0 1px 0 rgba(255, 245, 220, 0.7);
+  border: none;
+  padding: 5px 22px;
+  font-family: var(--font-mono);
+  font-size: 0.90rem;
+  font-weight: 700;
+  cursor: pointer;
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.65));
+  transition: transform 0.12s, filter 0.12s;
+}
+.dialogue-choice-btn:hover {
+  transform: translateY(-2px) rotate(-0.8deg) scale(1.03);
+  filter: brightness(1.08) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.85));
+}
+
+/* =========================================================
+   MAIN MENU OVERLAY & HAND-PAINTED CUT-OUT PLAQUES
+   ========================================================= */
+.overlay-screen {
+  position: absolute;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.menu-hero-backdrop {
+  position: absolute;
+  inset: -20px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: brightness(0.74) contrast(1.08);
+  animation: heroPan 18s ease-in-out infinite alternate;
+}
+
+@keyframes heroPan {
+  from { transform: scale(1.03) translate(-8px, -4px); }
+  to { transform: scale(1.08) translate(8px, 6px); }
+}
+
+.menu-vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 62% 45%, rgba(12, 18, 28, 0.25) 0%, rgba(10, 7, 12, 0.88) 84%);
+}
+
+.menu-content-grid {
+  position: relative;
+  z-index: 2;
+  width: min(1220px, 95vw);
+  display: grid;
+  grid-template-columns: 1.25fr 0.88fr;
+  gap: 24px;
+  align-items: center;
+}
+
+.studio-crest {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: url('/assets/ui/plaque_parchment.png') center / 100% 100% no-repeat;
+  border: none;
+  padding: 10px 36px 10px 32px;
+  margin-bottom: 2px;
+  filter: drop-shadow(0 5px 12px rgba(0, 0, 0, 0.8));
+}
+.mss-crest-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  border: 1.5px solid #3d2412;
+  object-fit: cover;
+}
+.studio-meta {
+  display: flex;
+  flex-direction: column;
+}
+.studio-year {
+  font-family: var(--font-display);
+  font-size: 0.70rem;
+  font-weight: 900;
+  color: var(--ink-dark);
+  letter-spacing: 0.04em;
+}
+.studio-sub {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 700;
+  color: var(--ink-mid);
+}
+
+.game-logo-emblem-wrap {
+  margin: 0 0 4px;
+  display: flex;
+  align-items: center;
+}
+.game-logo-cutout-img {
+  width: min(490px, 44vw);
+  max-height: 195px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 22px rgba(0, 0, 0, 0.9));
+  animation: logoCutoutBob 4.2s ease-in-out infinite alternate;
+}
+
+@keyframes logoCutoutBob {
+  from { transform: rotate(-0.8deg) translateY(0px); }
+  to { transform: rotate(0.8deg) translateY(-4px); }
+}
+
+.menu-tagline-scroll {
+  background: url('/assets/ui/scroll_parchment_tall.png') center / 100% 100% no-repeat;
+  padding: 20px 44px;
+  max-width: 590px;
+  margin: 0 0 10px;
+  filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.85));
+}
+
+.menu-tagline {
+  font-size: 0.92rem;
+  font-weight: 700;
+  line-height: 1.28;
+  color: var(--ink-dark);
+  margin: 0;
+  text-shadow: 0 1px 0 rgba(255, 248, 230, 0.65);
+}
+
+.menu-button-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  max-width: 575px;
+}
+
+.btn-cutout-arrow {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.6));
+}
+.btn-cutout-tile {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.7));
+}
+.btn-cutout-mini {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.menu-primary-btn {
+  background: url('/assets/ui/plaque_gold.png') center / 100% 100% no-repeat;
+  color: var(--ink-dark);
+  text-shadow: 0 1px 0 rgba(255, 242, 204, 0.75);
+  border: none;
+  padding: 13px 38px;
+  font-family: var(--font-display);
+  font-size: 0.98rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  filter: drop-shadow(0 7px 16px rgba(0, 0, 0, 0.85));
+  transition: transform 0.14s, filter 0.14s;
+}
+.menu-primary-btn:hover {
+  transform: translateY(-2px) scale(1.02);
+  filter: brightness(1.08) drop-shadow(0 10px 22px rgba(0, 0, 0, 0.95));
+}
+
+.menu-secondary-btn {
+  background: url('/assets/ui/plaque_teal.png') center / 100% 100% no-repeat;
+  color: #fff6e4;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.95);
+  border: none;
+  padding: 11px 36px;
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  font-weight: 900;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.85));
+  transition: transform 0.14s, filter 0.14s;
+}
+.menu-secondary-btn:hover {
+  transform: translateY(-2px) scale(1.02);
+  filter: brightness(1.1) drop-shadow(0 9px 18px rgba(0, 0, 0, 0.92));
+}
+
+.menu-scene-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.menu-scene-chip {
+  flex: 1;
+  min-width: 128px;
+  background: url('/assets/ui/plaque_parchment.png') center / 100% 100% no-repeat;
+  color: var(--ink-dark);
+  text-shadow: 0 1px 0 rgba(255, 245, 220, 0.7);
+  border: none;
+  padding: 10px 18px;
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  font-weight: 900;
+  cursor: pointer;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.8));
+  transition: transform 0.12s, filter 0.12s;
+}
+.menu-scene-chip:hover {
+  background: url('/assets/ui/plaque_gold.png') center / 100% 100% no-repeat;
+  transform: translateY(-2px) scale(1.03);
+  filter: brightness(1.08) drop-shadow(0 6px 12px rgba(0, 0, 0, 0.9));
+}
+
+.menu-bottom-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.menu-Action-btn {
+  flex: 1;
+  background: url('/assets/ui/plaque_gold.png') center / 100% 100% no-repeat;
+  color: var(--ink-dark);
+  text-shadow: 0 1px 0 rgba(255, 240, 200, 0.7);
+  border: none;
+  padding: 10px 26px;
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 900;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.82));
+  transition: transform 0.14s, filter 0.14s;
+}
+.menu-Action-btn:hover {
+  transform: translateY(-2px) scale(1.02);
+  filter: brightness(1.08) drop-shadow(0 6px 14px rgba(0, 0, 0, 0.9));
+}
+
+.menu-showcase-card {
+  position: relative;
+  background:
+    radial-gradient(circle at 50% 44%, rgba(46, 62, 78, 0.78) 0%, rgba(20, 14, 18, 0.94) 75%);
+  border: 4px solid #b38332;
+  outline: 3px solid #231308;
+  border-radius: 10px;
+  padding: 20px 14px 14px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.92), inset 0 0 28px rgba(0, 0, 0, 0.85);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.showcase-top-ribbon {
+  position: absolute;
+  top: -17px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: url('/assets/ui/plaque_gold.png') center / 100% 100% no-repeat;
+  padding: 7px 34px;
+  font-family: var(--font-display);
+  font-size: 0.74rem;
+  font-weight: 900;
+  color: var(--ink-dark);
+  white-space: nowrap;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.85));
+}
+
+#menu-puppet-canvas {
+  width: 100%;
+  max-width: 385px;
+  height: auto;
+}
+
+.showcase-caption {
+  width: 96%;
+  background: url('/assets/ui/plaque_parchment.png') center / 100% 100% no-repeat;
+  text-align: center;
+  margin-top: 4px;
+  padding: 12px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.85));
+}
+.showcase-caption strong {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 900;
+  color: var(--ink-dark);
+}
+.showcase-caption span {
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  font-weight: 700;
+  color: var(--ink-mid);
+}
+
+/* =========================================================
+   HAND-PAINTED PAPER CUT-OUT PUPPET THEATRE INTRO OVERLAY
+   ========================================================= */
+#intro-overlay {
+  background: radial-gradient(circle at center, #181016 0%, #050307 100%);
+}
+
+.intro-theatre-stage {
+  position: relative;
+  width: min(100vw, calc(100vh * 16 / 9));
+  height: min(100vh, calc(100vw * 9 / 16));
+  max-width: 100vw;
+  max-height: 100vh;
+  background: #070509;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.98), inset 0 0 24px 8px #060408;
+  overflow: hidden;
+}
+
+/* Layer 1: Live 60 FPS Puppet Theatre Stage Window behind the Wide Proscenium Arch */
+.intro-visual-viewport {
+  position: absolute;
+  left: 12.8%;
+  top: 13.8%;
+  width: 74.4%;
+  height: 59.8%;
+  background: #09070b;
+  overflow: hidden;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#intro-stage-canvas,
+.intro-visual-viewport img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.intro-spotlight-fx {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 50% 45%, rgba(255, 232, 175, 0.10) 0%, rgba(10, 6, 12, 0.42) 90%);
+  box-shadow: inset 0 0 36px rgba(0, 0, 0, 0.85);
+}
+
+.intro-timeline-bar {
+  width: 88%;
+  height: 6px;
+  background: rgba(35, 19, 8, 0.28);
+  border: 1.5px solid #2b180a;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 2px 0;
+}
+.intro-timeline-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #9e2a2b 0%, #e3b65a 100%);
+  transition: width 0.08s linear;
+}
+
+/* Layer 2: Full-Screen Hand-Painted Proscenium Arch, Curtains, Footlights & Scroll */
+.intro-proscenium-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* Layer 3: Cut-Out Crest Emblem on the Proscenium Shield + Act Banner Plaque */
+.intro-shield-emblem {
+  position: absolute;
+  top: 0.8%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 185px;
+  height: auto;
+  z-index: 6;
+  pointer-events: none;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.92));
+}
+
+.intro-top-plaque {
+  position: absolute;
+  top: 13.0%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  background: url('/assets/ui/plaque_parchment.png') center / 100% 100% no-repeat;
+  padding: 8px 42px;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.9));
+}
+
+.intro-act-badge {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(0.74rem, 1.05vw, 0.92rem);
+  color: var(--ink-dark);
+  text-shadow: 0 1px 0 rgba(255, 245, 220, 0.75);
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+/* Layer 4: Narration Printed Directly onto the Wide Bottom Parchment Scroll */
+.intro-narration-box {
+  position: absolute;
+  left: 19.5%;
+  top: 76.2%;
+  width: 61.0%;
+  height: 19.2%;
+  z-index: 5;
+  background: transparent;
+  border: none;
+  padding: 12px 18px 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.intro-speaker-tag {
+  position: absolute;
+  top: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: url('/assets/ui/plaque_gold.png') center / 100% 100% no-repeat;
+  padding: 6px 34px;
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 900;
+  color: var(--ink-dark);
+  text-shadow: 0 1px 0 rgba(255, 240, 200, 0.7);
+  white-space: nowrap;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.8));
+}
+
+.intro-narration-text {
+  margin: 4px 0 0;
+  font-family: var(--font-body);
+  font-size: clamp(0.84rem, 1.12vw, 0.99rem);
+  font-weight: 700;
+  line-height: 1.24;
+  color: var(--ink-dark);
+  text-shadow: 0 1px 0 rgba(255, 248, 230, 0.65);
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.intro-progress-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 2px;
+}
+
+.intro-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #6e4e2e;
+  border: 2px solid #2b180a;
+  cursor: pointer;
+  transition: transform 0.14s, background 0.14s;
+}
+.intro-dot.active {
+  background: #9e2a2b;
+  transform: scale(1.25);
+  box-shadow: 0 0 6px rgba(158, 42, 43, 0.7);
+}
+
+/* Layer 5: Hand-Painted Wooden & Brass Stage Wing Control Plaques */
+.intro-wing-left {
+  position: absolute;
+  left: 1.8%;
+  bottom: 3.0%;
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.intro-wing-right {
+  position: absolute;
+  right: 1.8%;
+  bottom: 3.0%;
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 7px;
+}
+
+.intro-nav-btn, .intro-skip-btn {
+  border: none;
+  font-family: var(--font-display);
+  font-weight: 900;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.9));
+  transition: transform 0.14s, filter 0.14s;
+}
+.intro-nav-btn:hover, .intro-skip-btn:hover {
+  transform: translateY(-2px) scale(1.04);
+  filter: brightness(1.1) drop-shadow(0 8px 16px rgba(0, 0, 0, 0.95));
+}
+
+.intro-prev-plaque {
+  background: url('/assets/ui/plaque_teal.png') center / 100% 100% no-repeat;
+  color: #f4ead2;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.95);
+  padding: 10px 30px;
+  font-size: 0.84rem;
+}
+
+.intro-next-plaque {
+  background: url('/assets/ui/plaque_gold.png') center / 100% 100% no-repeat;
+  color: var(--ink-dark);
+  text-shadow: 0 1px 0 rgba(255, 240, 200, 0.75);
+  padding: 11px 32px;
+  font-size: 0.88rem;
+}
+
+.intro-skip-plaque {
+  background: url('/assets/ui/plaque_parchment.png') center / 100% 100% no-repeat;
+  color: #7d1919;
+  text-shadow: 0 1px 0 rgba(255, 245, 220, 0.8);
+  padding: 8px 28px;
+  font-size: 0.76rem;
+}
+
+.intro-arrow-img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.65));
+}
+
+/* =========================================================
+   MODALS (Config, Keypad, Map, Evil Agenda)
+   ========================================================= */
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(6, 4, 9, 0.82);
+  backdrop-filter: blur(4px);
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-card {
+  background: linear-gradient(180deg, #291e1a 0%, #16100e 100%);
+  border: 4px solid var(--brass-bright);
+  outline: 3px solid #1c1008;
+  border-radius: 10px;
+  padding: 18px 22px;
+  width: min(780px, 94vw);
+  max-height: 86vh;
+  overflow-y: auto;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.95);
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #5c4328;
+  padding-bottom: 10px;
+  margin-bottom: 14px;
+}
+.modal-title-with-prop {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.modal-vault-prop-icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.8));
+}
+.modal-header h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  color: var(--brass-bright);
+  font-size: 1.12rem;
+}
+.modal-close-btn {
+  background: url('/assets/ui/plaque_parchment.png') center / 100% 100% no-repeat;
+  color: #7d1919;
+  border: none;
+  font-weight: 900;
+  width: 44px;
+  height: 36px;
+  cursor: pointer;
+}
+
+.config-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.config-section h4 {
+  margin: 0 0 10px;
+  font-family: var(--font-display);
+  color: var(--teal-glow);
+  font-size: 0.92rem;
+}
+.config-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+.config-row input[type="range"] {
+  flex: 1;
+  accent-color: var(--brass-bright);
+}
+.config-toggle {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 9px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+.config-select {
+  background: #141016;
+  color: var(--parchment);
+  border: 1px solid var(--brass-mid);
+  border-radius: 5px;
+  padding: 5px 8px;
+  font-family: var(--font-body);
+}
+
+.voice-test-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+.voice-test-btn {
+  background: url('/assets/ui/plaque_parchment.png') center / 100% 100% no-repeat;
+  color: var(--ink-dark);
+  border: none;
+  padding: 8px 20px;
+  font-family: var(--font-mono);
+  font-size: 0.70rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.voice-test-btn:hover {
+  background: url('/assets/ui/plaque_gold.png') center / 100% 100% no-repeat;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid #4d3924;
+}
+
+/* Funky Town Keypad Modal with Realistic 3D Ivory & Ebony Piano Keyboard + Melted Chocolate Thumbprints */
+.keypad-modal-card {
+  width: min(860px, 95vw);
+}
+.keypad-led-display {
+  background: #0c1814;
+  border: 2px solid #2b6e58;
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-family: var(--font-mono);
+  font-size: 1.05rem;
+  color: var(--teal-glow);
+  text-align: center;
+  margin: 10px 0 14px;
+  letter-spacing: 0.08em;
+}
+.piano-keyboard-bed {
+  position: relative;
+  width: min(760px, 100%);
+  height: 276px;
+  margin: 14px auto 18px;
+  padding: 14px 14px 10px;
+  background: linear-gradient(180deg, #1b0f0a 0%, #2d1810 14%, #120906 100%);
+  border: 4px solid #b38332;
+  outline: 3px solid #160c07;
+  border-radius: 12px;
+  box-shadow:
+    0 16px 34px rgba(0, 0, 0, 0.92),
+    inset 0 6px 0 #7a1c1c,
+    inset 0 10px 16px rgba(0, 0, 0, 0.85);
+}
+.piano-white-keys {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 3px;
+  width: 100%;
+  height: 100%;
+}
+.piano-white-key {
+  width: 100%;
+  height: 100%;
+  background: url('/assets/ui/synth_key_clean.png') center / 100% 100% no-repeat;
+  color: var(--ink-dark);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 18px;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 5px 8px rgba(0, 0, 0, 0.75));
+  transition: transform 0.07s ease, filter 0.07s ease;
+}
+.piano-white-key.choco-smudge {
+  background: url('/assets/ui/synth_key_choco.png') center / 100% 100% no-repeat;
+}
+.piano-white-key:hover {
+  transform: translateY(2px);
+  filter: brightness(1.05) drop-shadow(0 6px 10px rgba(0, 0, 0, 0.85));
+}
+.piano-white-key:active {
+  transform: translateY(6px);
+}
+.piano-white-key strong {
+  font-family: var(--font-display);
+  font-size: 1.08rem;
+  font-weight: 900;
+  color: #1e1108;
+  background: rgba(255, 248, 232, 0.82);
+  padding: 1px 7px;
+  border-radius: 4px;
+  text-shadow: 0 1px 0 #fff;
+}
+.piano-white-key small {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #3a2010;
+  background: rgba(255, 248, 232, 0.82);
+  padding: 0 5px;
+  border-radius: 3px;
+  margin-top: 2px;
+}
+
+.piano-black-keys {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  right: 14px;
+  height: 60%;
+  pointer-events: none;
+  z-index: 4;
+}
+.piano-black-key {
+  position: absolute;
+  top: 0;
+  width: 7.4%;
+  height: 100%;
+  pointer-events: auto;
+  background: url('/assets/ui/synth_key_black_clean.png') center / 100% 100% no-repeat;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 14px;
+  color: #f7ebd2;
+  filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.9));
+  transition: transform 0.07s ease, filter 0.07s ease;
+}
+.piano-black-key.choco-smudge-black {
+  background: url('/assets/ui/synth_key_black_choco.png') center / 100% 100% no-repeat;
+}
+.piano-black-key:hover {
+  transform: translateY(2px);
+  filter: brightness(1.12) drop-shadow(0 10px 14px rgba(0, 0, 0, 0.95));
+}
+.piano-black-key:active {
+  transform: translateY(5px);
+}
+.piano-black-key strong,
+.piano-black-key span {
+  font-family: var(--font-display);
+  font-size: 0.86rem;
+  font-weight: 900;
+  color: #ffeaad;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.98);
+}
+.piano-black-key small {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 700;
+  color: #ffd599;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.98);
+  white-space: nowrap;
+}
+.keypad-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.keypad-footer .hud-util-btn {
+  padding: 10px 28px;
+}
+
+/* =========================================================
+   MAP MODAL (FULL-COLOR BLACKSPIT ISLAND & SUBMARINE CHART)
+   ========================================================= */
+.map-modal-card {
+  width: min(1080px, 95vw);
+  max-height: 90vh;
+}
+.map-modal-body {
+  display: grid;
+  grid-template-columns: 1.32fr 0.95fr;
+  gap: 18px;
+  align-items: stretch;
+}
+.map-art-frame {
+  position: relative;
+  border-radius: 10px;
+  border: 3px solid var(--brass-bright);
+  outline: 2px solid #160d08;
+  overflow: hidden;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.85);
+  background: #d8c396;
+}
+.island-map-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.map-pin-badge {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background: url('/assets/ui/plaque_gold.png') center / 100% 100% no-repeat;
+  color: var(--ink-dark);
+  border: none;
+  padding: 5px 14px;
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  font-weight: 900;
+  cursor: pointer;
+  white-space: nowrap;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.9));
+  transition: transform 0.14s, filter 0.14s;
+}
+.map-pin-badge:hover {
+  transform: translate(-50%, -56%) scale(1.08);
+  filter: brightness(1.12) drop-shadow(0 6px 12px rgba(0, 0, 0, 0.95));
+}
+.map-pin-sub {
+  left: 22%;
+  top: 78%;
+}
+.map-pin-castle {
+  left: 76%;
+  top: 26%;
+}
+.map-room-cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+}
+.map-section-subtitle {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 900;
+  color: var(--teal-glow);
+  letter-spacing: 0.04em;
+  margin-bottom: 2px;
+}
+.map-room-btn {
+  background: url('/assets/ui/plaque_parchment.png') center / 100% 100% no-repeat;
+  color: var(--ink-dark);
+  border: none;
+  padding: 10px 22px 10px 18px;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.8));
+  transition: transform 0.14s, filter 0.14s;
+}
+.map-room-btn:hover {
+  background: url('/assets/ui/plaque_gold.png') center / 100% 100% no-repeat;
+  transform: translateX(4px) scale(1.01);
+}
+.map-room-thumb {
+  width: 84px;
+  height: 50px;
+  min-width: 84px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 2px solid #2b180a;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+}
+.map-room-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.map-room-btn strong {
+  font-family: var(--font-display);
+  color: var(--ink-dark);
+  font-size: 0.82rem;
+}
+.map-room-btn span {
+  font-size: 0.80rem;
+  font-weight: 700;
+  color: var(--ink-mid);
+  line-height: 1.18;
+}
+
+/* =========================================================
+   OPEN TWO-PAGE ILLUSTRATED EVIL SKETCHBOOK & DA VINCI BLUEPRINT
+   ========================================================= */
+.sketchbook-modal-card {
+  position: relative;
+  width: min(1120px, 95vw);
+  aspect-ratio: 16 / 9.4;
+  max-height: 90vh;
+  background: url('/assets/ui/evil_sketchbook_spread.png') center / 100% 100% no-repeat;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.95));
+  padding: 5.2% 6.4% 5.6% 6.4%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.sketchbook-close-btn {
+  position: absolute;
+  top: 4.2%;
+  right: 5.2%;
+  z-index: 10;
+  width: 48px;
+  height: 38px;
+  font-size: 1.05rem;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.85));
+}
+.sketchbook-spread-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7.5%;
+  width: 100%;
+  height: 100%;
+  align-items: stretch;
+}
+.sketchbook-page-left,
+.sketchbook-page-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  overflow: hidden;
+}
+.sketchbook-page-left {
+  padding: 6px 8px 6px 12px;
+  color: var(--ink-dark);
+}
+.sketchbook-page-right {
+  padding: 12px 16px 10px 14px;
+  color: #e9f6ff;
+}
+.sketch-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px dashed rgba(61, 36, 18, 0.45);
+  padding-bottom: 4px;
+  margin-bottom: 6px;
+}
+.sketch-page-header h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 0.96rem;
+  font-weight: 900;
+  color: #2b1508;
+  letter-spacing: 0.03em;
+}
+.sketch-page-header span {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #7d1919;
+}
+.sketch-mission-list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  flex: 1;
+  justify-content: space-around;
+}
+.sketch-mission-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 248, 231, 0.78);
+  border: 2px solid #3d2412;
+  border-radius: 8px;
+  padding: 7px 10px;
+  box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.22);
+  position: relative;
+}
+.sketch-mission-card.done {
+  background: rgba(226, 248, 235, 0.84);
+  border-color: #1f5c3a;
+}
+.sketch-mission-thumb {
+  width: 46px;
+  height: 46px;
+  min-width: 46px;
+  object-fit: contain;
+  background: rgba(35, 19, 8, 0.10);
+  border: 1.5px solid #5c3a1e;
+  border-radius: 6px;
+  padding: 3px;
+  filter: drop-shadow(1px 2px 3px rgba(0, 0, 0, 0.45));
+}
+.sketch-mission-body {
+  flex: 1;
+  min-width: 0;
+}
+.sketch-mission-body h4 {
+  margin: 0 0 2px;
+  font-family: var(--font-display);
+  font-size: 0.84rem;
+  font-weight: 900;
+  color: #231308;
+}
+.sketch-mission-body p {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  font-weight: 700;
+  line-height: 1.18;
+  color: #3d2412;
+}
+.sketch-stamp {
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  font-weight: 900;
+  padding: 3px 8px;
+  border-radius: 4px;
+  border: 2px solid #8c1d1d;
+  color: #8c1d1d;
+  transform: rotate(-6deg);
+  white-space: nowrap;
+}
+.sketch-stamp.locked {
+  border-color: #6b5b4e;
+  color: #6b5b4e;
+  background: rgba(235, 225, 210, 0.55);
+  transform: rotate(-2deg);
+}
+.sketch-mission-card.done .sketch-stamp {
+  border-color: #15693b;
+  color: #15693b;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+/* Right Page: Da Vinci Cyan Blueprint Schematic */
+.blueprint-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1.5px dashed rgba(175, 232, 255, 0.55);
+  padding-bottom: 4px;
+  padding-right: 48px;
+  margin-bottom: 6px;
+}
+.blueprint-page-header h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 0.90rem;
+  font-weight: 900;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.85);
+}
+.blueprint-page-header span {
+  font-family: var(--font-mono);
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: #ffdf6b;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.85);
+  white-space: nowrap;
+}
+.blueprint-parts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  flex: 1;
+}
+.blueprint-part-card {
+  background: rgba(10, 32, 58, 0.68);
+  border: 2px dashed rgba(165, 228, 255, 0.72);
+  border-radius: 8px;
+  padding: 6px 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.45);
+}
+.blueprint-part-card.collected {
+  background: rgba(14, 58, 68, 0.82);
+  border: 2px solid #5ef2ff;
+  box-shadow: 0 0 12px rgba(94, 242, 255, 0.35);
+}
+.blueprint-part-card img {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  object-fit: contain;
+  filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.75));
+}
+.blueprint-part-card.missing img {
+  filter: grayscale(0.85) brightness(0.75) contrast(1.2) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.7));
+  opacity: 0.78;
+}
+.blueprint-part-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.blueprint-part-meta strong {
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9);
+}
+.blueprint-part-meta span {
+  font-family: var(--font-mono);
+  font-size: 0.84rem;
+  color: #bfeaff;
+  line-height: 1.15;
+}
+.blueprint-part-status {
+  font-family: var(--font-display);
+  font-size: 0.70rem;
+  font-weight: 900;
+  color: #ffcf56;
+}
+.blueprint-part-card.collected .blueprint-part-status {
+  color: #5ef2ff;
+}
+.blueprint-assembly-footer {
+  margin-top: 8px;
+  background: rgba(8, 24, 46, 0.82);
+  border: 2px solid #9beeff;
+  border-radius: 8px;
+  padding: 7px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.blueprint-final-preview {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.blueprint-final-preview img {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.85));
+}
+.blueprint-final-text strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.76rem;
+  color: #ffdf6b;
+}
+.blueprint-final-text span {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: #d9f4ff;
+}
+.blueprint-assemble-btn {
+  background: url('/assets/ui/plaque_gold.png') center / 100% 100% no-repeat;
+  color: var(--ink-dark);
+  border: none;
+  padding: 8px 20px;
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 900;
+  cursor: pointer;
+  white-space: nowrap;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.85));
+}
+.blueprint-assemble-btn:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+
+/* Act I Finale & MoonStorm Crew Credits Modal */
+.victory-modal-card {
+  width: min(860px, 95vw);
+}
+.victory-lead {
+  font-size: 1.08rem;
+  line-height: 1.38;
+  color: var(--parchment);
+  margin: 0 0 14px;
+}
+.victory-credits-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 18px;
+}
+.credits-col h4 {
+  margin: 0 0 8px;
+  font-family: var(--font-display);
+  color: var(--teal-glow);
+  font-size: 0.92rem;
+}
+.credits-col ul {
+  margin: 0;
+  padding-left: 18px;
+  line-height: 1.48;
+  font-size: 0.96rem;
+}
+.victory-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.victory-badge {
+  background: rgba(20, 46, 54, 0.75);
+  border: 1.5px solid var(--brass-bright);
+  border-radius: 6px;
+  padding: 7px 12px;
+  font-family: var(--font-mono);
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #ffdf6b;
+}

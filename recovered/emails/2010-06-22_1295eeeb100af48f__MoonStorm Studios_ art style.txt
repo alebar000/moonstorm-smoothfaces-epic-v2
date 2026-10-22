@@ -1,0 +1,241 @@
+THREAD 1295eeeb100af48f  [MoonStorm Studios] art style
+URL: https://mail.google.com/mail/?authuser=alexbarquero@gmail.com#all/thread-f:1339239157566469263
+Messages: 14
+
+======================================================================
+Date: 2010-06-22T09:12:42Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: [MoonStorm Studios] art style
+MsgID: 1295eeeb100af48f
+ATTACHMENT: smoothface003.png (image/png)
+ATTACHMENT: test.png (image/png)
+
+prueba de concepto del estilo "cut out"
+
+pros:
+
+   - no lo he visto en juego alguno
+   - relativamente sencillo de hacer
+
+cons:
+
+   - requiere de planeación para acomodar los elementos según el
+   relieve/énfasis que se quiera dar
+======================================================================
+Date: 2010-06-22T16:18:18Z
+From: c0pp3r@b52clan.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] art style
+MsgID: 12960744b631ec19
+
+Me gusta la idea. Hay que adaptar el tono, colores, texturas, etc, para que
+tenga la misma *unidad* que Kirby Yarn. Lo que transmite Kirby Yarn de cute,
+podría transmitirlo Dr. Stache de ras-pichudo.
+
+Cristián Morales
+
+2010/6/22 Knife_Fighting_Monkey <fancyaccount@gmail.com>
+======================================================================
+Date: 2010-06-22T16:44:19Z
+From: alexbarquero@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] art style
+MsgID: 129608bc56dce350
+
+Me gusta UN PICHAZO la idea, especialmente pq un esquema así permitiría
+mucho meter layers (lugares donde el personaje pasa DETRÁS del escenario en
+lugar de delante del escenario) y cosas por el estilo. Eso si, tendría que
+ser muy muy lineal, especialmente si va a ser un point and click, y
+necesitariamos más isometría, no tan 2d, un poco más a lo Monkey Island.
+
+2010/6/22 Cristián Morales <c0pp3r@b52clan.com>
+======================================================================
+Date: 2010-06-22T16:46:08Z
+From: jvgarcia@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] art style
+MsgID: 129608d741894501
+
+Me parece tuanis, ahora, habria que ir viendo como vamos a ir definiendo las
+diferentes partes del juego y las circunstancias, para ir definiendo el
+"tono", y creo que dicho tono deberia aplicarse eventualmente al platformer.
+
+2010/6/22 Alexander Barquero <alexbarquero@gmail.com>
+======================================================================
+Date: 2010-06-22T17:59:43Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] art style
+MsgID: 129615809015fd71
+ATTACHMENT: smoothface-cutout003.7z (application/octet-stream)
+ATTACHMENT: test-cutout.7z (application/octet-stream)
+
+rofl, por noob, las estoy subiendo otra vez, 7zip -> FAKEEM AERSOEM
+
+2010/6/22 Knife_Fighting_Monkey <fancyaccount@gmail.com>
+======================================================================
+Date: 2010-06-23T02:46:32Z
+From: c0pp3r@b52clan.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] art style
+MsgID: 12962b370364dac7
+ATTACHMENT: desert.JPG (image/jpeg)
+ATTACHMENT: castle.JPG (image/jpeg)
+
+Por lo de tono, me refería a esta shit que va adjunta. Como dar un efecto
+distinto por pantalla, por ejemplo:
+
+   - Spooky shit haunted castle
+   - Hot shit foreign legion desert
+
+Just sayin´
+
+Cristián Morales
+
+2010/6/22 Knife_Fighting_Monkey <fancyaccount@gmail.com>
+======================================================================
+Date: 2010-06-23T02:57:06Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] art style
+MsgID: 12962bd1ed30f3d4
+
+GROSO!
+el "original" que puse era mas como un medley de shits, varas random para
+cubrir varios settings y dar una idea del estilo del arte con elementos
+distintos
+el "proper setting" de morales es exactamente la vaine aplicada, pero lo
+estilizó aún más con las superficies texturizadas de algunas varas, como el
+fondo y las colinas en castle.jpg (al que de paso le agregaría nubes, lluvia
+y truenos, completamente "doable") y una paleta de colores
+temática/uniforme.
+
+WE GOT ART STYLE imo
+
+2010/6/22 Cristián Morales <c0pp3r@b52clan.com>
+======================================================================
+Date: 2010-06-23T04:27:40Z
+From: c0pp3r@b52clan.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] art style
+MsgID: 12963100b259aba9
+ATTACHMENT: test-desert foreign legion.7z (application/octet-stream)
+
+GOSU!!
+Voy a mandar el psd por aquello.
+Los attachments están totalmente weaksauce, así que voy a tener que mandarlo
+en 5 partes.
+Drop: incoming.
+
+Cristián Morales
+
+2010/6/22 Knife_Fighting_Monkey <fancyaccount@gmail.com>
+======================================================================
+Date: 2010-06-23T04:29:08Z
+From: c0pp3r@b52clan.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] art style
+MsgID: 12963116e982530d
+ATTACHMENT: test-spook castle.7z.001 (application/octet-stream)
+
+test-spook castle 1/5
+
+Cristián Morales
+
+2010/6/22 Cristián Morales <c0pp3r@b52clan.com>
+======================================================================
+Date: 2010-06-23T04:31:17Z
+From: c0pp3r@b52clan.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] art style
+MsgID: 12963136557384ef
+ATTACHMENT: test-spook castle.7z.002 (application/octet-stream)
+
+test-spook castle 2/4
+
+Cristián Morales
+
+2010/6/22 Cristián Morales <c0pp3r@b52clan.com>
+======================================================================
+Date: 2010-06-23T04:33:20Z
+From: c0pp3r@b52clan.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] art style
+MsgID: 129631541b81bbc9
+ATTACHMENT: test-spook castle.7z.003 (application/octet-stream)
+
+test-spook castle 3/b
+
+Cristián Morales
+
+2010/6/22 Cristián Morales <c0pp3r@b52clan.com>
+======================================================================
+Date: 2010-06-23T04:35:16Z
+From: c0pp3r@b52clan.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] art style
+MsgID: 129631710f2d4e7e
+ATTACHMENT: test-spook castle.7z.004 (application/octet-stream)
+
+test-spook castle Ω/太
+
+Cristián Morales
+
+2010/6/22 Cristián Morales <c0pp3r@b52clan.com>
+======================================================================
+Date: 2010-06-23T07:06:28Z
+From: ledezman@gmail.com
+To: fancyaccount@gmail.com, alexbarquero@gmail.com, comele.bien@gmail.com, jvgarcia@gmail.com
+Cc: 
+Subject: Fwd: [MoonStorm Studios] art style
+MsgID: 12963a12599dea1e
+ATTACHMENT: LolDemo1.7z (application/octet-stream)
+
+La crap de google groups no permite mas de 4MB de attach, asi que va a cada
+uno.
+
+---------- Forwarded message ----------
+From: Ledezman <ledezman@gmail.com>
+Date: 2010/6/23
+Subject: Re: [MoonStorm Studios] art style
+To: moonstorm@googlegroups.com
+
+Ahi va un demo todo chancho hecho con Torque 2d. Probando como meter los
+assets del psd de Aguilar al juego etc. Y bueno el smoothface tiene una lol
+animacion y se mueve con las wasd. No hay collision ni nada que hacer en la
+pantalla kek. Descomprimir la vara y ejecutar el exe, a ver si les sirve.
+
+En realidad si uno usara esta vara habria que 'programar' bastante dentro de
+todo. El UI es mas que todo para agregar assets como imagenes y eso pero si
+hay que ensuciarse con scripting, que se parece a C++.
+
+..... Pase como 2 horas intentandole poner un splash screen pero no se que
+putas no le da la gana funcionar. Script del demonio. :@
+
+2010/6/22 Cristián Morales <c0pp3r@b52clan.com>
+======================================================================
+Date: 2010-06-23T14:25:24Z
+From: comele.bien@gmail.com
+To: ledezman@gmail.com
+Cc: fancyaccount@gmail.com, alexbarquero@gmail.com, jvgarcia@gmail.com
+Subject: Re: [MoonStorm Studios] art style
+MsgID: 12965333e0704958
+
+HAHA GOOOOOSU°!!!! El mae rebota en las paredes! loooololol!!! XD
+
+Cristián Morales
+
+2010/6/23 Ledezman <ledezman@gmail.com>

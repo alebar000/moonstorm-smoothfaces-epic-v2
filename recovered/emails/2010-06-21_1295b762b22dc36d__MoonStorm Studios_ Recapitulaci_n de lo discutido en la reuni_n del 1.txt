@@ -1,0 +1,178 @@
+THREAD 1295b762b22dc36d  [MoonStorm Studios] Recapitulación de lo discutido en la reunión del 19 de junio, y discusión sobre herramientas y tecnologías.
+URL: https://mail.google.com/mail/?authuser=alexbarquero@gmail.com#all/thread-f:1339178098736612205
+Messages: 2
+
+======================================================================
+Date: 2010-06-21T17:02:36Z
+From: jvgarcia@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: [MoonStorm Studios] Recapitulación de lo discutido en la reunión del 19 de junio, y discusión sobre herramientas y tecnologías.
+MsgID: 1295b762b22dc36d
+
+Bueno, el propósito de esta discusión es recapitular los puntos
+principales discutidos y presentados en la reunión del sábado pasado,
+dado que algunos no estuvieron en toda la reunión, y además, pues que
+entre todos veamos las diferentes opciones que tenemos en adelante,
+tanto desde un punto de vista técnico, como desde un punto de vista de
+factibilidad (comercial, mercado, etc.)
+
+Al inicio de la reunión se presentaron las ideas que hay hasta el
+momento para el desarrollo del juego que teníamos en mente, que de
+momento conocemos sólo como Dr. Stache. Básicamente existe al menos
+un eje central para la historia, varias ideas en cuanto a niveles/
+mundos, y Aguilar ha trabajado en algunos modelos y otros assets
+artísticos con este objetivo en mente. También existe algo de
+documentación al respecto, pero de momento esta no ha sido liberada.
+
+Posteriormente, la discusión se centró en la idea de que quizás sería
+mejor empezar con un proyecto con un scope un poco menos ambicioso.
+Detrás de esta idea, existen los siguientes razonamientos:
+
+* Aunque en general hay un sentimiento de satisfacción con las ideas
+planteadas para Dr. Stache hasta el momento (o al menos esa es mi
+percepción), este proyecto tiene un scope bastante amplio, aún cuando
+podría parecer un juego "simple".
+
+* Aunque la mayoría tenemos "experiencia profesional" programando,
+ciertamente no tenemos muchísima experiencia programando cosas
+relacionadas con juegos, mucho menos profesionalmente.
+
+* Relacionado con lo anterior, un proyecto de menor escala nos
+permitiría aprender de todo el proceso en general: aprender
+tecnologías, implementar alguna forma de trabajar juntos, definir
+roles, procedimientos y todas esas carajadas.
+
+* Si el proyecto tuviera mucho éxito, dicho éxito podría traducirse en
+motivación extra para nuevos proyectos, más experiencia, y, por qué
+no, quizás hasta algo de dinero para financiar cosas.
+
+Luego de discutir un rato, se acordó entre los presentes que este
+enfoque sería mejor que entrarle de una vez a algo mucho más
+complejo. Se han sugerido varias ideas sobre un potencial primer
+proyecto, pero de momento, nos llamó la atención la idea de hacer un
+point and click corto que de paso explique un poco de la historia
+previa a los sucesos que se tienen planeados para Dr. Stache.
+
+Ahora bien, no se llegó a ninguna conclusión en cuanto a las
+herramientas o plataformas con las que deberíamos trabajar, y quedamos
+en investigar un poco al respecto. A continuación, voy a poner un
+poco lo que he encontrado/percibo sobre diferentes plataformas que se
+mencionaron, y algunas posibilidades tecnológicas:
+
+* iPhone/iPad/iPod: plataformas de moda, donde hay un fuerte gold rush
+para hacer harina. Creo que estas plataformas se prestan bastante
+bien para el objetivo que (creo que) tenemos en mente, y sí existen
+algunas herramientas disponibles para hacerse la vida más fácil (vi
+que hay un port para iPhone de OGRE por ejemplo, aunque bueno, no sé
+que tan factible es usarlo ya en la vida real). También por ah{i veo
+otros proyectos, y también hay una versión de Unity 3D para iPhone, en
+fin, pareciera ser que sí hay tools ahí disponibles
+
+   En cuando a los cons, el principal problema para hacer algo para
+varas de Apple es precisamente que tenemos que usar hardware de Apple
+(ocupamos Macs para programar), y hasta donde yo sé nadie tiene una.
+Es una "inversión"... factible si fuera del caso (es decir, se podría
+pagar, no es como pagar una licencia comercial de UE3). Otra
+cuestión importante es que, aparte del iPod Touch de Alex, no tenemos
+dispositivos como para hacer pruebas en vivo.
+
+  Si hablamos de factibilidad y cuestiones de mercado y
+comercializacion, creo que esta se perfila como una de las mejores
+opciones. Si vendemos a un precio razonable y bajo (no más de unos $2
+o $3). y le hacemos bulla, pues quizás podamos generar un número
+significativo de ventas. A menos de que haya cambiado, los usuarios
+de iPhones son los más anuentes a pagar por apps, también. Hay que
+tomar en cuenta de que dependemos de la aprobación de Apple, y que lo
+que se venda no es todo para nosotros, evidentemente.
+
+* Android: acá la ventaja es que no hay que comprar Macs, y es una
+plataforma más "libre". Ahora bien, en lo poco que estuve viendo,
+pues no hay como un engine o una herramienta fuerte para desarrollar
+acá, lo que me encontré fue un proyecto open source de un engine de
+una gente ahí, pero pareciera ser un proyecto ongoing de momento. No
+me he puesto a ver bien qué tan robusto sea ni nada así, pero bueno,
+posiblemente haya que hacer al menos algunas varas a pata. No tenemos
+teléfonos para hacer pruebas, si acaso el de Mesén (lol), y no sé qué
+tanto se puede usar el emulador con este propósito.
+
+En cuanto a mercado y eso, no sé como está el asunto en Android, me
+parece que la gente no tiende a comprar tantas varas. No sé tampoco
+cómo es el proceso para que lo metan al app store oficial, aunque por
+otro lado habría más libertad de distribución, porque hasta donde sé,
+no se requiere que Google le apruebe a uno nada.
+
+* PC: Es la plataforma más abierta y con más opciones, y bueno,
+claramente todos tenemos compus para hacer pruebas, bretear, etc. Acá
+podriámos usar desde el UDK que varios han(hemos) ido viendo, hasta
+cosas como el AGS que se mencionó como herramienta para prototipaje,
+usar OGRE, o cualquier otro engine que esté disponible.
+
+En cuanto al mercadeo y distribución, pues una vez que tengamos el
+proyecto listo, podemos distribuirlo nosotros, ver cuáles son los
+términos de Steam o de cualquier otra tienda digital y bueno, ahí ya
+tendríamos que hacerle bulla nosotros.
+
+XBLA/PSN/WiiWare: Acá no estoy muy seguro de como está el arroz
+técnicamente. Sabemos que el UE3 corre en Xbox y PS3, pero ignoro si
+hay restricciones en cuanto a esto para títulos de XBLA o PSN, y
+también ignoro en general cual es la reglamentación para lanzarse ahí,
+aunque tengo la idea de que es más complicado que lograr que a uno lo
+aprueben en un app store de celulares.
+
+Para Xbox sé que existe esa vara de XNA, pero creo que es un API y no
+un framework, y tiene un costo ahí upfront. Para PS3 no sé si existe
+algo similar, o si habrá que adquirir un SDK, que ya elevaría bastante
+los costos. Para WiiWare no tengo la más mínima idea de cómo
+funciona.
+
+Bueno, dadas estas cosas, pues la idea es que vayamos discutiendo qué
+nos parece mejor. Creo que es obvio que va a ser difícil, si no es
+que imposible, conciliar las opiniones de todos en cuanto a plataforma/
+tecnología, pero bueno, podemos ir analizando pros y cons entre
+todos. Independientemente de qué se decida, creo que una vez que
+tengamos una idea más clara, un buen primer paso sería montar una
+prueba de concepto, con una escena que se mueva más o menos como un
+point and click, como un primer objetivo del cual posiblemente se
+puedan abstraer las necesidades de programación, recursos y otros.
+
+Bueno, suficiente, comment away!
+======================================================================
+Date: 2010-06-21T17:20:19Z
+From: alexbarquero@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Recapitulación de lo discutido en la reunión del 19 de junio, y discusión sobre herramientas y tecnologías.
+MsgID: 1295b865f120a0f8
+
+Yo quiero montar un documento de análisis como base para que entre todos nos
+repartamos las plataformas y hagamos un análisis PROFUNDO sobre las ventajas
+y desventajas de cada plataforma, antes de tirarnos al agua a hacer cosas.
+Esta decisión es sumamente importante, y merece que le dediquemos cabeza a
+analizar todos los pormenores posibles.
+
+La idea sería ver la factibilidad económica de la plataforma (costos de
+entrada vs. posible ganancia), los tipos de mercados, la disponibilidad de
+acceso a los mercados desde Costa Rica o los posibles "workarounds" (con sus
+respectivos casos de éxito), ejemplos de juegos en condiciones similares con
+éxito (ya sea point and clicks o modelos de desarrollo similar al
+nuestro(sin plata, poca gente que no sabe mucho)) y cosas por el estilo.
+
+Ahora en la noche la preparo y la subo al grupo. Para que se vayan dando una
+idea, estas serían las plataformas que a cada uno le toca investigar:
+
+*Android*: Alex
+*Ipod/Iphone*: Juancho
+*PC (Steam, Direct Download)*: Aguilar
+*WiiWare*: Ledezman
+*Flash*: Morales
+*Ovi (Nokia)*: Boot
+*XBox Live Arcade*: Hybris
+*PSN Store*: Alpha
+
+Ahora en la noche les mando la crap. La idea sería que el miércoles TODOS
+subimos el documento, y luego discutimos al respecto.
+
+Gosu.
+
+2010/6/21 juancho <jvgarcia@gmail.com>

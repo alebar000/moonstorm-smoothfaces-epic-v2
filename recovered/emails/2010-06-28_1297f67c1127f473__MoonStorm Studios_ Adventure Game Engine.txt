@@ -1,0 +1,2157 @@
+THREAD 1297f67c1127f473  [MoonStorm Studios] Adventure Game Engine
+URL: https://mail.google.com/mail/?authuser=alexbarquero@gmail.com#all/thread-f:1339810426890220659
+Messages: 52
+
+======================================================================
+Date: 2010-06-28T16:33:03Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: [MoonStorm Studios] Adventure Game Engine
+MsgID: 1297f67c1127f473
+
+Este tema es para discutir el engine para el proyecto del point &
+click y mantenerlo separado de la plataforma.
+======================================================================
+Date: 2010-06-28T16:34:13Z
+From: jvgarcia@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Adventure Game Engine
+MsgID: 1297f68b7c281fc9
+
+Retomando la vara, creo que la lista esta bien, si luego no nos gusta
+ninguna o sentimos que podria haber otro, pues podemos verlo.
+
+2010/6/28 Knife_Fighting_Monkey <fancyaccount@gmail.com>
+======================================================================
+Date: 2010-06-28T16:34:35Z
+From: alexbarquero@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Adventure Game Engine
+MsgID: 1297f6905ee1115b
+
+Esta es la lista que puse...
+
+COnsideran que falta (o que sobra) alguno? Me parece que TODOS deberían ser
+considerados, y no se si me falta alguno...
+
+Adventure Game Studio
+Torque
+UDK
+Visionaire
+Unity
+Wintermute
+Flash
+Ogre
+Virtools
+
+Aquí hay otros:
+
+http://gpwiki.org/index.php/Game_Engines
+
+donde están, por ejemplo, el de PopCap:
+
+http://sourceforge.net/projects/popcapframework/
+
+2010/6/28 Knife_Fighting_Monkey <fancyaccount@gmail.com>
+======================================================================
+Date: 2010-06-28T16:37:32Z
+From: jvgarcia@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Adventure Game Engine
+MsgID: 1297f6bc0826b582
+
+Evaluar toda esa lista nos llevaria un monton (la del link). Creo que la
+propuesta esta bien. Creo que ya hay varios que puede hablar de algunos de
+esos, para los demas, nos dividimos un poco para hacer investigacion?
+
+2010/6/28 Alexander Barquero <alexbarquero@gmail.com>
+======================================================================
+Date: 2010-06-28T16:38:40Z
+From: alexbarquero@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Adventure Game Engine
+MsgID: 1297f6cbfa607623
+
+Si, me parece.
+
+En serio no hará falta algún engine que verdaderamente valga la pena? Yo le
+daría una chequeada a la lista, nada más para estar seguro. La mayoría de
+esos nombres los saqué de ahí, pero les pediría que ustedes también la
+revisen para no "overlookear" nada, nos podríamos estar perdiendo la
+oportunidad del millón por no dar una segunda pasada.
+
+2010/6/28 Juan V. García <jvgarcia@gmail.com>
+======================================================================
+Date: 2010-06-28T19:17:38Z
+From: alexbarquero@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Adventure Game Engine
+MsgID: 1297ffe4b5841118
+
+Recuerden, el link es:
+https://spreadsheets.google.com/ccc?key=0AnREifFlPioYdGdtLWExd3lySTRueVdzSlBKNzdWR0E&hl=en#gid=0
+
+2010/6/28 Alexander Barquero <alexbarquero@gmail.com>
+======================================================================
+Date: 2010-06-28T19:43:15Z
+From: alexbarquero@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Adventure Game Engine
+MsgID: 1298015bfbef8edf
+
+Boot, si tiene chance hablese un poco de Unity, dicen que usted sabe de esa
+vara ya :P
+
+2010/6/28 Alexander Barquero <alexbarquero@gmail.com>
+======================================================================
+Date: 2010-06-28T19:54:21Z
+From: alexbarquero@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Adventure Game Engine
+MsgID: 129801fe9cd119ed
+
+Parece que estos otros son muy gosu también, los mencionan mucho en foros:
+
+http://www.adventuremaker.com/
+
+Y ojo esta lista comparativa:
+
+Tomada de: http://www.conitec.com/english/gstudio/faq.php (otro Engine,
+A7Game Studio)
+
+Authoring Systems 3D Languages 3D Engines
+ Quest
+3D
+ Crea
+tor Unity
+Indie A7
+Free
+ A7
+Com
+ DB
+Pro Blitz
+3D Lite
+C Irr
+licht OGRE
+3D
+ TV
+3D Tor
+que TGE
+
+ Un
+real Compared version 4.0 3.0 2.5 7.82 7.82 ? ? 7.82 1.4 1.4.6 6.3 1.5 1.0
+3 Price ca. (US $)* 1500 500 free free 199 69 100 free free free 500 150
+295 free Publishing games
+ free free Logo Logo free free free free ZLIB LPGL free Logo Logo Logo Scene
+manager <http://www.conitec.com/english/gstudio/faq.php#was3> ? Octr ? ABT
+ABT BSP - ABT Octr Octr BSP - Port BSP Terrain renderer
+<http://www.conitec.com/english/gstudio/faq.php#terrain> - yes yes yes yes
+yes yes yes yes - yes yes yes yes Shadow
+mapping<http://www.conitec.com/english/gstudio/faq.php#was4>
+yes - yes yes yes - yes yes - yes - - - yes Dynamic Shadows
+<http://www.conitec.com/english/gstudio/faq.php#was4> yes yes - yes yes yes
+yes yes yes yes yes yes yes yes
+Shaders<http://www.conitec.com/english/gstudio/faq.php#was6>
+yes yes yes - yes $39 - - yes yes yes - yes yes
+Postprocessing<http://www.conitec.com/english/gstudio/faq.php#was6>
+yes - - - yes - - - - yes - - yes yes Dynamic
+decals<http://www.conitec.com/english/gstudio/faq.php#decals>
+- - - - yes - - - - yes - - - yes Particle
+generator<http://www.conitec.com/english/gstudio/faq.php#was5>
+- yes yes yes yes yes - yes yes yes yes yes yes yes Beam
+generator<http://www.conitec.com/english/gstudio/faq.php#was5>
+- - - - yes - - - - yes - - - yes Template
+system<http://www.conitec.com/english/gstudio/3dgs2_7.php#templates>
+- - yes yes yes - - yes - - - - - yes Save/Load
+system<http://www.conitec.com/english/gstudio/faq.php#was8>
+- - - yes yes - - yes - - - - yes yes
+Multiplayer<http://www.conitec.com/english/gstudio/faq.php#multiplayer>
+- yes yes - yes $20 yes - - - - yes yes yes Physics
+engine<http://www.conitec.com/english/gstudio/faq.php#was9>
+yes yes yes yes yes $59 - yes - - yes - yes yes Plugin extendable yes - - -
+yes $31 - - yes yes yes yes yes yes Level editor - yes yes yes yes $99 yes
+yes - - - yes yes yes Terrain editor - - yes yes yes - - yes - - yes yes
+yes yes Model editor yes - - yes yes - - yes - - - - - - Script/HLSL
+editor yes yes yes yes yes yes yes yes - - - - - - Script
+compiler<http://www.conitec.com/english/gstudio/faq.php#was11>
+- - yes yes yes yes yes $99 - - - - - yes Script debugger - - yes yes yes
+yes - yes - - - yes yes yes Script syntax LUA Lisp C C C Basic Basic C - -
+- C C C++
+
+* Prices are listed for commercial publishing licenses.
+
+Chart based on manufacturer's specifications as of 2009 - no responsibility
+is accepted for the correctness. If several license versions are available,
+normally the medium-priced license is listed. If you find something
+incorrect, or if you want a certain engine to be included, or if you are a
+manufacturer and don't want your engine compared here, please notify
+webmaster at conitec.net.
+
+2010/6/28 Alexander Barquero <alexbarquero@gmail.com>
+======================================================================
+Date: 2010-06-28T19:58:27Z
+From: jvgarcia@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Adventure Game Engine
+MsgID: 1298023bb23ae1b7
+
+Irrlicht lo he medio visto y es una situacion similar a la de OGRE.
+
+Hay demasiadas opciones, yo creo que esas estan bien, si sintieramos luego
+que falta o que se yo, podriamos ver otras.
+
+2010/6/28 Alexander Barquero <alexbarquero@gmail.com>
+======================================================================
+Date: 2010-06-28T21:17:15Z
+From: skrybble@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: [MoonStorm Studios] Re: Adventure Game Engine
+MsgID: 129806bd33b86a1f
+
+ok ahora que llego a la casa le arrimo alguito al google doc sobre
+Unity !
+
+asi como saber saber no! pero algo he traveseado, por lo menos pa
+tener una idea..
+
+ xD
+======================================================================
+Date: 2010-06-29T14:30:13Z
+From: skrybble@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: [MoonStorm Studios] Re: Adventure Game Engine
+MsgID: 129841d8c54ae92c
+
+Mops que tal si agregamos ese A7 Game Studio a la lista?
+
+yo lo habia estado traveseando antes de empezar con el Unity, tenia un
+demo de un fps.. voy a ver si lo encuentro en los rincones inóspitos
+del disco duro..
+es mas simple que el unity.. y no tan "fancy" pero es el Engine que
+usa Fair Play Labs para algunos de sus juegos ( desconozco si lo usa
+en todos )
+
+http://fairplaylabs.com/projects/gamestudio.html
+
+link del engine -> http://www.conitec.com/english/gstudio/
+======================================================================
+Date: 2010-06-29T14:34:58Z
+From: jvgarcia@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Re: Adventure Game Engine
+MsgID: 1298421f1abf51fb
+
+Lleguele, pero imo, vayamos dejando la lista ahi. Ya Alex habia mencionado
+ese y me parece que si estaria bueno considerarlo, creo que lo usaron para
+AaaaaaaaaAAAAaaaaaaaaaaa. Creo que podriamos ir viendo para repartirnos un
+poco (como lo hicimos con la plataforma) para investigar un poco mas a fondo
+las varas que conocemos menos.
+
+2010/6/29 Brian - BooT <skrybble@gmail.com>
+======================================================================
+Date: 2010-06-29T14:38:37Z
+From: jvgarcia@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Re: Adventure Game Engine
+MsgID: 1298425457aa0b23
+
+Ah, otra vara que deberiamos considerar tambien es si queremos trabajar con
+un engine 3D y jugamos con la camara y niveles para lograr un movimiento
+"semi 2D", si no nos importa y permitimos que la vara sea 3D (Tales of
+Monkey Island), o si queremos bretear con un engine que sea solo 2D. La
+dimension extra pues le aniade complejidad al asunto, aun cuando la vara sea
+"semi 2D".
+
+2010/6/29 Juan V. García <jvgarcia@gmail.com>
+======================================================================
+Date: 2010-06-29T14:51:41Z
+From: skrybble@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: [MoonStorm Studios] Re: Adventure Game Engine
+MsgID: 129843131f924097
+
+xDDD
+
+para eso lo que se me ocurre es lockear el personaje a la camara desde
+un angulo horizontal, de tal forma que dé la sensación que lo que se
+mueve es el escenario y no el char en si, tipo contra o double dragon
+xDD
+======================================================================
+Date: 2010-06-29T14:57:05Z
+From: ledezman@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Re: Adventure Game Engine
+MsgID: 129843648a150dca
+
+Si, eso es lo que hemos visto en varios juegos "2D" pero con 'assests 3D'.
+
+La vara aqui era definir que tipo de juego, crei que ibamos a hacer algo
+'simple' con 2D, con el estilo de arte mas o menos como el que mando
+Aguilar.
+
+2010/6/29 Brian - BooT <skrybble@gmail.com>
+======================================================================
+Date: 2010-06-29T14:57:28Z
+From: jvgarcia@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Re: Adventure Game Engine
+MsgID: 12984368bf5179a9
+
+Si se pueden hacer toques ahi con camaras y controles para manejar eso, pero
+bueno, poner objetos en un mundo 3D es mas complejo que en 2D para nuestros
+colegas del departamento de arte.
+
+2010/6/29 Brian - BooT <skrybble@gmail.com>
+======================================================================
+Date: 2010-06-29T21:33:51Z
+From: jvgarcia@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Re: Adventure Game Engine
+MsgID: 12985a17799d5ea9
+
+Ya hemos puesto info sobre varios engines, que hacemos con el resto? Nos
+los dividimos? Y por otro lado, nos quedamos con un 2D puro, o queremos una
+gameplay 2D en un engine 3D?
+
+2010/6/29 Juan V. García <jvgarcia@gmail.com>
+======================================================================
+Date: 2010-06-30T01:31:50Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Re: Adventure Game Engine
+MsgID: 129867b9ba144f0e
+
+la complejidad de tener assets 3D no es tan tan despiche, lo que más me
+preocupa en este momento sería poder reproducir el effecto de foam/cutout en
+full 3D del concepto que hemos venido discutiendo en el thread de arte. Una
+vez que logremos dicho efecto, la producción de props/meshes para eso
+no sería tan complejo imo.
+
+2010/6/29 Juan V. García <jvgarcia@gmail.com>
+======================================================================
+Date: 2010-07-01T07:03:36Z
+From: alexbarquero@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Re: Adventure Game Engine
+MsgID: 1298cd1577d0cfe9
+
+Bueno, ahora hablando con Juancho, me dá la impresión de que varios
+comparten mi parecer de que esta decisión del engine es una decisión MUY
+delicada.
+
+Básicamente, esta decisión podría tanto darnos el salto a la gloria o
+cagarse en la olla de leche si no la tomamos MUY MUY cuidadosamente.
+
+Es por eso que ha llegado la hora de que los que verdaderamente tienen que
+ver con las herramientas técnicas se ensucien las manos, y la mejor solución
+es hacer un pequeño split en equipos, para enfocarnos en distintas tareas
+del proyecto de manera paralela y entrarle también a la elaboración
+detallada de los aspectos de diseño que van en el doc. de diseño.
+
+Desde mi perspectiva, para este siguiente paso hay dos roles:
+
+*Rol de Análisis de Engines:*
+- Debe descargar las versiones trial/free/yarr de los engines y probarlos,
+en una especie de prueba de concepto, aprendiendo toques y de paso
+familiarizándose con el tipo de tools y features de los engines,
+estableciendo ciertos deseables o inclusive indeseables que nos servirían
+para desear/descartar otros engines, siempre desde un punto de vista más
+técnico.
+
+*Rol de Diseño Preliminar:*
+- Debe invertir su esfuerzo en la elaboración de documentación, ideas y
+esquemas de conceptualización para los aspectos de diseño del juego, ya sea:
+Historia, Personajes, Puzzles, Arte, Gameplay o UI, mismos que deben ir en
+el documento de diseño del producto.
+
+Para facilitar las tareas y como somos 6 personas, nos vamos a repartir 3 y
+3. OJO, esto no quiere decir que se va a trabajar de manera exclusiva, e.j.,
+si yo estoy en engines, igual puedo aportar ideas sobre historia o
+personajes, o si estoy en diseño igual puedo probar algún engine (o volver a
+probar alguno ya probado, cualquier segunda/tercera/cuarta opinión es igual
+de válida, ya más de eso es overquorum/overkill).
+
+IMO, creo que por ahora esta repartición podría darse así:
+
+*Equipo Ecstasy of Gold
+Análisis de Engines*
+- Juancho (TL)
+- Ledezman
+- BooT
+
+*Equipo Black Hole Sun
+Diseño Preliminar*
+- Xygvot (TL)
+- Alex
+- Morales
+
+La idea es que cada TL (Team Leader) se encargue de coordinar su respectivo
+equipo y asignar tareas/monitorear resultados, para que vayamos avanzando
+más rápidamente sobre los temas que nos competen más.
+
+Juancho va a repartir los engines y coordinar cual será el set de "pruebas"
+que se hará de cada engine, así como una lista de requerimientos mínimos y
+requerimientos deseables que debe poder cumplir el engine para que sea apto
+para nuestro contexto (point and click adventure), y la repartición de los
+engines entre todos los miembros del equipo. Idealmente debería establecer
+ciertos deadlines y algúna plantilla de análisis de que tan fácil o difícil
+fue hacer las tareas en cada herramienta.
+
+En el caso de Aguilar, estará encargado de montar el esqueleto del
+documento, trabajarlo y monitorear que tanto yo como Morales le estemos
+agregando carne. Por el contexto de la historia del juego y demás, Xygvot es
+nuestro main-man creativo, nuestro Metzen interno, así que tanto Morales
+como mi persona debemos apoyarnos en él para no sacar MUCHO las ideas del
+cuadro general (se vale sacarlas, imo es parte de la idea lulz, pero no
+tanto que choque). Aguilar va a ser también el que propondrá el cronograma
+de llenado "priorizado" de los aspectos del documento de diseño antes
+mencionado, así como cualquier aspecto adicional que sea necesario incluir Y
+QUE AGREGUE VALOR.
+
+Cualquier duda o consulta o queja o solicitud de cambio de equipo, aquí
+estamos.
+
+Entrémosle con ganas :D
+
+Tiempo estimado para quemar este backlog de tareas, *tres semanas*.
+
+GG's
+- Alex
+
+2010/6/29 Knife_Fighting_Monkey <fancyaccount@gmail.com>
+======================================================================
+Date: 2010-07-01T17:24:23Z
+From: jvgarcia@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Re: Adventure Game Engine
+MsgID: 1298f09c2f863ce1
+
+En una nota ligeramente relacionada, creo que hariamos bien en tratar de
+implementar algo similar a esta cultura corporativa:
+
+http://techcrunch.com/2010/06/30/woot-amazon/
+
+<http://techcrunch.com/2010/06/30/woot-amazon/>
+
+2010/7/1 Alexander Barquero <alexbarquero@gmail.com>
+======================================================================
+Date: 2010-07-01T17:32:11Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Re: Adventure Game Engine
+MsgID: 1298f112c1ee9b97
+
+Quiero agradecer al board of directors por depositar su confianza en mi
+persona, es un honor para mi fungir como TL en un grupo de tanto talento
+como este, \lagrimas
+ok, cronograma para las siguientes 3 semanas (comenzando próximo lunes) de
+Black Hole Sun tendrá como release date este sábado en la noche (viernes no
+comprometo por el POTcast, kek)
+
+2010/7/1 Juan V. García <jvgarcia@gmail.com>
+======================================================================
+Date: 2010-07-01T18:36:12Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Re: Adventure Game Engine
+MsgID: 1298f4be5731e135
+ATTACHMENT: Ecstasy of Gold.png (image/png)
+ATTACHMENT: Black Hole Sun.png (image/png)
+
+TEAM LOGOS UP!
+
+2010/7/1 Knife_Fighting_Monkey <fancyaccount@gmail.com>
+======================================================================
+Date: 2010-07-01T18:59:01Z
+From: alexbarquero@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Re: Adventure Game Engine
+MsgID: 1298f6051aa45628
+
+ROFL
+
+2010/7/1 Knife_Fighting_Monkey <fancyaccount@gmail.com>
+======================================================================
+Date: 2010-07-01T19:47:39Z
+From: ledezman@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Re: Adventure Game Engine
+MsgID: 1298f8cec2ac2486
+
+rofl esos logos wtf.
+
+wtb t-shirt.
+
+2010/7/1 Alexander Barquero <alexbarquero@gmail.com>
+======================================================================
+Date: 2010-07-01T21:14:14Z
+From: jvgarcia@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Re: Adventure Game Engine
+MsgID: 1298fdc35abe4e43
+
+Bueno, para la discusión de engines, y tomando como base el spreadsheet ese
+que teníamos, voy a darme la libertad de eliminar algunos candidatos. y de
+ahí podemos ir viendo como proseguir. Si no están de acuerdo con los
+eliminados, pues nos damos de pichazos y/o discutimos para ver si lo
+incluimos.
+
+Voy a eliminar Flash de primero, sólo porque la vara del click derecho es
+bien molesta. Además, Steve Jobs dice que Flash es malo. También, voy a
+eliminar Ogre. básicamente porque aunque es un buen proyecto, involucraría
+bastante brete desde varios frentes, y posiblemente nos tomaría mucho más
+tiempo hacer varas. Me veo tentado a eliminar UDK, básicamente porque es un
+overkill para lo que hemos planteado, pero como de por sí ya más o menos
+sabemos cómo está el arroz ahí, pues igual lo voy a dejar.
+
+Eso deja 7 engines. Ledezma es un carajo proactivo y ya estuvo viendo lo de
+Torque 2D, y por su parte BooT ha traveseado Unity. Quedan entonces
+Adventure Game Studio, Visionaire, Wintermute y Virtools. Estos ultimos no
+son solo engines, si no que ya vienen con un set de tools definido y eso.
+
+Sobre lo que ya han visto, creo que podriamos establecer como un objetivo
+comun hacer un pequenio demo similar al que ya hizo Ledezma, o sea, una
+escena, donde haya un personaje, un fondo, un(os) objetos para interactuar,
+y si quieren, otras cosas como sonido. La vara no tiene que ser muy
+compleja ni completamente funcional, la idea es solo ponerse a trabajar un
+poco con cada herramienta y ver que tipo de cosas se puede hacer con ella.
+ Propongo que evaluemos los siguientes aspectos:
+
+* Cantidad de tiempo que tomo hacer la escena. Acá la idea seria mas o
+menos estimar cuanto tiempo tomo desde que empezaron a bretear, incluyendo
+tutoriales, videos, foros, etc.
+
+* Curva de aprendizaje: les resultó muy difícil aprender? Fácil? Si hay que
+programar/hacer scripts, como ven la sintaxis? Va ligado a lo anterior
+también.
+
+* Versatilidad de la herramienta: si quisiéramos hacer algo un poco
+diferente, la herramienta lo aguantaría? Supongamos que por alguna razón se
+quiere hacer una parte donde haya que usar una cámara en "1era persona", o
+haya que salirse un poco de lo tradicional de un point and click. Qué tan
+factible es hacer esto con esta herramienta?
+
+* Soporte y ayuda: si hay documentación en línea qué tal está? Hay foros,
+comunidad que ayuda? Se pegaron mucho con algún problema y tuvieron que
+andar largo rato buscando la respuesta?
+
+* Calidad percibida de los tools utilizados: el o los programas corrieron
+establemente? Se caian? Duraba mucho compilando? Tiene bugs raros?
+ Cualquier otro comentario sobre este tema aca seria bienvenido.
+
+* Como vieron la calidad grafica? No es que ocupemos graficos a la Crysis,
+pero bueno, se ve "bonito"? Obviamente depende de lo que uno use y todo,
+pero bueno, es para ver rapidamente si notaron algo raro con respecto a eso.
+ Se siente pesado? Corrieron el jueguillo y el mae usa 1 giga de memoria?
+
+* Que features interesantes ven? Obviamente no se va a probar todo, pero si
+vieron algo por ahi que les parecio interesante, lo pueden mencionar aca
+tambien.
+
+* Comentarios miscelaneos. Todas las otras cosas que quieran/puedan decir
+pero que no cabian en los apartados anteriores.
+
+Ahora bien, quedan 4 por probar y somos 3. Por fa, de esos 4 seleccionen
+uno y hacen reply diciendo cual escogieron. Propongo el siguiente metodo de
+distribucion del brete:
+
+Semana 1: Pruebas con los primeros engines.
+
+Semana 2: Mas pruebas, pero con otros engines. Se puede repetir alguno que
+se vaya perfilando como un candidato fuerte.
+
+Semana 3: Para esta semana podriamos ponernos de acuerdo entre los 3 y ya
+sea:
+
+* Que todos hagamos pruebas con el que hasta el momento nos parezca el mejor
+engine, esto cada quien por aparte.
+
+* O, que nos pongamos de acuerdo entre los 3 y tratar de montar alguna cosa
+basica, pero entre los tres, como para ir tratando de trabajar juntos de
+alguna manera.
+
+En fin, creo que con eso fue suficiente el wall of text. Escojan un engine
+de los que hacen falta y lleguenle, yo de momento no voy a escoger. Si
+pueden llenar mas o menos los puntos esos para los engines con los que ya
+han breteado (Torque 2D y Unity), pues genial, si no, ahi lo vemos luego.
+
+Cualquier comentario ahi lo hacen.
+
+2010/7/1 Ledezman <ledezman@gmail.com>
+======================================================================
+Date: 2010-07-01T21:22:08Z
+From: ledezman@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Re: Adventure Game Engine
+MsgID: 1298fe3681aaf332
+
+Ta bueno. De los que quedan, al random pido Visionaire.
+
+2010/7/1 Juan V. García <jvgarcia@gmail.com>
+======================================================================
+Date: 2010-07-01T21:23:17Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Re: Adventure Game Engine
+MsgID: 1298fe4c146664a2
+
+si ocupan "assets" en algun formato en particular o lo que sea para la
+creación de los demos, Morales y este servidor estamos a disposición de
+facilitárselos (acabo de involucrar a Morales sin antes consultarle,
+kekekaka).
+solo pidan n shit will be done.
+
+2010/7/1 Juan V. García <jvgarcia@gmail.com>
+======================================================================
+Date: 2010-07-01T21:30:46Z
+From: alexbarquero@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Re: Adventure Game Engine
+MsgID: 1298feb419944c82
+
+Mae Juancho, acuérdese de esos otros dos que pusimos A7 y Adventure Maker.
+Ambos están gosus. Se me olvidó agregarlos a la lista, pero de FIJO hay que
+evaluarlos.
+
+Por cierto, ahí diferencian entre 3d languages, 3d engines y AUTHORING
+SYSTEMS. pareciera que eso es lo que nosotros queremos, un Authoring System.
+
+http://www.adventuremaker.com/
+http://www.conitec.com/english/gstudio/faq.php (otro Engine, A7Game Studio)
+
+Authoring Systems 3D Languages 3D Engines
+ Quest
+3D
+ Crea
+tor Unity
+Indie A7
+Free
+ A7
+Com
+ DB
+Pro Blitz
+3D Lite
+C Irr
+licht OGRE
+3D
+ TV
+3D Tor
+que TGE
+
+ Un
+real Compared version 4.0 3.0 2.5 7.82 7.82 ? ? 7.82 1.4 1.4.6 6.3 1.5 1.0
+3 Price ca. (US $)* 1500 500 free free 199 69 100 free free free 500 150
+295 free Publishing games
+ free free Logo Logo free free free free ZLIB LPGL free Logo Logo Logo Scene
+manager <http://www.conitec.com/english/gstudio/faq.php#was3> ? Octr ? ABT
+ABT BSP - ABT Octr Octr BSP - Port BSP Terrain renderer
+<http://www.conitec.com/english/gstudio/faq.php#terrain> - yes yes yes yes
+yes yes yes yes - yes yes yes yes Shadow
+mapping<http://www.conitec.com/english/gstudio/faq.php#was4>
+yes - yes yes yes - yes yes - yes - - - yes Dynamic Shadows
+<http://www.conitec.com/english/gstudio/faq.php#was4> yes yes - yes yes yes
+yes yes yes yes yes yes yes yes
+Shaders<http://www.conitec.com/english/gstudio/faq.php#was6>
+yes yes yes - yes $39 - - yes yes yes - yes yes
+Postprocessing<http://www.conitec.com/english/gstudio/faq.php#was6>
+yes - - - yes - - - - yes - - yes yes Dynamic
+decals<http://www.conitec.com/english/gstudio/faq.php#decals>
+- - - - yes - - - - yes - - - yes Particle
+generator<http://www.conitec.com/english/gstudio/faq.php#was5>
+- yes yes yes yes yes - yes yes yes yes yes yes yes Beam
+generator<http://www.conitec.com/english/gstudio/faq.php#was5>
+- - - - yes - - - - yes - - - yes Template
+system<http://www.conitec.com/english/gstudio/3dgs2_7.php#templates>
+- - yes yes yes - - yes - - - - - yes Save/Load
+system<http://www.conitec.com/english/gstudio/faq.php#was8>
+- - - yes yes - - yes - - - - yes yes
+Multiplayer<http://www.conitec.com/english/gstudio/faq.php#multiplayer>
+- yes yes - yes $20 yes - - - - yes yes yes Physics
+engine<http://www.conitec.com/english/gstudio/faq.php#was9>
+yes yes yes yes yes $59 - yes - - yes - yes yes Plugin extendable yes - - -
+yes $31 - - yes yes yes yes yes yes Level editor - yes yes yes yes $99 yes
+yes - - - yes yes yes Terrain editor - - yes yes yes - - yes - - yes yes
+yes yes Model editor yes - - yes yes - - yes - - - - - - Script/HLSL
+editor yes yes yes yes yes yes yes yes - - - - - - Script
+compiler<http://www.conitec.com/english/gstudio/faq.php#was11>
+- - yes yes yes yes yes $99 - - - - - yes Script debugger - - yes yes yes
+yes - yes - - - yes yes yes Script syntax LUA Lisp C C C Basic Basic C - -
+- C C C++
+
+2010/7/1 Knife_Fighting_Monkey <fancyaccount@gmail.com>
+======================================================================
+Date: 2010-07-01T21:36:36Z
+From: jvgarcia@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Re: Adventure Game Engine
+MsgID: 1298ff0a95328c96
+
+Ok, esos quedan tambien, y nos quedan 3 para la otra semana tambien.
+
+2010/7/1 Alexander Barquero <alexbarquero@gmail.com>
+======================================================================
+Date: 2010-07-01T21:36:43Z
+From: ledezman@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Re: Adventure Game Engine
+MsgID: 1298ff0ceec58977
+
+Ahora que escogi Visionaire me puse a leer un poco sobre el y me parece que
+es un Authoring System.
+
+2010/7/1 Alexander Barquero <alexbarquero@gmail.com>
+======================================================================
+Date: 2010-07-01T21:41:27Z
+From: alexbarquero@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Re: Adventure Game Engine
+MsgID: 1298ff50944a9c91
+
+Pueden usar esta guía como apoyo, vienen varios de los que hay que analizar
+con alguna info pertinente:
+
+http://members.tripod.com/~virtual_cat/games/complete.html
+  Adventure Games: Authoring Systems
+
+* If you're interested only in some specific kind of software (for example,
+only graphics, or only free software, or only the tools for beginners) you
+can use the search
+page<http://members.tripod.com/%7Evirtual_cat/games/search.html>
+.*
+
+------------------------------
+Action
+
+   - author: Fahri Aydos
+   - URL(s):
+      - Action <http://www.geocities.com/TimesSquare/Castle/3237/>
+   - graphics: yes
+   - interface: P&C ?
+   - platform: Win32
+   - source: yes
+   - license: free
+   - programming skills: beginner
+
+------------------------------
+ADRIFT
+
+   - author: Campbell Wild
+   - URL(s):
+      - ADRIFT: Adventure Development & Runner - Interactive Fiction
+Toolkit<http://www.tardis.ed.ac.uk/%7Ejcw/adrift/>
+   - graphics: no
+   - interface: text parser (+ mouse)
+   - platform: Win32
+   - source: no
+   - license: free
+   - programming skills: beginner
+
+------------------------------
+Adventure Builder
+
+   - author: Alan Conroy
+   - URL(s):
+      - Adventure Builder <http://www.conroyhome.net/alan/ab/>
+   - graphics: no
+   - interface: text parser
+   - platform: DOS, Windows
+   - source: partly
+   - license: shareware (free for personal use)
+   - programming skills: intermediate
+
+------------------------------
+Adventure Game Studio
+
+   - author: Chris Jones
+   - URL(s):
+      - AGS <http://www.adventuregamestudio.co.uk/>
+   - graphics: VGA & hi-color, 3rd person
+   - interface: P&C, Sierra/Lucasarts-style
+   - platform: DOS and above
+   - source: no
+   - license: free
+   - programming skills: beginner/intermediate
+
+------------------------------
+Adventure Creator
+
+   - author: Autumn Software
+   - URL(s):
+      - Macintosh game creation society <http://www.theglowingsphere.com/>
+   - graphics: hi-color (?), movies
+   - interface: P&C ?
+   - platform: Macintosh
+   - source: no
+   - license: commercial (trial version available)
+   - programming skills: beginner
+
+------------------------------
+AGAST
+
+   - author: Todd Zankich
+   - URL(s):
+      - AGAST <http://agast.dyndns.org/agast/>
+   - graphics: 3rd person
+   - interface: P&C
+   - platform: Win32
+   - source: no
+   - license: free
+   - programming skills: intermediate
+
+------------------------------
+AGE (Twilight Software Adventure Game Engine)
+
+   - author: Twilight Software
+   - URL(s):
+      - Twilight Software Adventure Game
+Engine<http://www.twilightsoftware.com/age/>
+   - graphics: hi-color, 1st person, FMV
+   - interface: P&C
+   - platform: Win32
+   - source: not really (costs a few thousand $$$)
+   - license: commercial (+ "hobbyist" limited version free)
+   - programming skills: intermediate
+
+------------------------------
+AGI Studio
+
+   - author: Peter Kelly
+   - URL(s):
+      - The Ultimate AGI&SCI Web Site <http://members.xoom.com/agi_sci/>
+      - The AGI Web <http://members.xoom.com/iancsmith/>
+      - AGI Filedump <http://members.xoom.com/agi_filedump/>
+      - Sierra Classics - AGI
+<http://www.ozemail.com.au/%7Eptrkelly/agi/>the Windows source code is
+here !
+      - Linux AGI Studio <http://samhain.cc.huji.ac.il/agi/> the Linux
+      source code is here !
+   - graphics: EGA, 3rd person
+   - interface: text parser
+   - platform: MSDOS, partly Linux (Windows AGI studio requires Win32, Linux
+   AGI Studio requires Linux)
+   - source: yes
+   - license: free (GPL)
+   - notes: compatible with the old Sierra games
+   - programming skills: advanced
+
+------------------------------
+AGT
+
+   - authors: David Malmberg and Mark Welch
+   - URL(s):
+      - The Adventure Game Toolkit (AGT) <http://www.markwelch.com/agt.htm>
+      - Adventure Game Toolkit (AGT), AGiliTy,
+Magx<http://netnow.micron.net/%7Ejgoemmer/agt.html>
+   - graphics: static
+   - interface: text parser ?
+   - platforms: Amiga, Atari ST, Macintosh, MS-DOS, Windows
+   - source: no
+   - license: free
+   - programming skills: advanced
+
+------------------------------
+Alan
+
+   - authors: Thomas Nilsson & Goran Forslund
+   - URL(s):
+      - Alan <http://www.welcome.to/alan-if>
+   - graphics: no
+   - interface: text parser
+   - platform: multi
+   - source: no
+   - license: free
+   - programming skills: advanced
+
+------------------------------
+Adventure Maker
+
+   - author: Giovanni Albani
+   - URL(s):
+      - Adventure Maker <http://giftedminds.cjb.net/>
+   - graphics: 1st person
+   - interface: p&c
+   - platform: Win32
+   - source: no
+   - license: shareware
+   - programming skills: beginner
+
+------------------------------
+ButtonTalk
+
+   - author: Stephen Linhart
+   - URL(s):
+      - The Button Talk Page <http://www.stephen.com/button/button.html>
+   - graphics: static (?)
+   - interface: hypertext (?)
+   - platform: HTML (the ButtonTalk software itself requires Macintosh)
+   - source: ?
+   - license: free
+   - programming skills: beginner
+
+------------------------------
+BYOND
+
+   - author: Dantom International
+   - URL(s):
+      - Build Your Own Net Dream <http://www.dantom.com/dung/>
+   - graphics: yes
+   - interface: ?
+   - platform: Win32, Unix
+   - source: no
+   - license: free
+   - notes: a graphical MUD builder (for networked games)
+   - programming skills: advanced
+
+------------------------------
+CAECHO
+
+   - author: Javi
+   - URL(s):
+      - THE DWARF AND THE AXE <http://www.geocities.com/TimesSquare/3567/>
+   - graphics: no
+   - interface: text parser
+   - platform: DOS ?
+   - source: yes
+   - license: free
+   - programming skills: advanced
+   - notes: in Spanish
+
+------------------------------
+CAT
+
+   - author: Philip Richmond
+   - URL(s):
+      - Phil's Adventure Page <http://www.richmond62.freeserve.co.uk/>
+   - graphics: static
+   - interface: text parser
+   - platform: Win 3.11 and above
+   - source: no
+   - license: free
+   - programming skills: beginner
+
+------------------------------
+CGA/CIA
+
+   - author: Squid Productions
+   - URL(s):
+      - Create Interactive Text and Graphic
+Adventure<http://hometown.aol.com/rlundri796/Index.html>
+   - graphics: 1st person ?
+   - interface: text parser (CIA), P&C (CGA)
+   - platform: Win(CGA),DOS(CIA)
+   - source: no
+   - license: free
+   - programming skills: beginner
+
+------------------------------
+The Classic Adventure Writer
+
+   - author: D. Pearson
+   - URL(s):
+      - The Classic Adventure Writer<http://www.leaventhorpe.freeserve.co.uk/>
+   - graphics: static
+   - interface: multiple choice
+   - platform: Win32
+   - source: no
+   - license: commercial (restricted version is free)
+   - programming skills: beginner
+
+------------------------------
+The Cycon Online Gaming (COG) Engine
+
+   - author: Steven M. Castellotti
+   - URL(s):
+      - The Cycon Online Gaming (COG) Engine<http://cogengine.sourceforge.net/>
+   - graphics: hi-color graphics / text
+   - interface: P&C, 1st person + text parser
+   - platform: Java Applet
+   - source: yes
+   - license: GPL (freely modifyable and redistributable source)
+   - programming skills: beginner
+
+------------------------------
+DCGames
+
+   - author: David Hernandez
+   - URL(s):
+      - DCGames <http://www.dcgames.com/>
+   - graphics: VGA, tile-based
+   - interface: P&C
+   - platform: DOS
+   - source: no
+   - license: shareware
+   - programming skills: beginner
+   - notes: is meant for adv/rpg
+
+------------------------------
+Erasmatron
+
+   - author: Chris Crawford
+   - URL(s):
+      - Erasmatazz home page <http://www.erasmatazz.com/>
+      - Crawford's "Erasmatron" story
+engine<http://www.robotwisdom.com/ai/crawford.html>
+   - graphics: static
+   - interface: text menus
+   - platform: Macintosh
+   - source: no
+   - license: commercial (restricted version is free)
+   - programming skills: advanced
+   - notes: creates interactive storyworlds (not adventure games in the
+   usual sense)
+
+------------------------------
+The Graphic Adventure Creator
+
+   - author: Incentive Software LTD
+   - URL(s):
+      - THE GRAPHIC ADVENTURE CREATOR
+      <http://home.planet.nl/%7Esmacker/gac.htm>
+      - GAC Programming Clinic<http://members.aol.com/stuwhyte/Balrog/gac.htm>
+   - graphics: yes?
+   - interface: ?
+   - platform: Spectrum
+   - source: ?
+   - license: ?
+   - programming skills: ?
+
+------------------------------
+GameMaker
+
+   - author: Al Staffieri Jr.
+   - URL(s):
+      - GameMaker Home Page<http://members.aol.com/AlStaff/GameMakerHelp.html>
+   - graphics: hi-color ?
+   - interface: P&C ?
+   - platform: Macintosh
+   - source: no ?
+   - license: shareware
+   - programming skills: beginner
+
+------------------------------
+The Guild
+
+   - author: Frozen productions
+   - URL(s):
+      - The Guild <http://theguild.linuxgames.com/>
+   - graphics: SVGA, hi-color, 1st person
+   - interface: P&C ?
+   - platform: Linux (Win32 port is planned)
+   - source: yes
+   - license: free
+   - programming skills: advanced
+
+------------------------------
+HTML TADS
+
+   - author: Michael J. Roberts
+   - URL(s):
+      - The Unofficial HTML-TADS FAQ
+      <http://www.tela.bc.ca/tela/html-tads/faq/>
+   - graphics: hi-color, static
+   - interface: text parser+hypertext+clickable images
+   - platform: Win32; Mac in progress
+   - source: yes
+   - license: free
+   - programming skills: advanced
+   - notes: an extension to
+TADS<http://members.tripod.com/%7Evirtual_cat/games/complete.html#TADS>
+
+------------------------------
+Hugo
+
+   - author: Kent Tessman
+   - URL(s):
+      - Hugo - An Interactive Fiction Design
+System<http://www.generalcoffee.com/hugo.html>
+   - graphics: video on Win32 and BeOS (in development); static images on
+   Win32, DOS, BeOS, Unix/X, Amiga, Acorn; text-only on other platforms
+   - interface: text parser; mouse-driven context menus possible in Win32
+   and BeOS
+   - platform: multi
+   - source: yes
+   - license: free
+   - programming skills: advanced
+
+------------------------------
+Hyperplay Authoring Kit
+
+   - author: Kaz Sasayama
+   - URL(s):
+      - HyperPlay <http://www.hypercore.co.jp/hyperplay/en.html>
+   - graphics: hi-color
+   - interface: ?
+   - platform: Windows, OS/2
+   - source: yes
+   - license: free
+   - programming skills: ?
+   - notes: alpha; in Japanese
+
+------------------------------
+IAGE ( Internet Adventure Game Engine)
+
+   - author:
+   - URL(s):
+      - IAFE <http://www.btinternet.com/%7Erobin.rawsontetley/_Iage/>
+   - graphics: static
+   - interface: text parser
+   - platform: Win32 (Internet Explorer)
+   - source: no
+   - license: shareware
+   - programming skills: intermediate
+   - notes: multiplayer (online)
+
+------------------------------
+IndyJava
+
+   - author: Chir
+   - URL(s):
+      - IndyJava <http://java.indy3d.net/>
+   - graphics: hi-color, 3rd person
+   - interface: P&C + text menus
+   - platform: Java 1.1+
+   - source: no
+   - license: free
+   - programming skills: advanced
+
+------------------------------
+Inform
+
+   - author: Graham Nelson
+   - URL(s):
+      - Inform 6: A Design System for Interactive
+Fiction<http://www.gnelson.demon.co.uk/inform.html>
+      - Inform for
+Beginners<http://www.geocities.com/SiliconValley/Heights/8200/contents.htm>
+      - Inform for New Writers <http://www.placet.com/int-fiction/>
+      - Visual Inform Editor <http://www.iflibrary.org/vinform/>
+      - Inform Explorer (an IDE) <http://www.logicshopltd.co.uk/ie/>
+      - Glulx: A 32-Bit Virtual Machine for
+IF<http://www.eblong.com/zarf/glulx/>(provides Inform extensions,
+including graphics & sound)
+      - Gull - an introduction to Glulx
+Inform<http://adamcadre.ac/gull/gull.html>
+      - V6Lib <http://www.chelmsford.com/home/jpenney/V6Lib/> ( a class
+      library for Inform, providing graphics/sound/etc in version 6 Z-machine)
+   - graphics: only in Glulx (static)
+   - interface: text parser
+   - platform: multi
+   - source: yes
+   - license: free
+   - programming skills: advanced
+
+------------------------------
+JACL
+
+   - author: Stuart Allen
+   - URL(s):
+      - JACL <http://jacl.animats.net/>
+   - graphics: static
+   - interface: text parser, hypertext
+   - platform: Hypertext (Unix - runs on the Apache Web server)
+   - source: yes
+   - license: free
+   - programming skills: advanced
+
+------------------------------
+Jaffacake
+
+   - author: Justin Armstrong
+   - URL(s):
+      - JAFFACAKE <http://members.xoom.com/jman303/>
+   - graphics: hi-color, 3rd person
+   - interface: P&C + text menus
+   - platform: Java 1.1.6+
+   - source: no
+   - license: free
+   - programming skills: advanced
+
+------------------------------
+Kalevala
+
+   - author: Faraway Games
+   - URL(s):
+      - Kalevala <http://www.faraway.co.uk/kalevala/>
+   - graphics: isometric ?
+   - interface: P&C and keyboard
+   - platform: Java 2 (req. Java plugin)
+   - source: ?
+   - license: shareware
+   - programming skills: intermediate
+   - notes: for real-time multiplayer RPG over the network
+
+------------------------------
+LSD game engine
+
+   - author: Michal Oulik
+   - URL(s):
+      - LSD Development page<http://www.aapi.co.uk/%7Eoulik/lsd/develop.htm>
+   - graphics: static
+   - interface: hypertext
+   - platform: Javascript
+   - source: yes
+   - license: free for non-commercial use
+   - programming skills: advanced
+
+------------------------------
+MAGE
+
+   - authors: Gergõ Érdi, András Nagy
+   - URL(s):
+      - MAGE Adventure Game Engine <http://mage.rulez.org/>
+   - graphics: none
+   - interface: text parser
+   - platform: Linux/Unix
+   - source: yes
+   - license: free
+   - programming skills: advanced
+   - notes: alpha
+
+------------------------------
+Magx
+
+   - author: Robert Masenten
+   - URL(s):
+      - Robert Masenten's "Magx"
+Compiler<http://www.ltlink.com/%7Ejgoemmer/magx.html>
+   - graphics: none
+   - interface: text parser
+   - platform: Linux, DOS
+   - source: yes
+   - license: free
+   - programming skills: advanced
+
+------------------------------
+Maker 1
+
+   - author: The Masterton Game Center
+   - URL(s):
+      - MGC Home <http://www.mixnmojo.com/hollywood.studio/>
+   - graphics: VGA, 3rd person
+   - interface: P&C + text menus
+   - platform: DOS
+   - source: no
+   - license: free
+   - programming skills: ?
+
+------------------------------
+Maker R2
+
+   - author: The Masterton Game Center
+   - URL(s):
+      - Maker R2 <http://masterton.adventuregamer.com/>
+   - graphics: hi-color, 3rd person, 3D
+   - interface: P&C + text menus
+   - platform: Win32
+   - source: no
+   - license: free ?
+   - programming skills: ?
+   - notes: alpha
+
+------------------------------
+Multimedia Fusion
+
+   - author: IMSI (International Microcomputer Software)
+   - URL(s):
+      - ClickTeam <http://www.clickteam.com/>
+      - Multimedia Fusion
+Online<http://www.geocities.com/SiliconValley/Horizon/7218/>
+   - graphics: hi-color
+   - interface: P&C
+   - platform: Win32
+   - source: no
+   - license: commercial
+   - programming skills: beginner
+   - notes: generic multimedia authoring tool
+
+------------------------------
+Narrator
+
+   - author: Fottifoh, Home Sweet Pixel software
+   - URL(s):
+      - The Web Territory of
+Fottifoh<http://web.tiscalinet.it/44444/software.html>
+   - graphics: no
+   - interface: hypertext
+   - platform: DOS
+   - source: no
+   - license: free
+   - programming skills: ?
+
+------------------------------
+Official Hamster Republic RPG Construction Engine
+
+   - author: Hamster Republic
+   - URL(s):
+      - Official Hamster Republic RPG Construction
+Engine<http://hamsterrepublic.com/>
+   - graphics: VGA, 3rd person
+   - interface: ?
+   - platform: DOS
+   - source: no
+   - license: free ?
+   - programming skills: beginner
+   - notes: for RPG
+
+------------------------------
+PAWS
+
+   - author: Roger Plowman
+   - URL(s):
+      - PAWS <http://w3.one.net/%7Ewolf/PAWS.shtml>
+   - graphics: no
+   - interface: text parser
+   - platform: multi (requires Python)
+   - source: yes
+   - license: free
+   - programming skills: advanced
+
+------------------------------
+QML (the Quest Markup Language)
+
+   - author: Philipp Lenssen
+   - URL(s):
+      - QML <http://www.outer-court.com/goodies/qml.htm>
+   - graphics: static
+   - interface: Hypertext (using XML)
+   - platform: multi (XML capable browsers, for example, Internet Explorer)
+   - source: yes
+   - license: free
+   - programming skills: advanced
+
+------------------------------
+Quest
+
+   - author: Axe Software
+   - URL(s):
+      - Quest <http://www.axeuk.com/>
+   - graphics: static (?)
+   - interface: text parser + menus
+   - platform: Win32
+   - source: no
+   - license: shareware (demo version is free)
+   - programming skills: beginner
+   - notes: beta
+
+------------------------------
+Rexx-Adventure
+
+   - author: Mike DeSanto
+   - URL(s):
+      - The REXX Adventure Page <http://www.io.com/%7Edesantom/rad.html>
+   - graphics: no
+   - interface: text parser, P&C
+   - platform: OS/2
+   - source: no
+   - license: free
+   - programming skills: intermediate
+   - notes: beta
+
+------------------------------
+RoBOT
+
+   - author: Erwin Broekhuis, etc.
+   - URL(s):
+      - The Official ROBOT Site <http://robot.mixnmojo.com/>
+   - graphics: hi-color
+   - interface: P&C (?)
+   - platform: Win32
+   - source: yes
+   - license: free ?
+   - programming skills: intermediate
+   - notes: the project is "Revival Of B.O.T." - an adventure game
+   programming system which was cancelled by its author.
+
+------------------------------
+SAGE
+
+   - authors: Thomas Mayer and David Tirabassi
+   - URL(s):
+      - ScienceFact Interactive <http://sciencefact.mixnmojo.com/>
+   - graphics: hi-color, 3rd person
+   - interface: P&C
+   - platform: Win32
+   - source: no
+   - license: free for non-commercial use?
+   - programming skills: beginner
+   - notes: alpha
+
+------------------------------
+Shadows
+
+   - author: Christopher Delay
+   - URL(s):
+      - Shadows <http://www.doc.ic.ac.uk/%7Ecjd97/shadows/>
+   - graphics: hi-color
+   - interface: P&C ?
+   - platform: Dos, Win95 (not NT)
+   - source: no
+   - license: free for non-commercial use
+   - programming skills: intermediate
+   - notes: primarily intended for RPG
+
+------------------------------
+StoryHarp
+
+   - author: Kurtz-Fernhout Software
+   - URL(s):
+      - StoryHarp <http://www.kurtz-fernhout.com/StoryHarp/>
+   - graphics: static + speech output
+   - interface: text parser + voice recognition
+   - platform: Win32
+   - source: no
+   - license: commercial (trial version is free)
+   - programming skills: intermediate
+
+------------------------------
+StoryMaker
+
+   - author: Jim Burton
+   - URL(s):
+      - StoryMaker <http://www.strangegames.com/>
+   - graphics: static (?)
+   - interface: text parser (?)
+   - platform: Mac
+   - source: ?
+   - license: shareware
+   - programming skills: ?
+
+------------------------------
+SUDS
+
+   - author: Andy Elliot
+   - URL(s):
+      - SUDS Adventures <http://www.sudslore.com/>
+   - graphics: none
+   - interface: P&C
+   - platform: Win32
+   - source: no
+   - license: shareware
+   - programming skills: beginner
+
+------------------------------
+TADS
+
+   - author: Michael J. Roberts
+   - URL(s):
+      - TADS Page <http://www.tela.bc.ca/tela/tads/>
+      - Plugh <http://plugh.tsx.org/>: a GUI to develop TADS programs
+   - graphics: none
+   - interface: text parser
+   - platform: multi
+   - source: yes
+   - license: free
+   - programming skills: advanced
+
+------------------------------
+TextGame
+
+   - author: RASTBBS, Inc
+   - URL(s):
+      - RASTBBS, Inc <http://www.rastbbs.net/>
+   - graphics: static ?
+   - interface: ?
+   - platform: Win95
+   - source: no
+   - license: shareware
+   - programming skills: ?
+   - notes: network play, RPG
+
+------------------------------
+TROIACS
+
+   - author: ?
+   - URL(s):
+      - TROIACS <http://www.geocities.com/troiacs>
+   - graphics: 3rd person
+   - interface: ?
+   - platform: Win32
+   - source: no
+   - license: free?
+   - programming skills: advanced
+
+------------------------------
+Verge
+
+   - author: BJ Eirich
+   - URL(s):
+      - Verge <http://www.verge-rpg.com/>
+   - graphics: VGA (hi-color planned)
+   - interface: ?
+   - platform: DOS (Win32 & Linux planned)
+   - source: no
+   - license: free for non-commercial use
+   - programming skills: advanced
+   - notes: primarily intended for RPG
+
+------------------------------
+WABFIT
+
+   - author: MRB Software
+   - URL(s):
+      - WABFIT <http://pw2.netcom.com/%7Emark_b2/wabfit.htm>
+   - graphics: no
+   - interface: hypertext
+   - platform: HTML (WABFIT requires Win32)
+   - source: no
+   - license: shareware
+   - programming skills: intermediate
+   - notes: creates "choose-your-own-story" html files
+
+------------------------------
+WinQuill
+
+   - author: Nigel Arnold
+   - URL(s):
+      - WinQuill <http://www.winquill.co.uk/>
+   - graphics: static
+   - interface: text parser
+   - platform: Win32
+   - source: no
+   - license: free
+   - programming skills: beginner
+
+------------------------------
+World Builder
+
+   - author: Bill Appleton
+   - URL(s):
+      - World Builder World <http://www.geocities.com/worldbuildergames/>
+   - graphics: static
+   - interface: text parser (?)
+   - platform: Macintosh
+   - source: no
+   - license: free
+   - programming skills: advanced
+
+2010/7/1 Ledezman <ledezman@gmail.com>
+======================================================================
+Date: 2010-07-01T21:43:52Z
+From: jvgarcia@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Re: Adventure Game Engine
+MsgID: 1298ff755e6b7a8c
+
+Jueputa wall of text. "Dwarfeo" completamente el mio.
+
+2010/7/1 Alexander Barquero <alexbarquero@gmail.com>
+======================================================================
+Date: 2010-07-01T22:09:38Z
+From: ledezman@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Re: Adventure Game Engine
+MsgID: 129900ee997e0dbb
+
+Por cierto sobre los assets. Para la tontera que hice en Torque 2D separe
+bastantes layers del psd original de Aguilar en archivos png. Las pueden
+obtener del mismo zip que subi con el juego. Estan en /game/data/images.
+Ahi hay bastantes sprites que pueden usar para hacer el nivel, bueno, para
+engines 2D.
+
+2010/7/1 Juan V. García <jvgarcia@gmail.com>
+======================================================================
+Date: 2010-07-02T07:01:42Z
+From: skrybble@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Re: Adventure Game Engine
+MsgID: 12991f5fe8e58d36
+
+Di me mando valiente como Juan Santamaria con el Wintermute.. no tengo ni
+idea que es, pero el nombre se me hace curioso..
+
+Ok, entonces recapitulando.. la idea es tratar de hacer algo similar a lo
+que hizo Ledezman en Torque 2D y luego brindar un reporte con los puntos que
+especificó Juan, como para tratar de explicar que tal sintió el engine en
+cuanto a hardcorenesividad, curva de aprendizaje, tiesura del engine y la
+vara..
+
+Pinta bonito, di vamos a ver que pasa!
+
+tuanis!
+=D
+======================================================================
+Date: 2010-07-02T16:49:47Z
+From: alexbarquero@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Re: Adventure Game Engine
+MsgID: 12994105c6b3af30
+ATTACHMENT: DSC00387.JPG (image/jpeg)
+
+2010/7/2 Brian <skrybble@gmail.com>
+======================================================================
+Date: 2010-07-02T16:50:31Z
+From: ledezman@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Re: Adventure Game Engine
+MsgID: 1299411229349e98
+
+lol wtf.
+
+2010/7/2 Alexander Barquero <alexbarquero@gmail.com>
+======================================================================
+Date: 2010-07-02T16:54:02Z
+From: alexbarquero@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Re: Adventure Game Engine
+MsgID: 129941440a6d740a
+ATTACHMENT: desktop.JPG (image/jpeg)
+
+2010/7/2 Ledezman <ledezman@gmail.com>
+======================================================================
+Date: 2010-07-02T17:21:16Z
+From: c0pp3r@b52clan.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Re: Adventure Game Engine
+MsgID: 129942d970ef1fc1
+
+Tileset! HAHAHA°!
+
+Cristián Morales
+
+2010/7/2 Alexander Barquero <alexbarquero@gmail.com>
+======================================================================
+Date: 2010-07-02T18:28:34Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Re: Adventure Game Engine
+MsgID: 129946b359fb3f9a
+
+Alex...
+
+*QUE COCHINADA DE DESKTOP POR LA GRAN PUTA!
+LIMPIE ESA MIERDA!*
+
+2010/7/2 Cristián Morales <c0pp3r@b52clan.com>
+======================================================================
+Date: 2010-07-04T22:32:33Z
+From: jvgarcia@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Re: Adventure Game Engine
+MsgID: 1299f9e8a619767d
+
+Voy a llegarle yo a A7 Game Studio, por cierto.
+
+2010/7/2 Knife_Fighting_Monkey <fancyaccount@gmail.com>
+======================================================================
+Date: 2010-07-08T16:11:34Z
+From: ledezman@gmail.com
+To: jvgarcia@gmail.com, fancyaccount@gmail.com, skrybble@gmail.com, alexbarquero@gmail.com, comele.bien@gmail.com
+Cc: 
+Subject: Fwd: [MoonStorm Studios] Re: Adventure Game Engine
+MsgID: 129b2d38eb9c3b8a
+ATTACHMENT: LolGame1_Visionaire.7z (application/x-7z-compressed)
+
+..Voy mandandolo uno por uno, dolor de pelotas google group con esa
+restriccion de 4MB para attachments...
+
+Visionaire: Point & Click game authoring tool.
+
+http://www.visionaire-studio.net
+
+** Cantidad de tiempo que tomo hacer la escena. Acá la idea seria mas o
+menos estimar cuanto tiempo tomo desde que empezaron a bretear, incluyendo
+tutoriales, videos, foros, etc.
+*
+Aproximadamente 6 horas. Hubo varios 'blockers' en el proceso.
+
+** Curva de aprendizaje: les resultó muy difícil aprender? Fácil? Si hay
+que programar/hacer scripts, como ven la sintaxis? Va ligado a lo anterior
+también.*
+
+No existe un tutorial per se. El editor viene con un juego demo y se puede
+también cargar un proyecto con el mínimo de configuración y empezar con eso
+como base. La interfaz es más o menos intuitiva pero conforme se quieren
+hacer cosas más específicas o complejas si es necesario referirse a la
+documentación. Si bien Visionaire soporta cierto grado de scripting, esto no
+fue explorado y la documentación no es buena. Desde el inicio la idea fue
+tirarse al agua "porteando" el "juego" que habia hecho en Torque.
+
+** Versatilidad de la herramienta: si quisiéramos hacer algo un poco
+diferente, la herramienta lo aguantaría? Supongamos que por alguna razón se
+quiere hacer una parte donde haya que usar una cámara en "1era persona", o
+haya que salirse un poco de lo tradicional de un point and click. Qué tan
+factible es hacer esto con esta herramienta?*
+
+Visionaire sirve para hacer juegos "point & click", punto. Al ser un
+authoring tool, la idea es que se pueda "programar" (o más bien,
+"configurar") un adventure game lo más rápido posible sin necesidad de tener
+conocimientos avanzados de programación. Todos los juegos siguen el mismo
+esquema básico y no es posible salirse de él.
+
+** Soporte y ayuda: si hay documentación en línea qué tal está? Hay foros,
+comunidad que ayuda? Se pegaron mucho con algún problema y tuvieron que
+andar largo rato buscando la respuesta?*
+
+La documentación es mala. Visionaire trae como ayuda un link a un wiki que
+está bastante incompleto y no explica todas las partes de la herramienta.
+Tienen un foro en el sitio que tampoco es de mucha ayuda, tiene pocos topics
+y en realidad parece que no hay una comunidad muy grande.
+
+En el caso particular del juego "demo" tuve un problema "blocker" bastante
+molesto: Para hacer la escena del smoothface empecé a importar los assets a
+Visionaire. Algunos se importaron bien otros no. La imagen .png se cargaba
+mal en el editor. No veia nada malo, busqué en los foros de Visionaire, wiki
+y hasta google, y no salió nada. Luego de batear-deducir el problema me di
+cuenta de que photoshop por defecto guarda el .png en modo RGB-16 bits, y
+resulta que para que funcionen en Visionaire se ocupa que sean RGB-8bits. En
+ningún lado vi esto documentado. Pero bueno, luego de cambiar las imágenes a
+8bits las pude importar bien.
+
+Igual me topé con problemas para hacer el diálogo de "Esteban etc". No pude
+poner el tarro de Alex como en el juego hecho en Torque pues no encontré una
+forma controlar la visibilidad de los objetos en pantalla. El diálogo se
+hizo pero no quedo muy bien para mi gusto. Hay todo un editor para crear
+diálogos pero no esta documentado, y ya en este punto me dio pereza batear.
+
+** Calidad percibida de los tools utilizados: el o los programas corrieron
+establemente? Se caian? Duraba mucho compilando? Tiene bugs raros?
+Cualquier otro comentario sobre este tema aca seria bienvenido.*
+
+El editor en sí corre bien. La gente que lo desarrolló son alemanes, y
+aunque tenía el editor en inglés, es frecuente toparse con diálogos o textos
+que no han sido traducidos entonces salen en alemán. El juego demo que trae
+el editor no me dio una muy buena impresión, pues en una de las "pantallas"
+sencillamente se pegaba.
+
+** Como vieron la calidad grafica? No es que ocupemos graficos a la Crysis,
+pero bueno, se ve "bonito"? Obviamente depende de lo que uno use y todo,
+pero bueno, es para ver rapidamente si notaron algo raro con respecto a
+eso. Se siente pesado? Corrieron el jueguillo y el mae usa 1 giga de
+memoria?*
+
+La calidad gráfica parece que dependerá de los assets que se usen. Las
+resoluciones del juego sí están restringidias a 4:3 ( 800x600, 1024x768,
+etc), en caso como loldemo1 que siguiendo la escena que mandó Aguilar que es
+16:9, lo que hace el Visionare es scrollear la imagen conforme se mueva al
+jugador. Tengo mis dudas en cuanto a las animaciones, en este sentido
+Visionaire está restringido a las animaciones necesarias para un point &
+click (cosas como look at, use, walk to, etc.). No sé si es posible
+introducir animaciones más complejas ya sea en el jugador como en otros
+objetos. Visionaire tiene el feature de poder agregar un "intro movie" al
+inicio del juego, con un archivo avi. El juego corriendo no se siente nada
+pesado para la máquina.
+
+** Que features interesantes ven? Obviamente no se va a probar todo, pero
+si vieron algo por ahi que les parecio interesante, lo pueden mencionar aca
+tambien.*
+
+Esa idea de la "intro movie" usando un archivo de video externo me pareció
+curiosa y no la he visto en ningún otro engine/tool.
+
+** Comentarios miscelaneos. Todas las otras cosas que quieran/puedan decir
+pero que no cabian en los apartados anteriores.*
+
+Para hacer un juego estrictamente point & click, me parece una buena opción,
+uno básicamente solo tiene que agregar assets y configurar comportamientos.
+Lástima eso sí la poca documentación. También, soy del criterio de que es
+bueno programar algo, no sólo depender de tools drag/drop y configurar
+objetillos en un IDE y para esto Visionaire me parece cerrado.
+
+Me parece que la comunidad no es grande... almenos en el foro inglés, quizás
+haya más soporte en foros y comunidades alemanas. En este correo incluyo el
+archivo de proyecto de VIsionaire para el "port" del "lolDemo1". Para
+probarlo ocupan bajar el editor de Visionaire, pues en su versión trial no
+se puede hacer builds de juegos. Bajen el editor, abran el proyecto y
+corranlo dentro del editor. Así tambien pueden tweakearlo si quieren.
+
+Para usar al smoothface, se clickea en el area verde para moverlo. Con click
+derecho se cambia la acción de walkto a look at. Con eso pueden hacer click
+en la puerta y ver la hablada de Esteban etc.
+======================================================================
+Date: 2010-07-08T16:14:54Z
+From: alexbarquero@gmail.com
+To: ledezman@gmail.com
+Cc: jvgarcia@gmail.com, fancyaccount@gmail.com, skrybble@gmail.com, comele.bien@gmail.com
+Subject: Re: [MoonStorm Studios] Re: Adventure Game Engine
+MsgID: 129b2d69510338a2
+
+Great job nigga, keep it up! :D
+
+2010/7/8 Ledezman <ledezman@gmail.com>
+======================================================================
+Date: 2010-07-08T16:16:23Z
+From: alexbarquero@gmail.com
+To: ledezman@gmail.com
+Cc: jvgarcia@gmail.com, fancyaccount@gmail.com, skrybble@gmail.com, comele.bien@gmail.com
+Subject: Re: [MoonStorm Studios] Re: Adventure Game Engine
+MsgID: 129b2d7f3e49dc7e
+
+Suave, como abro la mierda? solo se puede teniendo el Visionaire instalado?
+FAIL!
+
+2010/7/8 Alexander Barquero <alexbarquero@gmail.com>
+======================================================================
+Date: 2010-07-08T16:16:51Z
+From: ledezman@gmail.com
+To: alexbarquero@gmail.com
+Cc: jvgarcia@gmail.com, fancyaccount@gmail.com, skrybble@gmail.com, comele.bien@gmail.com
+Subject: Re: [MoonStorm Studios] Re: Adventure Game Engine
+MsgID: 129b2d86381a84dd
+
+Asi es, es lo que dije.
+
+En su version demo no permite hacer 'builds'.
+
+2010/7/8 Alexander Barquero <alexbarquero@gmail.com>
+======================================================================
+Date: 2010-07-08T17:06:13Z
+From: fancyaccount@gmail.com
+To: ledezman@gmail.com
+Cc: alexbarquero@gmail.com, jvgarcia@gmail.com, skrybble@gmail.com, comele.bien@gmail.com
+Subject: Re: [MoonStorm Studios] Re: Adventure Game Engine
+MsgID: 129b305de83cb311
+
+gosu reporte!
+pregunta: "Todos los juegos siguen el mismo esquema básico y no es posible
+salirse de él.", osea no se pueden acomodar las interacciones de forma
+diferente (hablando de GUI) a lo que trae por default el IDE?
+
+2010/7/8 Ledezman <ledezman@gmail.com>
+======================================================================
+Date: 2010-07-08T17:10:22Z
+From: ledezman@gmail.com
+To: fancyaccount@gmail.com
+Cc: alexbarquero@gmail.com, jvgarcia@gmail.com, skrybble@gmail.com, comele.bien@gmail.com
+Subject: Re: [MoonStorm Studios] Re: Adventure Game Engine
+MsgID: 129b3096200a5584
+
+A lo que pude yo ver, no. En los foros de los maes alguien les pregunto que
+que tan 'abierto' era el engine/tool.. di los maes se van en hablada que es
+muy abierto, que hay scripting etc, pero con el horrible wiki que se tienen
+es una paridera. Lo que pienso es que talvez la comunidad y la documentacion
+sea mejor en aleman. El wiki es molesto, hay partes del IDE que no
+describen, como dialogos, y esta llena de secciones taggeadas como "TODO".
+Esa parida de los pngs me tuvo pegado por horas, y en ningun lado
+mencionaban ese problema. Eso me da mala espina, de posibles parideras en un
+futuro.
+
+2010/7/8 Knife_Fighting_Monkey <fancyaccount@gmail.com>
+======================================================================
+Date: 2010-07-12T03:03:44Z
+From: jvgarcia@gmail.com
+To: ledezman@gmail.com
+Cc: fancyaccount@gmail.com, alexbarquero@gmail.com, skrybble@gmail.com, comele.bien@gmail.com
+Subject: Re: [MoonStorm Studios] Re: Adventure Game Engine
+MsgID: 129c49bb09eb8615
+ATTACHMENT: game.c (application/octet-stream)
+ATTACHMENT: demo test ss.jpg (image/jpeg)
+
+He aca mi reporte, estoy un poco atrasado con esto, pero bueno.
+
+Gamestudio A7
+
+http://www.conitec.com/english/gstudio/download.php
+
+** Cantidad de tiempo que tomo hacer la escena. Acá la idea seria mas o
+menos estimar cuanto tiempo tomo desde que empezaron a bretear, incluyendo
+tutoriales, videos, foros, etc.
+*
+Es difícil cuantificarlo... diría que entre unas 6 y 8 horas. Cabe destacar
+que vi cosas del tutorial que no utilicé acá, por un lado, y por otro,
+reutilicé código y assets de uno de los problemas del tutorial.
+
+** Curva de aprendizaje: les resultó muy difícil aprender? Fácil? Si hay
+que programar/hacer scripts, como ven la sintaxis? Va ligado a lo anterior
+también.*
+
+Bueno, hay una serie de tutoriales o "workshops" como el autor los llama,
+que ilustran bastante bien muchas de las características del framework.
+ Diría que la curva de aprendizaje es de fácil a media, la sintáxis es muy
+parecida a C/C++ (de hecho el lenguaje de scripting se llama Lite C), y trae
+un API bastante completo.
+
+** Versatilidad de la herramienta: si quisiéramos hacer algo un poco
+diferente, la herramienta lo aguantaría? Supongamos que por alguna razón se
+quiere hacer una parte donde haya que usar una cámara en "1era persona", o
+haya que salirse un poco de lo tradicional de un point and click. Qué tan
+factible es hacer esto con esta herramienta?*
+
+A7 no es tanto un authoring tool, es más un development kit en todo el
+sentido de la palabra. El framework pareciera ser bastante flexible, y
+cubre casi todas las partes del desarrollo, incluso tiene su propia
+herramienta para modelaje (creación de entidades y eso, aunque con esto
+tengo una duda, y es que no estoy completamente seguro de que se puedan
+utilizar assets producidos en otra herramienta). El API provee funciones
+para físicas, soporta animaciones, se pueden programar cosas multiplayer, y
+en general uno puede hacer y deshacer casi como le plazca. Para asuntos de
+menús y cosas 2D, maneja cosas como paneles, despligue de texto y otras
+cosas como para un HUD con un sistema que me pareció relativamente simple.
+
+** Soporte y ayuda: si hay documentación en línea qué tal está? Hay foros,
+comunidad que ayuda? Se pegaron mucho con algún problema y tuvieron que
+andar largo rato buscando la respuesta?*
+
+Bueno, los tutoriales online que vi pues exponen mucha de lo que se puede
+hacer con el framework con ejemplos pequeños, y resultan bastante
+ilustrativos. También el framework cuenta con un manual en línea
+relativamente completo, que contiene desde ayuda para el level editor, hasta
+una vara estilo javadoc del API del lenguaje de scripting. A decir verdad
+no busqué demasiado en los foros, ni sé bien si hay buena comunidad, aunque
+me parece que sí. En cuanto a problemas y blockers, pues sí encontré un par
+de cosas, pero no sé qué tanto se debieron a errores de capa ocho. No
+travesié tanto el level editor, y mucho menos la herramienta de modelaje, me
+enfoqué más que todo en las cuestions de scripting.
+
+** Calidad percibida de los tools utilizados: el o los programas corrieron
+establemente? Se caian? Duraba mucho compilando? Tiene bugs raros?
+Cualquier otro comentario sobre este tema aca seria bienvenido.*
+
+Lo que he visto en general me pareció bien. Estuve traveseando más que todo
+las cuestiones de scripting, y bueno, algo tuanis es que el framework trae
+su propio IDE, que bueno, es bastante básico, pero facilita la vida con
+cosas como sugerencias y syntax highlighting (ni UDK tiene esta vara
+incluido). Las otras herramientas las travesié menos, pero se ven
+relativamente bien (creo que esta vara es básicamente un UDK pero más
+simple). Creo que este framework también es de origen alemán, pero no me
+topé con cosas como las que puso Ledezma, de textos en alemán y eso. En
+todo lo que usé, que bueno, tampoco fueron varas terriblemente exigentes,
+pues los programas nunca se me cayeron ni nada así.
+
+** Como vieron la calidad grafica? No es que ocupemos graficos a la Crysis,
+pero bueno, se ve "bonito"? Obviamente depende de lo que uno use y todo,
+pero bueno, es para ver rapidamente si notaron algo raro con respecto a
+eso. Se siente pesado? Corrieron el jueguillo y el mae usa 1 giga de
+memoria?*
+
+Acá pues igual parece que dependerá mucho de los assets y de nuestra propia
+dedicación. Creo que habrán cosas más avanzadas que el engine no soporta,
+pero bueno, ahí aguanta animaciones, hace sombres, y creo por ahí que hasta
+hay algo de shaders (eso sí, las varas de shaders elevan el costo de la
+licencia). Al correr el juego en modo "dev", es decir, el IDE abierto y etc,
+el consumo de memoria no parecía tan fatal, pero sí agarraba 50% de CPU.
+ Ignoro si esto es normal para un juego la verdad, creo que tampoco es para
+morirse. Este juego indie <http://dejobaan.com/aaaaa/> fue hecho con esta
+herramienta, supongo que nos puede servir de guía para ver el potencial de
+la herramienta.
+
+** Que features interesantes ven? Obviamente no se va a probar todo, pero
+si vieron algo por ahi que les parecio interesante, lo pueden mencionar aca
+tambien.*
+Pues el API se ve bastante completo, e incluye varas relativamente
+avanzadas, como físicas y eso. Me parece que el código es relativamente
+fácil y rápidamente se pueden hacer cosas. Como no puedo subir el lol demo
+voy a subir el código fuente del script para que se hagan una idea de cómo
+está la vara. Otra vara interesante es que el chunche incluye su propia
+herramienta de modelaje (de nuevo, pendiente averiguar si/cómo se pueden
+usar assets creados con otras herramientas.)
+
+** Comentarios miscelaneos. Todas las otras cosas que quieran/puedan decir
+pero que no cabian en los apartados anteriores.*
+*
+*
+Bueno, no he probado ninguna otra herramienta similar, pero esta
+particularmente me gustó. Me queda una duda en cuanto a las licencias,
+porque por ahí vi una vara que hablaba de licencias para equipos de gente,
+entonces me pregunto si será necesario. Entre los pros estarían la
+flexibilidad, facilidad, aparentemente le dan mantenimiento, etc. Cons:
+ habría que pagar (monto en duda, creo que lo mínimo serían $99),
+posiblemente no sería tan rápido, y queda ver lo de los assets en otras
+herramientas, si no se puede, pues implicaría o desechar la vara, o que
+rebretear cosas, aprender, etc.
+
+Ahí adjunté el script. También va un screenshot, para que se hagan una idea
+de lo que hice. Los assets (los muñecos y el nivel) ya estaban hechos, hay
+un personaje que se mueve con animación, el otro está fijo. Agregué cosas
+para eventos de mouse, y algunos diálogos... creo que lo más destacable acá
+es que con poco código se pueden lograr cosas interesantes, y bueno, se me
+ocurre que con relativa facilidad se podrian agregar cosas como un
+inventario (al menos graficamente), por ahi vi cosas del API para sonidos,
+etc.
+
+Bueno, sorry ahi por el retraso. Deberíamos pasar a la siguiente ronda...
+sin ánimos de presionar, porque yo igual estoy tarde, cómo ve el asunto,
+BooT?
+======================================================================
+Date: 2010-07-12T18:38:15Z
+From: fancyaccount@gmail.com
+To: jvgarcia@gmail.com
+Cc: ledezman@gmail.com, alexbarquero@gmail.com, skrybble@gmail.com, comele.bien@gmail.com
+Subject: Re: [MoonStorm Studios] Re: Adventure Game Engine
+MsgID: 129c7f3942044b62
+
+\macro
+gosu reporte!
+pregunta: ¿como está la vara con el 2D en A7?
+
+2010/7/11 Juan V. García <jvgarcia@gmail.com>
+======================================================================
+Date: 2010-07-16T19:38:26Z
+From: ledezman@gmail.com
+To: fancyaccount@gmail.com
+Cc: jvgarcia@gmail.com, alexbarquero@gmail.com, skrybble@gmail.com, comele.bien@gmail.com
+Subject: Re: [MoonStorm Studios] Re: Adventure Game Engine
+MsgID: 129dcc3cfa84b259
+
+Bueno voy con Virtools. A ver que sale.
+
+2010/7/12 Knife_Fighting_Monkey <fancyaccount@gmail.com>
+======================================================================
+Date: 2010-07-16T20:02:50Z
+From: ledezman@gmail.com
+To: fancyaccount@gmail.com
+Cc: jvgarcia@gmail.com, alexbarquero@gmail.com, skrybble@gmail.com, comele.bien@gmail.com
+Subject: Re: [MoonStorm Studios] Re: Adventure Game Engine
+MsgID: 129dcda2ba1a592e
+
+Descartado inmediatamente. No se quien propuso este engine, pero no hay ni
+demo para bajar en el sitio.
+http://www.3ds.com/products/3dvia/3dvia-virtools/showcase/electronic-entertainment/
+
+Y por lo que dice esta vara de review, si el price no lo hacen publico es
+por que es caro:
+http://www.devmaster.net/engines/list.php?search_id=6e3d91e6fb3d6aae412bafe3f837d6e8
+
+2010/7/16 Ledezman <ledezman@gmail.com>
+======================================================================
+Date: 2010-07-16T20:18:46Z
+From: ledezman@gmail.com
+To: fancyaccount@gmail.com
+Cc: jvgarcia@gmail.com, alexbarquero@gmail.com, skrybble@gmail.com, comele.bien@gmail.com
+Subject: Re: [MoonStorm Studios] Re: Adventure Game Engine
+MsgID: 129dce8bc18317a9
+
+Bueno voy a probar 'Adventure Maker'.
+
+2010/7/16 Ledezman <ledezman@gmail.com>
+======================================================================
+Date: 2010-07-21T19:09:18Z
+From: ledezman@gmail.com
+To: fancyaccount@gmail.com
+Cc: jvgarcia@gmail.com, alexbarquero@gmail.com, skrybble@gmail.com, comele.bien@gmail.com
+Subject: Re: [MoonStorm Studios] Re: Adventure Game Engine
+MsgID: 129f668ee54284df
+
+Adventure Maker: Adventure game authoring tool.
+
+http://www.adventuremaker.com
+
+Bajé el demo version y rápidamente me di cuenta de que este egine no nos
+sirve. Este tool está diseñado para crear "Graphic Adventure Games", que es
+similar a un point & click pero en primera persona. En realidad es un género
+bastante old school, ejemplos famosos (y bien viejos) son juegos como Myst y
+Return to Zork. Para los que nunca jugaron o han visto este tipo de juegos,
+pues es que a usted se le presenta una escena (prerendered) con artefactos o
+items en los que puede hacer click, ir resolviendo puzzles, y pasar a otra
+escena, o quizás ver un video. Lo principal es que no hay un personaje que
+usted esté moviendo y haciendo interactuar con el mundo, el juego de ve en
+"primera persona". Este tipo de juegos son bastante estáticos, y así está
+pensado este engine.
+
+* Cantidad de tiempo que tomo hacer la escena. Acá la idea seria mas o
+menos estimar cuanto tiempo tomo desde que empezaron a bretear, incluyendo
+tutoriales, videos, foros, etc.
+
+Aproximadamente 1 hora. Hice un tutorial que trae el tool, y cargué algunos
+juegos demo.
+
+* Curva de aprendizaje: les resultó muy difícil aprender? Fácil? Si hay que
+programar/hacer scripts, como ven la sintaxis? Va ligado a lo anterior
+también.
+
+El tutorial explica la funcionaidad básica. Al ser un authoring tool pues
+resulta fácil entender las cosas básicas. Para scripting Adventure Maker usa
+VBScript, y se le pueden hacer extensiones y plugins. No ahondé en
+investigar esto pues ya para este momento me pareció que este engine no es
+lo que buscamos.
+
+* Versatilidad de la herramienta: si quisiéramos hacer algo un poco
+diferente, la herramienta lo aguantaría? Supongamos que por alguna razón se
+quiere hacer una parte donde haya que usar una cámara en "1era persona", o
+haya que salirse un poco de lo tradicional de un point and click. Qué tan
+factible es hacer esto con esta herramienta?
+
+La herramienta consiste en básicamente concatenar imágenes (llamados
+'frames') que son las escenas del juego. Completar algún puzzle o hacer algo
+en una escena lleva a la siguiente escena y así por el estilo. En otro
+ejemplo vi que se hizo un juego de Othello usando Adventure Maker, pero
+igual es un juego que consiste básicamente de imágenes estáticas. El engine
+soporta incorporar videos, pero no vi nada relacionado con animación de
+sprites o algo asi. Quizás sea posible agregar complejidad usando el
+scripting VBScript pero probablemente la complejidad no amerite el costo,
+sobre todo si hay otros engines más adecuados para lo que se quiere hacer
+con Stache.
+
+* Soporte y ayuda: si hay documentación en línea qué tal está? Hay foros,
+comunidad que ayuda? Se pegaron mucho con algún problema y tuvieron que
+andar largo rato buscando la respuesta?
+
+De lo que pude ver, tienen una comunidad bastante activa. El foro tiene
+bastantes temas, ayuda y tutoriales.
+
+* Calidad percibida de los tools utilizados: el o los programas corrieron
+establemente? Se caian? Duraba mucho compilando? Tiene bugs raros?
+Cualquier otro comentario sobre este tema aca seria bienvenido.
+
+No profundicé mucho en el tool. Tiene algunos problemillas para correr en
+Windows 7, de hecho la versión para este SO está en Beta. Los juegos son muy
+simples entonces el engine no dura nada compilando.
+
+* Como vieron la calidad grafica? No es que ocupemos graficos a la Crysis,
+pero bueno, se ve "bonito"? Obviamente depende de lo que uno use y todo,
+pero bueno, es para ver rapidamente si notaron algo raro con respecto a
+eso. Se siente pesado? Corrieron el jueguillo y el mae usa 1 giga de
+memoria?
+
+Supongo que la imagen dependerá de las imágenes que se utilicen como
+'escenas'. De nuevo, son juegos muy simples, no consumen nada de procesador
+o memoria.
+
+* Que features interesantes ven? Obviamente no se va a probar todo, pero si
+vieron algo por ahi que les parecio interesante, lo pueden mencionar aca
+tambien.
+
+En su versión comercial, el engine puede compilar el jueguillo para
+iPod-iPhone y PSP.
+
+* Comentarios miscelaneos. Todas las otras cosas que quieran/puedan decir
+pero que no cabian en los apartados anteriores.
+
+Este engine no nos sirve, es específico para 'Graphic adventure games', no
+exactamente 'point & clicks' como el que queremos hacer. Aqui hay ejemplos
+de juegos comerciales hechos con esto, la verdad, algo "chafas".
+
+http://www.virtuegames.com/products.htm
+
+http://www.mdna-games.com/
+
+2010/7/16 Ledezman <ledezman@gmail.com>

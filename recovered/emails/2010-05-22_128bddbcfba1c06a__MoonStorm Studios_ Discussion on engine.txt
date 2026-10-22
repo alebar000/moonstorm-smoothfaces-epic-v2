@@ -1,0 +1,108 @@
+THREAD 128bddbcfba1c06a  [MoonStorm Studios] Discussion on engine
+URL: https://mail.google.com/mail/?authuser=alexbarquero@gmail.com#all/thread-f:1336405518190755946
+Messages: 5
+
+======================================================================
+Date: 2010-05-22T02:33:38Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: [MoonStorm Studios] Discussion on engine
+MsgID: 128bddbcfba1c06a
+
+Aqui podemos discutir dudas, preguntas y demás que tengamos sobre este
+tema
+======================================================================
+Date: 2010-05-23T17:35:02Z
+From: skrybble@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: [MoonStorm Studios] Re: Discussion on engine
+MsgID: 128c63b72a43a0e0
+
+Di bueno he estado toqueteando el engine así por encima y ahorita
+estoy viendo los videotutoriales..
+
+No he usado el Ogre3D como para tener una comparación, pero hasta el
+momento lo que he podido ver del engine me ha gustado.
+
+Siento que es bastante user-friendly, aparte el Kismet es muy práctico
+ya que te permite jugar con eventos o acciones a un bajo nivel desde
+un punto de vista mfás "grafico"
+
+Aparte el engine en sí ofrece una gama de efectos y un rendering muy a
+la altura de los juegos actuales, está mas que demostrado las grandes
+cosas que se pueden lograr en él.
+
+De momento lo que he visto me tiene satisfecho, yo le doy mi voto de
+confianza.
+=D
+
+tuanis!
+======================================================================
+Date: 2010-05-23T19:26:51Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Re: Discussion on engine
+MsgID: 128c6a21f0c071fd
+
+mae le faltó decir que le ayudó a desarrollar 20 kgs de músculo en una sola
+sesión, kekekaka.
+
+2010/5/23 Brian - BooT <skrybble@gmail.com>
+======================================================================
+Date: 2010-05-23T20:37:37Z
+From: jvgarcia@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Re: Discussion on engine
+MsgID: 128c6e29d3842ac1
+
+Bueno, de momento no puedo opinar mucho al respecto, pero en cuanto a los
+costos, no sé si estamos seguros de que el precio "upfront" es de $99 por
+juego, y no por desarrollador. De ser así, creo que es una excelente
+opción. Por ahí vimos otras opciones comerciales, que no tienen la
+restricción esa del 25% sobre revenue, pero sí cobran por desarrollador,
+entonces nos saldría bastante caro así de entrada. Además, como han dicho
+ya, pues es un engine que está más que probado, y que tiene mucha capacidad.
+
+Hablando como de progreso, bueno, yo la verdad aunque pues "programo para
+vivir", no tengo experiencia con desarrollo de juegos, así que primero haré
+un esfuerzo por instruirme en algunas cosas básicas. Cuando empiece con la
+literatura esta que tengo les comento al respecto, por aquello de que
+quieran leer al respecto también, y "extendemos" la licencia de dicha
+literatura, lol.
+
+2010/5/23 Knife_Fighting_Monkey <fancyaccount@gmail.com>
+======================================================================
+Date: 2010-05-23T22:54:10Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Re: Discussion on engine
+MsgID: 128c75fecf99d5c2
+
+Creo que a excepción de Boot que ha tenido su aventura con Unity3D, los
+demás partimos del mismo nivel.
+La ruta de los videos de 3D Buzz me parece que es la mejor en un inicio, no
+llega a 20 hrs de contenido (obviando trabas que se puedan presentar
+haciendo los labs) y cubren bastante de lo que ofrece el UDK (algunas cosas
+tal vez a nivel muy básico pero igual, mejor que nada), por lo que creo
+firmemente que 2 meses es tiempo suficiente como para al menos haber visto
+la mitad.
+
+Me parece que es importante que todos veamos los videos/hacer los labs como
+mínimo, porque inevitablemente en un principio todos vamos a ser "Zoylas".
+
+El punto de la licencia que menciona Juancho, según un ejemplo en la página
+de UDK, es por juego, cito: "A team creates a game with UDK that they intend
+to sell. After six months of development, they release the game through
+digital distribution and they earn $15,000 in the first calendar quarter
+after release. Their use of UDK during development requires no fee. Upon
+release they would pay US $99.99 for a Royalty Bearing license."
+
+imo deberíamos dejar la parla financiera en otra discusión y ésta usarla
+para cuestiones propias del UDK/desarrollo.
+
+2010/5/23 Juan V. García <jvgarcia@gmail.com>

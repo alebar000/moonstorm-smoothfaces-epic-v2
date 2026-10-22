@@ -1,0 +1,425 @@
+THREAD 12b63ae9d10c31c0  [MoonStorm Studios] Skype Meeting
+URL: https://mail.google.com/mail/?authuser=alexbarquero@gmail.com#all/thread-f:1348329914353070528
+Messages: 24
+
+======================================================================
+Date: 2010-09-30T17:26:09Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: [MoonStorm Studios] Skype Meeting
+MsgID: 12b63ae9d10c31c0
+
+Próximo Jueves 7 de Septiembre @ ~8:30pm
+Cuentas: comele.bien, juanv.garcia, xygvot, ledezman y psytechdragon
+
+Temas:
+-¿Donde conchas estamos?
+-¿A donde conchas vamos?
+
+Si tienen problemas con el día/hora, favor sugerir opciones.
+tuanis.
+======================================================================
+Date: 2010-09-30T17:44:15Z
+From: jvgarcia@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Skype Meeting
+MsgID: 12b63be9ba7ee336
+
+Yo hoy iria llegando como a las 9, y posiblemente tenga que monchar algo.
+
+2010/9/30 Knife_Fighting_Monkey <fancyaccount@gmail.com>
+======================================================================
+Date: 2010-09-30T18:10:55Z
+From: alexbarquero@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Skype Meeting
+MsgID: 12b63d6fee9b5a48
+
+Yo no puedo en estas dos semanas, tengo entrega de tesis de hoy en 8 :(
+
+2010/9/30 Juan V. García <jvgarcia@gmail.com>
+======================================================================
+Date: 2010-09-30T19:04:46Z
+From: c0pp3r@b52clan.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Skype Meeting
+MsgID: 12b6408a10a7bb7e
+
+f1
+
+Cristián Morales
+
+2010/9/30 Alexander Barquero <alexbarquero@gmail.com>
+======================================================================
+Date: 2010-10-08T01:48:56Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Skype Meeting
+MsgID: 12b898e00dfa1a27
+
+tengo una gripe de mierda y aún no me regresa la puta voz
+¿no sé si les queda bien mover la crap para la otra semana?
+
+2010/9/30 Cristián Morales <c0pp3r@b52clan.com>
+======================================================================
+Date: 2010-10-08T02:15:46Z
+From: ledezman@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Skype Meeting
+MsgID: 12b899f6b067c93a
+
+por mi np.
+
+2010/10/7 Knife_Fighting_Monkey <fancyaccount@gmail.com>
+======================================================================
+Date: 2010-10-08T02:37:35Z
+From: c0pp3r@b52clan.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Skype Meeting
+MsgID: 12b89b3bfb0c76b0
+
+Np.
+Cristián Morales
+
+2010/10/7 Ledezman <ledezman@gmail.com>
+======================================================================
+Date: 2010-10-14T18:37:14Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Skype Meeting
+MsgID: 12bac0877fbcf9d3
+
+¿estamos para hoy?
+
+2010/10/7 Cristián Morales <c0pp3r@b52clan.com>
+======================================================================
+Date: 2010-10-14T20:11:45Z
+From: c0pp3r@b52clan.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Skype Meeting
+MsgID: 12bac5ef86ebba76
+
+Werd, tengo una shit a las 6, pero fijo estoy online a las 9.
+
+Cristián Morales
+
+2010/10/14 Knife_Fighting_Monkey <fancyaccount@gmail.com>
+======================================================================
+Date: 2010-10-15T03:52:38Z
+From: c0pp3r@b52clan.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Skype Meeting
+MsgID: 12bae04f2470436f
+
+Acabo de llegar a la chorbi, lewl.
+Cristián Morales
+
+2010/10/14 Cristián Morales <c0pp3r@b52clan.com>
+======================================================================
+Date: 2010-10-15T05:57:06Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Skype Meeting
+MsgID: 12bae76e6eb40771
+
+*Presentes*
+
+   - Juancho
+   - Ledezman
+   - Morales
+   - Aguilar
+
+*Temas
+*
+
+   - Se discutió la falta de impulso y abandono que se ha experimentado en
+   los últimos 2 meses, al dejarse de actualizar e informarnos unos a otros
+   sobre el avance/pos-posición de tareas y la pérdida del sentido de "*
+   urgencia*" y/ó *oomph*.
+
+*Acuerdos*
+
+   - Se acordó retomar las tareas pendientes, con Juancho y Ledezman
+   lidiando con los asuntos de GUI y estructura de datos para los diálogos.
+   Aguilar enviará a Juancho un mock-up base para el diseño de la GUI *antes
+   del Domingo 17 de Octubre*.
+   - Morales y Aguilar acordaron reunirse Martes y Jueves de cada semana, de
+   8-11am para discutir temas pendientes referentes a la producción de assets
+   (estilización, flujo de trabajo para la creación de assets, acabado final en
+   Torque, etc.).
+   - Se acordó una reunión en skype para el próximo *Jueves 21 de Octubre, a
+   las 10pm*, con miras a evaluar el nuevo enfoque.
+
+*Otros
+*
+
+   - Ledezman informó sobre un conocido que realiza grabaciones para bandas
+   de garaje. Este contacto será conveniente en un futuro, al tratar el tema de
+   la producción de audio/musical del juego.
+
+2010/10/14 Cristián Morales <c0pp3r@b52clan.com>
+======================================================================
+Date: 2010-10-21T21:52:13Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Skype Meeting
+MsgID: 12bd0c77fa585309
+
+Recordatorio, segunda reunión @ Skype, hoy 10pm
+
+2010/10/14 Knife_Fighting_Monkey <fancyaccount@gmail.com>
+======================================================================
+Date: 2010-10-22T05:50:41Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Skype Meeting
+MsgID: 12bd27d841c95930
+
+*Presentes*
+
+   - Juancho
+   - Ledezman
+   - Morales
+   - Alex
+   - Aguilar
+
+*Temas
+*
+
+   - Se discutieron temas de carácter técnico que son incógnita sobre el
+   asunto del *pathing*, así como el manejo de colisiones entre PC/NPCs y
+   props de los escenarios, así como de animación.
+
+*Acuerdos*
+
+   - Morales y Aguilar acordaron completar Z1S3 (en reproducción apegada al
+   sketch) a nivel de entregable para el Jueves 4 de Noviembre.
+   - Juancho completará el diseño de la GUI (inventario, diálogos).
+   - Alex buscará información referente al tema de *pathing *y colisiones
+   para juegos point & click en motores 2D.
+   - Ledezman se enfocará en en tema del *pathing*, utilizando como base el
+   sketch de Z1S3.
+   - Se acordó una reunión en skype para el próximo *Jueves 28 de Octubre, a
+   las 10pm*, con miras a evaluar el avance en estas tareas.
+
+2010/10/21 Knife_Fighting_Monkey <fancyaccount@gmail.com>
+======================================================================
+Date: 2010-10-29T16:48:13Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Skype Meeting
+MsgID: 12bf8e40fefc10b1
+
+ROFL FAIL
+no hubo reunión ayer, a mi se me olvidó, kek.
+
+2010/10/21 Knife_Fighting_Monkey <fancyaccount@gmail.com>
+======================================================================
+Date: 2010-10-29T16:55:05Z
+From: ledezman@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Skype Meeting
+MsgID: 12bf8ea04d68deb6
+
+Yo me acorde por eso mande ese 'test' de substampede. Pero como los vi en
+TF2 dije "ah di seguro estan haciendo la reunion en TF2... eeee xD"
+
+2010/10/29 Knife_Fighting_Monkey <fancyaccount@gmail.com>
+======================================================================
+Date: 2010-11-04T19:56:24Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Skype Meeting
+MsgID: 12c18767cca4f26b
+
+Recordatorio: hoy hay reunión OLOLOLOL
+
+2010/10/29 Ledezman <ledezman@gmail.com>
+======================================================================
+Date: 2010-11-04T19:57:39Z
+From: alexbarquero@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Skype Meeting
+MsgID: 12c18774aefbc17f
+
+Yo no puedo :(
+
+Clases y un compromiso :(
+
+2010/11/4 Knife_Fighting_Monkey <fancyaccount@gmail.com>
+======================================================================
+Date: 2010-11-05T02:31:58Z
+From: c0pp3r@b52clan.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Skype Meeting
+MsgID: 12c19e0a1c9633df
+
+@skype. Standing by.
+
+Cristián Morales
+
+2010/11/4 Alexander Barquero <alexbarquero@gmail.com>
+======================================================================
+Date: 2010-11-05T05:11:27Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Skype Meeting
+MsgID: 12c1a72a43699535
+
+*Presentes*
+
+   - Juancho
+   - Ledezman
+   - Morales
+   - Aguilar
+
+*Temas
+*
+
+   - Se discutió el avance hecho por Ledezman en el asunto del pathing, así
+   como la completación de Z1S3 y anotaciones de Monkey Island 2 y sombreros de
+   TF2.
+
+*Acuerdos*
+
+   - Morales y Aguilar acordaron entregar Z1S3 para el Domingo 21 de
+   Noviembre.
+   - Juancho y Ledezman iniciarán el diseño de la GUI (inventario,
+   diálogos).
+   - Ledezman hará un ajuste al pathing a modo de prueba, pero no es de
+   vital importancia en este momento.
+   - Se acordó una reunión en skype para el próximo *Jueves 11 de Moviembre,
+   a las 10pm*, con miras a evaluar el avance en estas tareas.
+
+2010/11/4 Cristián Morales <c0pp3r@b52clan.com>
+======================================================================
+Date: 2010-11-12T02:03:44Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Skype Meeting
+MsgID: 12c3dd3a73d0aa13
+
+**BUMP**
+hoy hay meeting, hay noticia que nos afecta y tal vez nos fuerce a hacer
+cambios.
+
+2010/11/4 Knife_Fighting_Monkey <fancyaccount@gmail.com>
+======================================================================
+Date: 2010-11-12T05:50:53Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Skype Meeting
+MsgID: 12c3ea34a933608b
+
+*Presentes*
+
+   - Juancho
+   - Ledezman
+   - Alex
+   - Aguilar
+
+*Temas
+*
+
+   - Se discutieron las posibles consecuencias y riegos de que representan
+   para el proyecto la noticia sobre
+Torque<http://www.shacknews.com/onearticle.x/66441>
+   .
+   - Medición e-p3n0r de librerías de steam/espacio en disco duro/horas
+   jugadas/dinero desperdiciado en juegos que no han sido ni instalados.
+
+*Acuerdos*
+
+   - Sigue en pie la fecha de entrega (Domingo 21 de Noviembre) de Z1S3 por
+   parte de Morales y Aguilar.
+   - Juancho y Ledezman iniciarán el diseño de la GUI (inventario,
+   diálogos).
+   - Ledezman hará una prueba de concepto utilizando Wintermute Engine
+   Development Kit <http://dead-code.org/home/>.
+   - En caso de serle posible, Juancho realizará una evaluación de
+Unity<http://unity3d.com/>
+   .
+   - Se acordó una reunión en skype para el próximo *Jueves 18 de Moviembre,
+   a las 10pm*, con miras a evaluar el avance en estas tareas.
+
+2010/11/11 Knife_Fighting_Monkey <fancyaccount@gmail.com>
+======================================================================
+Date: 2010-11-12T18:53:27Z
+From: c0pp3r@b52clan.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Skype Meeting
+MsgID: 12c416fc04623db6
+
+Sry por faltar, estoy en pleno maremierda. El 21 estarán las shits.
+
+Cristián Morales
+
+2010/11/11 Knife_Fighting_Monkey <fancyaccount@gmail.com>
+======================================================================
+Date: 2010-11-18T21:23:55Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Skype Meeting
+MsgID: 12c60dfa85b278d8
+
+**BUMP**
+Meeting hoy
+
+2010/11/12 Cristián Morales <c0pp3r@b52clan.com>
+======================================================================
+Date: 2010-11-19T04:50:34Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Skype Meeting
+MsgID: 12c6278916892634
+
+*Presentes*
+
+   - Ledezman
+   - Morales
+   - Aguilar
+
+*Temas
+*
+
+   - Ledezman reportó sus primeros resultados de la investigación sobre
+   Wintermute.
+   - Avance del Z1S3.
+   - Resultado de convocatoria de proyectos de YoEmprendedor.
+
+*Acuerdos*
+
+   - Se cambia la fecha de entrega de Z1S3 (Morales y Aguilar) al 2 de
+   Diciembre.
+   - Juancho y Ledezman iniciarán el diseño de la GUI (inventario,
+   diálogos).
+   - Ledezman seguirá haciendo pruebas sobre Wintermute Engine Development
+   Kit <http://dead-code.org/home/>, una vez que disponga de GPU.
+   - Se acordó una reunión en skype para el próximo *Jueves 25 de Moviembre,
+   a las 10pm*, con miras a evaluar el avance en estas tareas.
+
+2010/11/18 Knife_Fighting_Monkey <fancyaccount@gmail.com>

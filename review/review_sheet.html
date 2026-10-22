@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mesa de luz · Smoothface’s Epic</title>
+<style>
+  :root{
+    --table:#4b4b4b; --table-2:#444; --ink:#111; --paper:#efe7d4; --paper-2:#e2d8bf;
+    --ok:#3c7a4a; --bad:#a53c2e; --muted:#8c8578; --line:#b9b09a;
+    font-size:15px;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%;margin:0}
+  body{
+    font-family: "Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+    background:var(--table); color:var(--ink);
+    display:grid; grid-template-columns: 260px 1fr 340px; grid-template-rows: 48px 1fr;
+    height:100vh;
+  }
+  header{grid-column:1/-1; background:var(--paper); border-bottom:3px solid var(--ink);
+    display:flex; align-items:center; gap:18px; padding:0 16px}
+  header h1{font-size:1.05rem; font-weight:normal; margin:0; letter-spacing:.02em}
+  header .count{color:var(--muted)}
+  header .tabs{margin-left:auto; display:flex; gap:4px}
+  header .tabs button{font:inherit; border:2px solid var(--ink); background:transparent; padding:4px 10px; cursor:pointer}
+  header .tabs button[aria-pressed=true]{background:var(--ink); color:var(--paper)}
+
+  aside.list{background:var(--paper-2); border-right:3px solid var(--ink); overflow:auto}
+  aside.list ul{list-style:none; margin:0; padding:0}
+  aside.list li{padding:10px 12px; border-bottom:1px solid var(--line); cursor:pointer; line-height:1.3}
+  aside.list li .id{font-size:.9rem; word-break:break-all}
+  aside.list li .k{color:var(--muted); font-size:.8rem}
+  aside.list li[aria-current=true]{background:var(--paper); box-shadow: inset 4px 0 0 var(--ink)}
+  aside.list li .mark{float:right; font-size:.8rem}
+  aside.list li .mark.ok{color:var(--ok)} aside.list li .mark.bad{color:var(--bad)}
+
+  main{display:flex; flex-direction:column; min-width:0}
+  .stage{flex:1; display:flex; align-items:flex-end; justify-content:center; gap:28px; padding:24px; overflow:auto;
+    background:
+      linear-gradient(45deg,var(--table-2) 25%,transparent 25%,transparent 75%,var(--table-2) 75%),
+      linear-gradient(45deg,var(--table-2) 25%,transparent 25%,transparent 75%,var(--table-2) 75%);
+    background-size:24px 24px; background-position:0 0,12px 12px;}
+  .stage figure{margin:0; text-align:center; display:flex; flex-direction:column; align-items:center; gap:6px}
+  .stage figure img{display:block; image-rendering:auto; max-width:38vw; object-fit:contain}
+  .stage figure.cand img{outline:3px solid var(--paper); outline-offset:6px}
+  .stage figcaption{color:var(--paper); font-size:.8rem; max-width:22ch; word-break:break-all}
+  .stage .empty{color:var(--paper); align-self:center; font-size:1.1rem}
+  .controls{background:var(--paper); border-top:3px solid var(--ink); padding:12px 16px; display:grid;
+    grid-template-columns: auto 1fr auto auto; gap:10px; align-items:center}
+  .controls label{color:var(--muted); font-size:.85rem}
+  .controls input[type=range]{width:160px; vertical-align:middle}
+  .controls textarea{font:inherit; width:100%; min-height:44px; resize:vertical; border:2px solid var(--ink); background:#fff; padding:6px 8px}
+  .controls button{font:inherit; font-size:1rem; padding:10px 18px; border:2px solid var(--ink); cursor:pointer; background:#fff}
+  .controls button.ok{background:var(--ok); color:#fff; border-color:var(--ok)}
+  .controls button.bad{background:var(--bad); color:#fff; border-color:var(--bad)}
+  .controls button:focus-visible, textarea:focus-visible, li:focus-visible{outline:3px solid #ffd166; outline-offset:2px}
+  .controls .keys{grid-column:1/-1; color:var(--muted); font-size:.8rem}
+
+  aside.info{background:var(--paper-2); border-left:3px solid var(--ink); overflow:auto; padding:14px; font-size:.9rem; line-height:1.4}
+  aside.info h2{font-size:.95rem; margin:14px 0 6px; font-weight:normal; border-bottom:1px solid var(--line)}
+  aside.info h2:first-child{margin-top:0}
+  aside.info p{margin:4px 0}
+  aside.info ul{padding-left:18px; margin:4px 0}
+  .gate.ok::before{content:"✓ "; color:var(--ok)} .gate.bad::before{content:"✗ "; color:var(--bad)}
+  .sev{font-size:.75rem; color:var(--muted)}
+  .toast{position:fixed; left:50%; bottom:110px; transform:translateX(-50%); background:var(--ink); color:var(--paper);
+    padding:8px 14px; opacity:0; transition:opacity .2s}
+  .toast.show{opacity:1}
+  #shots{display:none; padding:20px; overflow:auto; color:var(--paper)}
+  #shots img{max-width:100%; display:block; margin:8px 0 20px; outline:3px solid var(--paper); outline-offset:4px}
+  @media (prefers-reduced-motion:reduce){.toast{transition:none}}
+  @media (max-width:1100px){ body{grid-template-columns:200px 1fr 280px} }
+</style>
+</head>
+<body>
+<header>
+  <h1>Mesa de luz</h1>
+  <span class="count" id="count">cargando…</span>
+  <div class="tabs">
+    <button id="tab-pieces" aria-pressed="true">Piezas</button>
+    <button id="tab-shots" aria-pressed="false">Vistas del cuarto</button>
+    <button id="tab-all" aria-pressed="false" title="incluye aprobadas y rechazadas">Todo</button>
+  </div>
+</header>
+
+<aside class="list"><ul id="list"></ul></aside>
+
+<main>
+  <section class="stage" id="stage"><p class="empty">No hay piezas esperando revisión.</p></section>
+  <section id="shots"></section>
+  <div class="controls" id="controls">
+    <label>Altura de comparación <input type="range" id="zoom" min="120" max="620" value="360"></label>
+    <textarea id="reason" placeholder="Motivo (obligatorio para rechazar). Escribí lo que ves, con tus palabras: eso es lo que calibra a los críticos."></textarea>
+    <button class="ok" id="btn-ok">Aprobar</button>
+    <button class="bad" id="btn-bad">Rechazar</button>
+    <div class="keys">Teclas: <b>A</b> aprobar · <b>R</b> escribir motivo y rechazar con <b>Ctrl+Enter</b> · <b>J</b>/<b>K</b> siguiente/anterior</div>
+  </div>
+</main>
+
+<aside class="info" id="info"></aside>
+<div class="toast" id="toast"></div>
+
+<script>
+(() => {
+  const $ = s => document.querySelector(s);
+  let items = [], idx = 0, reviews = {}, showAll = false;
+
+  const file = p => '/file/' + encodeURI(p);
+  const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const toast = m => { const t=$('#toast'); t.textContent=m; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),1400); };
+
+  async function load() {
+    const [c, r] = await Promise.all([
+      fetch('/api/candidates' + (showAll ? '?all=1' : '')).then(x => x.json()),
+      fetch('/api/reviews').then(x => x.json())]);
+    items = c; reviews = {};
+    for (const v of r.reviews) reviews[v.id + '@' + v.version] = v;
+    idx = Math.min(idx, Math.max(0, items.length - 1));
+    renderList(); renderStage();
+  }
+
+  function renderList() {
+    const pending = items.filter(i => !reviews[i.id + '@' + i.version]).length;
+    $('#count').textContent = items.length ? `${pending} pendientes de ${items.length}` : 'nada en la mesa';
+    $('#list').innerHTML = items.map((i, n) => {
+      const v = reviews[i.id + '@' + i.version];
+      const mark = v ? `<span class="mark ${v.verdict==='approved'?'ok':'bad'}">${v.verdict==='approved'?'aprobada':'rechazada'}</span>` : '';
+      return `<li tabindex="0" data-n="${n}" aria-current="${n===idx}">${mark}<div class="id">${esc(i.id)}</div><div class="k">${esc(i.kind||'')} · ${esc(i.version)}</div></li>`;
+    }).join('');
+    $('#list').querySelectorAll('li').forEach(li => li.onclick = () => { idx = +li.dataset.n; renderList(); renderStage(); });
+  }
+
+  function renderStage() {
+    const st = $('#stage'), info = $('#info'), it = items[idx];
+    if (!it) { st.innerHTML = '<p class="empty">No hay piezas esperando revisión.</p>'; info.innerHTML=''; return; }
+    const h = $('#zoom').value;
+    const fig = (src, cap, cls='') => `<figure class="${cls}"><img src="${file(src)}" style="height:${h}px" alt=""><figcaption>${esc(cap)}</figcaption></figure>`;
+    const refs = (it.references||[]).slice(0,2).map(r => fig(r, r.split('/').pop()));
+    const neigh = (it.neighbors||[]).slice(0,2).map(r => fig(r, 'aprobada · ' + r.split('/').pop()));
+    st.innerHTML = refs.join('') + fig(it.image, it.id + ' · ' + it.version, 'cand') + neigh.join('');
+    $('#reason').value = (reviews[it.id+'@'+it.version]||{}).reason || '';
+
+    const g = it.gates;
+    const gates = g ? Object.keys(g).filter(k=>k.endsWith('_ok')).map(k =>
+      `<li class="gate ${g[k]?'ok':'bad'}">${k.replace('_ok','')}${g[k.replace('_ok','_fraction')]!==undefined?' <span class="sev">'+g[k.replace('_ok','_fraction')]+'</span>':''}</li>`).join('') : '<li>sin gates</li>';
+    const critic = c => !c ? '<p class="sev">no corrió</p>' :
+      (c.defects&&c.defects.length ? '<ul>'+c.defects.map(d=>`<li>${esc(d.zone)}: ${esc(d.what)} <span class="sev">${esc(d.severity)}</span></li>`).join('')+'</ul>'
+       : `<p>${esc(c.verdict)}</p>`);
+    info.innerHTML = `
+      <h2>Qué debería ser</h2><p>${esc(it.what)||'<i>sin descripción</i>'}</p>
+      ${it.target_height_px?`<p class="sev">alto objetivo ${it.target_height_px}px${g&&g.measured_height_px?' · medido '+g.measured_height_px+'px':''}</p>`:''}
+      ${it.last_rejection?`<h2>Tu rechazo anterior (${esc(it.last_rejection.version)})</h2><p>“${esc(it.last_rejection.reason)}”</p>`:''}
+      <h2>Gates</h2><ul>${gates}</ul>
+      <h2>Crítico de estilo</h2>${critic(it.critic_style)}
+      <h2>Crítico de anatomía</h2>${critic(it.critic_anatomy)}`;
+  }
+
+  async function verdict(v) {
+    const it = items[idx]; if (!it) return;
+    const reason = $('#reason').value.trim();
+    if (v === 'rejected' && !reason) { toast('Un rechazo necesita motivo.'); $('#reason').focus(); return; }
+    const r = await fetch('/api/review', {method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({id: it.id, version: it.version, verdict: v, reason})}).then(x=>x.json());
+    if (r.error) { toast(r.error); return; }
+    reviews[it.id+'@'+it.version] = {verdict:v, reason};
+    toast(v === 'approved' ? 'Aprobada' : 'Rechazada');
+    const next = items.findIndex((x,n) => n>idx && !reviews[x.id+'@'+x.version]);
+    idx = next >= 0 ? next : idx;
+    renderList(); renderStage();
+  }
+
+  $('#btn-ok').onclick = () => verdict('approved');
+  $('#btn-bad').onclick = () => verdict('rejected');
+  $('#zoom').oninput = renderStage;
+  document.addEventListener('keydown', e => {
+    const inText = e.target.tagName === 'TEXTAREA';
+    if (inText && e.key === 'Enter' && (e.ctrlKey||e.metaKey)) { e.preventDefault(); verdict('rejected'); return; }
+    if (inText) return;
+    if (e.key === 'a' || e.key === 'A') verdict('approved');
+    if (e.key === 'r' || e.key === 'R') { $('#reason').focus(); }
+    if (e.key === 'j' || e.key === 'J') { idx = Math.min(items.length-1, idx+1); renderList(); renderStage(); }
+    if (e.key === 'k' || e.key === 'K') { idx = Math.max(0, idx-1); renderList(); renderStage(); }
+  });
+
+  function tab(which) {
+    $('#tab-pieces').setAttribute('aria-pressed', which==='pieces');
+    $('#tab-shots').setAttribute('aria-pressed', which==='shots');
+    $('#tab-all').setAttribute('aria-pressed', which==='all');
+    $('#stage').style.display = which==='shots' ? 'none' : 'flex';
+    $('#controls').style.display = which==='shots' ? 'none' : 'grid';
+    $('#shots').style.display = which==='shots' ? 'block' : 'none';
+    showAll = which === 'all';
+    if (which === 'shots') loadShots(); else load();
+  }
+  $('#tab-pieces').onclick = () => tab('pieces');
+  $('#tab-shots').onclick = () => tab('shots');
+  $('#tab-all').onclick = () => tab('all');
+
+  async function loadShots() {
+    const runs = await fetch('/api/shots').then(x=>x.json());
+    $('#shots').innerHTML = runs.length ? runs.map(r => `<h2>${esc(r.run)}</h2>` + r.images.map(i=>`<img src="${file(i)}" alt="">`).join('')).join('')
+      : '<p>Todavía no hay vistas del cuarto. El skill room-layout las deja en review/layout_shots/.</p>';
+  }
+
+  load();
+})();
+</script>
+</body>
+</html>

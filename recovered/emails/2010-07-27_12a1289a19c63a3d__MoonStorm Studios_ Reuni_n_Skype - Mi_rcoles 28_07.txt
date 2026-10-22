@@ -1,0 +1,264 @@
+THREAD 12a1289a19c63a3d  [MoonStorm Studios] Reunión@Skype - Miércoles 28/07
+URL: https://mail.google.com/mail/?authuser=alexbarquero@gmail.com#all/thread-f:1342398806255614525
+Messages: 15
+
+======================================================================
+Date: 2010-07-27T06:14:23Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: [MoonStorm Studios] Reunión@Skype - Miércoles 28/07
+MsgID: 12a1289a19c63a3d
+
+Este miércoles (kek) reunión en skype.
+Cuentas: comele.bien, juanv.garcia, xygvot y psytechdragon
+
+Temas:
+-Engine
+-Avance de diseño
+-Fechas tentativas de producción
+======================================================================
+Date: 2010-07-27T13:15:59Z
+From: ledezman@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Reunión@Skype - Miércoles 28/07
+MsgID: 12a140ba58f2a586
+
+Cuenta: ledezman
+
+A que hora es la reunion? Me serviria que fuera como a las 10 a mi.
+
+2010/7/27 Knife_Fighting_Monkey <fancyaccount@gmail.com>
+======================================================================
+Date: 2010-07-29T07:14:51Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Reunión@Skype - Miércoles 28/07
+MsgID: 12a1d0e0d953b93d
+
+La reunión estuvo groso.
+
+   - El tema del Yo Emprendedor queda a espera de las fechas, entregables y
+   lineamientos (cambios) que hagan públicos los orátes del concurso el día 18
+   de agosto. El asunto del plan de negocio queda con un salario fake de c500K,
+   esto para *presentar un caso hipotético que sea llamativo como
+oferta*(números con salarios mayores+gastos de localía+software+equipo
+simplemente
+   se comerían unos posibles $300K en menos de 18 meses). El principal objetivo
+   de la participación es lograr contactos con inversionistas y exponer a *MSS
+   como una opción viable que capte el interés de estas personas*, lo que
+   venga por agregado pues ¡en hora buena!
+
+   - En aras de entrar de lleno con el asunto del desarrollo mismo del
+   juego, haremos una prueba de concepto basándonos en el primer puzzle del
+   diseño de *Sparkle*.
+   Este escenario presenta todas las condiciones y retos que el proyecto
+   contiene en su totalidad (animaciones/scripted events, interacción de
+   personajes/escenarios, diálogos y solución de puzzles), por lo que el éxito
+   de esta tarea significaría un gran avance, así como prueba del flujo de
+   trabajo y dinámica del grupo.
+
+   Esta prueba se estaría desarrollando en *Torque2D*
+(YARR!<http://rs381.rapidshare.com/files/136674820/t.g.b.v1.7.4.r.rar>,
+pass: s7or4x, es un loop-clusterfuck de rars) y constaría de
+   *Ecstasy of Gold* (EG) en la parte técnica y* Black Hole Sun* (BHS) en la
+   parte de arte/diseño.
+
+   El *Martes 3 de Agosto* a más tardar, estaré enviando un plan de proyecto
+   con las tareas de BHS, EG queda a cargo de agregar sus propias tareas al
+   plan y postearlo en el grupo.
+   Si no tienen MS Project, pueden descargar el open source OpenProj
+aquí<http://sourceforge.net/projects/openproj/files/>
+   .
+   Esta prueba tiene un tiempo límite de 30 días naturales.
+   El mismo Martes 3 de Agosto tendremos una reunión en Skype para afinar
+   detalles del plan/atender alguna duda y definir día de inicio.
+
+   - Un punto importante de la prueba de concepto es *definir antes del
+   Viernes 30 de Julio*, un método y canal para el *sharing *de los *assets*.
+
+*GENTLEMEN.... START YOUR ENGINES!*
+
+2010/7/27 Ledezman <ledezman@gmail.com>
+======================================================================
+Date: 2010-07-30T18:21:05Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Reunión@Skype - Miércoles 28/07
+MsgID: 12a24966035aa266
+
+¿Que conchas usamos para subversion? ¿Tortoise+google code? ¿Mercury?
+
+2010/7/29 Knife_Fighting_Monkey <fancyaccount@gmail.com>
+======================================================================
+Date: 2010-07-30T18:22:50Z
+From: jvgarcia@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Reunión@Skype - Miércoles 28/07
+MsgID: 12a2497ad06c59f0
+
+Quizas pueda poner un repositorio en mi servidor, si no por ahi habian varas
+gratis, pero lo ideal seria tener esa vara en un servidor nuestro y privado.
+
+2010/7/30 Knife_Fighting_Monkey <fancyaccount@gmail.com>
+======================================================================
+Date: 2010-07-30T19:33:03Z
+From: alexbarquero@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Reunión@Skype - Miércoles 28/07
+MsgID: 12a24d7e8e894b14
+
+Esta gente de Atlassian tiene una vara que yo estaba haciéndole números, se
+llama Fisheye:
+
+http://www.atlassian.com/software/fisheye/
+
+Lean y vean los videos. Creo que tiene lo que necesitamos y un poco más,
+especialmente si vamos a trabajar remotamente.
+
+2010/7/30 Juan V. García <jvgarcia@gmail.com>
+======================================================================
+Date: 2010-07-30T19:33:25Z
+From: alexbarquero@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Reunión@Skype - Miércoles 28/07
+MsgID: 12a24d83cbda564c
+
+Igual que Confluence, solo nos cuesta 10$ por año por ser un equipo de menos
+de 10 personas.
+
+2010/7/30 Alexander Barquero <alexbarquero@gmail.com>
+======================================================================
+Date: 2010-08-03T05:00:28Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Reunión@Skype - Miércoles 28/07
+MsgID: 12a3652cf81f8046
+
+*Recordatorio:
+Reunión mañana@Skype a las 10pm.
+Cheers!*
+
+2010/7/30 Alexander Barquero <alexbarquero@gmail.com>
+======================================================================
+Date: 2010-08-03T22:50:01Z
+From: c0pp3r@b52clan.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Reunión@Skype - Miércoles 28/07
+MsgID: 12a3a26009bc7967
+
+Tengo que reunirme con los hobos de la U en Tibas, espero llegar a las 11pm
+a la choza.
+
+Cristián Morales
+
+2010/8/2 Knife_Fighting_Monkey <fancyaccount@gmail.com>
+======================================================================
+Date: 2010-08-04T18:02:12Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Reunión@Skype - Miércoles 28/07
+MsgID: 12a3e44e1cb10f6f
+
+Memo de la reunión de ayer
+
+   - Se inició la discusión sobre el asunto de la persistencia. Detalles e
+   input en el correo que mandó Juancho al respecto. Preferiblemente el tema
+   debería de ser finalizado para esta semana (*Viernes 6*), con la opción
+   elegida y el asunto del *hosting* finiquitado para hacer vueltas y
+   pruebas la próxima semana.
+   - La fecha de inicio de producción del demo es el *Lunes 16 de Agosto*,
+   por lo que esta y la otra semana quedan como de aprendizaje/traveseo del
+   Torque2D y al menos conocer cual es el flujo de trabajo que utiliza el motor
+   (formato de los assets, métodos de animación/scripting, como se conforman
+   los niveles, GUI, etc.).
+   - El plan de proyecto de la parte de diseño (aka *Sparkle*) queda en *hold
+   *durante la duración del tiempo de producción del demo (estamos en la
+   tarea de desarrollo del libreto FYI).
+   - El plan de producción del demo (con las tareas de *Black Hole Sun*+algunas
+   compartidas) está en el grupo (a ver si funca el
+hotlink<http://groups.google.com/group/moonstorm/web/Substampede_design.mpp>,
+   else es *Substampede_design.mpp*). *Ecstasy of Gold* debe agregar sus
+   tareas según criterios propios y notificar cuando así lo haga.
+
+*GENTLEMEN... IT'S ON!*
+
+2010/8/3 Cristián Morales <c0pp3r@b52clan.com>
+======================================================================
+Date: 2010-08-05T00:10:07Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Reunión@Skype - Miércoles 28/07
+MsgID: 12a3f95b5859fa1b
+ATTACHMENT: torque2d-CTD_DEP.png (image/png)
+
+a modo de información: si Torque *crashea *al abrirse, deben agregar el
+TorqueGameBuilder.exe a las excepciones de DEP
+cheers!
+
+2010/8/4 Knife_Fighting_Monkey <fancyaccount@gmail.com>
+======================================================================
+Date: 2010-08-06T18:33:43Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Reunión@Skype - Miércoles 28/07
+MsgID: 12a48ae6f28be01a
+
+mas troubleshooting: si no les funcan los* particle effects* (como el de la
+lluvia en el tutorial), sigan esta crap: Torque2D-Using the Particles
+Resource<http://docs.torquepowered.com/tgb/official/content/documentation/Component%20Tutorials/Adding%20Assets/Using%20the%20Particles%20Resource.html>
+cheers!
+
+2010/8/4 Knife_Fighting_Monkey <fancyaccount@gmail.com>
+======================================================================
+Date: 2010-08-06T21:50:34Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Reunión@Skype - Miércoles 28/07
+MsgID: 12a4962a7c29258b
+
+Torque: Topic de Font
+styles/sizes<http://www.torquepowered.com/community/forums/viewthread/116409>
+
+2010/8/6 Knife_Fighting_Monkey <fancyaccount@gmail.com>
+======================================================================
+Date: 2010-08-18T02:48:53Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Reunión@Skype - Miércoles 28/07
+MsgID: 12a8319bb288b0f1
+ATTACHMENT: scenary_template.7z (application/octet-stream)
+
+Adjunto el *template *para creación de escenarios, el *layer *llamado
+"content_zone" y delineado por el rectángulo rojo es la zona común para
+todas las resoluciones (y donde se podrán los items de
+interacción/personajes).
+La GUI: ¿se escala según la resolución ó se deja dentro del "content_zone"?
+La segúnda opción tiene la cagada que en resoluciones bajas se van a ver
+gigantes algunas shits. Le dejo la pregunta a los compas de Ecstasy of Gold.
+
+2010/8/6 Knife_Fighting_Monkey <fancyaccount@gmail.com>
+======================================================================
+Date: 2010-08-18T02:49:18Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Reunión@Skype - Miércoles 28/07
+MsgID: 12a831a1f79d6da7
+
+es scenery, kekekekkekakaka
+
+2010/8/17 Knife_Fighting_Monkey <fancyaccount@gmail.com>

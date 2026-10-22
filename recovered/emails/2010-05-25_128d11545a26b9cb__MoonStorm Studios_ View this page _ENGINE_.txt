@@ -1,0 +1,90 @@
+THREAD 128d11545a26b9cb  [MoonStorm Studios] View this page "ENGINE"
+URL: https://mail.google.com/mail/?authuser=alexbarquero@gmail.com#all/thread-f:1336743718386317771
+Messages: 6
+
+======================================================================
+Date: 2010-05-25T20:09:10Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: [MoonStorm Studios] View this page "ENGINE"
+MsgID: 128d11545a26b9cb
+
+nuevo build
+======================================================================
+Date: 2010-05-25T20:27:10Z
+From: skrybble@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: [MoonStorm Studios] Re: View this page "ENGINE"
+MsgID: 128d125bab13dce8
+
+tnx!
+ese Scaleform GFx promete!
+gg
+
+On May 25, 1:09 pm, Knife_Fighting_Monkey <fancyacco...@gmail.com>
+wrote:
+======================================================================
+Date: 2010-05-27T14:51:20Z
+From: skrybble@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: [MoonStorm Studios] Re: View this page "ENGINE"
+MsgID: 128da3f00a4e8e5d
+
+una muestra..
+
+http://www.youtube.com/watch?v=zKDuzVbi50Q&feature=player_embedded
+
+gg
+======================================================================
+Date: 2010-06-01T16:42:15Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: [MoonStorm Studios] View this page "ENGINE"
+MsgID: 128f4645742610b6
+
+2 Nuevas fuentes:
+UnrealScript (para UT2004/UE2-2.5) y Scaleform GFx
+
+Click on http://groups.google.com/group/moonstorm/web/engine - or copy
+& paste it into your browser's address bar if that doesn't work.
+======================================================================
+Date: 2010-06-07T16:26:29Z
+From: skrybble@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: [MoonStorm Studios] Re: View this page "ENGINE"
+MsgID: 129133c0f70e77bb
+
+Acá hay otra página que tiene muchos tutoriales útiles sobre el UDK
+tmbien hay scripts, texturas y otras varas!!
+
+http://www.hourences.com/book/tutorialsindex.htm
+
+Tuanis!
+-BooT
+
+On Jun 1, 9:42 am, Knife_Fighting_Monkey <fancyacco...@gmail.com>
+wrote:
+======================================================================
+Date: 2010-06-07T16:31:02Z
+From: jvgarcia@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Re: View this page "ENGINE"
+MsgID: 12913403fc8ec899
+
+Yo estuve viendo algunas cosas de ahi. Por cierto, en cuanto a asuntos mas
+relacionados a programacion, logre configurar un "ambiente de programacion"
+usando wotgreal. un de los dos ides especializados (la licencia de nfringe
+es prohibitivamente cara). No se si alguien mas se ha puesto a ver cosas
+mas relacionadas con programacion, yo lo hecho porque no se que tan bien me
+vaya a ir editando niveles y esas varas. Voy a ver si pongo un wiki en
+algun lado, o si igual utilizo el sistema esta para un par de paginas sobre
+lo que he ido viendo que creo que nos va a ser util/ de fijo va a ser
+necesario.
+
+2010/6/7 Brian - BooT <skrybble@gmail.com>

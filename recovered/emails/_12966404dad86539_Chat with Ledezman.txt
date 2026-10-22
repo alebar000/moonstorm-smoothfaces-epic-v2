@@ -1,0 +1,88 @@
+THREAD 12966404dad86539  Chat with Ledezman
+URL: https://mail.google.com/mail/?authuser=alexbarquero@gmail.com#all/thread-f:1339367911203562809
+Messages: 1
+
+======================================================================
+Date: None
+From: ledezman@gmail.com
+To: alexbarquero@gmail.com
+Cc: 
+Subject: Chat with Ledezman
+MsgID: 12966404dad86539
+
+Ledezman: dudo que pueda tener mi doc kek. Ayer me la pase haciendo shits con Torque y hoy en el brete dudo que pueda ponerme a investigar por que hoy no creo que pueda flotar.
+Ledezman: asi que ahi vere que puedo averiguar en la noche.
+me: relax mae
+me: yo estoy parecido
+Ledezman: cargo el 'juego'? lol
+me: si mae
+me: jajaja
+me: y reboté contra el techo :P
+Ledezman: shit que no pude ponerle el splash screen. Hice uno con el logo de moonstorm etc
+Ledezman: se veia pro
+me: jajaja
+Ledezman: pero no se que carajos segui el ejemplo
+me: esa vara tiene para definir meshes y eso?
+Ledezman: y no le daba la gana al codigo.
+Ledezman: en este engine 2d
+Ledezman: no hay meshes
+Ledezman: todo son sprites.
+me: hmm
+me: y como se definen las zonas de caminado, las entradas y salida,s el pathing y eso?
+Ledezman: esa imagen que ve en el juego no es un puro background
+Ledezman: cada nube etc es un objetillo
+me: no? :o
+me: ah mae, nice!
+Ledezman: a los objetos sprites se les definen colision etc
+me: ah mae, damn
+me: que complejo
+Ledezman: yep
+me: que breteada hijueputa
+me: jajajaja
+Ledezman: eso le deica a aguilar
+Ledezman: no es un drag n drop y gg game
+me: como AGS
+Ledezman: si hay bastante scripting. No en el ejemplo
+Ledezman: pues no hay mucha colision ahi xD solo un 'world limit' para que el bicho no se salga de la pantalla
+Ledezman: el engine tiene 32 layers para poner sprites. Se les asigna un numero y con eso se define que esta adelante y que esta atras.
+Ledezman: en fin, hay bastante que aprender incluso si se escogiera ese tool. Y bastante que programar kek. Pero esta vacilon.
+me: se ve gosu
+me: hay que probar los otros
+me: a ver que teal
+Ledezman: yep. Este esta muy tuanis en el manejo de assets
+Ledezman: de hecho los puede ver el spam de pngs
+Ledezman: que agarre del psd de aguilar
+me: jajaja
+Ledezman: pero de ahi se sacan sprites animados etc
+me: entiendo
+Ledezman: en fin, food for thought.
+Ledezman: lol
+me: mae, debería echarle un vistazo a AGS
+me: ya lo vió como es?
+Ledezman: nop
+me: me parece que es justo lo que necesitamos
+me: pero sin la calidad gráfica que necesitamos
+me: ese es el problema
+me: so pudieramos replicar esa vara en otro motor de esos
+me: gosu
+Ledezman: no debe ser tan dificil
+Ledezman: di el torque ahi tiene mouse events etc
+Ledezman: es que ayer le entre ahi a lo caballo a hacer algo con el psd de aguilar
+Ledezman: pero hay tutoriales ahi para hacer un 'whack a mole' y jueguillos asi
+Ledezman: y con eso ya aprender mas de los eventos y delimitar paths, colisiones etc.
+Ledezman: en fin, lol no es que tenga acciones de Torque y lo este promocionando
+Ledezman: es solo que es el que estoy viendo xD
+me: jajajaja
+me: entiendo
+me: mae, hay que ver ese otro que puse ahí
+me: Visionare
+me: yel otro Witnerno se que picha
+me: esos se ven hardcore gosu tambien
+Ledezman: si hay que ver bien por donde irse
+Ledezman: antes de casarse con un engine kek
+Ledezman: evaluen.
+me: exacto
+me: lo voe muy interesado con los engines de PC mae
+me: esa podría ser su tarea
+Ledezman: lol di no daria a basto yo solo con tanto engine. Meta a juancho tambien kek
+me: quien dijo miedo?

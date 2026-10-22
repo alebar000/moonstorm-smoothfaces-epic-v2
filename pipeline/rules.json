@@ -1,0 +1,13 @@
+{
+  "_comment": "Umbrales de gates.py. Vienen de STYLE_BIBLE §3; Alex los ajusta ahí y aquí a la vez.",
+  "ink_lum": 50,
+  "ink_chroma": 45,
+  "ink_min": 4,
+  "ink_max": 9,
+  "halo_lum": 225,
+  "halo_max": 0.003,
+  "sticker_max": 0.15,
+  "grad_lo": 6,
+  "grad_hi": 40,
+  "grad_max": 0.12
+}

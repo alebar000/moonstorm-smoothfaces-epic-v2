@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "review.json - veredictos de Alex sobre piezas propuestas",
+  "type": "object",
+  "required": ["reviews"],
+  "properties": {
+    "reviews": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "version", "verdict", "ts"],
+        "properties": {
+          "id": {"type": "string", "description": "piece_id, ej. smoothface.hand_front.fist"},
+          "version": {"type": "string", "pattern": "^v[0-9]+$"},
+          "verdict": {"enum": ["approved", "rejected"]},
+          "reason": {"type": "string", "description": "motivo literal de Alex; obligatorio si rejected"},
+          "ts": {"type": "string", "format": "date-time"}
+        }
+      }
+    }
+  }
+}

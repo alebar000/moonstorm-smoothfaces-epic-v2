@@ -1,0 +1,15 @@
+# Dependencies
+node_modules/
+
+# Build outputs and Vite cache
+dist/
+dist-ssr/
+.vite/
+
+# Heavy binary archives from 2010 recovery (>15MB each)
+recovered/builds/*.7z
+
+# Temp & OS files
+.DS_Store
+Thumbs.db
+*.tmp

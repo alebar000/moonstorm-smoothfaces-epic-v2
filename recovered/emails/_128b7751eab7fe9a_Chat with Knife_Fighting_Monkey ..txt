@@ -1,0 +1,210 @@
+THREAD 128b7751eab7fe9a  Chat with Knife_Fighting_Monkey .
+URL: https://mail.google.com/mail/?authuser=alexbarquero@gmail.com#all/thread-f:1336292908159467162
+Messages: 1
+
+======================================================================
+Date: None
+From: fancyaccount@gmail.com
+To: alexbarquero@gmail.com
+Cc: 
+Subject: Chat with Knife_Fighting_Monkey .
+MsgID: 128b7751eab7fe9a
+
+me: que se sabeeeeeeeeeeeeeeeee}
+Knife_Fighting_Monkey: lotsa shit going on on the moonstorm front :{D
+Knife_Fighting_Monkey: jueputa gtalk
+me: jaja que pasa?
+Knife_Fighting_Monkey: se cagó en el mostacciolli
+Knife_Fighting_Monkey: estamos discutiendo la parte del motor, pq si, ya llegamos a eso
+me: whao damn
+me: quienes?
+Knife_Fighting_Monkey: casi que todos: juancho, alpha, boot y este server
+me: que cool mae
+me: lastima que no me haya podido involucrar a las habladas de la vara
+me: el trabajo me tiene de las pelotas
+me: ahora si es en serio
+Knife_Fighting_Monkey: todavia estamos discutiendo exactamente que usar
+Knife_Fighting_Monkey: en el diseño, mae que ganas de sentarme con ud para contarle
+Knife_Fighting_Monkey: suena bastante gosu, quitando el bias
+me: me imagino
+Knife_Fighting_Monkey: hoy va a estar?
+me: en la noche?
+me: yes
+me: seguro tarde pero si
+me: y muy cheered up
+Knife_Fighting_Monkey: hoy hay luna llena?
+me: jajaj
+me: di no}
+me: solo estoy respetando nuestro agreement de la vez pasada
+me: mae y como está la jugada?
+me: cuénteme
+me: no puedo escribir mucho pero si puedo leer
+me: mientras la pus compila/se actualiza
+Knife_Fighting_Monkey: hace una semana empezamos a ver que engine usar, era un tema que realmente estaba esperando que llegara, pq pone en perspectiva muchas craps en cuanto a tiempos y espectativas
+me: yo usaría UE3
+Knife_Fighting_Monkey: juancho echó un vistazo a la lista de engines open source que le habia pasado, ver documentacion, otros proyectos, etc
+Knife_Fighting_Monkey: y pues luego de deliberar un poco, OGRE3D (el que usaron en Torchlight) parecia buena opcion, es bastante capaz, tiene buena documentacion y respaldo de la comunidad
+Knife_Fighting_Monkey: peeeeeero... es solo un renderer, nada mas
+Knife_Fighting_Monkey: se guinda de un revergo de plug ins, ocupariamos pegar engines de sonido y fisica terceros o propios (rofl) y que hicieramos todas las herramientas desde cero
+Knife_Fighting_Monkey: segun hablamos desde un inicio, pues la idea era crear un proyecto pequeño en un tiempo corto, algo viable de completar en tiempo libre y que no requiriera full time para lograr resultados
+Knife_Fighting_Monkey: yendose por esa via, crear ese aterro de mierdas, para ser sincero y sin menospreciar nuestras habilidades como programadores, en 6 meses no veo al OGRE3D corriendo con fisica y sonido y una suite de tools corriendo
+Knife_Fighting_Monkey: entonces hoy, viendo noticias, vi que un grupo de modders anunció un proyecto usando UDK con la licencia indie, me puse a buscar al respecto y pues el modelo de precios no se ve tan mal, al menos es mejor que el unity3D, es una shit tried & tested, usada en un sin numero de titulos y generos, tiene recursos para aprender bastos y ademas, si en algun momento decidieramos soltar lo que hagamos, nos abre de paso las puertas a multiplatform
+Knife_Fighting_Monkey: por otro lado, si decidimos no soltar un carajo, no pagamos un centavo pero tenemos en el cv una shit ampliamente usada en la industria
+Knife_Fighting_Monkey: en 6 meses, bien podemos haber aprendido la herramienta de pies a cabeza y es mas, creando contenido
+Knife_Fighting_Monkey: caso contrario a lo que veo con OGRE3D
+Knife_Fighting_Monkey: boot esta de acuerdo, "nada que perder, mucho que ganar" dice, juancho tambien ve los pros y hasta abrió la posibilidad de tirar Stache de un platformer 2.5D a uno full 3D tipo Psychonauts, y la verdad es que imo el concepto lo hemos pulido bastantillo como para que el cambio de perspectiva no implica que no funcione
+Knife_Fighting_Monkey: hoy no he tenido oportunidad de hablar con alpha, pero yo se que ese mae a lo que sea le entra
+me: hmm
+me: me suena
+me: la pura verdad suena mucho
+me: aunque no lo veo como un juego 3d
+me: demasiado complicado level design
+me: suena más bonito 2.5d
+me: a lo Trine/Braid
+Knife_Fighting_Monkey: yo tambien lo veo mejor como un 2.5D, solo digo que con algunos ajustes un full 3D no seria tan loco, obviamente mete otro nivel de dificultad, pero la posibilidad esta ahi
+Knife_Fighting_Monkey: tampoco es que me voy de jupa con que lo que es 3D es el santo grial y que no importa el concepto, si es en 3D funciona...
+Knife_Fighting_Monkey: NAY I SAY!
+me: jajajaja
+me: mae que cool
+me: que es la vara del UDK con licencia indie, no se puede vender?
+Knife_Fighting_Monkey: usarlo es libre de uso, cuando se lanza un proyecto en UE3 se paga una licencia por royalties de $99.99
+Knife_Fighting_Monkey: cuando se llega a un monto de $15K de ingresos, se empieza a pagar a epic 25% por cuarto (semestre)
+Knife_Fighting_Monkey: ingresos verdad, no ganancias
+Knife_Fighting_Monkey: osea, darle la tajada a epic y luego pagar salarios, kek
+me: cuantas unidades cree que vende un juego indie promedio? a 20dls?
+me: 100K?
+Knife_Fighting_Monkey: es muy posible, en steam? sino me equivoco, torchlight en sus primeros 8 meses vendió 500K unidades (casi todo steam)
+me: pero digamos que no sea Steam
+me: distribución propia
+me: via web
+me: tipo Lugaru y esos juegos
+Knife_Fighting_Monkey: que por cierto esta semana los compraron unos chinos en $8.5 millones
+me: damn
+Knife_Fighting_Monkey: no tengo idea
+Knife_Fighting_Monkey: por cierto, estoy armando un correo para preguntarle a valve costos de licenciamiento de source y otro para steam para costos de distribución
+Knife_Fighting_Monkey: kek
+me: yo creo que el toque sería
+me: vender la idea del proyecto
+me: a alguna empresa tica
+me: Link
+me: o ParqueTec
+me: no sería mala idea
+me: ver si nos dan pelota
+me: vea
+me: si esos maes dicen que si
+me: y nos financian la madre
+me: habría que devolver como el 30% de las ganancias y etc
+me: pero darían un pichazo de plata para financiar el proyecto
+me: igual que como hicieron con FairPlayLabs
+Knife_Fighting_Monkey: antes de pensar en eso, preferiria tener algo corriendo, al menos un nivel, kek
+me: mae
+me: esa gente empezó con una idea
+me: es que vealo así
+me: uno tiene UNA IDEA
+me: muy buena
+me: va y se las presenta
+me: explica el mercado meta, opciones, pronósticos de ventas, ROI, etc
+me: entonces ellos te dan capital
+me: y asesoramiento financiero
+me: el capital paga algo muy importante: salarios
+me: y con eso ya se puede pensar en comprar licencias, aunque sea poco
+Knife_Fighting_Monkey: usualmente conlleva una prueba de concepto, que vean que no es vara y que es completamente viable, al menos si yo fuera inversionista querria ver codigo corriendo
+me: mae
+me: FairPlayLabs empezó como una idea
+me: insisto
+me: ese mae Claudio Pinto no sabe ni programar
+me: a esa gente no le importa un cerote ver código corriendo
+me: lo que hace falta es una buena idea
+me: donde valga la pena invertir
+me: y ya FPL fue un éxito
+me: entonces no creo que le tengan miedo a apostarle a otra idea de ese tipo
+Knife_Fighting_Monkey: mientras la relacion no conlleve dar un porcentaje de ownership de la empresa...
+Knife_Fighting_Monkey: es un tema que se presta para amplia discusion
+me: no es ownership
+me: pero si hay "acciones"
+me: se da como el 30% de las acciones
+me: suficiente para que tengan voz y voto
+me: pero no 100% voz ni voto
+me: diay, ponen el güevo
+me: yo no lo veo nada mal
+me: digamos que topamos con suerte
+me: digamos
+me: y se vende un mega juego a 20dls por cabeza
+me: se venden 200mil unidades
+me: 4mills. de dólares
+me: que ganancias sean 3
+me: así exagerado
+me: habria que darles 1
+me: y nosotros pusimos CERO colones
+me: para hacerlo
+me: y hasta nos pagaron mientras lo hacíamos
+me: me explico?
+me: ahora bien
+me: el peor de los casos
+me: no vendemos un cerote
+Knife_Fighting_Monkey: -25% de epic
+me: NADA
+Knife_Fighting_Monkey: kek
+me: pusimos CERO colones
+me: y ellos maman toda su harina
+me: y listo
+me: nos pagaron mientras lo hacíamos
+me: pero no logramos ni crap
+me: gg
+me: o sea, no hay forma de perder
+me: no sé si me explico
+Knife_Fighting_Monkey: haha
+me: jajaja
+Knife_Fighting_Monkey: mae siempre hay un catch en ese "fine print", en el peor de los casos si vamos a tener que pagar algo
+Knife_Fighting_Monkey: el modo en que operemos a nivel de negocio es un tema que como dije, se presta para una larga discusión, hay que discutirlo entre todos, yo no le veo problema alguno a la idea que ud expone, pero solo vamos a saber que tan conveniente el dia que estemos sentados con el pedazo de papel enfrente
+me: exacto
+me: pero, imho, vale la pena ir a ver el papel
+me: por lo menso
+Knife_Fighting_Monkey: mae di, no se ud, pero el excitement++ conforme avanzamos
+me: http://www.linkinversiones.com/
+me: http://www.parquetec.org/en
+me: esas dos empresas
+me: son opciones para la vara
+me: http://www.parquetec.org/es
+me: peguele una ojeada
+me: al chile
+me: a mi nada me gustaría más que "vender la idea"
+me: poder mandar a comer crap a mi trabajo actual
+me: y dedicarme a eso
+me: no sé si me explico
+Knife_Fighting_Monkey: lulz boot ya esta bajando esta crap http://www.amazon.com/Mastering-Unreal-Technology-Introduction-Design/dp/0672329913/ref=sr_1_1?ie=UTF8&s=books&qid=1274381572&sr=8-1
+me: jajaja que gosu
+me: mae, vió los links ue le pasé?
+Knife_Fighting_Monkey: estoy en eso
+Knife_Fighting_Monkey: parquetec es una "incubadora" no?
+me: así es
+Knife_Fighting_Monkey: me parece haber oido de es hace años
+me: estan aliadas las dos
+me: parquetec es incubadora
+me: y linkInv es venture capital
+me: "red de ángeles"
+me: inversionistas
+Knife_Fighting_Monkey: mae, entre todos creo que llegamos por lo menos a 20 años de experiencia laboral
+Knife_Fighting_Monkey: kek
+Knife_Fighting_Monkey: primer punto de los "elementos esenciales"
+me: dice eso? :o
+me: en donde?
+me: no recuerdo haberlo leído
+me: bueno, yo había visto el de Link
+me: no había visto el otro
+Knife_Fighting_Monkey: son la misma gente
+Knife_Fighting_Monkey: lo vi en cenfotec, circa 2002, ahi pasaban cada cuatri los majes
+me: yo sabía que estaban conectados
+me: no sabía que eran la misma gente
+me: di mae, podríamos llamar a preguntr
+me: es más, pq no llama usted a ver que?
+me: para que le expliquen all the play
+me: nada perdemos
+Knife_Fighting_Monkey: suave, primero no hay que registrar la crap como empresa?
+me: creo que no hace falta
+Knife_Fighting_Monkey: mae lo que estoy viendo es que es como un hub de empresas que comparten campus/recepcion/impresora
+Knife_Fighting_Monkey: eso esta un toque lame
+me: entoncew hablemos directamente con Link
+me: para el $$$
+Knife_Fighting_Monkey: si, creo que link seria la opcion
+a menos que hayan otras firmas inversionistas, hasta un puto banco podria ser, mi mama tiene un par de patas en el nacional y bcr

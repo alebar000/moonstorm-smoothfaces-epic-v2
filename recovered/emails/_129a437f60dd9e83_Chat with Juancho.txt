@@ -1,0 +1,76 @@
+THREAD 129a437f60dd9e83  Chat with Juancho
+URL: https://mail.google.com/mail/?authuser=alexbarquero@gmail.com#all/thread-f:1340458053461188227
+Messages: 1
+
+======================================================================
+Date: None
+From: jvgarcia@gmail.com
+To: alexbarquero@gmail.com
+Cc: 
+Subject: Chat with Juancho
+MsgID: 129a437f60dd9e83
+
+me: listo
+me: proyecto cambiado
+Juancho: lo de la tesis?
+me: yes
+Juancho: lol, diay si
+Juancho: gosu
+me: :D
+me: ojo la vara:
+me: suave
+me: Propuesta metodológica de administración de proyectos de desarrollo de juegos de video para la empresa Moonstorm Studios.
+me: Areas de conocimiento / procesos:
+
+Alcance, Tiempo, Costos, Calidad, Recurso Humano, Comunicaciones, Riesgos, Adquisiciones e Integración
+
+me: Area de aplicación (Sector / Actividad):
+
+Entretenimiento Digital / Desarrollo de Juegos de Video
+
+me: Objetivos del proyecto (general y específicos)
+
+General
+
+• Desarrollar una propuesta metodológica de administración de proyectos para el desarrollo de juegos de video en la empresa Moonstorm Studios, con el fin de estandarizar los procesos de gestión de proyectos de la organización y satisfacer el requisito parcial de graduación para optar por el grado de Master en Administración de Proyectos (MAP) de la Universidad para la Cooperación Internacional (UCI).
+
+Específicos
+
+• Determinar las necesidades de procesos y documentación para la estandarización de los procesos relacionados con la conceptualización y elaboración de juegos de video en el contexto de la empresa Moonstorm Studios.
+• Proponer una metodología de administración de proyectos de desarrollo de juegos de video que incluya procedimientos, herramientas, técnicas, plantillas e indicadores, contemplando las áreas de conocimiento del alcance, tiempo, costos, calidad, recurso humano, comunicaciones, riesgos, adquisiciones e integración de la administración profesional de proyectos, detallados por el Project Management Institute (PMI) en su guía del Project Management Body of Knowledge (PMBOK), Cuarta Edición, 2008.
+
+me: Justificación o propósito del proyecto (Aporte y resultados esperados)
+
+Moonstorm Studios es una pequeña empresa de desarrollo de juegos de video costarricense, cuya principal actividad se encuentra ubicada en el contexto de la industria del entretenimiento digital. Con menos de un año de existencia, esta nueva empresa ha dado los primeros pasos para la elaboración de su primer juego de video, para lo cual se han invertido esfuerzos en la búsqueda de diferentes opciones de financiamiento, estudios de oportunidad y factibilidad del mercado y algunas pruebas conceptuales de ideas, herramientas y procesos de trabajo.
+
+Como parte de los esfuerzos requeridos para estas primeras etapas, se ha decidido implementar una metodología de administración de proyectos estandarizada para el desarrollo de juegos de video, que permita la elaboración iterativa incremental del primero y de otros futuros desarrollos en la organización. Esta metodología debe contemplar todas las áreas de conocimiento definidas por el PMI en su guía del PMBOK, y ajustarse en la práctica al contexto de la organización, los socios y los colaboradores de Moonstorm Studios. Para garantizar su adecuada utilización en la realidad de la empresa y el contexto de la industria, debe acoplar de manera oportuna distintos procesos de otros marcos de referencia y métodos de desarrollo como lo son SCRUM, Rational Unified Process (RUP), Integración Continua, Test-driven Development (TDD), Kanban y Lean, según sea necesario.
+
+Siendo una empresa conformada por profesionales que actualmente trabajan en distintas organizaciones, y considerando que los tiempos dedicados a las tareas de Moonstorm Studios en su mayoría se limitan a sus tiempos o días libres, la existencia de una metodología estándar y hecha a la medida de la organización ayudará en la obtención de los siguientes resultados:
+
+• Potenciar la cantidad y calidad del trabajo que realizarán sus distintos colaboradores.
+• Mejorar la calidad de los juegos producidos por sus trabajadores.
+• Fomentar la satisfacción de los clientes por la calidad del producto.
+• Impulsar el desempeño de las ventas por la satisfacción de los compradores.
+• Incrementar el rendimiento financiero de la organización por las buenas ventas.
+• Garantizar la satisfacción personal de los miembros y socios de la organización por los logros alcanzados.
+
+me: Identificación de grupos de interés (Stakeholders)
+
+Cliente(s) directo(s):
+
+• Personal de la empresa Moonstorm Studios.
+• Profesor tutor.
+• Profesores lectores.
+• Autor.
+
+Cliente(s) indirecto(s):
+
+• Clientes de la empresa Moonstorm Studios.
+• Proveedores de la empresa Moonstorm Studios.
+• Medios de comunicación de la industria del entretenimiento digital.
+
+me: etc etc
+me: etc
+me: etc
+Juancho: kek
+me: puta charter me quedó como de 3 páginas

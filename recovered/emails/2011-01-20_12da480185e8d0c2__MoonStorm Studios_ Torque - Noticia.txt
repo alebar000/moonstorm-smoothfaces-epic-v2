@@ -1,0 +1,105 @@
+THREAD 12da480185e8d0c2  [MoonStorm Studios] Torque - Noticia
+URL: https://mail.google.com/mail/?authuser=alexbarquero@gmail.com#all/thread-f:1358477408984420546
+Messages: 7
+
+======================================================================
+Date: 2011-01-20T17:36:30Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: [MoonStorm Studios] Torque - Noticia
+MsgID: 12da480185e8d0c2
+
+Today GarageGames announced that it has reformed as a new company under new
+ownership, buying all assets for the Torque Engine from InstantAction.
+The InstantAction gaming portal, owned by Internet media giant IAC, shut
+down<http://www.gamasutra.com/view/news/31506/Browserbased_Gaming_Platform_InstantAction_Shutting_Down.php>late
+last year, leaving the fate of the Torque engine technology up in the
+air.
+
+The Torque 2D and 3D engines can be used to produce games on platforms
+ranging from iOS to Xbox 360 and Wii as well as PC and Mac.
+Today, Torque is relaunching under the original GarageGames banner. The new
+company was formed when a group of investors known as Graham Software
+Development purchased the rights to the Torque assets and formed GarageGames
+LLC.
+Eric Preisz, who served as director of Torque game engine operations for
+InstantAction, has stepped up to be the CEO of GarageGames, alongside COO
+Dexter Chow.
+
+The company will be dropping the price for its products to $99 for a limited
+time as it relaunches, it said in an announcement.
+
+Más<http://www.gamasutra.com/view/news/32539/Interview_GarageGames_Relaunches_Torque_Engine_With_New_Owners_New_Focus.php>
+======================================================================
+Date: 2011-01-20T17:38:02Z
+From: alexbarquero@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Torque - Noticia
+MsgID: 12da481203fc6f43
+
+:O
+
+Cheap Torque.
+
+Cuanto costaba antes?
+
+On Thu, Jan 20, 2011 at 11:36 AM, Knife_Fighting_Monkey <
+fancyaccount@gmail.com> wrote:
+======================================================================
+Date: 2011-01-20T17:40:11Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Torque - Noticia
+MsgID: 12da483708ce9704
+
+¿$250?
+
+On Thu, Jan 20, 2011 at 11:38 AM, Alexander Barquero <alexbarquero@gmail.com
+======================================================================
+Date: 2011-01-20T17:41:03Z
+From: jvgarcia@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Torque - Noticia
+MsgID: 12da483eaec0a9f7
+
+$100 era la licencia mas barata.
+
+2011/1/20 Knife_Fighting_Monkey <fancyaccount@gmail.com>
+======================================================================
+Date: 2011-01-20T17:43:59Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Torque - Noticia
+MsgID: 12da486ef89290dd
+
+si pero no creo que hagan tanta alharaca por $1 ¿o sí?
+
+2011/1/20 Juan V. García <jvgarcia@gmail.com>
+======================================================================
+Date: 2011-01-20T17:46:45Z
+From: jvgarcia@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Torque - Noticia
+MsgID: 12da48925127c3bf
+
+$100... si, creo que era $99 mas bien, y yo hice el redondeo.
+
+2011/1/20 Knife_Fighting_Monkey <fancyaccount@gmail.com>
+======================================================================
+Date: 2011-01-20T18:00:01Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Torque - Noticia
+MsgID: 12da495a752dd8d8
+
+Estuve revisando el sitio y parece que es la licencia más cara con acceso a
+la fuente, en todos los engines (2D, 3D, mobile). $99 por cada uno
+
+2011/1/20 Juan V. García <jvgarcia@gmail.com>

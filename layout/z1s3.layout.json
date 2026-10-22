@@ -1,0 +1,29 @@
+{
+  "_comment": "Layout de ejemplo de Z1S3. Los assets apuntan a art/approved/ y entran a objects solo cuando existen ahí; mientras tanto viven en pending. Ver .agents/skills/room-layout/SKILL.md.",
+  "room": "z1s3",
+  "size": {"w": 2400, "h": 900},
+  "camera": {"viewport_w": 1600, "follow": "player", "edge_scroll": true},
+  "light": {"x": 1200, "y": 120},
+  "planes": [
+    {"id": "exterior",   "parallax": 0.25},
+    {"id": "wall",       "parallax": 0.82},
+    {"id": "wall_props", "parallax": 0.88},
+    {"id": "floor",      "parallax": 1.00, "y_sort": true},
+    {"id": "foreground", "parallax": 1.22},
+    {"id": "ribs",       "parallax": 1.35}
+  ],
+  "walkable": [[120, 640], [2280, 640], [2280, 860], [120, 860]],
+  "foot_baseline_y": 820,
+  "perspective_scale": {"y_far": 640, "scale_far": 0.90, "y_near": 860, "scale_near": 1.05},
+  "objects": [],
+  "exits": [],
+  "spawns": {"start": [700, 822]},
+  "pending": [
+    {"id": "z1s3.wall.panel_a", "plane": "wall", "x": 0, "y": 0, "anchor": "top-left"},
+    {"id": "z1s3.prop.sarcophagus", "plane": "floor", "x": 260, "y": 822},
+    {"id": "z1s3.prop.desk", "plane": "floor", "x": 1100, "y": 822},
+    {"id": "z1s3.prop.bunk_bed", "plane": "floor", "x": 2000, "y": 822},
+    {"id": "z1s3.fg.chart_table", "plane": "foreground", "x": 700, "y": 900},
+    {"id": "z1s3.fg.sea_trunk", "plane": "foreground", "x": 1900, "y": 900}
+  ]
+}

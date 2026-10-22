@@ -1,0 +1,90 @@
+THREAD 127f8acf0bb76c63  CONFIDENTIAL: start up roster beta (rofl)
+URL: https://mail.google.com/mail/?authuser=alexbarquero@gmail.com#all/thread-f:1332936636584389731
+Messages: 1
+
+======================================================================
+Date: 2010-04-13T19:37:15Z
+From: fancyaccount@gmail.com
+To: jvgarcia@gmail.com, alexbarquero@gmail.com
+Cc: 
+Subject: CONFIDENTIAL: start up roster beta (rofl)
+MsgID: 127f8acf0bb76c63
+
+Es una lista de gente que en alguna ocasión he escuchado/leído que tienen
+algún interés en bretear en la industria
+Los he ubicado en tareas que tienen mucho que ver con lo que desempeñan
+actualmente (skills conocidos) pero
+no quiere decir que sean limitados a las mismas.
+Algunas posiciones puestas como "vacantes" (--------) podrían ser suplidas
+según el interés de los involucrados.
+Without further-a-do,
+
+++game design++
+---------------
+
+++3d modeling/animation++
+-------------------------
+
+++level design++
+----------------
+
+++texture resourcing++
+morales
+scila
+
+++art/concepts/environments++
+zakazachuz
+aguilar
+
+++gui++
+ndrtkr
+seth
+
+++gameplay code++
+alex
+juancho
+boot
+
+++engine code++
+juancho
+ledezman
+kanaka
+bahdom
+squall
+alpha
+inferix
+scila
+sleins
+kog
+id loco
+boot
+batman
+
+++tools++
+---------
+
+++audio/sound engineering++
+hybris
+
+++marketing++
+morales
+
+++support++
+rox
+predator
+alpha
+
+++possible initial project++
+2D dungeon crawler
+2.5D side scroller
+iphone on-rails FPS*
+
+++engines++
+http://gpwiki.org/index.php/Game_Engines
+-AGen 2D Engine http://www.2dengine.com/index.php C++
+-AdventureGameStudio http://www.adventuregamestudio.co.uk/ C++
+-GameSalad http://gamesalad.com/ (OS X only)
+-FlatRedBalls 2.5D http://www.flatredball.com/frb/blog/ .NET
+-Jad Engine http://www.jadengine.com/
+-Ray Game Designer II http://eicart.free.fr/rgd2/us/index.htm
+-Visual 3D http://www.visual3d.net/ C#

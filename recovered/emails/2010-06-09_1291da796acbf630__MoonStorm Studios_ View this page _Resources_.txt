@@ -1,0 +1,381 @@
+THREAD 1291da796acbf630  [MoonStorm Studios] View this page "Resources"
+URL: https://mail.google.com/mail/?authuser=alexbarquero@gmail.com#all/thread-f:1338090779323397680
+Messages: 13
+
+======================================================================
+Date: 2010-06-09T17:00:08Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: [MoonStorm Studios] View this page "Resources"
+MsgID: 1291da796acbf630
+
+Agregado:
+
+Texture Maps for Material Shaders (Diffuse, Normal & Specular)
+-esta crap es tanto para chars como para props de niveles
+
+Click on http://groups.google.com/group/moonstorm/web/resources - or
+copy & paste it into your browser's address bar if that doesn't work.
+======================================================================
+Date: 2010-06-09T17:33:48Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: [MoonStorm Studios] View this page "Resources"
+MsgID: 1291dc66b257e965
+
+Agregado:
+CGTextures.com
+-sitio gratuito para descargar texturas, licencia permite uso
+comercial/modificación; una cuenta por "persona/máquina"
+
+Click on http://groups.google.com/group/moonstorm/web/resources - or
+copy & paste it into your browser's address bar if that doesn't work.
+======================================================================
+Date: 2010-06-09T19:06:48Z
+From: skrybble@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: [MoonStorm Studios] Re: View this page "Resources"
+MsgID: 1291e1b8b6b07a5f
+
+OMG!!!
+
+hay millones de texturas ahí y todas buenisimas!!
+tnx!!
+
+On Jun 9, 10:33 am, Knife_Fighting_Monkey <fancyacco...@gmail.com>
+wrote:
+======================================================================
+Date: 2010-06-21T18:10:12Z
+From: ledezman@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: [MoonStorm Studios] View this page "Resources"
+MsgID: 1295bb40b25ec64b
+
+Buscando sobre wii ware encontre este 'engine'. Esta bastante
+interesante, tienen varios engines, 3d, 2d, para iPHone etc. Al
+parecer lo usa PopCap y otras companhias 'de verdad'.
+
+Crei que seria carisimo, pero al parecer no es nada astronomico: por
+ejemplo el engine 2d, $250.
+
+http://www.torquepowered.com/products/torque-2d
+
+En fin, /discuss.
+
+Click on http://groups.google.com/group/moonstorm/web/resources - or
+copy & paste it into your browser's address bar if that doesn't work.
+======================================================================
+Date: 2010-06-21T19:47:25Z
+From: alexbarquero@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] View this page "Resources"
+MsgID: 1295c0d0c4a7802b
+
+Otras alternativas a las que hay que "ponerles el ojo"..
+*
+Desarrollar en SCUMM y levantarlo con los runtime binaries de ScummVM (GPL)*
+
+- http://www.scummvm.org/
+
+*Los Virtools que son las herramientas con las que hicieron Syberia y otros
+points and clicks en 3d. Parecen costosos.*
+
+- http://www.3ds.com/products/3dvia/3dvia-virtools/*
+*
+
+*Wintermute que se ve poderoso y gratis para 2d point and click*
+
+- http://dead-code.org/home/*
+*
+
+*Agast que lo mencionan por ahí*
+
+- http://allitis.com/agast/
+
+*Crystal Space 3d*
+
+- http://www.crystalspace3d.org/tikiwiki/tiki-index.php?page=About Crystal
+Space
+
+*Delta 3d*
+
+- http://www.delta3d.org/
+
+*Easyway Game Engine*
+
+- http://kenai.com/projects/easyway4
+
+*El ya conocido Adventure Game Studio*
+
+- http://www.bigbluecup.com/acres.shtml*
+*
+
+*Bonus: un juego comercialmente exitoso hecho con AGS*
+
+- http://www.zombie-cow.com/?page_id=17
+
+*Otro: Adobe Flash, como hicieron Machinarium*
+
+- http://en.wikipedia.org/wiki/Machinarium
+
+*Uno al que hay que ponerle MUCHA atención: (con este hicieron
+http://en.wikipedia.org/wiki/The_Whispered_World)
+*
+
+- http://www.visionaire-studio.net/
+
+Dos sitios para guardar:
+
+http://www.adventuregamers.com/
+
+http://gpwiki.org/index.php/Game_Engines
+
+Más info sobre Torque
+http://en.wikipedia.org/wiki/Torque_Game_Engine_Advanced
+
+Un 2d point and click search and find hecho con Torque:
+http://www.bigfishgames.com/download-games/4774/flux-family-secret/index.html
+======================================================================
+Date: 2010-06-21T19:59:28Z
+From: alexbarquero@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] View this page "Resources"
+MsgID: 1295c181513c1339
+
+un MEGA LINK:
+
+http://www.adventuredevelopers.com/
+
+2010/6/21 Alexander Barquero <alexbarquero@gmail.com>
+======================================================================
+Date: 2010-06-22T02:02:36Z
+From: alexbarquero@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] View this page "Resources"
+MsgID: 1295d6488818e346
+
+Digan algo carepenes.
+
+On Mon, Jun 21, 2010 at 1:59 PM, Alexander Barquero
+<alexbarquero@gmail.com>wrote:
+======================================================================
+Date: 2010-06-22T02:24:02Z
+From: ledezman@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] View this page "Resources"
+MsgID: 1295d783401c9ae0
+
+Di nada, baje el demo de torque 2d para ver que es la vara....
+
+Opciones hay muchas kek. Don Hunhau tenia una serie de preguntas pertinentes
+que deberiamos responder para tomar una decision.
+
+On Mon, Jun 21, 2010 at 8:02 PM, Alexander Barquero
+<alexbarquero@gmail.com>wrote:
+======================================================================
+Date: 2010-06-22T06:25:44Z
+From: jvgarcia@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] View this page "Resources"
+MsgID: 1295e557d7543dc2
+
+Si, básicamente creo que deberíamos contestar las siguientes preguntas como
+equipo/grupo:
+
+1) Cuántas plataformas queremos tener en mente para un eventual lanzamiento?
+ El máximo número posible, o nos basta con completar el juego en una
+plataforma? Claro que es posible hacer un port luego aún si se uso una
+herramienta que no soporta otra plataforma, pero el esfuerzo sería bastante,
+en cambio, si tenemos eso en cuenta desde el principio, podríamos optar por
+usar algo que luego nos permita tirar el juego en otras plataformas con
+facilidad.
+
+2) Cuál es el alcance de los objetivos didácticos del proyecto? Parte de lo
+que se habló el sábado, y una de las principales razones para plantear este
+nuevo proyecto, era básicamente aprender: aprender sobre el proceso, a
+trabajar en equipo, a usar herramientas, etc. Ahora bien, queremos aprender
+cosas un poco de más bajo nivel? Queremos programar algo en algún lenguaje
+de bajo nivel, o nos quedamos con una herramienta con la que nos la juguemos
+a punta de scripting y si acaso el mínimo de programación? O por el
+contrario, queremos hacer un engine nosotros? (Lo dudo, pero bueno, sería el
+otro extremo). Podríamos también pensar que simplemente esto no nos
+importa, y no tomamos en cuenta este factor.
+
+3) Cuánto queremos/podemos pagar por herramientas? Existen opciones que
+tienen un costo asociado. Evidentemente no vamos a comprar una licencia
+comercial de UE3/UDK, pero hay una amplia gama de opciones por ahí con
+precios que rondan desde los $50 hasta los $1000 y por ahí. Dado que pues
+tenemos algunos ingresos, pagar un costo de esos no está completamente
+pegado al cielo, aunque claramente pagar $1000 por las herramientas... pues
+ya sería un gasto considerable, y posiblemente ya tendríamos que entrar a
+discutir como dividir el gasto, que si los eventuales ingresos los usamos
+para subsanar eso, etc. Creo que es una pregunta que no hay que tomarse a la
+ligera.
+
+4) Cuál es realmente el principal objetivo del proyecto? Creo que podríamos
+tener varios objetivos principales con este proyecto:
+
+* Aprender, llevar el proyecto acabo, trazar un plan, obtener un resultado,
+independientemente de cual sea... es decir, nos importan más los medios, no
+tanto el fin? Ahí pues vendría relacionada la segunda pregunta, un poco,
+pero bueno.
+* Obtener la mayor cantidad de ventas posible. Estamos claros en que
+estamos empezando, etc., pero bueno, esto va a influir un poco en la primera
+pregunta (posiblemente vendamos más entre más plataformas tengamos, etc).
+* Tratar de posicionarnos un poco en el medio, darnos cierto nombre, cierta
+reputación... hacerle bulla al proyecto y que la gente diga, puta mirá, este
+juego está corto, pero gosu, me interesa ver qué pueden hacer estos maes.
+
+De momento se me ocurren esos. Ahora bien, voy a contestar yo a dichas
+preguntas, de acuerdo a lo que yo pienso:
+
+1) Creo que sería bueno tener más que una, pero tampoco creo que deberíamos
+escoger algo sólo porque se puede usar en muchas plataformas.
+
+2) A mí personalmente sí me gustaría aprender varas un poco de más bajo
+nivel, ya que pues creo que en lo que más podría colaborar. Ahora bien,
+también estoy consciente de que tampoco el proyecto está para servir cosas
+personales, y bueno, ahí podría aportar uno de otra manera.
+
+3) En este tema, yo preferiría pagar lo menos posible, obviamente. Puede
+que hayan herramientas bastante tuanis ahí que podamos utilizar y que valgan
+la pena, pero en la medida de lo posible preferiría mantener los gastos en
+este sentido en lo mínimo. Si fuéramos a pagar por algo, creo que no
+deberíamos pagar más de unos $300 (por poner un número) y bueno, en la
+medida de lo posible, pues evitaría pagar cosas con un precio elevado.
+ Ahora, por ahí vi varias herramientas que se ven bastante chivas y que
+tienen un costo muy bajo, me parece que son factibles. Hay que tomar en
+cuenta también que muchas de las plataformas van a tener un costo de entrada
+de por medio también.
+
+4) Si tenemos los pies en la tierra, creo que lo más factible a lo que
+podemos aspirar es a completar el proyecto satisfactoriamente. Puede que no
+nos dio tiempo de x o y, o nos hubiera gustado cambiar algo, pero bueno, si
+terminamos el proyecto, creo que ese es un muy buen milestone, y de paso
+tenemos una buena experiencia para llevar acabo un siguiente proyecto con un
+alcance mucho mas amplio. Hacernos de cierto nombre creo que sería el
+siguiente fin en factibilidad. Aunque sea un juego corto, si tenemos buenos
+elementos, una historia tuanis, buen humor, etc, pues posiblemente eso ya
+hable un poco mejor de nosotros. Lo de las ventas, pues diay, sería ideal,
+pero creo que ahorita no podriamos realmente aspirar a vender un montón,
+aunque bueno, si se vende, enhorabuena. Esto es más que todo relacionado a
+la primera pregunta de las plataformas, pero bueno, quizas primero nos
+podriamos preocupar de los primeros dos, y luego de este.
+
+Bueno, ese fue otro wall of text traido a uds por mi persona. Creo que al
+contestar esas preguntas se pueden ir eliminando posibilidades, que hay
+muchísimas, y pues podríamos ver de ahí cómo procedemos en esta elección de
+rumbo.
+
+2010/6/21 Ledezman <ledezman@gmail.com>
+======================================================================
+Date: 2010-06-22T06:50:23Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] View this page "Resources"
+MsgID: 1295e6c58b87f21f
+
+coincido con juancho en la mayoría de puntos a excepción de:
+
+2) si bien es cierto, empezar desde un nivel muy bajo nos permitiría un
+entendimiento bastante bueno sobre todo el proceso técnico y ciertos
+aspectos profundos del desarrollo, el factor tiempo es algo que muy
+probablemente tengamos en contra con este *approach.
+
+*3) los dineros son siempre un tema delicado. comprendo la cautela de
+juancho al tratar el asunto pero me suena un toque "agua tibia" en el
+sentido que si realmente apostamos por la idea, pues deberíamos de hablar de
+la adquisición de SDKs o lo que sea, como una inversión y no un gasto. claro
+que no hay que ser un incauto (léase caballo) y terminar con "un motor
+Ferrari para un Honda" y es ahí donde debemos saber qué carajos escoger en
+base a lo que queramos hacer, por eso es una decisión muy importante.
+
+2010/6/22 Juan V. García <jvgarcia@gmail.com>
+======================================================================
+Date: 2010-06-22T16:02:40Z
+From: c0pp3r@b52clan.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] View this page "Resources"
+MsgID: 12960662ec5e1144
+
+*Salvedades*
+
+   - Mis aportes no van enfocados desde una perspectiva técnica o de
+   programación, sino que va totalmente enfocada desde mi experiencia laboral
+   como *Executive Creative Director for Tribal-DDB Asia Pacific* (eeeeeeh).
+   - Comentarios unicamente aplicables a la propuesta del juego *point &
+   click*
+   - Comienzo por el 4 por que de ahí deviene el resto imo.
+
+4)
+*Objetivo general*
+
+   - Completar satisfactoriamente todos los pasos desde la concepción hasta
+   la publicación del juego.
+
+*Objetivos específicos*
+
+   - Desarrollar el juego en un "timelly fashion"
+   - Desarrollar el juego de forma que facilite la distribución más amplia
+   posible
+   - Aprovechar el lanzamiento del juego para comunicar el Unique Selling
+   Proposition de Moonstorm
+   - Definir publico meta
+   - Definir tipo de producto (género, plataforma, tono, gameplay)
+   - Definir modelo de precio
+   - Definir canales de distribución
+   - Definir tipo de comunicación
+
+*1)*
+Habrá que estudiar las opciones, pero la plataforma ideal facilita:
+
+   - la distribución más amplia del juego
+   - la producción más rápida del juego
+
+*2)*
+Se lo dejo a los expertos.
+
+*3)
+*Por el momento no puedo dar un cinco, les aviso cuando sea un asalariado.
+
+Cristián Morales
+
+2010/6/22 Knife_Fighting_Monkey <fancyaccount@gmail.com>
+======================================================================
+Date: 2010-06-22T17:20:23Z
+From: alexbarquero@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] View this page "Resources"
+MsgID: 12960acca8763b57
+
+Más que hacer un engine de 0, la idea de utilizar alguno es precisamente de
+entender QUE es lo que necesitamos que sea capaz de hacer un engine,
+especialmente si algún día hacemos el nuestro. En un platformer o un point
+and click esto es particularmente crucial para poder tener todas las
+herramientas necesarias para el scripting y la poronga.
+
+2010/6/22 Cristián Morales <c0pp3r@b52clan.com>
+======================================================================
+Date: 2010-07-14T16:58:00Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: [MoonStorm Studios] View this page "Resources"
+MsgID: 129d1e43778b76ea
+
+Added: Marketing
+
+Click on http://groups.google.com/group/moonstorm/web/resources - or
+copy & paste it into your browser's address bar if that doesn't work.

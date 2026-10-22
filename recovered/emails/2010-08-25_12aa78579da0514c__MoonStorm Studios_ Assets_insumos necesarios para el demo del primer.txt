@@ -1,0 +1,106 @@
+THREAD 12aa78579da0514c  [MoonStorm Studios] Assets/insumos necesarios para el demo del primer nivel
+URL: https://mail.google.com/mail/?authuser=alexbarquero@gmail.com#all/thread-f:1345019756425531724
+Messages: 4
+
+======================================================================
+Date: 2010-08-25T04:33:13Z
+From: jvgarcia@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: [MoonStorm Studios] Assets/insumos necesarios para el demo del primer nivel
+MsgID: 12aa78579da0514c
+
+Ok, para la parte de programación, y luego de discutir un poco con Ledezma,
+estos son las cosas que necesitamos desde un punto de vista de arte/diseño:
+
+   - Backgrounds: para montar las escenas, obviamente ocupamos los
+   backgrounds y eso. Estoy consciente de que uds. saben, pero bueno, si
+   queremos tener partes al "frente de los personajes", pues igual hay que
+   partir el "background" en varias cosas. Creo que acá lo ideal sería montar
+   un proyecto en blanco de Torque en el SVN, y así el Dpto. de Arte puede
+   montar la escena de una vez en el World Builder, procuraré hacer esto en los
+   próximos días.
+   - Imágenes para los objetos dinámicos. Todos los objetos con los que se
+   pueda interactuar de alguna manera deben estar por aparte, e igual se montan
+   sobre la escena. Muchos de ellos terminarán en el inventario, entonces
+   también por eso se ocupan para aparte.
+   - Personajes y sus animaciones básicas. Obviamente no se puede contar
+   con animaciones para todo, pero bueno, parte de lo que tenemos que
+   asegurarnos que funcione es el movimiento del personaje y eso, y por eso
+   ocupamos al menos unas animaciones básicas. Sería bueno también tener
+   algunas animaciones de diálogo, por ejemplo.
+   - Imagen para el inventario. Para poder mostrar el inventario, ocupamos
+   una imagen que sea como un grid. No tiene que ser la gran cosa de momento,
+   pero bueno, algo que nos permite programar y hacer pruebas del sistema de
+   inventario, junto a los assets que puse en el punto 2.
+   - Diálogos al menos de placeholder. La idea con esto seria tener un
+   esquema, aunque sea de placeholders, donde haya un orden, respuestas y
+   efectos determinados, esto para probar que efectivamente lo que hagamos como
+   sistema de diálogo funcione bien, que siga el orden que queremos y eso.
+
+De momento creo que eso es lo que se nos ocurre. Voy a tratar de hacer
+commit en el svn con la estructura básica en los próximos días, y bueno, ya
+ahi sería crear las escenas en el Torque. De momento continuamos
+aprendiendo sobre el engine (Ledezma más que todo, yo voy bien atrasado),
+pero ya hemos identificado algunas tareas de programación necesarias para el
+demo, y bueno, ahí seguimos aprendiendo.
+
+juancho
+======================================================================
+Date: 2010-08-25T05:21:19Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Assets/insumos necesarios para el demo del primer nivel
+MsgID: 12aa7b1ca95ddfe7
+
+La maquilada de assets sigue esta semana, aunque no me he podido comunicar
+con Morales porque no lo he visto conectado, entonces no se como irá su
+parte.
+Este asunto esta llevándose su tiempo porque los estamos haciendo finales,
+eso implica hacerlos en un "imagemap" en distintas posiciones, en miras de
+crear de una vez una librería de shits que podamos reutilizar más adelante.
+En cuanto a las animaciones, he estado probando diferentes métodos, puesto
+que ni photoshop ni painter 11 fueron realmente hechos para animar. Lo que
+quiero es "casarme" con un método que sea relativamente sencillo y rápido,
+pensando a futuro.
+Uno de los métodos que más me interesa investigar es crear las animaciones
+en Maya, eh, Blender, renderizar y luego convertir el output en un imagemap
+secuencial, pero aún me falta bastantillo de los tutoriales para comerme la
+animación en esa shit de forma decente.
+
+No veo fecha en el correo, pero dadas las circunstancias, ¿cuál(es) asset(s)
+les permitiría lidiar de una vez con alguno de esos puntos? ¿Diálogos? ¿GUI?
+Los escenarios que mandé en el otro correo (sans el segundo escenario)
+vienen en layers de una vez (excepto los ítems, que no están separados),
+¿les servirán de placeholders?
+
+2010/8/24 Juan V. García <jvgarcia@gmail.com>
+======================================================================
+Date: 2010-08-25T13:05:26Z
+From: ledezman@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Assets/insumos necesarios para el demo del primer nivel
+MsgID: 12aa95a6dcbe9963
+
+Termine el tutorial de 'asteroids' que al final deja un 'juego completo'
+bastante decente. Ahora le entrare al asunto del 'pathing'. Creo que en mi
+caso me la puedo jugar con alguno de los sketches y puedo usar al stache
+viejo de LolDemo1 como placeholder para el personaje.
+
+2010/8/24 Knife_Fighting_Monkey <fancyaccount@gmail.com>
+======================================================================
+Date: 2010-08-25T16:20:21Z
+From: c0pp3r@b52clan.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Assets/insumos necesarios para el demo del primer nivel
+MsgID: 12aaa0d2b80babe7
+
+Sry ahí, he estado vegetando y no he hecho ni picha. Hoy me pongo chinese
+farmer con esta shidnitz. Gomen ne!
+
+Cristián Morales
+
+2010/8/25 Ledezman <ledezman@gmail.com>

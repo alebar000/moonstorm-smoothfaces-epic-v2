@@ -1,0 +1,52 @@
+THREAD 129a640dccab5be9  Atlassian Invoice AT-174168: Moonstorm Studios
+URL: https://mail.google.com/mail/?authuser=alexbarquero@gmail.com#all/thread-f:1340493849527278569
+Messages: 1
+
+======================================================================
+Date: 2010-07-06T05:35:54Z
+From: sales@atlassian.com
+To: alexbarquero@gmail.com
+Cc: 
+Subject: Atlassian Invoice AT-174168: Moonstorm Studios
+MsgID: 129a640dccab5be9
+ATTACHMENT: atlassian_invoice_174168.pdf (application/octet-stream)
+
+Hi Alexander Barquero,
+
+This email is to confirm that we received payment for order AT-174168. The invoice is attached as a PDF for your records.
+
+HOW TO ACCESS YOUR LICENSE KEY
+
+Login to your Atlassian account using your email address (alexbarquero@gmail.com) to access your new license key or update the contacts for your license:
+
+	http://my.atlassian.com
+	
+Once logged in, locate the relevant product and click on "View License" then copy and paste the license key into your instance. You can learn more about how to update the license key of your instance here:
+
+	http://confluence.atlassian.com/x/eJgCDQ
+
+Your use of Atlassian software is subject to the terms and conditions as outlined in the End User License Agreement:
+
+	http://www.atlassian.com/about/licensing/license.jsp
+
+HOW TO GET HELP
+
+For technical questions, please visit our support page here:
+
+	https://support.atlassian.com
+
+The Support Entitlement Numbers (SEN) and support periods for this order can be found on the third page of your invoice.
+
+For all other questions, please feel free to reply to this email or contact us using the details below.
+
+Thank you for supporting Atlassian. Want to share the news? Tweet this! http://tinyurl.com/39y26gf
+
+Kitty, The Atlassian Email Robot
+--
+Watch all the presentations from this year's Atlassian Summit. http://www.atlassian.com/summit10
+
+http://www.atlassian.com
+sales@atlassian.com
++1 415 701 1110 (San Francisco, USA)
++61 2 9262 1443 (Sydney, Australia)
++31 20 796 0060 (Amsterdam, Netherlands)

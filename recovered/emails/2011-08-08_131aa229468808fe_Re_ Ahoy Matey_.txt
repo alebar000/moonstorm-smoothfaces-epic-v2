@@ -1,0 +1,71 @@
+THREAD 131aa229468808fe  Re: Ahoy Matey!
+URL: https://mail.google.com/mail/?authuser=alexbarquero@gmail.com#all/thread-f:1376590934275787006
+Messages: 4
+
+======================================================================
+Date: 2011-08-08T16:03:18Z
+From: fancyaccount@gmail.com
+To: alexbarquero@gmail.com, zuljinsvengeance@gmail.com, comele.bien@gmail.com
+Cc: 
+Subject: Re: Ahoy Matey!
+MsgID: 131aa229468808fe
+ATTACHMENT: ipfilter updater.7z (application/octet-stream)
+
+Actualicé la porquería del *ipfilter updater* para tomarlo de un sitio donde
+lo publican todos los meses, anteriormente bajaba uno de Marzo de 2009
+SIEMPRE, lulz.
+
+Setup:
+
+   1. asegúrense que uTorrent|Bitcomet|eMULE|CONCHALORA no esté corriendo
+   2. vayan a C:\Users\SU
+   USUARIO\AppData\Roaming\uTorrent|Bitcomet|eMULE|CONCHALORA
+   3. descomprima esa shit en ese folder
+   4. corra el .bat y espere a que actualice
+   5. abra uTorrent|Bitcomet|eMULE|CONCHALORA y fijese en el logger, debería
+   de tener la crap funcando
+   [2010-10-01 23:24:23] *** Starting Diagnostic Poronga *** [2010-10-01
+   23:24:23] IPv6 is installed lolz [2010-10-01 23:24:23] Got Teredo Address:
+   2001:0:4137:9e76:248d:819:410e:929 etc
+   *Loaded ipfilter.dat (XXXXXX entries)*
+   6. bajen esos *respaldos de linux* sin preocupaciones
+   7. ???
+   8. profit
+======================================================================
+Date: 2011-08-08T16:04:59Z
+From: fancyaccount@gmail.com
+To: alexbarquero@gmail.com, zuljinsvengeance@gmail.com, comele.bien@gmail.com
+Cc: 
+Subject: Re: Ahoy Matey!
+MsgID: 131aa241ffeb17df
+
+fuck, luego del paso 4, el ipfilter viene comprimido en un zip,
+descomprimanlo y sigan con el paso 5.
+
+2011/8/8 Knife_Fighting_Monkey <fancyaccount@gmail.com>
+======================================================================
+Date: 2011-08-09T05:18:38Z
+From: alexbarquero@gmail.com
+To: fancyaccount@gmail.com
+Cc: zuljinsvengeance@gmail.com, comele.bien@gmail.com
+Subject: Re: Ahoy Matey!
+MsgID: 131acfa6ff055707
+
+Thx wigger :D
+
+2011/8/8 Knife_Fighting_Monkey <fancyaccount@gmail.com>
+======================================================================
+Date: 2011-10-18T16:25:18Z
+From: comele.bien@gmail.com
+To: alexbarquero@gmail.com
+Cc: fancyaccount@gmail.com, zuljinsvengeance@gmail.com
+Subject: Re: Ahoy Matey!
+MsgID: 13317da4016a71f6
+
+´ppreciate it man. Hasta ahora tuve chance de hacer esto.
+READY FOR ACTION
+/downloads japanese tentacle porn.
+
++Cristián Morales
+
+2011/8/8 Alexander Barquero <alexbarquero@gmail.com>

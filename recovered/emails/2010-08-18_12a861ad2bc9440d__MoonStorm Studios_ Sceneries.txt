@@ -1,0 +1,93 @@
+THREAD 12a861ad2bc9440d  [MoonStorm Studios] Sceneries
+URL: https://mail.google.com/mail/?authuser=alexbarquero@gmail.com#all/thread-f:1344431885161939981
+Messages: 5
+
+======================================================================
+Date: 2010-08-18T16:48:49Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: [MoonStorm Studios] Sceneries
+MsgID: 12a861ad2bc9440d
+ATTACHMENT: Z1S3-substampede_captainroom.7z (application/octet-stream)
+
+Z=Zone: Son los cuadros azules que tenemos en el doc de Level
+Macro<https://docs.google.com/present/edit?id=0AQmomrN_N5L0ZGNiZ3E0a2RfMzBmYzR3ajZkZA&hl=en>(osea,
+las pantallas/temáticas de los escenarios)
+S=Scenery: Son los cuartos pertenecientes a la (cabe)zona, cuadros
+amarilllos (osea, los escenarios en sí)
+
+Z1S1: Cuarto de Máquinas
+Z1S2: Escenario donde se puede ir a Z1S3 ó (al encallar en Puerto Machete)
+salir del Substampede
+Z1S3: Cuarto del Capitán
+
+Z2 sería Puerto Machete y así sucesivamente.
+======================================================================
+Date: 2010-08-18T16:55:10Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Sceneries
+MsgID: 12a86208b5eabf3e
+ATTACHMENT: scenery_template.psd (application/photoshop)
+
+el template que subí anoche no funca porque está a 16 bits, kek, va de nuevo
+
+2010/8/18 Knife_Fighting_Monkey <fancyaccount@gmail.com>
+======================================================================
+Date: 2010-08-19T00:43:23Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Sceneries
+MsgID: 12a87cd3a2bb6b11
+ATTACHMENT: Z1S1-substampede_machineroom-sketch.7z (application/octet-stream)
+
+adjunto sketch del cuarto de maquinas
+
+2010/8/18 Knife_Fighting_Monkey <fancyaccount@gmail.com>
+======================================================================
+Date: 2010-08-20T17:34:16Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: [MoonStorm Studios] Sceneries
+MsgID: 12a90911198e638a
+ATTACHMENT: Z1S1-substampede_machineroom.png (image/png)
+ATTACHMENT: Z1S2-substampede_lobby.png (image/png)
+ATTACHMENT: Z1S3-substampede_captainroom.png (image/png)
+
+ARRGGH 4rto intento de re-envío, jueputa google, no puedo enviar el psd de
+Z1S2 aunque esté debajo de los 4Mbs (~3900bytes)
+entonces solo adjunto los previews
+
+---------- Forwarded message ----------
+From: Knife_Fighting_Monkey <fancyaccount@gmail.com>
+Date: 2010/8/20
+Subject: Re: [MoonStorm Studios] Sceneries
+To: Moonstorm Studios <moonstorm@googlegroups.com>
+
+escenario faltante
+
+y preview de todos
+
+al acabar Día 4 resta:
+
+   - asset sweatshop de las craps presentes en estos escenarios
+   - animation sweatshop de Smoothface/Cap
+   - GUI assets
+
+2010/8/18 Knife_Fighting_Monkey <fancyaccount@gmail.com>
+======================================================================
+Date: 2010-08-21T02:38:31Z
+From: c0pp3r@b52clan.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] Sceneries
+MsgID: 12a92834fc1cd0a8
+ATTACHMENT: seal-of-approval.jpg (image/jpeg)
+
+Cristián Morales
+
+2010/8/20 Knife_Fighting_Monkey <fancyaccount@gmail.com>

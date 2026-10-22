@@ -1,0 +1,65 @@
+﻿
+
+ 
+El Día de los Muertos
+Design Document
+
+
+
+
+
+
+Index
+
+     
+Purpose	2
+Tools	3
+Project Goals	4
+Background	5
+Cast of Characters	6
+Manolo "El Mariachi" González	7
+
+Purpose
+
+This document is to contain all the aspects envisioned for the Left 4 Dead 2 (L4D2) modification called "El Día de los Muertos" (DDLM), set in a Mexican town and featuring a new cast of survivors. 
+The details pertaining to said features (as well as gameplay mechanics, weapondry and such) is to be detailed in the following pages and is subject to change.
+Tools
+
+The tools to be used to achieve the set goals include (but are not limited to):
+    • Left 4 Dead 2
+    • Left 4 Dead 2 Authoring Tools
+    • Left 4 Dead 2 Add-On Support
+    • Left 4 Dead Authoring Tools
+    • Source SDK
+    • Source SDK Base
+    • Source SDK Base - Orange Box
+    • Corel Painter 11
+    • Photoshop CS 4
+    • Maya 2009
+    • Google SketchUp 7
+    • Word 2007/OpenOffice
+    • Sound Editing Tool (TBD)
+
+
+This list is to be expanded appropriately during the development of the project.
+Project Goals
+
+    • Create a fun, different and humorous  setting for a zombie game, mocking cultural stereotypes and perceptions among a cast of survivors with asymmetrical backgrounds, with the underlying message  that no matter where we were born or grew up at, the will to live is a common denominator among human beings and collaboration is the undisputable way to achieve it.
+    • Learn the process of game development, taking on duties that deal with a whole set of skills, challenging team members with tasks that allow us to grow up in new directions.
+Background
+
+El Día de los Muertos takes place in the Left 4 Dead and Left 4 Dead 2 universe, where a "rage" plague has infected most of the population on Earth (the extend of which is hinted at in the games). The background for the project is the Mexican festivity known as "El Día de los Muertos", where the locals celebrate death and their long-gone loved ones. 
+Is on this day that the plague hits Mexico, and our protagonists are stranded in a struggle to leave the (as of yet unknown) location. 
+Cast of Characters
+
+The campaign deals with the crossing of a singular party of survivors, all four from different backgrounds that sort of clash in the beginning of the chaos that's inflicted initially by the plague, while trying to escape.
+This means that there's a lot of interaction between the cast by dialog, which deals with each of the survivor's fears, hopes and events that led them to be in the wrong place at the wrong time.
+Manolo "El Mariachi" González
+
+Manolo is a stereotypical Mexican Mariachi that used to make a living by playing along his Mariachi compadres in Plaza Sésamo before the plague hit the town. His life has been hardened by the mean streets and is one of the few survivors that knows much of the place where the campaign takes place .  He sees tourists as a chance to earn some money and nothing more and is unapologetically honest when giving his opinion, even if it wasn't asked. 
+A womanizer (or so he claims to be), he'll use every moment he can to let a woman know of his intentions and won't pay attention to the decisively thwarts of his advances. He'll also constantly wonder aloud whatever happened to one of his many "mistresses" after the plague hits.
+He'll never admit being ignorant to a subject being discussed among the party and will give an unnecessary overly-complicated explanation about what he thinks. 
+As a voracious taco-eater, he'll never miss an opportunity to mention his Tía Edna's delicious gorditas and will clash with El Gringo on his adverse view of commercial Mexican food.
+
+Figure 1 - Placeholder
+

@@ -1,0 +1,55 @@
+THREAD 1295c20b3d183cb0  Chat with Juancho
+URL: https://mail.google.com/mail/?authuser=alexbarquero@gmail.com#all/thread-f:1339189817738017968
+Messages: 1
+
+======================================================================
+Date: None
+From: jvgarcia@gmail.com
+To: alexbarquero@gmail.com
+Cc: 
+Subject: Chat with Juancho
+MsgID: 1295c20b3d183cb0
+
+Juancho: ese wintermute se ve bastante tuanis
+me: asi es
+Juancho: flash yo diria mejor no
+me: why not?
+me: así hicieron Machinarium
+Juancho: machimarium tiene una vara que como juego de point and click molesta mucho
+Juancho: y es que ud no puede "cancelar" con click derecho
+me: vea ese de Visionaire Studio, se ve GOSU
+me: ah, eso es una mierda
+me: http://www.adventuredevelopers.com/
+Juancho: lo que no entendi con ese visionnaire es si es gratis o que
+me: License Option 1 - Freeware
+The freeware version of Visionaire 3.x is available here and does not cost anything. After having downloaded the software, the user can test the software extensively.
+
+All features of Visionaire 3.x are available for that - there are no constraints of functionality. But the user of the freeware version has no possibility of compiling his games into one file (Vis game file). Therefore, the "uncompiled game resources" can be still edited with the Visionaire editor, i.e. the files can be seen and edited by other users of Visionaire. Also only freeware-games may be developed. It's prohibited to use the freeware-version of "Visionaire" for developing or distributing commercial games.
+
+License Option 2 - Limited Distribution
+The full version of Visionaire 3.x costs 35 Euros (45 Dollars). The advantage of purchasing this full version is the possibility of compiling the game into a VIS or EXE file. Using that functionality, games can be published e.g. on the Internet, without the users being able to change it or to look at the texts or graphics of the game.
+
+After the money arrives on the account of the Visionaire Team, the licensee receives a registered full version of Visionaire 3.x, which is associated with the name of the licensee. Only the licensee has the right to use the full version and to compile the VIS and EXE game files.
+
+With this license, you can develop and distribute both freeware and commercial games with limited distribution rights. The games are only to be sold for a maximum price of 15 Euro (or the according value in another currency). This license does not allow for unlimited distribution and selling rights of developed games, which includes advertisement games etc.!
+
+License Option 3 - Unlimited Distribution
+The purchase of unlimited distribution rights for games developed with Visionaire requires a individually negotiated contract with the Visionaire Team.
+
+The parties that want to use Visionaire 3.x for the development of their fully distributable game, have to negotiate with the licensor about a contract. The conditions will be outlined individually for each contractor.
+
+By request, special adjustments (e.g. own installation program, adjusted game projector, ...) or features can be implemented by the Visionaire Team and be sold seperately to the other party.
+me: cuesta 45 dls
+me: pero el juego no puede valer más de 20dls
+Juancho: que es eso de que no se pueden hacer advertisement games?
+Juancho: igual, ese o el otro wintermute estan bastante tuanis
+me: usted vió que chuzo el juego que hicieron con Visionaire?
+Juancho: si, ese whispered world
+Juancho: lo que no entendi es eso de advertisement
+me: http://www.adventuredevelopers.com/engines.php
+Juancho: pero como le digo, cualquiera de esas opciones suena bien
+me: sep
+me: algo así estaba pensando yo para la epopeya de Smoothface
+me: http://res.dead-code.org/lib/exe/detail.php/games:pj1.png?id=games%3Astart&cache=cache
+Juancho: si, hay varios juegos comerciales de los que he oido ahi
+me: me estoy emocionando un toque con la idea

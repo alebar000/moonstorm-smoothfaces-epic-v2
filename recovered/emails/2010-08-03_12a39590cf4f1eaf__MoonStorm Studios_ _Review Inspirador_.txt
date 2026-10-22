@@ -1,0 +1,108 @@
+THREAD 12a39590cf4f1eaf  [MoonStorm Studios] ¿Review Inspirador?
+URL: https://mail.google.com/mail/?authuser=alexbarquero@gmail.com#all/thread-f:1343081563072437935
+Messages: 5
+
+======================================================================
+Date: 2010-08-03T19:06:09Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: [MoonStorm Studios] ¿Review Inspirador?
+MsgID: 12a39590cf4f1eaf
+
+Estaba leyendo este review de un jueguillo de aventura que se llama Ghost
+Pirates of Vooju Island@PC
+Gamer<http://www.pcgamer.com/2010/07/07/ghost-pirates-of-vooju-island-review/>
+,
+y comparando el primer puzzle de nuestro *Sparkle *con la descripción que da
+este maje del primer puzzle de Ghost Pirates (que cuenta con talento del
+Curse of Monkey Island),
+pues me sorprende decir que el nuestro, viniendo de unos noobs totales, me
+parece un mejor puzzle.
+
+Vienen otros puntos ha tener en cuenta para nuestro proyecto, como:
+
+   - permitir saltarse los diálogos
+   - ponerle ojo a los chistes
+   - evitar puzzles sobre-complicados/con mucho filler
+
+¿que opinan uds?
+======================================================================
+Date: 2010-08-20T03:15:12Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] ¿Review Inspirador?
+MsgID: 12a8d7e8efe492e3
+
+Análisis interesante sobre el debacle de RealTime Worlds (All Points
+Bulletin)
+Hubris, Ambition and Mismanagement: The First Post-Mortem of RealTime
+Worlds<http://www.glgroup.com/News/Hubris-ambition-and-mismanagement--the-first-post-mortem-of-RealTime-Worlds-50097.html>
+
+otro artículo sobre como el tener muchos recursos a disposición crean una
+falsa seguridad a las empresas
+Guy Kawasaki - Why too much money is worse than too
+little<http://www.openforum.com/idea-hub/topics/the-world/article/why-too-much-money-is-worse-than-too-little-guy-kawasaki>
+
+y un vistazo a los 10 peores *flops *de esta década (sin contar APB)
+Parte 1<http://www.gamesbrief.com/2010/01/ten-turkeys-from-the-noughties-part-1/>,
+Parte 2<http://www.gamesbrief.com/2010/01/top-turkeys-from-the-noughties-part-2/>
+
+2010/8/3 Knife_Fighting_Monkey <fancyaccount@gmail.com>
+======================================================================
+Date: 2010-08-20T03:27:15Z
+From: alexbarquero@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] ¿Review Inspirador?
+MsgID: 12a8d893d29a92f2
+
+Mae del primero se me había olvidado poner el comentario, me parecía un
+completo random la vara, lástima, lo pudieron haber hecho mejor.
+
+Lo otro lo voy a leer, pero si leí un poco sobre APB, y que los maes sabían
+supuestamente que les iba a ir mal en los reviews.
+
+2010/8/19 Knife_Fighting_Monkey <fancyaccount@gmail.com>
+======================================================================
+Date: 2010-08-20T03:37:28Z
+From: ledezman@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] ¿Review Inspirador?
+MsgID: 12a8d92a475416ee
+
+hmn si cierto el All Points Bulletin... recuerdo el hype, pero ni me
+acordaba si habia sido lanzado ni nada. No sabia que habia fracasado ni
+nada. Ya ve.
+
+2010/8/19 Alexander Barquero <alexbarquero@gmail.com>
+======================================================================
+Date: 2010-08-25T02:47:13Z
+From: fancyaccount@gmail.com
+To: moonstorm@googlegroups.com
+Cc: 
+Subject: Re: [MoonStorm Studios] ¿Review Inspirador?
+MsgID: 12aa724b6177ce1c
+
+The DEFCON British developer, Introversion, describes how they hit hard
+times, and sold off furniture and fired staff to become a bedroom developer.
+At the point they were ready to rewrite their C.V.s and look for jobs when
+they came up with a last-ditch rescue plan involving creating Steam
+achievements for DEFCON and convincing Valve to run a promotion with it.
+Here's the happy ending to the story: "*Right on cue, Valve delivered. The
+promo exceeded all of our expectations and when combined with our low burn
+rate (no office or staff now) we had gone from being fearful about paying
+our mortgages to having a year’s operating capital in the bank. This was
+good, but paled in comparison to the fact that we were working together as a
+team again. Just like the old days. Just me Chris, TJ and Johnny – laptops,
+bedrooms and plans for global domination. The difference this time was we
+have a lot more knowledge and experience about what works and what doesn’t.
+On the face of it we are less capable than we were six months ago, but
+personally I believe that we are ready to rebuild the company bigger and
+stronger in a different mould*."
+
+http://forums.introversion.co.uk/defcon/introversion/viewtopic.php?t=2512
+
+2010/8/19 Ledezman <ledezman@gmail.com>

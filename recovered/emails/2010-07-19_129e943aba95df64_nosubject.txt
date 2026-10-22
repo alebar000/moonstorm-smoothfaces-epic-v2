@@ -1,0 +1,155 @@
+THREAD 129e943aba95df64  nosubject
+URL: https://mail.google.com/mail/?authuser=alexbarquero@gmail.com#all/thread-f:1341672718962384740
+Messages: 1
+
+======================================================================
+Date: 2010-07-19T05:53:32Z
+From: alexbarquero@gmail.com
+To: alexbarquero@gmail.com
+Cc: 
+Subject: None
+MsgID: 129e943aba95df64
+
+1 INTRODUCCION
+
+1.1 Antecedentes
+
+            Moonstorm Studios es una pequeña empresa (PYMES) nacida a
+mediados de Abril del 2010, producto de la imaginación y el deseo de sus
+tres fundadores, los informáticos Juan Vicente García, Jose David Aguilar y
+Alexander Barquero. La empresa se crea con el fin de unificar y consolidar
+los esfuerzos e ideas que sus fundadores tienen para posibles futuros
+proyectos de desarrollo de juegos de video, un creciente nicho de
+oportunidad en la industria del entretenimiento digital tanto a nivel
+nacional como internacional.
+
+            El Banco Central de Costa Rica (BCCR) nació el 28 de enero de
+1950 con la promulgación de la Ley 1130, siendo entonces Presidente de la
+República el Licenciado Otilio Ulate Blanco. Esta ley le otorgó al banco la
+autonomía administrativa, financiera y operativa requerida, al separar sus
+funciones que antes se encontraban adscritas al Departamento de Emisión del
+Banco Nacional de Costa Rica (BNCR).
+
+            Con el paso del tiempo, el BCCR empezó a jugar un papel cada vez
+más importante en el control del valor de la moneda nacional respecto a
+monedas extranjeras, y en el establecimiento de políticas de regulación
+inflacionaria. Hoy en día, por ley se le atribuye la responsabilidad de
+promover el ordenado desarrollo de la economía costarricense, velar por el
+buen uso de las reservas monetarias internacionales del país, promover la
+eficiencia del sistema de pagos internos, la emisión de billetes y monedas,
+la custodia de los encajes legales y el control de las entidades financieras
+del país, entre muchas otras labores.
+
+            Hasta hace poco más de quince años, las herramientas
+tecnológicas e informáticas de las que se valía el BCCR para la ejecución de
+sus labores eran prácticamente nulas. Conforme las computadoras personales
+se hacían cada vez más comunes, las divisiones del BCCR empezaron a dotarse
+de recursos informáticos, y constituir mini-departamentos que se encargaban
+de suplir las necesidades propias de sus colaboradores. Eventualmente, esto
+originó un caos administrativo y tecnológico al no existir herramientas o
+metodologías estándar ni tampoco una verdadera estrategia de crecimiento y
+adopción tecnológica a nivel organizacional.
+
+            Dichosamente, esta situación cambió en el año 2001, momento en
+el cual el BCCR decidió colocar a todos los empleados informáticos y sus
+productos bajo un mismo techo, la División de Servicios Tecnológicos (DST).
+Desde entonces, se centralizó la prestación de los servicios tecnológicos en
+el BCCR y a todos los niveles, desde el hardware hasta las soluciones
+informáticas o el soporte al usuario final. Esta unión de fuerzas fue
+también uno de los detonantes para que se diera la creación del Sistema
+Nacional de Pagos Electrónicos (SINPE), plataforma de software que integra
+la red de entidades financieras de todo el país.
+
+            En la actualidad, la DST lo conforman un equipo de ciento
+cuarenta personas distribuidas en cuatro departamentos, lo cual la convierte
+en una de las más grandes divisiones de todo el BCCR. Su función principal
+es el soporte al cumplimiento de los objetivos estratégicos de la
+organización, labor que realiza mediante la prestación de diversos sistemas
+y servicios de apoyo a otras divisiones funcionales del banco, a los
+participantes del SINPE y al público en general que participa como
+inversionista en Central Directo.
+
+1.2 Oportunidad
+
+            En el banco de solicitudes de proyectos de la organización para
+el año 2010, se han identificado una serie de proyectos que deben
+planificarse y desarrollarse de acuerdo a las prioridades establecidas tanto
+por la Junta Directiva como por la Gerencia del BCCR. Este portafolio se
+compone de solicitudes enviadas por todas las divisiones funcionales del
+BCCR, aunque no necesariamente respondan a necesidades propias de cada
+división. En algunos de los casos, los proyectos se originan por razones
+externas a los departamentos o a la institución como lo son las
+recomendaciones de auditoría, las obligaciones legales con otros organismos
+públicos como la Contraloría General de la República o el Ministerio de
+Hacienda, o inclusive por la necesidad de cumplir con normas internacionales
+de regulación financiera y/o bancaria.
+
+            Entre las peticiones que forman parte del portafolio y que son
+propuestas originadas por la DST, se plantea un posible proyecto para
+identificar e implementar prácticas del *Information Technology
+Infrastructure Library* (ITIL). Las prácticas identificadas estarán
+alineadas con la realidad de la organización, y deberán permitan mejorar la
+prestación de los servicios que se dan actualmente, tanto hacia adentro como
+hacia afuera del BCCR.
+
+1.3 Justificación del problema
+
+            ITIL es un marco de referencia que agrupa una serie de buenas
+prácticas en las labores de gestión de Tecnologías de Información (TI), las
+cuales pueden ser acondicionadas a la forma en que operan los departamentos
+de TI de cualquier organización. Al igual que otros marcos de referencia o
+metodologías, un acopio efectivo de estas prácticas puede impactar
+positivamente el nivel de calidad de los servicios que se brindan.
+
+            Hace aproximadamente cinco años, en la DST se hizo un esfuerzo
+bastante importante para la implementación de prácticas del *Rational
+Unified Process* (RUP), especialmente en el contexto de las labores de
+análisis, especificación, diseño, desarrollo, implementación, entrega y
+soporte de soluciones de software. Esta labor cosechó grandes frutos que hoy
+se encuentran plasmados en procesos estándar para la concepción e
+implementación de sistemas, y que han permitido el desarrollo de muchos
+sistemas con gran acogida y éxito.
+
+            Con el objeto de repetir estos resultados en todas las áreas de
+la división, se ha decidido analizar la realidad de la DST desde la
+perspectiva de ITIL, de tal forma que permita identificar aquellas
+oportunidades de mejora que podrían agregar valor a los esfuerzos realizados
+actualmente.
+
+            Por esta razón, se plantea la necesidad de constituir la
+identificación e implementación de prácticas ITIL como un proyecto
+estructurado, que permita a la DST hacer una rápida y efectiva labor de
+reingeniería de los procesos de la división. Una adecuada implementación
+brindará beneficios al personal de la división, a los colaboradores de otras
+divisiones funcionales del BCCR y a los clientes y usuarios finales de los
+servicios que aquí se brindan.
+
+1.4 Supuestos
+
+            ITIL es un marco de referencia que agrupa una serie de buenas
+prácticas en las labores de gestión de Tecnologías de Información (TI), las
+cuales pueden ser acondicionadas a la forma en que
+
+1.5 Restricciones
+
+            ITIL es un marco de referencia que agrupa una serie de buenas
+prácticas en las labores de gestión de Tecnologías de Información (TI), las
+cuales pueden ser acondicionadas a la forma en que
+
+1.6 Objetivo General
+
+            ITIL es un marco de referencia que agrupa una serie de buenas
+prácticas en las labores de gestión de Tecnologías de Información (TI), las
+cuales pueden ser acondicionadas a la forma en que
+
+1.7 Objetivos Específicos
+
+            ITIL es un marco de referencia que agrupa una serie de buenas
+prácticas en las labores de gestión de Tecnologías de Información (TI), las
+cuales pueden ser acondicionadas a la forma en que
+
+1.8 Justificación del problema
+
+            ITIL es un marco de referencia que agrupa una serie de buenas
+prácticas en las labores de gestión de Tecnologías de Información (TI), las
+cuales pueden ser acondicionadas a la forma en que

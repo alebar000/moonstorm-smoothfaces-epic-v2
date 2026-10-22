@@ -1,0 +1,17 @@
+{
+  "name": "smoothfaces-epic-mvp",
+  "version": "1.0.0",
+  "description": "MoonStorm Studios (2010-2026) - Smoothface's Epic (Codename: Sparkle) Playable Vertical Slice MVP",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 5173 --host",
+    "build": "vite build",
+    "preview": "vite preview --port 4173 --host",
+    "assets": "python scripts/build_mvp_assets.py"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "vite": "^5.4.10"
+  }
+}
