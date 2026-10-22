@@ -1,0 +1,23 @@
+STYLE (non-negotiable, matches the attached references):
+Hand-drawn construction-paper cutout. Each piece is ONE flat color of
+construction paper with a very subtle fiber texture, cut out with scissors.
+Design and proportions come from the attached pencil sketch by the original
+artist; do not reinterpret it. Outline: black marker (#1a1612), hand-drawn, visible
+pressure variation, some strokes overshoot corners. Shading: SOFT PENCIL
+only (#6e6a62), grey, visible stroke direction, only in shadow areas. No digital
+gradients, no airbrush, no glow, no 3D.
+EDGE: rough scissor cut, visible straight facets and corners where the
+scissors turned; the cut does not perfectly follow the ink.
+INK: ULTRA-THICK chunky black chisel-tip Sharpie marker (#1a1612), 30-36 px thick at 1024px canvas resolution so that when downscaled 4.4x to 233 px height it measures 7-8 px thick (required range: 6-9 px). Do NOT draw any thin black lines or dark speckles (lum < 50) anywhere inside the coat.
+COLOR: vivid, saturated construction paper, ONLY from this character
+palette: #f9ecc2, #323232, #717171, #000000, #613e35, #004b81, #343e63, #9e1507, #9c793a, #e7bc57, #0c7a27, #848aa4, #1a1612, #6e6a62. Fill the coat interior with flat uniform dark grey (#383838, luminance > 55) and only a small localized zone of medium-grey pencil strokes (#6e6a62, luminance ~105) under the collar fold.
+One isolated object, flat solid #00FF00 chroma-key green background filling the entire canvas around the cutout. No cast shadow baked in.
+FORBIDDEN: gradients, glow, bloom, 3D render, airbrush, white sticker
+border, any background scene, any text, more than one object, colors from the
+other palette, reinterpreting the sketch, thin black lines, noisy paper grain across the whole surface.
+
+PIECE: smoothface.torso
+WHAT: Mr. Smoothface coat torso ONLY (no head, no eyes, no arms, no hands, no legs): flat uniform dark-grey trench coat (#383838 construction paper) in 3/4 front view facing left, matching the exact silhouette of ref_cutout_layers/007_body.png and the coat design of ref_design_smoothface.png, with high upturned villain collar and shoulder overlap flaps. Surrounded by an ULTRA-BOLD, chunky 32px-wide black Sharpie marker outline (#1a1612) and one bold 32px lapel seam line. Flat solid #00FF00 green background with 15% margin on all sides.
+SIZE: 233 px height at 1.0 scale, centered, with ~8% margin
+PIVOT HINT: neck collar overlap at top-center; front and back shoulder mounts on upper torso; lower coat hem at bottom-center
+FIX FROM PREVIOUS VERSION: gates_v1 failed ink (ink_thickness_px was 2.0, required 6-9 px at 233px height: make the black #1a1612 marker outline 4x thicker, ~32px wide on the 1024px canvas, and do not put any thin dark lines or dark grain <50 luminance inside the coat), gradient (soft_gradient_fraction was 0.5107, max 0.40: make the grey coat fill completely flat uniform #383838 with almost no texture noise), and halo (halo_fraction 0.0118: ensure a crisp hard edge between the black marker border and the flat #00FF00 background with zero white/light fringe), keep everything else identical.

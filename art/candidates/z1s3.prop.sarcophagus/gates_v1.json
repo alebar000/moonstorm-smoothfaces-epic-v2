@@ -1,0 +1,39 @@
+{
+  "file": "art/candidates/z1s3.prop.sarcophagus/v1.png",
+  "ts": "2026-10-21T21:55:05",
+  "kind": "prop",
+  "halo_fraction": 0.0071,
+  "halo_ok": false,
+  "sticker_border_fraction": 0.0,
+  "sticker_ok": true,
+  "stray_partial_alpha": 13,
+  "partial_alpha_ok": false,
+  "components": 1,
+  "islands_significant": 0,
+  "specks": 0,
+  "components_ok": true,
+  "touches_border_sides": 0,
+  "border_ok": true,
+  "palette_used": "scenery",
+  "off_palette_fraction": 0.0221,
+  "palette_provisional": false,
+  "palette_ok": true,
+  "ink_thickness_px": 2.0,
+  "ink_range": [
+    4,
+    7
+  ],
+  "ink_ok": false,
+  "soft_gradient_fraction": 0.2061,
+  "gradient_ok": true,
+  "measured_height_px": 323,
+  "target_height_px": 362,
+  "height_ok": false,
+  "failed": [
+    "halo",
+    "partial_alpha",
+    "ink",
+    "height"
+  ],
+  "overall": "fail"
+}

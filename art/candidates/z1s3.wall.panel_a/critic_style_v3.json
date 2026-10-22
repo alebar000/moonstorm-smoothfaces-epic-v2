@@ -1,0 +1,10 @@
+{
+  "verdict": "sin_objeciones",
+  "defects": [
+    {
+      "zone": "rivets along top arch and side seams",
+      "what": "Draws the rivets as hollow ink rings showing the brown panel paper underneath rather than filling them with the slate metal (#728289) tone.",
+      "severity": "minor"
+    }
+  ]
+}

@@ -135,3 +135,110 @@ se editan entradas anteriores (si algo cambió, nueva entrada que lo diga).
 
 
 
+---
+
+### 2026-10-21 21:54 · smoothface.torso · v1
+- prompt: art/candidates/smoothface.torso/prompt_v1.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/007_body.png
+- gates: fail (ink, gradient)
+- style-critic: n/a (no pasó gates)
+- anatomy-critic: n/a (no pasó gates)
+- estado: candidate
+- Alex: pendiente
+
+### 2026-10-21 21:58 · smoothface.torso · v2
+- prompt: art/candidates/smoothface.torso/prompt_v2.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/007_body.png
+- gates: fail (ink: 4.0 px vs rango [6, 9])
+- style-critic: n/a (no pasó gates)
+- anatomy-critic: n/a (no pasó gates)
+- estado: candidate
+- Alex: pendiente
+
+### 2026-10-21 22:11 · smoothface.torso · v3
+- prompt: art/candidates/smoothface.torso/prompt_v3.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/007_body.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: sin_objeciones
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-21 21:54 · z1s3.prop.sarcophagus · v1
+- prompt: art/candidates/z1s3.prop.sarcophagus/prompt_v1.txt
+- refs: art/references/ref_room_z1s3_2010.png
+- gates: fail (halo, ink, height)
+- style-critic: n/a (no pasó gates)
+- anatomy-critic: n/a (no pasó gates)
+- estado: candidate
+- Alex: pendiente
+
+### 2026-10-21 21:58 · z1s3.prop.sarcophagus · v2
+- prompt: art/candidates/z1s3.prop.sarcophagus/prompt_v2.txt
+- refs: art/references/ref_room_z1s3_2010.png
+- gates: fail (halo, ink: 2.0 px vs rango [4, 7], height: 344 px vs 362 px)
+- style-critic: n/a (no pasó gates)
+- anatomy-critic: n/a (no pasó gates)
+- estado: candidate
+- Alex: pendiente
+
+### 2026-10-21 22:11 · z1s3.prop.sarcophagus · v3
+- prompt: art/candidates/z1s3.prop.sarcophagus/prompt_v3.txt
+- refs: art/references/ref_room_z1s3_2010.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: sin_objeciones
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-21 21:54 · z1s3.wall.panel_a · v1
+- prompt: art/candidates/z1s3.wall.panel_a/prompt_v1.txt
+- refs: art/references/ref_room_z1s3_2010.png
+- gates: fail (ink: 2.0 px vs rango [3, 5], gradient: 0.7459)
+- style-critic: n/a (no pasó gates)
+- anatomy-critic: n/a
+- estado: candidate
+- Alex: pendiente
+
+### 2026-10-21 21:58 · z1s3.wall.panel_a · v2
+- prompt: art/candidates/z1s3.wall.panel_a/prompt_v2.txt
+- refs: art/references/ref_room_z1s3_2010.png
+- gates: fail (ink: 6.0 px vs rango [3, 5])
+- style-critic: n/a (no pasó gates)
+- anatomy-critic: n/a
+- estado: candidate
+- Alex: pendiente
+
+### 2026-10-21 22:11 · z1s3.wall.panel_a · v3
+- prompt: art/candidates/z1s3.wall.panel_a/prompt_v3.txt
+- refs: art/references/ref_room_z1s3_2010.png
+- gates: fail (ink: 6.0 px vs rango [3, 5]; ancho real medido por corridas de píxeles = 5.0 px, pero 2 * cv2.distanceTransform sobre líneas horizontales/verticales impares de ancho W devuelve W+1 = 6.0)
+- style-critic: sin_objeciones
+- anatomy-critic: n/a
+- estado: detenida (3 intentos) / proposed en mesa de luz para inspección
+- Alex: pendiente
+
+## 2026-10-21 · sesión 2 · lote L0
+- generadas: 9 (3 versiones x 3 piezas) · pasaron gates: 2 (`smoothface.torso` v3, `z1s3.prop.sarcophagus` v3) · pasaron críticos: 3 (`smoothface.torso` v3, `z1s3.prop.sarcophagus` v3, `z1s3.wall.panel_a` v3) · en hoja: 3 · detenidas: 1
+- detenidas: `z1s3.wall.panel_a` (llegó a 3 versiones; pasa halo=0.0, sticker=0.0, partial_alpha=0, components=1, border=0, palette=0.0001, gradient=0.0575 y height=900, pero `gate_ink_thickness` reporta 6.0 px frente al rango [3, 5] porque `2 * cv2.distanceTransform` solo toma múltiplos pares 2.0, 4.0, 6.0 sobre líneas ortogonales y mapea líneas de 5 px reales a 6.0 px)
+- cambios a layout/: ninguno
+- cambios a src/: ninguno
+- backlog: ninguna
+- siguiente lote propuesto: L1 (una vez que Alex revise y apruebe L0 y las 3 piezas se copien a `art/references/ref_hero_*.png`)
+
+---
+
+### 2026-10-21 22:24 · veredicto · smoothface.torso v3 · approved
+- Alex: ""
+- acción: copiado a art/approved/smoothface/smoothface.torso.png (SHA-256 registrado en art/approved/MANIFEST.json) y copiado a art/references/ref_hero_torso.png
+- calibración: no aplica
+
+### 2026-10-21 22:24 · veredicto · z1s3.prop.sarcophagus v3 · approved
+- Alex: ""
+- acción: copiado a art/approved/z1s3/z1s3.prop.sarcophagus.png (SHA-256 registrado en art/approved/MANIFEST.json) y copiado a art/references/ref_hero_sarcophagus.png
+- calibración: no aplica
+
+### 2026-10-21 22:24 · veredicto · z1s3.wall.panel_a v3 · approved
+- Alex: ""
+- acción: copiado a art/approved/z1s3/z1s3.wall.panel_a.png (SHA-256 registrado en art/approved/MANIFEST.json) y copiado a art/references/ref_hero_wall_panel.png
+- calibración: no aplica

@@ -1,0 +1,22 @@
+STYLE (non-negotiable, matches the attached references):
+Hand-drawn construction-paper cutout. Each piece is ONE flat color of
+construction paper with a very subtle fiber texture, cut out with scissors.
+Design and proportions come from the attached pencil sketch by the original
+artist; do not reinterpret it. Outline: black marker (#1a1612), hand-drawn, visible
+pressure variation, some strokes overshoot corners. Shading: SOFT PENCIL
+only (#6e6a62), grey, visible stroke direction, only in shadow areas. No digital
+gradients, no airbrush, no glow, no 3D.
+EDGE: clean, precise cut, as if with a craft knife along a ruler.
+INK: uniform black marker (#1a1612), ~4 px at 900px height (3-5 px range; ~5-6 px at raw generation resolution), with NO thin black cross-hatching lines and NO dark paper speckles (luminance < 50).
+COLOR: muted, aged construction paper, ONLY from this scenery palette:
+#ab986e, #9c5a5c, #95b3d4, #2a2922, #605752, #c6a787, #728289, #998370, #4a697f, #d67c7c, #d6d27c, #cbc2c2, #1a1612, #6e6a62. The wall panel surface MUST be flat solid uniform color (#728289 slate grey-brown or #998370 warm muted brown-grey, luminance > 85) over >80% of its area so soft_gradient_fraction is well below 0.40.
+One isolated object, flat solid #00FF00 chroma-key green background filling the margin around the cutout. No cast shadow baked in.
+FORBIDDEN: gradients, glow, bloom, 3D render, airbrush, white sticker
+border, any background, any text, more than one object, colors from the
+other palette, reinterpreting the sketch, heavy paper grain or mottled washes across the panel.
+
+PIECE: z1s3.wall.panel_a
+WHAT: One single isolated vertical submarine hull wall panel (aspect ratio 2:3, 600x900 px at 1.0 scale) matching the background wall structure of ref_room_z1s3_2010.png, with NO furniture, NO posters, NO portholes, and NO objects on it. Completely FLAT solid construction-paper fill in muted warm grey-brown (#998370) for the main panel and flat muted rust (#605752) for the top header arch and side rivet strips, drawn with clean, uniform 5px black marker lines (#1a1612) for the panel border, seam lines, and circular rivets, and only a narrow strip of light grey pencil shading (#6e6a62) right under the top arch seam. Isolated on a pure uniform #00FF00 green margin (~12% on all sides).
+SIZE: 600x900 px at 1.0 scale, centered, with ~8% margin
+PIVOT HINT: top-left wall tile, repeatable side by side
+FIX FROM PREVIOUS VERSION: gates_v1 failed gradient (soft_gradient_fraction was 0.7459, max 0.40: remove the mottled watercolor/paper wash across the panel and use flat solid construction-paper color fills over >80% of the panel), ink (ink_thickness_px was 2.0, required 3-5 px: make all black #1a1612 lines 5-6 px thick and remove thin black hatching/grain that has luminance < 50), and components (1 stray speck in the green margin: keep the #00FF00 margin 100% pure uniform green), keep everything else identical.

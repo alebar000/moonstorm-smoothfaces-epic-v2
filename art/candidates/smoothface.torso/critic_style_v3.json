@@ -1,0 +1,10 @@
+{
+  "verdict": "sin_objeciones",
+  "defects": [
+    {
+      "zone": "upper-left collar notch",
+      "what": "Adds a small lighter-grey triangular fold inset at the base of the back collar that is absent from both 007_body.png and ref_design_smoothface.png.",
+      "severity": "minor"
+    }
+  ]
+}

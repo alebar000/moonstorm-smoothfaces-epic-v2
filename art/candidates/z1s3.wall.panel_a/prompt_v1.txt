@@ -1,0 +1,21 @@
+STYLE (non-negotiable, matches the attached references):
+Hand-drawn construction-paper cutout. Each piece is ONE flat color of
+construction paper with a very subtle fiber texture, cut out with scissors.
+Design and proportions come from the attached pencil sketch by the original
+artist; do not reinterpret it. Outline: black marker (#1a1612), hand-drawn, visible
+pressure variation, some strokes overshoot corners. Shading: SOFT PENCIL
+only (#6e6a62), grey, visible stroke direction, only in shadow areas. No digital
+gradients, no airbrush, no glow, no 3D.
+EDGE: clean, precise cut, as if with a craft knife along a ruler.
+INK: thin pen ~4 px at game scale (3-5 px range; ~8 px at 2x generation scale).
+COLOR: muted, aged construction paper, ONLY from this scenery palette:
+#ab986e, #9c5a5c, #95b3d4, #2a2922, #605752, #c6a787, #728289, #998370, #4a697f, #d67c7c, #d6d27c, #cbc2c2, #1a1612, #6e6a62.
+One isolated object, flat solid #00FF00 chroma-key green background filling the entire canvas around the cutout. No cast shadow baked in.
+FORBIDDEN: gradients, glow, bloom, 3D render, airbrush, white sticker
+border, any background, any text, more than one object, colors from the
+other palette, reinterpreting the sketch.
+
+PIECE: z1s3.wall.panel_a
+WHAT: One single isolated vertical submarine hull wall panel (aspect ratio 2:3, 600x900 px at 1.0 scale) matching the background wall of ref_room_z1s3_2010.png, with NO furniture, NO posters, NO portholes, and NO objects on it. Clean rectangular construction-paper panel in muted hull rust (#605752) and aged wood/metal (#998370, #728289) with a row of hand-drawn riveted seam bolts along the vertical edges and curved top header, drawn with thin black ink pen (#1a1612, ~4 px at game scale) and subtle grey pencil shading (#6e6a62) so panels can tile side-by-side seamlessly. Isolated on a flat solid #00FF00 green margin.
+SIZE: 600x900 px at 1.0 scale (generate at 2x scale, centered, with ~8% solid #00FF00 margin on all sides)
+PIVOT HINT: top-left wall tile, repeatable side by side

@@ -1,0 +1,21 @@
+{
+  "id": "z1s3.prop.sarcophagus",
+  "category": "z1s3",
+  "kind": "prop",
+  "what": "Standing Egyptian-style wooden/metallic sarcophagus prop from Captain Dread's cabin (Z1S3), angled 3/4 view matching the left side of ref_room_z1s3_2010.png, carved pharaoh face and crossed arms on lid, warm wood (#998370), hull rust (#605752), aged brass (#ab986e) and muted navy (#4a697f) accents",
+  "target_height_px": 362,
+  "height_fraction_of_smoothface": 1.15,
+  "pivot_hint": "bottom-center base on cabin floor",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/ref_room_z1s3_2010.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt",
+    "v2": "prompt_v2.txt",
+    "v3": "prompt_v3.txt"
+  },
+  "status": "approved",
+  "proposed_version": "v3",
+  "approved_version": "v3"
+}

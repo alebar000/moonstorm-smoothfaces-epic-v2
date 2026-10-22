@@ -19,12 +19,45 @@
       "meta": "art/candidates/palette.scenery/meta.json",
       "approved_at": "2026-10-21T21:38:16",
       "reason": ""
+    },
+    "smoothface.torso": {
+      "path": "art/approved/smoothface/smoothface.torso.png",
+      "version": "v3",
+      "sha256": "1cf32a29f628f52253feb919f569140f54a9ab965d3a9837393b7bc708ff1cbe",
+      "category": "smoothface",
+      "kind": "body_part",
+      "meta": "art/candidates/smoothface.torso/meta.json",
+      "approved_at": "2026-10-21T22:24:07",
+      "reason": ""
+    },
+    "z1s3.prop.sarcophagus": {
+      "path": "art/approved/z1s3/z1s3.prop.sarcophagus.png",
+      "version": "v3",
+      "sha256": "b1a38ab847689bc6e11ef0909a78f14ad77513ca21240f32a542a89cba5deab7",
+      "category": "z1s3",
+      "kind": "prop",
+      "meta": "art/candidates/z1s3.prop.sarcophagus/meta.json",
+      "approved_at": "2026-10-21T22:24:10",
+      "reason": ""
+    },
+    "z1s3.wall.panel_a": {
+      "path": "art/approved/z1s3/z1s3.wall.panel_a.png",
+      "version": "v3",
+      "sha256": "4624fe5bfbbb37eca00c9ccee512be3175550d9bcbacf5e1d422092c9e89b0a7",
+      "category": "z1s3",
+      "kind": "wall",
+      "meta": "art/candidates/z1s3.wall.panel_a/meta.json",
+      "approved_at": "2026-10-21T22:24:16",
+      "reason": ""
     }
   },
   "superseded": [],
   "applied_reviews": [
     "palette.characters@v1@approved@2026-10-21T21:26:19",
     "palette.scenery@v1@rejected@2026-10-21T21:27:18",
-    "palette.scenery@v3@approved@2026-10-21T21:38:16"
+    "palette.scenery@v3@approved@2026-10-21T21:38:16",
+    "smoothface.torso@v3@approved@2026-10-21T22:24:07",
+    "z1s3.prop.sarcophagus@v3@approved@2026-10-21T22:24:10",
+    "z1s3.wall.panel_a@v3@approved@2026-10-21T22:24:16"
   ]
 }

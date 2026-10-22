@@ -1,0 +1,21 @@
+{
+  "id": "z1s3.wall.panel_a",
+  "category": "z1s3",
+  "kind": "wall",
+  "what": "Single vertical riveted submarine hull wall panel (600x900 px at 1.0 scale), seamlessly repeatable horizontally side-by-side, muted rusty hull brown (#605752), warm sand/rust (#998370), slate metal (#728289) and dark iron (#2a2922) rivets along the top arch and vertical side seams, no props or objects attached",
+  "target_height_px": 900,
+  "height_fraction_of_smoothface": null,
+  "pivot_hint": "top-left corner; repeatable 600x900 wall tile",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/ref_room_z1s3_2010.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt",
+    "v2": "prompt_v2.txt",
+    "v3": "prompt_v3.txt"
+  },
+  "status": "approved",
+  "proposed_version": "v3",
+  "approved_version": "v3"
+}

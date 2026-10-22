@@ -62,3 +62,31 @@ Al terminar el lote (o al quedarte sin piezas que puedas avanzar):
 | L12 | Intro: proscenio, cortina, 4 fondos de escena | aprobados |
 | L13 | Animación e integración (tarea de motor, sin arte nuevo) | Alex juega el build |
 | L14 | Playtest con amigos | hoja de observación llena |
+
+## Modo continuo (vale para todas las sesiones desde L0)
+
+1. Cada lote termina en la mesa de luz, nunca en integración. Al dejar las
+   piezas en la hoja, te detienes y dices "Lote Lk en la mesa".
+2. Cuando Alex escriba "ya revisé" (y nada más), haces en este orden sin
+   pedir confirmación: approve.py, bitácora de veredictos, calibración de
+   críticos si Alex rechazó algo que ellos dejaron pasar, commit y push, y
+   arrancas el siguiente lote de la tabla.
+3. Las piezas rechazadas del lote anterior se rehacen PRIMERO dentro del
+   lote nuevo, con el motivo de Alex pegado al prompt, y cuentan para el
+   máximo de 8.
+4. Las notas específicas de cada lote las derivas tú de STYLE_BIBLE.md,
+   SLICE.md, la tabla de lotes y las piezas aprobadas. No esperes que Alex
+   las escriba. Si un lote exige una decisión que no está en esos archivos
+   (los colores de un personaje nuevo, la posición de un objeto en el
+   layout), haces UNA pregunta corta con una propuesta por defecto y sigues
+   con lo demás del lote mientras esperas.
+5. No saltas lotes ni los combinas. Un lote con todas sus piezas aprobadas
+   es la única puerta al siguiente.
+6. Te detienes y esperas a Alex, fuera de la mesa de luz, solo en cuatro
+   casos: una pieza llegó a 3 versiones; crees que una regla de
+   STYLE_BIBLE.md hace imposible una pieza (lo propones en el chat, con
+   evidencia, y no la cambias); L13, porque toca src/; y L14, porque son
+   personas.
+7. Si Alex escribe cualquier otra cosa que no sea "ya revisé", eso es
+   prioridad sobre la tabla: lo atiendes, lo anotas, y vuelves al lote.
+

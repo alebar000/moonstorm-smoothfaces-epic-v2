@@ -1,0 +1,22 @@
+STYLE (non-negotiable, matches the attached references):
+Hand-drawn construction-paper cutout. Each piece is ONE flat color of
+construction paper with a very subtle fiber texture, cut out with scissors.
+Design and proportions come from the attached pencil sketch by the original
+artist; do not reinterpret it. Outline: black marker (#1a1612), hand-drawn, visible
+pressure variation, some strokes overshoot corners. Shading: SOFT PENCIL
+only (#6e6a62), grey, visible stroke direction, only in shadow areas. No digital
+gradients, no airbrush, no glow, no 3D.
+EDGE: clean, precise cut, as if with a craft knife along a ruler.
+INK: BOLD black marker (#1a1612), 18-22 px thick at 1024px canvas resolution so that when downscaled 3x to 362 px height it measures 5-6 px thick (required range: 4-7 px). Do NOT use thin black hatching lines; all black lines (#1a1612) must be bold 18-22 px marker strokes, and any shading lines must be lighter grey pencil (#6e6a62, luminance > 95).
+COLOR: muted, aged construction paper, ONLY from this scenery palette:
+#ab986e, #9c5a5c, #95b3d4, #2a2922, #605752, #c6a787, #728289, #998370, #4a697f, #d67c7c, #d6d27c, #cbc2c2, #1a1612, #6e6a62. Do NOT use #2a2922 for thin lines; use flat solid color fills (#998370 warm wood, #ab986e brass, #c6a787 warm sand, #4a697f muted blue, #605752 rust) with bold #1a1612 marker outlines.
+One isolated object, flat solid #00FF00 chroma-key green background filling the entire canvas around the cutout. No cast shadow baked in.
+FORBIDDEN: gradients, glow, bloom, 3D render, airbrush, white sticker
+border, any background, any text, more than one object, colors from the
+other palette, reinterpreting the sketch, thin black cross-hatching.
+
+PIECE: z1s3.prop.sarcophagus
+WHAT: One isolated standing Egyptian-style sarcophagus prop from Captain Dread's submarine cabin, matching the 3/4 angled orientation on the left side of ref_room_z1s3_2010.png: carved pharaoh mask, nemes headdress, and crossed hands holding a crook/flail on the lid. Colored with flat solid construction-paper fills (#998370, #605752, #ab986e, #c6a787, #4a697f) and bold 20px-wide black marker outlines (#1a1612), with zero thin black hatching lines. Centered on a completely uniform #00FF00 green background with 15% green margin on all sides and zero specks near the canvas border.
+SIZE: 362 px height at 1.0 scale, centered, with ~8% margin
+PIVOT HINT: bottom-center base resting on floor
+FIX FROM PREVIOUS VERSION: gates_v1 failed ink (ink_thickness_px was 2.0, required 4-7 px at 362px height: make all black #1a1612 marker lines 3x thicker, ~20px wide on the raw canvas, and eliminate all thin black cross-hatching lines), height (a stray speck at y=0 skewed the crop box; keep the entire #00FF00 background 100% pure uniform green with zero border artifacts), and halo/partial_alpha (ensure a crisp hard black marker outer edge against pure #00FF00 with no white halo), keep everything else identical.

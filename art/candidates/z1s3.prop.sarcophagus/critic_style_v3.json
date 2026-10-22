@@ -1,0 +1,10 @@
+{
+  "verdict": "sin_objeciones",
+  "defects": [
+    {
+      "zone": "headdress right lappet and face/hands",
+      "what": "Applies the muted navy (#4a697f) accent only to the left side of the headdress while omitting the right-side blue banding seen in ref_room_z1s3_2010.png, and introduces a lighter tan fill on the face and hands.",
+      "severity": "minor"
+    }
+  ]
+}
