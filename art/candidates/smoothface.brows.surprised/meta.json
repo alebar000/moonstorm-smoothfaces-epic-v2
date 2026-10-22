@@ -1,0 +1,21 @@
+{
+  "id": "smoothface.brows.surprised",
+  "category": "smoothface",
+  "kind": "body_part",
+  "what": "Pair of Mr. Smoothface eyebrows in high surprised arch (3/4 front view facing left, matching proportions of ref_cutout_layers/006_Layer_7_copy.png): two heavy curved black marker cutout brow arches (#1a1612) raised high in shock",
+  "target_height_px": 47,
+  "height_fraction_of_smoothface": 0.149,
+  "pivot_hint": "center of brow pair high above smoothface.eyes",
+  "allowed_islands": 1,
+  "references": [
+    "art/references/ref_design_smoothface.png",
+    "art/references/ref_cutout_layers/006_Layer_7_copy.png",
+    "art/references/ref_hero_torso.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "approved",
+  "proposed_version": "v1",
+  "approved_version": "v1"
+}

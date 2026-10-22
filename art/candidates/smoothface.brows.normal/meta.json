@@ -1,0 +1,25 @@
+{
+  "id": "smoothface.brows.normal",
+  "category": "smoothface",
+  "kind": "body_part",
+  "what": "Pair of Mr. Smoothface eyebrows in default villain arch (3/4 front view facing left, matching ref_cutout_layers/006_Layer_7_copy.png without pupils): two bold black marker cutout brow strips (#1a1612) with subtle grey pencil edge shading (#6e6a62), angled in a scheming villain V-arch",
+  "target_height_px": 47,
+  "height_fraction_of_smoothface": 0.149,
+  "pivot_hint": "center of brow pair above smoothface.eyes",
+  "allowed_islands": 1,
+  "references": [
+    "art/references/ref_design_smoothface.png",
+    "art/references/ref_cutout_layers/006_Layer_7_copy.png",
+    "art/references/ref_hero_torso.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt",
+    "v2": "prompt_v2.txt"
+  },
+  "status": "rejected",
+  "proposed_version": "v2",
+  "last_rejection": {
+    "version": "v2",
+    "reason": "exactly the same as angry, has to be different"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "file": "art/candidates/smoothface.eyes.closed/v1.png",
+  "ts": "2026-10-21T22:35:33",
+  "kind": "body_part",
+  "halo_fraction": 0.0182,
+  "halo_ok": false,
+  "sticker_border_fraction": 0.443,
+  "sticker_ok": false,
+  "stray_partial_alpha": 0,
+  "partial_alpha_ok": true,
+  "components": 2,
+  "islands_significant": 1,
+  "specks": 0,
+  "components_ok": true,
+  "touches_border_sides": 0,
+  "border_ok": true,
+  "palette_used": "characters",
+  "off_palette_fraction": 0.0944,
+  "palette_provisional": false,
+  "palette_ok": false,
+  "ink_thickness_px": 2.0,
+  "ink_range": [
+    6,
+    9
+  ],
+  "ink_ok": false,
+  "soft_gradient_fraction": 0.0819,
+  "gradient_ok": true,
+  "measured_height_px": 48,
+  "target_height_px": 48,
+  "height_ok": true,
+  "failed": [
+    "halo",
+    "sticker",
+    "palette",
+    "ink"
+  ],
+  "overall": "fail"
+}

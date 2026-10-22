@@ -242,3 +242,248 @@ se editan entradas anteriores (si algo cambió, nueva entrada que lo diga).
 - Alex: ""
 - acción: copiado a art/approved/z1s3/z1s3.wall.panel_a.png (SHA-256 registrado en art/approved/MANIFEST.json) y copiado a art/references/ref_hero_wall_panel.png
 - calibración: no aplica
+
+---
+
+### 2026-10-21 22:35 · smoothface.head · v1
+- prompt: art/candidates/smoothface.head/prompt_v1.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/004_Layer_6_copy.png, art/references/ref_hero_torso.png
+- gates: fail (halo: 0.011, ink: 4.0 px vs rango [6, 9])
+- style-critic: n/a (no pasó gates)
+- anatomy-critic: n/a (no pasó gates)
+- estado: candidate
+- Alex: pendiente
+
+### 2026-10-21 22:40 · smoothface.head · v2
+- prompt: art/candidates/smoothface.head/prompt_v2.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/004_Layer_6_copy.png, art/references/ref_hero_torso.png
+- gates: fail (ink: 4.0 px vs rango [6, 9])
+- style-critic: n/a (no pasó gates)
+- anatomy-critic: n/a (no pasó gates)
+- estado: candidate
+- Alex: pendiente
+
+### 2026-10-21 22:46 · smoothface.head · v3
+- prompt: art/candidates/smoothface.head/prompt_v3.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/004_Layer_6_copy.png, art/references/ref_hero_torso.png
+- gates: fail (ink: 4.0 px vs rango [6, 9]; pasa halo=0.0, sticker=0.0, partial_alpha=0, components=1, border=0, palette=0.0067, gradient=0.0851 y height=131)
+- style-critic: sin_objeciones
+- anatomy-critic: sin_objeciones
+- estado: detenida (3 intentos) / proposed en mesa de luz para inspección
+- Alex: pendiente
+
+### 2026-10-21 22:35 · smoothface.eyes.normal · v1
+- prompt: art/candidates/smoothface.eyes.normal/prompt_v1.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/005_Layer_8_copy.png, art/references/ref_hero_torso.png
+- gates: fail (sticker: 0.1883, ink: 2.0 px vs rango [6, 9])
+- style-critic: n/a (no pasó gates)
+- anatomy-critic: n/a (no pasó gates)
+- estado: candidate
+- Alex: pendiente
+
+### 2026-10-21 22:40 · smoothface.eyes.normal · v2
+- prompt: art/candidates/smoothface.eyes.normal/prompt_v2.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/005_Layer_8_copy.png, art/references/ref_hero_torso.png
+- gates: fail (ink: 4.0 px vs rango [6, 9])
+- style-critic: n/a (no pasó gates)
+- anatomy-critic: n/a (no pasó gates)
+- estado: candidate
+- Alex: pendiente
+
+### 2026-10-21 22:46 · smoothface.eyes.normal · v3
+- prompt: art/candidates/smoothface.eyes.normal/prompt_v3.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/005_Layer_8_copy.png, art/references/ref_hero_torso.png
+- gates: fail (ink: 4.39 px vs rango [6, 9]; pasa halo=0.0, sticker=0.0, partial_alpha=0, components=2, islands=1, border=0, palette=0.0271, gradient=0.0678 y height=48)
+- style-critic: sin_objeciones
+- anatomy-critic: sin_objeciones
+- estado: detenida (3 intentos) / proposed en mesa de luz para inspección
+- Alex: pendiente
+
+### 2026-10-21 22:35 · smoothface.eyes.closed · v1
+- prompt: art/candidates/smoothface.eyes.closed/prompt_v1.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/005_Layer_8_copy.png, art/references/ref_hero_torso.png
+- gates: fail (halo: 0.0182, sticker: 0.443, palette: 0.0944, ink: 2.0 px vs rango [6, 9])
+- style-critic: n/a (no pasó gates)
+- anatomy-critic: n/a (no pasó gates)
+- estado: candidate
+- Alex: pendiente
+
+### 2026-10-21 22:40 · smoothface.eyes.closed · v2
+- prompt: art/candidates/smoothface.eyes.closed/prompt_v2.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/005_Layer_8_copy.png, art/references/ref_hero_torso.png
+- gates: fail (sticker: 0.2716, ink: 2.0 px vs rango [6, 9])
+- style-critic: n/a (no pasó gates)
+- anatomy-critic: n/a (no pasó gates)
+- estado: candidate
+- Alex: pendiente
+
+### 2026-10-21 22:46 · smoothface.eyes.closed · v3
+- prompt: art/candidates/smoothface.eyes.closed/prompt_v3.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/005_Layer_8_copy.png, art/references/ref_hero_torso.png
+- gates: fail (ink: 4.0 px vs rango [6, 9]; pasa halo=0.0, sticker=0.0, partial_alpha=0, components=2, islands=1, border=0, palette=0.0214, gradient=0.1027 y height=48)
+- style-critic: sin_objeciones
+- anatomy-critic: sin_objeciones
+- estado: detenida (3 intentos) / proposed en mesa de luz para inspección
+- Alex: pendiente
+
+### 2026-10-21 22:35 · smoothface.eyes.squint · v1
+- prompt: art/candidates/smoothface.eyes.squint/prompt_v1.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/005_Layer_8_copy.png, art/references/ref_hero_torso.png
+- gates: fail (ink: 5.6 px vs rango [6, 9])
+- style-critic: n/a (no pasó gates)
+- anatomy-critic: n/a (no pasó gates)
+- estado: candidate
+- Alex: pendiente
+
+### 2026-10-21 22:40 · smoothface.eyes.squint · v2
+- prompt: art/candidates/smoothface.eyes.squint/prompt_v2.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/005_Layer_8_copy.png, art/references/ref_hero_torso.png
+- gates: fail (ink: 5.6 px vs rango [6, 9])
+- style-critic: n/a (no pasó gates)
+- anatomy-critic: n/a (no pasó gates)
+- estado: candidate
+- Alex: pendiente
+
+### 2026-10-21 22:46 · smoothface.eyes.squint · v3
+- prompt: art/candidates/smoothface.eyes.squint/prompt_v3.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/005_Layer_8_copy.png, art/references/ref_hero_torso.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: sin_objeciones
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-21 22:35 · smoothface.brows.normal · v1
+- prompt: art/candidates/smoothface.brows.normal/prompt_v1.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/006_Layer_7_copy.png, art/references/ref_hero_torso.png
+- gates: fail (halo: 0.0057, ink: 5.6 px vs rango [6, 9])
+- style-critic: n/a (no pasó gates)
+- anatomy-critic: n/a (no pasó gates)
+- estado: candidate
+- Alex: pendiente
+
+### 2026-10-21 22:40 · smoothface.brows.normal · v2
+- prompt: art/candidates/smoothface.brows.normal/prompt_v2.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/006_Layer_7_copy.png, art/references/ref_hero_torso.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: sin_objeciones
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-21 22:35 · smoothface.brows.angry · v1
+- prompt: art/candidates/smoothface.brows.angry/prompt_v1.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/006_Layer_7_copy.png, art/references/ref_hero_torso.png
+- gates: fail (gradient: 0.6205 vs max 0.40)
+- style-critic: n/a (no pasó gates)
+- anatomy-critic: n/a (no pasó gates)
+- estado: candidate
+- Alex: pendiente
+
+### 2026-10-21 22:40 · smoothface.brows.angry · v2
+- prompt: art/candidates/smoothface.brows.angry/prompt_v2.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/006_Layer_7_copy.png, art/references/ref_hero_torso.png
+- gates: pass
+- style-critic: rechazar: "Every pixel in the asset is semi-transparent (maximum alpha 203 out of 255, mean alpha 138, with zero fully opaque pixels), making the eyebrows appear as a washed-out translucent grey instead of the solid opaque black marker cutout (#1a1612 / #000000) in the reference."; "The brow interiors are filled with semi-transparent diagonal hatching stripes rather than the solid, uniform black marker fill of ref_cutout_layers/006_Layer_7_copy.png."
+- anatomy-critic: sin_objeciones
+- estado: candidate
+- Alex: pendiente
+
+### 2026-10-21 22:47 · smoothface.brows.angry · v3
+- prompt: art/candidates/smoothface.brows.angry/prompt_v3.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/006_Layer_7_copy.png, art/references/ref_hero_torso.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: sin_objeciones
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-21 22:35 · smoothface.brows.surprised · v1
+- prompt: art/candidates/smoothface.brows.surprised/prompt_v1.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/006_Layer_7_copy.png, art/references/ref_hero_torso.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: sin_objeciones
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-21 22:35 · smoothface.mouth.closed · v1
+- prompt: art/candidates/smoothface.mouth.closed/prompt_v1.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/004_Layer_6_copy.png, art/references/ref_hero_torso.png
+- gates: fail (sticker: 0.1588, ink: 2.0 px vs rango [6, 9])
+- style-critic: n/a (no pasó gates)
+- anatomy-critic: n/a (no pasó gates)
+- estado: candidate
+- Alex: pendiente
+
+### 2026-10-21 22:40 · smoothface.mouth.closed · v2
+- prompt: art/candidates/smoothface.mouth.closed/prompt_v2.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/004_Layer_6_copy.png, art/references/ref_hero_torso.png
+- gates: fail (sticker: 0.1891, ink: 2.0 px vs rango [6, 9])
+- style-critic: n/a (no pasó gates)
+- anatomy-critic: n/a (no pasó gates)
+- estado: candidate
+- Alex: pendiente
+
+### 2026-10-21 22:46 · smoothface.mouth.closed · v3
+- prompt: art/candidates/smoothface.mouth.closed/prompt_v3.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/004_Layer_6_copy.png, art/references/ref_hero_torso.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: sin_objeciones
+- estado: proposed
+- Alex: pendiente
+
+## 2026-10-21 · sesión 3 · lote L1
+- generadas: 22 (sobre 8 piezas del lote) · pasaron gates: 5 (`smoothface.brows.surprised` v1, `smoothface.brows.normal` v2, `smoothface.brows.angry` v3, `smoothface.eyes.squint` v3, `smoothface.mouth.closed` v3) · pasaron críticos: 8 (`sin_objeciones` en las 8 piezas; `style-critic` rechazó `smoothface.brows.angry` v2 por alfa parcial y se corrigió en v3) · en hoja: 8 · detenidas: 3
+- detenidas: `smoothface.head` (3 intentos; v3 pasa todos los gates salvo `ink: 4.0 px` vs `[6, 9]` a 131 px de alto), `smoothface.eyes.normal` (3 intentos; v3 pasa todos los gates salvo `ink: 4.39 px` vs `[6, 9]` a 48 px de alto), `smoothface.eyes.closed` (3 intentos; v3 pasa todos los gates salvo `ink: 4.0 px` vs `[6, 9]` a 48 px de alto)
+- cambios a layout/: ninguno
+- cambios a src/: ninguno
+- backlog: ninguna
+- siguiente lote propuesto: L2 (incluyendo primero cualquier pieza rechazada de L1 y las variantes `smoothface.mouth.talk_a` / `smoothface.mouth.talk_b` si Alex decide mantener bocas visibles)
+
+### 2026-10-21 23:32 · mejora de revisión · review/review_sheet.html
+- Alex: "There is no way for me to tell those are good body pieces by themselves, dissasembled / I need to see them all together, interchangeable whenee rrequiered"
+- acción: se integró un panel de **Marioneta ensamblada e intercambiable** directamente en `review/review_sheet.html` (`http://localhost:8765`) que monta en tiempo real a escala 1:1 el torso aprobado (`smoothface.torso`) junto con `smoothface.head`, las 3 variantes de ojos (`normal`, `squint`, `closed`), las 3 variantes de cejas (`normal`, `angry`, `surprised`), `smoothface.mouth.closed` y el cuerpo inferior/brazo de 2010 como contexto, con botones y atajos (`1/2/3` ojos, `Q/W/E` cejas) para intercambiar expresiones al vuelo, arrastrar piezas con el mouse y sincronizar automáticamente la variante activa al hacer clic en la lista izquierda. Además se generó `review/layout_shots/L1_smoothface_expressions/01_expression_grid.png` en la pestaña de mosaico.
+
+---
+
+### 2026-10-21 23:35 · veredicto · smoothface.brows.angry v3 · approved
+- Alex: ""
+- acción: copiado a art/approved/smoothface/smoothface.brows.angry.png (SHA-256 registrado en art/approved/MANIFEST.json)
+- calibración: no aplica
+
+### 2026-10-21 23:35 · veredicto · smoothface.brows.normal v2 · rejected
+- Alex: "exactly the same as angry, has to be different"
+- acción: movido a art/rejected/smoothface.brows.normal_v2/ ; siguiente versión v3 con FIX: cejas en arco relajado/neutro horizontal claramente diferenciadas del ceño en V agudo de smoothface.brows.angry y del arco alto de smoothface.brows.surprised
+- calibración: style-critic dejó pasar; recalibrado `.agents/skills/style-critic/SKILL.md` agregando el punto 8 (Variant differentiation: comparar contra las variantes hermanas aprobadas de la misma parte y reportar `blocker` si la silueta o ángulo es casi idéntico a otra variante)
+
+### 2026-10-21 23:35 · veredicto · smoothface.brows.surprised v1 · approved
+- Alex: ""
+- acción: copiado a art/approved/smoothface/smoothface.brows.surprised.png (SHA-256 registrado en art/approved/MANIFEST.json)
+- calibración: no aplica
+
+### 2026-10-21 23:35 · veredicto · smoothface.eyes.closed v3 · approved
+- Alex: ""
+- acción: copiado a art/approved/smoothface/smoothface.eyes.closed.png (SHA-256 registrado en art/approved/MANIFEST.json)
+- calibración: no aplica
+
+### 2026-10-21 23:35 · veredicto · smoothface.eyes.normal v3 · approved
+- Alex: ""
+- acción: copiado a art/approved/smoothface/smoothface.eyes.normal.png (SHA-256 registrado en art/approved/MANIFEST.json)
+- calibración: no aplica
+
+### 2026-10-21 23:35 · veredicto · smoothface.eyes.squint v3 · approved
+- Alex: ""
+- acción: copiado a art/approved/smoothface/smoothface.eyes.squint.png (SHA-256 registrado en art/approved/MANIFEST.json)
+- calibración: no aplica
+
+### 2026-10-21 23:35 · veredicto · smoothface.head v3 · approved
+- Alex: ""
+- acción: copiado a art/approved/smoothface/smoothface.head.png (SHA-256 registrado en art/approved/MANIFEST.json)
+- calibración: no aplica
+
+### 2026-10-21 23:36 · veredicto · smoothface.mouth.closed v3 · rejected
+- Alex: "why a mouth? His mouth should be permanently covered"
+- acción: movido a art/rejected/smoothface.mouth.closed_v3/ y descartada la categoría `smoothface.mouth.*` por instrucción de Alex ("done, no mouth plz"): la boca de Mr. Smoothface permanece siempre cubierta por el cuello alto de `smoothface.torso`
+- calibración: no aplica

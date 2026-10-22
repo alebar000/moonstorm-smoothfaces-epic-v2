@@ -1,0 +1,15 @@
+{
+  "verdict": "rechazar",
+  "defects": [
+    {
+      "zone": "entire asset fill and alpha channel",
+      "what": "Every pixel in the asset is semi-transparent (maximum alpha 203 out of 255, mean alpha 138, with zero fully opaque pixels), making the eyebrows appear as a washed-out translucent grey instead of the solid opaque black marker cutout (#1a1612 / #000000) in the reference.",
+      "severity": "blocker"
+    },
+    {
+      "zone": "interior fill of both brows",
+      "what": "The brow interiors are filled with semi-transparent diagonal hatching stripes rather than the solid, uniform black marker fill of ref_cutout_layers/006_Layer_7_copy.png.",
+      "severity": "major"
+    }
+  ]
+}

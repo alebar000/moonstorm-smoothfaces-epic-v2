@@ -49,6 +49,66 @@
       "meta": "art/candidates/z1s3.wall.panel_a/meta.json",
       "approved_at": "2026-10-21T22:24:16",
       "reason": ""
+    },
+    "smoothface.brows.angry": {
+      "path": "art/approved/smoothface/smoothface.brows.angry.png",
+      "version": "v3",
+      "sha256": "f5eee3d3d6cfb0e9a2b3dd402f85f01c5bc392c0b53e0d38545c3caee3876dc5",
+      "category": "smoothface",
+      "kind": "body_part",
+      "meta": "art/candidates/smoothface.brows.angry/meta.json",
+      "approved_at": "2026-10-21T23:35:34",
+      "reason": ""
+    },
+    "smoothface.brows.surprised": {
+      "path": "art/approved/smoothface/smoothface.brows.surprised.png",
+      "version": "v1",
+      "sha256": "18feb89b80a827efb85c26e61f9d6fadf5157b8e2be2661f9b20f3e800d28c4a",
+      "category": "smoothface",
+      "kind": "body_part",
+      "meta": "art/candidates/smoothface.brows.surprised/meta.json",
+      "approved_at": "2026-10-21T23:35:52",
+      "reason": ""
+    },
+    "smoothface.eyes.closed": {
+      "path": "art/approved/smoothface/smoothface.eyes.closed.png",
+      "version": "v3",
+      "sha256": "640a12c5bd121aed872611997b49a81d8371f17bf6d72575df44551b08988d4c",
+      "category": "smoothface",
+      "kind": "body_part",
+      "meta": "art/candidates/smoothface.eyes.closed/meta.json",
+      "approved_at": "2026-10-21T23:35:54",
+      "reason": ""
+    },
+    "smoothface.eyes.normal": {
+      "path": "art/approved/smoothface/smoothface.eyes.normal.png",
+      "version": "v3",
+      "sha256": "031ad9bb07e0f181f59aeaeb45ca42a4b8c427a0c83e4f9e9e78cf8d33ee5d3d",
+      "category": "smoothface",
+      "kind": "body_part",
+      "meta": "art/candidates/smoothface.eyes.normal/meta.json",
+      "approved_at": "2026-10-21T23:35:55",
+      "reason": ""
+    },
+    "smoothface.eyes.squint": {
+      "path": "art/approved/smoothface/smoothface.eyes.squint.png",
+      "version": "v3",
+      "sha256": "09820609343c21cbbff26019aeb7cebedc4635b4901489af3a4ad9d7f36a6d94",
+      "category": "smoothface",
+      "kind": "body_part",
+      "meta": "art/candidates/smoothface.eyes.squint/meta.json",
+      "approved_at": "2026-10-21T23:35:57",
+      "reason": ""
+    },
+    "smoothface.head": {
+      "path": "art/approved/smoothface/smoothface.head.png",
+      "version": "v3",
+      "sha256": "cfe4932225f47a9e9b401e3cf684a8ee2a98c0250fa0f98926bb688b3ae793e9",
+      "category": "smoothface",
+      "kind": "body_part",
+      "meta": "art/candidates/smoothface.head/meta.json",
+      "approved_at": "2026-10-21T23:35:58",
+      "reason": ""
     }
   },
   "superseded": [],
@@ -56,6 +116,14 @@
     "palette.characters@v1@approved@2026-10-21T21:26:19",
     "palette.scenery@v1@rejected@2026-10-21T21:27:18",
     "palette.scenery@v3@approved@2026-10-21T21:38:16",
+    "smoothface.brows.angry@v3@approved@2026-10-21T23:35:34",
+    "smoothface.brows.normal@v2@rejected@2026-10-21T23:35:48",
+    "smoothface.brows.surprised@v1@approved@2026-10-21T23:35:52",
+    "smoothface.eyes.closed@v3@approved@2026-10-21T23:35:54",
+    "smoothface.eyes.normal@v3@approved@2026-10-21T23:35:55",
+    "smoothface.eyes.squint@v3@approved@2026-10-21T23:35:57",
+    "smoothface.head@v3@approved@2026-10-21T23:35:58",
+    "smoothface.mouth.closed@v3@rejected@2026-10-21T23:36:11",
     "smoothface.torso@v3@approved@2026-10-21T22:24:07",
     "z1s3.prop.sarcophagus@v3@approved@2026-10-21T22:24:10",
     "z1s3.wall.panel_a@v3@approved@2026-10-21T22:24:16"

@@ -41,6 +41,62 @@
       "verdict": "approved",
       "reason": "",
       "ts": "2026-10-21T22:24:16"
+    },
+    {
+      "id": "smoothface.brows.angry",
+      "version": "v3",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-21T23:35:34"
+    },
+    {
+      "id": "smoothface.brows.normal",
+      "version": "v2",
+      "verdict": "rejected",
+      "reason": "exactly the same as angry, has to be different",
+      "ts": "2026-10-21T23:35:48"
+    },
+    {
+      "id": "smoothface.brows.surprised",
+      "version": "v1",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-21T23:35:52"
+    },
+    {
+      "id": "smoothface.eyes.closed",
+      "version": "v3",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-21T23:35:54"
+    },
+    {
+      "id": "smoothface.eyes.normal",
+      "version": "v3",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-21T23:35:55"
+    },
+    {
+      "id": "smoothface.eyes.squint",
+      "version": "v3",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-21T23:35:57"
+    },
+    {
+      "id": "smoothface.head",
+      "version": "v3",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-21T23:35:58"
+    },
+    {
+      "id": "smoothface.mouth.closed",
+      "version": "v3",
+      "verdict": "rejected",
+      "reason": "why a mouth? His mouth should be permanently covered",
+      "ts": "2026-10-21T23:36:11"
     }
   ]
 }

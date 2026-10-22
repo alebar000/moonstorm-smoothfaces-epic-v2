@@ -1,0 +1,23 @@
+{
+  "id": "smoothface.head",
+  "category": "smoothface",
+  "kind": "body_part",
+  "what": "Mr. Smoothface bald head base only (no eyes, no eyebrows, no mouth, no hair): cream construction paper (#f9ecc2) in 3/4 front view facing left with rounded cranium, left and right ear bumps, and lower chin/neck base that tucks inside the high coat collar, matching silhouette of ref_cutout_layers/004_Layer_6_copy.png and ref_design_smoothface.png",
+  "target_height_px": 131,
+  "height_fraction_of_smoothface": 0.416,
+  "pivot_hint": "lower neck base at bottom-center, tucks behind high collar of smoothface.torso",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/ref_design_smoothface.png",
+    "art/references/ref_cutout_layers/004_Layer_6_copy.png",
+    "art/references/ref_hero_torso.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt",
+    "v2": "prompt_v2.txt",
+    "v3": "prompt_v3.txt"
+  },
+  "status": "approved",
+  "proposed_version": "v3",
+  "approved_version": "v3"
+}

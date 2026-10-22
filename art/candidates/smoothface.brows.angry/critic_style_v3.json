@@ -1,0 +1,10 @@
+{
+  "verdict": "sin_objeciones",
+  "defects": [
+    {
+      "zone": "overall brow silhouette",
+      "what": "The brow angles are nearly identical to the default normal V-arch rather than being pitched more aggressively downward for an exaggerated angry scowl.",
+      "severity": "minor"
+    }
+  ]
+}

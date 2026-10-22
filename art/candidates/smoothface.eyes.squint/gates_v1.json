@@ -1,0 +1,36 @@
+{
+  "file": "art/candidates/smoothface.eyes.squint/v1.png",
+  "ts": "2026-10-21T22:37:47",
+  "kind": "body_part",
+  "halo_fraction": 0.002,
+  "halo_ok": true,
+  "sticker_border_fraction": 0.0,
+  "sticker_ok": true,
+  "stray_partial_alpha": 0,
+  "partial_alpha_ok": true,
+  "components": 2,
+  "islands_significant": 1,
+  "specks": 0,
+  "components_ok": true,
+  "touches_border_sides": 0,
+  "border_ok": true,
+  "palette_used": "characters",
+  "off_palette_fraction": 0.0137,
+  "palette_provisional": false,
+  "palette_ok": true,
+  "ink_thickness_px": 5.6,
+  "ink_range": [
+    6,
+    9
+  ],
+  "ink_ok": false,
+  "soft_gradient_fraction": 0.241,
+  "gradient_ok": true,
+  "measured_height_px": 48,
+  "target_height_px": 48,
+  "height_ok": true,
+  "failed": [
+    "ink"
+  ],
+  "overall": "fail"
+}

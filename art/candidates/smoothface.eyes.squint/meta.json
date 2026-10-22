@@ -1,0 +1,23 @@
+{
+  "id": "smoothface.eyes.squint",
+  "category": "smoothface",
+  "kind": "body_part",
+  "what": "Pair of Mr. Smoothface eyes in suspicious/scheming squint state (3/4 front view facing left, matching proportions of ref_cutout_layers/005_Layer_8_copy.png): two narrowed half-moon cream construction-paper eye cutouts (#f9ecc2) with flat heavy upper/lower lids, bold black marker outlines (#1a1612), and black pupils",
+  "target_height_px": 48,
+  "height_fraction_of_smoothface": 0.152,
+  "pivot_hint": "center of eye pair on mid-face of smoothface.head",
+  "allowed_islands": 1,
+  "references": [
+    "art/references/ref_design_smoothface.png",
+    "art/references/ref_cutout_layers/005_Layer_8_copy.png",
+    "art/references/ref_hero_torso.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt",
+    "v2": "prompt_v2.txt",
+    "v3": "prompt_v3.txt"
+  },
+  "status": "approved",
+  "proposed_version": "v3",
+  "approved_version": "v3"
+}

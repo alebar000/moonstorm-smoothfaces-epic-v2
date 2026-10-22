@@ -1,0 +1,12 @@
+STYLE (non-negotiable, matches the attached references):
+Hand-drawn construction-paper cutout. Each piece is ONE flat color of construction paper with a very subtle fiber texture, cut out with scissors. Design and proportions come from the attached pencil sketch by the original artist; do not reinterpret it. Outline: black marker (#1a1612), hand-drawn, visible pressure variation, some strokes overshoot corners. Shading: SOFT PENCIL only (#6e6a62), grey, visible stroke direction, only in shadow areas. No digital gradients, no airbrush, no glow, no 3D.
+EDGE: rough scissor cut, visible straight facets and corners where the scissors turned; the cut does not perfectly follow the ink.
+INK: thick marker, ~7.5 px at game scale (6-9 px range at 47 px height; draw the brow pair spanning ~470 px vertically on the 1024x1024 canvas with each black brow bar measuring 72-80 px thick).
+COLOR: vivid, saturated construction paper, ONLY from this character palette: #1a1612 (black marker ink), #323232 (dark charcoal paper), #6e6a62 (soft grey pencil shading).
+One isolated pair of eyebrows (2 connected components, allowed_islands=1), flat solid #00FF00 chroma-key green background filling the entire canvas around the cutouts. No cast shadow baked in.
+FORBIDDEN: gradients, glow, bloom, 3D render, airbrush, white sticker border, pupils/dots below the brows, any background, any text, colors from the other palette, reinterpreting the sketch.
+
+PIECE: smoothface.brows.normal
+WHAT: Pair of Mr. Smoothface eyebrows ONLY (NO eye pupils/dots below them) in his default scheming villain arch (3/4 front view facing left), matching the two eyebrow shapes in ref_cutout_layers/006_Layer_7_copy.png and ref_design_smoothface.png: a longer sharply hooked rear-left eyebrow angled down-right on the upper-left, and a shorter angled front-right eyebrow on the lower-right (exactly 2 separate islands on #00FF00 green). Draw each eyebrow as a bold, chunky faceted scissor-cut black marker bar (#1a1612, uniformly 72-80 px thick across the bar on a 1024x1024 canvas, spanning ~470 px total vertical height) with a subtle edge of #6e6a62 pencil texture.
+SIZE: 47 px tall at 1.0 game scale, centered on a 1024x1024 #00FF00 canvas with ~25% green margin on all sides.
+PIVOT HINT: center of brow pair above smoothface.eyes.

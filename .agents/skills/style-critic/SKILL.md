@@ -45,6 +45,11 @@ Check in this order and report each as a defect if it fails:
 6. Design fidelity: does it match what meta.json says it is? Did it add,
    remove, or reinterpret anything?
 7. Isolation: exactly one object, nothing of a background, no text.
+8. Variant differentiation: if the piece is a state or expression variant
+   (e.g. .normal, .angry, .surprised, .closed, .squint, .fist, .open, .grab),
+   compare it directly against all sibling variants of the same part. If its
+   angle, silhouette, or expression is nearly identical to another variant,
+   report it as a "blocker".
 
 Output ONLY this JSON, no prose:
 {

@@ -1,0 +1,23 @@
+{
+  "id": "smoothface.brows.angry",
+  "category": "smoothface",
+  "kind": "body_part",
+  "what": "Pair of Mr. Smoothface eyebrows in furious angry scowl (3/4 front view facing left, matching proportions of ref_cutout_layers/006_Layer_7_copy.png): two heavy black marker cutout brow strips (#1a1612) pitched sharply downward toward the center bridge with furrowed inner hooks",
+  "target_height_px": 47,
+  "height_fraction_of_smoothface": 0.149,
+  "pivot_hint": "center of brow pair above smoothface.eyes",
+  "allowed_islands": 1,
+  "references": [
+    "art/references/ref_design_smoothface.png",
+    "art/references/ref_cutout_layers/006_Layer_7_copy.png",
+    "art/references/ref_hero_torso.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt",
+    "v2": "prompt_v2.txt",
+    "v3": "prompt_v3.txt"
+  },
+  "status": "approved",
+  "proposed_version": "v3",
+  "approved_version": "v3"
+}
