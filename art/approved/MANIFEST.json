@@ -719,6 +719,46 @@
       "meta": "art/candidates/z1s3.wall.shelf/meta.json",
       "approved_at": "2026-10-22T20:19:02",
       "reason": ""
+    },
+    "capdread.hand_back.open": {
+      "path": "art/approved/capdread/capdread.hand_back.open.png",
+      "version": "v3",
+      "sha256": "7d060e686e533e8737d52dcaeb4b0ecf1bb3c0858225d3159ed40f05f9610d6f",
+      "category": "capdread",
+      "kind": "body_part",
+      "meta": "art/candidates/capdread.hand_back.open/meta.json",
+      "approved_at": "2026-10-22T20:53:39",
+      "reason": ""
+    },
+    "capdread.hand_front.open": {
+      "path": "art/approved/capdread/capdread.hand_front.open.png",
+      "version": "v3",
+      "sha256": "4d297eee11d511f3122919cae446f6db9c9c0b6f3ab2e51ca33d0ce3b6940a21",
+      "category": "capdread",
+      "kind": "body_part",
+      "meta": "art/candidates/capdread.hand_front.open/meta.json",
+      "approved_at": "2026-10-22T20:53:40",
+      "reason": ""
+    },
+    "capdread.hand_front.point": {
+      "path": "art/approved/capdread/capdread.hand_front.point.png",
+      "version": "v3",
+      "sha256": "d840b20695f05f045d213f60d07f0768ff4431d8fb02a24d0104c0b2023ff39b",
+      "category": "capdread",
+      "kind": "body_part",
+      "meta": "art/candidates/capdread.hand_front.point/meta.json",
+      "approved_at": "2026-10-22T20:53:40",
+      "reason": ""
+    },
+    "capdread.hat": {
+      "path": "art/approved/capdread/capdread.hat.png",
+      "version": "v3",
+      "sha256": "d1d3d61b4a59b4278b5a7e387a5dc206172b40375c3e709327c901600b45e238",
+      "category": "capdread",
+      "kind": "body_part",
+      "meta": "art/candidates/capdread.hat/meta.json",
+      "approved_at": "2026-10-22T20:53:41",
+      "reason": ""
     }
   },
   "superseded": [],
@@ -736,10 +776,14 @@
     "capdread.eyes.squint@v2@approved@2026-10-22T20:16:37",
     "capdread.hand_back.fist@v2@approved@2026-10-22T20:16:43",
     "capdread.hand_back.open@v2@rejected@2026-10-22T20:17:04",
+    "capdread.hand_back.open@v3@approved@2026-10-22T20:53:39",
     "capdread.hand_front.fist@v2@approved@2026-10-22T20:17:05",
     "capdread.hand_front.open@v2@rejected@2026-10-22T20:17:18",
+    "capdread.hand_front.open@v3@approved@2026-10-22T20:53:40",
     "capdread.hand_front.point@v2@rejected@2026-10-22T20:17:30",
+    "capdread.hand_front.point@v3@approved@2026-10-22T20:53:40",
     "capdread.hat@v2@rejected@2026-10-22T20:18:07",
+    "capdread.hat@v3@approved@2026-10-22T20:53:41",
     "capdread.head@v2@approved@2026-10-22T20:18:10",
     "capdread.leg_back@v2@approved@2026-10-22T20:18:11",
     "capdread.leg_front@v2@approved@2026-10-22T20:18:12",

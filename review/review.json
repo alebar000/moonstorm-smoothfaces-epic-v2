@@ -573,6 +573,34 @@
       "verdict": "approved",
       "reason": "",
       "ts": "2026-10-22T20:19:02"
+    },
+    {
+      "id": "capdread.hand_back.open",
+      "version": "v3",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:53:39"
+    },
+    {
+      "id": "capdread.hand_front.open",
+      "version": "v3",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:53:40"
+    },
+    {
+      "id": "capdread.hand_front.point",
+      "version": "v3",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:53:40"
+    },
+    {
+      "id": "capdread.hat",
+      "version": "v3",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:53:41"
     }
   ]
 }

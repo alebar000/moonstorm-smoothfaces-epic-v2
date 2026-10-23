@@ -14,12 +14,13 @@
   "versions": {
     "v1": "prompt_v1.txt"
   },
-  "status": "proposed",
+  "status": "approved",
   "proposed_version": "v3",
   "batch": "L5",
   "version": "v2",
   "last_rejection": {
     "version": "v2",
     "reason": "Esta mano con esa apertura n otiene sentido porla forma en que está el brazo"
-  }
+  },
+  "approved_version": "v3"
 }
