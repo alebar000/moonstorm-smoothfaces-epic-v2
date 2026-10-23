@@ -1627,3 +1627,25 @@ se editan entradas anteriores (si algo cambió, nueva entrada que lo diga).
   - Reemplazado el gradiente radial del showcase del Menu Principal por una vineta cutout real del submarino (`panel_b`, `planks_a`, `porthole`).
   - La barra superior de inventario muestra siempre las 6 ranuras cutout (`inv-slot` + `inv-slot-empty`) con cursores y medallas de accion de `art/approved/ui/`.
   - Las 4 escenas de `IntroPuppetTheatre.ts` cargan los 4 fondos aprobados de `art/approved/intro/` enmarcados por las cortinas `intro.curtain` sin bordes negros laterales.
+
+
+## 2026-10-23 (Cierre de L13: Room Layout Studio + QA Adversarial Multi-Agente en Vivo con Veredicto `sin_objeciones`)
+- **Room Layout Studio (`src/engine/RoomLayoutStudio.ts`, `src/scenarios/z1s3_official_layout.json`, `vite.config.ts`)**:
+  - Construido editor interactivo WYSIWYG accesible con `F2` (o `?studio=1`) para arrastrar, escalar con 8 handles, rotar en Z (`tiltDeg`), rotar en perspectiva 2.5D X/Y (`rotateXDeg`, `rotateYDeg`), voltear X/Y (`flipX`, `flipY`), ordenar profundidad (`sortY` / plano parallax), editar hotspots/walk targets y persistir en caliente via `/api/save-layout` hacia `src/scenarios/z1s3_official_layout.json` y `layout/z1s3.layout.json`.
+- **QA Adversarial Multi-Agente en Vivo (`review/layout_shots/live_engine_qa/`)**:
+  - Se ejecutaron dos rondas de auditoria visual adversarial con dos subagentes criticos independientes (`Adversarial Room and Montaje Critic` y `Adversarial UI and Intro Critic`) sobre las 11 capturas en vivo del motor (`01_main_menu.png` a `07_z1s3_rmb_and_inventory.png`):
+    1. **Sincronizacion de Parallax (`0.85`)**: unificado `parallaxFactor: 0.85` en todos los paneles de pared, vigas de techo, props colgados en la pared (`coat_rack`, `coat`, `hat`, `door`, `porthole`, `poster`, `pipes`, `mask_a`, `helm_wheel`, `mask_b`, `shelf`) y sus hotspots para eliminar por completo el desplazamiento relativo al hacer pan entre `camX = 0`, `400` y `800`.
+    2. **Cobertura de Bordes, Costillas y Techo**: extendidas las costillas de primer plano (`hull_rib_left` en `x: -55, y: -92, w: 350, h: 1085` y `hull_rib_right` en `x: 2205, y: -92, w: 350, h: 1085`) con mascara de casco exterior (`#151018`) detras de su curva y vigas continuas `ceiling.beam_b` en el techo, eliminando cualquier hueco o franja expuesta en los extremos del cuarto.
+    3. **Montaje, Alturas y Separacion de Props en `Z1S3`**:
+       - Separados limpiamente `sarcophagus` (`x: 118`), `coat_rack` (`x: 312`) y `door` (`x: 465`).
+       - `card_table` (`x: 215, y: 795, w: 355, h: 175`) y `ship_in_bottle` (`x: 222, y: 814, w: 78, h: 52`) colocados en la esquina inferior izquierda sin solapar la pila de libros ni los pies de Smoothface.
+       - `helm_wheel` (`y: 115`) y `shelf` (`y: 292`) elevados sobre la placa remachada dejando amplio margen vertical sobre el sombrero de Captain Dread (`x: 1545, y: 812`).
+       - `hammer_bag` (`x: 1665, y: 652`), `dirty_laundry` (`x: 1255, y: 658`) y `bed` (`x: 1925, y: 535`) asentados sobre el piso de madera; cluster de primer plano (`chest`, `voodoo_doll`, `clown_bust`) desplazado a `x: 1860..1972` libre de las botas de Captain Dread.
+       - Calibradas las alturas canónicas de `CutoutRigRenderer.ts` (`Smoothface` `~308 px`, `Captain Dread` `~328 px`) y la union muneca/manga de Smoothface; regenerados `characters/smoothface/portrait.png` y `characters/smoothface/composite_preview.png`.
+    4. **Sincronizacion de Esquema y De-colision de Etiquetas Peek**:
+       - `scripts/sync_official_layout.py` sincroniza `layout/z1s3.layout.json` completo (`objects`, `characters`, `studio_official_*`); `python pipeline/gates.py layout layout/z1s3.layout.json` pasa con **`0` errores y `0` advertencias**.
+       - `renderStreetSenseHotspots()` filtra hotspots fuera del viewport actual y aplica de-colision automatica 2D entre etiquetas Peek (`0` solapes en `05_z1s3_peek_hotspots_center.png` y `06_z1s3_peek_hotspots_right.png`).
+    5. **Intro de 4 Escenas, Menu Principal y HUD Cutout (`L11` + `L12`)**:
+       - `IntroPuppetTheatre.ts` enmarca las 4 escenas dentro del arco de `intro.proscenium.png` y las cortinas `intro.curtain.png` con recorte de arco interior, marionetas asentadas en el piso/muelle a `~37%` del alto del escenario y placa `SCENE IV OF IV: CRISIS ABOARD THE SUBSTAMPEDE!`.
+       - Integradas las 6 texturas `L11` en CSS/DOM (`ui.slot_frame.png`, `ui.portrait_frame.png`, `ui.scroll_banner.png`, `ui.button_plate.png`, `ui.cursor.default.png`, `ui.cursor.interact.png`), las 6 ranuras de inventario visibles sin recorte, ocultamiento automatico de props del cuarto al recogerlos en inventario y cero jerga tecnica en la UI del jugador (`AGENTS.md` Regla 10).
+  - **Veredicto Ronda 2 de ambos subagentes criticos**: `verdict: "sin_objeciones"`, `defects: []`.

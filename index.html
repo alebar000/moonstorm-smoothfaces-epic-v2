@@ -20,11 +20,11 @@
 
       <div class="inventory-mode-group">
         <button id="btn-mode-select" class="inv-mode-btn active" title="Use or Combine Pocket Items">
-          <img src="art/approved/smoothface/smoothface.hand_front.open.png" alt="" class="mode-mini-icon" />
+          <img src="art/approved/ui/ui.action.use.png" alt="" class="mode-mini-icon" />
           <span>Use</span>
         </button>
         <button id="btn-mode-inspect" class="inv-mode-btn" title="Look Closely at Pocket Item">
-          <img src="art/approved/smoothface/smoothface.prop.magnifying_glass.png" alt="" class="mode-mini-icon" />
+          <img src="art/approved/ui/ui.action.inspect.png" alt="" class="mode-mini-icon" />
           <span>Look</span>
         </button>
       </div>
@@ -45,12 +45,12 @@
       </div>
 
       <div class="hud-utility-group">
-        <button id="btn-open-studio" class="hud-util-btn" title="MoonStorm Layout Studio (F2)" style="background:#5a381e;color:#ffe596;border-color:#e5b94c;">🛠️ Studio (F2)</button>
+        <button id="btn-open-studio" class="hud-util-btn" title="Layout Studio (F2)" style="display:none;background:#5a381e;color:#ffe596;border-color:#e5b94c;">Studio</button>
         <button id="btn-street-sense" class="hud-util-btn" title="Peek at Everything in the Room (Hold TAB)">
           <img src="art/approved/smoothface/smoothface.prop.magnifying_glass.png" alt="" class="hud-mini-tile" /> Peek
         </button>
         <button id="btn-open-config" class="hud-util-btn" title="Gramophone &amp; Stage Options (ESC)">
-          <img src="art/approved/z1s3/z1s3.wall.helm_wheel.png" alt="" class="hud-mini-tile" /> Options
+          <img src="art/approved/smoothface/smoothface.prop.skeleton_key.png" alt="" class="hud-mini-tile" /> Options
         </button>
       </div>
     </header>
@@ -92,7 +92,7 @@
 
       <!-- Paper Cut-Out Title Screen -->
       <section id="main-menu-overlay" class="overlay-screen">
-        <div class="menu-hero-backdrop" style="background-image: url('review/layout_shots/z1s3_cabin_panorama/cam_center.png');"></div>
+        <div class="menu-hero-backdrop" style="background-image: url('review/layout_shots/z1s3_cabin_panorama/no_chars_cam_center.png');"></div>
         <div class="menu-vignette"></div>
         <div class="menu-content-grid">
           <div class="menu-left-column">
@@ -116,18 +116,18 @@
 
             <div class="menu-button-stack">
               <button id="btn-menu-start-intro" class="menu-primary-btn">
-                <span>BEGIN THE TALE (4-SCENE INTRO)</span>
+                <span>BEGIN THE TALE</span>
               </button>
               <button id="btn-menu-quick-play" class="menu-secondary-btn">
                 <img src="art/approved/z1s3/z1s3.wall.helm_wheel.png" alt="" class="btn-cutout-tile" />
                 <span>ENTER CAPTAIN DREAD'S CABIN</span>
               </button>
-              <button id="btn-menu-studio" class="menu-secondary-btn" style="background:#3e281b;color:#ffe596;border-color:#e5b94c;">
-                <span>🛠️ ROOM LAYOUT STUDIO (EDIT POSITIONS)</span>
+              <button id="btn-menu-studio" class="menu-secondary-btn" style="display:none;background:#3e281b;color:#ffe596;border-color:#e5b94c;">
+                <span>STAGE LAYOUT WORKSHOP</span>
               </button>
               <div class="menu-bottom-actions">
                 <button id="btn-menu-config" class="menu-Action-btn">
-                  <img src="art/approved/z1s3/z1s3.wall.helm_wheel.png" alt="" class="btn-cutout-mini" />
+                  <img src="art/approved/smoothface/smoothface.prop.skeleton_key.png" alt="" class="btn-cutout-mini" />
                   <span>Stage &amp; Gramophone</span>
                 </button>
                 <button id="btn-menu-credits" class="menu-Action-btn">
@@ -322,13 +322,13 @@
                 <input type="checkbox" id="cfg-crt" />
                 <span>Old Television Scanlines</span>
               </label>
-              <label class="config-toggle">
+              <label class="config-toggle" style="display:none;">
                 <input type="checkbox" id="cfg-debug-walkbox" />
-                <span>Show Floor Footpath Outlines</span>
+                <span>Deck Footpath Chalk Lines</span>
               </label>
-              <label class="config-toggle">
+              <label class="config-toggle" style="display:none;">
                 <input type="checkbox" id="cfg-dev-notes" checked />
-                <span>Show MoonStorm Archive Notes</span>
+                <span>Captain's Logbook Margin Notes</span>
               </label>
               <div class="config-row" style="margin-top:10px;">
                 <span>Mouse Style</span>
@@ -406,13 +406,13 @@
         </div>
       </section>
 
-      <!-- Slice 1 Finale & 2010 MoonStorm Studios Crew Credits Modal -->
+      <!-- Act I Finale & 2010 MoonStorm Studios Crew Credits Modal -->
       <section id="victory-credits-modal" class="modal-backdrop" style="display:none;">
         <div class="modal-card victory-modal-card">
           <div class="modal-header">
             <div class="modal-title-with-prop">
               <img src="art/approved/z1s3/z1s3.wall.helm_wheel.png" alt="" class="modal-vault-prop-icon" />
-              <h3>SLICE 1 COMPLETE: PERPETUAL MACHINE ASSEMBLED!</h3>
+              <h3>ACT I COMPLETE: PERPETUAL MACHINE ASSEMBLED!</h3>
             </div>
             <button id="btn-close-victory" class="modal-close-btn">&#10005;</button>
           </div>
@@ -433,12 +433,12 @@
                 </ul>
               </div>
               <div class="credits-col">
-                <h4>SLICE 1 ACCOMPLISHMENTS</h4>
+                <h4>MALEFIC ACCOMPLISHMENTS</h4>
                 <div class="victory-badges">
                   <div class="victory-badge">&#9881; Da Vinci Perpetual Contraption Assembled</div>
-                  <div class="victory-badge">&#9986; 27-Piece Mr. Smoothface Cut-Out Rig</div>
-                  <div class="victory-badge">&#9875; 22-Piece Captain Dread Cut-Out Rig</div>
-                  <div class="victory-badge">&#127912; Multi-Plane Z1S3 Captain's Cabin</div>
+                  <div class="victory-badge">&#127913; Rupert &ldquo;Mr. Smoothface&rdquo; Stache Unleashed</div>
+                  <div class="victory-badge">&#9875; Captain Dread's Quarters Ransacked</div>
+                  <div class="victory-badge">&#128640; Full Steam Toward Blackspit Island</div>
                 </div>
               </div>
             </div>

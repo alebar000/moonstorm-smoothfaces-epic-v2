@@ -63,7 +63,6 @@ export default defineConfig({
     open: false,
     watch: {
       ignored: [
-        '**/src/scenarios/z1s3_official_layout.json',
         '**/layout/z1s3.layout.json',
         '**/review/layout_shots/**',
         '**/PLAY_SMOOTHFACE_MVP.html'

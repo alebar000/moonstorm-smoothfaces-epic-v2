@@ -49,10 +49,10 @@ const SMOOTHFACE_BOXES: Record<string, PartBox> = {
   shoe_front:       { x: 112, y: 355, w:  84, h:  59 },
   leg_front:        { x: 118, y: 322, w:  40, h:  68 },
   pants:            { x:  78, y: 282, w:  84, h:  81 },
-  hand_back_fist:   { x: 272, y: 162, w:  48, h:  42 },
-  hand_back_open:   { x: 272, y: 158, w:  46, h:  46 },
-  hand_back_point:  { x: 270, y: 158, w:  58, h:  42 },
-  arm_back:         { x: 172, y: 176, w: 131, h: 104 },
+  hand_back_fist:   { x: 246, y: 224, w:  46, h:  42 },
+  hand_back_open:   { x: 246, y: 220, w:  46, h:  46 },
+  hand_back_point:  { x: 244, y: 220, w:  58, h:  42 },
+  arm_back:         { x: 158, y: 212, w: 124, h: 100 },
   head:             { x: 132, y:  79, w: 144, h: 151 },
   eyes_normal:      { x: 175, y: 143, w:  72, h:  58 },
   eyes_squint:      { x: 174, y: 142, w:  81, h:  60 },
@@ -61,10 +61,10 @@ const SMOOTHFACE_BOXES: Record<string, PartBox> = {
   brows_angry:      { x: 178, y: 131, w:  84, h:  59 },
   brows_surprised:  { x: 179, y: 126, w:  76, h:  57 },
   torso:            { x:  27, y:  90, w: 255, h: 271 },
-  hand_front_fist:  { x: 254, y: 194, w:  41, h:  44 },
-  hand_front_open:  { x: 252, y: 190, w:  48, h:  48 },
-  hand_front_point: { x: 252, y: 192, w:  72, h:  50 },
-  arm_front:        { x: 156, y: 210, w: 135, h: 108 },
+  hand_front_fist:  { x: 232, y: 244, w:  41, h:  44 },
+  hand_front_open:  { x: 230, y: 240, w:  48, h:  48 },
+  hand_front_point: { x: 230, y: 242, w:  72, h:  50 },
+  arm_front:        { x: 142, y: 236, w: 126, h: 102 },
 };
 
 const CAPDREAD_BOXES: Record<string, PartBox> = {
@@ -316,14 +316,14 @@ export class CutoutRigRenderer {
    * Proportioned to match Aguilar's `GUImu003.jpg` side-by-side comparison with Captain Dread.
    */
   public renderSmoothfaceRig(ctx: CanvasRenderingContext2D, state: PuppetAnimState): void {
-    const normScale = state.scale < 0.72 ? state.scale / 0.54 : state.scale;
-    const rigScale = 0.76 * normScale;
+    const normScale = state.scale;
+    const rigScale = 0.92 * normScale;
 
     ctx.save();
     ctx.translate(state.x, state.y);
     ctx.fillStyle = 'rgba(12, 9, 8, 0.35)';
     ctx.beginPath();
-    const shadowW = 64 * normScale * (0.85 + 0.15 * Math.abs(state.flipVisual));
+    const shadowW = 68 * normScale * (0.85 + 0.15 * Math.abs(state.flipVisual));
     ctx.ellipse(0, 0, shadowW, 11 * normScale, 0, 0, Math.PI * 2);
     ctx.fill();
     ctx.restore();
@@ -373,7 +373,7 @@ export class CutoutRigRenderer {
 
     const cardScaleX = Math.abs(state.flipVisual) < 0.09 ? (state.flipVisual >= 0 ? 0.09 : -0.09) : state.flipVisual;
     ctx.scale(cardScaleX * state.squashX * rigScale, state.squashY * rigScale);
-    ctx.translate(-165, -414);
+    ctx.translate(-165, -406);
 
     // Back leg & shoe stride
     const backStrideX = walkSin * -10;
@@ -392,8 +392,8 @@ export class CutoutRigRenderer {
 
     // Back arm & back hand
     const hbBox = SMOOTHFACE_BOXES[handBackKey.replace('sf_', '')] || SMOOTHFACE_BOXES.hand_back_fist;
-    this.drawPart(ctx, handBackKey, hbBox, 0, bodyBob - armSwing * 10, -armSwing * 0.5);
-    this.drawPart(ctx, 'sf_arm_back', SMOOTHFACE_BOXES.arm_back, 0, bodyBob, -armSwing * 0.3);
+    this.drawPart(ctx, handBackKey, hbBox, 0, bodyBob - armSwing * 8, -armSwing * 0.2);
+    this.drawPart(ctx, 'sf_arm_back', SMOOTHFACE_BOXES.arm_back, 0, bodyBob - armSwing * 8, -armSwing * 0.2);
 
     // Head, eyes, brows (behind high coat collar per canon!)
     const headBob = bodyBob * 1.1;
@@ -406,14 +406,14 @@ export class CutoutRigRenderer {
 
     // Front hand & front arm
     const hfBox = SMOOTHFACE_BOXES[handFrontKey.replace('sf_', '')] || SMOOTHFACE_BOXES.hand_front_fist;
-    this.drawPart(ctx, handFrontKey, hfBox, 0, bodyBob + armSwing * 10, armSwing * 0.5);
+    this.drawPart(ctx, handFrontKey, hfBox, 0, bodyBob + armSwing * 8, armSwing * 0.2);
     if (activePose === 4) {
       const mag = this.getImg('sf_prop_magnifier');
       if (mag) {
-        ctx.drawImage(mag, 286, 152 + bodyBob, 52, 56);
+        ctx.drawImage(mag, 258, 198 + bodyBob, 52, 56);
       }
     }
-    this.drawPart(ctx, 'sf_arm_front', SMOOTHFACE_BOXES.arm_front, 0, bodyBob, armSwing * 0.3);
+    this.drawPart(ctx, 'sf_arm_front', SMOOTHFACE_BOXES.arm_front, 0, bodyBob + armSwing * 8, armSwing * 0.2);
 
     // Floating emotion cutout badge above Smoothface's head (only on explicit action poses)
     let activeEmotion: EmotionCutoutType | null = null;
@@ -433,14 +433,14 @@ export class CutoutRigRenderer {
    * Renders Captain Dread directly from his 22 approved cutout pieces (`art/approved/capdread/`).
    */
   public renderNpcPuppet(ctx: CanvasRenderingContext2D, state: PuppetAnimState): void {
-    const normScale = state.scale < 0.72 ? state.scale / 0.55 : state.scale;
-    const rigScale = 0.94 * normScale;
+    const normScale = state.scale;
+    const rigScale = 0.85 * normScale;
 
     ctx.save();
     ctx.translate(state.x, state.y);
     ctx.fillStyle = 'rgba(12, 9, 8, 0.35)';
     ctx.beginPath();
-    ctx.ellipse(0, 0, 74 * normScale, 12 * normScale, 0, 0, Math.PI * 2);
+    ctx.ellipse(0, 0, 70 * normScale, 11 * normScale, 0, 0, Math.PI * 2);
     ctx.fill();
     ctx.restore();
 
@@ -480,7 +480,7 @@ export class CutoutRigRenderer {
     const dreadFlip = -state.flipVisual;
     const cardScaleX = Math.abs(dreadFlip) < 0.09 ? (dreadFlip >= 0 ? 0.09 : -0.09) : dreadFlip;
     ctx.scale(cardScaleX * state.squashX * rigScale, state.squashY * rigScale);
-    ctx.translate(-195, -463);
+    ctx.translate(-195, -454);
 
     this.drawPart(ctx, 'cd_boot_back', CAPDREAD_BOXES.boot_back);
     this.drawPart(ctx, 'cd_leg_back', CAPDREAD_BOXES.leg_back);

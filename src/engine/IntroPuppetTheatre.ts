@@ -2,9 +2,9 @@
  * MoonStorm Studios - Smoothface's Epic (Codename: Sparkle)
  * Slice 1 Real-Time 60 FPS Paper Cut-Out Puppet Theatre Intro Engine (src/engine/IntroPuppetTheatre.ts)
  *
- * Implements the 4-Scene Slice 1 Intro ("Menú de inicio y una intro de 4 escenas con los dos rigs aprobados"):
+ * Implements the 4-Scene Slice 1 Intro ("Menu de inicio y una intro de 4 escenas con los dos rigs aprobados"):
  * - Uses exclusively the 2 approved multi-part character rigs: Mr. Smoothface (27 parts) and Captain Dread (22 parts)
- * - Loads L12 intro backdrops from `art/approved/intro/*.png` (with rich theatrical cutout stage rendering & Z1S3 cabin pieces)
+ * - Loads L12 intro backdrops, proscenium arch, and curtains from `art/approved/intro/*.png`
  */
 
 import { AudioVoiceEngine, VoiceProfileId } from './AudioVoiceEngine';
@@ -46,7 +46,7 @@ export const INTRO_SCENES_8: IntroSceneSpec[] = [
   },
   {
     id: 3,
-    badge: 'SCENE IV OF IV: CRISIS IN CAPTAIN DREAD\'S CABIN!',
+    badge: 'SCENE IV OF IV: CRISIS ABOARD THE SUBSTAMPEDE!',
     speaker: 'CAPTAIN DREAD & MR. SMOOTHFACE',
     voice: 'cap_dread',
     durationSec: 7.0,
@@ -88,8 +88,8 @@ export class IntroPuppetTheatre {
     this.onSceneChanged = onSceneChanged;
     this.onComplete = onComplete;
 
-    this.smoothface = this.rigs.createAnimState('smoothface', 480, 495, 0.88, 1);
-    this.capDread = this.rigs.createAnimState('cap_dread', 640, 495, 0.88, -1);
+    this.smoothface = this.rigs.createAnimState('smoothface', 560, 472, 0.68, -1);
+    this.capDread = this.rigs.createAnimState('cap_dread', 460, 462, 0.66, 1);
 
     this.preloadStageAssets();
   }
@@ -211,52 +211,52 @@ export class IntroPuppetTheatre {
     this.capDread.poseIndex = 0;
 
     if (idx === 0) {
-      // Scene 1: Smoothface steps out from barbershop shadows shaking his fist with anger cloud
-      this.smoothface.x = 680;
-      this.smoothface.y = 495;
-      this.smoothface.scale = 0.90;
+      // Scene 1: Smoothface on the wooden barbershop floor, facing the barber chair and moustache portraits
+      this.smoothface.x = 605;
+      this.smoothface.y = 482;
+      this.smoothface.scale = 0.58;
       this.smoothface.facing = -1;
       this.smoothface.flipVisual = -1;
       this.smoothface.grumpyMode = true;
-      this.smoothface.poseIndex = 6;
+      this.smoothface.poseIndex = 3;
     } else if (idx === 1) {
-      // Scene 2: Smoothface vows vengeance and receives the Malefic Invitation
-      this.smoothface.x = 320;
-      this.smoothface.y = 495;
-      this.smoothface.scale = 0.92;
-      this.smoothface.facing = 1;
-      this.smoothface.flipVisual = 1;
+      // Scene 2: Smoothface on the cobblestone sidewalk facing the Malefic Gentlemen poster on the left wall
+      this.smoothface.x = 575;
+      this.smoothface.y = 484;
+      this.smoothface.scale = 0.58;
+      this.smoothface.facing = -1;
+      this.smoothface.flipVisual = -1;
       this.smoothface.isWalking = true;
     } else if (idx === 2) {
-      // Scene 3: Captain Dread welcomes Smoothface aboard the Substampede
-      this.capDread.x = 660;
-      this.capDread.y = 495;
-      this.capDread.scale = 0.90;
-      this.capDread.facing = -1;
-      this.capDread.flipVisual = -1;
+      // Scene 3: Both Captain Dread and Smoothface standing on the wooden pier planks (clear of the ocean water on the left!)
+      this.capDread.x = 465;
+      this.capDread.y = 474;
+      this.capDread.scale = 0.56;
+      this.capDread.facing = 1;
+      this.capDread.flipVisual = 1;
       this.capDread.poseIndex = 1;
 
-      this.smoothface.x = 220;
-      this.smoothface.y = 495;
-      this.smoothface.scale = 0.90;
-      this.smoothface.facing = 1;
-      this.smoothface.flipVisual = 1;
+      this.smoothface.x = 665;
+      this.smoothface.y = 482;
+      this.smoothface.scale = 0.58;
+      this.smoothface.facing = -1;
+      this.smoothface.flipVisual = -1;
       this.smoothface.isWalking = true;
     } else if (idx === 3) {
-      // Scene 4: Inside Captain Dread's Cabin when BAM!! strikes
-      this.capDread.x = 640;
-      this.capDread.y = 495;
-      this.capDread.scale = 0.88;
+      // Scene 4: Aboard the Substampede corridor when BAM!! strikes (both grounded on the flat steel floor plates)
+      this.capDread.x = 505;
+      this.capDread.y = 480;
+      this.capDread.scale = 0.56;
       this.capDread.facing = -1;
       this.capDread.flipVisual = -1;
       this.capDread.poseIndex = 1;
 
-      this.smoothface.x = 310;
-      this.smoothface.y = 495;
-      this.smoothface.scale = 0.88;
+      this.smoothface.x = 355;
+      this.smoothface.y = 482;
+      this.smoothface.scale = 0.58;
       this.smoothface.facing = 1;
       this.smoothface.flipVisual = 1;
-      this.smoothface.poseIndex = 4;
+      this.smoothface.poseIndex = 3;
     }
   }
 
@@ -283,30 +283,30 @@ export class IntroPuppetTheatre {
     const t = this.sceneTime;
 
     if (this.currentScene === 0) {
-      if (t < 2.2) {
+      if (t < 1.8 && this.smoothface.x > 545) {
         this.smoothface.isWalking = true;
-        this.smoothface.x -= dt * 75;
+        this.smoothface.x -= dt * 42;
       } else {
         this.smoothface.isWalking = false;
-        this.smoothface.poseIndex = 6;
+        this.smoothface.poseIndex = 3;
         this.smoothface.grumpyMode = true;
       }
       this.smoothface.talkAmp = voiceAmp;
       this.rigs.updatePuppetState(this.smoothface, dt);
     } else if (this.currentScene === 1) {
-      if (t < 2.4) {
+      if (t < 1.8 && this.smoothface.x > 515) {
         this.smoothface.isWalking = true;
-        this.smoothface.x += dt * 75;
+        this.smoothface.x -= dt * 42;
       } else {
         this.smoothface.isWalking = false;
-        this.smoothface.poseIndex = t < 4.4 ? 7 : 5;
+        this.smoothface.poseIndex = t < 4.4 ? 3 : 5;
       }
       this.smoothface.talkAmp = voiceAmp;
       this.rigs.updatePuppetState(this.smoothface, dt);
     } else if (this.currentScene === 2) {
-      if (t < 3.2) {
+      if (t < 1.8 && this.smoothface.x > 605) {
         this.smoothface.isWalking = true;
-        this.smoothface.x += dt * 65;
+        this.smoothface.x -= dt * 42;
       } else {
         this.smoothface.isWalking = false;
         this.smoothface.poseIndex = 3;
@@ -323,7 +323,7 @@ export class IntroPuppetTheatre {
         this.rigs.triggerSquash(this.capDread, 1.22, 0.80);
         this.rigs.triggerSquash(this.smoothface, 1.22, 0.80);
       } else if (t > 4.2) {
-        this.smoothface.poseIndex = 5; // Eureka lightbulb + wrench
+        this.smoothface.poseIndex = 5;
       }
       this.capDread.talkAmp = t < 3.5 ? voiceAmp : 0;
       this.smoothface.talkAmp = t >= 3.5 ? voiceAmp : 0;
@@ -351,6 +351,16 @@ export class IntroPuppetTheatre {
     ctx.save();
     ctx.translate(shakeX, shakeY);
 
+    // Clip backdrop card, puppets, and curtains to the interior arch opening of the proscenium
+    ctx.save();
+    ctx.beginPath();
+    ctx.moveTo(160, h);
+    ctx.lineTo(160, 195);
+    ctx.quadraticCurveTo(w * 0.5, 25, w - 160, 195);
+    ctx.lineTo(w - 160, h);
+    ctx.closePath();
+    ctx.clip();
+
     switch (this.currentScene) {
       case 0:
         this.renderScene1Barbershop(ctx, w, h, t);
@@ -366,8 +376,28 @@ export class IntroPuppetTheatre {
         break;
     }
 
+    const curtain = this.getImg('curtain');
+    if (curtain) {
+      ctx.save();
+      ctx.drawImage(curtain, 72, 72, 640, 900, 162, 96, 110, h - 96);
+      ctx.translate(w, 0);
+      ctx.scale(-1, 1);
+      ctx.drawImage(curtain, 72, 72, 640, 900, 162, 96, 110, h - 96);
+      ctx.restore();
+    }
+    ctx.restore(); // End proscenium arch clip
+
     this.renderPuppetStringsAndSpotlight(ctx, w, h, t);
     ctx.restore();
+  }
+
+  private drawBackdropCard(ctx: CanvasRenderingContext2D, bg: HTMLImageElement, _w: number, _h: number): void {
+    // Crop the 7% transparent normalization border and fit inside the proscenium stage opening (168..792, 96..536)
+    const sx = Math.round(bg.naturalWidth * 0.068);
+    const sy = Math.round(bg.naturalHeight * 0.114);
+    const sw = Math.round(bg.naturalWidth * 0.864);
+    const sh = Math.round(bg.naturalHeight * 0.772);
+    ctx.drawImage(bg, sx, sy, sw, sh, 168, 96, 624, 440);
   }
 
   private drawTheatricalStageBase(ctx: CanvasRenderingContext2D, w: number, h: number, wallColor: string): void {
@@ -391,7 +421,14 @@ export class IntroPuppetTheatre {
   private renderScene1Barbershop(ctx: CanvasRenderingContext2D, w: number, h: number, _t: number): void {
     const bg = this.getImg('bg_barbershop');
     if (bg) {
-      ctx.drawImage(bg, -72, -62, w + 144, h + 124);
+      this.drawBackdropCard(ctx, bg, w, h);
+      // Warm wooden floor shadow under the barber chair base
+      ctx.save();
+      ctx.fillStyle = 'rgba(66, 48, 34, 0.72)';
+      ctx.beginPath();
+      ctx.ellipse(440, 488, 52, 14, 0, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.restore();
     } else {
       this.drawTheatricalStageBase(ctx, w, h, '#241822');
       const poster = this.getImg('wall_poster');
@@ -405,7 +442,7 @@ export class IntroPuppetTheatre {
   private renderScene2EnvyMirror(ctx: CanvasRenderingContext2D, w: number, h: number, _t: number): void {
     const bg = this.getImg('bg_envy_mirror');
     if (bg) {
-      ctx.drawImage(bg, -72, -62, w + 144, h + 124);
+      this.drawBackdropCard(ctx, bg, w, h);
     } else {
       this.drawTheatricalStageBase(ctx, w, h, '#191424');
       const door = this.getImg('wall_door');
@@ -419,7 +456,7 @@ export class IntroPuppetTheatre {
   private renderScene3BlackspitDock(ctx: CanvasRenderingContext2D, w: number, h: number, _t: number): void {
     const bg = this.getImg('bg_blackspit_dock');
     if (bg) {
-      ctx.drawImage(bg, -72, -62, w + 144, h + 124);
+      this.drawBackdropCard(ctx, bg, w, h);
     } else {
       this.drawTheatricalStageBase(ctx, w, h, '#10222b');
       const door = this.getImg('wall_door');
@@ -434,7 +471,7 @@ export class IntroPuppetTheatre {
   private renderScene4CabinAmbush(ctx: CanvasRenderingContext2D, w: number, h: number, _t: number): void {
     const bg = this.getImg('bg_cabin_ambush');
     if (bg) {
-      ctx.drawImage(bg, -72, -62, w + 144, h + 124);
+      this.drawBackdropCard(ctx, bg, w, h);
     } else {
       this.drawTheatricalStageBase(ctx, w, h, '#241816');
       const sarc = this.getImg('prop_sarcophagus');
@@ -451,13 +488,14 @@ export class IntroPuppetTheatre {
   }
 
   private renderPuppetStringsAndSpotlight(ctx: CanvasRenderingContext2D, w: number, h: number, _t: number): void {
-    const curtain = this.getImg('curtain');
-    if (curtain) {
+    const proscenium = this.getImg('proscenium');
+    if (proscenium) {
+      // Frame the entire stage with the approved ornate cardboard proscenium arch (opaque bbox: 131, 131, 1639, 900)
       ctx.save();
-      ctx.drawImage(curtain, -38, -32, 220, h + 64);
-      ctx.translate(w, 0);
-      ctx.scale(-1, 1);
-      ctx.drawImage(curtain, -38, -32, 220, h + 64);
+      ctx.shadowColor = 'rgba(12, 8, 6, 0.55)';
+      ctx.shadowBlur = 6;
+      ctx.shadowOffsetY = 4;
+      ctx.drawImage(proscenium, 131, 131, 1639, 900, -78, -28, w + 156, h + 34);
       ctx.restore();
     }
   }

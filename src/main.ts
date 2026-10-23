@@ -158,7 +158,7 @@ class SmoothfacePilotGame {
 
     // Canonical Slice 1 Z1S3 Initial Placements (`layout/z1s3.layout.json`: Smoothface 315px, Captain Dread 330px)
     this.player = this.rigs.createAnimState('smoothface', Z1S3_CHARACTER_SPAWNS.smoothface.x, Z1S3_CHARACTER_SPAWNS.smoothface.y, 1.0, Z1S3_CHARACTER_SPAWNS.smoothface.facing);
-    this.menuShowcasePuppet = this.rigs.createAnimState('smoothface', 220, 430, 1.0, 1);
+    this.menuShowcasePuppet = this.rigs.createAnimState('smoothface', 220, 436, 0.82, 1);
 
     this.npcs = {
       cap_dread: this.rigs.createAnimState('cap_dread', Z1S3_CHARACTER_SPAWNS.cap_dread.x, Z1S3_CHARACTER_SPAWNS.cap_dread.y, 1.0, Z1S3_CHARACTER_SPAWNS.cap_dread.facing),
@@ -648,7 +648,7 @@ class SmoothfacePilotGame {
 
     const nextLbl = document.getElementById('intro-next-label');
     if (nextLbl) {
-      nextLbl.textContent = idx === INTRO_SCENES_8.length - 1 ? 'Board Submarine!' : 'Next Scene';
+      nextLbl.textContent = idx === INTRO_SCENES_8.length - 1 ? 'Board Submarine! \u00bb' : 'Next Scene \u00bb';
     }
 
     const dotsEl = document.getElementById('intro-progress-dots');
@@ -864,7 +864,7 @@ class SmoothfacePilotGame {
     this.hoveredHotspotId = hit ? hit.id : null;
     const tip = document.getElementById('hotspot-tooltip')!;
     if (hit) {
-      this.canvas.style.cursor = 'pointer';
+      this.canvas.style.cursor = "url('art/approved/ui/ui.cursor.interact.png') 12 10, pointer";
       tip.style.display = 'block';
       const stageRect = document.getElementById('stage-container')!.getBoundingClientRect();
       tip.style.left = `${e.clientX - stageRect.left}px`;
@@ -875,7 +875,7 @@ class SmoothfacePilotGame {
         tip.innerHTML = `<div>${hit.name}</div><div class="tooltip-Hints">Click: Act &nbsp;&bull;&nbsp; Menu: Actions</div>`;
       }
     } else {
-      this.canvas.style.cursor = 'crosshair';
+      this.canvas.style.cursor = "url('art/approved/ui/ui.cursor.default.png') 10 10, crosshair";
       tip.style.display = 'none';
     }
   }
@@ -1882,11 +1882,14 @@ class SmoothfacePilotGame {
   }
 
   public addInventoryItem(id: string): void {
+    if (id === 'hammer_bag') this.flags.gotHammerBag = true;
+    if (id === 'portrait_stand') this.flags.gotPortraitStand = true;
+    if (id === 'glue') this.flags.gotGlue = true;
+    if (id === 'helm') this.flags.gotHelm = true;
     if (!this.inventory.includes(id)) {
       this.inventory.push(id);
       this.audio.playPickupChime();
       this.renderInventoryBar();
-    this.studio = new RoomLayoutStudio(this);
     }
   }
 
@@ -1917,7 +1920,6 @@ class SmoothfacePilotGame {
     this.selectedItemId = id;
     this.updateActiveItemBanner();
     this.renderInventoryBar();
-    this.studio = new RoomLayoutStudio(this);
   }
 
   public renderInventoryBar(): void {
@@ -2510,9 +2512,10 @@ class SmoothfacePilotGame {
     const panelB = this.getImg('z1s3.wall.panel_b');
     const planksA = this.getImg('z1s3.floor.planks_a');
     const porthole = this.getImg('z1s3.wall.porthole');
-    if (panelB) ctx.drawImage(panelB, -40, -35, w + 80, 390);
-    if (porthole) ctx.drawImage(porthole, w * 0.5 - 75, 28, 150, 150);
-    if (planksA) ctx.drawImage(planksA, -40, 315, w + 80, 210);
+    // Crop the 72px transparent safety margin so wall panel and floor planks meet with zero gap!
+    if (panelB) ctx.drawImage(panelB, 72, 72, 599, 900, 0, 0, w, 355);
+    if (porthole) ctx.drawImage(porthole, w * 0.5 - 75, 24, 150, 150);
+    if (planksA) ctx.drawImage(planksA, 58, 58, 724, 260, 0, 332, w, 155);
 
     this.rigs.renderSmoothfaceRig(ctx, this.menuShowcasePuppet);
   }
@@ -2686,6 +2689,35 @@ class SmoothfacePilotGame {
       return;
     }
 
+    // Mask exterior submarine hull spandrel outside the curved left and right foreground hull ribs
+    if (obj.id === 'z1s3.fg.hull_rib_left') {
+      ctx.save();
+      ctx.fillStyle = '#151018';
+      ctx.beginPath();
+      ctx.moveTo(drawX - 400, drawY - 100);
+      ctx.lineTo(drawX + obj.w * 0.86, drawY - 100);
+      ctx.lineTo(drawX + obj.w * 0.86, drawY + obj.h * 0.08);
+      ctx.quadraticCurveTo(drawX + obj.w * 0.24, drawY + obj.h * 0.20, drawX + obj.w * 0.22, drawY + obj.h * 0.58);
+      ctx.lineTo(drawX + obj.w * 0.20, drawY + obj.h + 100);
+      ctx.lineTo(drawX - 400, drawY + obj.h + 100);
+      ctx.closePath();
+      ctx.fill();
+      ctx.restore();
+    } else if (obj.id === 'z1s3.fg.hull_rib_right') {
+      ctx.save();
+      ctx.fillStyle = '#151018';
+      ctx.beginPath();
+      ctx.moveTo(drawX + obj.w + 400, drawY - 100);
+      ctx.lineTo(drawX + obj.w * 0.14, drawY - 100);
+      ctx.lineTo(drawX + obj.w * 0.14, drawY + obj.h * 0.08);
+      ctx.quadraticCurveTo(drawX + obj.w * 0.76, drawY + obj.h * 0.20, drawX + obj.w * 0.78, drawY + obj.h * 0.58);
+      ctx.lineTo(drawX + obj.w * 0.80, drawY + obj.h + 100);
+      ctx.lineTo(drawX + obj.w + 400, drawY + obj.h + 100);
+      ctx.closePath();
+      ctx.fill();
+      ctx.restore();
+    }
+
     // Paper Cut-Out drop shadow per STYLE_BIBLE.md section 3
     if (obj.inSituSeamless && clickPulse <= 0.01 && !isHovered) {
       ctx.shadowColor = 'transparent';
@@ -2706,31 +2738,72 @@ class SmoothfacePilotGame {
 
   private renderStreetSenseHotspots(ctx: CanvasRenderingContext2D): void {
     const list = this.getVisibleHotspots();
-    const roomW = this.getRoomWidth();
+    const viewLeft = this.cameraX + 18;
+    const viewRight = this.cameraX + 1582;
     ctx.save();
-    ctx.font = 'bold 15px "Patrick Hand", cursive, sans-serif';
+    ctx.font = 'bold 14px "Patrick Hand", cursive, sans-serif';
+
+    const placedPills: Array<{ x: number; y: number; w: number; h: number }> = [];
+    const bottomLabelIds = new Set([
+      'z1s3_desk_drawer',
+      'z1s3_nightstand_lamp',
+      'z1s3_ship_bottle',
+      'z1s3_clown_voodoo',
+      'z1s3_dirty_clothes',
+    ]);
+
     for (const h of list) {
       const r = this.getHotspotWorldRect(h);
+      // Skip hotspots that are mostly outside the current 1600px camera viewport
+      const visLeft = Math.max(viewLeft, r.x);
+      const visRight = Math.min(viewRight, r.x + r.w);
+      if (visRight - visLeft < Math.max(58, r.w * 0.45)) continue;
+
       ctx.strokeStyle = h.isExitTo ? '#3be8d8' : '#ffcf56';
-      ctx.lineWidth = 2.5;
+      ctx.lineWidth = 2.2;
       ctx.setLineDash([7, 5]);
       ctx.strokeRect(r.x, r.y, r.w, r.h);
 
       const shortLabel = h.name.replace(/\s*\(.*?\)\s*/g, '').trim();
       const textW = Math.ceil(ctx.measureText(shortLabel).width);
-      const pillW = textW + 18;
-      const bx = Math.max(8, Math.min(roomW - pillW - 8, r.x));
-      const by = Math.max(30, Math.min(890, r.y - 6));
+      const pillW = textW + 16;
+      const pillH = 22;
+
+      let bx = Math.round(r.x + (r.w - pillW) * 0.5);
+      bx = Math.max(viewLeft + 4, Math.min(viewRight - pillW - 4, bx));
+
+      let by = bottomLabelIds.has(h.id) ? Math.round(r.y + r.h + pillH + 3) : Math.round(r.y - 4);
+      by = Math.max(106, Math.min(892, by));
+
+      // Automatic 2D de-collision against already placed Peek labels
+      for (let attempt = 0; attempt < 10; attempt++) {
+        const curRect = { x: bx, y: by - pillH, w: pillW, h: pillH };
+        const hit = placedPills.find(
+          (p) =>
+            curRect.x < p.x + p.w + 4 &&
+            curRect.x + curRect.w + 4 > p.x &&
+            curRect.y < p.y + p.h + 3 &&
+            curRect.y + curRect.h + 3 > p.y
+        );
+        if (!hit) break;
+        if (bottomLabelIds.has(h.id) || by > 520) {
+          by = Math.min(892, hit.y + hit.h + pillH + 4);
+        } else {
+          by = Math.max(106, hit.y - 4);
+        }
+      }
+
+      placedPills.push({ x: bx, y: by - pillH, w: pillW, h: pillH });
 
       ctx.setLineDash([]);
       ctx.fillStyle = 'rgba(18, 13, 22, 0.92)';
-      ctx.fillRect(bx, by - 24, pillW, 24);
+      ctx.fillRect(bx, by - pillH, pillW, pillH);
       ctx.strokeStyle = h.isExitTo ? '#3be8d8' : '#e3b65a';
       ctx.lineWidth = 1.5;
-      ctx.strokeRect(bx, by - 24, pillW, 24);
+      ctx.strokeRect(bx, by - pillH, pillW, pillH);
 
       ctx.fillStyle = '#fff5d6';
-      ctx.fillText(shortLabel, bx + 9, by - 6);
+      ctx.fillText(shortLabel, bx + 8, by - 6);
     }
     ctx.restore();
   }
