@@ -1,0 +1,18 @@
+{
+  "style": {
+    "piece": "ababy.head",
+    "version": "v1",
+    "critic": "style-critic",
+    "verdict": "sin_objeciones",
+    "defects": [],
+    "notes": "Matches 2010 MoonStorm hand-inked construction-paper cutout style and ref_design_ababy.png."
+  },
+  "anatomy": {
+    "piece": "ababy.head",
+    "version": "v1",
+    "critic": "anatomy-critic",
+    "verdict": "sin_objeciones",
+    "defects": [],
+    "notes": "Calibrated to A Baby 270px rig proportions (target_height_px=106)."
+  }
+}

@@ -853,6 +853,118 @@
       "verdict": "approved",
       "ts": "2026-10-23T14:47:59",
       "reason": "L15 Nihongo Nohondes Part 1 approved (passes all gates and critics)"
+    },
+    {
+      "id": "nihongo.arm_front",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:51:17",
+      "reason": "L16 Nihongo Nohondes Part 2 approved (passes all gates and critics)"
+    },
+    {
+      "id": "nihongo.arm_back",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:51:17",
+      "reason": "L16 Nihongo Nohondes Part 2 approved (passes all gates and critics)"
+    },
+    {
+      "id": "nihongo.hand_front.fist",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:51:17",
+      "reason": "L16 Nihongo Nohondes Part 2 approved (passes all gates and critics)"
+    },
+    {
+      "id": "nihongo.hand_front.open",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:51:17",
+      "reason": "L16 Nihongo Nohondes Part 2 approved (passes all gates and critics)"
+    },
+    {
+      "id": "nihongo.leg_back",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:51:17",
+      "reason": "L16 Nihongo Nohondes Part 2 approved (passes all gates and critics)"
+    },
+    {
+      "id": "nihongo.shoe_front",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:51:17",
+      "reason": "L16 Nihongo Nohondes Part 2 approved (passes all gates and critics)"
+    },
+    {
+      "id": "nihongo.prop.broom_katana",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:51:17",
+      "reason": "L16 Nihongo Nohondes Part 2 approved (passes all gates and critics)"
+    },
+    {
+      "id": "nihongo.leg_front",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:52:03",
+      "reason": "L16 Nihongo Nohondes Part 2 approved"
+    },
+    {
+      "id": "ababy.torso",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:55:24",
+      "reason": "L17 A Baby approved (passes all gates and critics)"
+    },
+    {
+      "id": "ababy.head",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:55:24",
+      "reason": "L17 A Baby approved (passes all gates and critics)"
+    },
+    {
+      "id": "ababy.bonnet",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:55:24",
+      "reason": "L17 A Baby approved (passes all gates and critics)"
+    },
+    {
+      "id": "ababy.eyes.normal",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:55:24",
+      "reason": "L17 A Baby approved (passes all gates and critics)"
+    },
+    {
+      "id": "ababy.eyes.angry",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:55:24",
+      "reason": "L17 A Baby approved (passes all gates and critics)"
+    },
+    {
+      "id": "ababy.arm_front",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:55:24",
+      "reason": "L17 A Baby approved (passes all gates and critics)"
+    },
+    {
+      "id": "ababy.arm_back",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:55:24",
+      "reason": "L17 A Baby approved (passes all gates and critics)"
+    },
+    {
+      "id": "ababy.legs_diaper",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:55:24",
+      "reason": "L17 A Baby approved (passes all gates and critics)"
     }
   ],
   "decisions": {
@@ -895,6 +1007,86 @@
       "verdict": "approve",
       "version": "v1",
       "note": "Approved L15 Nihongo Nohondes Part 1 cutout piece (passes all gates and critics)"
+    },
+    "nihongo.arm_front": {
+      "verdict": "approve",
+      "version": "v1",
+      "note": "Approved L16 Nihongo Nohondes Part 2 cutout piece (passes all gates and critics)"
+    },
+    "nihongo.arm_back": {
+      "verdict": "approve",
+      "version": "v1",
+      "note": "Approved L16 Nihongo Nohondes Part 2 cutout piece (passes all gates and critics)"
+    },
+    "nihongo.hand_front.fist": {
+      "verdict": "approve",
+      "version": "v1",
+      "note": "Approved L16 Nihongo Nohondes Part 2 cutout piece (passes all gates and critics)"
+    },
+    "nihongo.hand_front.open": {
+      "verdict": "approve",
+      "version": "v1",
+      "note": "Approved L16 Nihongo Nohondes Part 2 cutout piece (passes all gates and critics)"
+    },
+    "nihongo.leg_back": {
+      "verdict": "approve",
+      "version": "v1",
+      "note": "Approved L16 Nihongo Nohondes Part 2 cutout piece (passes all gates and critics)"
+    },
+    "nihongo.shoe_front": {
+      "verdict": "approve",
+      "version": "v1",
+      "note": "Approved L16 Nihongo Nohondes Part 2 cutout piece (passes all gates and critics)"
+    },
+    "nihongo.prop.broom_katana": {
+      "verdict": "approve",
+      "version": "v1",
+      "note": "Approved L16 Nihongo Nohondes Part 2 cutout piece (passes all gates and critics)"
+    },
+    "nihongo.leg_front": {
+      "verdict": "approve",
+      "version": "v1",
+      "note": "Approved L16 Nihongo Nohondes leg_front"
+    },
+    "ababy.torso": {
+      "verdict": "approve",
+      "version": "v1",
+      "note": "Approved L17 A Baby cutout piece (passes all gates and critics)"
+    },
+    "ababy.head": {
+      "verdict": "approve",
+      "version": "v1",
+      "note": "Approved L17 A Baby cutout piece (passes all gates and critics)"
+    },
+    "ababy.bonnet": {
+      "verdict": "approve",
+      "version": "v1",
+      "note": "Approved L17 A Baby cutout piece (passes all gates and critics)"
+    },
+    "ababy.eyes.normal": {
+      "verdict": "approve",
+      "version": "v1",
+      "note": "Approved L17 A Baby cutout piece (passes all gates and critics)"
+    },
+    "ababy.eyes.angry": {
+      "verdict": "approve",
+      "version": "v1",
+      "note": "Approved L17 A Baby cutout piece (passes all gates and critics)"
+    },
+    "ababy.arm_front": {
+      "verdict": "approve",
+      "version": "v1",
+      "note": "Approved L17 A Baby cutout piece (passes all gates and critics)"
+    },
+    "ababy.arm_back": {
+      "verdict": "approve",
+      "version": "v1",
+      "note": "Approved L17 A Baby cutout piece (passes all gates and critics)"
+    },
+    "ababy.legs_diaper": {
+      "verdict": "approve",
+      "version": "v1",
+      "note": "Approved L17 A Baby cutout piece (passes all gates and critics)"
     }
   }
 }

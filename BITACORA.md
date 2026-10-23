@@ -1676,3 +1676,29 @@ ihongo.brows.normal (1, 24 px): Cejas gruesas angulosas.
   8. 
 ihongo.brows.angry (1, 26 px): Cejas fruncidas en V aguda.
 - **Total en MANIFEST.json**: 111/111 piezas aprobadas (103 Slice 1 + 8 L15).
+
+## 2026-10-23 - Lote L16 Completado y Aprobado (Nihongo Nohondes Rig - Parte 2, 8 piezas + ig.json)
+- **Piezas generadas (1 por llamada), normalizadas, validadas por gates.py (8/8 PASS) y aprobadas en rt/approved/nihongo/**:
+  1. 
+ihongo.arm_front (1, 108 px), 
+ihongo.arm_back (1, 102 px), 
+ihongo.hand_front.fist (1, 40 px), 
+ihongo.hand_front.open (1, 46 px), 
+ihongo.leg_front (1, 104 px), 
+ihongo.leg_back (1, 100 px), 
+ihongo.shoe_front (1, 54 px), 
+ihongo.prop.broom_katana (1, 250 px).
+- **Rig ensamblado**: characters/nihongo/rig.json y characters/nihongo/composite_preview.png (300 px).
+
+## 2026-10-23 - Lote L17 Completado y Aprobado (A Baby Rig Completo, 8 piezas + ig.json)
+- **Piezas generadas (1 por llamada, ref ef_design_ababy.png), normalizadas, validadas por gates.py (8/8 PASS) y aprobadas en rt/approved/ababy/**:
+  1. baby.torso (1, 146 px): Torso gorila musculoso con camiseta azul bebe ajustada y barriga expuesta.
+  2. baby.head (1, 106 px): Cabeza de bebe malhumorado con mandibula pesada y gota de baba/chocolate.
+  3. baby.bonnet (1, 94 px): Gorrito de bebe de papel con volantes y cintas.
+  4. baby.eyes.normal (1, 26 px): Ojos entrecerrados de bebe malhumorado.
+  5. baby.eyes.angry (1, 28 px): Ojos furiosos de berrinche con cejas en V.
+  6. baby.arm_front (1, 152 px): Brazo delantero gigante apoyado en nudillos con mancha de chocolate.
+  7. baby.arm_back (1, 144 px): Brazo trasero gigante apoyado en nudillos.
+  8. baby.legs_diaper (1, 102 px): Panal blanco abultado con imperdible gigante y piernas cortas.
+- **Rig ensamblado**: characters/ababy/rig.json y characters/ababy/composite_preview.png (270 px).
+- **Total en MANIFEST.json**: 127/127 piezas aprobadas (103 Slice 1 + 16 Nihongo + 8 A Baby).

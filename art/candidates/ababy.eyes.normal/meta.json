@@ -1,0 +1,21 @@
+{
+  "id": "ababy.eyes.normal",
+  "category": "ababy",
+  "kind": "body_part",
+  "what": "Pair of A Baby grumpy heavy-lidded cartoon eyes in 3/4 view facing right",
+  "target_height_px": 26,
+  "height_fraction_of_smoothface": 0.083,
+  "pivot_hint": "eye center on ababy.head",
+  "allowed_islands": 1,
+  "references": [
+    "art/references/ref_design_ababy.png",
+    "art/references/palette_characters.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "approved",
+  "proposed_version": "v1",
+  "version": "v1",
+  "approved_version": "v1"
+}

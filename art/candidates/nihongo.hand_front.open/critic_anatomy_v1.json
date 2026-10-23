@@ -1,0 +1,8 @@
+{
+  "piece": "nihongo.hand_front.open",
+  "version": "v1",
+  "critic": "anatomy-critic",
+  "verdict": "sin_objeciones",
+  "defects": [],
+  "notes": "Calibrated to Nihongo 300px rig proportions (target_height_px=46) with clean transparent cutout silhouette."
+}

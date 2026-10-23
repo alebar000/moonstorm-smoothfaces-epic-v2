@@ -1,0 +1,21 @@
+{
+  "id": "nihongo.hand_front.fist",
+  "category": "nihongo",
+  "kind": "body_part",
+  "what": "Nihongo Nohondes 4-fingered cartoon gripping fist in warm parchment paper skin ready to hold katana-broom",
+  "target_height_px": 40,
+  "height_fraction_of_smoothface": 0.127,
+  "pivot_hint": "wrist base",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/palette_characters.png",
+    "art/references/ref_z1s2_lobby_2010.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "approved",
+  "proposed_version": "v1",
+  "version": "v1",
+  "approved_version": "v1"
+}

@@ -1,0 +1,207 @@
+{
+  "id": "ababy",
+  "name": "A Baby",
+  "height_px": 270,
+  "height_tolerance": 0.04,
+  "facing_default": 1,
+  "root": "torso",
+  "canvas": {
+    "w": 360,
+    "h": 350
+  },
+  "parts": {
+    "arm_back": {
+      "asset": "art/approved/ababy/ababy.arm_back.png",
+      "z_index": 12,
+      "parent": "torso",
+      "offset": [
+        202,
+        146
+      ],
+      "size": [
+        98,
+        144
+      ],
+      "pivots": {
+        "shoulder": [
+          224,
+          162
+        ],
+        "fist": [
+          264,
+          280
+        ]
+      }
+    },
+    "legs_diaper": {
+      "asset": "art/approved/ababy/ababy.legs_diaper.png",
+      "z_index": 15,
+      "parent": "torso",
+      "offset": [
+        108,
+        206
+      ],
+      "size": [
+        116,
+        102
+      ],
+      "pivots": {
+        "waist": [
+          166,
+          214
+        ],
+        "feet": [
+          166,
+          304
+        ]
+      }
+    },
+    "torso": {
+      "asset": "art/approved/ababy/ababy.torso.png",
+      "z_index": 20,
+      "parent": null,
+      "offset": [
+        96,
+        104
+      ],
+      "size": [
+        156,
+        146
+      ],
+      "pivots": {
+        "neck": [
+          182,
+          118
+        ],
+        "shoulder_front": [
+          122,
+          152
+        ],
+        "shoulder_back": [
+          224,
+          162
+        ],
+        "waist": [
+          166,
+          214
+        ]
+      }
+    },
+    "head": {
+      "asset": "art/approved/ababy/ababy.head.png",
+      "z_index": 30,
+      "parent": "torso",
+      "offset": [
+        146,
+        52
+      ],
+      "size": [
+        104,
+        106
+      ],
+      "pivots": {
+        "neck": [
+          182,
+          118
+        ],
+        "eyes": [
+          206,
+          98
+        ],
+        "bonnet": [
+          188,
+          78
+        ]
+      }
+    },
+    "eyes.normal": {
+      "asset": "art/approved/ababy/ababy.eyes.normal.png",
+      "z_index": 32,
+      "parent": "head",
+      "offset": [
+        174,
+        86
+      ],
+      "size": [
+        56,
+        26
+      ],
+      "pivots": {
+        "anchor": [
+          206,
+          98
+        ]
+      }
+    },
+    "eyes.angry": {
+      "asset": "art/approved/ababy/ababy.eyes.angry.png",
+      "z_index": 32,
+      "parent": "head",
+      "offset": [
+        174,
+        84
+      ],
+      "size": [
+        58,
+        28
+      ],
+      "pivots": {
+        "anchor": [
+          206,
+          98
+        ]
+      }
+    },
+    "bonnet": {
+      "asset": "art/approved/ababy/ababy.bonnet.png",
+      "z_index": 35,
+      "parent": "head",
+      "offset": [
+        128,
+        36
+      ],
+      "size": [
+        112,
+        94
+      ],
+      "pivots": {
+        "anchor": [
+          188,
+          78
+        ]
+      }
+    },
+    "arm_front": {
+      "asset": "art/approved/ababy/ababy.arm_front.png",
+      "z_index": 40,
+      "parent": "torso",
+      "offset": [
+        68,
+        144
+      ],
+      "size": [
+        106,
+        152
+      ],
+      "pivots": {
+        "shoulder": [
+          122,
+          152
+        ],
+        "fist": [
+          118,
+          288
+        ]
+      }
+    }
+  },
+  "variant_groups": {
+    "eyes": {
+      "default": "normal",
+      "variants": {
+        "normal": "eyes.normal",
+        "angry": "eyes.angry"
+      }
+    }
+  }
+}

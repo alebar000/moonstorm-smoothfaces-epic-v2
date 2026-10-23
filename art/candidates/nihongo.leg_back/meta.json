@@ -1,0 +1,21 @@
+{
+  "id": "nihongo.leg_back",
+  "category": "nihongo",
+  "kind": "body_part",
+  "what": "Nihongo Nohondes shadowed indigo back trouser leg with off-white cloth shin wraps",
+  "target_height_px": 100,
+  "height_fraction_of_smoothface": 0.317,
+  "pivot_hint": "hip joint at top-center; ankle joint at bottom-center",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/palette_characters.png",
+    "art/references/ref_z1s2_lobby_2010.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "approved",
+  "proposed_version": "v1",
+  "version": "v1",
+  "approved_version": "v1"
+}
