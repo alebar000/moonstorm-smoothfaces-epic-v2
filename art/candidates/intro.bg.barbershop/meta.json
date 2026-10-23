@@ -1,0 +1,13 @@
+{
+  "id": "intro.bg.barbershop",
+  "category": "intro",
+  "kind": "wall",
+  "what": "Scene 1 puppet stage backdrop: Stache Brothers Barbershop interior with barber pole and trophy beard portraits",
+  "target_height_px": 720,
+  "height_fraction_of_smoothface": 2.286,
+  "references": [
+    "art/references/ref_room_z1s3_2010.png"
+  ],
+  "versions": [],
+  "status": "blocked_quota_429"
+}

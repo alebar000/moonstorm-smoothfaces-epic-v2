@@ -1,0 +1,13 @@
+{
+  "id": "ui.slot_frame",
+  "category": "ui",
+  "kind": "prop",
+  "what": "Square ornate brass and dark wood inventory slot frame in MoonStorm cutout style",
+  "target_height_px": 72,
+  "height_fraction_of_smoothface": 0.229,
+  "references": [
+    "art/references/ref_gui_aguilar.jpg"
+  ],
+  "versions": [],
+  "status": "blocked_quota_429"
+}

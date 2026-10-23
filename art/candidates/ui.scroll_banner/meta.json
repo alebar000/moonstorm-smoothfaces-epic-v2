@@ -1,0 +1,13 @@
+{
+  "id": "ui.scroll_banner",
+  "category": "ui",
+  "kind": "prop",
+  "what": "Weathered parchment scroll / riveted ledger dialogue banner panel in MoonStorm cutout style",
+  "target_height_px": 180,
+  "height_fraction_of_smoothface": 0.571,
+  "references": [
+    "art/references/ref_gui_aguilar.jpg"
+  ],
+  "versions": [],
+  "status": "blocked_quota_429"
+}

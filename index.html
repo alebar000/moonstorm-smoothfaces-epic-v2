@@ -14,28 +14,28 @@
     <!-- Floating Paper Cut-Out Top Inventory & Pouch Strip -->
     <header id="hud-top-bar" class="hud-hidden">
       <button class="hud-brand-badge" id="btn-open-menu" title="Return to Title Stage">
-        <img src="assets/ui/rmb_item.png" alt="" class="hud-mini-tile" />
+        <img src="art/approved/z1s3/z1s3.wall.helm_wheel.png" alt="" class="hud-mini-tile" />
         <span class="brand-title">Title</span>
       </button>
 
       <div class="inventory-mode-group">
         <button id="btn-mode-select" class="inv-mode-btn active" title="Use or Combine Pocket Items">
-          <img src="assets/ui/rmb_grab.png" alt="" class="mode-mini-icon" />
+          <img src="art/approved/smoothface/smoothface.prop.wrench.png" alt="" class="mode-mini-icon" />
           <span>Use</span>
         </button>
         <button id="btn-mode-inspect" class="inv-mode-btn" title="Look Closely at Pocket Item">
-          <img src="assets/ui/rmb_inspect.png" alt="" class="mode-mini-icon" />
+          <img src="art/approved/smoothface/smoothface.prop.magnifying_glass.png" alt="" class="mode-mini-icon" />
           <span>Look</span>
         </button>
       </div>
 
       <div class="inventory-strip-wrapper">
         <button id="inv-scroll-left" class="inv-arrow-btn" aria-label="Scroll Pockets Left">
-          <img src="assets/ui/arrow_plaque.png" alt="Left" class="arrow-img arrow-left" />
+          <span>&#9664;</span>
         </button>
         <div id="inventory-slots" class="inventory-slots"></div>
         <button id="inv-scroll-right" class="inv-arrow-btn" aria-label="Scroll Pockets Right">
-          <img src="assets/ui/arrow_plaque.png" alt="Right" class="arrow-img arrow-right" />
+          <span>&#9654;</span>
         </button>
       </div>
 
@@ -45,20 +45,11 @@
       </div>
 
       <div class="hud-utility-group">
-        <button id="btn-sketch-mode" class="hud-util-btn" title="Toggle 2010 Original Aguilar Ink Sketch vs. PSD Cut-Out Color (K)">
-          <img src="assets/ui/rmb_inspect.png" alt="" class="hud-mini-tile" /> 2010 Sketch
-        </button>
         <button id="btn-street-sense" class="hud-util-btn" title="Peek at Everything in the Room (Hold TAB)">
-          <img src="assets/ui/rmb_inspect.png" alt="" class="hud-mini-tile" /> Peek
-        </button>
-        <button id="btn-evil-agenda" class="hud-util-btn" title="Rupert's Evil Notebook (H)">
-          <img src="assets/ui/wax_letter_compass.png" alt="" class="hud-mini-tile" /> Evil Plan
-        </button>
-        <button id="btn-island-map" class="hud-util-btn" title="Submarine Deck Chart (M)">
-          <img src="assets/ui/rmb_grab.png" alt="" class="hud-mini-tile" /> Chart
+          <img src="art/approved/smoothface/smoothface.prop.magnifying_glass.png" alt="" class="hud-mini-tile" /> Peek
         </button>
         <button id="btn-open-config" class="hud-util-btn" title="Gramophone &amp; Stage Options (ESC)">
-          <img src="assets/ui/rmb_item.png" alt="" class="hud-mini-tile" /> Options
+          <img src="art/approved/z1s3/z1s3.wall.helm_wheel.png" alt="" class="hud-mini-tile" /> Options
         </button>
       </div>
     </header>
@@ -71,45 +62,41 @@
       <div id="room-banner" class="room-banner">Captain Dread's Cabin</div>
       <div id="hotspot-tooltip" class="hotspot-tooltip" style="display:none;"></div>
 
-      <!-- Compact Cut-Out Mouse Helper Badge (Uses Hand-Drawn Mouse Icons, Zero LMB/RMB Text) -->
+      <!-- Compact Cut-Out Mouse Helper Badge -->
       <div id="mouse-legend-pill" class="mouse-legend-pill hud-hidden">
-        <span class="mouse-hint-item">
-          <img src="assets/ui/mouse_left.png" alt="" class="mouse-cutout-icon" /> Walk / Act
-        </span>
-        <span class="mouse-hint-item">
-          <img src="assets/ui/mouse_right.png" alt="" class="mouse-cutout-icon" /> Actions
-        </span>
+        <span class="mouse-hint-item">Walk / Act</span>
+        <span class="mouse-hint-item">Actions Menu</span>
       </div>
 
-      <!-- Paper Cut-Out Pop-Up Action Menu (GUImu003.jpg Tiles) -->
+      <!-- Paper Cut-Out Pop-Up Action Menu -->
       <div id="rmb-action-menu" class="rmb-action-menu" style="display:none;">
         <div class="rmb-menu-header" id="rmb-target-title">Object</div>
         <button class="rmb-verb-btn" data-verb="grab">
-          <img src="assets/ui/rmb_grab.png" alt="" class="verb-tile-img" />
+          <img src="art/approved/smoothface/smoothface.prop.wrench.png" alt="" class="verb-tile-img" />
           <span>Take / Use</span>
         </button>
         <button class="rmb-verb-btn" data-verb="inspect">
-          <img src="assets/ui/rmb_inspect.png" alt="" class="verb-tile-img" />
+          <img src="art/approved/smoothface/smoothface.prop.magnifying_glass.png" alt="" class="verb-tile-img" />
           <span>Look At</span>
         </button>
         <button class="rmb-verb-btn" data-verb="talk">
-          <img src="assets/ui/rmb_talk.png" alt="" class="verb-tile-img" />
+          <img src="art/approved/smoothface/smoothface.emotion.speech.png" alt="" class="verb-tile-img" />
           <span>Talk To</span>
         </button>
         <button class="rmb-verb-btn rmb-verb-item" data-verb="item" id="rmb-use-item-btn" style="display:none;">
-          <img src="assets/ui/rmb_item.png" alt="" class="verb-tile-img" />
+          <img src="art/approved/smoothface/smoothface.prop.wrench.png" alt="" class="verb-tile-img" />
           <span id="rmb-use-item-text">Use Item</span>
         </button>
       </div>
 
       <!-- Paper Cut-Out Title Screen -->
       <section id="main-menu-overlay" class="overlay-screen">
-        <div class="menu-hero-backdrop" style="background-image: url('assets/ui/title_hero_bg.png');"></div>
+        <div class="menu-hero-backdrop" style="background-image: url('review/layout_shots/z1s3_cabin_panorama/cam_center.png');"></div>
         <div class="menu-vignette"></div>
         <div class="menu-content-grid">
           <div class="menu-left-column">
             <div class="studio-crest">
-              <img src="assets/ui/logo_mss.jpg" alt="MoonStorm Studios" class="mss-crest-img" />
+              <img src="art/approved/z1s3/z1s3.wall.poster.png" alt="MoonStorm Studios" class="mss-crest-img" />
               <div class="studio-meta">
                 <span class="studio-year">MOONSTORM STUDIOS PRESENTS</span>
                 <span class="studio-sub">A TALE OF VILLAINY, MOUSTACHES &amp; SUBMARINES</span>
@@ -117,7 +104,7 @@
             </div>
 
             <div class="game-logo-emblem-wrap">
-              <img src="assets/ui/title_logo_cutout.png" alt="Smoothface's Epic" class="game-logo-cutout-img" />
+              <h1 style="font-family:'Cinzel',serif;font-size:2.7rem;color:#ffe28a;text-shadow:3px 4px 0 #1a100c;margin:6px 0;letter-spacing:2px;">SMOOTHFACE'S EPIC</h1>
             </div>
 
             <div class="menu-tagline-scroll">
@@ -128,26 +115,19 @@
 
             <div class="menu-button-stack">
               <button id="btn-menu-start-intro" class="menu-primary-btn">
-                <img src="assets/ui/arrow_plaque.png" alt="" class="btn-cutout-arrow" />
-                <span>BEGIN THE TALE</span>
+                <span>BEGIN THE TALE (4-SCENE INTRO)</span>
               </button>
               <button id="btn-menu-quick-play" class="menu-secondary-btn">
-                <img src="assets/ui/rmb_grab.png" alt="" class="btn-cutout-tile" />
-                <span>ABOARD THE SUBSTAMPEDE</span>
+                <img src="art/approved/z1s3/z1s3.wall.helm_wheel.png" alt="" class="btn-cutout-tile" />
+                <span>ENTER CAPTAIN DREAD'S CABIN</span>
               </button>
-              <div class="menu-scene-row">
-                <button class="menu-scene-chip" data-room="Z1S3">Captain's Cabin</button>
-                <button class="menu-scene-chip" data-room="Z1S1">Engine Room</button>
-                <button class="menu-scene-chip" data-room="Z1S2">Submarine Lounge</button>
-                <button class="menu-scene-chip" data-room="LOLDEMO">Spooky Castle</button>
-              </div>
               <div class="menu-bottom-actions">
                 <button id="btn-menu-config" class="menu-Action-btn">
-                  <img src="assets/ui/rmb_item.png" alt="" class="btn-cutout-mini" />
+                  <img src="art/approved/z1s3/z1s3.wall.helm_wheel.png" alt="" class="btn-cutout-mini" />
                   <span>Stage &amp; Gramophone</span>
                 </button>
                 <button id="btn-menu-credits" class="menu-Action-btn">
-                  <img src="assets/ui/wax_letter_compass.png" alt="" class="btn-cutout-mini" />
+                  <img src="art/approved/z1s3/z1s3.wall.poster.png" alt="" class="btn-cutout-mini" />
                   <span>MoonStorm Crew</span>
                 </button>
               </div>
@@ -167,7 +147,7 @@
         </div>
       </section>
 
-      <!-- Hand-Painted 60 FPS Paper Puppet Theatre Intro Overlay (8 Live Animated Scenes) -->
+      <!-- Hand-Painted 60 FPS Paper Puppet Theatre Intro Overlay (4 Live Animated Scenes) -->
       <section id="intro-overlay" class="overlay-screen" style="display:none;">
         <div class="intro-theatre-stage">
           <div class="intro-visual-viewport">
@@ -175,15 +155,12 @@
             <div class="intro-spotlight-fx"></div>
           </div>
 
-          <img class="intro-proscenium-img" src="assets/intro/theatre_proscenium_overlay.png" alt="" />
-
-          <img class="intro-shield-emblem" src="assets/ui/title_logo_cutout.png" alt="Smoothface's Epic" />
           <div class="intro-top-plaque">
-            <span id="intro-act-badge" class="intro-act-badge">SCENE I OF VIII: THE CELEBRITY BARBER OF LONDON</span>
+            <span id="intro-act-badge" class="intro-act-badge">SCENE I OF IV: THE HAIRLESS TWIN OF LONDON</span>
           </div>
 
           <div class="intro-narration-box">
-            <div class="intro-speaker-tag" id="intro-speaker-tag">THE STORYTELLER</div>
+            <div class="intro-speaker-tag" id="intro-speaker-tag">RUPERT "MR. SMOOTHFACE" STACHE</div>
             <p id="intro-narration-text" class="intro-narration-text"></p>
             <div class="intro-timeline-bar">
               <div id="intro-timeline-fill" class="intro-timeline-fill"></div>
@@ -196,8 +173,7 @@
               <span id="intro-playpause-label">&#10074;&#10074; Pause</span>
             </button>
             <button id="btn-intro-prev" class="intro-nav-btn intro-prev-plaque">
-              <img src="assets/ui/arrow_plaque.png" alt="" class="intro-arrow-img arrow-left" />
-              <span>Prev Scene</span>
+              <span>&laquo; Prev Scene</span>
             </button>
           </div>
 
@@ -206,8 +182,7 @@
               <span>Skip to Game &raquo;</span>
             </button>
             <button id="btn-intro-next" class="intro-nav-btn intro-next-plaque">
-              <span id="intro-next-label">Next Scene</span>
-              <img src="assets/ui/arrow_plaque.png" alt="" class="intro-arrow-img arrow-right" />
+              <span id="intro-next-label">Next Scene &raquo;</span>
             </button>
           </div>
         </div>
@@ -427,19 +402,19 @@
         </div>
       </section>
 
-      <!-- Act I Finale & 2010 MoonStorm Studios Crew Credits Modal -->
+      <!-- Slice 1 Finale & 2010 MoonStorm Studios Crew Credits Modal -->
       <section id="victory-credits-modal" class="modal-backdrop" style="display:none;">
         <div class="modal-card victory-modal-card">
           <div class="modal-header">
             <div class="modal-title-with-prop">
-              <img src="assets/props/perpetual_machine_cutout.png" alt="" class="modal-vault-prop-icon" />
-              <h3>ACT I COMPLETE: FULL STEAM TO BLACKSPIT ISLAND!</h3>
+              <img src="art/approved/z1s3/z1s3.wall.helm_wheel.png" alt="" class="modal-vault-prop-icon" />
+              <h3>SLICE 1 COMPLETE: PERPETUAL MACHINE ASSEMBLED!</h3>
             </div>
             <button id="btn-close-victory" class="modal-close-btn">&#10005;</button>
           </div>
           <div class="victory-body">
             <p class="victory-lead">
-              Powered by Leonardo da Vinci's <strong>Perpetual Movement Machine</strong>, the pirate submarine <em>Substampede</em> blasts across the shark-infested sea at 900 knots toward <strong>Port Machete</strong> and the <strong>Malefic Gentlemen Syndicate</strong>!
+              Armed with Leonardo da Vinci's <strong>Perpetual Movement Machine</strong> assembled right inside Captain Dread's Cabin, <strong>Mr. Smoothface</strong> is ready to power the pirate submarine <em>Substampede</em> toward <strong>Blackspit Island</strong> and the <strong>Malefic Gentlemen Syndicate</strong>!
             </p>
             <div class="victory-credits-grid">
               <div class="credits-col">
@@ -454,19 +429,18 @@
                 </ul>
               </div>
               <div class="credits-col">
-                <h4>PILOT ACT I ACHIEVEMENTS</h4>
+                <h4>SLICE 1 ACCOMPLISHMENTS</h4>
                 <div class="victory-badges">
-                  <div class="victory-badge">&#9881; Da Vinci Perpetual Contraption Built</div>
-                  <div class="victory-badge">&#127929; &ldquo;Funky Town&rdquo; Candy Vault Cracked</div>
-                  <div class="victory-badge">&#9986; Authentic 2010 Multi-Layer PSD Cut-Out Rigs</div>
-                  <div class="victory-badge">&#127984; Bonus Tribute: Spooky Castle (&ldquo;GOSU!&rdquo;)</div>
+                  <div class="victory-badge">&#9881; Da Vinci Perpetual Contraption Assembled</div>
+                  <div class="victory-badge">&#9986; 27-Piece Mr. Smoothface Cut-Out Rig</div>
+                  <div class="victory-badge">&#9875; 22-Piece Captain Dread Cut-Out Rig</div>
+                  <div class="victory-badge">&#127912; Multi-Plane Z1S3 Captain's Cabin</div>
                 </div>
               </div>
             </div>
           </div>
           <div class="modal-footer">
-            <button id="btn-victory-castle" class="hud-util-btn">&#127984; Visit 2010 Spooky Castle</button>
-            <button id="btn-victory-keep-playing" class="menu-primary-btn" style="padding:8px 22px;font-size:0.95rem;">Keep Exploring Submarine</button>
+            <button id="btn-victory-keep-playing" class="menu-primary-btn" style="padding:8px 22px;font-size:0.95rem;">Keep Exploring Captain's Cabin</button>
           </div>
         </div>
       </section>
@@ -475,7 +449,7 @@
     <!-- Floating Bottom Parchment Dialogue Scroll (Auto-hides while walking around!) -->
     <footer id="hud-bottom-box" class="hud-hidden dialogue-collapsed">
       <div class="portrait-frame-wrap">
-        <img id="speaker-portrait" src="assets/portraits/smoothface.png" alt="Speaker Portrait" />
+        <img id="speaker-portrait" src="art/approved/smoothface/smoothface.head.png" alt="Speaker Portrait" />
         <div id="voice-wave-indicator" class="voice-wave-indicator">
           <span></span><span></span><span></span><span></span>
         </div>

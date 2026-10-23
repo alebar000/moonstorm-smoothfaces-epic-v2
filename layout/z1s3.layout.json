@@ -78,7 +78,7 @@
     },
     {
       "id": "z1s3.wall.panel_b",
-      "asset": "art/candidates/z1s3.wall.panel_b/v2.png",
+      "asset": "art/approved/z1s3/z1s3.wall.panel_b.png",
       "plane": "wall",
       "x": 680,
       "y": 0,
@@ -87,7 +87,7 @@
     },
     {
       "id": "z1s3.wall.panel_c",
-      "asset": "art/candidates/z1s3.wall.panel_c/v2.png",
+      "asset": "art/approved/z1s3/z1s3.wall.panel_c.png",
       "plane": "wall",
       "x": 1380,
       "y": 0,
@@ -96,16 +96,16 @@
     },
     {
       "id": "z1s3.wall.seam_strip",
-      "asset": "art/candidates/z1s3.wall.seam_strip/v2.png",
+      "asset": "art/approved/z1s3/z1s3.wall.seam_strip.png",
       "plane": "wall",
-      "x": 620,
+      "x": 600,
       "y": 0,
       "anchor": "top-left",
       "state": "visible"
     },
     {
       "id": "z1s3.ceiling.beam_a",
-      "asset": "art/candidates/z1s3.ceiling.beam_a/v2.png",
+      "asset": "art/approved/z1s3/z1s3.ceiling.beam_a.png",
       "plane": "wall",
       "x": 0,
       "y": 0,
@@ -114,7 +114,7 @@
     },
     {
       "id": "z1s3.ceiling.beam_b",
-      "asset": "art/candidates/z1s3.ceiling.beam_b/v2.png",
+      "asset": "art/approved/z1s3/z1s3.ceiling.beam_b.png",
       "plane": "wall",
       "x": 800,
       "y": 0,
@@ -123,7 +123,7 @@
     },
     {
       "id": "z1s3.floor.planks_a",
-      "asset": "art/candidates/z1s3.floor.planks_a/v2.png",
+      "asset": "art/approved/z1s3/z1s3.floor.planks_a.png",
       "plane": "floor",
       "x": 0,
       "y": 560,
@@ -133,7 +133,7 @@
     },
     {
       "id": "z1s3.floor.planks_b",
-      "asset": "art/candidates/z1s3.floor.planks_b/v2.png",
+      "asset": "art/approved/z1s3/z1s3.floor.planks_b.png",
       "plane": "floor",
       "x": 810,
       "y": 560,
@@ -143,7 +143,7 @@
     },
     {
       "id": "z1s3.wall.door",
-      "asset": "art/candidates/z1s3.wall.door/v2.png",
+      "asset": "art/approved/z1s3/z1s3.wall.door.png",
       "plane": "wall_props",
       "x": 340,
       "y": 220,
@@ -156,7 +156,7 @@
     },
     {
       "id": "z1s3.wall.porthole",
-      "asset": "art/candidates/z1s3.wall.porthole/v2.png",
+      "asset": "art/approved/z1s3/z1s3.wall.porthole.png",
       "plane": "wall_props",
       "x": 720,
       "y": 160,
@@ -165,7 +165,7 @@
     },
     {
       "id": "z1s3.wall.poster",
-      "asset": "art/candidates/z1s3.wall.poster/v2.png",
+      "asset": "art/approved/z1s3/z1s3.wall.poster.png",
       "plane": "wall_props",
       "x": 960,
       "y": 140,
@@ -174,7 +174,7 @@
     },
     {
       "id": "z1s3.wall.mask_a",
-      "asset": "art/candidates/z1s3.wall.mask_a/v2.png",
+      "asset": "art/approved/z1s3/z1s3.wall.mask_a.png",
       "plane": "wall_props",
       "x": 1220,
       "y": 180,
@@ -183,7 +183,7 @@
     },
     {
       "id": "z1s3.wall.helm_wheel",
-      "asset": "art/candidates/z1s3.wall.helm_wheel/v2.png",
+      "asset": "art/approved/z1s3/z1s3.wall.helm_wheel.png",
       "plane": "wall_props",
       "x": 1360,
       "y": 150,
@@ -192,7 +192,7 @@
     },
     {
       "id": "z1s3.wall.mask_b",
-      "asset": "art/candidates/z1s3.wall.mask_b/v2.png",
+      "asset": "art/approved/z1s3/z1s3.wall.mask_b.png",
       "plane": "wall_props",
       "x": 1560,
       "y": 180,
@@ -201,7 +201,7 @@
     },
     {
       "id": "z1s3.wall.shelf",
-      "asset": "art/candidates/z1s3.wall.shelf/v2.png",
+      "asset": "art/approved/z1s3/z1s3.wall.shelf.png",
       "plane": "wall_props",
       "x": 1350,
       "y": 320,
@@ -210,7 +210,7 @@
     },
     {
       "id": "z1s3.wall.pipes",
-      "asset": "art/candidates/z1s3.wall.pipes/v2.png",
+      "asset": "art/approved/z1s3/z1s3.wall.pipes.png",
       "plane": "wall_props",
       "x": 1160,
       "y": 120,
@@ -233,28 +233,28 @@
     },
     {
       "id": "z1s3.prop.coat_rack",
-      "asset": "art/candidates/z1s3.prop.coat_rack/v2.png",
+      "asset": "art/approved/z1s3/z1s3.prop.coat_rack.png",
       "plane": "floor",
       "x": 450,
       "y": 575,
       "anchor": "bottom-center",
-      "sort_y": 780,
+      "sort_y": 778,
       "state": "visible",
       "scale": 0.28
     },
     {
       "id": "z1s3.prop.coat",
-      "asset": "art/candidates/z1s3.prop.coat/v2.png",
+      "asset": "art/approved/z1s3/z1s3.prop.coat.png",
       "plane": "floor",
       "x": 450,
       "y": 740,
       "anchor": "bottom-center",
-      "sort_y": 780,
+      "sort_y": 779,
       "state": "visible"
     },
     {
       "id": "z1s3.prop.hat",
-      "asset": "art/candidates/z1s3.prop.hat/v2.png",
+      "asset": "art/approved/z1s3/z1s3.prop.hat.png",
       "plane": "floor",
       "x": 450,
       "y": 535,
@@ -264,7 +264,7 @@
     },
     {
       "id": "z1s3.prop.desk",
-      "asset": "art/candidates/z1s3.prop.desk/v2.png",
+      "asset": "art/approved/z1s3/z1s3.prop.desk.png",
       "plane": "floor",
       "x": 880,
       "y": 740,
@@ -277,7 +277,7 @@
     },
     {
       "id": "z1s3.prop.tv",
-      "asset": "art/candidates/z1s3.prop.tv/v2.png",
+      "asset": "art/approved/z1s3/z1s3.prop.tv.png",
       "plane": "floor",
       "x": 800,
       "y": 640,
@@ -287,7 +287,7 @@
     },
     {
       "id": "z1s3.prop.fishbowl",
-      "asset": "art/candidates/z1s3.prop.fishbowl/v2.png",
+      "asset": "art/approved/z1s3/z1s3.prop.fishbowl.png",
       "plane": "floor",
       "x": 950,
       "y": 630,
@@ -297,7 +297,7 @@
     },
     {
       "id": "z1s3.prop.nightstand",
-      "asset": "art/candidates/z1s3.prop.nightstand/v2.png",
+      "asset": "art/approved/z1s3/z1s3.prop.nightstand.png",
       "plane": "floor",
       "x": 1800,
       "y": 760,

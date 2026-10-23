@@ -1,0 +1,13 @@
+{
+  "id": "intro.bg.cabin_ambush",
+  "category": "intro",
+  "kind": "wall",
+  "what": "Scene 4 puppet stage backdrop: Submarine corridor bulkhead hatch leading into Captain Dread's cabin",
+  "target_height_px": 720,
+  "height_fraction_of_smoothface": 2.286,
+  "references": [
+    "art/references/ref_room_z1s3_2010.png"
+  ],
+  "versions": [],
+  "status": "blocked_quota_429"
+}

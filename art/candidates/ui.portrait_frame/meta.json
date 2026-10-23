@@ -1,0 +1,13 @@
+{
+  "id": "ui.portrait_frame",
+  "category": "ui",
+  "kind": "prop",
+  "what": "Nautical brass porthole / riveted frame for character dialogue portraits in MoonStorm cutout style",
+  "target_height_px": 140,
+  "height_fraction_of_smoothface": 0.444,
+  "references": [
+    "art/references/ref_gui_aguilar.jpg"
+  ],
+  "versions": [],
+  "status": "blocked_quota_429"
+}

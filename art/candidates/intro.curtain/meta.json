@@ -1,0 +1,13 @@
+{
+  "id": "intro.curtain",
+  "category": "intro",
+  "kind": "foreground",
+  "what": "Crimson velvet stage curtain swag with gold rope tassels in MoonStorm paper cutout style",
+  "target_height_px": 900,
+  "height_fraction_of_smoothface": 2.857,
+  "references": [
+    "art/references/ref_room_z1s3_2010.png"
+  ],
+  "versions": [],
+  "status": "blocked_quota_429"
+}

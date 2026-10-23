@@ -1,0 +1,13 @@
+{
+  "id": "ui.cursor.default",
+  "category": "ui",
+  "kind": "prop",
+  "what": "Default point-and-click iron arrow / compass needle cursor in MoonStorm cutout style",
+  "target_height_px": 44,
+  "height_fraction_of_smoothface": 0.14,
+  "references": [
+    "art/references/ref_gui_aguilar.jpg"
+  ],
+  "versions": [],
+  "status": "blocked_quota_429"
+}

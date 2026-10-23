@@ -11,7 +11,7 @@
   },
   "parts": {
     "torso": {
-      "asset": "art/candidates/capdread.torso/v2.png",
+      "asset": "art/approved/capdread/capdread.torso.png",
       "z_index": 30,
       "parent": null,
       "offset": [
@@ -42,7 +42,7 @@
       }
     },
     "head": {
-      "asset": "art/candidates/capdread.head/v2.png",
+      "asset": "art/approved/capdread/capdread.head.png",
       "z_index": 20,
       "parent": "torso",
       "offset": [
@@ -77,16 +77,16 @@
       }
     },
     "hat": {
-      "asset": "art/candidates/capdread.hat/v2.png",
+      "asset": "art/approved/capdread/capdread.hat.png",
       "z_index": 25,
       "parent": "head",
       "offset": [
-        128,
-        40
+        112,
+        26
       ],
       "size": [
-        104,
-        116
+        142,
+        108
       ],
       "pivots": {
         "anchor": [
@@ -96,7 +96,7 @@
       }
     },
     "beard": {
-      "asset": "art/candidates/capdread.beard/v2.png",
+      "asset": "art/approved/capdread/capdread.beard.png",
       "z_index": 32,
       "parent": "head",
       "offset": [
@@ -115,7 +115,7 @@
       }
     },
     "eyes.normal": {
-      "asset": "art/candidates/capdread.eyes.normal/v2.png",
+      "asset": "art/approved/capdread/capdread.eyes.normal.png",
       "z_index": 22,
       "parent": "head",
       "offset": [
@@ -134,7 +134,7 @@
       }
     },
     "eyes.closed": {
-      "asset": "art/candidates/capdread.eyes.closed/v2.png",
+      "asset": "art/approved/capdread/capdread.eyes.closed.png",
       "z_index": 22,
       "parent": "head",
       "offset": [
@@ -153,7 +153,7 @@
       }
     },
     "eyes.squint": {
-      "asset": "art/candidates/capdread.eyes.squint/v2.png",
+      "asset": "art/approved/capdread/capdread.eyes.squint.png",
       "z_index": 22,
       "parent": "head",
       "offset": [
@@ -172,7 +172,7 @@
       }
     },
     "brows.normal": {
-      "asset": "art/candidates/capdread.brows.normal/v2.png",
+      "asset": "art/approved/capdread/capdread.brows.normal.png",
       "z_index": 23,
       "parent": "head",
       "offset": [
@@ -191,7 +191,7 @@
       }
     },
     "brows.angry": {
-      "asset": "art/candidates/capdread.brows.angry/v2.png",
+      "asset": "art/approved/capdread/capdread.brows.angry.png",
       "z_index": 23,
       "parent": "head",
       "offset": [
@@ -210,7 +210,7 @@
       }
     },
     "brows.surprised": {
-      "asset": "art/candidates/capdread.brows.surprised/v2.png",
+      "asset": "art/approved/capdread/capdread.brows.surprised.png",
       "z_index": 23,
       "parent": "head",
       "offset": [
@@ -229,7 +229,7 @@
       }
     },
     "arm_front": {
-      "asset": "art/candidates/capdread.arm_front/v2.png",
+      "asset": "art/approved/capdread/capdread.arm_front.png",
       "z_index": 41,
       "parent": "torso",
       "offset": [
@@ -252,7 +252,7 @@
       }
     },
     "hand_front.fist": {
-      "asset": "art/candidates/capdread.hand_front.fist/v2.png",
+      "asset": "art/approved/capdread/capdread.hand_front.fist.png",
       "z_index": 40,
       "parent": "arm_front",
       "offset": [
@@ -271,16 +271,16 @@
       }
     },
     "hand_front.open": {
-      "asset": "art/candidates/capdread.hand_front.open/v2.png",
+      "asset": "art/approved/capdread/capdread.hand_front.open.png",
       "z_index": 40,
       "parent": "arm_front",
       "offset": [
-        220,
+        218,
         274
       ],
       "size": [
-        52,
-        50
+        48,
+        54
       ],
       "pivots": {
         "wrist": [
@@ -290,16 +290,16 @@
       }
     },
     "hand_front.point": {
-      "asset": "art/candidates/capdread.hand_front.point/v2.png",
+      "asset": "art/approved/capdread/capdread.hand_front.point.png",
       "z_index": 40,
       "parent": "arm_front",
       "offset": [
-        202,
+        212,
         274
       ],
       "size": [
-        72,
-        48
+        56,
+        65
       ],
       "pivots": {
         "wrist": [
@@ -309,11 +309,11 @@
       }
     },
     "arm_back": {
-      "asset": "art/candidates/capdread.arm_back/v2.png",
+      "asset": "art/approved/capdread/capdread.arm_back.png",
       "z_index": 18,
       "parent": "torso",
       "offset": [
-        68,
+        56,
         180
       ],
       "size": [
@@ -332,11 +332,11 @@
       }
     },
     "hand_back.fist": {
-      "asset": "art/candidates/capdread.hand_back.fist/v2.png",
+      "asset": "art/approved/capdread/capdread.hand_back.fist.png",
       "z_index": 17,
       "parent": "arm_back",
       "offset": [
-        82,
+        72,
         254
       ],
       "size": [
@@ -351,16 +351,16 @@
       }
     },
     "hand_back.open": {
-      "asset": "art/candidates/capdread.hand_back.open/v2.png",
+      "asset": "art/approved/capdread/capdread.hand_back.open.png",
       "z_index": 17,
       "parent": "arm_back",
       "offset": [
-        80,
-        252
+        82,
+        258
       ],
       "size": [
         50,
-        46
+        50
       ],
       "pivots": {
         "wrist": [
@@ -370,7 +370,7 @@
       }
     },
     "pants": {
-      "asset": "art/candidates/capdread.pants/v2.png",
+      "asset": "art/approved/capdread/capdread.pants.png",
       "z_index": 14,
       "parent": "torso",
       "offset": [
@@ -397,7 +397,7 @@
       }
     },
     "leg_front": {
-      "asset": "art/candidates/capdread.leg_front/v2.png",
+      "asset": "art/approved/capdread/capdread.leg_front.png",
       "z_index": 13,
       "parent": "pants",
       "offset": [
@@ -420,7 +420,7 @@
       }
     },
     "leg_back": {
-      "asset": "art/candidates/capdread.leg_back/v2.png",
+      "asset": "art/approved/capdread/capdread.leg_back.png",
       "z_index": 11,
       "parent": "pants",
       "offset": [
@@ -443,7 +443,7 @@
       }
     },
     "boot_front": {
-      "asset": "art/candidates/capdread.boot_front/v2.png",
+      "asset": "art/approved/capdread/capdread.boot_front.png",
       "z_index": 12,
       "parent": "leg_front",
       "offset": [
@@ -462,7 +462,7 @@
       }
     },
     "boot_back": {
-      "asset": "art/candidates/capdread.boot_back/v2.png",
+      "asset": "art/approved/capdread/capdread.boot_back.png",
       "z_index": 10,
       "parent": "leg_back",
       "offset": [

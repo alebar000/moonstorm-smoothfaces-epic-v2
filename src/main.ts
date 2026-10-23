@@ -153,15 +153,15 @@ class SmoothfacePilotGame {
       }
     );
 
-    // Canonical Wide-Stage Initial Placements with Standardized Human Character Heights
-    this.player = this.rigs.createAnimState('smoothface', 720, 635, 0.54, 1);
-    this.menuShowcasePuppet = this.rigs.createAnimState('smoothface', 220, 445, 0.78, 1);
+    // Canonical Slice 1 Z1S3 Initial Placements (`layout/z1s3.layout.json`: Smoothface 315px, Captain Dread 330px)
+    this.player = this.rigs.createAnimState('smoothface', 700, 810, 1.0, 1);
+    this.menuShowcasePuppet = this.rigs.createAnimState('smoothface', 220, 430, 1.15, 1);
 
     this.npcs = {
-      cap_dread: this.rigs.createAnimState('cap_dread', 1465, 640, 0.55, -1),
-      nihongo: this.rigs.createAnimState('nihongo', 725, 635, 0.55, 1),
-      a_baby: this.rigs.createAnimState('a_baby', 705, 648, 0.54, 1),
-      ventriloquist: this.rigs.createAnimState('ventriloquist', 1410, 645, 0.56, -1),
+      cap_dread: this.rigs.createAnimState('cap_dread', 1420, 815, 1.0, -1),
+      nihongo: this.rigs.createAnimState('nihongo', 725, 810, 1.0, 1),
+      a_baby: this.rigs.createAnimState('a_baby', 705, 815, 1.0, 1),
+      ventriloquist: this.rigs.createAnimState('ventriloquist', 1410, 815, 1.0, -1),
     };
 
     this.preloadSceneAssets();
@@ -176,111 +176,53 @@ class SmoothfacePilotGame {
   }
 
   private preloadSceneAssets(): void {
-    const assetList: Array<[string, string]> = [
-      // Empty Widescreen Architectural Room Shells & 2010 Original Ink Sketches
-      ['z1s3_shell', 'assets/rooms/z1s3_shell.png'],
-      ['z1s2_shell', 'assets/rooms/z1s2_shell.png'],
-      ['z1s1_shell', 'assets/rooms/z1s1_shell.png'],
-      ['z1s3_sketch_2010', 'assets/rooms/z1s3_sketch_2010.png'],
-      ['z1s2_sketch_2010', 'assets/rooms/z1s2_sketch_2010.png'],
-      ['z1s1_sketch_2010', 'assets/rooms/z1s1_sketch_2010.png'],
-      ['loldemo_sketch_2010', 'assets/rooms/loldemo_sketch_2010.png'],
-      ['z1s1_inst', 'assets/rooms/z1s1_instructions.png'],
-      ['z1s3_fg_ledge', 'assets/objects/z1s3_fg_ledge.png'],
-
-      // In-Situ Painted Submarine Room Objects (Zero White Halos + Full Aguilar Detail)
-      ['obj_in_z1s3_sarcophagus', 'assets/objects/obj_in_z1s3_sarcophagus.png'],
-      ['obj_in_z1s3_door', 'assets/objects/obj_in_z1s3_door.png'],
-      ['obj_in_z1s3_poster', 'assets/objects/obj_in_z1s3_poster.png'],
-      ['obj_in_z1s3_masks', 'assets/objects/obj_in_z1s3_masks.png'],
-      ['obj_in_z1s3_desk', 'assets/objects/obj_in_z1s3_desk.png'],
-      ['obj_in_z1s3_bed', 'assets/objects/obj_in_z1s3_bed.png'],
-      ['obj_in_z1s3_porthole', 'assets/objects/obj_in_z1s3_porthole.png'],
-      ['obj_z1s3_fg_table', 'assets/objects/obj_z1s3_fg_table.png'],
-
-      ['obj_in_z1s2_ladder', 'assets/objects/obj_in_z1s2_ladder.png'],
-      ['obj_in_z1s2_samurai', 'assets/objects/obj_in_z1s2_samurai.png'],
-      ['obj_in_z1s2_sofa', 'assets/objects/obj_in_z1s2_sofa.png'],
-      ['obj_in_z1s2_door', 'assets/objects/obj_in_z1s2_door.png'],
-      ['obj_in_z1s2_crate', 'assets/objects/obj_in_z1s2_crate.png'],
-      ['obj_in_z1s2_phone', 'assets/objects/obj_in_z1s2_phone.png'],
-      ['obj_z1s2_fg_clutter', 'assets/objects/obj_z1s2_fg_clutter.png'],
-
-      ['obj_in_z1s1_ladder', 'assets/objects/obj_in_z1s1_ladder.png'],
-      ['obj_in_z1s1_pedal_aux', 'assets/objects/obj_in_z1s1_pedal_aux.png'],
-      ['obj_in_z1s1_pedal_main', 'assets/objects/obj_in_z1s1_pedal_main.png'],
-      ['obj_in_z1s1_rat_tv', 'assets/objects/obj_in_z1s1_rat_tv.png'],
-      ['obj_in_z1s1_barrels', 'assets/objects/obj_in_z1s1_barrels.png'],
-      ['obj_z1s1_fg_rats_barrels', 'assets/objects/obj_z1s1_fg_rats_barrels.png'],
-
-      // Standalone 1-by-1 Hand-Drawn Cut-Out Room Objects & Atomic Architectural Pieces
-      ['arch_wall_panel', 'assets/objects/arch_wall_panel.png'],
-      ['arch_rivet_seam', 'assets/objects/arch_rivet_seam.png'],
-      ['arch_floor_panel', 'assets/objects/arch_floor_panel.png'],
-      ['arch_baseboard', 'assets/objects/arch_baseboard.png'],
-      ['arch_ceiling_girder', 'assets/objects/arch_ceiling_girder.png'],
-      ['arch_rib_pillar', 'assets/objects/arch_rib_pillar.png'],
-      ['obj_periscope_column', 'assets/objects/obj_periscope_column.png'],
-      ['obj_wall_masks', 'assets/objects/obj_wall_masks.png'],
-      ['obj_mask_left', 'assets/objects/obj_mask_left.png'],
-      ['obj_wall_wheel', 'assets/objects/obj_wall_wheel.png'],
-      ['obj_mask_right', 'assets/objects/obj_mask_right.png'],
-      ['obj_ration_shelf', 'assets/objects/obj_ration_shelf.png'],
-      ['obj_hanger_rack', 'assets/objects/obj_hanger_rack.png'],
-      ['obj_hanging_coat', 'assets/objects/obj_hanging_coat.png'],
-      ['obj_hanging_hat', 'assets/objects/obj_hanging_hat.png'],
-      ['obj_captain_bed', 'assets/objects/obj_captain_bed.png'],
-      ['obj_nightstand', 'assets/objects/obj_nightstand.png'],
-      ['obj_bed_lamp', 'assets/objects/obj_bed_lamp.png'],
-      ['obj_dirty_clothes', 'assets/objects/obj_dirty_clothes.png'],
-      ['obj_fg_chart_table', 'assets/objects/obj_fg_chart_table.png'],
-      ['obj_fg_ship_bottle', 'assets/objects/obj_fg_ship_bottle.png'],
-      ['obj_fg_sea_trunk', 'assets/objects/obj_fg_sea_trunk.png'],
-      ['obj_fg_clown_head', 'assets/objects/obj_fg_clown_head.png'],
-      ['obj_fg_voodoo_doll', 'assets/objects/obj_fg_voodoo_doll.png'],
-      ['obj_sarcophagus', 'assets/objects/obj_sarcophagus.png'],
-      ['obj_bunk_bed', 'assets/objects/obj_bunk_bed.png'],
-      ['obj_desk', 'assets/objects/obj_desk.png'],
-      ['obj_crt_tv', 'assets/objects/obj_crt_tv.png'],
-      ['obj_fishbowl', 'assets/objects/obj_fishbowl.png'],
-      ['obj_rotary_phone', 'assets/objects/obj_rotary_phone.png'],
-      ['obj_stache_photo', 'assets/objects/obj_stache_photo.png'],
-      ['obj_mss_poster', 'assets/objects/obj_mss_poster.png'],
-      ['obj_bulkhead_door', 'assets/objects/obj_bulkhead_door.png'],
-      ['obj_porthole', 'assets/objects/obj_porthole.png'],
-      ['obj_cage_lamp', 'assets/objects/obj_cage_lamp.png'],
-      ['obj_spark_cable', 'assets/objects/obj_spark_cable.png'],
-      ['obj_steam_pipe', 'assets/objects/obj_steam_pipe.png'],
-      ['obj_iron_ladder', 'assets/objects/obj_iron_ladder.png'],
-      ['obj_lounge_sofa', 'assets/objects/obj_lounge_sofa.png'],
-      ['obj_samurai_rack', 'assets/objects/obj_samurai_rack.png'],
-      ['obj_funky_vault', 'assets/objects/obj_funky_vault.png'],
-      ['obj_mystery_crate', 'assets/objects/obj_mystery_crate.png'],
-      ['obj_pedal_engine_main', 'assets/objects/obj_pedal_engine_main.png'],
-      ['obj_pedal_engine_aux', 'assets/objects/obj_pedal_engine_aux.png'],
-      ['obj_rat_tv', 'assets/objects/obj_rat_tv.png'],
-      ['obj_rad_barrels', 'assets/objects/obj_rad_barrels.png'],
-
-      // Standalone Cut-Out Inventory & Puzzle Props
-      ['hammer_bag', 'assets/props/hammer_bag.png'],
-      ['item_portrait_stand', 'assets/props/item_portrait_stand.png'],
-      ['item_glue', 'assets/props/item_glue.png'],
-      ['item_helm', 'assets/props/item_helm.png'],
-      ['item_blueprint', 'assets/props/item_blueprint.png'],
-      ['perpetual_machine', 'assets/props/perpetual_machine_cutout.png'],
-
-      // Haunted Castle Bonus Scene Assets
-      ['spook_castle_bg', 'assets/loldemo/spook_castle_bg.jpg'],
-      ['lol_sun', 'assets/loldemo/sun.png'],
-      ['lol_door', 'assets/loldemo/door.png'],
-      ['lol_troll', 'assets/loldemo/troll_alex.png'],
-      ['lol_clouds1', 'assets/loldemo/clouds_1.png'],
+    const z1s3Ids = [
+      'z1s3.wall.panel_a',
+      'z1s3.wall.panel_b',
+      'z1s3.wall.panel_c',
+      'z1s3.wall.seam_strip',
+      'z1s3.floor.planks_a',
+      'z1s3.floor.planks_b',
+      'z1s3.ceiling.beam_a',
+      'z1s3.ceiling.beam_b',
+      'z1s3.wall.door',
+      'z1s3.wall.porthole',
+      'z1s3.wall.poster',
+      'z1s3.wall.mask_a',
+      'z1s3.wall.mask_b',
+      'z1s3.wall.helm_wheel',
+      'z1s3.wall.shelf',
+      'z1s3.wall.pipes',
+      'z1s3.prop.sarcophagus',
+      'z1s3.prop.desk',
+      'z1s3.prop.tv',
+      'z1s3.prop.fishbowl',
+      'z1s3.prop.coat_rack',
+      'z1s3.prop.coat',
+      'z1s3.prop.hat',
+      'z1s3.prop.nightstand',
+      'z1s3.prop.glue',
+      'z1s3.prop.easel_portrait',
+      'z1s3.prop.hammer_bag',
+      'z1s3.prop.dirty_laundry',
+      'z1s3.prop.lamp',
+      'z1s3.prop.bed',
+      'z1s3.fg.card_table',
+      'z1s3.fg.ship_in_bottle',
+      'z1s3.fg.chest',
+      'z1s3.fg.clown_bust',
+      'z1s3.fg.voodoo_doll',
+      'z1s3.fg.hull_rib_left',
+      'z1s3.fg.hull_rib_right',
     ];
-    for (const [k, src] of assetList) {
+    for (const id of z1s3Ids) {
       const im = new Image();
-      im.src = src;
-      this.imgs.set(k, im);
+      im.src = `art/approved/z1s3/${id}.png`;
+      this.imgs.set(id, im);
     }
+    const helmIm = new Image();
+    helmIm.src = 'art/approved/z1s3/z1s3.wall.helm_wheel.png';
+    this.imgs.set('item_helm', helmIm);
   }
 
   private getImg(key: string): HTMLImageElement | null {
@@ -382,7 +324,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MOONSTORM STUDIOS',
         'smoothface',
-        'assets/portraits/smoothface.png',
+        'art/approved/smoothface/smoothface.head.png',
         'CREDITS',
         'Created by Alexander Barquero, Jose David Aguilar, Juan Vicente Garcia, Luis F. Ledezma, Cristian Morales, and Brian "BooT". Welcome aboard the Substampede!'
       );
@@ -746,17 +688,17 @@ class SmoothfacePilotGame {
 
     const banner = document.getElementById('room-banner')!;
     if (room === 'Z1S3') {
-      banner.textContent = "Captain Dread's Cabin (Substampede Aft Quarters)";
-      this.player.x = 720;
-      this.player.y = 635;
+      banner.textContent = "Captain Dread's Cabin";
+      this.player.x = 700;
+      this.player.y = 810;
       this.player.facing = 1;
       this.cameraX = 120;
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'assets/portraits/smoothface.png',
+        'art/approved/smoothface/smoothface.head.png',
         'OBSERVING',
-        "Captain Dread's three-wall submarine quarters! Scavenge the Bag of Hammers, Tripod Portrait Stand, and Desk Super-Glue to build da Vinci's machine!"
+        "Captain Dread's submarine quarters! Scavenge the Bag of Hammers, Tripod Portrait Stand, and Desk Super-Glue to assemble da Vinci's Perpetual Movement Machine!"
       );
     } else if (room === 'Z1S2') {
       banner.textContent = 'Submarine VIP Lounge & Candy Vault';
@@ -767,7 +709,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'assets/portraits/smoothface.png',
+        'art/approved/smoothface/smoothface.head.png',
         'SCHEMING',
         'The Submarine VIP Lounge. A Baby is guarding his musical Candy Vault, and the Ventriloquist is arguing with his wooden dummy.'
       );
@@ -805,7 +747,7 @@ class SmoothfacePilotGame {
         this.speakLine(
           'MR. SMOOTHFACE',
           'smoothface',
-          'assets/portraits/smoothface_grumpy.png',
+          'art/approved/smoothface/smoothface.head.png',
           'GRUMPY',
           "The submarine pedal drive is snapped in half, and I refuse to pedal like a common peasant! I need to build da Vinci's Perpetual Movement Machine and install it here."
         );
@@ -814,7 +756,7 @@ class SmoothfacePilotGame {
         this.speakLine(
           'CAPTAIN DREAD',
           'cap_dread',
-          'assets/portraits/cap_dread.png',
+          'art/approved/capdread/capdread.head.png',
           'TRIUMPHANT',
           "YARRR! Look at those hammers swing! Da Vinci's Perpetual Movement Machine is propelling the Substampede at 900 knots toward Blackspit Island!"
         );
@@ -828,7 +770,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'assets/portraits/smoothface.png',
+        'art/approved/smoothface/smoothface.head.png',
         'NOSTALGIC',
         'The Haunted Castle Courtyard! Look at that creepy two-faced cut-out sun. Whatever you do, do NOT knock on the haunted castle door...'
       );
@@ -840,13 +782,14 @@ class SmoothfacePilotGame {
   }
 
   public computeParallaxOffset(
-    parallaxFactor = 0.35,
+    parallaxFactor = 1.0,
     _parallaxAnchorX = 800,
     parX = 0,
     parY = 0
   ): { dx: number; dy: number } {
+    const camParallaxDx = (this.cameraX - 400) * (1.0 - parallaxFactor);
     return {
-      dx: parX * parallaxFactor,
+      dx: camParallaxDx + parX * parallaxFactor,
       dy: parY * parallaxFactor,
     };
   }
@@ -854,7 +797,7 @@ class SmoothfacePilotGame {
   private getHotspotWorldRect(h: HotspotDef): { x: number; y: number; w: number; h: number } {
     const parX = ((this.mouseX - this.canvas.width * 0.5) / this.canvas.width) * -14;
     const parY = ((this.mouseY - this.canvas.height * 0.5) / this.canvas.height) * -8;
-    const pFactor = h.parallaxFactor ?? 0.35;
+    const pFactor = h.parallaxFactor ?? 1.0;
     const anchorX = h.parallaxAnchorX ?? h.x + h.w * 0.5;
     const { dx, dy } = this.computeParallaxOffset(pFactor, anchorX, parX, parY);
     return {
@@ -918,9 +861,9 @@ class SmoothfacePilotGame {
       tip.style.left = `${e.clientX - stageRect.left}px`;
       tip.style.top = `${e.clientY - stageRect.top}px`;
       if (this.selectedItemId && ITEMS_CATALOG[this.selectedItemId]) {
-        tip.innerHTML = `<span class="tooltip-Hints"><img src="assets/ui/mouse_left.png" class="mouse-hint-icon" alt="" /> Use <strong>${ITEMS_CATALOG[this.selectedItemId].name}</strong> on ${hit.name}</span>`;
+        tip.innerHTML = `<span class="tooltip-Hints">Use <strong>${ITEMS_CATALOG[this.selectedItemId].name}</strong> on ${hit.name}</span>`;
       } else {
-        tip.innerHTML = `<div>${hit.name}</div><div class="tooltip-Hints"><img src="assets/ui/mouse_left.png" class="mouse-hint-icon" alt="" /> Act &nbsp;<img src="assets/ui/mouse_right.png" class="mouse-hint-icon" alt="" /> Actions</div>`;
+        tip.innerHTML = `<div>${hit.name}</div><div class="tooltip-Hints">Click: Act &nbsp;&bull;&nbsp; Menu: Actions</div>`;
       }
     } else {
       this.canvas.style.cursor = 'crosshair';
@@ -1035,8 +978,8 @@ class SmoothfacePilotGame {
     const maxW = this.getRoomWidth();
     if (this.currentRoom === 'Z1S3') {
       return {
-        x: Math.max(220, Math.min(maxW - 220, x)),
-        y: Math.max(605, Math.min(685, y)),
+        x: Math.max(150, Math.min(maxW - 150, x)),
+        y: Math.max(730, Math.min(855, y)),
       };
     }
     if (this.currentRoom === 'Z1S1') {
@@ -1052,8 +995,8 @@ class SmoothfacePilotGame {
       };
     }
     return {
-      x: Math.max(220, Math.min(maxW - 220, x)),
-      y: Math.max(605, Math.min(685, y)),
+      x: Math.max(150, Math.min(maxW - 150, x)),
+      y: Math.max(730, Math.min(855, y)),
     };
   }
 
@@ -1089,30 +1032,39 @@ class SmoothfacePilotGame {
       this.setTemporaryPlayerPose(5, 1600, false); // Wrench Tinker + Idea Lightbulb Cutout
     }
 
-    // Handle Exit Doors & Ladders
-    if (hit.isExitTo) {
-      if (verb === 'inspect') {
-        this.speakLine(
-          'MR. SMOOTHFACE',
-          'smoothface',
-          'assets/portraits/smoothface.png',
-          'INSPECTING PASSAGE',
-          `That heavy submarine passage leads to ${hit.name}. Let us head through.`
-        );
-        return;
-      }
+    // Handle Z1S3 Bulkhead Door in Slice 1
+    if (hit.id === 'z1s3_door_lounge') {
       if (verb === 'talk') {
         this.setTemporaryPlayerPose(6, 2000, true);
         this.speakLine(
           'MR. SMOOTHFACE',
           'smoothface',
-          'assets/portraits/smoothface_grumpy.png',
+          'art/approved/smoothface/smoothface.head.png',
           'ANNOYED',
           'Hello, rusty submarine hatch! Open sesame! ...Nope, still requires manual labor.'
         );
         return;
       }
-      this.switchRoom(hit.isExitTo);
+      if (this.flags.perpetualMachineBuilt) {
+        this.speakLine(
+          'MR. SMOOTHFACE',
+          'smoothface',
+          'art/approved/smoothface/smoothface.head.png',
+          'VICTORY!',
+          "With Leonardo da Vinci's Perpetual Movement Machine assembled in my pockets, I am ready to march out of Captain Dread's cabin and power the Substampede to Blackspit Island!"
+        );
+        window.setTimeout(() => {
+          this.toggleModal('victory-credits-modal', true);
+        }, 1200);
+      } else {
+        this.speakLine(
+          'MR. SMOOTHFACE',
+          'smoothface',
+          'art/approved/smoothface/smoothface.head.png',
+          'INSPECTING PASSAGE',
+          "That heavy bulkhead door leads forward toward the submarine drive room. Before I head out, I must scavenge the Bag of Hammers, the Tripod Portrait Stand, and the Desk Super-Glue here in Captain Dread's Cabin and assemble the Perpetual Movement Machine!"
+        );
+      }
       return;
     }
 
@@ -1123,9 +1075,9 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'assets/portraits/smoothface_grumpy.png',
+        'art/approved/smoothface/smoothface.head.png',
         'SCHEMING',
-        `Using ${itemName} on ${hit.name} will not propel this submarine! I need to combine all four parts in my inventory and install the Perpetual Movement Machine on the Engine Room pedals.`
+        `Using ${itemName} on ${hit.name} will not assemble the machine! Click the Bag of Hammers, Tripod Portrait Stand, and Industrial Super-Glue inside the top inventory bar to combine them!`
       );
       return;
     }
@@ -1138,7 +1090,7 @@ class SmoothfacePilotGame {
         this.speakLine(
           'MR. SMOOTHFACE',
           'smoothface',
-          'assets/portraits/smoothface.png',
+          'art/approved/smoothface/smoothface.head.png',
           'ANALYZING',
           'A canvas bag overflowing with heavy iron hammers. Why does Captain Dread sleep next to a sack of sledgehammers?'
         );
@@ -1146,7 +1098,7 @@ class SmoothfacePilotGame {
         this.speakLine(
           'MR. SMOOTHFACE',
           'smoothface',
-          'assets/portraits/smoothface.png',
+          'art/approved/smoothface/smoothface.head.png',
           'WHISPERING',
           '"Hello, my heavy iron friends. Soon you shall defy the laws of thermodynamics."'
         );
@@ -1157,7 +1109,7 @@ class SmoothfacePilotGame {
         this.speakLine(
           'MR. SMOOTHFACE',
           'smoothface',
-          'assets/portraits/smoothface.png',
+          'art/approved/smoothface/smoothface.head.png',
           'ACQUIRED!',
           'Got the Bag of Hammers! Heavy, blunt, and wonderfully destructive.'
         );
@@ -1170,7 +1122,7 @@ class SmoothfacePilotGame {
         this.speakLine(
           'MR. SMOOTHFACE',
           'smoothface',
-          'assets/portraits/smoothface.png',
+          'art/approved/smoothface/smoothface.head.png',
           'CRITIQUING',
           'An oil portrait of Captain Dread looking heroic on a sturdy wooden tripod easel stand.'
         );
@@ -1179,7 +1131,7 @@ class SmoothfacePilotGame {
         this.speakLine(
           'MR. SMOOTHFACE',
           'smoothface',
-          'assets/portraits/smoothface_grumpy.png',
+          'art/approved/smoothface/smoothface.head.png',
           'SCOFFING',
           "Even in an oil painting, Captain Dread's beard takes up eighty percent of the canvas."
         );
@@ -1191,7 +1143,7 @@ class SmoothfacePilotGame {
         this.speakLine(
           'CAPTAIN DREAD',
           'cap_dread',
-          'assets/portraits/cap_dread.png',
+          'art/approved/capdread/capdread.head.png',
           'INDIGNANT',
           'Oi! Careful with me royal portrait easel, Mr. Smoothface! That tripod is genuine Driftwood Mahogany!'
         );
@@ -1204,7 +1156,7 @@ class SmoothfacePilotGame {
         this.speakLine(
           'MR. SMOOTHFACE',
           'smoothface',
-          'assets/portraits/smoothface.png',
+          'art/approved/smoothface/smoothface.head.png',
           'OBSERVING',
           this.flags.gotGlue
             ? "Captain Dread's mahogany desk drawer. I already took the Industrial Super-Glue."
@@ -1215,7 +1167,7 @@ class SmoothfacePilotGame {
         this.speakLine(
           'MR. SMOOTHFACE',
           'smoothface',
-          'assets/portraits/smoothface_grumpy.png',
+          'art/approved/smoothface/smoothface.head.png',
           'SARCASTIC',
           'I do not converse with furniture. I am an evil genius, not a ventriloquist.'
         );
@@ -1227,7 +1179,7 @@ class SmoothfacePilotGame {
         this.speakLine(
           'MR. SMOOTHFACE',
           'smoothface',
-          'assets/portraits/smoothface.png',
+          'art/approved/smoothface/smoothface.head.png',
           'ACQUIRED!',
           "I opened Captain Dread's desk drawer and found a bottle of Industrial Super-Glue! Sticky enough to hold a Rube Goldberg contraption together."
         );
@@ -1235,7 +1187,7 @@ class SmoothfacePilotGame {
         this.speakLine(
           'MR. SMOOTHFACE',
           'smoothface',
-          'assets/portraits/smoothface.png',
+          'art/approved/smoothface/smoothface.head.png',
           'EMPTY',
           'Just unpaid submarine parking tickets and beard grooming receipts in this drawer now.'
         );
@@ -1248,7 +1200,7 @@ class SmoothfacePilotGame {
         this.speakLine(
           'MR. SMOOTHFACE',
           'smoothface',
-          'assets/portraits/smoothface.png',
+          'art/approved/smoothface/smoothface.head.png',
           'INSPECTING',
           'Captain Dread, commander of the Substampede. Ninety percent curly bouffant hair, ten percent questionable maritime credentials.'
         );
@@ -1260,7 +1212,7 @@ class SmoothfacePilotGame {
         this.speakLine(
           'CAPTAIN DREAD',
           'cap_dread',
-          'assets/portraits/cap_dread.png',
+          'art/approved/capdread/capdread.head.png',
           'WARNING',
           'YARRR! Keep yer hairless mitts off me royal pirate coat, lad!'
         );
@@ -1270,7 +1222,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'CAPTAIN DREAD',
         'cap_dread',
-        'assets/portraits/cap_dread.png',
+        'art/approved/capdread/capdread.head.png',
         'BOOMING',
         'Yarrr! Welcome to me luxury quarters aboard the Substampede, hairless lad! Why the long, smooth face?',
         [
@@ -1278,7 +1230,7 @@ class SmoothfacePilotGame {
             label: '"How is this rust-bucket submarine actually propelled?"',
             replySpeaker: 'CAPTAIN DREAD',
             replyVoice: 'cap_dread',
-            replyPortrait: 'assets/portraits/cap_dread.png',
+            replyPortrait: 'art/approved/capdread/capdread.head.png',
             replyMood: 'PROUD',
             replyText:
               'One hundred percent eco-friendly pedal power! Me faithful engineer Nihongo Nohondes is down in the Engine Room pedaling the main drive right now!',
@@ -1287,7 +1239,7 @@ class SmoothfacePilotGame {
             label: '"Where did you put the spare wooden Ship\'s Helm?"',
             replySpeaker: 'CAPTAIN DREAD',
             replyVoice: 'cap_dread',
-            replyPortrait: 'assets/portraits/cap_dread.png',
+            replyPortrait: 'art/approved/capdread/capdread.head.png',
             replyMood: 'GRUMBLING',
             replyText:
               'That tiny gorilla toddler "A Baby" in the VIP Lounge locked me spare Ship\'s Helm inside his high-tech Candy Vault! It uses a musical synthesizer lock!',
@@ -1296,7 +1248,7 @@ class SmoothfacePilotGame {
             label: '"Your beard is almost as obnoxious as my brother Morgan\'s."',
             replySpeaker: 'CAPTAIN DREAD',
             replyVoice: 'cap_dread',
-            replyPortrait: 'assets/portraits/cap_dread.png',
+            replyPortrait: 'art/approved/capdread/capdread.head.png',
             replyMood: 'LAUGHING',
             replyText:
               'BWAHAHA! Jealousy will get ye nowhere, cue-ball! Climb down the iron ladder if ye want to see real submarine engineering!',
@@ -1311,7 +1263,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'assets/portraits/smoothface_grumpy.png',
+        'art/approved/smoothface/smoothface.head.png',
         'GRUMPY',
         'A solid gold Egyptian sarcophagus inside a submarine. Even an ancient mummy has a better sculpted chin beard than me! Bah!'
       );
@@ -1322,7 +1274,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'assets/portraits/smoothface.png',
+        'art/approved/smoothface/smoothface.head.png',
         'BEMUSED',
         'A 1970s wood-grain CRT television broadcasting deep-sea static right next to a bowl of water. Truly finest pirate electrical safety standards.'
       );
@@ -1333,7 +1285,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'assets/portraits/smoothface.png',
+        'art/approved/smoothface/smoothface.head.png',
         'INSPECTING',
         "Captain Dread's grumpy pet goldfish swimming in a tiny glass bowl. Even inside a submarine surrounded by the Atlantic Ocean, this fish is stuck in a bowl."
       );
@@ -1345,7 +1297,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'assets/portraits/smoothface.png',
+        'art/approved/smoothface/smoothface.head.png',
         'DIALING',
         'A crimson rotary telephone wired to the bridge. Wait, there is no bridge on this submarine, just a bicycle in the basement!'
       );
@@ -1356,7 +1308,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'assets/portraits/smoothface.png',
+        'art/approved/smoothface/smoothface.head.png',
         'INSPECTING',
         "Captain Dread's wooden bunk bed. The mattress is stuffed with old nautical charts and beard trimmings."
       );
@@ -1367,7 +1319,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'assets/portraits/smoothface.png',
+        'art/approved/smoothface/smoothface.head.png',
         'PEERING OUTSIDE',
         'Murky cyan ocean depths outside the riveted brass porthole. Even the deep-sea fish out there have catfish whiskers!'
       );
@@ -1380,7 +1332,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'assets/portraits/smoothface_grumpy.png',
+        'art/approved/smoothface/smoothface.head.png',
         'HIGH VOLTAGE!',
         'BZZZT! A frayed electrical cable showering live sparks across the hull. I am NOT touching that bare wire!'
       );
@@ -1394,7 +1346,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'assets/portraits/smoothface.png',
+        'art/approved/smoothface/smoothface.head.png',
         'STEAMING',
         'HSSSSS! A leaky brass steam valve venting scalding clouds of vapour. Great for dramatic supervillain entrances, terrible for my complexion.'
       );
@@ -1405,7 +1357,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'assets/portraits/smoothface.png',
+        'art/approved/smoothface/smoothface.head.png',
         'FOURTH WALL',
         '"MOONSTORM STUDIOS". Six Costa Rican gentlemen who had the audacity to draw me without a single hair on my chin!'
       );
@@ -1417,7 +1369,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'assets/portraits/smoothface_grumpy.png',
+        'art/approved/smoothface/smoothface.head.png',
         'FURIOUS!',
         'GAH! A framed portrait of my twin brother Dr. Morgan Stache and his gloriously thick moustache! Why does everyone on this submarine worship his upper lip?!'
       );
@@ -1428,7 +1380,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'assets/portraits/smoothface.png',
+        'art/approved/smoothface/smoothface.head.png',
         'OBSERVING',
         "Captain Dread's wall of exotic theatre masks, a decorative wheel, and tin rations. At least the masks do not have bushy moustaches."
       );
@@ -1439,7 +1391,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'assets/portraits/smoothface.png',
+        'art/approved/smoothface/smoothface.head.png',
         'CRITIQUING',
         "Captain Dread's spare trenchcoat and tricorn hat hanging on a crooked wooden peg rack. It smells like sea salt, pipe tobacco, and unearned confidence."
       );
@@ -1451,7 +1403,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'assets/portraits/smoothface.png',
+        'art/approved/smoothface/smoothface.head.png',
         'PEERING',
         'The submarine optical periscope! According to the depth gauge, we are currently cruising three leagues beneath a flock of unsuspecting seagulls.'
       );
@@ -1462,7 +1414,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'assets/portraits/smoothface.png',
+        'art/approved/smoothface/smoothface.head.png',
         'OBSERVING',
         'A crooked wooden crate nightstand and a precariously tilted reading lamp. One good submarine torpedo jolt and that lamp is history.'
       );
@@ -1474,7 +1426,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'assets/portraits/smoothface_grumpy.png',
+        'art/approved/smoothface/smoothface.head.png',
         'DISGUSTED',
         'A pile of unwashed pirate laundry on the deck planks. Even the Malefic Gentlemen Syndicate has stricter hygiene standards than this!'
       );
@@ -1485,7 +1437,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'assets/portraits/smoothface.png',
+        'art/approved/smoothface/smoothface.head.png',
         'FASCINATED',
         'A miniature pirate galleon trapped inside a glass bottle on the foreground chart table. At least that ship does not run on stationary bicycles.'
       );
@@ -1497,7 +1449,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'assets/portraits/smoothface_grumpy.png',
+        'art/approved/smoothface/smoothface.head.png',
         'CREEPED OUT',
         'A creepy painted clown head bust and a yellow voodoo pincushion doll sitting on a sea chest. Wait: why does the voodoo doll have pins stuck where a moustache should be?!'
       );
@@ -1512,7 +1464,7 @@ class SmoothfacePilotGame {
         this.speakLine(
           'MR. SMOOTHFACE',
           'smoothface',
-          'assets/portraits/smoothface.png',
+          'art/approved/smoothface/smoothface.head.png',
           'INSPECTING',
           'A Baby: a gorilla-proportioned mobster toddler chomping a swirl lollipop like a cigar. His knuckles are larger than my head.'
         );
@@ -1552,7 +1504,7 @@ class SmoothfacePilotGame {
             label: 'Open the Chocolate-Smeared Musical Keypad right now!',
             replySpeaker: 'MR. SMOOTHFACE',
             replyVoice: 'smoothface',
-            replyPortrait: 'assets/portraits/smoothface.png',
+            replyPortrait: 'art/approved/smoothface/smoothface.head.png',
             replyMood: 'TINKERING',
             replyText: 'Let us play the 4-note "Funky Town" melody on these chocolate-stained keys!',
             openModal: 'keypad',
@@ -1567,7 +1519,7 @@ class SmoothfacePilotGame {
         this.speakLine(
           'MR. SMOOTHFACE',
           'smoothface',
-          'assets/portraits/smoothface.png',
+          'art/approved/smoothface/smoothface.head.png',
           'INSPECTING',
           'An exhausted stage ventriloquist holding Clash McTrevor, a wooden dummy wearing a Napoleonic bicorne hat with a live red ambulance siren bolted on top.'
         );
@@ -1611,7 +1563,7 @@ class SmoothfacePilotGame {
         this.speakLine(
           'MR. SMOOTHFACE',
           'smoothface',
-          'assets/portraits/smoothface.png',
+          'art/approved/smoothface/smoothface.head.png',
           'SOLVED',
           'I already cracked A Baby\'s "Funky Town" synthesizer lock and claimed the Ship\'s Wooden Helm!'
         );
@@ -1629,7 +1581,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'assets/portraits/smoothface.png',
+        'art/approved/smoothface/smoothface.head.png',
         'CRITIQUING',
         'A tufted crimson velvet lounge sofa. Covered in lollipop wrappers, ventriloquist sawdust, and sea-salt stains.'
       );
@@ -1640,7 +1592,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'assets/portraits/smoothface.png',
+        'art/approved/smoothface/smoothface.head.png',
         'IMPRESSED',
         'A traditional Japanese samurai tapestry and katana rack belonging to Nihongo Nohondes. Wait: he is actually Costa Rican and just really loves anime.'
       );
@@ -1652,7 +1604,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'assets/portraits/smoothface.png',
+        'art/approved/smoothface/smoothface.head.png',
         'CAUTIOUS',
         'A wooden shipping crate addressed to "Evil Deeds College, Blackspit Island". Two glowing yellow eyes are blinking inside. I will leave it shut.'
       );
@@ -1667,7 +1619,7 @@ class SmoothfacePilotGame {
         this.speakLine(
           'MR. SMOOTHFACE',
           'smoothface',
-          'assets/portraits/smoothface.png',
+          'art/approved/smoothface/smoothface.head.png',
           'INSPECTING',
           "Nihongo Nohondes, the Substampede's overworked pedal mechanic. His calves look like cannonballs, but his morale is completely shattered."
         );
@@ -1716,7 +1668,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'assets/portraits/smoothface.png',
+        'art/approved/smoothface/smoothface.head.png',
         'EUREKA!',
         "I picked up Leonardo da Vinci's Perpetual Movement Machine Blueprint! Now I just need to combine the Ship's Helm, Portrait Stand, Bag of Hammers, and Super-Glue!"
       );
@@ -1746,7 +1698,7 @@ class SmoothfacePilotGame {
         this.speakLine(
           'MR. SMOOTHFACE',
           'smoothface',
-          'assets/portraits/smoothface.png',
+          'art/approved/smoothface/smoothface.head.png',
           'EVIL GENIUS',
           'My da Vinci Perpetual Movement Machine is bolted to the drive shaft, swinging four iron hammers in an infinite gravitational loop! Eat your heart out, Morgan!'
         );
@@ -1755,7 +1707,7 @@ class SmoothfacePilotGame {
         this.speakLine(
           'MR. SMOOTHFACE',
           'smoothface',
-          'assets/portraits/smoothface_grumpy.png',
+          'art/approved/smoothface/smoothface.head.png',
           'DISGUSTED',
           'The main bicycle pedal is snapped clean off, and an aspiring supervillain does NOT do cardio. I must assemble the Perpetual Movement Machine and install it here!'
         );
@@ -1767,7 +1719,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'assets/portraits/smoothface.png',
+        'art/approved/smoothface/smoothface.head.png',
         'AMUSED',
         'The bilge rats down here have their own glowing television and a lifetime supply of potatoes. They live better than the crew.'
       );
@@ -1778,7 +1730,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'assets/portraits/smoothface.png',
+        'art/approved/smoothface/smoothface.head.png',
         'SUSPICIOUS',
         'Rusty barrels of "Submarine Bilge Juice". It is glowing slightly green, which explains why the bilge rats have their own living room.'
       );
@@ -1808,7 +1760,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'assets/portraits/smoothface.png',
+        'art/approved/smoothface/smoothface.head.png',
         'OBSERVING',
         'Cristian Morales and Jose David Aguilar\'s original paper cut-out sun! Even the sun has a creepier grin than Captain Dread.'
       );
@@ -1959,7 +1911,7 @@ class SmoothfacePilotGame {
   private tryCombineItems(itemA: string, itemB: string): void {
     const machineParts = ['hammer_bag', 'portrait_stand', 'glue', 'helm', 'blueprint'];
     if (machineParts.includes(itemA) && machineParts.includes(itemB)) {
-      const required = ['hammer_bag', 'portrait_stand', 'glue', 'helm'];
+      const required = ['hammer_bag', 'portrait_stand', 'glue'];
       const missing = required.filter((r) => !this.inventory.includes(r));
       if (missing.length === 0) {
         this.assemblePerpetualMachine();
@@ -1970,9 +1922,9 @@ class SmoothfacePilotGame {
         this.speakLine(
           'MR. SMOOTHFACE',
           'smoothface',
-          'assets/portraits/smoothface.png',
+          'art/approved/smoothface/smoothface.head.png',
           'ALMOST READY!',
-          `To finish assembling da Vinci's Perpetual Movement Machine, I still need: ${missingNames}!`
+          `To finish assembling da Vinci's Perpetual Movement Machine in my pockets, I still need to scavenge: ${missingNames}!`
         );
       }
       return;
@@ -1982,7 +1934,7 @@ class SmoothfacePilotGame {
     this.speakLine(
       'MR. SMOOTHFACE',
       'smoothface',
-      'assets/portraits/smoothface_grumpy.png',
+      'art/approved/smoothface/smoothface.head.png',
       'NOPE',
       `Combining ${ITEMS_CATALOG[itemA]?.name} with ${ITEMS_CATALOG[itemB]?.name} makes zero sense, even by Blackspit Island standards.`
     );
@@ -2003,10 +1955,13 @@ class SmoothfacePilotGame {
     this.speakLine(
       'MR. SMOOTHFACE',
       'smoothface',
-      'assets/props/perpetual_machine_cutout.png',
+      'art/approved/smoothface/smoothface.head.png',
       'INVENTION COMPLETE!',
-      "BWAHAHA! By gluing the Ship's Helm onto the Portrait Stand and tying the Bag of Hammers to the spokes, I have built Leonardo da Vinci's Perpetual Movement Machine! Now let us install it on the Engine Room pedals!"
+      "BWAHAHA! By gluing the Bag of Hammers onto the Tripod Portrait Stand with Captain Dread's Industrial Super-Glue, I have assembled Leonardo da Vinci's Perpetual Movement Machine!"
     );
+    window.setTimeout(() => {
+      this.toggleModal('victory-credits-modal', true);
+    }, 2200);
   }
 
   public installPerpetualMachine(): void {
@@ -2022,7 +1977,7 @@ class SmoothfacePilotGame {
     this.speakLine(
       'MR. SMOOTHFACE',
       'smoothface',
-      'assets/portraits/smoothface.png',
+      'art/approved/smoothface/smoothface.head.png',
       'PUZZLE SOLVED! FULL STEAM AHEAD!',
       "IT WORKS! The heavy hammers pull the ship's helm down, which flips the next hammer over the top in an endless gravitational loop! The Substampede is blasting toward Blackspit Island at supersonic speed!"
     );
@@ -2351,13 +2306,13 @@ class SmoothfacePilotGame {
       this.player.isWalking = false;
     }
 
-    // Perspective depth scaling for Smoothface based on floor Y (standardized human proportions!)
+    // Perspective depth scaling for Smoothface based on floor Y (`layout/z1s3.layout.json` 315px standing height!)
     if (this.currentRoom === 'LOLDEMO') {
       const lolDepth = (this.player.y - 665) / 170;
-      this.player.scale = Math.max(0.40, Math.min(0.50, 0.42 + lolDepth * 0.06));
+      this.player.scale = Math.max(0.80, Math.min(0.95, 0.82 + lolDepth * 0.12));
     } else {
-      const depthRatio = Math.max(0, Math.min(1, (this.player.y - 600) / 85));
-      this.player.scale = 0.51 + depthRatio * 0.07;
+      const depthRatio = Math.max(0, Math.min(1, (this.player.y - 730) / 125));
+      this.player.scale = 0.92 + depthRatio * 0.13;
     }
     this.player.talkAmp = activeVoice === 'smoothface' ? voiceAmp : 0;
     this.rigs.updatePuppetState(this.player, dt, () => this.audio.playPaperFlip());
@@ -2692,6 +2647,8 @@ class SmoothfacePilotGame {
 
     if (img) {
       ctx.drawImage(img, drawX, drawY, obj.w, obj.h);
+    } else {
+      this.renderPendingCutoutPropFallback(ctx, obj, drawX, drawY);
     }
 
     ctx.shadowColor = 'transparent';
@@ -2699,6 +2656,105 @@ class SmoothfacePilotGame {
     // Render object-specific animated FX loops directly in local object coordinates!
     this.renderObjectSpecificFX(ctx, obj, drawX, drawY, t);
 
+    ctx.restore();
+  }
+
+  private renderPendingCutoutPropFallback(
+    ctx: CanvasRenderingContext2D,
+    obj: SceneObjectDef,
+    drawX: number,
+    drawY: number
+  ): void {
+    ctx.save();
+    ctx.strokeStyle = '#1c1410';
+    ctx.lineWidth = 3.5;
+    ctx.lineJoin = 'round';
+    if (obj.id === 'z1s3.prop.hammer_bag') {
+      // Canvas bag with iron sledgehammers sticking out
+      ctx.fillStyle = '#8a5830';
+      ctx.fillRect(drawX + 26, drawY + 6, 12, 42);
+      ctx.fillRect(drawX + 62, drawY + 10, 12, 42);
+      ctx.fillStyle = '#6b707b';
+      ctx.fillRect(drawX + 14, drawY + 4, 34, 16);
+      ctx.fillRect(drawX + 50, drawY + 8, 34, 16);
+      ctx.strokeRect(drawX + 14, drawY + 4, 34, 16);
+      ctx.strokeRect(drawX + 50, drawY + 8, 34, 16);
+      ctx.fillStyle = '#c89d66';
+      ctx.beginPath();
+      ctx.roundRect(drawX + 16, drawY + 38, obj.w - 32, obj.h - 44, 14);
+      ctx.fill();
+      ctx.stroke();
+    } else if (obj.id === 'z1s3.prop.easel_portrait') {
+      // Wooden tripod easel + Captain Dread portrait frame
+      ctx.strokeStyle = '#603913';
+      ctx.lineWidth = 8;
+      ctx.beginPath();
+      ctx.moveTo(drawX + obj.w * 0.5, drawY + 18);
+      ctx.lineTo(drawX + 22, drawY + obj.h - 6);
+      ctx.moveTo(drawX + obj.w * 0.5, drawY + 18);
+      ctx.lineTo(drawX + obj.w - 22, drawY + obj.h - 6);
+      ctx.moveTo(drawX + obj.w * 0.5, drawY + 18);
+      ctx.lineTo(drawX + obj.w * 0.5, drawY + obj.h - 4);
+      ctx.stroke();
+      ctx.lineWidth = 3.5;
+      ctx.strokeStyle = '#1c1410';
+      ctx.fillStyle = '#d69a2a';
+      ctx.fillRect(drawX + 22, drawY + 34, obj.w - 44, 125);
+      ctx.strokeRect(drawX + 22, drawY + 34, obj.w - 44, 125);
+      ctx.fillStyle = '#3a2e4c';
+      ctx.fillRect(drawX + 34, drawY + 46, obj.w - 68, 101);
+      ctx.strokeRect(drawX + 34, drawY + 46, obj.w - 68, 101);
+    } else if (obj.id === 'z1s3.prop.glue') {
+      // Bottle of Industrial Super-Glue on desk
+      ctx.fillStyle = '#e3b65a';
+      ctx.beginPath();
+      ctx.moveTo(drawX + obj.w * 0.5, drawY + 4);
+      ctx.lineTo(drawX + 16, drawY + 24);
+      ctx.lineTo(drawX + obj.w - 16, drawY + 24);
+      ctx.closePath();
+      ctx.fill();
+      ctx.stroke();
+      ctx.fillStyle = '#f2ead8';
+      ctx.beginPath();
+      ctx.roundRect(drawX + 10, drawY + 24, obj.w - 20, obj.h - 28, 8);
+      ctx.fill();
+      ctx.stroke();
+      ctx.fillStyle = '#b8292f';
+      ctx.fillRect(drawX + 14, drawY + 36, obj.w - 28, 16);
+    } else if (obj.id === 'z1s3.prop.bed') {
+      // Captain Dread's Wooden Bunk Bed
+      ctx.fillStyle = '#5a3620';
+      ctx.beginPath();
+      ctx.roundRect(drawX + 8, drawY + 40, obj.w - 16, obj.h - 46, 10);
+      ctx.fill();
+      ctx.stroke();
+      ctx.fillStyle = '#8b2626';
+      ctx.beginPath();
+      ctx.roundRect(drawX + 20, drawY + 95, obj.w - 40, 90, 8);
+      ctx.fill();
+      ctx.stroke();
+      ctx.fillStyle = '#e8dec8';
+      ctx.beginPath();
+      ctx.roundRect(drawX + 32, drawY + 75, 78, 36, 10);
+      ctx.fill();
+      ctx.stroke();
+    } else if (obj.id === 'z1s3.prop.lamp') {
+      // Tilted brass reading lamp on nightstand
+      ctx.fillStyle = '#d69a2a';
+      ctx.beginPath();
+      ctx.moveTo(drawX + 16, drawY + 48);
+      ctx.lineTo(drawX + 32, drawY + 12);
+      ctx.lineTo(drawX + obj.w - 32, drawY + 12);
+      ctx.lineTo(drawX + obj.w - 16, drawY + 48);
+      ctx.closePath();
+      ctx.fill();
+      ctx.stroke();
+      ctx.fillStyle = '#8a5830';
+      ctx.fillRect(drawX + obj.w * 0.5 - 6, drawY + 48, 12, 46);
+      ctx.strokeRect(drawX + obj.w * 0.5 - 6, drawY + 48, 12, 46);
+      ctx.fillRect(drawX + 22, drawY + 92, obj.w - 44, 14);
+      ctx.strokeRect(drawX + 22, drawY + 92, obj.w - 44, 14);
+    }
     ctx.restore();
   }
 
@@ -3094,12 +3150,8 @@ class SmoothfacePilotGame {
     ctx.save();
     ctx.strokeStyle = '#00ff88';
     ctx.lineWidth = 2;
-    if (this.currentRoom === 'Z1S1') {
-      ctx.strokeRect(200, 560, 1200, 255);
-    } else {
-      const maxW = this.getRoomWidth();
-      ctx.strokeRect(170, 575, maxW - 340, 250);
-    }
+    const maxW = this.getRoomWidth();
+    ctx.strokeRect(150, 730, maxW - 300, 125);
     ctx.strokeStyle = '#ff3366';
     ctx.strokeRect(this.player.x - 28, this.player.y - 16, 56, 18);
     ctx.restore();

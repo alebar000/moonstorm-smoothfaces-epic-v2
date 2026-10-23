@@ -1,0 +1,13 @@
+{
+  "id": "intro.bg.envy_mirror",
+  "category": "intro",
+  "kind": "wall",
+  "what": "Scene 2 puppet stage backdrop: Stormy Victorian cobblestone alley with cracked barbershop window mirror",
+  "target_height_px": 720,
+  "height_fraction_of_smoothface": 2.286,
+  "references": [
+    "art/references/ref_room_z1s3_2010.png"
+  ],
+  "versions": [],
+  "status": "blocked_quota_429"
+}

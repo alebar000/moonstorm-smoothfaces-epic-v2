@@ -1,0 +1,13 @@
+{
+  "id": "intro.proscenium",
+  "category": "intro",
+  "kind": "foreground",
+  "what": "Victorian cardboard puppet theatre proscenium arch frame with ornate cutout scrollwork",
+  "target_height_px": 900,
+  "height_fraction_of_smoothface": 2.857,
+  "references": [
+    "art/references/ref_room_z1s3_2010.png"
+  ],
+  "versions": [],
+  "status": "blocked_quota_429"
+}

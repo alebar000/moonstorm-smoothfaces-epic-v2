@@ -1,0 +1,13 @@
+{
+  "id": "ui.button_plate",
+  "category": "ui",
+  "kind": "prop",
+  "what": "Riveted brass and weathered wood UI button plate in MoonStorm cutout style",
+  "target_height_px": 56,
+  "height_fraction_of_smoothface": 0.178,
+  "references": [
+    "art/references/ref_gui_aguilar.jpg"
+  ],
+  "versions": [],
+  "status": "blocked_quota_429"
+}

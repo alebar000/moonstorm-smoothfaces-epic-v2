@@ -1,0 +1,13 @@
+{
+  "id": "ui.action.use",
+  "category": "ui",
+  "kind": "prop",
+  "what": "Action menu icon: cartoon gloved/cutout hand badge for Use/Grab action in MoonStorm cutout style",
+  "target_height_px": 48,
+  "height_fraction_of_smoothface": 0.152,
+  "references": [
+    "art/references/ref_gui_aguilar.jpg"
+  ],
+  "versions": [],
+  "status": "blocked_quota_429"
+}

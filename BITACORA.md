@@ -1573,3 +1573,21 @@ se editan entradas anteriores (si algo cambió, nueva entrada que lo diga).
   - `capdread.hand_front.open` (`v3`): muneca horizontal en el borde superior conectando verticalmente con el puno de `capdread.arm_front`, pulgar a la izquierda y 4 dedos rectos cayendo hacia abajo. Pasa 100% de `gates.py check`.
   - `capdread.hand_front.point` (`v3`): muneca horizontal en el borde superior conectando verticalmente con `capdread.arm_front` e indice apuntando hacia abajo-izquierda. Pasa 100% de `gates.py check`.
 - **13 piezas restantes de Z1S3 L9/L10**: permanecen en `blocked_quota_429` debido a `429 RESOURCE_EXHAUSTED` en `gemini-3.1-flash-image` (reinicio de cuota reportado: `2026-10-23T04:19:59Z`).
+
+
+## 2026-10-22 (Aprobacion 100% de Captain Dread v3 + Integracion del Motor Jugable Slice 1 + Scaffolding L11/L12)
+- **Promocion de las 4 piezas `v3` de Captain Dread (`pipeline/approve.py`)**:
+  - Alex aprobo las 4 piezas `v3` (`capdread.hat`, `capdread.hand_back.open`, `capdread.hand_front.open`, `capdread.hand_front.point`).
+  - **Total acumulado en `art/approved/MANIFEST.json`: 75 piezas aprobadas** (2 paletas + 27/27 de Mr. Smoothface + 22/22 de Captain Dread + 24/37 del cuarto Z1S3).
+- **Rigs, Layout y Panoramas actualizados al 100% con rutas aprobadas (`art/approved/`)**:
+  - `characters/smoothface/rig.json` y `characters/capdread/rig.json` apuntan exclusivamente a `art/approved/smoothface/*.png` y `art/approved/capdread/*.png`.
+  - `characters/smoothface/composite_preview.png` (`268x315` RGBA) y `characters/capdread/composite_preview.png` (`202x370` RGBA) regenerados con las piezas aprobadas.
+  - `layout/z1s3.layout.json` actualizado con las 24 piezas aprobadas de Z1S3 en `art/approved/z1s3/*.png`; validado con `python pipeline/gates.py layout layout/z1s3.layout.json --root .` (`0` errores, `0` advertencias).
+  - `review/layout_shots/z1s3_cabin_panorama/` (`z1s3_full_panorama.png`, `cam_left.png`, `cam_center.png`, `cam_right.png`) regenerado con piso continuo, `coat_rack` a escala `0.28` y Captain Dread orientado hacia Smoothface.
+- **Scaffolding completo de lotes L11 (UI: 9 piezas) y L12 (Intro: 6 piezas)**:
+  - Creados `meta.json` y `prompt_v1.txt` en `art/candidates/` para `ui.button_plate`, `ui.slot_frame`, `ui.portrait_frame`, `ui.action.inspect`, `ui.action.talk`, `ui.action.use`, `ui.cursor.default`, `ui.cursor.interact`, `ui.scroll_banner`, `intro.proscenium`, `intro.curtain`, `intro.bg.barbershop`, `intro.bg.envy_mirror`, `intro.bg.blackspit_dock`, `intro.bg.cabin_ambush`.
+- **Integracion del Motor Web Jugable del Slice 1 (`src/`, `index.html`, `dist/`, `PLAY_SMOOTHFACE_MVP.html`)**:
+  - `src/engine/CutoutRigRenderer.ts`: reescrito para cargar y animar en tiempo real las **49 piezas aprobadas** de `art/approved/smoothface/*.png` (27 piezas, 315 px) y `art/approved/capdread/*.png` (22 piezas, 330 px).
+  - `src/engine/IntroPuppetTheatre.ts`: actualizado a la **Intro de 4 Escenas** del Slice 1 (`SLICE.md`) protagonizada por los dos rigs aprobados (`smoothface` y `cap_dread`).
+  - `src/scenarios/WorldData.ts` y `src/main.ts`: conectados al layout multi-plano de `Z1S3` (`wall` 0.82, `wall_props` 0.88, `floor`/personajes 1.0 con Y-sorting en `y: 730..855`, `foreground` 1.22, `ribs` 1.35) cargando todas las piezas aprobadas de `art/approved/z1s3/*.png` y resolviendo el puzzle de la Perpetual Movement Machine en el inventario.
+  - Compilado `npm run build` (`dist/` + `PLAY_SMOOTHFACE_MVP.html`) con `0` errores y servidor jugable activo en `http://localhost:5173`.

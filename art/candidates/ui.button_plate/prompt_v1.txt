@@ -1,0 +1,1 @@
+Single isolated 2D paper cutout asset `ui.button_plate`: Riveted brass and weathered wood UI button plate in MoonStorm cutout style. Solid flat #00FF00 chroma-key green background, thick dark-sepia (#221c16) outer ink outline, warm muted Morales scenery palette, fine pencil cross-hatching, zero soft gradients or drop shadows.
