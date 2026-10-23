@@ -3,7 +3,7 @@
   "category": "capdread",
   "kind": "body_part",
   "what": "Captain Dread front open gesturing pirate hand in 3/4 view facing right (anatomical right hand, dorsal view): warm skin cream construction paper (#f9ecc2) with bold black marker outline (#1a1612), 5 digits (thumb on upper-left + 4 splayed fingers pointing down-right), dorsal knuckle lines (#6e6a62), and wrist overlap tab to tuck into capdread.arm_front cuff",
-  "target_height_px": 46,
+  "target_height_px": 54,
   "height_fraction_of_smoothface": 0.146,
   "pivot_hint": "lower-left wrist base tucking into capdread.arm_front cuff",
   "allowed_islands": 0,
@@ -15,7 +15,11 @@
     "v1": "prompt_v1.txt"
   },
   "status": "proposed",
-  "proposed_version": "v2",
+  "proposed_version": "v3",
   "batch": "L5",
-  "version": "v2"
+  "version": "v2",
+  "last_rejection": {
+    "version": "v2",
+    "reason": "No se ve bien"
+  }
 }

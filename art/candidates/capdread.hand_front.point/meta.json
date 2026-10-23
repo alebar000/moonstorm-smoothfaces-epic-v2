@@ -3,7 +3,7 @@
   "category": "capdread",
   "kind": "body_part",
   "what": "Captain Dread front pointing pirate hand with extended index finger in 3/4 view facing right (anatomical right hand, dorsal view): warm skin cream construction paper (#f9ecc2) with bold black marker outline (#1a1612), 5 digits (index extended pointing right, thumb folded over curled middle/ring/little fingers), and wrist overlap tab to tuck into capdread.arm_front cuff",
-  "target_height_px": 44,
+  "target_height_px": 62,
   "height_fraction_of_smoothface": 0.14,
   "pivot_hint": "lower-left wrist base tucking into capdread.arm_front cuff",
   "allowed_islands": 0,
@@ -15,7 +15,11 @@
     "v1": "prompt_v1.txt"
   },
   "status": "proposed",
-  "proposed_version": "v2",
+  "proposed_version": "v3",
   "batch": "L5",
-  "version": "v2"
+  "version": "v2",
+  "last_rejection": {
+    "version": "v2",
+    "reason": "No tiene sentido con el brazo como está"
+  }
 }

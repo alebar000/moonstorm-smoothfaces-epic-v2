@@ -265,28 +265,28 @@
 
   // Interactive Rig state for Captain Dread
   const DEFAULT_CAPDREAD_OFFSETS = {
-    boot_back:         {x: 118, y: 388, w:  92, h:  65},
-    leg_back:          {x: 152, y: 332, w:  55, h:  76},
-    boot_front:        {x: 168, y: 395, w:  96, h:  68},
-    leg_front:         {x: 205, y: 336, w:  48, h:  78},
-    pants:             {x: 152, y: 288, w:  96, h:  92},
-    hand_back_fist:    {x:  82, y: 254, w:  50, h:  40},
-    hand_back_open:    {x:  80, y: 252, w:  50, h:  46},
-    arm_back:          {x:  68, y: 180, w:  76, h: 114},
-    head:              {x: 134, y:  74, w: 106, h: 138},
-    eyes_normal:       {x: 145, y: 122, w:  54, h:  37},
-    eyes_squint:       {x: 144, y: 124, w:  58, h:  26},
-    eyes_closed:       {x: 145, y: 122, w:  54, h:  37},
-    brows_normal:      {x: 140, y: 110, w:  64, h:  20},
-    brows_angry:       {x: 140, y: 106, w:  64, h:  28},
-    brows_surprised:   {x: 140, y: 103, w:  62, h:  34},
-    hat:               {x: 128, y:  40, w: 104, h: 116},
-    torso:             {x:  82, y: 148, w: 230, h: 236},
-    beard:             {x: 114, y: 132, w:  96, h:  92},
-    hand_front_fist:   {x: 222, y: 276, w:  48, h:  48},
-    hand_front_open:   {x: 220, y: 274, w:  52, h:  50},
-    hand_front_point:  {x: 202, y: 274, w:  72, h:  48},
-    arm_front:         {x: 218, y: 176, w:  58, h: 124}
+    boot_back:        {x: 118, y: 388, w:  92, h:  65},
+    leg_back:         {x: 152, y: 332, w:  55, h:  76},
+    boot_front:       {x: 168, y: 395, w:  96, h:  68},
+    leg_front:        {x: 205, y: 336, w:  48, h:  78},
+    pants:            {x: 152, y: 288, w:  96, h:  92},
+    hand_back_fist:   {x:  72, y: 254, w:  50, h:  40},
+    hand_back_open:   {x:  82, y: 258, w:  50, h:  50},
+    arm_back:         {x:  56, y: 180, w:  76, h: 114},
+    head:             {x: 134, y:  74, w: 106, h: 138},
+    eyes_normal:      {x: 145, y: 122, w:  54, h:  37},
+    eyes_squint:      {x: 144, y: 124, w:  58, h:  26},
+    eyes_closed:      {x: 145, y: 122, w:  54, h:  37},
+    brows_normal:     {x: 140, y: 110, w:  64, h:  20},
+    brows_angry:      {x: 140, y: 106, w:  64, h:  28},
+    brows_surprised:  {x: 140, y: 103, w:  62, h:  34},
+    hat:              {x: 112, y:  26, w: 142, h: 108},
+    torso:            {x:  82, y: 148, w: 230, h: 236},
+    beard:            {x: 114, y: 132, w:  96, h:  92},
+    hand_front_fist:  {x: 222, y: 276, w:  48, h:  48},
+    hand_front_open:  {x: 218, y: 274, w:  48, h:  54},
+    hand_front_point: {x: 212, y: 274, w:  56, h:  65},
+    arm_front:        {x: 218, y: 176, w:  58, h: 124}
   };
   let capdreadRigOffsets = JSON.parse(JSON.stringify(DEFAULT_CAPDREAD_OFFSETS));
   let capdreadRigState = {
@@ -545,7 +545,7 @@
       angry:     partImg('capdread.brows.angry', 'art/candidates/capdread.brows.angry/v2.png'),
       surprised: partImg('capdread.brows.surprised', 'art/candidates/capdread.brows.surprised/v2.png')
     };
-    const hatSrc   = partImg('capdread.hat', 'art/candidates/capdread.hat/v2.png');
+    const hatSrc   = partImg('capdread.hat', 'art/candidates/capdread.hat/v3.png');
     const beardSrc = partImg('capdread.beard', 'art/candidates/capdread.beard/v2.png');
     const bootBackSrc  = partImg('capdread.boot_back',  'art/candidates/capdread.boot_back/v2.png');
     const bootFrontSrc = partImg('capdread.boot_front', 'art/candidates/capdread.boot_front/v2.png');
@@ -556,12 +556,12 @@
     const armFrontSrc  = partImg('capdread.arm_front',  'art/candidates/capdread.arm_front/v2.png');
     const handFrontSrcs = {
       fist:  partImg('capdread.hand_front.fist',  'art/candidates/capdread.hand_front.fist/v2.png'),
-      open:  partImg('capdread.hand_front.open',  'art/candidates/capdread.hand_front.open/v2.png'),
-      point: partImg('capdread.hand_front.point', 'art/candidates/capdread.hand_front.point/v2.png')
+      open:  partImg('capdread.hand_front.open',  'art/candidates/capdread.hand_front.open/v3.png'),
+      point: partImg('capdread.hand_front.point', 'art/candidates/capdread.hand_front.point/v3.png')
     };
     const handBackSrcs = {
       fist: partImg('capdread.hand_back.fist', 'art/candidates/capdread.hand_back.fist/v2.png'),
-      open: partImg('capdread.hand_back.open', 'art/candidates/capdread.hand_back.open/v2.png')
+      open: partImg('capdread.hand_back.open', 'art/candidates/capdread.hand_back.open/v3.png')
     };
 
     const layers = [];

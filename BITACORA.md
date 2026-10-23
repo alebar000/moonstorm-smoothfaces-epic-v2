@@ -1560,3 +1560,16 @@ se editan entradas anteriores (si algo cambió, nueva entrada que lo diga).
 - **Pendientes por cuota `HTTP 429 RESOURCE_EXHAUSTED` (13 piezas en `status: "blocked_quota_429"`)**:
   - `z1s3.prop.bed`, `z1s3.prop.dirty_laundry`, `z1s3.prop.easel_portrait`, `z1s3.prop.glue`, `z1s3.prop.hammer_bag`, `z1s3.prop.lamp`, `z1s3.fg.card_table`, `z1s3.fg.chest`, `z1s3.fg.clown_bust`, `z1s3.fg.hull_rib_left`, `z1s3.fg.hull_rib_right`, `z1s3.fg.ship_in_bottle`, `z1s3.fg.voodoo_doll`.
 - cambios a `characters/` y `layout/`: se actualizaron `characters/capdread/rig.json`, `characters/smoothface/rig.json`, `review/review_sheet.html`, `layout/z1s3.layout.json` y todos los renders compuestos en `review/layout_shots/` usando exclusivamente arte cutout real (`v2.png` + piezas aprobadas).
+
+
+## 2026-10-22 (Ronda de aprobacion masiva + v3 Captain Dread)
+- **Promocion a `art/approved/` (`pipeline/approve.py`)**: 48 de las 52 piezas revisadas por Alex fueron aprobadas y promovidas a `art/approved/` con hash SHA-256 en `MANIFEST.json`:
+  - Smoothface L2/L3 (8/8 aprobadas): `smoothface.hand_back.point`, `smoothface.emotion.*` (5), `smoothface.prop.*` (2).
+  - Captain Dread L4/L5 (18/22 aprobadas): `torso`, `head`, `beard`, `eyes.*` (3), `brows.*` (3), `arm_front`, `arm_back`, `hand_front.fist`, `hand_back.fist`, `pants`, `leg_front`, `leg_back`, `boot_front`, `boot_back`.
+  - Z1S3 L6/L7/L8/L9 (22/22 revisadas aprobadas): `ceiling.*` (2), `floor.*` (2), `wall.*` (11), `prop.*` (7).
+- **Correccion v3 de las 4 piezas rechazadas de Captain Dread**:
+  - `capdread.hat` (`v3`): ampliado a `112px` de alto (`142x108` en el rig) con arco despejado sobre la sien rapada y oreja para cubrir todo el ancho del craneo de `capdread.head`. Pasa 100% de `gates.py check`.
+  - `capdread.hand_back.open` (`v3`): muneca orientada arriba-izquierda (45 grados) saliendo del puno de `capdread.arm_back` y dedos extendidos abajo-derecha continuando el angulo del antebrazo. Pasa 100% de `gates.py check`.
+  - `capdread.hand_front.open` (`v3`): muneca horizontal en el borde superior conectando verticalmente con el puno de `capdread.arm_front`, pulgar a la izquierda y 4 dedos rectos cayendo hacia abajo. Pasa 100% de `gates.py check`.
+  - `capdread.hand_front.point` (`v3`): muneca horizontal en el borde superior conectando verticalmente con `capdread.arm_front` e indice apuntando hacia abajo-izquierda. Pasa 100% de `gates.py check`.
+- **13 piezas restantes de Z1S3 L9/L10**: permanecen en `blocked_quota_429` debido a `429 RESOURCE_EXHAUSTED` en `gemini-3.1-flash-image` (reinicio de cuota reportado: `2026-10-23T04:19:59Z`).

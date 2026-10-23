@@ -209,6 +209,370 @@
       "verdict": "approved",
       "reason": "",
       "ts": "2026-10-22T15:56:32"
+    },
+    {
+      "id": "capdread.arm_back",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:16:23"
+    },
+    {
+      "id": "capdread.arm_front",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:16:24"
+    },
+    {
+      "id": "capdread.beard",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:16:24"
+    },
+    {
+      "id": "capdread.boot_back",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:16:25"
+    },
+    {
+      "id": "capdread.boot_front",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:16:25"
+    },
+    {
+      "id": "capdread.brows.angry",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:16:26"
+    },
+    {
+      "id": "capdread.brows.normal",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:16:27"
+    },
+    {
+      "id": "capdread.brows.surprised",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:16:29"
+    },
+    {
+      "id": "capdread.eyes.closed",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:16:30"
+    },
+    {
+      "id": "capdread.eyes.normal",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:16:35"
+    },
+    {
+      "id": "capdread.eyes.squint",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:16:37"
+    },
+    {
+      "id": "capdread.hand_back.fist",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:16:43"
+    },
+    {
+      "id": "capdread.hand_back.open",
+      "version": "v2",
+      "verdict": "rejected",
+      "reason": "Esta mano con esa apertura n otiene sentido porla forma en que está el brazo",
+      "ts": "2026-10-22T20:17:04"
+    },
+    {
+      "id": "capdread.hand_front.fist",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:17:05"
+    },
+    {
+      "id": "capdread.hand_front.open",
+      "version": "v2",
+      "verdict": "rejected",
+      "reason": "No se ve bien",
+      "ts": "2026-10-22T20:17:18"
+    },
+    {
+      "id": "capdread.hand_front.point",
+      "version": "v2",
+      "verdict": "rejected",
+      "reason": "No tiene sentido con el brazo como está",
+      "ts": "2026-10-22T20:17:30"
+    },
+    {
+      "id": "capdread.hat",
+      "version": "v2",
+      "verdict": "rejected",
+      "reason": "El cabello le falta un poco de tamaño para que calce bien con el tamaño de la cara.",
+      "ts": "2026-10-22T20:18:07"
+    },
+    {
+      "id": "capdread.head",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:18:10"
+    },
+    {
+      "id": "capdread.leg_back",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:18:11"
+    },
+    {
+      "id": "capdread.leg_front",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:18:12"
+    },
+    {
+      "id": "capdread.pants",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:18:12"
+    },
+    {
+      "id": "capdread.torso",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:18:14"
+    },
+    {
+      "id": "smoothface.emotion.anger_vein",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:18:21"
+    },
+    {
+      "id": "smoothface.emotion.exclamation",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:18:22"
+    },
+    {
+      "id": "smoothface.emotion.idea_bulb",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:18:23"
+    },
+    {
+      "id": "smoothface.emotion.question_mark",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:18:23"
+    },
+    {
+      "id": "smoothface.emotion.sweat_drop",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:18:24"
+    },
+    {
+      "id": "smoothface.hand_back.point",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:18:27"
+    },
+    {
+      "id": "smoothface.prop.magnifying_glass",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:18:28"
+    },
+    {
+      "id": "smoothface.prop.skeleton_key",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:18:28"
+    },
+    {
+      "id": "z1s3.ceiling.beam_a",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:18:33"
+    },
+    {
+      "id": "z1s3.ceiling.beam_b",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:18:36"
+    },
+    {
+      "id": "z1s3.floor.planks_a",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:18:36"
+    },
+    {
+      "id": "z1s3.floor.planks_b",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:18:37"
+    },
+    {
+      "id": "z1s3.prop.coat",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:18:41"
+    },
+    {
+      "id": "z1s3.prop.coat_rack",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:18:44"
+    },
+    {
+      "id": "z1s3.prop.desk",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:18:45"
+    },
+    {
+      "id": "z1s3.prop.fishbowl",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:18:47"
+    },
+    {
+      "id": "z1s3.prop.hat",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:18:48"
+    },
+    {
+      "id": "z1s3.prop.nightstand",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:18:49"
+    },
+    {
+      "id": "z1s3.prop.tv",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:18:49"
+    },
+    {
+      "id": "z1s3.wall.door",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:18:50"
+    },
+    {
+      "id": "z1s3.wall.helm_wheel",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:18:51"
+    },
+    {
+      "id": "z1s3.wall.mask_a",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:18:52"
+    },
+    {
+      "id": "z1s3.wall.mask_b",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:18:52"
+    },
+    {
+      "id": "z1s3.wall.panel_b",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:18:56"
+    },
+    {
+      "id": "z1s3.wall.panel_c",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:18:57"
+    },
+    {
+      "id": "z1s3.wall.pipes",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:18:57"
+    },
+    {
+      "id": "z1s3.wall.porthole",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:18:58"
+    },
+    {
+      "id": "z1s3.wall.poster",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:19:00"
+    },
+    {
+      "id": "z1s3.wall.seam_strip",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:19:00"
+    },
+    {
+      "id": "z1s3.wall.shelf",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:19:02"
     }
   ]
 }
