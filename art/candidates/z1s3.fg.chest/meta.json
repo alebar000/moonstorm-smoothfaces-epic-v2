@@ -11,9 +11,10 @@
     "art/references/ref_room_z1s3_2010.png"
   ],
   "versions": {
-    "v1": "prompt_v1.txt"
+    "v1": "prompt_v1.txt",
+    "v2": "prompt_v1.txt"
   },
-  "status": "blocked_quota_429",
-  "proposed_version": "v1",
-  "quota_note": "Bloqueado por HTTP 429 RESOURCE_EXHAUSTED en gemini-3.1-flash-image (reset ~4h)."
+  "status": "proposed",
+  "proposed_version": "v2",
+  "version": "v2"
 }

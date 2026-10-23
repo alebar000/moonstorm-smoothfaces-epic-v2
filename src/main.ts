@@ -217,6 +217,7 @@ class SmoothfacePilotGame {
     ];
     for (const id of z1s3Ids) {
       const im = new Image();
+      im.onerror = () => { if (!im.src.includes('art/candidates/')) im.src = `art/candidates/${id}/v2.png`; };
       im.src = `art/approved/z1s3/${id}.png`;
       this.imgs.set(id, im);
     }

@@ -330,6 +330,144 @@
         "talk": "dlg.z1s3.capdread.talk"
       },
       "state": "visible"
+    },
+    {
+      "id": "z1s3.prop.glue",
+      "asset": "art/candidates/z1s3.prop.glue/v2.png",
+      "plane": "floor",
+      "x": 1120,
+      "y": 725,
+      "anchor": "bottom-center",
+      "sort_y": 725,
+      "interact": {
+        "inspect": "dlg.z1s3.glue.inspect",
+        "grab": "item.glue"
+      },
+      "state": "visible"
+    },
+    {
+      "id": "z1s3.prop.easel_portrait",
+      "asset": "art/candidates/z1s3.prop.easel_portrait/v2.png",
+      "plane": "floor",
+      "x": 1245,
+      "y": 740,
+      "anchor": "bottom-center",
+      "sort_y": 740,
+      "interact": {
+        "inspect": "dlg.z1s3.portrait.inspect",
+        "use": "puzzle.portrait"
+      },
+      "state": "visible"
+    },
+    {
+      "id": "z1s3.prop.hammer_bag",
+      "asset": "art/candidates/z1s3.prop.hammer_bag/v2.png",
+      "plane": "floor",
+      "x": 1390,
+      "y": 760,
+      "anchor": "bottom-center",
+      "sort_y": 760,
+      "interact": {
+        "inspect": "dlg.z1s3.hammers.inspect",
+        "grab": "item.hammers"
+      },
+      "state": "visible"
+    },
+    {
+      "id": "z1s3.prop.dirty_laundry",
+      "asset": "art/candidates/z1s3.prop.dirty_laundry/v2.png",
+      "plane": "floor",
+      "x": 1685,
+      "y": 755,
+      "anchor": "bottom-center",
+      "sort_y": 755,
+      "state": "visible"
+    },
+    {
+      "id": "z1s3.prop.lamp",
+      "asset": "art/candidates/z1s3.prop.lamp/v2.png",
+      "plane": "floor",
+      "x": 1892,
+      "y": 568,
+      "anchor": "bottom-center",
+      "sort_y": 761,
+      "state": "visible"
+    },
+    {
+      "id": "z1s3.prop.bed",
+      "asset": "art/candidates/z1s3.prop.bed/v2.png",
+      "plane": "floor",
+      "x": 2150,
+      "y": 750,
+      "anchor": "bottom-center",
+      "sort_y": 750,
+      "interact": {
+        "inspect": "dlg.z1s3.bed.inspect"
+      },
+      "state": "visible"
+    },
+    {
+      "id": "z1s3.fg.card_table",
+      "asset": "art/candidates/z1s3.fg.card_table/v2.png",
+      "plane": "foreground",
+      "x": 620,
+      "y": 900,
+      "anchor": "bottom-center",
+      "state": "visible"
+    },
+    {
+      "id": "z1s3.fg.ship_in_bottle",
+      "asset": "art/candidates/z1s3.fg.ship_in_bottle/v2.png",
+      "plane": "foreground",
+      "x": 610,
+      "y": 800,
+      "anchor": "bottom-center",
+      "state": "visible"
+    },
+    {
+      "id": "z1s3.fg.chest",
+      "asset": "art/candidates/z1s3.fg.chest/v2.png",
+      "plane": "foreground",
+      "x": 1500,
+      "y": 900,
+      "anchor": "bottom-center",
+      "state": "visible"
+    },
+    {
+      "id": "z1s3.fg.clown_bust",
+      "asset": "art/candidates/z1s3.fg.clown_bust/v2.png",
+      "plane": "foreground",
+      "x": 1530,
+      "y": 790,
+      "anchor": "bottom-center",
+      "state": "visible"
+    },
+    {
+      "id": "z1s3.fg.voodoo_doll",
+      "asset": "art/candidates/z1s3.fg.voodoo_doll/v2.png",
+      "plane": "foreground",
+      "x": 1450,
+      "y": 800,
+      "anchor": "bottom-center",
+      "state": "visible"
+    },
+    {
+      "id": "z1s3.fg.hull_rib_left",
+      "asset": "art/candidates/z1s3.fg.hull_rib_left/v2.png",
+      "plane": "ribs",
+      "x": 0,
+      "y": 0,
+      "anchor": "top-left",
+      "state": "visible"
+    },
+    {
+      "id": "z1s3.fg.hull_rib_right",
+      "asset": "art/candidates/z1s3.fg.hull_rib_right/v2.png",
+      "plane": "ribs",
+      "x": 2080,
+      "y": 0,
+      "anchor": "top-left",
+      "state": "visible"
     }
   ],
   "characters": [
@@ -370,144 +508,5 @@
       820
     ]
   },
-  "pending_objects_quota_429": [
-    {
-      "id": "z1s3.prop.glue",
-      "asset": "art/candidates/z1s3.prop.glue/v1.png",
-      "plane": "floor",
-      "x": 1060,
-      "y": 770,
-      "anchor": "bottom-center",
-      "sort_y": 770,
-      "interact": {
-        "inspect": "dlg.z1s3.glue.inspect",
-        "grab": "item.glue"
-      },
-      "state": "visible"
-    },
-    {
-      "id": "z1s3.prop.easel_portrait",
-      "asset": "art/candidates/z1s3.prop.easel_portrait/v1.png",
-      "plane": "floor",
-      "x": 1180,
-      "y": 760,
-      "anchor": "bottom-center",
-      "sort_y": 760,
-      "interact": {
-        "inspect": "dlg.z1s3.portrait.inspect",
-        "use": "puzzle.portrait"
-      },
-      "state": "visible"
-    },
-    {
-      "id": "z1s3.prop.hammer_bag",
-      "asset": "art/candidates/z1s3.prop.hammer_bag/v1.png",
-      "plane": "floor",
-      "x": 1300,
-      "y": 790,
-      "anchor": "bottom-center",
-      "sort_y": 790,
-      "interact": {
-        "inspect": "dlg.z1s3.hammers.inspect",
-        "grab": "item.hammers"
-      },
-      "state": "visible"
-    },
-    {
-      "id": "z1s3.prop.dirty_laundry",
-      "asset": "art/candidates/z1s3.prop.dirty_laundry/v1.png",
-      "plane": "floor",
-      "x": 1650,
-      "y": 780,
-      "anchor": "bottom-center",
-      "sort_y": 780,
-      "state": "visible"
-    },
-    {
-      "id": "z1s3.prop.lamp",
-      "asset": "art/candidates/z1s3.prop.lamp/v1.png",
-      "plane": "floor",
-      "x": 1800,
-      "y": 680,
-      "anchor": "bottom-center",
-      "sort_y": 761,
-      "state": "visible"
-    },
-    {
-      "id": "z1s3.prop.bed",
-      "asset": "art/candidates/z1s3.prop.bed/v1.png",
-      "plane": "floor",
-      "x": 1980,
-      "y": 760,
-      "anchor": "bottom-center",
-      "sort_y": 760,
-      "interact": {
-        "inspect": "dlg.z1s3.bed.inspect"
-      },
-      "state": "visible"
-    },
-    {
-      "id": "z1s3.fg.card_table",
-      "asset": "art/candidates/z1s3.fg.card_table/v1.png",
-      "plane": "foreground",
-      "x": 620,
-      "y": 900,
-      "anchor": "bottom-center",
-      "state": "visible"
-    },
-    {
-      "id": "z1s3.fg.ship_in_bottle",
-      "asset": "art/candidates/z1s3.fg.ship_in_bottle/v1.png",
-      "plane": "foreground",
-      "x": 610,
-      "y": 800,
-      "anchor": "bottom-center",
-      "state": "visible"
-    },
-    {
-      "id": "z1s3.fg.chest",
-      "asset": "art/candidates/z1s3.fg.chest/v1.png",
-      "plane": "foreground",
-      "x": 1500,
-      "y": 900,
-      "anchor": "bottom-center",
-      "state": "visible"
-    },
-    {
-      "id": "z1s3.fg.clown_bust",
-      "asset": "art/candidates/z1s3.fg.clown_bust/v1.png",
-      "plane": "foreground",
-      "x": 1530,
-      "y": 790,
-      "anchor": "bottom-center",
-      "state": "visible"
-    },
-    {
-      "id": "z1s3.fg.voodoo_doll",
-      "asset": "art/candidates/z1s3.fg.voodoo_doll/v1.png",
-      "plane": "foreground",
-      "x": 1450,
-      "y": 800,
-      "anchor": "bottom-center",
-      "state": "visible"
-    },
-    {
-      "id": "z1s3.fg.hull_rib_left",
-      "asset": "art/candidates/z1s3.fg.hull_rib_left/v1.png",
-      "plane": "ribs",
-      "x": 0,
-      "y": 0,
-      "anchor": "top-left",
-      "state": "visible"
-    },
-    {
-      "id": "z1s3.fg.hull_rib_right",
-      "asset": "art/candidates/z1s3.fg.hull_rib_right/v1.png",
-      "plane": "ribs",
-      "x": 2080,
-      "y": 0,
-      "anchor": "top-left",
-      "state": "visible"
-    }
-  ]
+  "pending_objects_quota_429": []
 }
