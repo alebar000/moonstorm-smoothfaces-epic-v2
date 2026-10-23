@@ -4,6 +4,7 @@
  */
 
 import { VoiceProfileId } from '../engine/AudioVoiceEngine';
+import officialZ1S3Json from './z1s3_official_layout.json';
 
 export type RoomId = 'Z1S3' | 'Z1S2' | 'Z1S1' | 'LOLDEMO';
 
@@ -139,6 +140,7 @@ export interface SceneObjectDef {
     | 'funky_vault'
     | 'pedal_engine';
   flipX?: boolean;
+  hideWhenFlag?: keyof WorldFlags;
   visibleWhen?: (flags: WorldFlags) => boolean;
 }
 
@@ -155,6 +157,7 @@ export interface HotspotDef {
   isExitTo?: RoomId;
   parallaxFactor?: number;
   parallaxAnchorX?: number;
+  hideWhenFlag?: keyof WorldFlags;
   visibleWhen?: (flags: WorldFlags) => boolean;
 }
 
@@ -929,3 +932,105 @@ export const ROOM_HOTSPOTS: Record<RoomId, HotspotDef[]> = {
   Z1S1: [],
   LOLDEMO: [],
 };
+
+
+export interface CharacterSpawnDef {
+  id: 'smoothface' | 'cap_dread';
+  name: string;
+  x: number;
+  y: number;
+  facing: 1 | -1;
+}
+
+export const Z1S3_CHARACTER_SPAWNS: Record<'smoothface' | 'cap_dread', CharacterSpawnDef> = {
+  smoothface: { id: 'smoothface', name: 'Mr. Smoothface (Player Spawn)', x: 700, y: 800, facing: 1 },
+  cap_dread: { id: 'cap_dread', name: 'Captain Dread (NPC Spawn)', x: 1540, y: 805, facing: -1 },
+};
+
+export interface OfficialZ1S3LayoutData {
+  room: string;
+  width: number;
+  height: number;
+  walkbox: { x: number; y: number; w: number; h: number };
+  characters: Record<'smoothface' | 'cap_dread', CharacterSpawnDef>;
+  objects: Array<Omit<SceneObjectDef, 'visibleWhen'>>;
+  hotspots: Array<Omit<HotspotDef, 'visibleWhen'>>;
+}
+
+export function applyZ1S3OfficialLayout(data: OfficialZ1S3LayoutData): void {
+  if (!data) return;
+  if (data.characters?.smoothface) {
+    Z1S3_CHARACTER_SPAWNS.smoothface = { ...data.characters.smoothface };
+  }
+  if (data.characters?.cap_dread) {
+    Z1S3_CHARACTER_SPAWNS.cap_dread = { ...data.characters.cap_dread };
+  }
+  if (Array.isArray(data.objects)) {
+    ROOM_OBJECTS.Z1S3 = data.objects.map((o) => {
+      const hideFlag = o.hideWhenFlag || (o.id.includes('glue') ? 'gotGlue' : o.id.includes('easel') ? 'gotPortraitStand' : o.id.includes('hammer_bag') ? 'gotHammerBag' : undefined);
+      return {
+        ...o,
+        hideWhenFlag: hideFlag,
+        visibleWhen: hideFlag ? (f: WorldFlags) => !f[hideFlag] : undefined,
+      };
+    });
+  }
+  if (Array.isArray(data.hotspots)) {
+    ROOM_HOTSPOTS.Z1S3 = data.hotspots.map((h) => {
+      const hideFlag = h.hideWhenFlag || (h.id === 'z1s3_glue' ? 'gotGlue' : h.id === 'z1s3_portrait_stand' ? 'gotPortraitStand' : h.id === 'z1s3_hammer_bag' ? 'gotHammerBag' : undefined);
+      return {
+        ...h,
+        hideWhenFlag: hideFlag,
+        visibleWhen: hideFlag ? (f: WorldFlags) => !f[hideFlag] : undefined,
+      };
+    });
+  }
+}
+
+export function serializeZ1S3OfficialLayout(
+  playerX = Z1S3_CHARACTER_SPAWNS.smoothface.x,
+  playerY = Z1S3_CHARACTER_SPAWNS.smoothface.y,
+  playerFacing: 1 | -1 = Z1S3_CHARACTER_SPAWNS.smoothface.facing,
+  dreadX = Z1S3_CHARACTER_SPAWNS.cap_dread.x,
+  dreadY = Z1S3_CHARACTER_SPAWNS.cap_dread.y,
+  dreadFacing: 1 | -1 = Z1S3_CHARACTER_SPAWNS.cap_dread.facing
+): OfficialZ1S3LayoutData {
+  return {
+    room: 'Z1S3',
+    width: 2400,
+    height: 900,
+    walkbox: { x: 150, y: 730, w: 2100, h: 125 },
+    characters: {
+      smoothface: { id: 'smoothface', name: 'Mr. Smoothface (Player Spawn)', x: Math.round(playerX), y: Math.round(playerY), facing: playerFacing },
+      cap_dread: { id: 'cap_dread', name: 'Captain Dread (NPC Spawn)', x: Math.round(dreadX), y: Math.round(dreadY), facing: dreadFacing },
+    },
+    objects: ROOM_OBJECTS.Z1S3.map(({ visibleWhen: _vw, ...rest }) => ({
+      ...rest,
+      x: Math.round(rest.x),
+      y: Math.round(rest.y),
+      w: Math.round(rest.w),
+      h: Math.round(rest.h),
+      sortY: Math.round(rest.sortY),
+    })),
+    hotspots: ROOM_HOTSPOTS.Z1S3.map(({ visibleWhen: _vw, ...rest }) => ({
+      ...rest,
+      x: Math.round(rest.x),
+      y: Math.round(rest.y),
+      w: Math.round(rest.w),
+      h: Math.round(rest.h),
+      walkX: Math.round(rest.walkX),
+      walkY: Math.round(rest.walkY),
+    })),
+  };
+}
+
+// Initialize from official JSON file (and optional localStorage override if running standalone)
+applyZ1S3OfficialLayout(officialZ1S3Json as unknown as OfficialZ1S3LayoutData);
+try {
+  const savedLocal = typeof localStorage !== 'undefined' ? localStorage.getItem('moonstorm_z1s3_official_layout_v1') : null;
+  if (savedLocal) {
+    applyZ1S3OfficialLayout(JSON.parse(savedLocal));
+  }
+} catch {
+  // Ignore localStorage parse errors
+}

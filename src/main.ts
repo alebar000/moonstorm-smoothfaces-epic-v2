@@ -6,6 +6,7 @@
 import { AudioVoiceEngine, VoiceProfileId } from './engine/AudioVoiceEngine';
 import { CutoutRigRenderer, PuppetAnimState } from './engine/CutoutRigRenderer';
 import { INTRO_SCENES_8, IntroPuppetTheatre } from './engine/IntroPuppetTheatre';
+import { RoomLayoutStudio } from './engine/RoomLayoutStudio';
 import {
   createInitialFlags,
   DialogueOption,
@@ -17,6 +18,7 @@ import {
   RoomId,
   SceneObjectDef,
   WorldFlags,
+  Z1S3_CHARACTER_SPAWNS,
 } from './scenarios/WorldData';
 
 interface DustMote {
@@ -57,7 +59,8 @@ interface SteamPuff {
 }
 
 class SmoothfacePilotGame {
-  private canvas: HTMLCanvasElement;
+  public canvas: HTMLCanvasElement;
+  public studio!: RoomLayoutStudio;
   private ctx: CanvasRenderingContext2D;
   private menuPuppetCanvas: HTMLCanvasElement;
   private menuPuppetCtx: CanvasRenderingContext2D;
@@ -99,8 +102,8 @@ class SmoothfacePilotGame {
 
   // Camera & Multi-Plane Parallax (1600x900 viewport scrolling across wide rooms up to 2880x900)
   public cameraX = 240;
-  private mouseX = 800;
-  private mouseY = 450;
+  public mouseX = 800;
+  public mouseY = 450;
   private cameraShakeTime = 0;
   private cameraShakeMag = 0;
   private perpetualWheelAngle = 0;
@@ -154,11 +157,11 @@ class SmoothfacePilotGame {
     );
 
     // Canonical Slice 1 Z1S3 Initial Placements (`layout/z1s3.layout.json`: Smoothface 315px, Captain Dread 330px)
-    this.player = this.rigs.createAnimState('smoothface', 700, 800, 1.0, 1);
+    this.player = this.rigs.createAnimState('smoothface', Z1S3_CHARACTER_SPAWNS.smoothface.x, Z1S3_CHARACTER_SPAWNS.smoothface.y, 1.0, Z1S3_CHARACTER_SPAWNS.smoothface.facing);
     this.menuShowcasePuppet = this.rigs.createAnimState('smoothface', 220, 430, 1.0, 1);
 
     this.npcs = {
-      cap_dread: this.rigs.createAnimState('cap_dread', 1540, 805, 1.0, -1),
+      cap_dread: this.rigs.createAnimState('cap_dread', Z1S3_CHARACTER_SPAWNS.cap_dread.x, Z1S3_CHARACTER_SPAWNS.cap_dread.y, 1.0, Z1S3_CHARACTER_SPAWNS.cap_dread.facing),
       nihongo: this.rigs.createAnimState('nihongo', 725, 810, 1.0, 1),
       a_baby: this.rigs.createAnimState('a_baby', 705, 815, 1.0, 1),
       ventriloquist: this.rigs.createAnimState('ventriloquist', 1410, 815, 1.0, -1),
@@ -168,6 +171,7 @@ class SmoothfacePilotGame {
     this.initParticles();
     this.bindDomEvents();
     this.renderInventoryBar();
+    this.studio = new RoomLayoutStudio(this);
 
     // Expose debug/test API on window for automated verification
     (window as unknown as Record<string, unknown>).__SPARKLE_GAME__ = this;
@@ -224,6 +228,10 @@ class SmoothfacePilotGame {
     const helmIm = new Image();
     helmIm.src = 'art/approved/z1s3/z1s3.wall.helm_wheel.png';
     this.imgs.set('item_helm', helmIm);
+  }
+
+  public getImgForStudio(key: string): HTMLImageElement | null {
+    return this.getImg(key);
   }
 
   private getImg(key: string): HTMLImageElement | null {
@@ -283,6 +291,17 @@ class SmoothfacePilotGame {
     document.getElementById('btn-menu-quick-play')?.addEventListener('click', () => {
       this.audio.playStartStinger();
       this.enterGameplay('Z1S3');
+    });
+
+    document.getElementById('btn-menu-studio')?.addEventListener('click', () => {
+      this.audio.playStartStinger();
+      this.enterGameplay('Z1S3');
+      this.studio.toggleStudio(true);
+    });
+
+    document.getElementById('btn-open-studio')?.addEventListener('click', () => {
+      this.audio.playUiClick(580);
+      this.studio.toggleStudio();
     });
 
     document.querySelectorAll('.menu-scene-chip').forEach((btn) => {
@@ -443,6 +462,7 @@ class SmoothfacePilotGame {
       this.inventory = [];
       this.selectedItemId = null;
       this.renderInventoryBar();
+    this.studio = new RoomLayoutStudio(this);
       this.toggleModal('config-modal', false);
       this.switchRoom('Z1S3');
     });
@@ -488,6 +508,7 @@ class SmoothfacePilotGame {
       document.getElementById('hotspot-tooltip')!.style.display = 'none';
     });
     this.canvas.addEventListener('mousedown', (e) => this.onCanvasMouseDown(e));
+    window.addEventListener('mouseup', () => this.studio?.onMouseUp());
     this.canvas.addEventListener('contextmenu', (e) => {
       e.preventDefault();
       this.openRmbMenuAt(e);
@@ -669,9 +690,12 @@ class SmoothfacePilotGame {
     const banner = document.getElementById('room-banner')!;
     if (room === 'Z1S3') {
       banner.textContent = "Captain Dread's Cabin";
-      this.player.x = 700;
-      this.player.y = 810;
-      this.player.facing = 1;
+      this.player.x = Z1S3_CHARACTER_SPAWNS.smoothface.x;
+      this.player.y = Z1S3_CHARACTER_SPAWNS.smoothface.y;
+      this.player.facing = Z1S3_CHARACTER_SPAWNS.smoothface.facing;
+      this.npcs.cap_dread.x = Z1S3_CHARACTER_SPAWNS.cap_dread.x;
+      this.npcs.cap_dread.y = Z1S3_CHARACTER_SPAWNS.cap_dread.y;
+      this.npcs.cap_dread.facing = Z1S3_CHARACTER_SPAWNS.cap_dread.facing;
       this.cameraX = 120;
       this.speakLine(
         'MR. SMOOTHFACE',
@@ -828,6 +852,11 @@ class SmoothfacePilotGame {
     const pt = this.getCanvasCoords(e);
     this.mouseX = pt.viewX;
     this.mouseY = pt.viewY;
+    if (this.studio?.active) {
+      document.getElementById('hotspot-tooltip')!.style.display = 'none';
+      this.studio.onMouseMove(e, pt.x, pt.y);
+      return;
+    }
     this.player.lookTargetX = pt.x;
     this.player.lookTargetY = pt.y;
 
@@ -853,6 +882,11 @@ class SmoothfacePilotGame {
 
   private onCanvasMouseDown(e: MouseEvent): void {
     this.audio.unlock();
+    if (this.studio?.active) {
+      const pt = this.getCanvasCoords(e);
+      this.studio.onMouseDown(e, pt.x, pt.y);
+      return;
+    }
     if (e.button !== 0) return;
 
     const menu = document.getElementById('rmb-action-menu')!;
@@ -895,6 +929,7 @@ class SmoothfacePilotGame {
 
   private openRmbMenuAt(e: MouseEvent): void {
     this.audio.unlock();
+    if (this.studio?.active) return;
     const pt = this.getCanvasCoords(e);
     const hit = this.findHotspotAt(pt.x, pt.y);
     if (!hit) {
@@ -1851,6 +1886,7 @@ class SmoothfacePilotGame {
       this.inventory.push(id);
       this.audio.playPickupChime();
       this.renderInventoryBar();
+    this.studio = new RoomLayoutStudio(this);
     }
   }
 
@@ -1881,6 +1917,7 @@ class SmoothfacePilotGame {
     this.selectedItemId = id;
     this.updateActiveItemBanner();
     this.renderInventoryBar();
+    this.studio = new RoomLayoutStudio(this);
   }
 
   public renderInventoryBar(): void {
@@ -2335,7 +2372,9 @@ class SmoothfacePilotGame {
 
     // Smooth LucasArts Horizontal Camera Displacement across wide multi-plane rooms (player tracking + mouse-edge panning!)
     const maxCamX = Math.max(0, this.getRoomWidth() - 1600);
-    if (maxCamX > 0) {
+    if (this.studio?.active) {
+      // In Studio Mode, camera X is controlled manually by the user!
+    } else if (maxCamX > 0) {
       let targetCamX = Math.max(0, Math.min(maxCamX, this.player.x - 800));
       // Allow classic Point-and-Click mouse-edge camera panning when not actively walking
       if (!this.player.isWalking) {
@@ -2484,8 +2523,9 @@ class SmoothfacePilotGame {
     const h = this.canvas.height;
     ctx.clearRect(0, 0, w, h);
 
-    const parX = ((this.mouseX - w * 0.5) / w) * -14;
-    const parY = ((this.mouseY - h * 0.5) / h) * -8;
+    const freezePar = Boolean(this.studio?.active && this.studio.freezeParallax);
+    const parX = freezePar ? 0 : ((this.mouseX - w * 0.5) / w) * -14;
+    const parY = freezePar ? 0 : ((this.mouseY - h * 0.5) / h) * -8;
 
     const shakeX = this.cameraShakeTime > 0 ? (Math.random() - 0.5) * this.cameraShakeMag : 0;
     const shakeY = this.cameraShakeTime > 0 ? (Math.random() - 0.5) * this.cameraShakeMag : 0;
@@ -2524,6 +2564,7 @@ class SmoothfacePilotGame {
     const renderList: Array<{ sortY: number; draw: () => void }> = [];
 
     for (const obj of this.getVisibleSceneObjects()) {
+      if (this.studio?.hiddenObjectIds.has(obj.id)) continue;
       if (!this.cfgForeground && obj.sortY >= 850) continue;
       if (this.sketchMode2010 && obj.inSituSeamless) continue;
       renderList.push({
@@ -2571,6 +2612,9 @@ class SmoothfacePilotGame {
     if (this.cfgDebugWalkbox) {
       this.renderDebugWalkbox(ctx);
     }
+    if (this.studio?.active) {
+      this.studio.renderOverlay(ctx);
+    }
 
     ctx.restore(); // End world-space camera translation (-this.cameraX)
     ctx.restore();
@@ -2592,7 +2636,7 @@ class SmoothfacePilotGame {
     const tQuant = Math.floor(t * 12) / 12;
     const img = this.getImg(obj.imageKey);
 
-    const pFactor = obj.parallaxFactor ?? (obj.sortY > 750 ? 1.25 : 0.92);
+    const pFactor = (this.studio?.active && this.studio.freezeParallax) ? 1.0 : (obj.parallaxFactor ?? (obj.sortY > 750 ? 1.25 : 0.92));
     const anchorX = obj.parallaxAnchorX ?? obj.x + obj.w * 0.5;
     const { dx: parDx, dy: parDy } = this.computeParallaxOffset(pFactor, anchorX, parX, parY);
     const ox = obj.x + parDx;
