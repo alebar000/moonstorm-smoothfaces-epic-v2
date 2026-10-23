@@ -1608,3 +1608,22 @@ se editan entradas anteriores (si algo cambió, nueva entrada que lo diga).
   - Eliminados todos los trazos procedurales en Canvas y reemplazados por paneles cutout de alto contraste, retratos de rostro completo (`characters/smoothface/portrait.png`, `characters/capdread/portrait.png`), piso y paredes sin huecos negros y carga automatica de las 28 piezas propuestas en `dist/` y `PLAY_SMOOTHFACE_MVP.html`.
 - **Lote L14 (Hoja de Observacion de Playtest)**:
   - Creada `PLAYTEST_OBSERVATION_SHEET.md` con la tabla estructurada para los 3 playtesters y verificacion del criterio de cero preguntas "¿que es esto?".
+
+
+## 2026-10-23 (Aprobacion 100% de L9-L12: 103/103 piezas en `art/approved/`, 23 Hotspots en Z1S3 y Pulido de Montaje/UI)
+- **Promocion de las 28 piezas finales (`pipeline/approve.py`)**:
+  - Alex aprobo las 28 piezas restantes en `review/review.json` (`13` de Z1S3 L9/L10 + `9` de L11 UI + `6` de L12 Intro).
+  - Ejecutado `python pipeline/approve.py`: **103/103 piezas totales aprobadas** y registradas con su hash SHA-256 en `art/approved/MANIFEST.json` (`2` paletas P0 + `27` Smoothface L0-L3 + `22` Captain Dread L4-L5 + `37` Z1S3 L6-L10 + `9` UI L11 + `6` Intro L12). Cero piezas pendientes, rechazadas o bloqueadas.
+- **Montaje (`bien montado`) y 23 Hotspots Interactivos en Z1S3 (`src/scenarios/WorldData.ts`, `src/main.ts`, `layout/z1s3.layout.json`)**:
+  - Todas las rutas del motor y del layout apuntan exclusivamente a `art/approved/...`.
+  - Refinado el montaje pixel-a-pixel en `Z1S3` (`review/layout_shots/z1s3_cabin_panorama/full_panorama.png`):
+    - Eliminadas las tiras `seam_strip` superpuestas para dejar limpias las columnas remachadas originales de `panel_a`, `panel_b` y `panel_c`, con `z1s3.wall.pipes` montado sobre la union vertical.
+    - `tv`, `fishbowl` y `glue` asentados dentro del plano superior de `z1s3.prop.desk` sin sobresalir por el borde inclinado.
+    - `card_table` (`x: 245, y: 765`) y `ship_in_bottle` (`x: 268, y: 800`) montados en el primer plano izquierdo junto al sarcofago, despejando por completo a Smoothface (`x: 700`) y la escotilla (`x: 570`).
+    - `voodoo_doll` (`x: 1652, y: 718`) y `clown_bust` (`x: 1728, y: 682`) asentados directamente sobre la tapa del cofre `chest` (`x: 1615, y: 760`), dejando visible `hammer_bag` (`x: 1660, y: 605`) detras.
+    - `nightstand`, `lamp` y `bed` desplazados ligeramente a la izquierda para que la almohada y cabecera queden 100% visibles dentro del arco de `hull_rib_right`.
+  - **23 hotspots interactivos dedicados en `Z1S3`**: cada objeto visible del cuarto tiene su propio hotspot con nombre e interacciones `Inspect`, `Use/Grab` y `Talk` (`z1s3_sarcophagus`, `z1s3_coat_rack`, `z1s3_door_lounge`, `z1s3_porthole`, `z1s3_mss_poster`, `z1s3_crt_tv`, `z1s3_fishbowl`, `z1s3_desk_drawer`, `z1s3_glue`, `z1s3_steam_pipe`, `z1s3_portrait_stand`, `z1s3_dirty_clothes`, `z1s3_mask_a`, `z1s3_helm_wheel`, `z1s3_mask_b`, `z1s3_shelf`, `z1s3_cap_dread`, `z1s3_hammer_bag`, `z1s3_nightstand_lamp`, `z1s3_lamp`, `z1s3_bunk_bed`, `z1s3_ship_bottle`, `z1s3_clown_voodoo`).
+- **Pulido de UI, Menu Principal e Intro (`src/main.ts`, `src/engine/IntroPuppetTheatre.ts`, `src/styles/main.css`, `index.html`)**:
+  - Reemplazado el gradiente radial del showcase del Menu Principal por una vineta cutout real del submarino (`panel_b`, `planks_a`, `porthole`).
+  - La barra superior de inventario muestra siempre las 6 ranuras cutout (`inv-slot` + `inv-slot-empty`) con cursores y medallas de accion de `art/approved/ui/`.
+  - Las 4 escenas de `IntroPuppetTheatre.ts` cargan los 4 fondos aprobados de `art/approved/intro/` enmarcados por las cortinas `intro.curtain` sin bordes negros laterales.

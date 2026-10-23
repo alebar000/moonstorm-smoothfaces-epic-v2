@@ -1118,7 +1118,7 @@ class SmoothfacePilotGame {
       return;
     }
 
-    if (hit.id === 'z1s3_desk_drawer') {
+    if (hit.id === 'z1s3_desk_drawer' || hit.id === 'z1s3_glue') {
       if (verb === 'inspect') {
         this.speakLine(
           'MR. SMOOTHFACE',
@@ -1343,13 +1343,57 @@ class SmoothfacePilotGame {
       return;
     }
 
-    if (hit.id === 'z1s3_wall_masks') {
+    if (hit.id === 'z1s3_mask_a') {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
         'characters/smoothface/portrait.png',
         'OBSERVING',
-        "Captain Dread's wall of exotic theatre masks, a decorative wheel, and tin rations. At least the masks do not have bushy moustaches."
+        'A carved wooden tiki mask scowling from the submarine bulkhead. Still more welcoming than my brother Morgan.'
+      );
+      return;
+    }
+
+    if (hit.id === 'z1s3_helm_wheel') {
+      this.speakLine(
+        'MR. SMOOTHFACE',
+        'smoothface',
+        'characters/smoothface/portrait.png',
+        'INSPECTING',
+        "Captain Dread's prized eight-spoke mahogany helm wheel bolted to the bulkhead. Eight sturdy spokes, just like Leonardo da Vinci's diagram!"
+      );
+      return;
+    }
+
+    if (hit.id === 'z1s3_mask_b') {
+      this.speakLine(
+        'MR. SMOOTHFACE',
+        'smoothface',
+        'characters/smoothface/portrait.png',
+        'OBSERVING',
+        'A painted ceremonial tribal mask with red war-paint stripes and tassel earrings. Zero facial hair: ten out of ten.'
+      );
+      return;
+    }
+
+    if (hit.id === 'z1s3_shelf' || hit.id === 'z1s3_wall_masks') {
+      this.speakLine(
+        'MR. SMOOTHFACE',
+        'smoothface',
+        'characters/smoothface/portrait.png',
+        'CRITIQUING',
+        'Captain Dread\'s emergency rations shelf: two tin cans labeled "SOUP" and "BEANS" flanked by wooden Matryoshka nesting dolls.'
+      );
+      return;
+    }
+
+    if (hit.id === 'z1s3_lamp') {
+      this.speakLine(
+        'MR. SMOOTHFACE',
+        'smoothface',
+        'characters/smoothface/portrait.png',
+        'OBSERVING',
+        'A crooked brass reading lamp with a tilted parchment shade. One submarine depth-charge jolt and it will tumble right off the nightstand.'
       );
       return;
     }
@@ -1872,6 +1916,12 @@ class SmoothfacePilotGame {
       });
 
       container.appendChild(slot);
+    }
+    const minSlots = 6;
+    for (let i = this.inventory.length; i < minSlots; i++) {
+      const emptySlot = document.createElement('div');
+      emptySlot.className = 'inv-slot inv-slot-empty';
+      container.appendChild(emptySlot);
     }
   }
 
@@ -2416,12 +2466,14 @@ class SmoothfacePilotGame {
     const h = this.menuPuppetCanvas.height;
     ctx.clearRect(0, 0, w, h);
 
-    const grad = ctx.createRadialGradient(w * 0.5, h * 0.48, 15, w * 0.5, h * 0.48, 210);
-    grad.addColorStop(0, 'rgba(59, 232, 216, 0.22)');
-    grad.addColorStop(0.6, 'rgba(227, 182, 90, 0.08)');
-    grad.addColorStop(1, 'rgba(0, 0, 0, 0)');
-    ctx.fillStyle = grad;
+    ctx.fillStyle = '#241c18';
     ctx.fillRect(0, 0, w, h);
+    const panelB = this.getImg('z1s3.wall.panel_b');
+    const planksA = this.getImg('z1s3.floor.planks_a');
+    const porthole = this.getImg('z1s3.wall.porthole');
+    if (panelB) ctx.drawImage(panelB, -40, -35, w + 80, 390);
+    if (porthole) ctx.drawImage(porthole, w * 0.5 - 75, 28, 150, 150);
+    if (planksA) ctx.drawImage(planksA, -40, 315, w + 80, 210);
 
     this.rigs.renderSmoothfaceRig(ctx, this.menuShowcasePuppet);
   }

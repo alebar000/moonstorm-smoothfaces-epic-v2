@@ -96,12 +96,12 @@ export class IntroPuppetTheatre {
 
   private preloadStageAssets(): void {
     const list: Array<[string, string, string]> = [
-      ['bg_barbershop', 'art/approved/intro/intro.bg.barbershop.png', 'art/candidates/intro.bg.barbershop/v1.png'],
-      ['bg_envy_mirror', 'art/approved/intro/intro.bg.envy_mirror.png', 'art/candidates/intro.bg.envy_mirror/v1.png'],
-      ['bg_blackspit_dock', 'art/approved/intro/intro.bg.blackspit_dock.png', 'art/candidates/intro.bg.blackspit_dock/v1.png'],
-      ['bg_cabin_ambush', 'art/approved/intro/intro.bg.cabin_ambush.png', 'art/candidates/intro.bg.cabin_ambush/v1.png'],
-      ['proscenium', 'art/approved/intro/intro.proscenium.png', 'art/candidates/intro.proscenium/v1.png'],
-      ['curtain', 'art/approved/intro/intro.curtain.png', 'art/candidates/intro.curtain/v1.png'],
+      ['bg_barbershop', 'art/approved/intro/intro.bg.barbershop.png', ''],
+      ['bg_envy_mirror', 'art/approved/intro/intro.bg.envy_mirror.png', ''],
+      ['bg_blackspit_dock', 'art/approved/intro/intro.bg.blackspit_dock.png', ''],
+      ['bg_cabin_ambush', 'art/approved/intro/intro.bg.cabin_ambush.png', ''],
+      ['proscenium', 'art/approved/intro/intro.proscenium.png', ''],
+      ['curtain', 'art/approved/intro/intro.curtain.png', ''],
       ['wall_panel_a', 'art/approved/z1s3/z1s3.wall.panel_a.png', ''],
       ['wall_panel_b', 'art/approved/z1s3/z1s3.wall.panel_b.png', ''],
       ['floor_planks_a', 'art/approved/z1s3/z1s3.floor.planks_b.png', ''],
@@ -391,7 +391,7 @@ export class IntroPuppetTheatre {
   private renderScene1Barbershop(ctx: CanvasRenderingContext2D, w: number, h: number, _t: number): void {
     const bg = this.getImg('bg_barbershop');
     if (bg) {
-      ctx.drawImage(bg, 0, 0, w, h);
+      ctx.drawImage(bg, -72, -62, w + 144, h + 124);
     } else {
       this.drawTheatricalStageBase(ctx, w, h, '#241822');
       const poster = this.getImg('wall_poster');
@@ -405,7 +405,7 @@ export class IntroPuppetTheatre {
   private renderScene2EnvyMirror(ctx: CanvasRenderingContext2D, w: number, h: number, _t: number): void {
     const bg = this.getImg('bg_envy_mirror');
     if (bg) {
-      ctx.drawImage(bg, 0, 0, w, h);
+      ctx.drawImage(bg, -72, -62, w + 144, h + 124);
     } else {
       this.drawTheatricalStageBase(ctx, w, h, '#191424');
       const door = this.getImg('wall_door');
@@ -419,7 +419,7 @@ export class IntroPuppetTheatre {
   private renderScene3BlackspitDock(ctx: CanvasRenderingContext2D, w: number, h: number, _t: number): void {
     const bg = this.getImg('bg_blackspit_dock');
     if (bg) {
-      ctx.drawImage(bg, 0, 0, w, h);
+      ctx.drawImage(bg, -72, -62, w + 144, h + 124);
     } else {
       this.drawTheatricalStageBase(ctx, w, h, '#10222b');
       const door = this.getImg('wall_door');
@@ -434,7 +434,7 @@ export class IntroPuppetTheatre {
   private renderScene4CabinAmbush(ctx: CanvasRenderingContext2D, w: number, h: number, _t: number): void {
     const bg = this.getImg('bg_cabin_ambush');
     if (bg) {
-      ctx.drawImage(bg, 0, 0, w, h);
+      ctx.drawImage(bg, -72, -62, w + 144, h + 124);
     } else {
       this.drawTheatricalStageBase(ctx, w, h, '#241816');
       const sarc = this.getImg('prop_sarcophagus');
@@ -450,7 +450,15 @@ export class IntroPuppetTheatre {
     this.rigs.renderSmoothfaceRig(ctx, this.smoothface);
   }
 
-  private renderPuppetStringsAndSpotlight(_ctx: CanvasRenderingContext2D, _w: number, _h: number, _t: number): void {
-    // Cutout-only stage: no procedural strings or dark vignette blur
+  private renderPuppetStringsAndSpotlight(ctx: CanvasRenderingContext2D, w: number, h: number, _t: number): void {
+    const curtain = this.getImg('curtain');
+    if (curtain) {
+      ctx.save();
+      ctx.drawImage(curtain, -38, -32, 220, h + 64);
+      ctx.translate(w, 0);
+      ctx.scale(-1, 1);
+      ctx.drawImage(curtain, -38, -32, 220, h + 64);
+      ctx.restore();
+    }
   }
 }

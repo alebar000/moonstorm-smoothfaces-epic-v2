@@ -11,7 +11,8 @@
   "versions": {
     "v1": "prompt_v1.txt"
   },
-  "status": "proposed",
+  "status": "approved",
   "proposed_version": "v1",
-  "version": "v1"
+  "version": "v1",
+  "approved_version": "v1"
 }

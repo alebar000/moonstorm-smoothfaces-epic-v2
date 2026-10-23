@@ -333,7 +333,7 @@
     },
     {
       "id": "z1s3.prop.glue",
-      "asset": "art/candidates/z1s3.prop.glue/v2.png",
+      "asset": "art/approved/z1s3/z1s3.prop.glue.png",
       "plane": "floor",
       "x": 1120,
       "y": 725,
@@ -347,7 +347,7 @@
     },
     {
       "id": "z1s3.prop.easel_portrait",
-      "asset": "art/candidates/z1s3.prop.easel_portrait/v2.png",
+      "asset": "art/approved/z1s3/z1s3.prop.easel_portrait.png",
       "plane": "floor",
       "x": 1245,
       "y": 740,
@@ -361,7 +361,7 @@
     },
     {
       "id": "z1s3.prop.hammer_bag",
-      "asset": "art/candidates/z1s3.prop.hammer_bag/v2.png",
+      "asset": "art/approved/z1s3/z1s3.prop.hammer_bag.png",
       "plane": "floor",
       "x": 1390,
       "y": 760,
@@ -375,7 +375,7 @@
     },
     {
       "id": "z1s3.prop.dirty_laundry",
-      "asset": "art/candidates/z1s3.prop.dirty_laundry/v2.png",
+      "asset": "art/approved/z1s3/z1s3.prop.dirty_laundry.png",
       "plane": "floor",
       "x": 1685,
       "y": 755,
@@ -385,7 +385,7 @@
     },
     {
       "id": "z1s3.prop.lamp",
-      "asset": "art/candidates/z1s3.prop.lamp/v2.png",
+      "asset": "art/approved/z1s3/z1s3.prop.lamp.png",
       "plane": "floor",
       "x": 1892,
       "y": 568,
@@ -395,7 +395,7 @@
     },
     {
       "id": "z1s3.prop.bed",
-      "asset": "art/candidates/z1s3.prop.bed/v2.png",
+      "asset": "art/approved/z1s3/z1s3.prop.bed.png",
       "plane": "floor",
       "x": 2150,
       "y": 750,
@@ -408,7 +408,7 @@
     },
     {
       "id": "z1s3.fg.card_table",
-      "asset": "art/candidates/z1s3.fg.card_table/v2.png",
+      "asset": "art/approved/z1s3/z1s3.fg.card_table.png",
       "plane": "foreground",
       "x": 620,
       "y": 900,
@@ -417,7 +417,7 @@
     },
     {
       "id": "z1s3.fg.ship_in_bottle",
-      "asset": "art/candidates/z1s3.fg.ship_in_bottle/v2.png",
+      "asset": "art/approved/z1s3/z1s3.fg.ship_in_bottle.png",
       "plane": "foreground",
       "x": 610,
       "y": 800,
@@ -426,7 +426,7 @@
     },
     {
       "id": "z1s3.fg.chest",
-      "asset": "art/candidates/z1s3.fg.chest/v2.png",
+      "asset": "art/approved/z1s3/z1s3.fg.chest.png",
       "plane": "foreground",
       "x": 1500,
       "y": 900,
@@ -435,7 +435,7 @@
     },
     {
       "id": "z1s3.fg.clown_bust",
-      "asset": "art/candidates/z1s3.fg.clown_bust/v2.png",
+      "asset": "art/approved/z1s3/z1s3.fg.clown_bust.png",
       "plane": "foreground",
       "x": 1530,
       "y": 790,
@@ -444,7 +444,7 @@
     },
     {
       "id": "z1s3.fg.voodoo_doll",
-      "asset": "art/candidates/z1s3.fg.voodoo_doll/v2.png",
+      "asset": "art/approved/z1s3/z1s3.fg.voodoo_doll.png",
       "plane": "foreground",
       "x": 1450,
       "y": 800,
@@ -453,7 +453,7 @@
     },
     {
       "id": "z1s3.fg.hull_rib_left",
-      "asset": "art/candidates/z1s3.fg.hull_rib_left/v2.png",
+      "asset": "art/approved/z1s3/z1s3.fg.hull_rib_left.png",
       "plane": "ribs",
       "x": 0,
       "y": 0,
@@ -462,7 +462,7 @@
     },
     {
       "id": "z1s3.fg.hull_rib_right",
-      "asset": "art/candidates/z1s3.fg.hull_rib_right/v2.png",
+      "asset": "art/approved/z1s3/z1s3.fg.hull_rib_right.png",
       "plane": "ribs",
       "x": 2080,
       "y": 0,

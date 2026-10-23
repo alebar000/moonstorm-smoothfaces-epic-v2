@@ -601,6 +601,202 @@
       "verdict": "approved",
       "reason": "",
       "ts": "2026-10-22T20:53:41"
+    },
+    {
+      "id": "intro.bg.barbershop",
+      "version": "v1",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T23:33:43"
+    },
+    {
+      "id": "intro.bg.blackspit_dock",
+      "version": "v1",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T23:33:44"
+    },
+    {
+      "id": "intro.bg.cabin_ambush",
+      "version": "v1",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T23:33:45"
+    },
+    {
+      "id": "intro.bg.envy_mirror",
+      "version": "v1",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T23:33:48"
+    },
+    {
+      "id": "intro.curtain",
+      "version": "v1",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T23:33:52"
+    },
+    {
+      "id": "intro.proscenium",
+      "version": "v1",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T23:33:53"
+    },
+    {
+      "id": "ui.action.inspect",
+      "version": "v1",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T23:34:01"
+    },
+    {
+      "id": "ui.action.talk",
+      "version": "v1",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T23:34:03"
+    },
+    {
+      "id": "ui.action.use",
+      "version": "v1",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T23:34:06"
+    },
+    {
+      "id": "ui.button_plate",
+      "version": "v1",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T23:34:09"
+    },
+    {
+      "id": "ui.cursor.default",
+      "version": "v1",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T23:34:10"
+    },
+    {
+      "id": "ui.cursor.interact",
+      "version": "v1",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T23:34:12"
+    },
+    {
+      "id": "ui.portrait_frame",
+      "version": "v1",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T23:34:14"
+    },
+    {
+      "id": "ui.scroll_banner",
+      "version": "v1",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T23:34:15"
+    },
+    {
+      "id": "ui.slot_frame",
+      "version": "v1",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T23:34:16"
+    },
+    {
+      "id": "z1s3.fg.card_table",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T23:34:18"
+    },
+    {
+      "id": "z1s3.fg.chest",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T23:34:19"
+    },
+    {
+      "id": "z1s3.fg.clown_bust",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T23:34:22"
+    },
+    {
+      "id": "z1s3.fg.hull_rib_left",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T23:34:23"
+    },
+    {
+      "id": "z1s3.fg.hull_rib_right",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T23:34:24"
+    },
+    {
+      "id": "z1s3.fg.ship_in_bottle",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T23:34:25"
+    },
+    {
+      "id": "z1s3.fg.voodoo_doll",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T23:34:29"
+    },
+    {
+      "id": "z1s3.prop.bed",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T23:34:31"
+    },
+    {
+      "id": "z1s3.prop.dirty_laundry",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T23:34:32"
+    },
+    {
+      "id": "z1s3.prop.easel_portrait",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T23:34:33"
+    },
+    {
+      "id": "z1s3.prop.glue",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T23:34:33"
+    },
+    {
+      "id": "z1s3.prop.hammer_bag",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T23:34:35"
+    },
+    {
+      "id": "z1s3.prop.lamp",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T23:34:40"
     }
   ]
 }
