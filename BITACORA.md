@@ -1649,3 +1649,10 @@ se editan entradas anteriores (si algo cambió, nueva entrada que lo diga).
        - `IntroPuppetTheatre.ts` enmarca las 4 escenas dentro del arco de `intro.proscenium.png` y las cortinas `intro.curtain.png` con recorte de arco interior, marionetas asentadas en el piso/muelle a `~37%` del alto del escenario y placa `SCENE IV OF IV: CRISIS ABOARD THE SUBSTAMPEDE!`.
        - Integradas las 6 texturas `L11` en CSS/DOM (`ui.slot_frame.png`, `ui.portrait_frame.png`, `ui.scroll_banner.png`, `ui.button_plate.png`, `ui.cursor.default.png`, `ui.cursor.interact.png`), las 6 ranuras de inventario visibles sin recorte, ocultamiento automatico de props del cuarto al recogerlos en inventario y cero jerga tecnica en la UI del jugador (`AGENTS.md` Regla 10).
   - **Veredicto Ronda 2 de ambos subagentes criticos**: `verdict: "sin_objeciones"`, `defects: []`.
+
+## 2026-10-23 - Planificacion de Slice 2 (L15-L24) y Hoja de Ruta Completa (L25-L50)
+- **Estado Slice 1 (L0-L13)**: 100% completado y certificado (103/103 piezas aprobadas,   errores en gates.py layout, erdict: "sin_objeciones" de ambos subagentes criticos en L13).
+- **Archivos creados/actualizados**:
+  - PLAN_SLICE2_Y_JUEGO_COMPLETO.md: Desglose completo de los 10 lotes del **Slice 2 (L15-L24, 71 piezas Cutout nuevas)** para cerrar todo el Acto I en el submarino *Substampede* (Z1S3 <-> Z1S2 <-> Z1S1 + Z0 *Spooky Paper Castle*, rigs de **Nihongo Nohondes**, **A Baby** y **The Ventriloquist & Rapoleon**, puzzle musical *Funky Town* y ensamblaje/instalacion final de la **Perpetual Movement Machine**), mas los **Slices 3, 4 y 5 (L25-L50)** para las Zonas 2 a 6 y el epilogo *The Odd-yssey of Dr. Stache*.
+  - SLICE.md y SUPERPROMPT_SESION.md: Actualizados con el estado certificado del Slice 1 y la tabla de lotes L15-L24 lista para arrancar en L15 al inicio de la siguiente sesion.
+  - rt/references/: Copiadas las 6 referencias originales de 2010 para el Slice 2 (ef_z1s1_machineroom_2010.png, ef_z1s1_machineroom_psd_composite.png, ef_z1s2_lobby_2010.png, ef_design_ababy.png, ef_design_ventriloquist.png, ef_z0_spook_castle_psd_composite.png).
