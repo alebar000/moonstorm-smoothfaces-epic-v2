@@ -114,7 +114,6 @@ export class CutoutRigRenderer {
   }
 
   private preloadAllRigAssets(): void {
-    // 1. Approved Mr. Smoothface multi-part cutout pieces (27 pieces in art/approved/smoothface/)
     const sfPieces: Array<[string, string]> = [
       ['sf_shoe_back',        'art/approved/smoothface/smoothface.shoe_back.png'],
       ['sf_leg_back',         'art/approved/smoothface/smoothface.leg_back.png'],
@@ -149,7 +148,6 @@ export class CutoutRigRenderer {
       this.loadImg(k, src);
     }
 
-    // 2. Approved Captain Dread multi-part cutout pieces (22 pieces in art/approved/capdread/)
     const cdPieces: Array<[string, string]> = [
       ['cd_boot_back',        'art/approved/capdread/capdread.boot_back.png'],
       ['cd_leg_back',         'art/approved/capdread/capdread.leg_back.png'],
@@ -192,7 +190,7 @@ export class CutoutRigRenderer {
       idlePhase: Math.random() * Math.PI * 2,
       poseIndex: 0,
       poseTimer: 0,
-      fidgetTimer: 2.2 + Math.random() * 2.5,
+      fidgetTimer: 3.5 + Math.random() * 2.5,
       autoPose: 0,
       talkAmp: 0,
       blinkTimer: 1.8 + Math.random() * 2.5,
@@ -211,13 +209,13 @@ export class CutoutRigRenderer {
     state.poseIndex = poseIdx;
     state.poseTimer = durationSec;
     state.emotionPop = 0.05;
-    this.triggerSquash(state, 1.14, 0.88);
+    this.triggerSquash(state, 1.08, 0.94);
   }
 
   public updatePuppetState(state: PuppetAnimState, dt: number, onPaperFlip?: () => void): void {
-    state.idlePhase += dt * 3.2;
+    state.idlePhase += dt * 3.0;
     if (state.isWalking) {
-      state.walkPhase += dt * 11.5;
+      state.walkPhase += dt * 11.0;
     } else {
       state.walkPhase *= 0.82;
     }
@@ -229,24 +227,6 @@ export class CutoutRigRenderer {
         state.poseIndex = 0;
         state.emotionPop = 0.15;
       }
-    }
-
-    state.fidgetTimer -= dt;
-    if (state.fidgetTimer <= 0) {
-      if (state.id === 'smoothface') {
-        const pool = [0, 0, 0, 3, 4, 6];
-        const nextPose = pool[Math.floor(Math.random() * pool.length)];
-        if (nextPose !== state.autoPose) {
-          state.emotionPop = 0.1;
-        }
-        state.autoPose = nextPose;
-        state.fidgetTimer = state.autoPose === 0 ? 3.0 + Math.random() * 2.2 : 1.5 + Math.random() * 0.9;
-      } else {
-        const nextPool = [0, 0, 1, 2, 3];
-        state.autoPose = nextPool[Math.floor(Math.random() * nextPool.length)];
-        state.fidgetTimer = state.autoPose === 0 ? 2.4 + Math.random() * 2.0 : 1.5 + Math.random() * 1.4;
-      }
-      this.triggerSquash(state, 1.05, 0.96);
     }
 
     state.emotionPop += (1.0 - state.emotionPop) * Math.min(1, dt * 14);
@@ -264,7 +244,7 @@ export class CutoutRigRenderer {
 
     state.blinkTimer -= dt;
     if (state.blinkTimer <= 0) {
-      state.blinkTimer = 2.4 + Math.random() * 3.2;
+      state.blinkTimer = 2.6 + Math.random() * 3.2;
     }
     if (state.blinkTimer < 0.14) {
       const t = state.blinkTimer / 0.14;
@@ -274,7 +254,7 @@ export class CutoutRigRenderer {
     }
   }
 
-  public triggerSquash(state: PuppetAnimState, sx = 1.16, sy = 0.86): void {
+  public triggerSquash(state: PuppetAnimState, sx = 1.08, sy = 0.93): void {
     state.squashX = sx;
     state.squashY = sy;
   }
@@ -298,13 +278,11 @@ export class CutoutRigRenderer {
     const emoImg = this.getImg(keyMap[emotion]);
     if (!emoImg) return;
 
-    const elastic = popScale < 1 ? 1 + Math.sin(popScale * Math.PI) * 0.24 : 1.0;
-    const bobY = Math.sin(phase * 2.6) * 6;
-    const tilt = Math.sin(phase * 3.2) * 0.1;
+    const elastic = popScale < 1 ? 1 + Math.sin(popScale * Math.PI) * 0.18 : 1.0;
+    const bobY = Math.sin(phase * 2.2) * 4;
 
     ctx.save();
     ctx.translate(x, y + bobY);
-    ctx.rotate(tilt);
     ctx.scale(elastic, elastic);
     ctx.drawImage(emoImg, -emoImg.naturalWidth * 0.5, -emoImg.naturalHeight * 0.5);
     ctx.restore();
@@ -335,19 +313,18 @@ export class CutoutRigRenderer {
 
   /**
    * Renders Mr. Smoothface directly from his 27 approved cutout pieces (`art/approved/smoothface/`).
-   * Standing height at scale 1.0 is calibrated to 315 px (foot baseline at y = 414 in rig coordinates).
+   * Proportioned to match Aguilar's `GUImu003.jpg` side-by-side comparison with Captain Dread.
    */
   public renderSmoothfaceRig(ctx: CanvasRenderingContext2D, state: PuppetAnimState): void {
     const normScale = state.scale < 0.72 ? state.scale / 0.54 : state.scale;
-    const rigScale = (315.0 / 335.0) * normScale;
+    const rigScale = 0.76 * normScale;
 
-    // Ground contact shadow under Smoothface's shoes
     ctx.save();
     ctx.translate(state.x, state.y);
-    ctx.fillStyle = 'rgba(6, 4, 10, 0.42)';
+    ctx.fillStyle = 'rgba(12, 9, 8, 0.35)';
     ctx.beginPath();
-    const shadowW = 78 * normScale * (0.85 + 0.15 * Math.abs(state.flipVisual));
-    ctx.ellipse(0, 0, shadowW, 14 * normScale, 0, 0, Math.PI * 2);
+    const shadowW = 64 * normScale * (0.85 + 0.15 * Math.abs(state.flipVisual));
+    ctx.ellipse(0, 0, shadowW, 11 * normScale, 0, 0, Math.PI * 2);
     ctx.fill();
     ctx.restore();
 
@@ -358,11 +335,8 @@ export class CutoutRigRenderer {
       activePose = 6;
     } else if (state.talkAmp > 0.05 && activePose === 0) {
       activePose = 3;
-    } else if (activePose === 0 && state.poseTimer <= 0) {
-      activePose = state.autoPose;
     }
 
-    // Choose swappable variants based on pose and blink state
     let eyesKey = 'sf_eyes_normal';
     if (state.blinkAmount > 0.55) {
       eyesKey = 'sf_eyes_closed';
@@ -377,42 +351,39 @@ export class CutoutRigRenderer {
       browsKey = 'sf_brows_surprised';
     }
 
-    let handFrontKey = 'sf_hand_front_point';
-    let handBackKey = 'sf_hand_back_point';
-    if (activePose === 6 || state.isWalking) {
-      handFrontKey = 'sf_hand_front_fist';
-      handBackKey = 'sf_hand_back_fist';
-    } else if (activePose === 3 || activePose === 7 || activePose === 8) {
+    // Default hands are closed fists (matching composite_preview.png); only front hand points on inspect/grab
+    let handFrontKey = 'sf_hand_front_fist';
+    let handBackKey = 'sf_hand_back_fist';
+    if (activePose === 3 || activePose === 7 || activePose === 8) {
       handFrontKey = 'sf_hand_front_open';
-      handBackKey = 'sf_hand_back_open';
+      handBackKey = 'sf_hand_back_fist';
     } else if (activePose === 4 || activePose === 5) {
       handFrontKey = 'sf_hand_front_point';
-      handBackKey = 'sf_hand_back_open';
+      handBackKey = 'sf_hand_back_fist';
     }
 
     const walkSin = state.isWalking ? Math.sin(state.walkPhase) : 0;
     const walkCos = state.isWalking ? Math.cos(state.walkPhase) : 0;
-    const walkBob = state.isWalking ? Math.abs(Math.sin(state.walkPhase * 2)) * -7 : 0;
-    const bodyBob = Math.sin(state.idlePhase * 1.6) * 2.5 + (state.talkAmp > 0.04 ? Math.sin(state.idlePhase * 8) * state.talkAmp * 4 : 0);
-    const armSwing = state.talkAmp > 0.04 ? Math.sin(state.idlePhase * 7) * state.talkAmp * 0.12 : Math.sin(state.idlePhase * 1.6) * 0.03;
+    const walkBob = state.isWalking ? Math.abs(Math.sin(state.walkPhase * 2)) * -5 : 0;
+    const bodyBob = Math.sin(state.idlePhase * 1.5) * 1.8 + (state.talkAmp > 0.04 ? Math.sin(state.idlePhase * 7) * state.talkAmp * 2.5 : 0);
+    const armSwing = state.talkAmp > 0.04 ? Math.sin(state.idlePhase * 6) * state.talkAmp * 0.06 : Math.sin(state.idlePhase * 1.5) * 0.02;
 
     ctx.save();
     ctx.translate(state.x, state.y + walkBob);
 
     const cardScaleX = Math.abs(state.flipVisual) < 0.09 ? (state.flipVisual >= 0 ? 0.09 : -0.09) : state.flipVisual;
     ctx.scale(cardScaleX * state.squashX * rigScale, state.squashY * rigScale);
-    // Rig origin: center X = 165, sole baseline Y = 414
     ctx.translate(-165, -414);
 
     // Back leg & shoe stride
-    const backStrideX = walkSin * -12;
-    const backLiftY = Math.max(0, -walkCos) * -8;
+    const backStrideX = walkSin * -10;
+    const backLiftY = Math.max(0, -walkCos) * -6;
     this.drawPart(ctx, 'sf_shoe_back', SMOOTHFACE_BOXES.shoe_back, backStrideX, backLiftY);
     this.drawPart(ctx, 'sf_leg_back', SMOOTHFACE_BOXES.leg_back, backStrideX * 0.6, backLiftY * 0.5);
 
     // Front leg & shoe stride
-    const frontStrideX = walkSin * 12;
-    const frontLiftY = Math.max(0, walkCos) * -8;
+    const frontStrideX = walkSin * 10;
+    const frontLiftY = Math.max(0, walkCos) * -6;
     this.drawPart(ctx, 'sf_shoe_front', SMOOTHFACE_BOXES.shoe_front, frontStrideX, frontLiftY);
     this.drawPart(ctx, 'sf_leg_front', SMOOTHFACE_BOXES.leg_front, frontStrideX * 0.6, frontLiftY * 0.5);
 
@@ -420,12 +391,12 @@ export class CutoutRigRenderer {
     this.drawPart(ctx, 'sf_pants', SMOOTHFACE_BOXES.pants, 0, bodyBob * 0.4);
 
     // Back arm & back hand
-    const hbBox = SMOOTHFACE_BOXES[handBackKey.replace('sf_', '')] || SMOOTHFACE_BOXES.hand_back_point;
-    this.drawPart(ctx, handBackKey, hbBox, 0, bodyBob - armSwing * 18, -armSwing);
-    this.drawPart(ctx, 'sf_arm_back', SMOOTHFACE_BOXES.arm_back, 0, bodyBob, -armSwing * 0.5);
+    const hbBox = SMOOTHFACE_BOXES[handBackKey.replace('sf_', '')] || SMOOTHFACE_BOXES.hand_back_fist;
+    this.drawPart(ctx, handBackKey, hbBox, 0, bodyBob - armSwing * 10, -armSwing * 0.5);
+    this.drawPart(ctx, 'sf_arm_back', SMOOTHFACE_BOXES.arm_back, 0, bodyBob, -armSwing * 0.3);
 
     // Head, eyes, brows (behind high coat collar per canon!)
-    const headBob = bodyBob * 1.15;
+    const headBob = bodyBob * 1.1;
     this.drawPart(ctx, 'sf_head', SMOOTHFACE_BOXES.head, 0, headBob);
     this.drawPart(ctx, eyesKey, SMOOTHFACE_BOXES[eyesKey.replace('sf_', '')], 0, headBob);
     this.drawPart(ctx, browsKey, SMOOTHFACE_BOXES[browsKey.replace('sf_', '')], 0, headBob);
@@ -434,25 +405,25 @@ export class CutoutRigRenderer {
     this.drawPart(ctx, 'sf_torso', SMOOTHFACE_BOXES.torso, 0, bodyBob);
 
     // Front hand & front arm
-    const hfBox = SMOOTHFACE_BOXES[handFrontKey.replace('sf_', '')] || SMOOTHFACE_BOXES.hand_front_point;
-    this.drawPart(ctx, handFrontKey, hfBox, 0, bodyBob + armSwing * 18, armSwing);
+    const hfBox = SMOOTHFACE_BOXES[handFrontKey.replace('sf_', '')] || SMOOTHFACE_BOXES.hand_front_fist;
+    this.drawPart(ctx, handFrontKey, hfBox, 0, bodyBob + armSwing * 10, armSwing * 0.5);
     if (activePose === 4) {
       const mag = this.getImg('sf_prop_magnifier');
       if (mag) {
         ctx.drawImage(mag, 286, 152 + bodyBob, 52, 56);
       }
     }
-    this.drawPart(ctx, 'sf_arm_front', SMOOTHFACE_BOXES.arm_front, 0, bodyBob, armSwing * 0.5);
+    this.drawPart(ctx, 'sf_arm_front', SMOOTHFACE_BOXES.arm_front, 0, bodyBob, armSwing * 0.3);
 
-    // Floating emotion cutout badge above Smoothface's head
+    // Floating emotion cutout badge above Smoothface's head (only on explicit action poses)
     let activeEmotion: EmotionCutoutType | null = null;
     if (activePose === 4) activeEmotion = 'question';
     else if (activePose === 5 || activePose === 7) activeEmotion = 'idea';
     else if (activePose === 8) activeEmotion = 'shock';
-    else if (activePose === 6 || state.grumpyMode) activeEmotion = 'anger';
+    else if (activePose === 6 && state.poseTimer > 0) activeEmotion = 'anger';
 
     if (activeEmotion) {
-      this.renderEmotionCutout(ctx, activeEmotion, 205, 42, state.idlePhase, state.emotionPop);
+      this.renderEmotionCutout(ctx, activeEmotion, 205, 32, state.idlePhase, state.emotionPop);
     }
 
     ctx.restore();
@@ -460,26 +431,22 @@ export class CutoutRigRenderer {
 
   /**
    * Renders Captain Dread directly from his 22 approved cutout pieces (`art/approved/capdread/`).
-   * Standing height at scale 1.0 is calibrated to 330 px crown-to-sole (370 px including hat).
    */
   public renderNpcPuppet(ctx: CanvasRenderingContext2D, state: PuppetAnimState): void {
     const normScale = state.scale < 0.72 ? state.scale / 0.55 : state.scale;
-    // Crown (y=74) to sole (y=463) is 389px in rig space -> 330px at scale 1.0
-    const rigScale = (330.0 / 389.0) * normScale;
+    const rigScale = 0.94 * normScale;
 
     ctx.save();
     ctx.translate(state.x, state.y);
-    ctx.fillStyle = 'rgba(6, 4, 10, 0.42)';
+    ctx.fillStyle = 'rgba(12, 9, 8, 0.35)';
     ctx.beginPath();
-    ctx.ellipse(0, 0, 82 * normScale, 15 * normScale, 0, 0, Math.PI * 2);
+    ctx.ellipse(0, 0, 74 * normScale, 12 * normScale, 0, 0, Math.PI * 2);
     ctx.fill();
     ctx.restore();
 
     let activePose = state.poseIndex;
     if (state.talkAmp > 0.05 && state.poseTimer <= 0) {
       activePose = Math.sin(state.idlePhase * 1.9) > 0 ? 1 : 2;
-    } else if (activePose === 0 && state.poseTimer <= 0) {
-      activePose = state.autoPose;
     }
 
     let eyesKey = 'cd_eyes_normal';
@@ -506,15 +473,13 @@ export class CutoutRigRenderer {
       handBackKey = 'cd_hand_back_open';
     }
 
-    const bodyBob = Math.sin(state.idlePhase * 1.4) * 2.2 + (state.talkAmp > 0.04 ? Math.sin(state.idlePhase * 7) * state.talkAmp * 3.5 : 0);
+    const bodyBob = Math.sin(state.idlePhase * 1.4) * 1.8 + (state.talkAmp > 0.04 ? Math.sin(state.idlePhase * 7) * state.talkAmp * 2.5 : 0);
 
     ctx.save();
     ctx.translate(state.x, state.y);
-    // Note: Captain Dread's native approved pieces face LEFT (-1). If state.facing === -1, keep unflipped (+1); if facing === 1, flip horizontally (-1).
     const dreadFlip = -state.flipVisual;
     const cardScaleX = Math.abs(dreadFlip) < 0.09 ? (dreadFlip >= 0 ? 0.09 : -0.09) : dreadFlip;
     ctx.scale(cardScaleX * state.squashX * rigScale, state.squashY * rigScale);
-    // Rig origin: center X = 195, sole baseline Y = 463
     ctx.translate(-195, -463);
 
     this.drawPart(ctx, 'cd_boot_back', CAPDREAD_BOXES.boot_back);
@@ -527,42 +492,18 @@ export class CutoutRigRenderer {
     this.drawPart(ctx, handBackKey, hbBox, 0, bodyBob);
     this.drawPart(ctx, 'cd_arm_back', CAPDREAD_BOXES.arm_back, 0, bodyBob);
 
-    const headBob = bodyBob * 1.15;
+    const headBob = bodyBob * 1.1;
     this.drawPart(ctx, 'cd_head', CAPDREAD_BOXES.head, 0, headBob);
     this.drawPart(ctx, eyesKey, CAPDREAD_BOXES[eyesKey.replace('cd_', '')], 0, headBob);
     this.drawPart(ctx, browsKey, CAPDREAD_BOXES[browsKey.replace('cd_', '')], 0, headBob);
     this.drawPart(ctx, 'cd_hat', CAPDREAD_BOXES.hat, 0, headBob);
 
     this.drawPart(ctx, 'cd_torso', CAPDREAD_BOXES.torso, 0, bodyBob);
-    this.drawPart(ctx, 'cd_beard', CAPDREAD_BOXES.beard, 0, headBob + (state.talkAmp > 0.05 ? Math.abs(Math.sin(state.idlePhase * 10)) * 3 : 0));
+    this.drawPart(ctx, 'cd_beard', CAPDREAD_BOXES.beard, 0, headBob + (state.talkAmp > 0.05 ? Math.abs(Math.sin(state.idlePhase * 10)) * 2.5 : 0));
 
     const hfBox = CAPDREAD_BOXES[handFrontKey.replace('cd_', '')] || CAPDREAD_BOXES.hand_front_fist;
     this.drawPart(ctx, handFrontKey, hfBox, 0, bodyBob);
     this.drawPart(ctx, 'cd_arm_front', CAPDREAD_BOXES.arm_front, 0, bodyBob);
-
-    // Pipe smoke rings rising from Captain Dread's pipe
-    for (let i = 0; i < 3; i++) {
-      const t = (state.idlePhase * 0.45 + i * 0.33) % 1;
-      const sx = 112 - t * 24 + Math.sin(t * 6 + i) * 6;
-      const sy = 152 - t * 55 + headBob;
-      const r = 5 + t * 12;
-      ctx.strokeStyle = `rgba(235, 228, 215, ${(1 - t) * 0.55})`;
-      ctx.lineWidth = 2.2;
-      ctx.beginPath();
-      ctx.arc(sx, sy, r, 0, Math.PI * 2);
-      ctx.stroke();
-    }
-
-    if (activePose === 2 || activePose === 3) {
-      this.renderEmotionCutout(
-        ctx,
-        activePose === 3 ? 'shock' : 'anger',
-        185,
-        -10,
-        state.idlePhase,
-        state.emotionPop
-      );
-    }
 
     ctx.restore();
   }

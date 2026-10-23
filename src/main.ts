@@ -154,11 +154,11 @@ class SmoothfacePilotGame {
     );
 
     // Canonical Slice 1 Z1S3 Initial Placements (`layout/z1s3.layout.json`: Smoothface 315px, Captain Dread 330px)
-    this.player = this.rigs.createAnimState('smoothface', 700, 810, 1.0, 1);
-    this.menuShowcasePuppet = this.rigs.createAnimState('smoothface', 220, 430, 1.15, 1);
+    this.player = this.rigs.createAnimState('smoothface', 700, 800, 1.0, 1);
+    this.menuShowcasePuppet = this.rigs.createAnimState('smoothface', 220, 430, 1.0, 1);
 
     this.npcs = {
-      cap_dread: this.rigs.createAnimState('cap_dread', 1420, 815, 1.0, -1),
+      cap_dread: this.rigs.createAnimState('cap_dread', 1540, 805, 1.0, -1),
       nihongo: this.rigs.createAnimState('nihongo', 725, 810, 1.0, 1),
       a_baby: this.rigs.createAnimState('a_baby', 705, 815, 1.0, 1),
       ventriloquist: this.rigs.createAnimState('ventriloquist', 1410, 815, 1.0, -1),
@@ -251,33 +251,12 @@ class SmoothfacePilotGame {
     }
   }
 
-  public spawnSparks(x: number, y: number, color = '#ffcf56', count = 18): void {
-    for (let i = 0; i < count; i++) {
-      const ang = Math.random() * Math.PI * 2;
-      const spd = 50 + Math.random() * 180;
-      this.fxParticles.push({
-        x,
-        y,
-        vx: Math.cos(ang) * spd,
-        vy: Math.sin(ang) * spd - 45,
-        life: 0,
-        maxLife: 0.45 + Math.random() * 0.42,
-        color,
-        size: 3 + Math.random() * 4.5,
-      });
-    }
+  public spawnSparks(_x: number, _y: number, _color = '#ffcf56', _count = 18): void {
+    // Cutout-only mode: no procedural canvas spark circles
   }
 
-  private spawnSteamPuff(x: number, y: number, dirX = 1): void {
-    this.steamPuffs.push({
-      x,
-      y,
-      vx: dirX * (28 + Math.random() * 35),
-      vy: -32 - Math.random() * 28,
-      r: 8 + Math.random() * 8,
-      life: 0,
-      maxLife: 1.1 + Math.random() * 0.6,
-    });
+  private spawnSteamPuff(_x: number, _y: number, _dirX = 1): void {
+    // Cutout-only mode: no procedural canvas steam circles
   }
 
   private setTemporaryPlayerPose(poseIndex: number, durationMs = 1700, grumpy = false): void {
@@ -324,7 +303,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MOONSTORM STUDIOS',
         'smoothface',
-        'art/approved/smoothface/smoothface.head.png',
+        'characters/smoothface/portrait.png',
         'CREDITS',
         'Created by Alexander Barquero, Jose David Aguilar, Juan Vicente Garcia, Luis F. Ledezma, Cristian Morales, and Brian "BooT". Welcome aboard the Substampede!'
       );
@@ -696,7 +675,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'art/approved/smoothface/smoothface.head.png',
+        'characters/smoothface/portrait.png',
         'OBSERVING',
         "Captain Dread's submarine quarters! Scavenge the Bag of Hammers, Tripod Portrait Stand, and Desk Super-Glue to assemble da Vinci's Perpetual Movement Machine!"
       );
@@ -709,7 +688,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'art/approved/smoothface/smoothface.head.png',
+        'characters/smoothface/portrait.png',
         'SCHEMING',
         'The Submarine VIP Lounge. A Baby is guarding his musical Candy Vault, and the Ventriloquist is arguing with his wooden dummy.'
       );
@@ -747,7 +726,7 @@ class SmoothfacePilotGame {
         this.speakLine(
           'MR. SMOOTHFACE',
           'smoothface',
-          'art/approved/smoothface/smoothface.head.png',
+          'characters/smoothface/portrait.png',
           'GRUMPY',
           "The submarine pedal drive is snapped in half, and I refuse to pedal like a common peasant! I need to build da Vinci's Perpetual Movement Machine and install it here."
         );
@@ -756,7 +735,7 @@ class SmoothfacePilotGame {
         this.speakLine(
           'CAPTAIN DREAD',
           'cap_dread',
-          'art/approved/capdread/capdread.head.png',
+          'characters/capdread/portrait.png',
           'TRIUMPHANT',
           "YARRR! Look at those hammers swing! Da Vinci's Perpetual Movement Machine is propelling the Substampede at 900 knots toward Blackspit Island!"
         );
@@ -770,7 +749,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'art/approved/smoothface/smoothface.head.png',
+        'characters/smoothface/portrait.png',
         'NOSTALGIC',
         'The Haunted Castle Courtyard! Look at that creepy two-faced cut-out sun. Whatever you do, do NOT knock on the haunted castle door...'
       );
@@ -883,20 +862,7 @@ class SmoothfacePilotGame {
 
     const pt = this.getCanvasCoords(e);
 
-    // Check if clicking the Left or Right Wide-Room Scroll Indicator Arrows on the stage edge!
-    const maxCamX = Math.max(0, this.getRoomWidth() - 1600);
-    if (maxCamX > 0 && pt.viewY >= 360 && pt.viewY <= 540) {
-      if (pt.viewX <= 72 && this.cameraX > 15) {
-        const dest = this.clampToWalkbox(this.player.x - 560, this.player.y);
-        this.walkTo(dest.x, dest.y, null);
-        return;
-      }
-      if (pt.viewX >= 1528 && this.cameraX < maxCamX - 15) {
-        const dest = this.clampToWalkbox(this.player.x + 560, this.player.y);
-        this.walkTo(dest.x, dest.y, null);
-        return;
-      }
-    }
+
 
     const hit = this.findHotspotAt(pt.x, pt.y);
 
@@ -1039,7 +1005,7 @@ class SmoothfacePilotGame {
         this.speakLine(
           'MR. SMOOTHFACE',
           'smoothface',
-          'art/approved/smoothface/smoothface.head.png',
+          'characters/smoothface/portrait.png',
           'ANNOYED',
           'Hello, rusty submarine hatch! Open sesame! ...Nope, still requires manual labor.'
         );
@@ -1049,7 +1015,7 @@ class SmoothfacePilotGame {
         this.speakLine(
           'MR. SMOOTHFACE',
           'smoothface',
-          'art/approved/smoothface/smoothface.head.png',
+          'characters/smoothface/portrait.png',
           'VICTORY!',
           "With Leonardo da Vinci's Perpetual Movement Machine assembled in my pockets, I am ready to march out of Captain Dread's cabin and power the Substampede to Blackspit Island!"
         );
@@ -1060,7 +1026,7 @@ class SmoothfacePilotGame {
         this.speakLine(
           'MR. SMOOTHFACE',
           'smoothface',
-          'art/approved/smoothface/smoothface.head.png',
+          'characters/smoothface/portrait.png',
           'INSPECTING PASSAGE',
           "That heavy bulkhead door leads forward toward the submarine drive room. Before I head out, I must scavenge the Bag of Hammers, the Tripod Portrait Stand, and the Desk Super-Glue here in Captain Dread's Cabin and assemble the Perpetual Movement Machine!"
         );
@@ -1075,7 +1041,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'art/approved/smoothface/smoothface.head.png',
+        'characters/smoothface/portrait.png',
         'SCHEMING',
         `Using ${itemName} on ${hit.name} will not assemble the machine! Click the Bag of Hammers, Tripod Portrait Stand, and Industrial Super-Glue inside the top inventory bar to combine them!`
       );
@@ -1090,7 +1056,7 @@ class SmoothfacePilotGame {
         this.speakLine(
           'MR. SMOOTHFACE',
           'smoothface',
-          'art/approved/smoothface/smoothface.head.png',
+          'characters/smoothface/portrait.png',
           'ANALYZING',
           'A canvas bag overflowing with heavy iron hammers. Why does Captain Dread sleep next to a sack of sledgehammers?'
         );
@@ -1098,7 +1064,7 @@ class SmoothfacePilotGame {
         this.speakLine(
           'MR. SMOOTHFACE',
           'smoothface',
-          'art/approved/smoothface/smoothface.head.png',
+          'characters/smoothface/portrait.png',
           'WHISPERING',
           '"Hello, my heavy iron friends. Soon you shall defy the laws of thermodynamics."'
         );
@@ -1109,7 +1075,7 @@ class SmoothfacePilotGame {
         this.speakLine(
           'MR. SMOOTHFACE',
           'smoothface',
-          'art/approved/smoothface/smoothface.head.png',
+          'characters/smoothface/portrait.png',
           'ACQUIRED!',
           'Got the Bag of Hammers! Heavy, blunt, and wonderfully destructive.'
         );
@@ -1122,7 +1088,7 @@ class SmoothfacePilotGame {
         this.speakLine(
           'MR. SMOOTHFACE',
           'smoothface',
-          'art/approved/smoothface/smoothface.head.png',
+          'characters/smoothface/portrait.png',
           'CRITIQUING',
           'An oil portrait of Captain Dread looking heroic on a sturdy wooden tripod easel stand.'
         );
@@ -1131,7 +1097,7 @@ class SmoothfacePilotGame {
         this.speakLine(
           'MR. SMOOTHFACE',
           'smoothface',
-          'art/approved/smoothface/smoothface.head.png',
+          'characters/smoothface/portrait.png',
           'SCOFFING',
           "Even in an oil painting, Captain Dread's beard takes up eighty percent of the canvas."
         );
@@ -1143,7 +1109,7 @@ class SmoothfacePilotGame {
         this.speakLine(
           'CAPTAIN DREAD',
           'cap_dread',
-          'art/approved/capdread/capdread.head.png',
+          'characters/capdread/portrait.png',
           'INDIGNANT',
           'Oi! Careful with me royal portrait easel, Mr. Smoothface! That tripod is genuine Driftwood Mahogany!'
         );
@@ -1156,7 +1122,7 @@ class SmoothfacePilotGame {
         this.speakLine(
           'MR. SMOOTHFACE',
           'smoothface',
-          'art/approved/smoothface/smoothface.head.png',
+          'characters/smoothface/portrait.png',
           'OBSERVING',
           this.flags.gotGlue
             ? "Captain Dread's mahogany desk drawer. I already took the Industrial Super-Glue."
@@ -1167,7 +1133,7 @@ class SmoothfacePilotGame {
         this.speakLine(
           'MR. SMOOTHFACE',
           'smoothface',
-          'art/approved/smoothface/smoothface.head.png',
+          'characters/smoothface/portrait.png',
           'SARCASTIC',
           'I do not converse with furniture. I am an evil genius, not a ventriloquist.'
         );
@@ -1179,7 +1145,7 @@ class SmoothfacePilotGame {
         this.speakLine(
           'MR. SMOOTHFACE',
           'smoothface',
-          'art/approved/smoothface/smoothface.head.png',
+          'characters/smoothface/portrait.png',
           'ACQUIRED!',
           "I opened Captain Dread's desk drawer and found a bottle of Industrial Super-Glue! Sticky enough to hold a Rube Goldberg contraption together."
         );
@@ -1187,7 +1153,7 @@ class SmoothfacePilotGame {
         this.speakLine(
           'MR. SMOOTHFACE',
           'smoothface',
-          'art/approved/smoothface/smoothface.head.png',
+          'characters/smoothface/portrait.png',
           'EMPTY',
           'Just unpaid submarine parking tickets and beard grooming receipts in this drawer now.'
         );
@@ -1200,7 +1166,7 @@ class SmoothfacePilotGame {
         this.speakLine(
           'MR. SMOOTHFACE',
           'smoothface',
-          'art/approved/smoothface/smoothface.head.png',
+          'characters/smoothface/portrait.png',
           'INSPECTING',
           'Captain Dread, commander of the Substampede. Ninety percent curly bouffant hair, ten percent questionable maritime credentials.'
         );
@@ -1212,7 +1178,7 @@ class SmoothfacePilotGame {
         this.speakLine(
           'CAPTAIN DREAD',
           'cap_dread',
-          'art/approved/capdread/capdread.head.png',
+          'characters/capdread/portrait.png',
           'WARNING',
           'YARRR! Keep yer hairless mitts off me royal pirate coat, lad!'
         );
@@ -1222,7 +1188,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'CAPTAIN DREAD',
         'cap_dread',
-        'art/approved/capdread/capdread.head.png',
+        'characters/capdread/portrait.png',
         'BOOMING',
         'Yarrr! Welcome to me luxury quarters aboard the Substampede, hairless lad! Why the long, smooth face?',
         [
@@ -1230,7 +1196,7 @@ class SmoothfacePilotGame {
             label: '"How is this rust-bucket submarine actually propelled?"',
             replySpeaker: 'CAPTAIN DREAD',
             replyVoice: 'cap_dread',
-            replyPortrait: 'art/approved/capdread/capdread.head.png',
+            replyPortrait: 'characters/capdread/portrait.png',
             replyMood: 'PROUD',
             replyText:
               'One hundred percent eco-friendly pedal power! Me faithful engineer Nihongo Nohondes is down in the Engine Room pedaling the main drive right now!',
@@ -1239,7 +1205,7 @@ class SmoothfacePilotGame {
             label: '"Where did you put the spare wooden Ship\'s Helm?"',
             replySpeaker: 'CAPTAIN DREAD',
             replyVoice: 'cap_dread',
-            replyPortrait: 'art/approved/capdread/capdread.head.png',
+            replyPortrait: 'characters/capdread/portrait.png',
             replyMood: 'GRUMBLING',
             replyText:
               'That tiny gorilla toddler "A Baby" in the VIP Lounge locked me spare Ship\'s Helm inside his high-tech Candy Vault! It uses a musical synthesizer lock!',
@@ -1248,7 +1214,7 @@ class SmoothfacePilotGame {
             label: '"Your beard is almost as obnoxious as my brother Morgan\'s."',
             replySpeaker: 'CAPTAIN DREAD',
             replyVoice: 'cap_dread',
-            replyPortrait: 'art/approved/capdread/capdread.head.png',
+            replyPortrait: 'characters/capdread/portrait.png',
             replyMood: 'LAUGHING',
             replyText:
               'BWAHAHA! Jealousy will get ye nowhere, cue-ball! Climb down the iron ladder if ye want to see real submarine engineering!',
@@ -1263,7 +1229,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'art/approved/smoothface/smoothface.head.png',
+        'characters/smoothface/portrait.png',
         'GRUMPY',
         'A solid gold Egyptian sarcophagus inside a submarine. Even an ancient mummy has a better sculpted chin beard than me! Bah!'
       );
@@ -1274,7 +1240,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'art/approved/smoothface/smoothface.head.png',
+        'characters/smoothface/portrait.png',
         'BEMUSED',
         'A 1970s wood-grain CRT television broadcasting deep-sea static right next to a bowl of water. Truly finest pirate electrical safety standards.'
       );
@@ -1285,7 +1251,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'art/approved/smoothface/smoothface.head.png',
+        'characters/smoothface/portrait.png',
         'INSPECTING',
         "Captain Dread's grumpy pet goldfish swimming in a tiny glass bowl. Even inside a submarine surrounded by the Atlantic Ocean, this fish is stuck in a bowl."
       );
@@ -1297,7 +1263,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'art/approved/smoothface/smoothface.head.png',
+        'characters/smoothface/portrait.png',
         'DIALING',
         'A crimson rotary telephone wired to the bridge. Wait, there is no bridge on this submarine, just a bicycle in the basement!'
       );
@@ -1308,7 +1274,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'art/approved/smoothface/smoothface.head.png',
+        'characters/smoothface/portrait.png',
         'INSPECTING',
         "Captain Dread's wooden bunk bed. The mattress is stuffed with old nautical charts and beard trimmings."
       );
@@ -1319,7 +1285,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'art/approved/smoothface/smoothface.head.png',
+        'characters/smoothface/portrait.png',
         'PEERING OUTSIDE',
         'Murky cyan ocean depths outside the riveted brass porthole. Even the deep-sea fish out there have catfish whiskers!'
       );
@@ -1332,7 +1298,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'art/approved/smoothface/smoothface.head.png',
+        'characters/smoothface/portrait.png',
         'HIGH VOLTAGE!',
         'BZZZT! A frayed electrical cable showering live sparks across the hull. I am NOT touching that bare wire!'
       );
@@ -1346,7 +1312,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'art/approved/smoothface/smoothface.head.png',
+        'characters/smoothface/portrait.png',
         'STEAMING',
         'HSSSSS! A leaky brass steam valve venting scalding clouds of vapour. Great for dramatic supervillain entrances, terrible for my complexion.'
       );
@@ -1357,7 +1323,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'art/approved/smoothface/smoothface.head.png',
+        'characters/smoothface/portrait.png',
         'FOURTH WALL',
         '"MOONSTORM STUDIOS". Six Costa Rican gentlemen who had the audacity to draw me without a single hair on my chin!'
       );
@@ -1369,7 +1335,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'art/approved/smoothface/smoothface.head.png',
+        'characters/smoothface/portrait.png',
         'FURIOUS!',
         'GAH! A framed portrait of my twin brother Dr. Morgan Stache and his gloriously thick moustache! Why does everyone on this submarine worship his upper lip?!'
       );
@@ -1380,7 +1346,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'art/approved/smoothface/smoothface.head.png',
+        'characters/smoothface/portrait.png',
         'OBSERVING',
         "Captain Dread's wall of exotic theatre masks, a decorative wheel, and tin rations. At least the masks do not have bushy moustaches."
       );
@@ -1391,7 +1357,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'art/approved/smoothface/smoothface.head.png',
+        'characters/smoothface/portrait.png',
         'CRITIQUING',
         "Captain Dread's spare trenchcoat and tricorn hat hanging on a crooked wooden peg rack. It smells like sea salt, pipe tobacco, and unearned confidence."
       );
@@ -1403,7 +1369,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'art/approved/smoothface/smoothface.head.png',
+        'characters/smoothface/portrait.png',
         'PEERING',
         'The submarine optical periscope! According to the depth gauge, we are currently cruising three leagues beneath a flock of unsuspecting seagulls.'
       );
@@ -1414,7 +1380,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'art/approved/smoothface/smoothface.head.png',
+        'characters/smoothface/portrait.png',
         'OBSERVING',
         'A crooked wooden crate nightstand and a precariously tilted reading lamp. One good submarine torpedo jolt and that lamp is history.'
       );
@@ -1426,7 +1392,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'art/approved/smoothface/smoothface.head.png',
+        'characters/smoothface/portrait.png',
         'DISGUSTED',
         'A pile of unwashed pirate laundry on the deck planks. Even the Malefic Gentlemen Syndicate has stricter hygiene standards than this!'
       );
@@ -1437,7 +1403,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'art/approved/smoothface/smoothface.head.png',
+        'characters/smoothface/portrait.png',
         'FASCINATED',
         'A miniature pirate galleon trapped inside a glass bottle on the foreground chart table. At least that ship does not run on stationary bicycles.'
       );
@@ -1449,7 +1415,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'art/approved/smoothface/smoothface.head.png',
+        'characters/smoothface/portrait.png',
         'CREEPED OUT',
         'A creepy painted clown head bust and a yellow voodoo pincushion doll sitting on a sea chest. Wait: why does the voodoo doll have pins stuck where a moustache should be?!'
       );
@@ -1464,7 +1430,7 @@ class SmoothfacePilotGame {
         this.speakLine(
           'MR. SMOOTHFACE',
           'smoothface',
-          'art/approved/smoothface/smoothface.head.png',
+          'characters/smoothface/portrait.png',
           'INSPECTING',
           'A Baby: a gorilla-proportioned mobster toddler chomping a swirl lollipop like a cigar. His knuckles are larger than my head.'
         );
@@ -1504,7 +1470,7 @@ class SmoothfacePilotGame {
             label: 'Open the Chocolate-Smeared Musical Keypad right now!',
             replySpeaker: 'MR. SMOOTHFACE',
             replyVoice: 'smoothface',
-            replyPortrait: 'art/approved/smoothface/smoothface.head.png',
+            replyPortrait: 'characters/smoothface/portrait.png',
             replyMood: 'TINKERING',
             replyText: 'Let us play the 4-note "Funky Town" melody on these chocolate-stained keys!',
             openModal: 'keypad',
@@ -1519,7 +1485,7 @@ class SmoothfacePilotGame {
         this.speakLine(
           'MR. SMOOTHFACE',
           'smoothface',
-          'art/approved/smoothface/smoothface.head.png',
+          'characters/smoothface/portrait.png',
           'INSPECTING',
           'An exhausted stage ventriloquist holding Clash McTrevor, a wooden dummy wearing a Napoleonic bicorne hat with a live red ambulance siren bolted on top.'
         );
@@ -1563,7 +1529,7 @@ class SmoothfacePilotGame {
         this.speakLine(
           'MR. SMOOTHFACE',
           'smoothface',
-          'art/approved/smoothface/smoothface.head.png',
+          'characters/smoothface/portrait.png',
           'SOLVED',
           'I already cracked A Baby\'s "Funky Town" synthesizer lock and claimed the Ship\'s Wooden Helm!'
         );
@@ -1581,7 +1547,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'art/approved/smoothface/smoothface.head.png',
+        'characters/smoothface/portrait.png',
         'CRITIQUING',
         'A tufted crimson velvet lounge sofa. Covered in lollipop wrappers, ventriloquist sawdust, and sea-salt stains.'
       );
@@ -1592,7 +1558,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'art/approved/smoothface/smoothface.head.png',
+        'characters/smoothface/portrait.png',
         'IMPRESSED',
         'A traditional Japanese samurai tapestry and katana rack belonging to Nihongo Nohondes. Wait: he is actually Costa Rican and just really loves anime.'
       );
@@ -1604,7 +1570,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'art/approved/smoothface/smoothface.head.png',
+        'characters/smoothface/portrait.png',
         'CAUTIOUS',
         'A wooden shipping crate addressed to "Evil Deeds College, Blackspit Island". Two glowing yellow eyes are blinking inside. I will leave it shut.'
       );
@@ -1619,7 +1585,7 @@ class SmoothfacePilotGame {
         this.speakLine(
           'MR. SMOOTHFACE',
           'smoothface',
-          'art/approved/smoothface/smoothface.head.png',
+          'characters/smoothface/portrait.png',
           'INSPECTING',
           "Nihongo Nohondes, the Substampede's overworked pedal mechanic. His calves look like cannonballs, but his morale is completely shattered."
         );
@@ -1668,7 +1634,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'art/approved/smoothface/smoothface.head.png',
+        'characters/smoothface/portrait.png',
         'EUREKA!',
         "I picked up Leonardo da Vinci's Perpetual Movement Machine Blueprint! Now I just need to combine the Ship's Helm, Portrait Stand, Bag of Hammers, and Super-Glue!"
       );
@@ -1698,7 +1664,7 @@ class SmoothfacePilotGame {
         this.speakLine(
           'MR. SMOOTHFACE',
           'smoothface',
-          'art/approved/smoothface/smoothface.head.png',
+          'characters/smoothface/portrait.png',
           'EVIL GENIUS',
           'My da Vinci Perpetual Movement Machine is bolted to the drive shaft, swinging four iron hammers in an infinite gravitational loop! Eat your heart out, Morgan!'
         );
@@ -1707,7 +1673,7 @@ class SmoothfacePilotGame {
         this.speakLine(
           'MR. SMOOTHFACE',
           'smoothface',
-          'art/approved/smoothface/smoothface.head.png',
+          'characters/smoothface/portrait.png',
           'DISGUSTED',
           'The main bicycle pedal is snapped clean off, and an aspiring supervillain does NOT do cardio. I must assemble the Perpetual Movement Machine and install it here!'
         );
@@ -1719,7 +1685,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'art/approved/smoothface/smoothface.head.png',
+        'characters/smoothface/portrait.png',
         'AMUSED',
         'The bilge rats down here have their own glowing television and a lifetime supply of potatoes. They live better than the crew.'
       );
@@ -1730,7 +1696,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'art/approved/smoothface/smoothface.head.png',
+        'characters/smoothface/portrait.png',
         'SUSPICIOUS',
         'Rusty barrels of "Submarine Bilge Juice". It is glowing slightly green, which explains why the bilge rats have their own living room.'
       );
@@ -1760,7 +1726,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
-        'art/approved/smoothface/smoothface.head.png',
+        'characters/smoothface/portrait.png',
         'OBSERVING',
         'Cristian Morales and Jose David Aguilar\'s original paper cut-out sun! Even the sun has a creepier grin than Captain Dread.'
       );
@@ -1922,7 +1888,7 @@ class SmoothfacePilotGame {
         this.speakLine(
           'MR. SMOOTHFACE',
           'smoothface',
-          'art/approved/smoothface/smoothface.head.png',
+          'characters/smoothface/portrait.png',
           'ALMOST READY!',
           `To finish assembling da Vinci's Perpetual Movement Machine in my pockets, I still need to scavenge: ${missingNames}!`
         );
@@ -1934,7 +1900,7 @@ class SmoothfacePilotGame {
     this.speakLine(
       'MR. SMOOTHFACE',
       'smoothface',
-      'art/approved/smoothface/smoothface.head.png',
+      'characters/smoothface/portrait.png',
       'NOPE',
       `Combining ${ITEMS_CATALOG[itemA]?.name} with ${ITEMS_CATALOG[itemB]?.name} makes zero sense, even by Blackspit Island standards.`
     );
@@ -1955,7 +1921,7 @@ class SmoothfacePilotGame {
     this.speakLine(
       'MR. SMOOTHFACE',
       'smoothface',
-      'art/approved/smoothface/smoothface.head.png',
+      'characters/smoothface/portrait.png',
       'INVENTION COMPLETE!',
       "BWAHAHA! By gluing the Bag of Hammers onto the Tripod Portrait Stand with Captain Dread's Industrial Super-Glue, I have assembled Leonardo da Vinci's Perpetual Movement Machine!"
     );
@@ -1977,7 +1943,7 @@ class SmoothfacePilotGame {
     this.speakLine(
       'MR. SMOOTHFACE',
       'smoothface',
-      'art/approved/smoothface/smoothface.head.png',
+      'characters/smoothface/portrait.png',
       'PUZZLE SOLVED! FULL STEAM AHEAD!',
       "IT WORKS! The heavy hammers pull the ship's helm down, which flips the next hammer over the top in an endless gravitational loop! The Substampede is blasting toward Blackspit Island at supersonic speed!"
     );
@@ -2266,11 +2232,10 @@ class SmoothfacePilotGame {
 
     // 2. Update Main Menu Puppet Showcase (cycling poses + separate emotion cutouts!)
     const nowMs = performance.now();
-    this.menuShowcasePuppet.talkAmp =
-      activeVoice === 'smoothface' ? voiceAmp : Math.max(0, Math.sin(nowMs * 0.004) * 0.25);
-    this.menuShowcasePuppet.isWalking = Math.floor(nowMs / 3600) % 3 === 1;
-    this.menuShowcasePuppet.grumpyMode = Math.floor(nowMs / 4800) % 3 === 2;
-    this.menuShowcasePuppet.poseIndex = Math.floor(nowMs / 4800) % 3 === 0 ? 4 : 0;
+    this.menuShowcasePuppet.talkAmp = activeVoice === 'smoothface' ? voiceAmp : 0;
+    this.menuShowcasePuppet.isWalking = false;
+    this.menuShowcasePuppet.grumpyMode = false;
+    this.menuShowcasePuppet.poseIndex = 0;
     this.rigs.updatePuppetState(this.menuShowcasePuppet, dt);
 
     // 3. Update Player Movement along Spacious 1600x900 Walkbox
@@ -2546,18 +2511,6 @@ class SmoothfacePilotGame {
       item.draw();
     }
 
-    // ---------------------------------------------------------
-    // LAYER 3: LIVING ENVIRONMENTAL FX LOOPS (STEAM, SPARKS, BUBBLES)
-    // ---------------------------------------------------------
-    this.renderEnvironmentalParticles(ctx);
-
-    // ---------------------------------------------------------
-    // LAYER 4: VOLUMETRIC SWEEPING LAMP CONES & PORTHOLE BEAMS
-    // ---------------------------------------------------------
-    if (this.cfgLighting) {
-      this.renderVolumetricLighting(ctx, w, h, parX, parY);
-    }
-
     if (this.streetSenseActive) {
       this.renderStreetSenseHotspots(ctx);
     }
@@ -2567,10 +2520,6 @@ class SmoothfacePilotGame {
     }
 
     ctx.restore(); // End world-space camera translation (-this.cameraX)
-
-    // Render screen-space theatrical shadowbox vignette & wide-room scroll arrows
-    this.renderViewportVignetteAndScrollArrows(ctx, w, h);
-
     ctx.restore();
   }
 
@@ -2627,491 +2576,26 @@ class SmoothfacePilotGame {
     const drawX = -obj.w * 0.5;
     const drawY = obj.idleAnim === 'swing' ? 0 : -obj.h * 0.5;
 
-    // Paper Cut-Out drop shadow & hover golden rim glow
-    if (isHovered) {
-      ctx.shadowColor = 'rgba(255, 215, 95, 0.85)';
-      ctx.shadowBlur = 16;
-      ctx.shadowOffsetX = 0;
-      ctx.shadowOffsetY = 0;
-    } else if (obj.inSituSeamless && clickPulse <= 0.01) {
+    if (!img) {
+      ctx.restore();
+      return;
+    }
+
+    // Paper Cut-Out drop shadow per STYLE_BIBLE.md section 3
+    if (obj.inSituSeamless && clickPulse <= 0.01 && !isHovered) {
       ctx.shadowColor = 'transparent';
       ctx.shadowBlur = 0;
       ctx.shadowOffsetX = 0;
       ctx.shadowOffsetY = 0;
     } else {
-      ctx.shadowColor = 'rgba(8, 5, 14, 0.68)';
-      ctx.shadowBlur = 6;
-      ctx.shadowOffsetX = 5;
-      ctx.shadowOffsetY = 6;
+      ctx.shadowColor = isHovered ? 'rgba(16, 12, 10, 0.65)' : 'rgba(16, 12, 10, 0.45)';
+      ctx.shadowBlur = 3;
+      ctx.shadowOffsetX = isHovered ? 5 : 3;
+      ctx.shadowOffsetY = isHovered ? 6 : 4;
     }
 
-    if (img) {
-      ctx.drawImage(img, drawX, drawY, obj.w, obj.h);
-    } else {
-      this.renderPendingCutoutPropFallback(ctx, obj, drawX, drawY);
-    }
-
+    ctx.drawImage(img, drawX, drawY, obj.w, obj.h);
     ctx.shadowColor = 'transparent';
-
-    // Render object-specific animated FX loops directly in local object coordinates!
-    this.renderObjectSpecificFX(ctx, obj, drawX, drawY, t);
-
-    ctx.restore();
-  }
-
-  private renderPendingCutoutPropFallback(
-    ctx: CanvasRenderingContext2D,
-    obj: SceneObjectDef,
-    drawX: number,
-    drawY: number
-  ): void {
-    ctx.save();
-    ctx.strokeStyle = '#1c1410';
-    ctx.lineWidth = 3.5;
-    ctx.lineJoin = 'round';
-    if (obj.id === 'z1s3.prop.hammer_bag') {
-      // Canvas bag with iron sledgehammers sticking out
-      ctx.fillStyle = '#8a5830';
-      ctx.fillRect(drawX + 26, drawY + 6, 12, 42);
-      ctx.fillRect(drawX + 62, drawY + 10, 12, 42);
-      ctx.fillStyle = '#6b707b';
-      ctx.fillRect(drawX + 14, drawY + 4, 34, 16);
-      ctx.fillRect(drawX + 50, drawY + 8, 34, 16);
-      ctx.strokeRect(drawX + 14, drawY + 4, 34, 16);
-      ctx.strokeRect(drawX + 50, drawY + 8, 34, 16);
-      ctx.fillStyle = '#c89d66';
-      ctx.beginPath();
-      ctx.roundRect(drawX + 16, drawY + 38, obj.w - 32, obj.h - 44, 14);
-      ctx.fill();
-      ctx.stroke();
-    } else if (obj.id === 'z1s3.prop.easel_portrait') {
-      // Wooden tripod easel + Captain Dread portrait frame
-      ctx.strokeStyle = '#603913';
-      ctx.lineWidth = 8;
-      ctx.beginPath();
-      ctx.moveTo(drawX + obj.w * 0.5, drawY + 18);
-      ctx.lineTo(drawX + 22, drawY + obj.h - 6);
-      ctx.moveTo(drawX + obj.w * 0.5, drawY + 18);
-      ctx.lineTo(drawX + obj.w - 22, drawY + obj.h - 6);
-      ctx.moveTo(drawX + obj.w * 0.5, drawY + 18);
-      ctx.lineTo(drawX + obj.w * 0.5, drawY + obj.h - 4);
-      ctx.stroke();
-      ctx.lineWidth = 3.5;
-      ctx.strokeStyle = '#1c1410';
-      ctx.fillStyle = '#d69a2a';
-      ctx.fillRect(drawX + 22, drawY + 34, obj.w - 44, 125);
-      ctx.strokeRect(drawX + 22, drawY + 34, obj.w - 44, 125);
-      ctx.fillStyle = '#3a2e4c';
-      ctx.fillRect(drawX + 34, drawY + 46, obj.w - 68, 101);
-      ctx.strokeRect(drawX + 34, drawY + 46, obj.w - 68, 101);
-    } else if (obj.id === 'z1s3.prop.glue') {
-      // Bottle of Industrial Super-Glue on desk
-      ctx.fillStyle = '#e3b65a';
-      ctx.beginPath();
-      ctx.moveTo(drawX + obj.w * 0.5, drawY + 4);
-      ctx.lineTo(drawX + 16, drawY + 24);
-      ctx.lineTo(drawX + obj.w - 16, drawY + 24);
-      ctx.closePath();
-      ctx.fill();
-      ctx.stroke();
-      ctx.fillStyle = '#f2ead8';
-      ctx.beginPath();
-      ctx.roundRect(drawX + 10, drawY + 24, obj.w - 20, obj.h - 28, 8);
-      ctx.fill();
-      ctx.stroke();
-      ctx.fillStyle = '#b8292f';
-      ctx.fillRect(drawX + 14, drawY + 36, obj.w - 28, 16);
-    } else if (obj.id === 'z1s3.prop.bed') {
-      // Captain Dread's Wooden Bunk Bed
-      ctx.fillStyle = '#5a3620';
-      ctx.beginPath();
-      ctx.roundRect(drawX + 8, drawY + 40, obj.w - 16, obj.h - 46, 10);
-      ctx.fill();
-      ctx.stroke();
-      ctx.fillStyle = '#8b2626';
-      ctx.beginPath();
-      ctx.roundRect(drawX + 20, drawY + 95, obj.w - 40, 90, 8);
-      ctx.fill();
-      ctx.stroke();
-      ctx.fillStyle = '#e8dec8';
-      ctx.beginPath();
-      ctx.roundRect(drawX + 32, drawY + 75, 78, 36, 10);
-      ctx.fill();
-      ctx.stroke();
-    } else if (obj.id === 'z1s3.prop.lamp') {
-      // Tilted brass reading lamp on nightstand
-      ctx.fillStyle = '#d69a2a';
-      ctx.beginPath();
-      ctx.moveTo(drawX + 16, drawY + 48);
-      ctx.lineTo(drawX + 32, drawY + 12);
-      ctx.lineTo(drawX + obj.w - 32, drawY + 12);
-      ctx.lineTo(drawX + obj.w - 16, drawY + 48);
-      ctx.closePath();
-      ctx.fill();
-      ctx.stroke();
-      ctx.fillStyle = '#8a5830';
-      ctx.fillRect(drawX + obj.w * 0.5 - 6, drawY + 48, 12, 46);
-      ctx.strokeRect(drawX + obj.w * 0.5 - 6, drawY + 48, 12, 46);
-      ctx.fillRect(drawX + 22, drawY + 92, obj.w - 44, 14);
-      ctx.strokeRect(drawX + 22, drawY + 92, obj.w - 44, 14);
-    }
-    ctx.restore();
-  }
-
-  private renderObjectSpecificFX(
-    ctx: CanvasRenderingContext2D,
-    obj: SceneObjectDef,
-    drawX: number,
-    drawY: number,
-    t: number
-  ): void {
-    if (obj.fxType === 'porthole') {
-      // Animated deep-sea fish silhouette swimming across the porthole glass + rising bubbles
-      const cx = drawX + obj.w * 0.5;
-      const cy = drawY + obj.h * 0.5;
-      const fishOffset = Math.sin(t * 0.9 + obj.x * 0.01) * (obj.w * 0.22);
-      const fishY = cy + Math.cos(t * 1.7 + obj.x) * 12;
-      const fishDir = Math.cos(t * 0.9 + obj.x * 0.01) >= 0 ? 1 : -1;
-
-      ctx.save();
-      ctx.translate(cx + fishOffset, fishY);
-      ctx.scale(fishDir, 1);
-      ctx.fillStyle = 'rgba(12, 52, 68, 0.55)';
-      ctx.beginPath();
-      ctx.ellipse(0, 0, 16, 7, 0, 0, Math.PI * 2);
-      ctx.fill();
-      ctx.beginPath();
-      ctx.moveTo(-14, 0);
-      ctx.lineTo(-24, -7);
-      ctx.lineTo(-24, 7);
-      ctx.closePath();
-      ctx.fill();
-      ctx.restore();
-
-      // Tiny rising porthole bubbles
-      for (let b = 0; b < 3; b++) {
-        const by = cy + 28 - (((t * 28 + b * 19) % 56));
-        const bx = cx - 18 + b * 18 + Math.sin(t * 3 + b) * 4;
-        ctx.strokeStyle = 'rgba(185, 250, 255, 0.65)';
-        ctx.lineWidth = 1.5;
-        ctx.beginPath();
-        ctx.arc(bx, by, 3.2, 0, Math.PI * 2);
-        ctx.stroke();
-      }
-    } else if (obj.fxType === 'fishbowl') {
-      // Animated orange goldfish swimming in a figure-8 inside the glass bowl
-      const fx = drawX + obj.w * 0.5 + Math.sin(t * 2.5) * 14;
-      const fy = drawY + obj.h * 0.56 + Math.cos(t * 3.4) * 6;
-      const dir = Math.cos(t * 2.5) >= 0 ? 1 : -1;
-      ctx.save();
-      ctx.translate(fx, fy);
-      ctx.scale(dir, 1);
-      ctx.fillStyle = '#ff6d1c';
-      ctx.beginPath();
-      ctx.ellipse(0, 0, 9, 5.5, 0, 0, Math.PI * 2);
-      ctx.fill();
-      ctx.beginPath();
-      ctx.moveTo(-7, 0);
-      ctx.lineTo(-14, -5);
-      ctx.lineTo(-14, 5);
-      ctx.closePath();
-      ctx.fill();
-      ctx.restore();
-    } else if (obj.fxType === 'crt_tv') {
-      // Flickering CRT scanline glow on the television screen
-      const flick = 0.16 + 0.08 * Math.sin(t * 22);
-      const sx = drawX + obj.w * 0.48;
-      const sy = drawY + obj.h * 0.54;
-      const g = ctx.createRadialGradient(sx, sy, 4, sx, sy, obj.w * 0.48);
-      g.addColorStop(0, `rgba(120, 240, 255, ${flick})`);
-      g.addColorStop(1, 'rgba(120, 240, 255, 0)');
-      ctx.fillStyle = g;
-      ctx.beginPath();
-      ctx.arc(sx, sy, obj.w * 0.48, 0, Math.PI * 2);
-      ctx.fill();
-    } else if (obj.fxType === 'spark_cable') {
-      // Crackling electric zig-zag arc at the bottom tip of the frayed wire
-      if (Math.sin(t * 17 + obj.x) > 0.15) {
-        const tipX = drawX + obj.w * 0.5;
-        const tipY = drawY + obj.h * 0.88;
-        ctx.strokeStyle = '#68f7ff';
-        ctx.lineWidth = 2.5;
-        ctx.beginPath();
-        ctx.moveTo(tipX - 10, tipY - 6);
-        ctx.lineTo(tipX + (Math.random() - 0.5) * 18, tipY + 6);
-        ctx.lineTo(tipX + (Math.random() - 0.5) * 22, tipY + 16);
-        ctx.stroke();
-      }
-    } else if (obj.fxType === 'sarcophagus_eyes') {
-      // Spooky glowing golden mummy eyes blinking periodically inside the sarcophagus shadow
-      const blink = Math.sin(t * 1.4) > -0.65;
-      if (blink) {
-        const ex = drawX + obj.w * 0.52;
-        const ey = drawY + obj.h * 0.24;
-        ctx.fillStyle = '#ffdf5e';
-        ctx.beginPath();
-        ctx.arc(ex - 9, ey, 3.2, 0, Math.PI * 2);
-        ctx.arc(ex + 9, ey, 3.2, 0, Math.PI * 2);
-        ctx.fill();
-      }
-    } else if (obj.fxType === 'crate_eyes') {
-      // Glowing yellow eyes blinking inside the Evil Deeds College shipping crate
-      const blink = Math.sin(t * 2.1 + 1.2) > -0.75;
-      if (blink) {
-        const ex = drawX + obj.w * 0.48;
-        const ey = drawY + obj.h * 0.46;
-        ctx.fillStyle = '#ffe44d';
-        ctx.beginPath();
-        ctx.arc(ex - 11, ey, 3.8, 0, Math.PI * 2);
-        ctx.arc(ex + 11, ey, 3.8, 0, Math.PI * 2);
-        ctx.fill();
-      }
-    } else if (obj.fxType === 'funky_vault') {
-      // Glowing status LED on A Baby's Candy Vault
-      const pulse = 0.6 + 0.4 * Math.sin(t * 4.5);
-      ctx.fillStyle = this.flags.vaultUnlocked
-        ? `rgba(59, 232, 216, ${pulse})`
-        : `rgba(255, 195, 70, ${pulse})`;
-      ctx.beginPath();
-      ctx.arc(drawX + obj.w * 0.5, drawY + obj.h * 0.18, 7, 0, Math.PI * 2);
-      ctx.fill();
-    } else if (obj.fxType === 'pedal_engine') {
-      // Engine Room Main Pedal Station: either broken alarm or installed spinning Perpetual Machine!
-      const cx = drawX + obj.w * 0.52;
-      const cy = drawY + obj.h * 0.52;
-      if (this.flags.perpetualMachineInstalled) {
-        const pm = this.getImg('perpetual_machine');
-        const helm = this.getImg('item_helm');
-        ctx.save();
-        ctx.translate(cx, cy);
-        if (pm) {
-          ctx.drawImage(pm, -115, -115, 230, 250);
-        }
-        if (helm) {
-          ctx.save();
-          ctx.translate(0, -20);
-          ctx.rotate(this.perpetualWheelAngle);
-          ctx.drawImage(helm, -86, -86, 172, 172);
-          ctx.restore();
-        }
-        ctx.restore();
-        if (Math.random() < 0.35) {
-          this.spawnSparks(obj.x + obj.w * 0.5, obj.y + obj.h * 0.48, '#ffdf6b', 2);
-        }
-      } else if (this.flags.pedalBrokenBam) {
-        const alarm = Math.max(0, Math.sin(t * 8.5));
-        const g = ctx.createRadialGradient(cx, cy, 6, cx, cy, 130);
-        g.addColorStop(0, `rgba(255, 50, 40, ${alarm * 0.58})`);
-        g.addColorStop(1, 'rgba(255, 0, 0, 0)');
-        ctx.fillStyle = g;
-        ctx.beginPath();
-        ctx.arc(cx, cy, 130, 0, Math.PI * 2);
-        ctx.fill();
-      }
-    }
-  }
-
-  private renderEnvironmentalParticles(ctx: CanvasRenderingContext2D): void {
-    // 1. Hand-drawn paper-cutout style Steam Puffs rising from leaky pipe valves
-    for (const sp of this.steamPuffs) {
-      const progress = sp.life / sp.maxLife;
-      const alpha = Math.max(0, Math.sin(progress * Math.PI) * 0.55);
-      ctx.save();
-      ctx.globalAlpha = alpha;
-      ctx.fillStyle = '#f2ead8';
-      ctx.strokeStyle = '#2b2430';
-      ctx.lineWidth = 2;
-      ctx.beginPath();
-      ctx.arc(sp.x, sp.y, sp.r, 0, Math.PI * 2);
-      ctx.fill();
-      ctx.stroke();
-      ctx.restore();
-    }
-
-    // 2. Electric Sparks & Footstep Dust Particles
-    for (const p of this.fxParticles) {
-      const alpha = Math.max(0, 1 - p.life / p.maxLife);
-      ctx.fillStyle = p.color;
-      ctx.globalAlpha = alpha;
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-      ctx.fill();
-    }
-    ctx.globalAlpha = 1;
-
-    // 3. Ambient deep-sea bubbles in the Engine Room
-    if (this.currentRoom === 'Z1S1') {
-      for (const b of this.bubbles) {
-        ctx.strokeStyle = 'rgba(130, 240, 255, 0.22)';
-        ctx.lineWidth = 1.5;
-        ctx.beginPath();
-        ctx.arc(b.x, b.y, b.r, 0, Math.PI * 2);
-        ctx.stroke();
-      }
-    }
-  }
-
-  private renderLolDemoRoom(
-    ctx: CanvasRenderingContext2D,
-    parX: number,
-    parY: number,
-    w: number,
-    h: number
-  ): void {
-    const bg = this.getImg('spook_castle_bg');
-    if (bg) {
-      ctx.drawImage(bg, parX * 0.3, parY * 0.3, w, h);
-    }
-    const t = performance.now() * 0.001;
-    const sun = this.getImg('lol_sun');
-    if (sun) {
-      ctx.save();
-      ctx.translate(275 + parX * 0.2, 170 + parY * 0.2);
-      ctx.rotate(Math.sin(t * 1.2) * 0.08);
-      ctx.drawImage(sun, -105, -105, 210, 210);
-      ctx.restore();
-    }
-    if (this.flags.trollSpawned) {
-      const troll = this.getImg('lol_troll');
-      if (troll) {
-        const bounce = Math.abs(Math.sin(t * 6)) * 22;
-        ctx.drawImage(troll, 920, 210 - bounce, 340, 410);
-      }
-    }
-  }
-
-  private renderVolumetricLighting(
-    ctx: CanvasRenderingContext2D,
-    w: number,
-    h: number,
-    parX: number,
-    parY: number
-  ): void {
-    const t = performance.now() * 0.001;
-    ctx.save();
-    ctx.globalCompositeOperation = 'screen';
-
-    // Swinging volumetric light cones from every `cage_lamp` object in the room
-    for (const obj of this.getVisibleSceneObjects()) {
-      const pFactor = obj.parallaxFactor ?? 1.0;
-      const anchorX = obj.parallaxAnchorX ?? obj.x + obj.w * 0.5;
-      const { dx: parDx, dy: parDy } = this.computeParallaxOffset(pFactor, anchorX, parX, parY);
-      if (obj.fxType === 'cage_lamp') {
-        const lx = obj.x + obj.w * 0.5 + parDx;
-        const ly = obj.y + obj.h * 0.72 + parDy;
-        const swing = Math.sin(t * 2.1 + obj.x * 0.013) * 0.065;
-        ctx.save();
-        ctx.translate(lx, ly);
-        ctx.rotate(swing);
-        const coneGrad = ctx.createLinearGradient(0, 0, 0, 560);
-        coneGrad.addColorStop(0, 'rgba(255, 215, 125, 0.20)');
-        coneGrad.addColorStop(0.65, 'rgba(255, 195, 95, 0.07)');
-        coneGrad.addColorStop(1, 'rgba(0, 0, 0, 0)');
-        ctx.fillStyle = coneGrad;
-        ctx.beginPath();
-        ctx.moveTo(-28, 0);
-        ctx.lineTo(28, 0);
-        ctx.lineTo(240, 560);
-        ctx.lineTo(-240, 560);
-        ctx.closePath();
-        ctx.fill();
-        ctx.restore();
-      } else if (obj.fxType === 'porthole') {
-        const px = obj.x + obj.w * 0.5 + parDx;
-        const py = obj.y + obj.h * 0.5 + parDy;
-        const pGrad = ctx.createRadialGradient(px, py, 12, px, py, 260);
-        pGrad.addColorStop(0, 'rgba(70, 238, 255, 0.18)');
-        pGrad.addColorStop(0.55, 'rgba(70, 238, 255, 0.06)');
-        pGrad.addColorStop(1, 'rgba(0, 0, 0, 0)');
-        ctx.fillStyle = pGrad;
-        ctx.beginPath();
-        ctx.arc(px, py, 260, 0, Math.PI * 2);
-        ctx.fill();
-      }
-    }
-
-    // Floating dust motes in the light beams (tiled across wide rooms)
-    const roomW = this.getRoomWidth();
-    for (const m of this.dustMotes) {
-      ctx.fillStyle = `rgba(255, 240, 200, ${m.alpha})`;
-      ctx.beginPath();
-      ctx.arc(m.x, m.y, m.r, 0, Math.PI * 2);
-      if (roomW > 1600) {
-        ctx.arc(m.x + 1400, m.y, m.r, 0, Math.PI * 2);
-      }
-      ctx.fill();
-    }
-    ctx.restore();
-  }
-
-  private renderViewportVignetteAndScrollArrows(
-    ctx: CanvasRenderingContext2D,
-    w: number,
-    h: number
-  ): void {
-    if (this.cfgLighting) {
-      const vig = ctx.createRadialGradient(w * 0.5, h * 0.48, w * 0.38, w * 0.5, h * 0.5, w * 0.72);
-      vig.addColorStop(0, 'rgba(0, 0, 0, 0)');
-      vig.addColorStop(1, 'rgba(6, 4, 10, 0.40)');
-      ctx.fillStyle = vig;
-      ctx.fillRect(0, 0, w, h);
-    }
-
-    const maxCamX = Math.max(0, this.getRoomWidth() - 1600);
-    if (maxCamX <= 0) return;
-
-    const tQuant = Math.floor(performance.now() * 0.012) / 12;
-    const bob = Math.sin(tQuant * 4.5) * 4;
-
-    ctx.save();
-    ctx.font = 'bold 14px "Cinzel", Georgia, serif';
-    ctx.textAlign = 'center';
-
-    // Left Scroll Arrow Plaque when camera can scroll left
-    if (this.cameraX > 15) {
-      ctx.save();
-      ctx.translate(42 + bob, 450);
-      ctx.fillStyle = 'rgba(28, 19, 16, 0.88)';
-      ctx.strokeStyle = '#e3b65a';
-      ctx.lineWidth = 2.5;
-      ctx.beginPath();
-      ctx.roundRect(-28, -42, 56, 84, 8);
-      ctx.fill();
-      ctx.stroke();
-      ctx.fillStyle = '#ffe28a';
-      ctx.beginPath();
-      ctx.moveTo(10, -18);
-      ctx.lineTo(-12, 0);
-      ctx.lineTo(10, 18);
-      ctx.closePath();
-      ctx.fill();
-      ctx.fillStyle = '#f5e8c8';
-      ctx.fillText('BAY', 0, 34);
-      ctx.restore();
-    }
-
-    // Right Scroll Arrow Plaque when camera can scroll right
-    if (this.cameraX < maxCamX - 15) {
-      ctx.save();
-      ctx.translate(w - 42 - bob, 450);
-      ctx.fillStyle = 'rgba(28, 19, 16, 0.88)';
-      ctx.strokeStyle = '#e3b65a';
-      ctx.lineWidth = 2.5;
-      ctx.beginPath();
-      ctx.roundRect(-28, -42, 56, 84, 8);
-      ctx.fill();
-      ctx.stroke();
-      ctx.fillStyle = '#ffe28a';
-      ctx.beginPath();
-      ctx.moveTo(-10, -18);
-      ctx.lineTo(12, 0);
-      ctx.lineTo(-10, 18);
-      ctx.closePath();
-      ctx.fill();
-      ctx.fillStyle = '#f5e8c8';
-      ctx.fillText('BAY', 0, 34);
-      ctx.restore();
-    }
     ctx.restore();
   }
 
