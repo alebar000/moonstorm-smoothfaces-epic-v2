@@ -1,0 +1,202 @@
+{
+  "id": "ventriloquist",
+  "name": "The Ventriloquist & Rapoleon",
+  "height_px": 340,
+  "height_tolerance": 0.04,
+  "facing_default": 1,
+  "root": "torso",
+  "canvas": {
+    "w": 360,
+    "h": 410
+  },
+  "parts": {
+    "shoes": {
+      "asset": "art/approved/ventriloquist/ventrilo.shoes.png",
+      "z_index": 11,
+      "parent": "legs",
+      "offset": [
+        126,
+        332
+      ],
+      "size": [
+        104,
+        46
+      ],
+      "pivots": {
+        "ankles": [
+          156,
+          340
+        ]
+      }
+    },
+    "legs": {
+      "asset": "art/approved/ventriloquist/ventrilo.legs.png",
+      "z_index": 14,
+      "parent": "torso",
+      "offset": [
+        118,
+        206
+      ],
+      "size": [
+        78,
+        146
+      ],
+      "pivots": {
+        "waist": [
+          156,
+          214
+        ],
+        "ankles": [
+          156,
+          340
+        ]
+      }
+    },
+    "arm_back": {
+      "asset": "art/approved/ventriloquist/ventrilo.arm_back.png",
+      "z_index": 16,
+      "parent": "torso",
+      "offset": [
+        174,
+        118
+      ],
+      "size": [
+        48,
+        114
+      ],
+      "pivots": {
+        "shoulder": [
+          188,
+          128
+        ],
+        "hand": [
+          196,
+          220
+        ]
+      }
+    },
+    "torso": {
+      "asset": "art/approved/ventriloquist/ventrilo.torso.png",
+      "z_index": 20,
+      "parent": null,
+      "offset": [
+        112,
+        96
+      ],
+      "size": [
+        92,
+        148
+      ],
+      "pivots": {
+        "neck": [
+          158,
+          106
+        ],
+        "shoulder_front": [
+          128,
+          124
+        ],
+        "shoulder_back": [
+          188,
+          128
+        ],
+        "waist": [
+          156,
+          214
+        ]
+      }
+    },
+    "head_jaw": {
+      "asset": "art/approved/ventriloquist/ventrilo.head_jaw.png",
+      "z_index": 30,
+      "parent": "torso",
+      "offset": [
+        130,
+        22
+      ],
+      "size": [
+        76,
+        112
+      ],
+      "pivots": {
+        "neck": [
+          158,
+          106
+        ],
+        "eyes": [
+          174,
+          64
+        ]
+      }
+    },
+    "eyes.normal": {
+      "asset": "art/approved/ventriloquist/ventrilo.eyes.normal.png",
+      "z_index": 32,
+      "parent": "head_jaw",
+      "offset": [
+        152,
+        52
+      ],
+      "size": [
+        44,
+        28
+      ],
+      "pivots": {
+        "anchor": [
+          174,
+          64
+        ]
+      }
+    },
+    "arm_front": {
+      "asset": "art/approved/ventriloquist/ventrilo.arm_front.png",
+      "z_index": 38,
+      "parent": "torso",
+      "offset": [
+        116,
+        114
+      ],
+      "size": [
+        104,
+        118
+      ],
+      "pivots": {
+        "shoulder": [
+          128,
+          124
+        ],
+        "hand": [
+          208,
+          162
+        ]
+      }
+    },
+    "dummy_rapoleon": {
+      "asset": "art/approved/ventriloquist/ventrilo.dummy_rapoleon.png",
+      "z_index": 42,
+      "parent": "arm_front",
+      "offset": [
+        188,
+        68
+      ],
+      "size": [
+        124,
+        144
+      ],
+      "pivots": {
+        "base": [
+          224,
+          182
+        ]
+      }
+    }
+  },
+  "variant_groups": {
+    "eyes": {
+      "default": "normal",
+      "variants": {
+        "normal": "eyes.normal"
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "id": "ventrilo.dummy_rapoleon",
+  "category": "ventriloquist",
+  "kind": "body_part",
+  "what": "Rapoleon wooden ventriloquist dummy in 3/4 view facing right: sideways navy Napoleonic bicorne hat, military tailcoat with gold chain, clacking jaw, holding cardboard mic",
+  "target_height_px": 144,
+  "height_fraction_of_smoothface": 0.457,
+  "pivot_hint": "puppet base at bottom-center",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/ref_design_ventriloquist.png",
+    "art/references/palette_characters.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "approved",
+  "proposed_version": "v1",
+  "version": "v1",
+  "approved_version": "v1"
+}

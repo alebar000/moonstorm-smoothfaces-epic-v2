@@ -1279,6 +1279,86 @@
       "meta": "art/candidates/ababy.legs_diaper/meta.json",
       "approved_at": "2026-10-23T14:55:24",
       "reason": "L17 A Baby approved (passes all gates and critics)"
+    },
+    "ventrilo.torso": {
+      "path": "art/approved/ventriloquist/ventrilo.torso.png",
+      "version": "v1",
+      "sha256": "52f7875a96d950ac5c421440e7e60a2db5c520c96d6d193aad8576780f48161e",
+      "category": "ventriloquist",
+      "kind": "body_part",
+      "meta": "art/candidates/ventrilo.torso/meta.json",
+      "approved_at": "2026-10-23T14:59:58",
+      "reason": "L18 Ventriloquist & Rapoleon approved (passes all gates and critics)"
+    },
+    "ventrilo.head_jaw": {
+      "path": "art/approved/ventriloquist/ventrilo.head_jaw.png",
+      "version": "v1",
+      "sha256": "9edc59f32f98defeacc623986b0af273c6f5bffd37af40a9f390a2e071d8770b",
+      "category": "ventriloquist",
+      "kind": "body_part",
+      "meta": "art/candidates/ventrilo.head_jaw/meta.json",
+      "approved_at": "2026-10-23T14:59:58",
+      "reason": "L18 Ventriloquist & Rapoleon approved (passes all gates and critics)"
+    },
+    "ventrilo.eyes.normal": {
+      "path": "art/approved/ventriloquist/ventrilo.eyes.normal.png",
+      "version": "v1",
+      "sha256": "ab50ec2a5fab47484850182404333c46e165513de402ec3f16d621c8dfba9032",
+      "category": "ventriloquist",
+      "kind": "body_part",
+      "meta": "art/candidates/ventrilo.eyes.normal/meta.json",
+      "approved_at": "2026-10-23T14:59:58",
+      "reason": "L18 Ventriloquist & Rapoleon approved (passes all gates and critics)"
+    },
+    "ventrilo.arm_front": {
+      "path": "art/approved/ventriloquist/ventrilo.arm_front.png",
+      "version": "v1",
+      "sha256": "15fba1ddcfa60459709e5a218564ed0eff10fe72e958c6697d750c5de050c85a",
+      "category": "ventriloquist",
+      "kind": "body_part",
+      "meta": "art/candidates/ventrilo.arm_front/meta.json",
+      "approved_at": "2026-10-23T14:59:58",
+      "reason": "L18 Ventriloquist & Rapoleon approved (passes all gates and critics)"
+    },
+    "ventrilo.arm_back": {
+      "path": "art/approved/ventriloquist/ventrilo.arm_back.png",
+      "version": "v1",
+      "sha256": "74929f84e8391fd5d20331c50e0ea3541b214b91bc2c30fa71b3d16f06446d39",
+      "category": "ventriloquist",
+      "kind": "body_part",
+      "meta": "art/candidates/ventrilo.arm_back/meta.json",
+      "approved_at": "2026-10-23T14:59:58",
+      "reason": "L18 Ventriloquist & Rapoleon approved (passes all gates and critics)"
+    },
+    "ventrilo.dummy_rapoleon": {
+      "path": "art/approved/ventriloquist/ventrilo.dummy_rapoleon.png",
+      "version": "v1",
+      "sha256": "6dce94c0267ce0678c53ad729bbc25d24095151715bb6dc488f45e9872c29878",
+      "category": "ventriloquist",
+      "kind": "body_part",
+      "meta": "art/candidates/ventrilo.dummy_rapoleon/meta.json",
+      "approved_at": "2026-10-23T14:59:58",
+      "reason": "L18 Ventriloquist & Rapoleon approved (passes all gates and critics)"
+    },
+    "ventrilo.legs": {
+      "path": "art/approved/ventriloquist/ventrilo.legs.png",
+      "version": "v1",
+      "sha256": "9e09baf7f2326b8006b3733d045a957bf58891f65985f58234b00e15accb1d63",
+      "category": "ventriloquist",
+      "kind": "body_part",
+      "meta": "art/candidates/ventrilo.legs/meta.json",
+      "approved_at": "2026-10-23T14:59:58",
+      "reason": "L18 Ventriloquist & Rapoleon approved (passes all gates and critics)"
+    },
+    "ventrilo.shoes": {
+      "path": "art/approved/ventriloquist/ventrilo.shoes.png",
+      "version": "v1",
+      "sha256": "9b7a4776789fb48735008d0ba4102b958dce5ee234d27cf20d728d39ed5c7104",
+      "category": "ventriloquist",
+      "kind": "body_part",
+      "meta": "art/candidates/ventrilo.shoes/meta.json",
+      "approved_at": "2026-10-23T14:59:58",
+      "reason": "L18 Ventriloquist & Rapoleon approved (passes all gates and critics)"
     }
   },
   "superseded": [],
@@ -1384,6 +1464,14 @@
     "ui.portrait_frame@v1@approved@2026-10-22T23:34:14",
     "ui.scroll_banner@v1@approved@2026-10-22T23:34:15",
     "ui.slot_frame@v1@approved@2026-10-22T23:34:16",
+    "ventrilo.arm_back@v1@approved@2026-10-23T14:59:58",
+    "ventrilo.arm_front@v1@approved@2026-10-23T14:59:58",
+    "ventrilo.dummy_rapoleon@v1@approved@2026-10-23T14:59:58",
+    "ventrilo.eyes.normal@v1@approved@2026-10-23T14:59:58",
+    "ventrilo.head_jaw@v1@approved@2026-10-23T14:59:58",
+    "ventrilo.legs@v1@approved@2026-10-23T14:59:58",
+    "ventrilo.shoes@v1@approved@2026-10-23T14:59:58",
+    "ventrilo.torso@v1@approved@2026-10-23T14:59:58",
     "z1s3.ceiling.beam_a@v2@approved@2026-10-22T20:18:33",
     "z1s3.ceiling.beam_b@v2@approved@2026-10-22T20:18:36",
     "z1s3.fg.card_table@v2@approved@2026-10-22T23:34:18",

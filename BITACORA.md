@@ -1702,3 +1702,16 @@ ihongo.prop.broom_katana (1, 250 px).
   8. baby.legs_diaper (1, 102 px): Panal blanco abultado con imperdible gigante y piernas cortas.
 - **Rig ensamblado**: characters/ababy/rig.json y characters/ababy/composite_preview.png (270 px).
 - **Total en MANIFEST.json**: 127/127 piezas aprobadas (103 Slice 1 + 16 Nihongo + 8 A Baby).
+
+## 2026-10-23 - Lote L18 Completado y Aprobado (The Ventriloquist & Rapoleon Rig Completo, 8 piezas + ig.json)
+- **Piezas generadas (1 por llamada, ref ef_design_ventriloquist.png), normalizadas, validadas por gates.py (8/8 PASS) y aprobadas en rt/approved/ventriloquist/**:
+  1. entrilo.torso (1, 148 px): Torso larguirucho con chaleco de rombos argyle y corbatin torcido.
+  2. entrilo.head_jaw (1, 112 px): Cabeza alargada con barbilla cuadrada de ventrilocuo y microfono de diadema.
+  3. entrilo.eyes.normal (1, 28 px): Ojos abiertos de locutor exhausto con ojeras.
+  4. entrilo.arm_front (1, 118 px): Brazo delantero delgado con manga arremangada y mano titiritera.
+  5. entrilo.arm_back (1, 114 px): Brazo trasero delgado sombreado.
+  6. entrilo.dummy_rapoleon (1, 144 px): Muneco de ventrilocuo **Rapoleon** con bicornio napoleonico de lado, cadena de oro y microfono de carton.
+  7. entrilo.legs (1, 146 px): Piernas largas dobladas para pedalear.
+  8. entrilo.shoes (1, 46 px): Zapatos de escenario bicolor con polainas.
+- **Rig ensamblado**: characters/ventriloquist/rig.json y characters/ventriloquist/composite_preview.png (340 px).
+- **Total en MANIFEST.json**: 135/135 piezas aprobadas (103 Slice 1 + 32 personajes nuevos del Acto I: Nihongo, A Baby y The Ventriloquist & Rapoleon).

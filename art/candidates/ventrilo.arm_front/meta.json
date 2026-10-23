@@ -1,0 +1,21 @@
+{
+  "id": "ventrilo.arm_front",
+  "category": "ventriloquist",
+  "kind": "body_part",
+  "what": "The Ventriloquist lanky front arm in rolled-up shirt sleeve ending in 4-fingered puppeteer hand",
+  "target_height_px": 118,
+  "height_fraction_of_smoothface": 0.375,
+  "pivot_hint": "shoulder at top-left; hand at right",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/ref_design_ventriloquist.png",
+    "art/references/palette_characters.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "approved",
+  "proposed_version": "v1",
+  "version": "v1",
+  "approved_version": "v1"
+}

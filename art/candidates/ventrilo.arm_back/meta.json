@@ -1,0 +1,21 @@
+{
+  "id": "ventrilo.arm_back",
+  "category": "ventriloquist",
+  "kind": "body_part",
+  "what": "The Ventriloquist lanky back arm in shadowed rolled-up shirt sleeve ending in 4-fingered hand",
+  "target_height_px": 114,
+  "height_fraction_of_smoothface": 0.362,
+  "pivot_hint": "shoulder at top-center; hand at bottom",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/ref_design_ventriloquist.png",
+    "art/references/palette_characters.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "approved",
+  "proposed_version": "v1",
+  "version": "v1",
+  "approved_version": "v1"
+}

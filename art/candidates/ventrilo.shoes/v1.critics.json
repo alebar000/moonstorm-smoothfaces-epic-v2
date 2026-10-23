@@ -1,0 +1,18 @@
+{
+  "style": {
+    "piece": "ventrilo.shoes",
+    "version": "v1",
+    "critic": "style-critic",
+    "verdict": "sin_objeciones",
+    "defects": [],
+    "notes": "Matches 2010 MoonStorm hand-inked construction-paper cutout style and ref_design_ventriloquist.png."
+  },
+  "anatomy": {
+    "piece": "ventrilo.shoes",
+    "version": "v1",
+    "critic": "anatomy-critic",
+    "verdict": "sin_objeciones",
+    "defects": [],
+    "notes": "Calibrated to Ventriloquist 340px rig proportions (target_height_px=46)."
+  }
+}

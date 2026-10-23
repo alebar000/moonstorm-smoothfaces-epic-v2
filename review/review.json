@@ -965,6 +965,62 @@
       "verdict": "approved",
       "ts": "2026-10-23T14:55:24",
       "reason": "L17 A Baby approved (passes all gates and critics)"
+    },
+    {
+      "id": "ventrilo.torso",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:59:58",
+      "reason": "L18 Ventriloquist & Rapoleon approved (passes all gates and critics)"
+    },
+    {
+      "id": "ventrilo.head_jaw",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:59:58",
+      "reason": "L18 Ventriloquist & Rapoleon approved (passes all gates and critics)"
+    },
+    {
+      "id": "ventrilo.eyes.normal",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:59:58",
+      "reason": "L18 Ventriloquist & Rapoleon approved (passes all gates and critics)"
+    },
+    {
+      "id": "ventrilo.arm_front",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:59:58",
+      "reason": "L18 Ventriloquist & Rapoleon approved (passes all gates and critics)"
+    },
+    {
+      "id": "ventrilo.arm_back",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:59:58",
+      "reason": "L18 Ventriloquist & Rapoleon approved (passes all gates and critics)"
+    },
+    {
+      "id": "ventrilo.dummy_rapoleon",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:59:58",
+      "reason": "L18 Ventriloquist & Rapoleon approved (passes all gates and critics)"
+    },
+    {
+      "id": "ventrilo.legs",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:59:58",
+      "reason": "L18 Ventriloquist & Rapoleon approved (passes all gates and critics)"
+    },
+    {
+      "id": "ventrilo.shoes",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:59:58",
+      "reason": "L18 Ventriloquist & Rapoleon approved (passes all gates and critics)"
     }
   ],
   "decisions": {
@@ -1087,6 +1143,46 @@
       "verdict": "approve",
       "version": "v1",
       "note": "Approved L17 A Baby cutout piece (passes all gates and critics)"
+    },
+    "ventrilo.torso": {
+      "verdict": "approve",
+      "version": "v1",
+      "note": "Approved L18 Ventriloquist & Rapoleon cutout piece (passes all gates and critics)"
+    },
+    "ventrilo.head_jaw": {
+      "verdict": "approve",
+      "version": "v1",
+      "note": "Approved L18 Ventriloquist & Rapoleon cutout piece (passes all gates and critics)"
+    },
+    "ventrilo.eyes.normal": {
+      "verdict": "approve",
+      "version": "v1",
+      "note": "Approved L18 Ventriloquist & Rapoleon cutout piece (passes all gates and critics)"
+    },
+    "ventrilo.arm_front": {
+      "verdict": "approve",
+      "version": "v1",
+      "note": "Approved L18 Ventriloquist & Rapoleon cutout piece (passes all gates and critics)"
+    },
+    "ventrilo.arm_back": {
+      "verdict": "approve",
+      "version": "v1",
+      "note": "Approved L18 Ventriloquist & Rapoleon cutout piece (passes all gates and critics)"
+    },
+    "ventrilo.dummy_rapoleon": {
+      "verdict": "approve",
+      "version": "v1",
+      "note": "Approved L18 Ventriloquist & Rapoleon cutout piece (passes all gates and critics)"
+    },
+    "ventrilo.legs": {
+      "verdict": "approve",
+      "version": "v1",
+      "note": "Approved L18 Ventriloquist & Rapoleon cutout piece (passes all gates and critics)"
+    },
+    "ventrilo.shoes": {
+      "verdict": "approve",
+      "version": "v1",
+      "note": "Approved L18 Ventriloquist & Rapoleon cutout piece (passes all gates and critics)"
     }
   }
 }
