@@ -126,6 +126,9 @@ export interface SceneObjectDef {
   parallaxFactor?: number;
   parallaxAnchorX?: number;
   tiltDeg?: number;
+  rotateXDeg?: number;
+  rotateYDeg?: number;
+  flipY?: boolean;
   inSituSeamless?: boolean;
   idleAnim?: 'none' | 'swing' | 'bob' | 'vibrate';
   fxType?:

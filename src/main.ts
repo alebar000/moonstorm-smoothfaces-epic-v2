@@ -2648,10 +2648,18 @@ class SmoothfacePilotGame {
     // Compute crooked cardboard tilt + 12 FPS stop-motion idle + hover + click transforms
     let rot = ((obj.tiltDeg || 0) * Math.PI) / 180;
     let dy = 0;
+    const rxRad = ((obj.rotateXDeg || 0) * Math.PI) / 180;
+    const ryRad = ((obj.rotateYDeg || 0) * Math.PI) / 180;
+    const cosX = Math.max(0.12, Math.cos(rxRad));
+    const cosY = Math.max(0.12, Math.cos(ryRad));
     const sx =
       (obj.flipX ? -1 : 1) *
+      cosY *
       (1 + (isHovered ? 0.035 : 0) + Math.sin(clickPulse * Math.PI) * 0.12);
-    const sy = 1 + (isHovered ? 0.035 : 0) - Math.sin(clickPulse * Math.PI) * 0.08;
+    const sy =
+      (obj.flipY ? -1 : 1) *
+      cosX *
+      (1 + (isHovered ? 0.035 : 0) - Math.sin(clickPulse * Math.PI) * 0.08);
 
     const seed = obj.x * 0.013 + obj.y * 0.007;
     if (obj.idleAnim === 'swing') {

@@ -42,6 +42,7 @@ type DragHandle =
   | 's'
   | 'sw'
   | 'w'
+  | 'rotate'
   | 'walk_target';
 
 export interface StudioHostGame {
@@ -125,7 +126,7 @@ export class RoomLayoutStudio {
   private dragHandle: DragHandle = 'move';
   private dragStartWorldX = 0;
   private dragStartWorldY = 0;
-  private dragInitialRect = { x: 0, y: 0, w: 100, h: 100, walkX: 700, walkY: 800 };
+  private dragInitialRect = { x: 0, y: 0, w: 100, h: 100, walkX: 700, walkY: 800, tiltDeg: 0 };
   private dragLinkedHotspotInitial: { id: string; x: number; y: number; w: number; h: number } | null = null;
 
   constructor(host: StudioHostGame) {
@@ -243,7 +244,16 @@ export class RoomLayoutStudio {
       }
     }
 
-    // 2. Check 8 resize handles for objects & hotspots (characters are move-only)
+    // 2. Check circular Rotation Handle above top-center for objects
+    if (this.selection?.kind === 'object') {
+      const rotHx = rect.x + rect.w * 0.5;
+      const rotHy = rect.y - 26;
+      if (Math.hypot(worldX - rotHx, worldY - rotHy) <= 11) {
+        return 'rotate';
+      }
+    }
+
+    // 3. Check 8 resize handles for objects & hotspots (characters are move-only)
     if (this.selection?.kind !== 'character') {
       const pts: Array<{ h: DragHandle; x: number; y: number }> = [
         { h: 'nw', x: rect.x, y: rect.y },
@@ -443,6 +453,7 @@ export class RoomLayoutStudio {
           h: obj.h,
           walkX: linkedH?.walkX ?? 700,
           walkY: linkedH?.walkY ?? 800,
+          tiltDeg: obj.tiltDeg || 0,
         };
         if (linkedH && this.autoSyncHotspot) {
           // Only auto-move hotspot if it belongs to a single object or matches this object
@@ -468,6 +479,7 @@ export class RoomLayoutStudio {
           h: h.h,
           walkX: h.walkX,
           walkY: h.walkY,
+          tiltDeg: 0,
         };
       }
     } else if (this.selection.kind === 'character') {
@@ -480,6 +492,7 @@ export class RoomLayoutStudio {
         h: 310,
         walkX: target.x,
         walkY: target.y,
+        tiltDeg: 0,
       };
     }
   }
@@ -521,6 +534,7 @@ export class RoomLayoutStudio {
         s: 'ns-resize',
         e: 'ew-resize',
         w: 'ew-resize',
+        rotate: 'grab',
         walk_target: 'crosshair',
       };
       this.host.canvas.style.cursor = cursorMap[handle];
@@ -544,6 +558,26 @@ export class RoomLayoutStudio {
   private applyDragDelta(dx: number, dy: number, shiftKey: boolean): void {
     if (!this.selection) return;
     const init = this.dragInitialRect;
+
+    if (this.dragHandle === 'rotate' && this.selection.kind === 'object') {
+      const obj = ROOM_OBJECTS.Z1S3.find((o) => o.id === this.selection!.id);
+      if (obj) {
+        const cx = init.x + init.w * 0.5;
+        const cy = init.y + init.h * 0.5;
+        const curWorldX = this.dragStartWorldX + dx;
+        const curWorldY = this.dragStartWorldY + dy;
+        let deg = (Math.atan2(curWorldY - cy, curWorldX - cx) * 180) / Math.PI + 90;
+        if (deg > 180) deg -= 360;
+        if (deg < -180) deg += 360;
+        if (shiftKey) {
+          deg = Math.round(deg / 5) * 5;
+        } else {
+          deg = Math.round(deg);
+        }
+        obj.tiltDeg = deg;
+      }
+      return;
+    }
 
     if (this.dragHandle === 'walk_target') {
       const newWalkX = Math.max(80, Math.min(2320, Math.round(init.walkX + dx)));
@@ -778,6 +812,26 @@ export class RoomLayoutStudio {
           ctx.strokeStyle = '#181210';
           ctx.lineWidth = 2;
           ctx.strokeRect(hx - 6, hy - 6, 12, 12);
+        }
+
+        // Draw circular Rotation Handle above top-center for objects
+        if (this.selection.kind === 'object') {
+          const rx = selRect.x + selRect.w * 0.5;
+          const ry = selRect.y - 26;
+          ctx.strokeStyle = '#ffcf56';
+          ctx.lineWidth = 2;
+          ctx.beginPath();
+          ctx.moveTo(rx, selRect.y);
+          ctx.lineTo(rx, ry);
+          ctx.stroke();
+
+          ctx.fillStyle = '#5ef2ff';
+          ctx.beginPath();
+          ctx.arc(rx, ry, 8, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.strokeStyle = '#181210';
+          ctx.lineWidth = 2;
+          ctx.stroke();
         }
       }
 
@@ -1029,6 +1083,11 @@ export class RoomLayoutStudio {
       setVal('st-inp-w', o.w);
       setVal('st-inp-h', o.h);
       setVal('st-inp-sorty', o.sortY);
+      setVal('st-inp-tilt', o.tiltDeg || 0);
+      setVal('st-rng-tilt', o.tiltDeg || 0);
+      setVal('st-inp-rotx', o.rotateXDeg || 0);
+      setVal('st-rng-rotx', o.rotateXDeg || 0);
+      setVal('st-inp-roty', o.rotateYDeg || 0);
       const lh = o.hotspotId ? ROOM_HOTSPOTS.Z1S3.find((h) => h.id === o.hotspotId) : undefined;
       if (lh) {
         setVal('st-inp-hx', lh.x);
@@ -1162,8 +1221,28 @@ export class RoomLayoutStudio {
       </div>
 
       <div class="st-row st-check-row">
-        <label><input type="checkbox" id="st-chk-ratio" ${this.lockAspectRatio ? 'checked' : ''} /> 🔒 Proporcion Fija</label>
-        <label><input type="checkbox" id="st-chk-flipx" ${obj.flipX ? 'checked' : ''} /> ↔️ Voltear (Flip X)</label>
+        <label><input type="checkbox" id="st-chk-ratio" ${this.lockAspectRatio ? 'checked' : ''} /> 🔒 Proporcion</label>
+        <label><input type="checkbox" id="st-chk-flipx" ${obj.flipX ? 'checked' : ''} /> ↔️ Flip X</label>
+        <label><input type="checkbox" id="st-chk-flipy" ${obj.flipY ? 'checked' : ''} /> ↕️ Flip Y</label>
+      </div>
+
+      <div class="st-rot-box">
+        <div class="st-rot-row">
+          <span class="st-rot-lbl">🔄 Rotar (°)</span>
+          <input type="range" id="st-rng-tilt" min="-180" max="180" step="1" value="${obj.tiltDeg || 0}" />
+          <input type="number" id="st-inp-tilt" min="-180" max="180" value="${obj.tiltDeg || 0}" />
+        </div>
+        <div class="st-rot-row">
+          <span class="st-rot-lbl">📐 Rotate X (°)</span>
+          <input type="range" id="st-rng-rotx" min="-80" max="80" step="1" value="${obj.rotateXDeg || 0}" />
+          <input type="number" id="st-inp-rotx" min="-80" max="80" value="${obj.rotateXDeg || 0}" />
+        </div>
+        <div class="st-rot-row">
+          <span class="st-rot-lbl">📐 Rotate Y (°)</span>
+          <input type="range" id="st-rng-roty" min="-80" max="80" step="1" value="${obj.rotateYDeg || 0}" />
+          <input type="number" id="st-inp-roty" min="-80" max="80" value="${obj.rotateYDeg || 0}" />
+          <button id="st-btn-rot-reset" class="studio-btn-xs" title="Resetear todos los angulos a 0°">0°</button>
+        </div>
       </div>
 
       <div class="st-row">
@@ -1263,6 +1342,37 @@ export class RoomLayoutStudio {
     document.getElementById('st-chk-flipx')?.addEventListener('change', (e) => {
       this.pushUndoSnapshot();
       obj.flipX = (e.target as HTMLInputElement).checked;
+    });
+    document.getElementById('st-chk-flipy')?.addEventListener('change', (e) => {
+      this.pushUndoSnapshot();
+      obj.flipY = (e.target as HTMLInputElement).checked;
+    });
+
+    const bindAnglePair = (rngId: string, inpId: string, prop: 'tiltDeg' | 'rotateXDeg' | 'rotateYDeg') => {
+      const rng = document.getElementById(rngId) as HTMLInputElement | null;
+      const inp = document.getElementById(inpId) as HTMLInputElement | null;
+      rng?.addEventListener('input', () => {
+        const v = Number(rng.value);
+        obj[prop] = v;
+        if (inp) inp.value = String(v);
+      });
+      inp?.addEventListener('change', () => {
+        this.pushUndoSnapshot();
+        const v = Number(inp.value);
+        obj[prop] = v;
+        if (rng) rng.value = String(v);
+      });
+    };
+    bindAnglePair('st-rng-tilt', 'st-inp-tilt', 'tiltDeg');
+    bindAnglePair('st-rng-rotx', 'st-inp-rotx', 'rotateXDeg');
+    bindAnglePair('st-rng-roty', 'st-inp-roty', 'rotateYDeg');
+
+    document.getElementById('st-btn-rot-reset')?.addEventListener('click', () => {
+      this.pushUndoSnapshot();
+      obj.tiltDeg = 0;
+      obj.rotateXDeg = 0;
+      obj.rotateYDeg = 0;
+      this.refreshInspectorAndList();
     });
 
     document.getElementById('st-sel-plane')?.addEventListener('change', (e) => {

@@ -1584,3 +1584,39 @@ body.crt-enabled #stage-container::after {
   box-shadow: 0 5px 0 #0e1f16;
   pointer-events: none;
 }
+
+
+.st-rot-box {
+  background: rgba(255, 207, 86, 0.06);
+  border: 1px solid rgba(229, 185, 76, 0.35);
+  border-radius: 6px;
+  padding: 5px 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.st-rot-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.st-rot-lbl {
+  font-size: 0.74rem;
+  color: #ffe28a;
+  width: 86px;
+  flex-shrink: 0;
+  font-weight: 700;
+}
+
+.st-rot-row input[type="range"] {
+  flex: 1;
+  accent-color: #5ef2ff;
+  height: 14px;
+}
+
+.st-rot-row input[type="number"] {
+  width: 52px !important;
+  flex-shrink: 0;
+}
