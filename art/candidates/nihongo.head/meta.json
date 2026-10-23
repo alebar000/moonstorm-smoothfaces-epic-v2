@@ -1,0 +1,21 @@
+{
+  "id": "nihongo.head",
+  "category": "nihongo",
+  "kind": "body_part",
+  "what": "Nihongo Nohondes angular cartoon head in 3/4 view facing right with topknot (chonmage), grumpy downturned mouth and chin stubble, blank eye/brow area",
+  "target_height_px": 118,
+  "height_fraction_of_smoothface": 0.375,
+  "pivot_hint": "neck base at bottom-center",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/palette_characters.png",
+    "art/references/ref_z1s2_lobby_2010.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "approved",
+  "proposed_version": "v1",
+  "version": "v1",
+  "approved_version": "v1"
+}

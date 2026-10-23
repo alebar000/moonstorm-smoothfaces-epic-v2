@@ -1656,3 +1656,23 @@ se editan entradas anteriores (si algo cambió, nueva entrada que lo diga).
   - PLAN_SLICE2_Y_JUEGO_COMPLETO.md: Desglose completo de los 10 lotes del **Slice 2 (L15-L24, 71 piezas Cutout nuevas)** para cerrar todo el Acto I en el submarino *Substampede* (Z1S3 <-> Z1S2 <-> Z1S1 + Z0 *Spooky Paper Castle*, rigs de **Nihongo Nohondes**, **A Baby** y **The Ventriloquist & Rapoleon**, puzzle musical *Funky Town* y ensamblaje/instalacion final de la **Perpetual Movement Machine**), mas los **Slices 3, 4 y 5 (L25-L50)** para las Zonas 2 a 6 y el epilogo *The Odd-yssey of Dr. Stache*.
   - SLICE.md y SUPERPROMPT_SESION.md: Actualizados con el estado certificado del Slice 1 y la tabla de lotes L15-L24 lista para arrancar en L15 al inicio de la siguiente sesion.
   - rt/references/: Copiadas las 6 referencias originales de 2010 para el Slice 2 (ef_z1s1_machineroom_2010.png, ef_z1s1_machineroom_psd_composite.png, ef_z1s2_lobby_2010.png, ef_design_ababy.png, ef_design_ventriloquist.png, ef_z0_spook_castle_psd_composite.png).
+
+## 2026-10-23 - Lote L15 Completado y Aprobado (Nihongo Nohondes Rig - Parte 1, 8 piezas)
+- **Piezas generadas (1 por llamada), normalizadas, validadas por gates.py (8/8 PASS) y aprobadas en rt/approved/nihongo/**:
+  1. 
+ihongo.torso (1, 185 px): Kimono/samue de conserje remendado con faja ocre y delantal manchado.
+  2. 
+ihongo.head (1, 118 px): Cabeza caricaturesca 3/4 con mono samurai (*chonmage*) y barba incipiente.
+  3. 
+ihongo.headband (1, 46 px): Cinta *hachimaki* de papel blanco rasgado con sol rojo.
+  4. 
+ihongo.eyes.normal (1, 26 px): Ojos entrecerrados en 3/4.
+  5. 
+ihongo.eyes.closed (1, 24 px): Ojos cerrados en arco de tinta.
+  6. 
+ihongo.eyes.squint (1, 24 px): Ojos achicados de sospecha/asco al pescado.
+  7. 
+ihongo.brows.normal (1, 24 px): Cejas gruesas angulosas.
+  8. 
+ihongo.brows.angry (1, 26 px): Cejas fruncidas en V aguda.
+- **Total en MANIFEST.json**: 111/111 piezas aprobadas (103 Slice 1 + 8 L15).

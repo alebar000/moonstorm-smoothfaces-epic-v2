@@ -1039,6 +1039,86 @@
       "meta": "art/candidates/z1s3.prop.lamp/meta.json",
       "approved_at": "2026-10-22T23:34:40",
       "reason": ""
+    },
+    "nihongo.torso": {
+      "path": "art/approved/nihongo/nihongo.torso.png",
+      "version": "v1",
+      "sha256": "37ca3683dd2ece13f4722efb4d3ba105920766517e4d8e9af74864f82aff0f2c",
+      "category": "nihongo",
+      "kind": "body_part",
+      "meta": "art/candidates/nihongo.torso/meta.json",
+      "approved_at": "2026-10-23T14:47:59",
+      "reason": "L15 Nihongo Nohondes Part 1 approved (passes all gates and critics)"
+    },
+    "nihongo.head": {
+      "path": "art/approved/nihongo/nihongo.head.png",
+      "version": "v1",
+      "sha256": "b7ee659d60dbda2755b93fd9ae47036a597d984b13fd7b1e5ba55b8d1dd32ab4",
+      "category": "nihongo",
+      "kind": "body_part",
+      "meta": "art/candidates/nihongo.head/meta.json",
+      "approved_at": "2026-10-23T14:47:59",
+      "reason": "L15 Nihongo Nohondes Part 1 approved (passes all gates and critics)"
+    },
+    "nihongo.headband": {
+      "path": "art/approved/nihongo/nihongo.headband.png",
+      "version": "v1",
+      "sha256": "de640ad75cf1be69ba48f0d9beea320abc93c96e97fe2d0dd9a56de58029f943",
+      "category": "nihongo",
+      "kind": "body_part",
+      "meta": "art/candidates/nihongo.headband/meta.json",
+      "approved_at": "2026-10-23T14:47:59",
+      "reason": "L15 Nihongo Nohondes Part 1 approved (passes all gates and critics)"
+    },
+    "nihongo.eyes.normal": {
+      "path": "art/approved/nihongo/nihongo.eyes.normal.png",
+      "version": "v1",
+      "sha256": "e83e2c5042937edef1dd664184e4fcbd2bcb1ae89bc5a98425a018ed4ef259ab",
+      "category": "nihongo",
+      "kind": "body_part",
+      "meta": "art/candidates/nihongo.eyes.normal/meta.json",
+      "approved_at": "2026-10-23T14:47:59",
+      "reason": "L15 Nihongo Nohondes Part 1 approved (passes all gates and critics)"
+    },
+    "nihongo.eyes.closed": {
+      "path": "art/approved/nihongo/nihongo.eyes.closed.png",
+      "version": "v1",
+      "sha256": "9c881dbaf504a310c460d367683203a0ad06c8dde280c0edc5bc0084eafa2201",
+      "category": "nihongo",
+      "kind": "body_part",
+      "meta": "art/candidates/nihongo.eyes.closed/meta.json",
+      "approved_at": "2026-10-23T14:47:59",
+      "reason": "L15 Nihongo Nohondes Part 1 approved (passes all gates and critics)"
+    },
+    "nihongo.eyes.squint": {
+      "path": "art/approved/nihongo/nihongo.eyes.squint.png",
+      "version": "v1",
+      "sha256": "80da4ae6bbca8dd5a57b2f320a051a8f38e9761ea91f8bc3c999deb972cc4aa6",
+      "category": "nihongo",
+      "kind": "body_part",
+      "meta": "art/candidates/nihongo.eyes.squint/meta.json",
+      "approved_at": "2026-10-23T14:47:59",
+      "reason": "L15 Nihongo Nohondes Part 1 approved (passes all gates and critics)"
+    },
+    "nihongo.brows.normal": {
+      "path": "art/approved/nihongo/nihongo.brows.normal.png",
+      "version": "v1",
+      "sha256": "a80807674cab33fa5bf60b92f0d1dd48e23d452a692ce5d7f58cf87daf5effe2",
+      "category": "nihongo",
+      "kind": "body_part",
+      "meta": "art/candidates/nihongo.brows.normal/meta.json",
+      "approved_at": "2026-10-23T14:47:59",
+      "reason": "L15 Nihongo Nohondes Part 1 approved (passes all gates and critics)"
+    },
+    "nihongo.brows.angry": {
+      "path": "art/approved/nihongo/nihongo.brows.angry.png",
+      "version": "v1",
+      "sha256": "4adf6da7f1fe4b8da23752f57f8b08d1410f7a5d362e3ee1ec15c3190611e4bf",
+      "category": "nihongo",
+      "kind": "body_part",
+      "meta": "art/candidates/nihongo.brows.angry/meta.json",
+      "approved_at": "2026-10-23T14:47:59",
+      "reason": "L15 Nihongo Nohondes Part 1 approved (passes all gates and critics)"
     }
   },
   "superseded": [],
@@ -1075,6 +1155,14 @@
     "intro.bg.envy_mirror@v1@approved@2026-10-22T23:33:48",
     "intro.curtain@v1@approved@2026-10-22T23:33:52",
     "intro.proscenium@v1@approved@2026-10-22T23:33:53",
+    "nihongo.brows.angry@v1@approved@2026-10-23T14:47:59",
+    "nihongo.brows.normal@v1@approved@2026-10-23T14:47:59",
+    "nihongo.eyes.closed@v1@approved@2026-10-23T14:47:59",
+    "nihongo.eyes.normal@v1@approved@2026-10-23T14:47:59",
+    "nihongo.eyes.squint@v1@approved@2026-10-23T14:47:59",
+    "nihongo.head@v1@approved@2026-10-23T14:47:59",
+    "nihongo.headband@v1@approved@2026-10-23T14:47:59",
+    "nihongo.torso@v1@approved@2026-10-23T14:47:59",
     "palette.characters@v1@approved@2026-10-21T21:26:19",
     "palette.scenery@v1@rejected@2026-10-21T21:27:18",
     "palette.scenery@v3@approved@2026-10-21T21:38:16",

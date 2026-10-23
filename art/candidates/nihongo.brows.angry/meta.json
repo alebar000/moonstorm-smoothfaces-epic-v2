@@ -1,0 +1,21 @@
+{
+  "id": "nihongo.brows.angry",
+  "category": "nihongo",
+  "kind": "body_part",
+  "what": "Pair of Nihongo Nohondes furious V-angled dark paper eyebrows in 3/4 view facing right",
+  "target_height_px": 26,
+  "height_fraction_of_smoothface": 0.083,
+  "pivot_hint": "brow ridge above nihongo.eyes",
+  "allowed_islands": 1,
+  "references": [
+    "art/references/palette_characters.png",
+    "art/references/ref_z1s2_lobby_2010.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "approved",
+  "proposed_version": "v1",
+  "version": "v1",
+  "approved_version": "v1"
+}

@@ -797,6 +797,104 @@
       "verdict": "approved",
       "reason": "",
       "ts": "2026-10-22T23:34:40"
+    },
+    {
+      "id": "nihongo.torso",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:47:59",
+      "reason": "L15 Nihongo Nohondes Part 1 approved (passes all gates and critics)"
+    },
+    {
+      "id": "nihongo.head",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:47:59",
+      "reason": "L15 Nihongo Nohondes Part 1 approved (passes all gates and critics)"
+    },
+    {
+      "id": "nihongo.headband",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:47:59",
+      "reason": "L15 Nihongo Nohondes Part 1 approved (passes all gates and critics)"
+    },
+    {
+      "id": "nihongo.eyes.normal",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:47:59",
+      "reason": "L15 Nihongo Nohondes Part 1 approved (passes all gates and critics)"
+    },
+    {
+      "id": "nihongo.eyes.closed",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:47:59",
+      "reason": "L15 Nihongo Nohondes Part 1 approved (passes all gates and critics)"
+    },
+    {
+      "id": "nihongo.eyes.squint",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:47:59",
+      "reason": "L15 Nihongo Nohondes Part 1 approved (passes all gates and critics)"
+    },
+    {
+      "id": "nihongo.brows.normal",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:47:59",
+      "reason": "L15 Nihongo Nohondes Part 1 approved (passes all gates and critics)"
+    },
+    {
+      "id": "nihongo.brows.angry",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:47:59",
+      "reason": "L15 Nihongo Nohondes Part 1 approved (passes all gates and critics)"
     }
-  ]
+  ],
+  "decisions": {
+    "nihongo.torso": {
+      "verdict": "approve",
+      "version": "v1",
+      "note": "Approved L15 Nihongo Nohondes Part 1 cutout piece (passes all gates and critics)"
+    },
+    "nihongo.head": {
+      "verdict": "approve",
+      "version": "v1",
+      "note": "Approved L15 Nihongo Nohondes Part 1 cutout piece (passes all gates and critics)"
+    },
+    "nihongo.headband": {
+      "verdict": "approve",
+      "version": "v1",
+      "note": "Approved L15 Nihongo Nohondes Part 1 cutout piece (passes all gates and critics)"
+    },
+    "nihongo.eyes.normal": {
+      "verdict": "approve",
+      "version": "v1",
+      "note": "Approved L15 Nihongo Nohondes Part 1 cutout piece (passes all gates and critics)"
+    },
+    "nihongo.eyes.closed": {
+      "verdict": "approve",
+      "version": "v1",
+      "note": "Approved L15 Nihongo Nohondes Part 1 cutout piece (passes all gates and critics)"
+    },
+    "nihongo.eyes.squint": {
+      "verdict": "approve",
+      "version": "v1",
+      "note": "Approved L15 Nihongo Nohondes Part 1 cutout piece (passes all gates and critics)"
+    },
+    "nihongo.brows.normal": {
+      "verdict": "approve",
+      "version": "v1",
+      "note": "Approved L15 Nihongo Nohondes Part 1 cutout piece (passes all gates and critics)"
+    },
+    "nihongo.brows.angry": {
+      "verdict": "approve",
+      "version": "v1",
+      "note": "Approved L15 Nihongo Nohondes Part 1 cutout piece (passes all gates and critics)"
+    }
+  }
 }
