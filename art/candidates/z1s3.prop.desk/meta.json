@@ -1,0 +1,19 @@
+{
+  "id": "z1s3.prop.desk",
+  "category": "z1s3",
+  "kind": "prop",
+  "what": "Heavy dark-wood double-pedestal desk with rolltop / flat top, wooden drawers with brass pull handles, kneehole space, and pencil woodgrain hatching, matching Z1S3 2010 gameplay plane",
+  "target_height_px": 173,
+  "height_fraction_of_smoothface": 0.55,
+  "pivot_hint": "bottom-center base on cabin floor",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/ref_room_z1s3_2010.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "proposed",
+  "proposed_version": "v2",
+  "version": "v2"
+}

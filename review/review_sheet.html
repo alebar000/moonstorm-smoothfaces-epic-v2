@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mesa de luz · Smoothface's Epic</title>
+<title>Mesa de luz : Smoothface's Epic</title>
 <style>
   :root{
     --table:#4b4b4b; --table-2:#444; --ink:#111; --paper:#efe7d4; --paper-2:#e2d8bf;
@@ -69,8 +69,24 @@
     align-items:center;
     border-bottom:1px solid #666;
     padding-bottom:6px;
+    gap:8px;
   }
   .rig-title span.sub{font-weight:normal; font-size:.75rem; color:#bbb}
+  .rig-title button{
+    font:inherit;
+    font-size:.72rem;
+    padding:2px 8px;
+    border:1px solid #777;
+    background:#2b2b2b;
+    color:var(--paper);
+    cursor:pointer;
+  }
+  .rig-title button.on{
+    background:var(--accent);
+    color:#111;
+    border-color:var(--accent);
+    font-weight:bold;
+  }
   .rig-viewport-wrap{
     position:relative;
     overflow:hidden;
@@ -194,7 +210,7 @@
     <textarea id="reason" placeholder="Motivo (obligatorio para rechazar). Escribí lo que ves, con tus palabras: eso es lo que calibra a los críticos."></textarea>
     <button class="ok" id="btn-ok">Aprobar</button>
     <button class="bad" id="btn-bad">Rechazar</button>
-    <div class="keys">Teclas: <b>A</b> aprobar · <b>R</b> escribir motivo y rechazar con <b>Ctrl+Enter</b> · <b>J</b>/<b>K</b> siguiente/anterior · <b>1/2/3</b> ojos · <b>Q/W/E</b> cejas · <b>4/5/6</b> mano frontal · <b>7/8</b> mano trasera</div>
+    <div class="keys">Teclas: <b>A</b> aprobar · <b>R</b> escribir motivo y rechazar con <b>Ctrl+Enter</b> · <b>J</b>/<b>K</b> siguiente/anterior · <b>P</b> alternar marioneta · <b>1/2/3</b> ojos · <b>Q/W/E</b> cejas · <b>4/5/6</b> mano frontal · <b>7/8</b> mano trasera · <b>H</b> sombrero · <b>B</b> barba</div>
   </div>
 </main>
 
@@ -205,6 +221,7 @@
 (() => {
   const $ = s => document.querySelector(s);
   let items = [], allItems = [], idx = 0, reviews = {}, showAll = false;
+  let activePuppet = 'smoothface';
 
   // Interactive Rig state for Smoothface
   const DEFAULT_OFFSETS = {
@@ -215,6 +232,7 @@
     pants:            {x: 78,  y: 282, w: 84,  h: 81},
     hand_back_fist:   {x: 272, y: 162, w: 48,  h: 42},
     hand_back_open:   {x: 272, y: 158, w: 46,  h: 46},
+    hand_back_point:  {x: 272, y: 158, w: 58,  h: 42},
     arm_back:         {x: 172, y: 176, w: 131, h: 104},
     shoes_ref:        {x: 48,  y: 356, w: 129, h: 47},
     pants_ref:        {x: 75,  y: 306, w: 89,  h: 69},
@@ -238,10 +256,46 @@
     eyes: 'normal',       // 'normal' | 'squint' | 'closed' | 'none'
     brows: 'normal',      // 'normal' | 'angry' | 'surprised' | 'none'
     handFront: 'fist',    // 'fist' | 'open' | 'point' | 'none'
-    handBack: 'fist',     // 'fist' | 'open' | 'none'
+    handBack: 'fist',     // 'fist' | 'open' | 'point' | 'none'
     bodyMode: 'l2b',      // 'l2b' (rig completo) | 'ref2010' (capas 2010) | 'both'
-    collarFront: true,    // true = collar overlaps lower face (2010 canon), false = head in front of torso
-    armBackXray: false,   // true = bring arm_back in front of torso to inspect full sleeve
+    collarFront: true,    // true = collar overlaps lower face, false = head in front of torso
+    armBackXray: false,   // true = bring arm_back in front of torso
+    highlightActive: true
+  };
+
+  // Interactive Rig state for Captain Dread
+  const DEFAULT_CAPDREAD_OFFSETS = {
+    boot_back         {x: 118, y: 388, w:  92, h:  65},
+    leg_back          {x: 152, y: 332, w:  55, h:  76},
+    boot_front        {x: 168, y: 395, w:  96, h:  68},
+    leg_front         {x: 205, y: 336, w:  48, h:  78},
+    pants             {x: 152, y: 288, w:  96, h:  92},
+    hand_back_fist    {x:  82, y: 254, w:  50, h:  40},
+    hand_back_open    {x:  80, y: 252, w:  50, h:  46},
+    arm_back          {x:  68, y: 180, w:  76, h: 114},
+    head              {x: 134, y:  74, w: 106, h: 138},
+    eyes_normal       {x: 145, y: 122, w:  54, h:  37},
+    eyes_squint       {x: 144, y: 124, w:  58, h:  26},
+    eyes_closed       {x: 145, y: 122, w:  54, h:  37},
+    brows_normal      {x: 140, y: 110, w:  64, h:  20},
+    brows_angry       {x: 140, y: 106, w:  64, h:  28},
+    brows_surprised   {x: 140, y: 103, w:  62, h:  34},
+    hat               {x: 128, y:  40, w: 104, h: 116},
+    torso             {x:  82, y: 148, w: 230, h: 236},
+    beard             {x: 114, y: 132, w:  96, h:  92},
+    hand_front_fist   {x: 222, y: 276, w:  48, h:  48},
+    hand_front_open   {x: 220, y: 274, w:  52, h:  50},
+    hand_front_point  {x: 202, y: 274, w:  72, h:  48},
+    arm_front         {x: 218, y: 176, w:  58, h: 124}
+  };
+  let capdreadRigOffsets = JSON.parse(JSON.stringify(DEFAULT_CAPDREAD_OFFSETS));
+  let capdreadRigState = {
+    eyes: 'normal',       // 'normal' | 'closed' | 'squint' | 'none'
+    brows: 'normal',      // 'normal' | 'angry' | 'surprised' | 'none'
+    handFront: 'fist',    // 'fist' | 'open' | 'point' | 'none'
+    handBack: 'fist',     // 'fist' | 'open' | 'none'
+    hat: true,            // true | false
+    beard: true,          // true | false
     highlightActive: true
   };
 
@@ -264,17 +318,36 @@
   function syncRigToSelection() {
     const it = items[idx];
     if (!it) return;
-    if (it.id === 'smoothface.eyes.normal') rigState.eyes = 'normal';
-    else if (it.id === 'smoothface.eyes.squint') rigState.eyes = 'squint';
-    else if (it.id === 'smoothface.eyes.closed') rigState.eyes = 'closed';
-    else if (it.id === 'smoothface.brows.normal') rigState.brows = 'normal';
-    else if (it.id === 'smoothface.brows.angry') rigState.brows = 'angry';
-    else if (it.id === 'smoothface.brows.surprised') rigState.brows = 'surprised';
-    else if (it.id === 'smoothface.hand_front.fist') rigState.handFront = 'fist';
-    else if (it.id === 'smoothface.hand_front.open') rigState.handFront = 'open';
-    else if (it.id === 'smoothface.hand_front.point') rigState.handFront = 'point';
-    else if (it.id === 'smoothface.hand_back.fist') rigState.handBack = 'fist';
-    else if (it.id === 'smoothface.hand_back.open') rigState.handBack = 'open';
+    if (it.id && it.id.startsWith('capdread.')) {
+      activePuppet = 'capdread';
+      if (it.id === 'capdread.eyes.normal') capdreadRigState.eyes = 'normal';
+      else if (it.id === 'capdread.eyes.squint') capdreadRigState.eyes = 'squint';
+      else if (it.id === 'capdread.eyes.closed') capdreadRigState.eyes = 'closed';
+      else if (it.id === 'capdread.brows.normal') capdreadRigState.brows = 'normal';
+      else if (it.id === 'capdread.brows.angry') capdreadRigState.brows = 'angry';
+      else if (it.id === 'capdread.brows.surprised') capdreadRigState.brows = 'surprised';
+      else if (it.id === 'capdread.hand_front.fist') capdreadRigState.handFront = 'fist';
+      else if (it.id === 'capdread.hand_front.open') capdreadRigState.handFront = 'open';
+      else if (it.id === 'capdread.hand_front.point') capdreadRigState.handFront = 'point';
+      else if (it.id === 'capdread.hand_back.fist') capdreadRigState.handBack = 'fist';
+      else if (it.id === 'capdread.hand_back.open') capdreadRigState.handBack = 'open';
+      else if (it.id === 'capdread.hat') capdreadRigState.hat = true;
+      else if (it.id === 'capdread.beard') capdreadRigState.beard = true;
+    } else if (it.id && it.id.startsWith('smoothface.')) {
+      activePuppet = 'smoothface';
+      if (it.id === 'smoothface.eyes.normal') rigState.eyes = 'normal';
+      else if (it.id === 'smoothface.eyes.squint') rigState.eyes = 'squint';
+      else if (it.id === 'smoothface.eyes.closed') rigState.eyes = 'closed';
+      else if (it.id === 'smoothface.brows.normal') rigState.brows = 'normal';
+      else if (it.id === 'smoothface.brows.angry') rigState.brows = 'angry';
+      else if (it.id === 'smoothface.brows.surprised') rigState.brows = 'surprised';
+      else if (it.id === 'smoothface.hand_front.fist') rigState.handFront = 'fist';
+      else if (it.id === 'smoothface.hand_front.open') rigState.handFront = 'open';
+      else if (it.id === 'smoothface.hand_front.point') rigState.handFront = 'point';
+      else if (it.id === 'smoothface.hand_back.fist') rigState.handBack = 'fist';
+      else if (it.id === 'smoothface.hand_back.open') rigState.handBack = 'open';
+      else if (it.id === 'smoothface.hand_back.point') rigState.handBack = 'point';
+    }
   }
 
   function partImg(id, fallbackPath) {
@@ -328,8 +401,9 @@
       point: partImg('smoothface.hand_front.point', 'art/candidates/smoothface.hand_front.point/v4.png')
     };
     const handBackSrcs = {
-      fist: partImg('smoothface.hand_back.fist', 'art/candidates/smoothface.hand_back.fist/v2.png'),
-      open: partImg('smoothface.hand_back.open', 'art/candidates/smoothface.hand_back.open/v3.png')
+      fist:  partImg('smoothface.hand_back.fist',  'art/candidates/smoothface.hand_back.fist/v2.png'),
+      open:  partImg('smoothface.hand_back.open',  'art/candidates/smoothface.hand_back.open/v3.png'),
+      point: partImg('smoothface.hand_back.point', 'art/candidates/smoothface.hand_back.point/v2.png')
     };
 
     const layers = [];
@@ -382,24 +456,27 @@
     layers.sort((a, b) => a.z - b.z);
 
     const layerImgs = layers.map(l => {
-      const o = rigOffsets[l.key];
+      const o = rigOffsets[l.key] || {x:150, y:150, w:80, h:80};
       const isAct = rigState.highlightActive && l.pid === activeId;
-      return `<img class="rig-layer ${isAct ? 'active-part' : ''}" data-key="${l.key}" title="${l.pid || l.key} (arrastrar para mover)"
+      return `<img class="rig-layer ${isAct ? 'active-part' : ''}" data-key="${l.key}" data-puppet="smoothface" title="${l.pid || l.key} (arrastrar para mover)"
         src="${file(l.src)}"
         style="left:${o.x}px; top:${o.y}px; width:${o.w}px; height:${o.h}px; z-index:${l.z}; opacity:${l.opacity}">`;
     }).join('');
 
     const btn = (group, val, label) =>
-      `<button type="button" class="${rigState[group]===val?'on':''}" data-rig-group="${group}" data-rig-val="${val}">${label}</button>`;
+      `<button type="button" class="${rigState[group]===val?'on':''}" data-rig-puppet="smoothface" data-rig-group="${group}" data-rig-val="${val}">${label}</button>`;
 
     return `
       <div class="rig-card">
         <div class="rig-title">
-          <span>Marioneta ensamblada (intercambiable)</span>
-          <span class="sub">Escala 1:1 de juego</span>
+          <span>Marioneta Smoothface</span>
+          <div style="display:flex; gap:4px">
+            <button type="button" class="${activePuppet==='smoothface'?'on':''}" id="puppet-toggle-sf">Smoothface</button>
+            <button type="button" class="${activePuppet==='capdread'?'on':''}" id="puppet-toggle-cd">Captain Dread</button>
+          </div>
         </div>
         <div class="rig-viewport-wrap" style="width:${wrapW}px; height:${wrapH}px">
-          <div class="rig-viewport" id="rig-viewport" style="transform:scale(${scale})">
+          <div class="rig-viewport" id="rig-viewport" style="transform:scale(${scale}); width:340px; height:420px">
             ${layerImgs}
           </div>
         </div>
@@ -415,6 +492,7 @@
           <div class="rig-btns">
             ${btn('handBack','fist','Fist')}
             ${btn('handBack','open','Open')}
+            ${btn('handBack','point','Point')}
             ${btn('handBack','none','Ocultar')}
           </div>
           <span class="lbl">Ojos (1-3):</span>
@@ -450,41 +528,221 @@
       </div>`;
   }
 
+  function buildCapdreadRigHTML(activeId, zoomH) {
+    const scale = Math.max(0.55, Math.min(1.5, zoomH / 360));
+    const wrapW = Math.round(380 * scale);
+    const wrapH = Math.round(480 * scale);
+
+    const torsoSrc = partImg('capdread.torso', 'art/candidates/capdread.torso/v2.png');
+    const headSrc  = partImg('capdread.head', 'art/candidates/capdread.head/v2.png');
+    const eyeSrcs = {
+      normal: partImg('capdread.eyes.normal', 'art/candidates/capdread.eyes.normal/v2.png'),
+      squint: partImg('capdread.eyes.squint', 'art/candidates/capdread.eyes.squint/v2.png'),
+      closed: partImg('capdread.eyes.closed', 'art/candidates/capdread.eyes.closed/v2.png')
+    };
+    const browSrcs = {
+      normal:    partImg('capdread.brows.normal', 'art/candidates/capdread.brows.normal/v2.png'),
+      angry:     partImg('capdread.brows.angry', 'art/candidates/capdread.brows.angry/v2.png'),
+      surprised: partImg('capdread.brows.surprised', 'art/candidates/capdread.brows.surprised/v2.png')
+    };
+    const hatSrc   = partImg('capdread.hat', 'art/candidates/capdread.hat/v2.png');
+    const beardSrc = partImg('capdread.beard', 'art/candidates/capdread.beard/v2.png');
+    const bootBackSrc  = partImg('capdread.boot_back',  'art/candidates/capdread.boot_back/v2.png');
+    const bootFrontSrc = partImg('capdread.boot_front', 'art/candidates/capdread.boot_front/v2.png');
+    const legBackSrc   = partImg('capdread.leg_back',   'art/candidates/capdread.leg_back/v2.png');
+    const legFrontSrc  = partImg('capdread.leg_front',  'art/candidates/capdread.leg_front/v2.png');
+    const pantsSrc     = partImg('capdread.pants',      'art/candidates/capdread.pants/v2.png');
+    const armBackSrc   = partImg('capdread.arm_back',   'art/candidates/capdread.arm_back/v2.png');
+    const armFrontSrc  = partImg('capdread.arm_front',  'art/candidates/capdread.arm_front/v2.png');
+    const handFrontSrcs = {
+      fist:  partImg('capdread.hand_front.fist',  'art/candidates/capdread.hand_front.fist/v2.png'),
+      open:  partImg('capdread.hand_front.open',  'art/candidates/capdread.hand_front.open/v2.png'),
+      point: partImg('capdread.hand_front.point', 'art/candidates/capdread.hand_front.point/v2.png')
+    };
+    const handBackSrcs = {
+      fist: partImg('capdread.hand_back.fist', 'art/candidates/capdread.hand_back.fist/v2.png'),
+      open: partImg('capdread.hand_back.open', 'art/candidates/capdread.hand_back.open/v2.png')
+    };
+
+    const layers = [];
+    layers.push({key:'boot_back',  pid:'capdread.boot_back',  src:bootBackSrc,  z:10, opacity:1});
+    layers.push({key:'leg_back',   pid:'capdread.leg_back',   src:legBackSrc,   z:11, opacity:1});
+    layers.push({key:'boot_front', pid:'capdread.boot_front', src:bootFrontSrc, z:12, opacity:1});
+    layers.push({key:'leg_front',  pid:'capdread.leg_front',  src:legFrontSrc,  z:13, opacity:1});
+    layers.push({key:'pants',      pid:'capdread.pants',      src:pantsSrc,     z:14, opacity:1});
+    if (capdreadRigState.handBack !== 'none') {
+      const hbk = 'hand_back_' + capdreadRigState.handBack;
+      layers.push({key:hbk, pid:'capdread.hand_back.' + capdreadRigState.handBack, src:handBackSrcs[capdreadRigState.handBack], z:17, opacity:1});
+    }
+    layers.push({key:'arm_back',   pid:'capdread.arm_back',   src:armBackSrc,   z:18, opacity:1});
+
+    layers.push({key:'head', pid:'capdread.head', src:headSrc, z:20, opacity:1});
+    if (capdreadRigState.eyes !== 'none') {
+      const ek = 'eyes_' + capdreadRigState.eyes;
+      layers.push({key:ek, pid:'capdread.eyes.' + capdreadRigState.eyes, src:eyeSrcs[capdreadRigState.eyes], z:22, opacity:1});
+    }
+    if (capdreadRigState.brows !== 'none') {
+      const bk = 'brows_' + capdreadRigState.brows;
+      layers.push({key:bk, pid:'capdread.brows.' + capdreadRigState.brows, src:browSrcs[capdreadRigState.brows], z:23, opacity:1});
+    }
+    if (capdreadRigState.hat) {
+      layers.push({key:'hat', pid:'capdread.hat', src:hatSrc, z:25, opacity:1});
+    }
+    layers.push({key:'torso', pid:'capdread.torso', src:torsoSrc, z:30, opacity:1});
+    if (capdreadRigState.beard) {
+      layers.push({key:'beard', pid:'capdread.beard', src:beardSrc, z:32, opacity:1});
+    }
+    if (capdreadRigState.handFront !== 'none') {
+      const hfk = 'hand_front_' + capdreadRigState.handFront;
+      layers.push({key:hfk, pid:'capdread.hand_front.' + capdreadRigState.handFront, src:handFrontSrcs[capdreadRigState.handFront], z:40, opacity:1});
+    }
+    layers.push({key:'arm_front', pid:'capdread.arm_front', src:armFrontSrc, z:41, opacity:1});
+
+    layers.sort((a, b) => a.z - b.z);
+
+    const layerImgs = layers.map(l => {
+      const o = capdreadRigOffsets[l.key] || {x:150, y:150, w:80, h:80};
+      const isAct = capdreadRigState.highlightActive && l.pid === activeId;
+      return `<img class="rig-layer ${isAct ? 'active-part' : ''}" data-key="${l.key}" data-puppet="capdread" title="${l.pid || l.key} (arrastrar para mover)"
+        src="${file(l.src)}"
+        style="left:${o.x}px; top:${o.y}px; width:${o.w}px; height:${o.h}px; z-index:${l.z}; opacity:${l.opacity}">`;
+    }).join('');
+
+    const btn = (group, val, label) =>
+      `<button type="button" class="${capdreadRigState[group]===val?'on':''}" data-rig-puppet="capdread" data-rig-group="${group}" data-rig-val="${val}">${label}</button>`;
+
+    return `
+      <div class="rig-card">
+        <div class="rig-title">
+          <span>Marioneta Captain Dread</span>
+          <div style="display:flex; gap:4px">
+            <button type="button" class="${activePuppet==='smoothface'?'on':''}" id="puppet-toggle-sf">Smoothface</button>
+            <button type="button" class="${activePuppet==='capdread'?'on':''}" id="puppet-toggle-cd">Captain Dread</button>
+          </div>
+        </div>
+        <div class="rig-viewport-wrap" style="width:${wrapW}px; height:${wrapH}px">
+          <div class="rig-viewport" id="rig-viewport" style="transform:scale(${scale}); width:380px; height:480px">
+            ${layerImgs}
+          </div>
+        </div>
+        <div class="rig-controls">
+          <span class="lbl">Mano frontal (4-6):</span>
+          <div class="rig-btns">
+            ${btn('handFront','fist','Fist')}
+            ${btn('handFront','open','Open')}
+            ${btn('handFront','point','Point')}
+            ${btn('handFront','none','Ocultar')}
+          </div>
+          <span class="lbl">Mano trasera (7-8):</span>
+          <div class="rig-btns">
+            ${btn('handBack','fist','Fist')}
+            ${btn('handBack','open','Open')}
+            ${btn('handBack','none','Ocultar')}
+          </div>
+          <span class="lbl">Ojos (1-3):</span>
+          <div class="rig-btns">
+            ${btn('eyes','normal','Normal')}
+            ${btn('eyes','squint','Squint')}
+            ${btn('eyes','closed','Closed')}
+            ${btn('eyes','none','Ocultar')}
+          </div>
+          <span class="lbl">Cejas (Q-E):</span>
+          <div class="rig-btns">
+            ${btn('brows','normal','Normal')}
+            ${btn('brows','angry','Angry')}
+            ${btn('brows','surprised','Surprised')}
+            ${btn('brows','none','Ocultar')}
+          </div>
+          <span class="lbl">Accesorios:</span>
+          <div class="rig-btns">
+            <button type="button" class="${capdreadRigState.hat?'on':''}" id="rig-toggle-hat">Sombrero: ${capdreadRigState.hat?'Puesto':'Oculto'}</button>
+            <button type="button" class="${capdreadRigState.beard?'on':''}" id="rig-toggle-beard">Barba: ${capdreadRigState.beard?'Visible':'Oculta'}</button>
+          </div>
+          <span class="lbl">Opciones:</span>
+          <div class="rig-btns">
+            <button type="button" class="${capdreadRigState.highlightActive?'on':''}" id="rig-toggle-hi">Resaltar pieza activa</button>
+          </div>
+        </div>
+        <div class="rig-footer">
+          <span id="rig-coords">Arrastra cualquier pieza en la marioneta para probar posición</span>
+          <button type="button" id="rig-reset">Reset posiciones</button>
+        </div>
+      </div>`;
+  }
+
   function wireRigEvents() {
     const vp = $('#rig-viewport');
     if (!vp) return;
 
-    document.querySelectorAll('[data-rig-group]').forEach(b => {
+    const tSf = $('#puppet-toggle-sf');
+    if (tSf) tSf.onclick = () => { activePuppet = 'smoothface'; renderStage(); };
+    const tCd = $('#puppet-toggle-cd');
+    if (tCd) tCd.onclick = () => { activePuppet = 'capdread'; renderStage(); };
+
+    document.querySelectorAll('[data-rig-puppet]').forEach(b => {
       b.onclick = () => {
+        const puppet = b.dataset.rigPuppet;
         const g = b.dataset.rigGroup, v = b.dataset.rigVal;
-        rigState[g] = v;
+        if (puppet === 'capdread') {
+          capdreadRigState[g] = v;
+        } else {
+          rigState[g] = v;
+        }
         renderStage();
       };
     });
+
     const tx = $('#rig-toggle-xray');
     if (tx) tx.onclick = () => { rigState.armBackXray = !rigState.armBackXray; renderStage(); };
     const th = $('#rig-toggle-hi');
-    if (th) th.onclick = () => { rigState.highlightActive = !rigState.highlightActive; renderStage(); };
+    if (th) {
+      th.onclick = () => {
+        if (activePuppet === 'capdread') {
+          capdreadRigState.highlightActive = !capdreadRigState.highlightActive;
+        } else {
+          rigState.highlightActive = !rigState.highlightActive;
+        }
+        renderStage();
+      };
+    }
+    const that = $('#rig-toggle-hat');
+    if (that) that.onclick = () => { capdreadRigState.hat = !capdreadRigState.hat; renderStage(); };
+    const tbeard = $('#rig-toggle-beard');
+    if (tbeard) tbeard.onclick = () => { capdreadRigState.beard = !capdreadRigState.beard; renderStage(); };
+
     const rs = $('#rig-reset');
-    if (rs) rs.onclick = () => { rigOffsets = JSON.parse(JSON.stringify(DEFAULT_OFFSETS)); renderStage(); };
+    if (rs) {
+      rs.onclick = () => {
+        if (activePuppet === 'capdread') {
+          capdreadRigOffsets = JSON.parse(JSON.stringify(DEFAULT_CAPDREAD_OFFSETS));
+        } else {
+          rigOffsets = JSON.parse(JSON.stringify(DEFAULT_OFFSETS));
+        }
+        renderStage();
+      };
+    }
 
     // Dragging support on rig layers
-    const scale = Math.max(0.55, Math.min(1.6, $('#zoom').value / 340));
+    const baseW = activePuppet === 'capdread' ? 360 : 340;
+    const scale = Math.max(0.55, Math.min(1.6, $('#zoom').value / baseW));
     vp.querySelectorAll('.rig-layer').forEach(img => {
       img.onmousedown = e => {
         e.preventDefault();
         const key = img.dataset.key;
+        const isCap = img.dataset.puppet === 'capdread';
+        const offsets = isCap ? capdreadRigOffsets : rigOffsets;
+        if (!offsets[key]) return;
         const startX = e.clientX, startY = e.clientY;
-        const origX = rigOffsets[key].x, origY = rigOffsets[key].y;
+        const origX = offsets[key].x, origY = offsets[key].y;
         const coordsEl = $('#rig-coords');
         const onMove = ev => {
           const dx = Math.round((ev.clientX - startX) / scale);
           const dy = Math.round((ev.clientY - startY) / scale);
-          rigOffsets[key].x = origX + dx;
-          rigOffsets[key].y = origY + dy;
-          img.style.left = rigOffsets[key].x + 'px';
-          img.style.top = rigOffsets[key].y + 'px';
-          if (coordsEl) coordsEl.textContent = `${key}: x=${rigOffsets[key].x}, y=${rigOffsets[key].y}`;
+          offsets[key].x = origX + dx;
+          offsets[key].y = origY + dy;
+          img.style.left = offsets[key].x + 'px';
+          img.style.top = offsets[key].y + 'px';
+          if (coordsEl) coordsEl.textContent = `${key}: x=${offsets[key].x}, y=${offsets[key].y}`;
         };
         const onUp = () => {
           window.removeEventListener('mousemove', onMove);
@@ -501,9 +759,11 @@
     if (!it) { st.innerHTML = '<p class="empty">No hay piezas esperando revisión.</p>'; info.innerHTML=''; return; }
     const h = +$('#zoom').value;
     const isSmoothfacePart = it.category === 'smoothface' || (it.id && it.id.startsWith('smoothface.'));
+    const isCapdreadPart   = it.category === 'capdread'   || (it.id && it.id.startsWith('capdread.'));
+    const isCharPart       = isSmoothfacePart || isCapdreadPart;
 
-    // Respect real relative height for small body parts so an eyebrow isn't blown up 8x by default
-    const candH = isSmoothfacePart && it.target_height_px
+    // Respect real relative height for small body parts
+    const candH = isCharPart && it.target_height_px
       ? Math.max(90, Math.round(it.target_height_px * (h / 220)))
       : h;
 
@@ -511,11 +771,11 @@
       `<figure class="${cls}"><img src="${file(src)}" style="height:${customH}px" alt=""><figcaption>${esc(cap)}</figcaption></figure>`;
 
     const refs = (it.references||[]).slice(0,2).map(r => fig(r, 'ref · ' + r.split('/').pop(), '', Math.round(h * 0.78)));
-    const rigHTML = isSmoothfacePart ? buildSmoothfaceRigHTML(it.id, h) : '';
-    const neigh = isSmoothfacePart ? [] : (it.neighbors||[]).slice(0,2).map(r => fig(r, 'aprobada · ' + r.split('/').pop()));
+    const rigHTML = activePuppet === 'capdread' ? buildCapdreadRigHTML(it.id, h) : buildSmoothfaceRigHTML(it.id, h);
+    const neigh = isCharPart ? [] : (it.neighbors||[]).slice(0,2).map(r => fig(r, 'aprobada · ' + r.split('/').pop()));
 
     st.innerHTML = rigHTML + fig(it.image, `${it.id} · ${it.version} (pieza aislada)`, 'cand', candH) + refs.join('') + neigh.join('');
-    if (isSmoothfacePart) wireRigEvents();
+    wireRigEvents();
 
     $('#reason').value = (reviews[it.id+'@'+it.version]||{}).reason || '';
 
@@ -563,17 +823,38 @@
     if (e.key === 'r' || e.key === 'R') { $('#reason').focus(); }
     if (e.key === 'j' || e.key === 'J') { idx = Math.min(items.length-1, idx+1); syncRigToSelection(); renderList(); renderStage(); }
     if (e.key === 'k' || e.key === 'K') { idx = Math.max(0, idx-1); syncRigToSelection(); renderList(); renderStage(); }
-    if (e.key === '1') { rigState.eyes = 'normal'; renderStage(); }
-    if (e.key === '2') { rigState.eyes = 'squint'; renderStage(); }
-    if (e.key === '3') { rigState.eyes = 'closed'; renderStage(); }
-    if (e.key === '4') { rigState.handFront = 'fist'; renderStage(); }
-    if (e.key === '5') { rigState.handFront = 'open'; renderStage(); }
-    if (e.key === '6') { rigState.handFront = 'point'; renderStage(); }
-    if (e.key === '7') { rigState.handBack = 'fist'; renderStage(); }
-    if (e.key === '8') { rigState.handBack = 'open'; renderStage(); }
-    if (e.key === 'q' || e.key === 'Q') { rigState.brows = 'normal'; renderStage(); }
-    if (e.key === 'w' || e.key === 'W') { rigState.brows = 'angry'; renderStage(); }
-    if (e.key === 'e' || e.key === 'E') { rigState.brows = 'surprised'; renderStage(); }
+    if (e.key === 'p' || e.key === 'P') {
+      activePuppet = activePuppet === 'smoothface' ? 'capdread' : 'smoothface';
+      renderStage();
+      return;
+    }
+    if (activePuppet === 'capdread') {
+      if (e.key === '1') { capdreadRigState.eyes = 'normal'; renderStage(); }
+      if (e.key === '2') { capdreadRigState.eyes = 'squint'; renderStage(); }
+      if (e.key === '3') { capdreadRigState.eyes = 'closed'; renderStage(); }
+      if (e.key === '4') { capdreadRigState.handFront = 'fist'; renderStage(); }
+      if (e.key === '5') { capdreadRigState.handFront = 'open'; renderStage(); }
+      if (e.key === '6') { capdreadRigState.handFront = 'point'; renderStage(); }
+      if (e.key === '7') { capdreadRigState.handBack = 'fist'; renderStage(); }
+      if (e.key === '8') { capdreadRigState.handBack = 'open'; renderStage(); }
+      if (e.key === 'q' || e.key === 'Q') { capdreadRigState.brows = 'normal'; renderStage(); }
+      if (e.key === 'w' || e.key === 'W') { capdreadRigState.brows = 'angry'; renderStage(); }
+      if (e.key === 'e' || e.key === 'E') { capdreadRigState.brows = 'surprised'; renderStage(); }
+      if (e.key === 'h' || e.key === 'H') { capdreadRigState.hat = !capdreadRigState.hat; renderStage(); }
+      if (e.key === 'b' || e.key === 'B') { capdreadRigState.beard = !capdreadRigState.beard; renderStage(); }
+    } else {
+      if (e.key === '1') { rigState.eyes = 'normal'; renderStage(); }
+      if (e.key === '2') { rigState.eyes = 'squint'; renderStage(); }
+      if (e.key === '3') { rigState.eyes = 'closed'; renderStage(); }
+      if (e.key === '4') { rigState.handFront = 'fist'; renderStage(); }
+      if (e.key === '5') { rigState.handFront = 'open'; renderStage(); }
+      if (e.key === '6') { rigState.handFront = 'point'; renderStage(); }
+      if (e.key === '7') { rigState.handBack = 'fist'; renderStage(); }
+      if (e.key === '8') { rigState.handBack = 'open'; renderStage(); }
+      if (e.key === 'q' || e.key === 'Q') { rigState.brows = 'normal'; renderStage(); }
+      if (e.key === 'w' || e.key === 'W') { rigState.brows = 'angry'; renderStage(); }
+      if (e.key === 'e' || e.key === 'E') { rigState.brows = 'surprised'; renderStage(); }
+    }
   });
 
   function tab(which) {
@@ -592,8 +873,24 @@
 
   async function loadShots() {
     const runs = await fetch('/api/shots').then(x=>x.json());
-    $('#shots').innerHTML = runs.length ? runs.map(r => `<h2>${esc(r.run)}</h2>` + r.images.map(i=>`<img src="${file(i)}" alt="">`).join('')).join('')
-      : '<p>Todavía no hay vistas del cuarto. El skill room-layout las deja en review/layout_shots/.</p>';
+    if (!runs.length) {
+      $('#shots').innerHTML = '<p>Todavía no hay vistas del cuarto. El skill room-layout las deja en review/layout_shots/.</p>';
+      return;
+    }
+    $('#shots').innerHTML = runs.map(r => `
+      <div style="margin-bottom:30px">
+        <h2 style="border-bottom:1px solid #777; padding-bottom:6px; margin-top:16px">${esc(r.run)}</h2>
+        <div style="display:flex; flex-direction:column; gap:16px">
+          ${r.images.map(i => {
+            const name = i.split('/').pop();
+            return `<div>
+              <div style="font-weight:bold; margin-bottom:4px; font-size:.85rem">${esc(name)}</div>
+              <img src="${file(i)}" alt="${esc(name)}" style="max-width:100%; display:block; outline:3px solid var(--paper); outline-offset:4px">
+            </div>`;
+          }).join('')}
+        </div>
+      </div>
+    `).join('');
   }
 
   load();

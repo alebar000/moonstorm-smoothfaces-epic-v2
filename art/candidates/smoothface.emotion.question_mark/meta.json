@@ -1,0 +1,21 @@
+{
+  "id": "smoothface.emotion.question_mark",
+  "category": "smoothface",
+  "kind": "emotion",
+  "what": "Puzzled villain question mark badge with detached dot for Mr. Smoothface: rich gold paper (#e7bc57) with bold black marker outline (#1a1612) and subtle pencil shading (#6e6a62).",
+  "target_height_px": 52,
+  "height_fraction_of_smoothface": 0.165,
+  "pivot_hint": "center of question mark floating above character head",
+  "allowed_islands": 1,
+  "references": [
+    "art/references/ref_design_smoothface.png",
+    "art/references/ref_hero_torso.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "proposed",
+  "proposed_version": "v2",
+  "batch": "L3",
+  "version": "v2"
+}

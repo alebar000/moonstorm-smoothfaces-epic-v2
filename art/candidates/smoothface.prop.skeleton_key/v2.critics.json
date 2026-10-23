@@ -1,0 +1,14 @@
+{
+  "style_critic": {
+    "piece": "smoothface.prop.skeleton_key",
+    "version": "v2",
+    "verdict": "sin objeciones",
+    "defects": []
+  },
+  "anatomy_critic": {
+    "piece": "smoothface.prop.skeleton_key",
+    "version": "v2",
+    "verdict": "sin objeciones",
+    "defects": []
+  }
+}

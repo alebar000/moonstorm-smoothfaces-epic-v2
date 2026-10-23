@@ -1,0 +1,21 @@
+{
+  "id": "capdread.leg_back",
+  "category": "capdread",
+  "kind": "body_part",
+  "what": "Captain Dread rear leg shin and knee in 3/4 view facing right (paired-part consistency with leg_front): medium grey construction paper (#717171) matching naval trousers, bold black marker outline (#1a1612), subtle pencil shading (#6e6a62) for depth, upper knee overlap tab under capdread.pants, and lower ankle end to tuck into capdread.boot_back",
+  "target_height_px": 76,
+  "height_fraction_of_smoothface": 0.241,
+  "pivot_hint": "top knee under capdread.pants; bottom ankle tucking into capdread.boot_back",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/ref_design_capdread.png",
+    "art/references/ref_hero_torso.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "proposed",
+  "proposed_version": "v2",
+  "batch": "L5",
+  "version": "v2"
+}

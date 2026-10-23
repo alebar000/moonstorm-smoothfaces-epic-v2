@@ -1,0 +1,14 @@
+{
+  "style_critic": {
+    "piece": "smoothface.emotion.exclamation",
+    "version": "v2",
+    "verdict": "sin objeciones",
+    "defects": []
+  },
+  "anatomy_critic": {
+    "piece": "smoothface.emotion.exclamation",
+    "version": "v2",
+    "verdict": "sin objeciones",
+    "defects": []
+  }
+}

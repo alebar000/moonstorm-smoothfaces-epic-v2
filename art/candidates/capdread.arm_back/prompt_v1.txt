@@ -1,0 +1,12 @@
+STYLE (non-negotiable, matches the attached references):
+Hand-drawn construction-paper cutout. Each piece is ONE flat color of construction paper with a very subtle fiber texture, cut out with scissors. Design and proportions come from the attached pencil sketch by the original artist; do not reinterpret it. Outline: black marker (#1a1612), hand-drawn, visible pressure variation, some strokes overshoot corners. Shading: SOFT PENCIL only (#6e6a62), grey, visible stroke direction, only in shadow areas. No digital gradients, no airbrush, no glow, no 3D.
+EDGE: rough scissor cut, visible straight facets and corners where the scissors turned; the cut does not perfectly follow the ink.
+INK: thick marker, ~7.2 px at game scale (6-9 px range).
+COLOR: vivid, saturated construction paper, ONLY from this character palette: #f9ecc2, #323232, #717171, #000000, #613e35, #004b81, #343e63, #9e1507, #9c793a, #e7bc57, #0c7a27, #848aa4, #1a1612, #6e6a62.
+One isolated object, flat solid #00FF00 chroma-key green background filling the entire canvas around the cutout. No cast shadow baked in.
+FORBIDDEN: gradients, glow, bloom, 3D render, airbrush, white sticker border, any background, any text, more than one object, colors from the other palette, reinterpreting the sketch.
+
+PIECE: capdread.arm_back
+WHAT: Captain Dread rear (left) naval sleeve extending downwards/gesturing in 3/4 view facing right: navy blue construction paper (#343e63) with gold wrist cuff (#e7bc57), bold black marker outline (#1a1612), soft grey pencil shading (#6e6a62) for depth, and upper shoulder tab to tuck behind capdread.torso
+SIZE: 112 px target height at scale 1.0, centered on 1024x1024 canvas with ample green margin.
+PIVOT HINT: upper-right shoulder joint tucking behind capdread.torso; wrist cuff at lower end

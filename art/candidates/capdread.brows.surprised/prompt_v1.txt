@@ -1,0 +1,12 @@
+STYLE (non-negotiable, matches the attached references):
+Hand-drawn construction-paper cutout. Each piece is ONE flat color of construction paper with a very subtle fiber texture, cut out with scissors. Design and proportions come from the attached pencil sketch by the original artist; do not reinterpret it. Outline: black marker (#1a1612), hand-drawn, visible pressure variation, some strokes overshoot corners. Shading: SOFT PENCIL only (#6e6a62), grey, visible stroke direction, only in shadow areas. No digital gradients, no airbrush, no glow, no 3D.
+EDGE: rough scissor cut, visible straight facets and corners where the scissors turned; the cut does not perfectly follow the ink.
+INK: thick marker, ~7 px at game scale (6-9 px range at 28 px height).
+COLOR: vivid, saturated construction paper, ONLY from this character palette: #1a1612 (black marker ink brow bars), #6e6a62 (pencil shading).
+Solid #00FF00 chroma-key green background filling the entire canvas around the cutouts. No cast shadow baked in.
+FORBIDDEN: gradients, glow, bloom, 3D render, airbrush, white sticker border, any background, any text, colors from the other palette, reinterpreting the sketch.
+
+PIECE: capdread.brows.surprised
+WHAT: Pair of Captain Dread bushy black eyebrows raised in shock or alarm (3/4 front view facing right): two high arched black marker brow strips (#1a1612) curving upward in dramatic wide arches, clearly distinct from normal and angry variants, matching ref_design_capdread.png
+SIZE: 28 px tall at 1.0 game scale.
+PIVOT HINT: center of brow pair above capdread.eyes on capdread.head

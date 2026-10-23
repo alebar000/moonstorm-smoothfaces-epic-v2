@@ -1,0 +1,269 @@
+{
+  "id": "smoothface",
+  "name": "Mr. Smoothface",
+  "height_px": 315,
+  "height_tolerance": 0.04,
+  "facing_default": 1,
+  "root": "torso",
+  "canvas": {
+    "w": 400,
+    "h": 500
+  },
+  "parts": {
+    "torso": {
+      "asset": "art/approved/smoothface/smoothface.torso.png",
+      "z_index": 30,
+      "parent": null,
+      "offset": [27, 90],
+      "size": [255, 271],
+      "pivots": {
+        "neck": [168, 79],
+        "shoulder_front": [180, 210],
+        "shoulder_back": [172, 176],
+        "waist": [120, 282]
+      }
+    },
+    "head": {
+      "asset": "art/approved/smoothface/smoothface.head.png",
+      "z_index": 20,
+      "parent": "torso",
+      "offset": [132, 79],
+      "size": [144, 151],
+      "pivots": {
+        "neck": [168, 180],
+        "eyes": [175, 143],
+        "brows": [174, 132]
+      }
+    },
+    "eyes.normal": {
+      "asset": "art/approved/smoothface/smoothface.eyes.normal.png",
+      "z_index": 22,
+      "parent": "head",
+      "offset": [175, 143],
+      "size": [72, 58],
+      "pivots": {
+        "anchor": [175, 143]
+      }
+    },
+    "eyes.squint": {
+      "asset": "art/approved/smoothface/smoothface.eyes.squint.png",
+      "z_index": 22,
+      "parent": "head",
+      "offset": [174, 142],
+      "size": [81, 60],
+      "pivots": {
+        "anchor": [174, 142]
+      }
+    },
+    "eyes.closed": {
+      "asset": "art/approved/smoothface/smoothface.eyes.closed.png",
+      "z_index": 22,
+      "parent": "head",
+      "offset": [175, 143],
+      "size": [78, 58],
+      "pivots": {
+        "anchor": [175, 143]
+      }
+    },
+    "brows.normal": {
+      "asset": "art/approved/smoothface/smoothface.brows.normal.png",
+      "z_index": 23,
+      "parent": "head",
+      "offset": [174, 132],
+      "size": [96, 50],
+      "pivots": {
+        "anchor": [174, 132]
+      }
+    },
+    "brows.angry": {
+      "asset": "art/approved/smoothface/smoothface.brows.angry.png",
+      "z_index": 23,
+      "parent": "head",
+      "offset": [178, 131],
+      "size": [84, 59],
+      "pivots": {
+        "anchor": [178, 131]
+      }
+    },
+    "brows.surprised": {
+      "asset": "art/approved/smoothface/smoothface.brows.surprised.png",
+      "z_index": 23,
+      "parent": "head",
+      "offset": [179, 126],
+      "size": [76, 57],
+      "pivots": {
+        "anchor": [179, 126]
+      }
+    },
+    "arm_front": {
+      "asset": "art/approved/smoothface/smoothface.arm_front.png",
+      "z_index": 41,
+      "parent": "torso",
+      "offset": [156, 210],
+      "size": [135, 108],
+      "pivots": {
+        "shoulder": [156, 210],
+        "wrist": [252, 192]
+      }
+    },
+    "hand_front.point": {
+      "asset": "art/approved/smoothface/smoothface.hand_front.point.png",
+      "z_index": 40,
+      "parent": "arm_front",
+      "offset": [252, 192],
+      "size": [72, 50],
+      "pivots": {
+        "wrist": [252, 192]
+      }
+    },
+    "hand_front.fist": {
+      "asset": "art/approved/smoothface/smoothface.hand_front.fist.png",
+      "z_index": 40,
+      "parent": "arm_front",
+      "offset": [254, 194],
+      "size": [41, 44],
+      "pivots": {
+        "wrist": [254, 194]
+      }
+    },
+    "hand_front.open": {
+      "asset": "art/approved/smoothface/smoothface.hand_front.open.png",
+      "z_index": 40,
+      "parent": "arm_front",
+      "offset": [252, 190],
+      "size": [48, 48],
+      "pivots": {
+        "wrist": [252, 190]
+      }
+    },
+    "arm_back": {
+      "asset": "art/approved/smoothface/smoothface.arm_back.png",
+      "z_index": 18,
+      "parent": "torso",
+      "offset": [172, 176],
+      "size": [131, 104],
+      "pivots": {
+        "shoulder": [172, 176],
+        "wrist": [270, 158]
+      }
+    },
+    "hand_back.point": {
+      "asset": "art/candidates/smoothface.hand_back.point/v2.png",
+      "z_index": 17,
+      "parent": "arm_back",
+      "offset": [270, 158],
+      "size": [58, 42],
+      "pivots": {
+        "wrist": [270, 158]
+      }
+    },
+    "hand_back.fist": {
+      "asset": "art/approved/smoothface/smoothface.hand_back.fist.png",
+      "z_index": 17,
+      "parent": "arm_back",
+      "offset": [272, 162],
+      "size": [48, 42],
+      "pivots": {
+        "wrist": [272, 162]
+      }
+    },
+    "hand_back.open": {
+      "asset": "art/approved/smoothface/smoothface.hand_back.open.png",
+      "z_index": 17,
+      "parent": "arm_back",
+      "offset": [272, 158],
+      "size": [46, 46],
+      "pivots": {
+        "wrist": [272, 158]
+      }
+    },
+    "pants": {
+      "asset": "art/approved/smoothface/smoothface.pants.png",
+      "z_index": 14,
+      "parent": "torso",
+      "offset": [78, 282],
+      "size": [84, 81],
+      "pivots": {
+        "waist": [78, 282],
+        "hip_front": [118, 322],
+        "hip_back": [78, 320]
+      }
+    },
+    "leg_front": {
+      "asset": "art/approved/smoothface/smoothface.leg_front.png",
+      "z_index": 13,
+      "parent": "pants",
+      "offset": [118, 322],
+      "size": [40, 68],
+      "pivots": {
+        "hip": [118, 322],
+        "ankle": [112, 355]
+      }
+    },
+    "leg_back": {
+      "asset": "art/approved/smoothface/smoothface.leg_back.png",
+      "z_index": 11,
+      "parent": "pants",
+      "offset": [78, 320],
+      "size": [49, 68],
+      "pivots": {
+        "hip": [78, 320],
+        "ankle": [74, 352]
+      }
+    },
+    "shoe_front": {
+      "asset": "art/approved/smoothface/smoothface.shoe_front.png",
+      "z_index": 12,
+      "parent": "leg_front",
+      "offset": [112, 355],
+      "size": [84, 59],
+      "pivots": {
+        "ankle": [112, 355]
+      }
+    },
+    "shoe_back": {
+      "asset": "art/approved/smoothface/smoothface.shoe_back.png",
+      "z_index": 10,
+      "parent": "leg_back",
+      "offset": [74, 352],
+      "size": [84, 59],
+      "pivots": {
+        "ankle": [74, 352]
+      }
+    }
+  },
+  "variant_groups": {
+    "eyes": {
+      "default": "normal",
+      "variants": {
+        "normal": "eyes.normal",
+        "squint": "eyes.squint",
+        "closed": "eyes.closed"
+      }
+    },
+    "brows": {
+      "default": "normal",
+      "variants": {
+        "normal": "brows.normal",
+        "angry": "brows.angry",
+        "surprised": "brows.surprised"
+      }
+    },
+    "hand_front": {
+      "default": "point",
+      "variants": {
+        "point": "hand_front.point",
+        "fist": "hand_front.fist",
+        "open": "hand_front.open"
+      }
+    },
+    "hand_back": {
+      "default": "point",
+      "variants": {
+        "point": "hand_back.point",
+        "fist": "hand_back.fist",
+        "open": "hand_back.open"
+      }
+    }
+  }
+}

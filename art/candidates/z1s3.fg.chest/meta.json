@@ -1,0 +1,19 @@
+{
+  "id": "z1s3.fg.chest",
+  "category": "z1s3",
+  "kind": "foreground",
+  "what": "Heavy iron-banded wooden pirate sea chest with curved barrel-top lid, iron corner braces, padlock hasp, and side rope handles",
+  "target_height_px": 173,
+  "height_fraction_of_smoothface": 0.55,
+  "pivot_hint": "bottom-center chest base on cabin floor",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/ref_room_z1s3_2010.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "blocked_quota_429",
+  "proposed_version": "v1",
+  "quota_note": "Bloqueado por HTTP 429 RESOURCE_EXHAUSTED en gemini-3.1-flash-image (reset ~4h)."
+}

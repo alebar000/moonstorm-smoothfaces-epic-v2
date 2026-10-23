@@ -1,29 +1,513 @@
 {
-  "_comment": "Layout de ejemplo de Z1S3. Los assets apuntan a art/approved/ y entran a objects solo cuando existen ahí; mientras tanto viven en pending. Ver .agents/skills/room-layout/SKILL.md.",
   "room": "z1s3",
-  "size": {"w": 2400, "h": 900},
-  "camera": {"viewport_w": 1600, "follow": "player", "edge_scroll": true},
-  "light": {"x": 1200, "y": 120},
+  "size": {
+    "w": 2400,
+    "h": 900
+  },
+  "camera": {
+    "viewport_w": 1600,
+    "viewport_h": 900,
+    "follow": "player",
+    "edge_scroll": true
+  },
+  "light": {
+    "x": 1200,
+    "y": 120
+  },
   "planes": [
-    {"id": "exterior",   "parallax": 0.25},
-    {"id": "wall",       "parallax": 0.82},
-    {"id": "wall_props", "parallax": 0.88},
-    {"id": "floor",      "parallax": 1.00, "y_sort": true},
-    {"id": "foreground", "parallax": 1.22},
-    {"id": "ribs",       "parallax": 1.35}
+    {
+      "id": "exterior",
+      "parallax": 0.25
+    },
+    {
+      "id": "wall",
+      "parallax": 0.82
+    },
+    {
+      "id": "wall_props",
+      "parallax": 0.88
+    },
+    {
+      "id": "floor",
+      "parallax": 1.0,
+      "y_sort": true
+    },
+    {
+      "id": "foreground",
+      "parallax": 1.22
+    },
+    {
+      "id": "ribs",
+      "parallax": 1.35
+    }
   ],
-  "walkable": [[120, 640], [2280, 640], [2280, 860], [120, 860]],
+  "walkable": [
+    [
+      120,
+      640
+    ],
+    [
+      2280,
+      640
+    ],
+    [
+      2280,
+      860
+    ],
+    [
+      120,
+      860
+    ]
+  ],
   "foot_baseline_y": 820,
-  "perspective_scale": {"y_far": 640, "scale_far": 0.90, "y_near": 860, "scale_near": 1.05},
-  "objects": [],
-  "exits": [],
-  "spawns": {"start": [700, 822]},
-  "pending": [
-    {"id": "z1s3.wall.panel_a", "plane": "wall", "x": 0, "y": 0, "anchor": "top-left"},
-    {"id": "z1s3.prop.sarcophagus", "plane": "floor", "x": 260, "y": 822},
-    {"id": "z1s3.prop.desk", "plane": "floor", "x": 1100, "y": 822},
-    {"id": "z1s3.prop.bunk_bed", "plane": "floor", "x": 2000, "y": 822},
-    {"id": "z1s3.fg.chart_table", "plane": "foreground", "x": 700, "y": 900},
-    {"id": "z1s3.fg.sea_trunk", "plane": "foreground", "x": 1900, "y": 900}
+  "perspective_scale": {
+    "y_far": 640,
+    "scale_far": 0.9,
+    "y_near": 860,
+    "scale_near": 1.05
+  },
+  "objects": [
+    {
+      "id": "z1s3.wall.panel_a",
+      "asset": "art/approved/z1s3/z1s3.wall.panel_a.png",
+      "plane": "wall",
+      "x": 0,
+      "y": 0,
+      "anchor": "top-left",
+      "state": "visible"
+    },
+    {
+      "id": "z1s3.wall.panel_b",
+      "asset": "art/candidates/z1s3.wall.panel_b/v2.png",
+      "plane": "wall",
+      "x": 680,
+      "y": 0,
+      "anchor": "top-left",
+      "state": "visible"
+    },
+    {
+      "id": "z1s3.wall.panel_c",
+      "asset": "art/candidates/z1s3.wall.panel_c/v2.png",
+      "plane": "wall",
+      "x": 1380,
+      "y": 0,
+      "anchor": "top-left",
+      "state": "visible"
+    },
+    {
+      "id": "z1s3.wall.seam_strip",
+      "asset": "art/candidates/z1s3.wall.seam_strip/v2.png",
+      "plane": "wall",
+      "x": 620,
+      "y": 0,
+      "anchor": "top-left",
+      "state": "visible"
+    },
+    {
+      "id": "z1s3.ceiling.beam_a",
+      "asset": "art/candidates/z1s3.ceiling.beam_a/v2.png",
+      "plane": "wall",
+      "x": 0,
+      "y": 0,
+      "anchor": "top-left",
+      "state": "visible"
+    },
+    {
+      "id": "z1s3.ceiling.beam_b",
+      "asset": "art/candidates/z1s3.ceiling.beam_b/v2.png",
+      "plane": "wall",
+      "x": 800,
+      "y": 0,
+      "anchor": "top-left",
+      "state": "visible"
+    },
+    {
+      "id": "z1s3.floor.planks_a",
+      "asset": "art/candidates/z1s3.floor.planks_a/v2.png",
+      "plane": "floor",
+      "x": 0,
+      "y": 560,
+      "anchor": "top-left",
+      "sort_y": 550,
+      "state": "visible"
+    },
+    {
+      "id": "z1s3.floor.planks_b",
+      "asset": "art/candidates/z1s3.floor.planks_b/v2.png",
+      "plane": "floor",
+      "x": 810,
+      "y": 560,
+      "anchor": "top-left",
+      "sort_y": 550,
+      "state": "visible"
+    },
+    {
+      "id": "z1s3.wall.door",
+      "asset": "art/candidates/z1s3.wall.door/v2.png",
+      "plane": "wall_props",
+      "x": 340,
+      "y": 220,
+      "anchor": "top-left",
+      "interact": {
+        "inspect": "dlg.z1s3.door.inspect",
+        "use": "exit.to_z1s2"
+      },
+      "state": "visible"
+    },
+    {
+      "id": "z1s3.wall.porthole",
+      "asset": "art/candidates/z1s3.wall.porthole/v2.png",
+      "plane": "wall_props",
+      "x": 720,
+      "y": 160,
+      "anchor": "top-left",
+      "state": "visible"
+    },
+    {
+      "id": "z1s3.wall.poster",
+      "asset": "art/candidates/z1s3.wall.poster/v2.png",
+      "plane": "wall_props",
+      "x": 960,
+      "y": 140,
+      "anchor": "top-left",
+      "state": "visible"
+    },
+    {
+      "id": "z1s3.wall.mask_a",
+      "asset": "art/candidates/z1s3.wall.mask_a/v2.png",
+      "plane": "wall_props",
+      "x": 1220,
+      "y": 180,
+      "anchor": "top-left",
+      "state": "visible"
+    },
+    {
+      "id": "z1s3.wall.helm_wheel",
+      "asset": "art/candidates/z1s3.wall.helm_wheel/v2.png",
+      "plane": "wall_props",
+      "x": 1360,
+      "y": 150,
+      "anchor": "top-left",
+      "state": "visible"
+    },
+    {
+      "id": "z1s3.wall.mask_b",
+      "asset": "art/candidates/z1s3.wall.mask_b/v2.png",
+      "plane": "wall_props",
+      "x": 1560,
+      "y": 180,
+      "anchor": "top-left",
+      "state": "visible"
+    },
+    {
+      "id": "z1s3.wall.shelf",
+      "asset": "art/candidates/z1s3.wall.shelf/v2.png",
+      "plane": "wall_props",
+      "x": 1350,
+      "y": 320,
+      "anchor": "top-left",
+      "state": "visible"
+    },
+    {
+      "id": "z1s3.wall.pipes",
+      "asset": "art/candidates/z1s3.wall.pipes/v2.png",
+      "plane": "wall_props",
+      "x": 1160,
+      "y": 120,
+      "anchor": "top-left",
+      "state": "visible"
+    },
+    {
+      "id": "z1s3.prop.sarcophagus",
+      "asset": "art/approved/z1s3/z1s3.prop.sarcophagus.png",
+      "plane": "floor",
+      "x": 180,
+      "y": 820,
+      "anchor": "bottom-center",
+      "sort_y": 820,
+      "interact": {
+        "inspect": "dlg.z1s3.sarcophagus.inspect",
+        "talk": "dlg.z1s3.sarcophagus.talk"
+      },
+      "state": "visible"
+    },
+    {
+      "id": "z1s3.prop.coat_rack",
+      "asset": "art/candidates/z1s3.prop.coat_rack/v2.png",
+      "plane": "floor",
+      "x": 450,
+      "y": 575,
+      "anchor": "bottom-center",
+      "sort_y": 780,
+      "state": "visible",
+      "scale": 0.28
+    },
+    {
+      "id": "z1s3.prop.coat",
+      "asset": "art/candidates/z1s3.prop.coat/v2.png",
+      "plane": "floor",
+      "x": 450,
+      "y": 740,
+      "anchor": "bottom-center",
+      "sort_y": 780,
+      "state": "visible"
+    },
+    {
+      "id": "z1s3.prop.hat",
+      "asset": "art/candidates/z1s3.prop.hat/v2.png",
+      "plane": "floor",
+      "x": 450,
+      "y": 535,
+      "anchor": "bottom-center",
+      "sort_y": 780,
+      "state": "visible"
+    },
+    {
+      "id": "z1s3.prop.desk",
+      "asset": "art/candidates/z1s3.prop.desk/v2.png",
+      "plane": "floor",
+      "x": 880,
+      "y": 740,
+      "anchor": "bottom-center",
+      "sort_y": 740,
+      "interact": {
+        "inspect": "dlg.z1s3.desk.inspect"
+      },
+      "state": "visible"
+    },
+    {
+      "id": "z1s3.prop.tv",
+      "asset": "art/candidates/z1s3.prop.tv/v2.png",
+      "plane": "floor",
+      "x": 800,
+      "y": 640,
+      "anchor": "bottom-center",
+      "sort_y": 741,
+      "state": "visible"
+    },
+    {
+      "id": "z1s3.prop.fishbowl",
+      "asset": "art/candidates/z1s3.prop.fishbowl/v2.png",
+      "plane": "floor",
+      "x": 950,
+      "y": 630,
+      "anchor": "bottom-center",
+      "sort_y": 741,
+      "state": "visible"
+    },
+    {
+      "id": "z1s3.prop.nightstand",
+      "asset": "art/candidates/z1s3.prop.nightstand/v2.png",
+      "plane": "floor",
+      "x": 1800,
+      "y": 760,
+      "anchor": "bottom-center",
+      "sort_y": 760,
+      "state": "visible"
+    },
+    {
+      "id": "char.smoothface",
+      "asset": "characters/smoothface/composite_preview.png",
+      "rig": "characters/smoothface/rig.json",
+      "plane": "floor",
+      "x": 700,
+      "y": 820,
+      "anchor": "bottom-center",
+      "sort_y": 820,
+      "state": "visible"
+    },
+    {
+      "id": "char.capdread",
+      "asset": "characters/capdread/composite_preview.png",
+      "rig": "characters/capdread/rig.json",
+      "plane": "floor",
+      "x": 1420,
+      "y": 820,
+      "anchor": "bottom-center",
+      "sort_y": 820,
+      "interact": {
+        "inspect": "dlg.z1s3.capdread.inspect",
+        "talk": "dlg.z1s3.capdread.talk"
+      },
+      "state": "visible"
+    }
+  ],
+  "characters": [
+    {
+      "id": "smoothface",
+      "rig": "characters/smoothface/rig.json",
+      "plane": "floor",
+      "x": 700,
+      "y": 820,
+      "height_px": 315,
+      "facing": 1
+    },
+    {
+      "id": "capdread",
+      "rig": "characters/capdread/rig.json",
+      "plane": "floor",
+      "x": 1420,
+      "y": 820,
+      "height_px": 330,
+      "facing": -1
+    }
+  ],
+  "exits": [
+    {
+      "id": "to_z1s2",
+      "object": "z1s3.wall.door",
+      "target": "z1s2",
+      "spawn": "from_z1s3"
+    }
+  ],
+  "spawns": {
+    "start": [
+      700,
+      820
+    ],
+    "from_z1s2": [
+      360,
+      820
+    ]
+  },
+  "pending_objects_quota_429": [
+    {
+      "id": "z1s3.prop.glue",
+      "asset": "art/candidates/z1s3.prop.glue/v1.png",
+      "plane": "floor",
+      "x": 1060,
+      "y": 770,
+      "anchor": "bottom-center",
+      "sort_y": 770,
+      "interact": {
+        "inspect": "dlg.z1s3.glue.inspect",
+        "grab": "item.glue"
+      },
+      "state": "visible"
+    },
+    {
+      "id": "z1s3.prop.easel_portrait",
+      "asset": "art/candidates/z1s3.prop.easel_portrait/v1.png",
+      "plane": "floor",
+      "x": 1180,
+      "y": 760,
+      "anchor": "bottom-center",
+      "sort_y": 760,
+      "interact": {
+        "inspect": "dlg.z1s3.portrait.inspect",
+        "use": "puzzle.portrait"
+      },
+      "state": "visible"
+    },
+    {
+      "id": "z1s3.prop.hammer_bag",
+      "asset": "art/candidates/z1s3.prop.hammer_bag/v1.png",
+      "plane": "floor",
+      "x": 1300,
+      "y": 790,
+      "anchor": "bottom-center",
+      "sort_y": 790,
+      "interact": {
+        "inspect": "dlg.z1s3.hammers.inspect",
+        "grab": "item.hammers"
+      },
+      "state": "visible"
+    },
+    {
+      "id": "z1s3.prop.dirty_laundry",
+      "asset": "art/candidates/z1s3.prop.dirty_laundry/v1.png",
+      "plane": "floor",
+      "x": 1650,
+      "y": 780,
+      "anchor": "bottom-center",
+      "sort_y": 780,
+      "state": "visible"
+    },
+    {
+      "id": "z1s3.prop.lamp",
+      "asset": "art/candidates/z1s3.prop.lamp/v1.png",
+      "plane": "floor",
+      "x": 1800,
+      "y": 680,
+      "anchor": "bottom-center",
+      "sort_y": 761,
+      "state": "visible"
+    },
+    {
+      "id": "z1s3.prop.bed",
+      "asset": "art/candidates/z1s3.prop.bed/v1.png",
+      "plane": "floor",
+      "x": 1980,
+      "y": 760,
+      "anchor": "bottom-center",
+      "sort_y": 760,
+      "interact": {
+        "inspect": "dlg.z1s3.bed.inspect"
+      },
+      "state": "visible"
+    },
+    {
+      "id": "z1s3.fg.card_table",
+      "asset": "art/candidates/z1s3.fg.card_table/v1.png",
+      "plane": "foreground",
+      "x": 620,
+      "y": 900,
+      "anchor": "bottom-center",
+      "state": "visible"
+    },
+    {
+      "id": "z1s3.fg.ship_in_bottle",
+      "asset": "art/candidates/z1s3.fg.ship_in_bottle/v1.png",
+      "plane": "foreground",
+      "x": 610,
+      "y": 800,
+      "anchor": "bottom-center",
+      "state": "visible"
+    },
+    {
+      "id": "z1s3.fg.chest",
+      "asset": "art/candidates/z1s3.fg.chest/v1.png",
+      "plane": "foreground",
+      "x": 1500,
+      "y": 900,
+      "anchor": "bottom-center",
+      "state": "visible"
+    },
+    {
+      "id": "z1s3.fg.clown_bust",
+      "asset": "art/candidates/z1s3.fg.clown_bust/v1.png",
+      "plane": "foreground",
+      "x": 1530,
+      "y": 790,
+      "anchor": "bottom-center",
+      "state": "visible"
+    },
+    {
+      "id": "z1s3.fg.voodoo_doll",
+      "asset": "art/candidates/z1s3.fg.voodoo_doll/v1.png",
+      "plane": "foreground",
+      "x": 1450,
+      "y": 800,
+      "anchor": "bottom-center",
+      "state": "visible"
+    },
+    {
+      "id": "z1s3.fg.hull_rib_left",
+      "asset": "art/candidates/z1s3.fg.hull_rib_left/v1.png",
+      "plane": "ribs",
+      "x": 0,
+      "y": 0,
+      "anchor": "top-left",
+      "state": "visible"
+    },
+    {
+      "id": "z1s3.fg.hull_rib_right",
+      "asset": "art/candidates/z1s3.fg.hull_rib_right/v1.png",
+      "plane": "ribs",
+      "x": 2080,
+      "y": 0,
+      "anchor": "top-left",
+      "state": "visible"
+    }
   ]
 }

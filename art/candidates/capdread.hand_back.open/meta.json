@@ -1,0 +1,21 @@
+{
+  "id": "capdread.hand_back.open",
+  "category": "capdread",
+  "kind": "body_part",
+  "what": "Captain Dread rear open gesturing hand in 3/4 view facing right (anatomical left hand, palmar view): warm skin cream construction paper (#f9ecc2) with bold black marker outline (#1a1612), 5 digits (thumb on upper-right + 4 open fingers, thenar pad and palm lines visible), subtle pencil shading (#6e6a62), and wrist overlap tab to tuck into capdread.arm_back cuff",
+  "target_height_px": 44,
+  "height_fraction_of_smoothface": 0.14,
+  "pivot_hint": "wrist base tucking into capdread.arm_back cuff",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/ref_design_capdread.png",
+    "art/references/ref_hero_torso.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "proposed",
+  "proposed_version": "v2",
+  "batch": "L5",
+  "version": "v2"
+}

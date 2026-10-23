@@ -1,0 +1,21 @@
+{
+  "id": "capdread.hand_back.fist",
+  "category": "capdread",
+  "kind": "body_part",
+  "what": "Captain Dread rear clenched pirate fist in 3/4 view facing right (anatomical left hand, palmar view): warm skin cream construction paper (#f9ecc2) with bold black marker outline (#1a1612), 5 digits (thumb folded across upper-right, curled fingers showing palm pads), subtle pencil palm creases (#6e6a62), and wrist overlap tab to tuck into capdread.arm_back cuff",
+  "target_height_px": 42,
+  "height_fraction_of_smoothface": 0.133,
+  "pivot_hint": "wrist base tucking into capdread.arm_back cuff",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/ref_design_capdread.png",
+    "art/references/ref_hero_torso.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "proposed",
+  "proposed_version": "v2",
+  "batch": "L5",
+  "version": "v2"
+}

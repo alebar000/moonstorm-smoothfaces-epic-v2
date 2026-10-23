@@ -1,0 +1,24 @@
+{
+  "id": "smoothface.hand_back.point",
+  "category": "smoothface",
+  "kind": "body_part",
+  "what": "Mr. Smoothface back (anatomical left) hand pointing to the right in palmar view with 5 digits (thumb, pointing index finger, 3 curled fingers) and wrist overlap tab tucking into smoothface.arm_back: warm skin cream construction paper (#f9ecc2) with bold black marker outline (#1a1612) and pencil creases (#6e6a62).",
+  "target_height_px": 38,
+  "height_fraction_of_smoothface": 0.121,
+  "pivot_hint": "left wrist base tucking into the cuff of smoothface.arm_back",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/ref_design_smoothface.png",
+    "art/references/ref_cutout_layers/008_hand.png",
+    "art/references/ref_hero_torso.png",
+    "art/approved/smoothface/smoothface.arm_back.png",
+    "art/approved/smoothface/smoothface.hand_back.open.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "proposed",
+  "proposed_version": "v2",
+  "batch": "L2",
+  "version": "v2"
+}

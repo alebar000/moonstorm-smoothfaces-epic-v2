@@ -1,0 +1,2 @@
+Hand-cut construction-paper cutout piece for a 2D adventure game: Victorian brass and turned wood magnifying glass prop (smoothface.prop.magnifying_glass).
+Circular brass bezel rim in muted brass paper (#ab986e), glass lens tint in sky blue (#95b3d4) with cream curved reflection facet (#cbc2c2), turned wooden handle in warm wood paper (#998370), bold black marker outline (#1a1612), and pencil shading (#6e6a62). Scenery palette. Pure #00FF00 green background.

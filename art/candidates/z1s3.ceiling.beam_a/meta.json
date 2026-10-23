@@ -1,0 +1,19 @@
+{
+  "id": "z1s3.ceiling.beam_a",
+  "category": "z1s3",
+  "kind": "wall",
+  "what": "Overhead structural steel submarine arch beam segment A with curved girder profile, lightening holes and riveted gussets",
+  "target_height_px": 160,
+  "height_fraction_of_smoothface": null,
+  "pivot_hint": "center",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/ref_room_z1s3_2010.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "proposed",
+  "proposed_version": "v2",
+  "version": "v2"
+}

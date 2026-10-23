@@ -1,0 +1,20 @@
+{
+  "id": "capdread.eyes.squint",
+  "category": "capdread",
+  "kind": "body_part",
+  "what": "Pair of Captain Dread eyes in suspicious narrowed pirate glare (3/4 front view facing right): narrow horizontal slit eyelids (#f9ecc2) with heavy black marker outlines (#1a1612) and pinpoint pupils, matching ref_design_capdread.png",
+  "target_height_px": 26,
+  "height_fraction_of_smoothface": 0.083,
+  "pivot_hint": "center of eye pair on mid-face of capdread.head",
+  "allowed_islands": 1,
+  "references": [
+    "art/references/ref_design_capdread.png",
+    "art/references/ref_hero_torso.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "proposed",
+  "proposed_version": "v2",
+  "version": "v2"
+}

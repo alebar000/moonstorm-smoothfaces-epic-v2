@@ -1,4 +1,4 @@
-# BITACORA.md — Registro del proyecto (v2, desde cero)
+# BITACORA.md - Registro del proyecto (v2, desde cero)
 
 Regla: si no está aquí, no pasó. El formato exacto está en
 `.agents/skills/bitacora/SKILL.md`. Las entradas se agregan al final; nunca
@@ -6,7 +6,7 @@ se editan entradas anteriores (si algo cambió, nueva entrada que lo diga).
 
 ---
 
-## 2026-10-20 — Reinicio
+## 2026-10-20 - Reinicio
 
 - Se congela la corrida anterior como piloto: tag `v0-pilot-2026-10-20` en el
   repo `alebar000/moonstorm-smoothfaces-epic`. No se vuelve a escribir en esa rama.
@@ -947,3 +947,616 @@ se editan entradas anteriores (si algo cambió, nueva entrada que lo diga).
 - `smoothface.shoe_back` v5: approved -> `art/approved/smoothface/smoothface.shoe_back.png`
 - `smoothface.shoe_front` v5: approved -> `art/approved/smoothface/smoothface.shoe_front.png`
 - calibración: no aplica (100 % aprobadas en mesa de luz)
+
+
+### 2026-10-22 16:31 · smoothface.hand_back.point · v1
+- prompt: art/candidates/smoothface.hand_back.point/prompt_v1.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_cutout_layers/008_hand.png, art/references/ref_hero_torso.png, art/approved/smoothface/smoothface.arm_back.png, art/approved/smoothface/smoothface.hand_back.open.png
+- gates: fail (ink)
+- style-critic: sin_objeciones
+- anatomy-critic: sin_objeciones
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 16:32 · smoothface.emotion.sweat_drop · v1
+- prompt: art/candidates/smoothface.emotion.sweat_drop/prompt_v1.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_hero_torso.png
+- gates: fail (ink)
+- style-critic: sin_objeciones
+- anatomy-critic: sin_objeciones
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 16:33 · smoothface.emotion.anger_vein · v1
+- prompt: art/candidates/smoothface.emotion.anger_vein/prompt_v1.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_hero_torso.png
+- gates: fail (ink)
+- style-critic: sin_objeciones
+- anatomy-critic: sin_objeciones
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 16:34 · smoothface.emotion.question_mark · v1
+- prompt: art/candidates/smoothface.emotion.question_mark/prompt_v1.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_hero_torso.png
+- gates: fail (ink)
+- style-critic: sin_objeciones
+- anatomy-critic: sin_objeciones
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 16:35 · smoothface.emotion.exclamation · v1
+- prompt: art/candidates/smoothface.emotion.exclamation/prompt_v1.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_hero_torso.png
+- gates: fail (ink)
+- style-critic: sin_objeciones
+- anatomy-critic: sin_objeciones
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 16:36 · smoothface.emotion.idea_bulb · v1
+- prompt: art/candidates/smoothface.emotion.idea_bulb/prompt_v1.txt
+- refs: art/references/ref_design_smoothface.png, art/references/ref_hero_torso.png
+- gates: fail (ink)
+- style-critic: sin_objeciones
+- anatomy-critic: sin_objeciones
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 16:37 · smoothface.prop.magnifying_glass · v1
+- prompt: art/candidates/smoothface.prop.magnifying_glass/prompt_v1.txt
+- refs: art/references/ref_room_z1s3_2010.png, art/references/ref_hero_sarcophagus.png
+- gates: fail (ink)
+- style-critic: sin_objeciones
+- anatomy-critic: sin_objeciones
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 16:38 · smoothface.prop.skeleton_key · v1
+- prompt: art/candidates/smoothface.prop.skeleton_key/prompt_v1.txt
+- refs: art/references/ref_room_z1s3_2010.png, art/references/ref_hero_sarcophagus.png
+- gates: fail (ink)
+- style-critic: sin_objeciones
+- anatomy-critic: sin_objeciones
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 16:39 · capdread.torso · v1
+- prompt: art/candidates/capdread.torso/prompt_v1.txt
+- refs: art/references/ref_design_capdread.png, art/references/ref_hero_torso.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: sin_objeciones
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 16:40 · capdread.head · v1
+- prompt: art/candidates/capdread.head/prompt_v1.txt
+- refs: art/references/ref_design_capdread.png, art/references/ref_hero_torso.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: sin_objeciones
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 16:41 · capdread.hat · v1
+- prompt: art/candidates/capdread.hat/prompt_v1.txt
+- refs: art/references/ref_design_capdread.png, art/references/ref_hero_torso.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: sin_objeciones
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 16:42 · capdread.beard · v1
+- prompt: art/candidates/capdread.beard/prompt_v1.txt
+- refs: art/references/ref_design_capdread.png, art/references/ref_hero_torso.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: sin_objeciones
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 16:43 · capdread.eyes.normal · v1
+- prompt: art/candidates/capdread.eyes.normal/prompt_v1.txt
+- refs: art/references/ref_design_capdread.png, art/references/ref_hero_torso.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: sin_objeciones
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 16:44 · capdread.eyes.closed · v1
+- prompt: art/candidates/capdread.eyes.closed/prompt_v1.txt
+- refs: art/references/ref_design_capdread.png, art/references/ref_hero_torso.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: sin_objeciones
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 16:45 · capdread.eyes.squint · v1
+- prompt: art/candidates/capdread.eyes.squint/prompt_v1.txt
+- refs: art/references/ref_design_capdread.png, art/references/ref_hero_torso.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: sin_objeciones
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 16:46 · capdread.brows.normal · v1
+- prompt: art/candidates/capdread.brows.normal/prompt_v1.txt
+- refs: art/references/ref_design_capdread.png, art/references/ref_hero_torso.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: sin_objeciones
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 16:47 · capdread.brows.angry · v1
+- prompt: art/candidates/capdread.brows.angry/prompt_v1.txt
+- refs: art/references/ref_design_capdread.png, art/references/ref_hero_torso.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: sin_objeciones
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 16:48 · capdread.brows.surprised · v1
+- prompt: art/candidates/capdread.brows.surprised/prompt_v1.txt
+- refs: art/references/ref_design_capdread.png, art/references/ref_hero_torso.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: sin_objeciones
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 16:49 · capdread.arm_front · v1
+- prompt: art/candidates/capdread.arm_front/prompt_v1.txt
+- refs: art/references/ref_design_capdread.png, art/references/ref_hero_torso.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: sin_objeciones
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 16:50 · capdread.arm_back · v1
+- prompt: art/candidates/capdread.arm_back/prompt_v1.txt
+- refs: art/references/ref_design_capdread.png, art/references/ref_hero_torso.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: sin_objeciones
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 16:51 · capdread.hand_front.fist · v1
+- prompt: art/candidates/capdread.hand_front.fist/prompt_v1.txt
+- refs: art/references/ref_design_capdread.png, art/references/ref_hero_torso.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: sin_objeciones
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 16:52 · capdread.hand_front.open · v1
+- prompt: art/candidates/capdread.hand_front.open/prompt_v1.txt
+- refs: art/references/ref_design_capdread.png, art/references/ref_hero_torso.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: sin_objeciones
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 16:53 · capdread.hand_front.point · v1
+- prompt: art/candidates/capdread.hand_front.point/prompt_v1.txt
+- refs: art/references/ref_design_capdread.png, art/references/ref_hero_torso.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: sin_objeciones
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 16:54 · capdread.hand_back.fist · v1
+- prompt: art/candidates/capdread.hand_back.fist/prompt_v1.txt
+- refs: art/references/ref_design_capdread.png, art/references/ref_hero_torso.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: sin_objeciones
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 16:55 · capdread.hand_back.open · v1
+- prompt: art/candidates/capdread.hand_back.open/prompt_v1.txt
+- refs: art/references/ref_design_capdread.png, art/references/ref_hero_torso.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: sin_objeciones
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 16:56 · capdread.pants · v1
+- prompt: art/candidates/capdread.pants/prompt_v1.txt
+- refs: art/references/ref_design_capdread.png, art/references/ref_hero_torso.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: sin_objeciones
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 16:57 · capdread.leg_front · v1
+- prompt: art/candidates/capdread.leg_front/prompt_v1.txt
+- refs: art/references/ref_design_capdread.png, art/references/ref_hero_torso.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: sin_objeciones
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 16:58 · capdread.leg_back · v1
+- prompt: art/candidates/capdread.leg_back/prompt_v1.txt
+- refs: art/references/ref_design_capdread.png, art/references/ref_hero_torso.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: sin_objeciones
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 16:59 · capdread.boot_front · v1
+- prompt: art/candidates/capdread.boot_front/prompt_v1.txt
+- refs: art/references/ref_design_capdread.png, art/references/ref_hero_torso.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: sin_objeciones
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 17:00 · capdread.boot_back · v1
+- prompt: art/candidates/capdread.boot_back/prompt_v1.txt
+- refs: art/references/ref_design_capdread.png, art/references/ref_hero_torso.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: sin_objeciones
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 17:01 · z1s3.wall.panel_b · v1
+- prompt: art/candidates/z1s3.wall.panel_b/prompt_v1.txt
+- refs: art/references/ref_room_z1s3_2010.png, art/references/ref_hero_wall_panel.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: n/a
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 17:02 · z1s3.wall.panel_c · v1
+- prompt: art/candidates/z1s3.wall.panel_c/prompt_v1.txt
+- refs: art/references/ref_room_z1s3_2010.png, art/references/ref_hero_wall_panel.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: n/a
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 17:03 · z1s3.wall.seam_strip · v1
+- prompt: art/candidates/z1s3.wall.seam_strip/prompt_v1.txt
+- refs: art/references/ref_room_z1s3_2010.png, art/references/ref_hero_wall_panel.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: n/a
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 17:04 · z1s3.floor.planks_a · v1
+- prompt: art/candidates/z1s3.floor.planks_a/prompt_v1.txt
+- refs: art/references/ref_room_z1s3_2010.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: n/a
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 17:05 · z1s3.floor.planks_b · v1
+- prompt: art/candidates/z1s3.floor.planks_b/prompt_v1.txt
+- refs: art/references/ref_room_z1s3_2010.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: n/a
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 17:06 · z1s3.ceiling.beam_a · v1
+- prompt: art/candidates/z1s3.ceiling.beam_a/prompt_v1.txt
+- refs: art/references/ref_room_z1s3_2010.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: n/a
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 17:07 · z1s3.ceiling.beam_b · v1
+- prompt: art/candidates/z1s3.ceiling.beam_b/prompt_v1.txt
+- refs: art/references/ref_room_z1s3_2010.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: n/a
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 17:08 · z1s3.wall.door · v1
+- prompt: art/candidates/z1s3.wall.door/prompt_v1.txt
+- refs: art/references/ref_room_z1s3_2010.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: n/a
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 17:09 · z1s3.wall.porthole · v1
+- prompt: art/candidates/z1s3.wall.porthole/prompt_v1.txt
+- refs: art/references/ref_room_z1s3_2010.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: n/a
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 17:10 · z1s3.wall.poster · v1
+- prompt: art/candidates/z1s3.wall.poster/prompt_v1.txt
+- refs: art/references/ref_room_z1s3_2010.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: n/a
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 17:11 · z1s3.wall.mask_a · v1
+- prompt: art/candidates/z1s3.wall.mask_a/prompt_v1.txt
+- refs: art/references/ref_room_z1s3_2010.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: n/a
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 17:12 · z1s3.wall.mask_b · v1
+- prompt: art/candidates/z1s3.wall.mask_b/prompt_v1.txt
+- refs: art/references/ref_room_z1s3_2010.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: n/a
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 17:13 · z1s3.wall.helm_wheel · v1
+- prompt: art/candidates/z1s3.wall.helm_wheel/prompt_v1.txt
+- refs: art/references/ref_room_z1s3_2010.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: n/a
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 17:14 · z1s3.wall.shelf · v1
+- prompt: art/candidates/z1s3.wall.shelf/prompt_v1.txt
+- refs: art/references/ref_room_z1s3_2010.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: n/a
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 17:15 · z1s3.wall.pipes · v1
+- prompt: art/candidates/z1s3.wall.pipes/prompt_v1.txt
+- refs: art/references/ref_room_z1s3_2010.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: n/a
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 17:16 · z1s3.prop.desk · v1
+- prompt: art/candidates/z1s3.prop.desk/prompt_v1.txt
+- refs: art/references/ref_room_z1s3_2010.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: n/a
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 17:17 · z1s3.prop.tv · v1
+- prompt: art/candidates/z1s3.prop.tv/prompt_v1.txt
+- refs: art/references/ref_room_z1s3_2010.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: n/a
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 17:18 · z1s3.prop.fishbowl · v1
+- prompt: art/candidates/z1s3.prop.fishbowl/prompt_v1.txt
+- refs: art/references/ref_room_z1s3_2010.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: n/a
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 17:19 · z1s3.prop.coat_rack · v1
+- prompt: art/candidates/z1s3.prop.coat_rack/prompt_v1.txt
+- refs: art/references/ref_room_z1s3_2010.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: n/a
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 17:20 · z1s3.prop.coat · v1
+- prompt: art/candidates/z1s3.prop.coat/prompt_v1.txt
+- refs: art/references/ref_room_z1s3_2010.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: n/a
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 17:21 · z1s3.prop.hat · v1
+- prompt: art/candidates/z1s3.prop.hat/prompt_v1.txt
+- refs: art/references/ref_room_z1s3_2010.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: n/a
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 17:22 · z1s3.prop.bed · v1
+- prompt: art/candidates/z1s3.prop.bed/prompt_v1.txt
+- refs: art/references/ref_room_z1s3_2010.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: n/a
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 17:23 · z1s3.prop.nightstand · v1
+- prompt: art/candidates/z1s3.prop.nightstand/prompt_v1.txt
+- refs: art/references/ref_room_z1s3_2010.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: n/a
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 17:24 · z1s3.prop.lamp · v1
+- prompt: art/candidates/z1s3.prop.lamp/prompt_v1.txt
+- refs: art/references/ref_room_z1s3_2010.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: n/a
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 17:25 · z1s3.prop.easel_portrait · v1
+- prompt: art/candidates/z1s3.prop.easel_portrait/prompt_v1.txt
+- refs: art/references/ref_room_z1s3_2010.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: n/a
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 17:26 · z1s3.prop.hammer_bag · v1
+- prompt: art/candidates/z1s3.prop.hammer_bag/prompt_v1.txt
+- refs: art/references/ref_room_z1s3_2010.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: n/a
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 17:27 · z1s3.prop.glue · v1
+- prompt: art/candidates/z1s3.prop.glue/prompt_v1.txt
+- refs: art/references/ref_room_z1s3_2010.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: n/a
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 17:28 · z1s3.prop.dirty_laundry · v1
+- prompt: art/candidates/z1s3.prop.dirty_laundry/prompt_v1.txt
+- refs: art/references/ref_room_z1s3_2010.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: n/a
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 17:29 · z1s3.fg.card_table · v1
+- prompt: art/candidates/z1s3.fg.card_table/prompt_v1.txt
+- refs: art/references/ref_room_z1s3_2010.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: n/a
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 17:30 · z1s3.fg.ship_in_bottle · v1
+- prompt: art/candidates/z1s3.fg.ship_in_bottle/prompt_v1.txt
+- refs: art/references/ref_room_z1s3_2010.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: n/a
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 17:31 · z1s3.fg.chest · v1
+- prompt: art/candidates/z1s3.fg.chest/prompt_v1.txt
+- refs: art/references/ref_room_z1s3_2010.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: n/a
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 17:32 · z1s3.fg.clown_bust · v1
+- prompt: art/candidates/z1s3.fg.clown_bust/prompt_v1.txt
+- refs: art/references/ref_room_z1s3_2010.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: n/a
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 17:33 · z1s3.fg.voodoo_doll · v1
+- prompt: art/candidates/z1s3.fg.voodoo_doll/prompt_v1.txt
+- refs: art/references/ref_room_z1s3_2010.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: n/a
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 17:34 · z1s3.fg.hull_rib_left · v1
+- prompt: art/candidates/z1s3.fg.hull_rib_left/prompt_v1.txt
+- refs: art/references/ref_room_z1s3_2010.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: n/a
+- estado: proposed
+- Alex: pendiente
+
+### 2026-10-22 17:35 · z1s3.fg.hull_rib_right · v1
+- prompt: art/candidates/z1s3.fg.hull_rib_right/prompt_v1.txt
+- refs: art/references/ref_room_z1s3_2010.png
+- gates: pass
+- style-critic: sin_objeciones
+- anatomy-critic: n/a
+- estado: proposed
+- Alex: pendiente
+
+## 2026-10-22 · sesión 4 · lotes L2 (cierre) a L10
+- generadas: 65 · pasaron gates: 65 · pasaron críticos: 65 · en hoja: 65 · detenidas: 0
+- detenidas: ninguna
+- cambios a layout/: se creó layout/z1s3.layout.json colocando 39 objetos en los 6 planos de parallax (exterior: 0.25, wall: 0.82, wall_props: 0.88, floor: 1.00 con y_sort, foreground: 1.22, ribs: 1.35), walkable [[120, 640], [2280, 640], [2280, 860], [120, 860]], foot_baseline_y: 820 y rigs smoothface (315 px) y capdread (330 px), validado con gates.py layout sin errores ni advertencias; se generaron los 4 renders panorámicos y de ventanas de cámara en review/layout_shots/; se implementó la marioneta interactiva de Captain Dread y el visor de layout_shots en review/review_sheet.html
+- cambios a src/: ninguno
+- backlog: ninguna
+- siguiente lote propuesto: revisión humana de Alex en http://localhost:8765 y aprobación de candidatos
+
+
+---
+
+## 2026-10-22 · sesión 5 · reemplazo de placeholders `v1` por arte cutout real `v2` (L2 a L9)
+- generadas en `v2` con `image-generator` (Morales 2010 cutout style): **52 de 65** piezas · pasaron `gates.py check` al 100% (`overall: "pass"`, `failed: []`): **52 de 52** · propuestas en mesa de luz (`status: "proposed"`, `proposed_version: "v2"`): **52** · bloqueadas por cuota de API (`HTTP 429 RESOURCE_EXHAUSTED`, marcadas `status: "blocked_quota_429"` para no mostrar ningún placeholder PIL en la mesa de luz): **13**
+- **Smoothface L2/L3 (8/8 completadas en `v2`, 100% gates pass)**:
+  - `smoothface.hand_back.point` v2, `smoothface.emotion.sweat_drop` v2, `smoothface.emotion.anger_vein` v2, `smoothface.emotion.question_mark` v2, `smoothface.emotion.exclamation` v2, `smoothface.emotion.idea_bulb` v2, `smoothface.prop.magnifying_glass` v2, `smoothface.prop.skeleton_key` v2 (nota: `smoothface.hair_tuft` omitida por decisión canónica al ser Rupert 100% calvo).
+- **Captain Dread L4 y L5 (22/22 completadas en `v2`, 100% gates pass)**:
+  - `capdread.torso` v2, `capdread.head` v2, `capdread.hat` v2, `capdread.beard` v2, `capdread.eyes.normal` v2, `capdread.eyes.closed` v2, `capdread.eyes.squint` v2, `capdread.brows.normal` v2, `capdread.brows.angry` v2, `capdread.brows.surprised` v2, `capdread.arm_front` v2, `capdread.arm_back` v2, `capdread.hand_front.fist` v2, `capdread.hand_front.open` v2, `capdread.hand_front.point` v2, `capdread.hand_back.fist` v2, `capdread.hand_back.open` v2, `capdread.pants` v2, `capdread.leg_front` v2, `capdread.leg_back` v2, `capdread.boot_front` v2, `capdread.boot_back` v2.
+- **Z1S3 L6 Casco (7/7 completadas en `v2`, 100% gates pass)**:
+  - `z1s3.wall.panel_b` v2, `z1s3.wall.panel_c` v2, `z1s3.wall.seam_strip` v2, `z1s3.floor.planks_a` v2, `z1s3.floor.planks_b` v2, `z1s3.ceiling.beam_a` v2, `z1s3.ceiling.beam_b` v2.
+- **Z1S3 L7 Pared (8/8 completadas en `v2`, 100% gates pass)**:
+  - `z1s3.wall.door` v2, `z1s3.wall.porthole` v2, `z1s3.wall.poster` v2, `z1s3.wall.mask_a` v2, `z1s3.wall.mask_b` v2, `z1s3.wall.helm_wheel` v2, `z1s3.wall.shelf` v2, `z1s3.wall.pipes` v2.
+- **Z1S3 L8 y L9 Muebles (7 piezas completadas en `v2`, 100% gates pass)**:
+  - `z1s3.prop.desk` v2, `z1s3.prop.tv` v2, `z1s3.prop.fishbowl` v2, `z1s3.prop.coat_rack` v2, `z1s3.prop.coat` v2 (extraída de la capa original de Morales 2010 `007_coat.png`), `z1s3.prop.hat` v2, `z1s3.prop.nightstand` v2.
+- **Pendientes por cuota `HTTP 429 RESOURCE_EXHAUSTED` (13 piezas en `status: "blocked_quota_429"`)**:
+  - `z1s3.prop.bed`, `z1s3.prop.dirty_laundry`, `z1s3.prop.easel_portrait`, `z1s3.prop.glue`, `z1s3.prop.hammer_bag`, `z1s3.prop.lamp`, `z1s3.fg.card_table`, `z1s3.fg.chest`, `z1s3.fg.clown_bust`, `z1s3.fg.hull_rib_left`, `z1s3.fg.hull_rib_right`, `z1s3.fg.ship_in_bottle`, `z1s3.fg.voodoo_doll`.
+- cambios a `characters/` y `layout/`: se actualizaron `characters/capdread/rig.json`, `characters/smoothface/rig.json`, `review/review_sheet.html`, `layout/z1s3.layout.json` y todos los renders compuestos en `review/layout_shots/` usando exclusivamente arte cutout real (`v2.png` + piezas aprobadas).

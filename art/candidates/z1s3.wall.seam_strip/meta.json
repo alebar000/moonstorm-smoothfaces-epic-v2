@@ -1,0 +1,20 @@
+{
+  "id": "z1s3.wall.seam_strip",
+  "category": "z1s3",
+  "kind": "wall",
+  "what": "Narrow vertical iron seam cover strip with double vertical column of dark iron rivets connecting wall panels",
+  "target_height_px": 900,
+  "height_fraction_of_smoothface": null,
+  "pivot_hint": "center",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/ref_room_z1s3_2010.png",
+    "art/references/ref_hero_wall_panel.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "proposed",
+  "proposed_version": "v2",
+  "version": "v2"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "z1s3.prop.hammer_bag",
+  "category": "z1s3",
+  "kind": "prop",
+  "what": "Stitched heavy canvas and leather duffel bag overflowing with iron claw hammers and mallets (Perpetual Movement Machine puzzle component 1)",
+  "target_height_px": 79,
+  "height_fraction_of_smoothface": 0.25,
+  "pivot_hint": "bottom-center bag base on cabin floor",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/ref_room_z1s3_2010.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "blocked_quota_429",
+  "proposed_version": "v1",
+  "quota_note": "Bloqueado por HTTP 429 RESOURCE_EXHAUSTED en gemini-3.1-flash-image (reset ~4h)."
+}

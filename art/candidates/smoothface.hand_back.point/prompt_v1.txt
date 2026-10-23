@@ -1,0 +1,9 @@
+Hand-cut construction-paper cutout piece for a 2D character rig: Mr. Smoothface's back (farthest from viewer, anatomical LEFT) hand pointing to the right (smoothface.hand_back.point), in 3/4 view facing RIGHT, companion to ref_cutout_layers/008_hand.png, ref_design_smoothface.png, and smoothface.arm_back.png.
+
+CRITICAL ANATOMICAL LEFT-HAND (PALMAR VIEW) RULES:
+- This piece (smoothface.hand_back.point) is Mr. Smoothface's ANATOMICAL LEFT HAND (attached to smoothface.arm_back) pointing across to the right.
+- In 3/4 view facing right, pointing right, the PALMAR surface faces the viewer.
+- 5 digits: 1 thumb on the left/lower-left pointing slightly upward, 1 index finger extending straight to the right, and 3 curled fingers (middle, ring, pinky) tucked into the lower palm with visible palmar creases.
+- Wrist overlap tab at the left tucking into the cuff of smoothface.arm_back.
+- Palette: characters (sf_skin_cream #f9ecc2, ink_black #1a1612, pencil_grey #6e6a62).
+- Pure #00FF00 green background.

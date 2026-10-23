@@ -1,0 +1,19 @@
+{
+  "id": "z1s3.prop.coat_rack",
+  "category": "z1s3",
+  "kind": "prop",
+  "what": "Freestanding wooden coat stand / hanger tree with turned center pole, decorative top finial, 4 curved wooden pegs, and flared tripod base resting on floor",
+  "target_height_px": 346,
+  "height_fraction_of_smoothface": 1.1,
+  "pivot_hint": "bottom-center tripod base on cabin floor",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/ref_room_z1s3_2010.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "proposed",
+  "proposed_version": "v2",
+  "version": "v2"
+}

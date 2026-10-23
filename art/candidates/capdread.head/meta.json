@@ -1,0 +1,20 @@
+{
+  "id": "capdread.head",
+  "category": "capdread",
+  "kind": "body_part",
+  "what": "Captain Dread head and face profile (no hat, no beard, no eyes, no brows): cream construction paper skin (#f9ecc2), voluminous flamboyant pompadour hairstyle (#1a1612) with swirling front crest, shaved temple stubble, curved smoking pipe (#613e35 bowl with #e7bc57 gold band) resting at right jaw corner with tiny puff of smoke, neck base for torso collar overlap, 3/4 front view facing right, matching ref_design_capdread.png",
+  "target_height_px": 135,
+  "height_fraction_of_smoothface": 0.429,
+  "pivot_hint": "neck at bottom-center; jawline for capdread.beard overlap; mid-face for capdread.eyes; brow ridge for capdread.brows; hair dome top for capdread.hat",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/ref_design_capdread.png",
+    "art/references/ref_hero_torso.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "proposed",
+  "proposed_version": "v2",
+  "version": "v2"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "z1s3.wall.shelf",
+  "category": "z1s3",
+  "kind": "wall",
+  "what": "Cluttered wooden wall shelf supported by cast iron ornamental brackets, holding sky blue and navy potion bottles and rolled chart scrolls",
+  "target_height_px": 95,
+  "height_fraction_of_smoothface": null,
+  "pivot_hint": "center",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/ref_room_z1s3_2010.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "proposed",
+  "proposed_version": "v2",
+  "version": "v2"
+}

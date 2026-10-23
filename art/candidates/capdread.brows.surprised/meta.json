@@ -1,0 +1,20 @@
+{
+  "id": "capdread.brows.surprised",
+  "category": "capdread",
+  "kind": "body_part",
+  "what": "Pair of Captain Dread bushy black eyebrows raised in shock or alarm (3/4 front view facing right): two high arched black marker brow strips (#1a1612) curving upward in dramatic wide arches, clearly distinct from normal and angry variants, matching ref_design_capdread.png",
+  "target_height_px": 28,
+  "height_fraction_of_smoothface": 0.089,
+  "pivot_hint": "center of brow pair above capdread.eyes on capdread.head",
+  "allowed_islands": 1,
+  "references": [
+    "art/references/ref_design_capdread.png",
+    "art/references/ref_hero_torso.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "proposed",
+  "proposed_version": "v2",
+  "version": "v2"
+}

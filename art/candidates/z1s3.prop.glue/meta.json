@@ -1,0 +1,19 @@
+{
+  "id": "z1s3.prop.glue",
+  "category": "z1s3",
+  "kind": "prop",
+  "what": "Industrial horse glue earthenware pot with dripping amber glue rim and wooden applicator brush sticking out (Perpetual Movement Machine puzzle component 3)",
+  "target_height_px": 57,
+  "height_fraction_of_smoothface": 0.18,
+  "pivot_hint": "bottom-center pot base on desk",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/ref_room_z1s3_2010.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "blocked_quota_429",
+  "proposed_version": "v1",
+  "quota_note": "Bloqueado por HTTP 429 RESOURCE_EXHAUSTED en gemini-3.1-flash-image (reset ~4h)."
+}

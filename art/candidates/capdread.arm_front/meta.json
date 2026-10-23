@@ -1,0 +1,21 @@
+{
+  "id": "capdread.arm_front",
+  "category": "capdread",
+  "kind": "body_part",
+  "what": "Captain Dread front (right) naval sleeve with golden epaulet on shoulder and gold-trimmed pirate cuff at wrist in 3/4 view facing right: navy blue construction paper (#343e63) with gold trim (#e7bc57), bold black marker outline (#1a1612), subtle grey pencil elbow crease shading (#6e6a62), and an open sleeve cuff to receive capdread.hand_front.*",
+  "target_height_px": 118,
+  "height_fraction_of_smoothface": 0.375,
+  "pivot_hint": "upper-left shoulder joint overlapping capdread.torso; wrist cuff at lower-right end",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/ref_design_capdread.png",
+    "art/references/ref_hero_torso.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "proposed",
+  "proposed_version": "v2",
+  "batch": "L5",
+  "version": "v2"
+}

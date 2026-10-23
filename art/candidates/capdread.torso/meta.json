@@ -1,0 +1,20 @@
+{
+  "id": "capdread.torso",
+  "category": "capdread",
+  "kind": "body_part",
+  "what": "Captain Dread naval captain uniform coat only (no head, no limbs, no legs): deep navy blue coat (#343e63) with folded lapels, golden epaulets (#e7bc57) with fringed shoulder trim, white-cream ruffled cravat neckerchief (#f9ecc2) at the open collar, black marker ink outlines (#1a1612), 3/4 front view facing right, matching the silhouette and design in ref_design_capdread.png and style of ref_hero_torso.png",
+  "target_height_px": 220,
+  "height_fraction_of_smoothface": 0.698,
+  "pivot_hint": "neck base inside collar at top-center; left and right shoulder joints at upper coat edges under epaulets; hip base at bottom-center",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/ref_design_capdread.png",
+    "art/references/ref_hero_torso.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "proposed",
+  "proposed_version": "v2",
+  "version": "v2"
+}

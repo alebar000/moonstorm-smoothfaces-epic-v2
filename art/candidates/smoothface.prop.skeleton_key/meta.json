@@ -1,0 +1,21 @@
+{
+  "id": "smoothface.prop.skeleton_key",
+  "category": "smoothface",
+  "kind": "prop",
+  "what": "Ornate dark iron submarine skeleton key prop for Mr. Smoothface: dark iron paper (#2a2922) with brass accent ring (#ab986e) and rust shading (#605752), bold black marker outline (#1a1612), and pencil shading (#6e6a62).",
+  "target_height_px": 44,
+  "height_fraction_of_smoothface": 0.14,
+  "pivot_hint": "center of key stem for gripping in hand",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/ref_room_z1s3_2010.png",
+    "art/references/ref_hero_sarcophagus.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "proposed",
+  "proposed_version": "v2",
+  "batch": "L3",
+  "version": "v2"
+}

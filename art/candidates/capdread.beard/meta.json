@@ -1,0 +1,20 @@
+{
+  "id": "capdread.beard",
+  "category": "capdread",
+  "kind": "body_part",
+  "what": "Captain Dread bushy black captain beard and moustache: solid black marker paper cutout (#1a1612) wrapping around the jawline, chin, and upper lip with scissor-cut hair facets, pencil grey texture (#6e6a62), mouth opening cavity, 3/4 front view facing right, matching ref_design_capdread.png",
+  "target_height_px": 78,
+  "height_fraction_of_smoothface": 0.248,
+  "pivot_hint": "upper jaw and ear anchor points aligning with capdread.head",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/ref_design_capdread.png",
+    "art/references/ref_hero_torso.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "proposed",
+  "proposed_version": "v2",
+  "version": "v2"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "capdread.hat",
+  "category": "capdread",
+  "kind": "body_part",
+  "what": "Captain Dread pirate tricorn captain hat: dark navy/black construction paper (#1a1612/#343e63) with flared tricorn folded corners, ornate gold braid trim (#e7bc57) along curved upper crest and brim, small golden captain insignia at front, 3/4 front view facing right, matching ref_design_capdread.png",
+  "target_height_px": 78,
+  "height_fraction_of_smoothface": 0.248,
+  "pivot_hint": "bottom center resting on upper pompadour of capdread.head",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/ref_design_capdread.png",
+    "art/references/ref_hero_torso.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "proposed",
+  "proposed_version": "v2",
+  "version": "v2"
+}

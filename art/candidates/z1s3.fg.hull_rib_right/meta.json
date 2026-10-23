@@ -1,0 +1,19 @@
+{
+  "id": "z1s3.fg.hull_rib_right",
+  "category": "z1s3",
+  "kind": "foreground",
+  "what": "Massive arched riveted iron hull rib girder framing the right foreground edge of the submarine cabin across the full 900 px room height",
+  "target_height_px": 900,
+  "height_fraction_of_smoothface": 2.86,
+  "pivot_hint": "bottom-right girder base on cabin floor",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/ref_room_z1s3_2010.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "blocked_quota_429",
+  "proposed_version": "v1",
+  "quota_note": "Bloqueado por HTTP 429 RESOURCE_EXHAUSTED en gemini-3.1-flash-image (reset ~4h)."
+}

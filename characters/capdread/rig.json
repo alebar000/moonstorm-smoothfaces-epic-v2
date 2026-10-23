@@ -1,0 +1,517 @@
+{
+  "id": "capdread",
+  "name": "Captain Dread",
+  "height_px": 330,
+  "height_tolerance": 0.04,
+  "facing_default": 1,
+  "root": "torso",
+  "canvas": {
+    "w": 450,
+    "h": 550
+  },
+  "parts": {
+    "torso": {
+      "asset": "art/candidates/capdread.torso/v2.png",
+      "z_index": 30,
+      "parent": null,
+      "offset": [
+        82,
+        148
+      ],
+      "size": [
+        230,
+        236
+      ],
+      "pivots": {
+        "neck": [
+          215,
+          185
+        ],
+        "shoulder_front": [
+          225,
+          225
+        ],
+        "shoulder_back": [
+          145,
+          210
+        ],
+        "waist": [
+          210,
+          300
+        ]
+      }
+    },
+    "head": {
+      "asset": "art/candidates/capdread.head/v2.png",
+      "z_index": 20,
+      "parent": "torso",
+      "offset": [
+        134,
+        74
+      ],
+      "size": [
+        106,
+        138
+      ],
+      "pivots": {
+        "neck": [
+          215,
+          250
+        ],
+        "hat": [
+          215,
+          129
+        ],
+        "beard": [
+          215,
+          202
+        ],
+        "eyes": [
+          215,
+          202
+        ],
+        "brows": [
+          215,
+          192
+        ]
+      }
+    },
+    "hat": {
+      "asset": "art/candidates/capdread.hat/v2.png",
+      "z_index": 25,
+      "parent": "head",
+      "offset": [
+        128,
+        40
+      ],
+      "size": [
+        104,
+        116
+      ],
+      "pivots": {
+        "anchor": [
+          215,
+          150
+        ]
+      }
+    },
+    "beard": {
+      "asset": "art/candidates/capdread.beard/v2.png",
+      "z_index": 32,
+      "parent": "head",
+      "offset": [
+        114,
+        132
+      ],
+      "size": [
+        96,
+        92
+      ],
+      "pivots": {
+        "anchor": [
+          215,
+          202
+        ]
+      }
+    },
+    "eyes.normal": {
+      "asset": "art/candidates/capdread.eyes.normal/v2.png",
+      "z_index": 22,
+      "parent": "head",
+      "offset": [
+        145,
+        122
+      ],
+      "size": [
+        54,
+        37
+      ],
+      "pivots": {
+        "anchor": [
+          215,
+          202
+        ]
+      }
+    },
+    "eyes.closed": {
+      "asset": "art/candidates/capdread.eyes.closed/v2.png",
+      "z_index": 22,
+      "parent": "head",
+      "offset": [
+        145,
+        122
+      ],
+      "size": [
+        54,
+        37
+      ],
+      "pivots": {
+        "anchor": [
+          215,
+          202
+        ]
+      }
+    },
+    "eyes.squint": {
+      "asset": "art/candidates/capdread.eyes.squint/v2.png",
+      "z_index": 22,
+      "parent": "head",
+      "offset": [
+        144,
+        124
+      ],
+      "size": [
+        58,
+        26
+      ],
+      "pivots": {
+        "anchor": [
+          215,
+          202
+        ]
+      }
+    },
+    "brows.normal": {
+      "asset": "art/candidates/capdread.brows.normal/v2.png",
+      "z_index": 23,
+      "parent": "head",
+      "offset": [
+        140,
+        110
+      ],
+      "size": [
+        64,
+        20
+      ],
+      "pivots": {
+        "anchor": [
+          215,
+          192
+        ]
+      }
+    },
+    "brows.angry": {
+      "asset": "art/candidates/capdread.brows.angry/v2.png",
+      "z_index": 23,
+      "parent": "head",
+      "offset": [
+        140,
+        106
+      ],
+      "size": [
+        64,
+        28
+      ],
+      "pivots": {
+        "anchor": [
+          215,
+          192
+        ]
+      }
+    },
+    "brows.surprised": {
+      "asset": "art/candidates/capdread.brows.surprised/v2.png",
+      "z_index": 23,
+      "parent": "head",
+      "offset": [
+        140,
+        103
+      ],
+      "size": [
+        62,
+        34
+      ],
+      "pivots": {
+        "anchor": [
+          215,
+          192
+        ]
+      }
+    },
+    "arm_front": {
+      "asset": "art/candidates/capdread.arm_front/v2.png",
+      "z_index": 41,
+      "parent": "torso",
+      "offset": [
+        218,
+        176
+      ],
+      "size": [
+        58,
+        124
+      ],
+      "pivots": {
+        "shoulder": [
+          225,
+          225
+        ],
+        "wrist": [
+          265,
+          335
+        ]
+      }
+    },
+    "hand_front.fist": {
+      "asset": "art/candidates/capdread.hand_front.fist/v2.png",
+      "z_index": 40,
+      "parent": "arm_front",
+      "offset": [
+        222,
+        276
+      ],
+      "size": [
+        48,
+        48
+      ],
+      "pivots": {
+        "wrist": [
+          268,
+          335
+        ]
+      }
+    },
+    "hand_front.open": {
+      "asset": "art/candidates/capdread.hand_front.open/v2.png",
+      "z_index": 40,
+      "parent": "arm_front",
+      "offset": [
+        220,
+        274
+      ],
+      "size": [
+        52,
+        50
+      ],
+      "pivots": {
+        "wrist": [
+          265,
+          335
+        ]
+      }
+    },
+    "hand_front.point": {
+      "asset": "art/candidates/capdread.hand_front.point/v2.png",
+      "z_index": 40,
+      "parent": "arm_front",
+      "offset": [
+        202,
+        274
+      ],
+      "size": [
+        72,
+        48
+      ],
+      "pivots": {
+        "wrist": [
+          260,
+          335
+        ]
+      }
+    },
+    "arm_back": {
+      "asset": "art/candidates/capdread.arm_back/v2.png",
+      "z_index": 18,
+      "parent": "torso",
+      "offset": [
+        68,
+        180
+      ],
+      "size": [
+        76,
+        114
+      ],
+      "pivots": {
+        "shoulder": [
+          145,
+          210
+        ],
+        "wrist": [
+          145,
+          325
+        ]
+      }
+    },
+    "hand_back.fist": {
+      "asset": "art/candidates/capdread.hand_back.fist/v2.png",
+      "z_index": 17,
+      "parent": "arm_back",
+      "offset": [
+        82,
+        254
+      ],
+      "size": [
+        50,
+        40
+      ],
+      "pivots": {
+        "wrist": [
+          148,
+          325
+        ]
+      }
+    },
+    "hand_back.open": {
+      "asset": "art/candidates/capdread.hand_back.open/v2.png",
+      "z_index": 17,
+      "parent": "arm_back",
+      "offset": [
+        80,
+        252
+      ],
+      "size": [
+        50,
+        46
+      ],
+      "pivots": {
+        "wrist": [
+          145,
+          325
+        ]
+      }
+    },
+    "pants": {
+      "asset": "art/candidates/capdread.pants/v2.png",
+      "z_index": 14,
+      "parent": "torso",
+      "offset": [
+        152,
+        288
+      ],
+      "size": [
+        96,
+        92
+      ],
+      "pivots": {
+        "waist": [
+          210,
+          300
+        ],
+        "hip_front": [
+          225,
+          345
+        ],
+        "hip_back": [
+          185,
+          345
+        ]
+      }
+    },
+    "leg_front": {
+      "asset": "art/candidates/capdread.leg_front/v2.png",
+      "z_index": 13,
+      "parent": "pants",
+      "offset": [
+        205,
+        336
+      ],
+      "size": [
+        48,
+        78
+      ],
+      "pivots": {
+        "hip": [
+          225,
+          345
+        ],
+        "ankle": [
+          225,
+          401
+        ]
+      }
+    },
+    "leg_back": {
+      "asset": "art/candidates/capdread.leg_back/v2.png",
+      "z_index": 11,
+      "parent": "pants",
+      "offset": [
+        152,
+        332
+      ],
+      "size": [
+        55,
+        76
+      ],
+      "pivots": {
+        "hip": [
+          185,
+          345
+        ],
+        "ankle": [
+          185,
+          401
+        ]
+      }
+    },
+    "boot_front": {
+      "asset": "art/candidates/capdread.boot_front/v2.png",
+      "z_index": 12,
+      "parent": "leg_front",
+      "offset": [
+        168,
+        395
+      ],
+      "size": [
+        96,
+        68
+      ],
+      "pivots": {
+        "ankle": [
+          225,
+          401
+        ]
+      }
+    },
+    "boot_back": {
+      "asset": "art/candidates/capdread.boot_back/v2.png",
+      "z_index": 10,
+      "parent": "leg_back",
+      "offset": [
+        118,
+        388
+      ],
+      "size": [
+        92,
+        65
+      ],
+      "pivots": {
+        "ankle": [
+          185,
+          401
+        ]
+      }
+    }
+  },
+  "variant_groups": {
+    "eyes": {
+      "default": "normal",
+      "variants": {
+        "normal": "eyes.normal",
+        "closed": "eyes.closed",
+        "squint": "eyes.squint"
+      }
+    },
+    "brows": {
+      "default": "normal",
+      "variants": {
+        "normal": "brows.normal",
+        "angry": "brows.angry",
+        "surprised": "brows.surprised"
+      }
+    },
+    "hand_front": {
+      "default": "fist",
+      "variants": {
+        "fist": "hand_front.fist",
+        "open": "hand_front.open",
+        "point": "hand_front.point"
+      }
+    },
+    "hand_back": {
+      "default": "fist",
+      "variants": {
+        "fist": "hand_back.fist",
+        "open": "hand_back.open"
+      }
+    }
+  }
+}

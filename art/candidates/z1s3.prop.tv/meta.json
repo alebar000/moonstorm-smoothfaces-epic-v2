@@ -1,0 +1,19 @@
+{
+  "id": "z1s3.prop.tv",
+  "category": "z1s3",
+  "kind": "prop",
+  "what": "Retro 1950s CRT television set with dual rabbit-ear antennas, rounded greenish-slate cathode screen, channel tuning dials, and wooden cabinet, resting on desk or small stand",
+  "target_height_px": 110,
+  "height_fraction_of_smoothface": 0.35,
+  "pivot_hint": "bottom-center base on desk",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/ref_room_z1s3_2010.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "proposed",
+  "proposed_version": "v2",
+  "version": "v2"
+}

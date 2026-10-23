@@ -1,0 +1,19 @@
+{
+  "id": "z1s3.prop.bed",
+  "category": "z1s3",
+  "kind": "prop",
+  "what": "Rustic wooden captain bunk bed / cot with arched wooden headboard, footboard, corner posts, and navy striped blanket with cream pillow",
+  "target_height_px": 220,
+  "height_fraction_of_smoothface": 0.7,
+  "pivot_hint": "bottom-center bedposts on cabin floor",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/ref_room_z1s3_2010.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "blocked_quota_429",
+  "proposed_version": "v1",
+  "quota_note": "Bloqueado por HTTP 429 RESOURCE_EXHAUSTED en gemini-3.1-flash-image (reset ~4h)."
+}

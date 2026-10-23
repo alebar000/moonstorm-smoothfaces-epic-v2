@@ -1,0 +1,12 @@
+STYLE (non-negotiable, matches the attached references):
+Hand-drawn construction-paper cutout. Each piece is ONE flat color of construction paper with a very subtle fiber texture, cut out with scissors. Design and proportions come from the attached pencil sketch by the original artist; do not reinterpret it. Outline: black marker (#1a1612), hand-drawn, visible pressure variation, some strokes overshoot corners. Shading: SOFT PENCIL only (#6e6a62), grey, visible stroke direction, only in shadow areas. No digital gradients, no airbrush, no glow, no 3D.
+EDGE: clean, precise cut, as if with a craft knife along a ruler.
+INK: medium marker ~5 px at game scale (4-7 px range).
+COLOR: muted, aged construction paper, ONLY from this scenery palette: #ab986e, #9c5a5c, #95b3d4, #2a2922, #605752, #c6a787, #728289, #998370, #4a697f, #d67c7c, #d6d27c, #cbc2c2, #1a1612, #6e6a62.
+One isolated object, flat solid #00FF00 chroma-key green background filling the entire canvas around the cutout. No cast shadow baked in.
+FORBIDDEN: gradients, glow, bloom, 3D render, airbrush, white sticker border, thin fine interior ink lines, any background, any text, more than one object, colors from the other palette, reinterpreting the sketch.
+
+PIECE: z1s3.prop.dirty_laundry
+WHAT: Disheveled heap of sailor dirty laundry, rumpled shirts, striped socks, and wrinkled trousers piled on cabin floor
+SIZE: 79 px height at 1.0 scale
+PIVOT HINT: bottom-center pile on cabin floor

@@ -1,0 +1,19 @@
+{
+  "id": "z1s3.prop.coat",
+  "category": "z1s3",
+  "kind": "prop",
+  "what": "Hanging dark naval captain overcoat in muted navy with gold epaulets, brass buttons, and draped fabric folds, hanging on coat rack",
+  "target_height_px": 205,
+  "height_fraction_of_smoothface": 0.65,
+  "pivot_hint": "top-center collar on coat rack peg",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/ref_room_z1s3_2010.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "proposed",
+  "proposed_version": "v2",
+  "version": "v2"
+}

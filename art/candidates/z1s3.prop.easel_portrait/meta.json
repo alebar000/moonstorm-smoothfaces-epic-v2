@@ -1,0 +1,19 @@
+{
+  "id": "z1s3.prop.easel_portrait",
+  "category": "z1s3",
+  "kind": "prop",
+  "what": "Wooden tripod easel holding framed portrait canvas of a pompous naval ancestor (Perpetual Movement Machine puzzle component 2)",
+  "target_height_px": 205,
+  "height_fraction_of_smoothface": 0.65,
+  "pivot_hint": "bottom-center easel tripod legs on cabin floor",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/ref_room_z1s3_2010.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "blocked_quota_429",
+  "proposed_version": "v1",
+  "quota_note": "Bloqueado por HTTP 429 RESOURCE_EXHAUSTED en gemini-3.1-flash-image (reset ~4h)."
+}

@@ -1,0 +1,14 @@
+{
+  "style_critic": {
+    "piece": "smoothface.hand_back.point",
+    "version": "v2",
+    "verdict": "sin objeciones",
+    "defects": []
+  },
+  "anatomy_critic": {
+    "piece": "smoothface.hand_back.point",
+    "version": "v2",
+    "verdict": "sin objeciones",
+    "defects": []
+  }
+}

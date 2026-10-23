@@ -1,0 +1,21 @@
+{
+  "id": "capdread.pants",
+  "category": "capdread",
+  "kind": "body_part",
+  "what": "Captain Dread naval trousers / breeches pelvis and upper thighs block in 3/4 view facing right: medium grey naval breeches construction paper (#717171) with gold naval buttons (#e7bc57) down front flap, bold black marker outline (#1a1612), pencil crease shading (#6e6a62), top waist overlap tab to tuck under capdread.torso, and lower thigh openings to receive leg shins",
+  "target_height_px": 88,
+  "height_fraction_of_smoothface": 0.279,
+  "pivot_hint": "top waist center under capdread.torso; left and right hip sockets at bottom",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/ref_design_capdread.png",
+    "art/references/ref_hero_torso.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "proposed",
+  "proposed_version": "v2",
+  "batch": "L5",
+  "version": "v2"
+}

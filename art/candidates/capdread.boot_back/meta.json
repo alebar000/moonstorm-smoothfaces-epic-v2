@@ -1,0 +1,21 @@
+{
+  "id": "capdread.boot_back",
+  "category": "capdread",
+  "kind": "body_part",
+  "what": "Captain Dread rear buccaneer leather pirate boot with fold-over cuff and gold buckle in 3/4 view facing right (paired-part consistency with boot_front): pirate brown construction paper (#613e35) with buff cuff lining (#9c793a) and brass/gold buckle (#e7bc57), bold black marker outline (#1a1612), flat sole baseline, and top ankle opening to receive capdread.leg_back",
+  "target_height_px": 64,
+  "height_fraction_of_smoothface": 0.203,
+  "pivot_hint": "top ankle opening under capdread.leg_back; flat sole baseline at bottom",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/ref_design_capdread.png",
+    "art/references/ref_hero_torso.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "proposed",
+  "proposed_version": "v2",
+  "batch": "L5",
+  "version": "v2"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "z1s3.prop.hat",
+  "category": "z1s3",
+  "kind": "prop",
+  "what": "Ornate pirate captain tricorn hat in dark iron wool with braided gold trim and cockade emblem, resting on coat rack peg",
+  "target_height_px": 79,
+  "height_fraction_of_smoothface": 0.25,
+  "pivot_hint": "bottom-center brim resting on coat rack peg",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/ref_room_z1s3_2010.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "proposed",
+  "proposed_version": "v2",
+  "version": "v2"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "z1s3.fg.ship_in_bottle",
+  "category": "z1s3",
+  "kind": "foreground",
+  "what": "Miniature three-masted wooden sailing galleon with cream sails inside a corked glass rum bottle resting on wooden cradle",
+  "target_height_px": 79,
+  "height_fraction_of_smoothface": 0.25,
+  "pivot_hint": "bottom-center cradle base on card table",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/ref_room_z1s3_2010.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "blocked_quota_429",
+  "proposed_version": "v1",
+  "quota_note": "Bloqueado por HTTP 429 RESOURCE_EXHAUSTED en gemini-3.1-flash-image (reset ~4h)."
+}
