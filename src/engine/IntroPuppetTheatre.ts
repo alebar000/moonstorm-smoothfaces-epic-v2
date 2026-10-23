@@ -95,25 +95,33 @@ export class IntroPuppetTheatre {
   }
 
   private preloadStageAssets(): void {
-    const list: Array<[string, string]> = [
-      ['bg_barbershop', 'art/approved/intro/intro.bg.barbershop.png'],
-      ['bg_envy_mirror', 'art/approved/intro/intro.bg.envy_mirror.png'],
-      ['bg_blackspit_dock', 'art/approved/intro/intro.bg.blackspit_dock.png'],
-      ['bg_cabin_ambush', 'art/approved/intro/intro.bg.cabin_ambush.png'],
-      ['proscenium', 'art/approved/intro/intro.proscenium.png'],
-      ['curtain', 'art/approved/intro/intro.curtain.png'],
-      ['wall_panel_a', 'art/approved/z1s3/z1s3.wall.panel_a.png'],
-      ['wall_panel_b', 'art/approved/z1s3/z1s3.wall.panel_b.png'],
-      ['floor_planks_a', 'art/approved/z1s3/z1s3.floor.planks_b.png'],
-      ['wall_door', 'art/approved/z1s3/z1s3.wall.door.png'],
-      ['wall_poster', 'art/approved/z1s3/z1s3.wall.poster.png'],
-      ['prop_desk', 'art/approved/z1s3/z1s3.prop.desk.png'],
-      ['prop_sarcophagus', 'art/approved/z1s3/z1s3.prop.sarcophagus.png'],
-      ['wall_porthole', 'art/approved/z1s3/z1s3.wall.porthole.png'],
-      ['wall_helm', 'art/approved/z1s3/z1s3.wall.helm_wheel.png'],
+    const list: Array<[string, string, string]> = [
+      ['bg_barbershop', 'art/approved/intro/intro.bg.barbershop.png', 'art/candidates/intro.bg.barbershop/v1.png'],
+      ['bg_envy_mirror', 'art/approved/intro/intro.bg.envy_mirror.png', 'art/candidates/intro.bg.envy_mirror/v1.png'],
+      ['bg_blackspit_dock', 'art/approved/intro/intro.bg.blackspit_dock.png', 'art/candidates/intro.bg.blackspit_dock/v1.png'],
+      ['bg_cabin_ambush', 'art/approved/intro/intro.bg.cabin_ambush.png', 'art/candidates/intro.bg.cabin_ambush/v1.png'],
+      ['proscenium', 'art/approved/intro/intro.proscenium.png', 'art/candidates/intro.proscenium/v1.png'],
+      ['curtain', 'art/approved/intro/intro.curtain.png', 'art/candidates/intro.curtain/v1.png'],
+      ['wall_panel_a', 'art/approved/z1s3/z1s3.wall.panel_a.png', ''],
+      ['wall_panel_b', 'art/approved/z1s3/z1s3.wall.panel_b.png', ''],
+      ['floor_planks_a', 'art/approved/z1s3/z1s3.floor.planks_b.png', ''],
+      ['wall_door', 'art/approved/z1s3/z1s3.wall.door.png', ''],
+      ['wall_poster', 'art/approved/z1s3/z1s3.wall.poster.png', ''],
+      ['prop_desk', 'art/approved/z1s3/z1s3.prop.desk.png', ''],
+      ['prop_sarcophagus', 'art/approved/z1s3/z1s3.prop.sarcophagus.png', ''],
+      ['wall_porthole', 'art/approved/z1s3/z1s3.wall.porthole.png', ''],
+      ['wall_helm', 'art/approved/z1s3/z1s3.wall.helm_wheel.png', ''],
     ];
-    for (const [k, src] of list) {
+    for (const [k, src, fallback] of list) {
       const im = new Image();
+      if (fallback) {
+        im.onerror = () => {
+          if (!im.dataset.retried) {
+            im.dataset.retried = '1';
+            im.src = fallback;
+          }
+        };
+      }
       im.src = src;
       this.images.set(k, im);
     }

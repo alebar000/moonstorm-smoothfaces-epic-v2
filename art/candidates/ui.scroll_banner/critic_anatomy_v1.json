@@ -1,0 +1,8 @@
+{
+  "piece": "ui.scroll_banner",
+  "version": "v1",
+  "critic": "anatomy-critic",
+  "verdict": "sin_objeciones",
+  "defects": [],
+  "notes": "Calibrated to canonical height (180px) with clean transparent cutout silhouette."
+}

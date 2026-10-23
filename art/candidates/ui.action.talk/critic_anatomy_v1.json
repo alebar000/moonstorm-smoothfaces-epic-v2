@@ -1,0 +1,8 @@
+{
+  "piece": "ui.action.talk",
+  "version": "v1",
+  "critic": "anatomy-critic",
+  "verdict": "sin_objeciones",
+  "defects": [],
+  "notes": "Calibrated to canonical height (48px) with clean transparent cutout silhouette."
+}

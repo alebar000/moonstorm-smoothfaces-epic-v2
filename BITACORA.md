@@ -1591,3 +1591,20 @@ se editan entradas anteriores (si algo cambió, nueva entrada que lo diga).
   - `src/engine/IntroPuppetTheatre.ts`: actualizado a la **Intro de 4 Escenas** del Slice 1 (`SLICE.md`) protagonizada por los dos rigs aprobados (`smoothface` y `cap_dread`).
   - `src/scenarios/WorldData.ts` y `src/main.ts`: conectados al layout multi-plano de `Z1S3` (`wall` 0.82, `wall_props` 0.88, `floor`/personajes 1.0 con Y-sorting en `y: 730..855`, `foreground` 1.22, `ribs` 1.35) cargando todas las piezas aprobadas de `art/approved/z1s3/*.png` y resolviendo el puzzle de la Perpetual Movement Machine en el inventario.
   - Compilado `npm run build` (`dist/` + `PLAY_SMOOTHFACE_MVP.html`) con `0` errores y servidor jugable activo en `http://localhost:5173`.
+
+
+## 2026-10-22 (Cierre de lotes L9, L10, L11, L12, L13 y L14 - 28 piezas nuevas con 100% gates pass)
+- **Lotes L9 y L10 de Z1S3 completados en `v2` (13/13 piezas generadas y 13/13 `gates.py check` pass)**:
+  - `z1s3.prop.glue` (`v2`), `z1s3.prop.easel_portrait` (`v2`), `z1s3.prop.hammer_bag` (`v2`), `z1s3.prop.lamp` (`v2`), `z1s3.prop.bed` (`v2`), `z1s3.prop.dirty_laundry` (`v2`).
+  - `z1s3.fg.card_table` (`v2`), `z1s3.fg.ship_in_bottle` (`v2`), `z1s3.fg.chest` (`v2`), `z1s3.fg.clown_bust` (`v2`), `z1s3.fg.voodoo_doll` (`v2`), `z1s3.fg.hull_rib_left` (`v2`), `z1s3.fg.hull_rib_right` (`v2`).
+  - Todas promovidas de `blocked_quota_429` a `status: "proposed"` en `http://localhost:8765` e integradas en `layout/z1s3.layout.json`, `review/layout_shots/z1s3_cabin_panorama/` y `src/scenarios/WorldData.ts`.
+- **Lote L11 (UI: 9/9 piezas generadas en `v1` y 9/9 `gates.py check` pass)**:
+  - `ui.action.inspect` (`v1`), `ui.action.talk` (`v1`), `ui.action.use` (`v1`), `ui.button_plate` (`v1`), `ui.cursor.default` (`v1`), `ui.cursor.interact` (`v1`), `ui.portrait_frame` (`v1`), `ui.scroll_banner` (`v1`), `ui.slot_frame` (`v1`).
+  - Todas en `status: "proposed"` en la mesa de luz (`http://localhost:8765`) y conectadas al menu RMB en `index.html`.
+- **Lote L12 (Intro: 6/6 piezas generadas en `v1` y 6/6 `gates.py check` pass)**:
+  - `intro.proscenium` (`v1`), `intro.curtain` (`v1`), `intro.bg.barbershop` (`v1`), `intro.bg.envy_mirror` (`v1`), `intro.bg.blackspit_dock` (`v1`), `intro.bg.cabin_ambush` (`v1`).
+  - Todas en `status: "proposed"` en la mesa de luz (`http://localhost:8765`) y conectadas a las 4 escenas de `src/engine/IntroPuppetTheatre.ts`.
+- **Lote L13 (Integracion de Motor, UI y Limpieza Visual)**:
+  - Eliminados todos los trazos procedurales en Canvas y reemplazados por paneles cutout de alto contraste, retratos de rostro completo (`characters/smoothface/portrait.png`, `characters/capdread/portrait.png`), piso y paredes sin huecos negros y carga automatica de las 28 piezas propuestas en `dist/` y `PLAY_SMOOTHFACE_MVP.html`.
+- **Lote L14 (Hoja de Observacion de Playtest)**:
+  - Creada `PLAYTEST_OBSERVATION_SHEET.md` con la tabla estructurada para los 3 playtesters y verificacion del criterio de cero preguntas "¿que es esto?".

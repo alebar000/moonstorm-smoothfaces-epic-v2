@@ -1,0 +1,18 @@
+{
+  "style": {
+    "piece": "ui.slot_frame",
+    "version": "v1",
+    "critic": "style-critic",
+    "verdict": "sin_objeciones",
+    "defects": [],
+    "notes": "Matches 2010 MoonStorm hand-inked construction-paper cutout style, bold #1c1410 ink outlines, flat muted scenery palette, and zero drop shadows."
+  },
+  "anatomy": {
+    "piece": "ui.slot_frame",
+    "version": "v1",
+    "critic": "anatomy-critic",
+    "verdict": "sin_objeciones",
+    "defects": [],
+    "notes": "Calibrated to canonical height (72px) with clean transparent cutout silhouette."
+  }
+}

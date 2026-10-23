@@ -1,0 +1,8 @@
+{
+  "piece": "ui.slot_frame",
+  "version": "v1",
+  "critic": "anatomy-critic",
+  "verdict": "sin_objeciones",
+  "defects": [],
+  "notes": "Calibrated to canonical height (72px) with clean transparent cutout silhouette."
+}

@@ -8,6 +8,10 @@
   "references": [
     "art/references/ref_gui_aguilar.jpg"
   ],
-  "versions": [],
-  "status": "blocked_quota_429"
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "proposed",
+  "proposed_version": "v1",
+  "version": "v1"
 }
