@@ -3449,3 +3449,18 @@ ef_z1s2_lobby_2010.png), normalizadas, validadas por gates.py (8/8 PASS) y aprob
      - Reemplazada la caja marron ancha por la tira vertical de 3 fichas cuadradas (`58x58px` `ui.slot_frame.png`) del boceto `GUImu003.jpg` (`grab`, `inspect`, `talk`, mas `Use <Item>` cuando hay un objeto activo) con pequeñas etiquetas de pergamino laterales.
   4. **Pergamino de Dialogo Inferior con Tinta Directa (`#hud-bottom-box`)**:
      - Eliminadas las pildoras amarillas/turquesa y el boton rojo cuadrado `[X]`. El nombre del hablante, su estado de animo entre parentesis, el texto y las opciones con viñeta (`• "..."` -> `☞ "..."` en carmesi al pasar el cursor) se imprimen como tinta negra directamente sobre el pergamino `ui.scroll_banner.png`.
+
+
+---
+
+## 2026-10-24 - Escenario Interactivo de la Historia de Vida de Mr. Smoothface en la Pantalla Principal (`ORIGIN` Room en 3 Capitulos) (`WorldData.ts`, `index.html`, `main.css`, `main.ts`)
+
+- **Idea propuesta por Alex (`"Me gusta que Mr Smoothface pueda moverse en la pantalla principal. Pero que tal si ese escenario es diferente? Puede ser algo simple, igual handdrawn, algo como de su hisotira de vida"`)**:
+  - En lugar de reutilizar `Z1S3` (el camarote del Capitan Dread) como fondo del menu principal, creamos un escenario exclusivo e interactivo para la Pantalla de Titulo (`currentRoom = 'ORIGIN'`) donde **Mr. Smoothface camina libremente en tiempo real (60 FPS) por 3 capitulos hand-drawn de su historia de vida canonica** (`Smoothfaces Epic aka Sparkle - Timeline.md`):
+    1. **Capitulo I (`I. Barbershop, Yr 0-12` - `intro.bg.barbershop.png`)**: La Barberia de la Familia Stache con el poste de barbero, el sillon de cuero carmesi y la pared de 8 retratos de ancestros bigotudos (el nacimiento de los gemelos Rupert y Morgan, la afeitada del mayordomo **Mutton Chops** al año de edad, y la entrada de Morgan a la **World Barber Academy / WoBAca** a los 12 años).
+    2. **Capitulo II (`II. The Streets, Yr 13-19` - `intro.bg.envy_mirror.png`)**: Las Calles Brumosas de Londres con el poster de reclutamiento de *"The Malefic Gentlemen"*, el escaparate iluminado de la barberia y el farol de gas (los 6 años de Rupert como *gosu* callejero en magia, malabares, carterismo, regateo y anunciar el fin del mundo, hasta que **Dr. Figaro Excelsior** corona a Morgan *Doctor Barber Grand Master Extraordinaire* y Rupert adopta el alias de **Mr. Smoothface** frente al espejo).
+    3. **Capitulo III (`III. The Pier, Yr 20` - `intro.bg.blackspit_dock.png`)**: El Muelle de Port Machete de noche con el submarino *The Substampede*, **Captain Dread** esperando en el muelle (`x=1240, y=795`) y la silueta volcanica de Blackspit Island en el horizonte (la fundacion del sindicato **MGWDBTTGPnP** y el viaje hacia Evil Deeds College).
+- **Interactividad Completa Directamente desde el Menu Principal**:
+  - `#main-menu-overlay` tiene `pointer-events: none` (con `pointer-events: auto` solo en los 5 tablones del menu izquierdo y en el pergamino narrador inferior), por lo que **hacer clic en cualquier punto del piso o sobre los recuerdos/retratos hace que Mr. Smoothface camine hasta ahi con chispas turquesas, adopte poses expresivas (lupa + signo `?`, llave inglesa + bombillo `!`, brazos cruzados + nube de tormenta) y actualice el pergamino `#title-origin-scroll` con ese recuerdo de su vida**.
+  - Incluye **3 botones de capitulo** en el pergamino inferior (`I. Barbershop (Yr 0-12)`, `II. The Streets (Yr 13-19)`, `III. The Pier (Yr 20)`), transicion al caminar hacia el extremo derecho del escenario (`origin_to_streets`), y un **paseo autonomo (`originIdleTimer`)** cuando el jugador deja el mouse quieto.
+

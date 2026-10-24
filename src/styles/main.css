@@ -705,6 +705,10 @@ body.crt-enabled #stage-container::after {
   pointer-events: auto;
 }
 
+#main-menu-overlay {
+  pointer-events: none;
+}
+
 .menu-vignette {
   position: absolute;
   inset: 0;
@@ -726,6 +730,80 @@ body.crt-enabled #stage-container::after {
   flex-direction: column;
   align-items: center;
   gap: 14px;
+  pointer-events: auto;
+}
+
+.title-origin-scroll {
+  position: absolute;
+  right: 20px;
+  bottom: 16px;
+  width: min(840px, 66vw);
+  background-color: #e8d8b9;
+  background-clip: padding-box;
+  border-style: solid;
+  border-width: 14px 20px;
+  border-image: url('/art/approved/ui/ui.scroll_banner.png') 42 52 fill / 14px 20px / 0 stretch;
+  filter: drop-shadow(4px 5px 0 rgba(12, 8, 6, 0.92));
+  padding: 4px 12px;
+  z-index: 3;
+  pointer-events: auto;
+  transform: rotate(-0.4deg);
+}
+
+.origin-scroll-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  border-bottom: 1.5px dashed rgba(28, 18, 12, 0.35);
+  padding-bottom: 3px;
+  margin-bottom: 4px;
+}
+
+.origin-year-badge {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 900;
+  color: var(--paper-crimson);
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.origin-chapter-tabs {
+  display: flex;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.origin-chap-btn {
+  background-color: #d8c29d;
+  background-clip: padding-box;
+  border-style: solid;
+  border-width: 4px 8px;
+  border-image: url('/art/approved/ui/ui.button_plate.png') 20 26 fill / 4px 8px / 0 stretch;
+  color: var(--ink-dark);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0 5px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: transform 0.1s, background-color 0.1s;
+}
+
+.origin-chap-btn:hover,
+.origin-chap-btn.active {
+  background-color: #f2d588;
+  transform: translateY(-1px);
+}
+
+.origin-story-caption {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1.02rem;
+  font-weight: 700;
+  line-height: 1.28;
+  color: var(--ink-dark);
 }
 
 .title-crest-assembly {

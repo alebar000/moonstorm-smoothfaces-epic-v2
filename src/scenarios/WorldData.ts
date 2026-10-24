@@ -6,9 +6,10 @@
 import { VoiceProfileId } from '../engine/AudioVoiceEngine';
 import officialZ1S3Json from './z1s3_official_layout.json';
 
-export type RoomId = 'Z1S3' | 'Z1S2' | 'Z1S1' | 'LOLDEMO';
+export type RoomId = 'ORIGIN' | 'Z1S3' | 'Z1S2' | 'Z1S1' | 'LOLDEMO';
 
 export const ROOM_WIDTHS: Record<RoomId, number> = {
+  ORIGIN: 1600,
   Z1S3: 2400,
   Z1S2: 2400,
   Z1S1: 2400,
@@ -743,9 +744,48 @@ export const ROOM_OBJECTS: Record<RoomId, SceneObjectDef[]> = {
     { id: 'z0.fg.hill_border_2', imageKey: 'z0.fg.hill_border', x: 860, y: 675, w: 1020, h: 265, sortY: 932, parallaxFactor: 1.15, flipX: true, inSituSeamless: true },
     { id: 'z0.fg.hill_border_3', imageKey: 'z0.fg.hill_border', x: 1780, y: 675, w: 920, h: 265, sortY: 934, parallaxFactor: 1.15, inSituSeamless: true },
   ],
+  ORIGIN: [],
 };
 
 export const ROOM_HOTSPOTS: Record<RoomId, HotspotDef[]> = {
+  ORIGIN: [
+    {
+      id: 'origin_barber_chair',
+      name: "Morgan's Childhood Barber Chair (Years 1-11: Mutton Chops the Butler)",
+      x: 495,
+      y: 365,
+      w: 360,
+      h: 395,
+      walkX: 690,
+      walkY: 795,
+      cursor: 'pointer',
+      parallaxFactor: 1.0,
+    },
+    {
+      id: 'origin_ancestor_portraits',
+      name: 'Wall of Moustachioed Stache Ancestors (Year 0 & Year 12: World Barber Academy)',
+      x: 520,
+      y: 65,
+      w: 980,
+      h: 320,
+      walkX: 1080,
+      walkY: 790,
+      cursor: 'pointer',
+      parallaxFactor: 1.0,
+    },
+    {
+      id: 'origin_to_streets',
+      name: 'Next Chapter of Rupert\'s Life (Walk Right) \u00bb',
+      x: 1390,
+      y: 410,
+      w: 195,
+      h: 390,
+      walkX: 1440,
+      walkY: 795,
+      cursor: 'pointer',
+      parallaxFactor: 1.0,
+    },
+  ],
   Z1S3: [
     {
       id: 'z1s3_sarcophagus',

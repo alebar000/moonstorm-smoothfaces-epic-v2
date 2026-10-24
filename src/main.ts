@@ -72,7 +72,7 @@ class SmoothfacePilotGame {
   public introTheatre: IntroPuppetTheatre;
   public flags: WorldFlags;
 
-  public currentRoom: RoomId = 'Z1S3';
+  public currentRoom: RoomId = 'ORIGIN';
   public inventory: string[] = [];
   public selectedItemId: string | null = null;
   public inventoryMode: 'select' | 'inspect' = 'select';
@@ -97,13 +97,16 @@ class SmoothfacePilotGame {
   private walkTargetY: number | null = null;
   private pendingCallback: (() => void) | null = null;
   private stepSoundTimer = 0;
+  private originIdleTimer = 0;
+  private originTourStep = 0;
+  public originChapter: 0 | 1 | 2 = 0;
 
   // Hover & Click Object Feedback
   private hoveredHotspotId: string | null = null;
   private objectPulseMap: Map<string, number> = new Map();
 
   // Camera & Multi-Plane Parallax (1600x900 viewport scrolling across wide rooms up to 2880x900)
-  public cameraX = 240;
+  public cameraX = 0;
   public mouseX = 800;
   public mouseY = 450;
   private cameraShakeTime = 0;
@@ -158,9 +161,9 @@ class SmoothfacePilotGame {
       }
     );
 
-    // Canonical Slice 1 Z1S3 Initial Placements: start Smoothface at center-stage (x=965) while Title Screen is open so both he, Morgan's portrait, and Captain Dread are in full spotlight view!
-    this.player = this.rigs.createAnimState('smoothface', 965, 785, 1.0, 1);
-    this.cameraX = 220;
+    // Start on the dedicated hand-drawn Life Story Stage ('ORIGIN': The Stache Family Barbershop & Foggy Streets)
+    this.player = this.rigs.createAnimState('smoothface', 840, 795, 1.0, 1);
+    this.cameraX = 0;
     this.menuShowcasePuppet = this.rigs.createAnimState('smoothface', 220, 436, 0.82, 1);
 
     this.npcs = {
@@ -281,6 +284,9 @@ class SmoothfacePilotGame {
       z1s2_sketch_2010: 'art/archive_2010/Z1S2_lobby_2010.png',
       z1s1_sketch_2010: 'art/archive_2010/Z1S1_machineroom_2010.png',
       loldemo_sketch_2010: 'art/archive_2010/psd_spook_castle.jpg',
+      origin_barbershop: 'art/approved/intro/intro.bg.barbershop.png',
+      origin_streets: 'art/approved/intro/intro.bg.envy_mirror.png',
+      origin_dock: 'art/approved/intro/intro.bg.blackspit_dock.png',
     };
     for (const [k, src] of Object.entries(sketch2010Map)) {
       const im = new Image();
@@ -421,16 +427,35 @@ class SmoothfacePilotGame {
     // Top HUD controls
     document.getElementById('btn-open-menu')?.addEventListener('click', () => {
       this.audio.playUiClick();
-      this.currentRoom = 'Z1S3';
-      this.player.x = 965;
-      this.player.y = 785;
+      this.currentRoom = 'ORIGIN';
+      this.player.x = 840;
+      this.player.y = 795;
       this.player.facing = 1;
-      this.cameraX = 220;
+      this.cameraX = 0;
+      this.originIdleTimer = 0;
       this.audio.setRoomCue('MENU');
       this.syncMusicHudUi();
       document.getElementById('main-menu-overlay')!.style.display = 'flex';
       document.getElementById('hud-top-bar')!.classList.add('hud-hidden');
       document.getElementById('hud-bottom-box')!.classList.add('hud-hidden');
+    });
+
+    document.getElementById('btn-origin-chap-1')?.addEventListener('click', () => {
+      this.audio.playUiClick(520);
+      this.originIdleTimer = -4.0;
+      this.setOriginChapter(0);
+    });
+
+    document.getElementById('btn-origin-chap-2')?.addEventListener('click', () => {
+      this.audio.playUiClick(550);
+      this.originIdleTimer = -4.0;
+      this.setOriginChapter(1);
+    });
+
+    document.getElementById('btn-origin-chap-3')?.addEventListener('click', () => {
+      this.audio.playUiClick(580);
+      this.originIdleTimer = -4.0;
+      this.setOriginChapter(2);
     });
 
     document.getElementById('btn-hud-music')?.addEventListener('click', () => {
@@ -812,7 +837,14 @@ class SmoothfacePilotGame {
     this.steamPuffs = [];
 
     const banner = document.getElementById('room-banner')!;
-    if (room === 'Z1S3') {
+    if (room === 'ORIGIN') {
+      this.audio.setRoomCue('MENU');
+      banner.textContent = "Rupert's Life Story (Years 0-20)";
+      this.player.x = 840;
+      this.player.y = 795;
+      this.player.facing = 1;
+      this.cameraX = 0;
+    } else if (room === 'Z1S3') {
       this.audio.setRoomCue('Z1S3');
       banner.textContent = "Captain Dread's Cabin";
       this.player.x = Z1S3_CHARACTER_SPAWNS.smoothface.x;
@@ -1009,8 +1041,59 @@ class SmoothfacePilotGame {
     }
   }
 
+  public setOriginStoryMilestone(badge: string, text: string, chap: 0 | 1 | 2): void {
+    const bEl = document.getElementById('origin-year-badge');
+    const cEl = document.getElementById('origin-story-caption');
+    if (bEl) bEl.textContent = badge;
+    if (cEl) cEl.textContent = text;
+    document.getElementById('btn-origin-chap-1')?.classList.toggle('active', chap === 0);
+    document.getElementById('btn-origin-chap-2')?.classList.toggle('active', chap === 1);
+    document.getElementById('btn-origin-chap-3')?.classList.toggle('active', chap === 2);
+  }
+
+  public setOriginChapter(chap: 0 | 1 | 2): void {
+    this.originChapter = chap;
+    this.cameraX = 0;
+    this.spawnSparks(this.player.x, this.player.y - 80, '#f3d27a', 14);
+    if (chap === 0) {
+      this.walkTo(840, 795, () => {
+        this.player.facing = 1;
+        this.setTemporaryPlayerPose(4, 2200, false);
+      });
+      this.setOriginStoryMilestone(
+        'YEARS 0-12: THE HAIRLESS TWIN OF STACHE BARBERSHOP',
+        '"Twin brother Morgan was born with a handlebar moustache and shaved our butler Mutton Chops at age one! Click anywhere on the Barbershop floor or portraits to walk around my childhood!"',
+        0
+      );
+    } else if (chap === 1) {
+      this.walkTo(820, 795, () => {
+        this.player.facing = -1;
+        this.setTemporaryPlayerPose(6, 2200, true);
+      });
+      this.setOriginStoryMilestone(
+        'YEARS 13-19: GOSU OF THE STREETS & BIRTH OF MR. SMOOTHFACE',
+        '"For 6 years I lived off the streets (magic, juggling, cutpursing, haggling) until Morgan was crowned Doctor Barber! Staring into this barbershop mirror, I became MR. SMOOTHFACE!"',
+        1
+      );
+    } else {
+      this.npcs.cap_dread.x = 1240;
+      this.npcs.cap_dread.y = 795;
+      this.npcs.cap_dread.facing = -1;
+      this.walkTo(900, 795, () => {
+        this.player.facing = 1;
+        this.setTemporaryPlayerPose(5, 2200, false);
+      });
+      this.setOriginStoryMilestone(
+        'YEAR 20: PORT MACHETE PIER & THE SUBSTAMPEDE',
+        '"Founder of the Malefic Gentlemen (MGWDBTTGPnP)! Captain Dread awaits on the pier beside his submarine The Substampede, bound for Blackspit Island!"',
+        2
+      );
+    }
+  }
+
   private onCanvasMouseDown(e: MouseEvent): void {
     this.audio.unlock();
+    this.originIdleTimer = -6.0;
     if (this.studio?.active) {
       const pt = this.getCanvasCoords(e);
       this.studio.onMouseDown(e, pt.x, pt.y);
@@ -1025,14 +1108,11 @@ class SmoothfacePilotGame {
     }
 
     const pt = this.getCanvasCoords(e);
-
-
-
     const hit = this.findHotspotAt(pt.x, pt.y);
 
     if (hit) {
       this.objectPulseMap.set(hit.id, 1.0);
-      if (this.cfgControlMode === 'classic') {
+      if (this.cfgControlMode === 'classic' && this.currentRoom !== 'ORIGIN') {
         this.openRmbMenuForHotspot(hit, e);
         return;
       }
@@ -1143,6 +1223,61 @@ class SmoothfacePilotGame {
       this.setTemporaryPlayerPose(4, 1800, false); // Magnifying Glass + Question Cutout
     } else if (verb === 'grab' || verb === 'item') {
       this.setTemporaryPlayerPose(5, 1600, false); // Wrench Tinker + Idea Lightbulb Cutout
+    }
+
+    // ---------------------------------------------------------
+    // TITLE STAGE: RUPERT'S LIFE STORY ('ORIGIN' ROOM)
+    // ---------------------------------------------------------
+    if (hit.id === 'origin_barber_chair') {
+      this.setTemporaryPlayerPose(6, 2200, true);
+      if (this.originChapter === 0) {
+        this.setOriginStoryMilestone(
+          'YEARS 1-11: MUTTON CHOPS THE BUTLER',
+          '"At age one, Morgan shaved our mansion butler Mutton Chops in his sleep and was hailed a prodigy! Meanwhile, I was sidelined because a hairless barber is supposedly bad for business."',
+          0
+        );
+      } else if (this.originChapter === 1) {
+        this.setOriginStoryMilestone(
+          'YEARS 13-18: GOSU OF THE STREETS',
+          '"For six years I lived off the streets across continents! I became gosu at street magic, juggling, cutpursing, haggling, street crossing, selling random junk, and announcing the end of the world!"',
+          1
+        );
+      } else {
+        this.setOriginStoryMilestone(
+          'YEAR 20: THE SUBSTAMPEDE SUBMARINE',
+          '"Behold Captain Dread\'s dilapidated diesel submarine, The Substampede! Our ticket across the sea to Blackspit Island and Evil Deeds College!"',
+          2
+        );
+      }
+      return;
+    }
+    if (hit.id === 'origin_ancestor_portraits') {
+      this.setTemporaryPlayerPose(4, 2200, false);
+      if (this.originChapter === 0) {
+        this.setOriginStoryMilestone(
+          'YEAR 12: THE WORLD BARBER ACADEMY & ESCAPE',
+          '"Our great-great-great-great-grandfather founded the World Barber Academy (WoBAca) and ran a horseshoe store. When Morgan was accepted at age 12 and mistaken for a gentleman by recess, I fled the family castle forever!"',
+          0
+        );
+      } else if (this.originChapter === 1) {
+        this.setOriginStoryMilestone(
+          'YEAR 19: THE BIRTH OF MR. SMOOTHFACE',
+          '"When Dr. Figaro Excelsior crowned Morgan Doctor Barber Grand Master Extraordinaire, I stared into this barbershop window mirror in a fit of rage and adopted my underworld alias: MR. SMOOTHFACE!"',
+          1
+        );
+      } else {
+        this.setOriginStoryMilestone(
+          'YEAR 20: CAPTAIN DREAD ON THE PIER',
+          '"Captain Dread and his loyal siren-loving crew agreed to ferry me to Blackspit Island! Click \'Play Act I: The Substampede\' on the left menu to board!"',
+          2
+        );
+      }
+      return;
+    }
+    if (hit.id === 'origin_to_streets') {
+      const nextChap = ((this.originChapter + 1) % 3) as 0 | 1 | 2;
+      this.setOriginChapter(nextChap);
+      return;
     }
 
     // Handle Z1S3 Bulkhead Door -> transitions to Z1S2 VIP Lounge
@@ -2545,6 +2680,24 @@ class SmoothfacePilotGame {
     const maxCamX = Math.max(0, this.getRoomWidth() - 1600);
     if (this.studio?.active) {
       // In Studio Mode, camera X is controlled manually by the user!
+    } else if (this.currentRoom === 'ORIGIN') {
+      // In the Title Screen Life Story stage, frame Chapter I (Barbershop: 0) or Chapter II (Foggy Street: 1280) cleanly to the right of the Title Signpost!
+      this.cameraX = 0;
+
+      // Autonomous Life-Story Stroll when the player hasn't clicked on the Title Stage recently
+      if (!this.player.isWalking) {
+        this.originIdleTimer += dt;
+        if (this.originIdleTimer >= 5.2) {
+          this.originIdleTimer = 0;
+          const tourHotspots = ['origin_ancestor_portraits', 'origin_barber_chair'];
+          const nextId = tourHotspots[this.originTourStep % tourHotspots.length];
+          this.originTourStep++;
+          const hit = this.getVisibleHotspots().find((h) => h.id === nextId);
+          if (hit) {
+            this.walkAndExecute(hit, () => this.executeVerbOnHotspot(hit, 'inspect'));
+          }
+        }
+      }
     } else if (maxCamX > 0) {
       let targetCamX = Math.max(0, Math.min(maxCamX, this.player.x - 800));
       // Allow classic Point-and-Click mouse-edge camera panning when not actively walking
@@ -2714,15 +2867,36 @@ class SmoothfacePilotGame {
     ctx.translate(-this.cameraX, 0);
 
     // ---------------------------------------------------------
-    // LAYER 1: WIDE SCROLLING ROOM SHELL (OR 2010 AGUILAR SKETCH MODE!)
+    // LAYER 1: WIDE SCROLLING ROOM SHELL (OR RUPERT'S HAND-DRAWN LIFE STORY STAGE!)
     // ---------------------------------------------------------
     const roomW = this.getRoomWidth();
-    const shellKey = this.sketchMode2010
-      ? `${this.currentRoom.toLowerCase()}_sketch_2010`
-      : `${this.currentRoom.toLowerCase()}_shell`;
-    const shellImg = this.getImg(shellKey) || this.getImg(`${this.currentRoom.toLowerCase()}_shell`);
-    if (shellImg) {
-      ctx.drawImage(shellImg, -10 + parX * 0.35, -6 + parY * 0.35, roomW + 20, h + 12);
+    if (this.currentRoom === 'ORIGIN') {
+      const ox = parX * 0.35;
+      const oy = parY * 0.35;
+      if (this.originChapter === 0) {
+        const barbershopImg = this.getImg('origin_barbershop');
+        if (barbershopImg) {
+          ctx.drawImage(barbershopImg, 115, 115, 1322, 704, -12 + ox, -8 + oy, w + 24, h + 16);
+        }
+      } else if (this.originChapter === 1) {
+        const streetsImg = this.getImg('origin_streets');
+        if (streetsImg) {
+          ctx.drawImage(streetsImg, 116, 116, 1330, 704, -12 + ox, -8 + oy, w + 24, h + 16);
+        }
+      } else {
+        const dockImg = this.getImg('origin_dock');
+        if (dockImg) {
+          ctx.drawImage(dockImg, 118, 118, 1360, 704, -12 + ox, -8 + oy, w + 24, h + 16);
+        }
+      }
+    } else {
+      const shellKey = this.sketchMode2010
+        ? `${this.currentRoom.toLowerCase()}_sketch_2010`
+        : `${this.currentRoom.toLowerCase()}_shell`;
+      const shellImg = this.getImg(shellKey) || this.getImg(`${this.currentRoom.toLowerCase()}_shell`);
+      if (shellImg) {
+        ctx.drawImage(shellImg, -10 + parX * 0.35, -6 + parY * 0.35, roomW + 20, h + 12);
+      }
     }
 
     // ---------------------------------------------------------
@@ -2748,7 +2922,7 @@ class SmoothfacePilotGame {
       draw: () => this.rigs.renderSmoothfaceRig(ctx, this.player),
     });
 
-    if (this.currentRoom === 'Z1S3') {
+    if (this.currentRoom === 'Z1S3' || (this.currentRoom === 'ORIGIN' && this.originChapter === 2)) {
       renderList.push({
         sortY: this.npcs.cap_dread.y,
         draw: () => this.rigs.renderNpcPuppet(ctx, this.npcs.cap_dread),

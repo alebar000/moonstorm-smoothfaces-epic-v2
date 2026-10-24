@@ -16,7 +16,17 @@ with sync_playwright() as p:
 
     page.goto("http://127.0.0.1:8765/play", wait_until="networkidle")
     page.wait_for_timeout(800)
-    page.screenshot(path=os.path.join(art_dir, "v4_title_screen.png"))
+    page.screenshot(path=os.path.join(art_dir, "v6_title_chap1_barbershop.png"))
+
+    # Switch to Chapter II of Rupert's Life Story on the Title Stage (Years 13-19: The Streets & MGWDBTTGPnP Poster)
+    page.click("#btn-origin-chap-2")
+    page.wait_for_timeout(700)
+    page.screenshot(path=os.path.join(art_dir, "v6_title_chap2_streets.png"))
+
+    # Switch to Chapter III of Rupert's Life Story on the Title Stage (Year 20: Port Machete Pier & The Substampede)
+    page.click("#btn-origin-chap-3")
+    page.wait_for_timeout(700)
+    page.screenshot(path=os.path.join(art_dir, "v6_title_chap3_pier.png"))
 
     # Open Time Capsule Museum from Main Menu
     page.click("#btn-menu-credits")
