@@ -1,0 +1,21 @@
+{
+  "id": "z1s2.ceiling.arch",
+  "category": "z1s2",
+  "kind": "prop",
+  "what": "Z1S2 upper submarine hull curved steel ceiling arch beam with heavy rivets and rusted conduit pipe",
+  "target_height_px": 180,
+  "height_fraction_of_smoothface": 0.571,
+  "pivot_hint": "top ceiling span",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/ref_z1s2_lobby_2010.png",
+    "art/references/palette_scenery.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "approved",
+  "proposed_version": "v1",
+  "version": "v1",
+  "approved_version": "v1"
+}

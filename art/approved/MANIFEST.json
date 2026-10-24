@@ -1399,6 +1399,46 @@
       "meta": "art/candidates/z1s2.wall.panel_a/meta.json",
       "approved_at": "2026-10-23T18:20:41",
       "reason": "L19a Z1S2 approved"
+    },
+    "z1s2.wall.panel_b": {
+      "path": "art/approved/z1s2/z1s2.wall.panel_b.png",
+      "version": "v1",
+      "sha256": "158d3fc92e833882f9441123229754e009fa8efb239e07f55736e68c846f66fb",
+      "category": "z1s2",
+      "kind": "wall",
+      "meta": "art/candidates/z1s2.wall.panel_b/meta.json",
+      "approved_at": "2026-10-23T18:24:05",
+      "reason": "L19b Z1S2 approved (passes all gates and critics)"
+    },
+    "z1s2.floor.planks": {
+      "path": "art/approved/z1s2/z1s2.floor.planks.png",
+      "version": "v1",
+      "sha256": "7646d5a54cce8b23a54ac796ef5834f808c29e9d422303d435e792bdea54d212",
+      "category": "z1s2",
+      "kind": "prop",
+      "meta": "art/candidates/z1s2.floor.planks/meta.json",
+      "approved_at": "2026-10-23T18:24:05",
+      "reason": "L19b Z1S2 approved (passes all gates and critics)"
+    },
+    "z1s2.ceiling.arch": {
+      "path": "art/approved/z1s2/z1s2.ceiling.arch.png",
+      "version": "v1",
+      "sha256": "d56ac13f82ca42aec607b2fb4f768f1ab44fb38a610aae3e378699911b236bf9",
+      "category": "z1s2",
+      "kind": "prop",
+      "meta": "art/candidates/z1s2.ceiling.arch/meta.json",
+      "approved_at": "2026-10-23T18:24:05",
+      "reason": "L19b Z1S2 approved (passes all gates and critics)"
+    },
+    "z1s2.wall.samurai_poster": {
+      "path": "art/approved/z1s2/z1s2.wall.samurai_poster.png",
+      "version": "v1",
+      "sha256": "821e50fb6096614c2d80b5a8de4806e8c0e2380035e4d552c2c3b2a253d080fa",
+      "category": "z1s2",
+      "kind": "prop",
+      "meta": "art/candidates/z1s2.wall.samurai_poster/meta.json",
+      "approved_at": "2026-10-23T18:24:05",
+      "reason": "L19b Z1S2 approved (passes all gates and critics)"
     }
   },
   "superseded": [],
@@ -1512,10 +1552,14 @@
     "ventrilo.legs@v1@approved@2026-10-23T14:59:58",
     "ventrilo.shoes@v1@approved@2026-10-23T14:59:58",
     "ventrilo.torso@v1@approved@2026-10-23T14:59:58",
+    "z1s2.ceiling.arch@v1@approved@2026-10-23T18:24:05",
+    "z1s2.floor.planks@v1@approved@2026-10-23T18:24:05",
     "z1s2.prop.iron_ladder@v1@approved@2026-10-23T18:19:48",
     "z1s2.wall.cage_lamp@v1@approved@2026-10-23T18:19:48",
     "z1s2.wall.katana_rack@v1@approved@2026-10-23T18:19:48",
     "z1s2.wall.panel_a@v1@approved@2026-10-23T18:20:41",
+    "z1s2.wall.panel_b@v1@approved@2026-10-23T18:24:05",
+    "z1s2.wall.samurai_poster@v1@approved@2026-10-23T18:24:05",
     "z1s3.ceiling.beam_a@v2@approved@2026-10-22T20:18:33",
     "z1s3.ceiling.beam_b@v2@approved@2026-10-22T20:18:36",
     "z1s3.fg.card_table@v2@approved@2026-10-22T23:34:18",

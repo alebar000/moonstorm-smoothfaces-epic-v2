@@ -1,0 +1,18 @@
+{
+  "style": {
+    "piece": "z1s2.wall.panel_b",
+    "version": "v1",
+    "critic": "style-critic",
+    "verdict": "sin_objeciones",
+    "defects": [],
+    "notes": "Matches 2010 MoonStorm hand-inked construction-paper cutout style and ref_z1s2_lobby_2010.png."
+  },
+  "anatomy": {
+    "piece": "z1s2.wall.panel_b",
+    "version": "v1",
+    "critic": "anatomy-critic",
+    "verdict": "sin_objeciones",
+    "defects": [],
+    "notes": "Calibrated to Z1S2 room proportions (target_height_px=580)."
+  }
+}

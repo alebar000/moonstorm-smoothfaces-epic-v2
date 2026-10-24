@@ -1715,3 +1715,8 @@ ihongo.prop.broom_katana (1, 250 px).
   8. entrilo.shoes (1, 46 px): Zapatos de escenario bicolor con polainas.
 - **Rig ensamblado**: characters/ventriloquist/rig.json y characters/ventriloquist/composite_preview.png (340 px).
 - **Total en MANIFEST.json**: 135/135 piezas aprobadas (103 Slice 1 + 32 personajes nuevos del Acto I: Nihongo, A Baby y The Ventriloquist & Rapoleon).
+
+## 2026-10-23 - Lote L19 Completado y Aprobado (Z1S2 Salon VIP - Casco, Escalera y Pared, 8 piezas)
+- **Piezas generadas (1 por llamada, ref ef_z1s2_lobby_2010.png), normalizadas, validadas por gates.py (8/8 PASS) y aprobadas en rt/approved/z1s2/**:
+  1. z1s2.wall.panel_a (1, 620 px), z1s2.wall.panel_b (1, 580 px), z1s2.floor.planks (1, 240 px), z1s2.ceiling.arch (1, 180 px), z1s2.prop.iron_ladder (1, 540 px), z1s2.wall.cage_lamp (1, 92 px), z1s2.wall.katana_rack (1, 150 px), z1s2.wall.samurai_poster (1, 190 px).
+- **Total en MANIFEST.json**: 143/143 piezas aprobadas (103 Slice 1 + 32 personajes Acto I + 8 Z1S2 L19).

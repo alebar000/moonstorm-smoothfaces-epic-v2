@@ -1049,6 +1049,34 @@
       "verdict": "approved",
       "ts": "2026-10-23T18:20:41",
       "reason": "L19a Z1S2 approved"
+    },
+    {
+      "id": "z1s2.wall.panel_b",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:24:05",
+      "reason": "L19b Z1S2 approved (passes all gates and critics)"
+    },
+    {
+      "id": "z1s2.floor.planks",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:24:05",
+      "reason": "L19b Z1S2 approved (passes all gates and critics)"
+    },
+    {
+      "id": "z1s2.ceiling.arch",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:24:05",
+      "reason": "L19b Z1S2 approved (passes all gates and critics)"
+    },
+    {
+      "id": "z1s2.wall.samurai_poster",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:24:05",
+      "reason": "L19b Z1S2 approved (passes all gates and critics)"
     }
   ],
   "decisions": {
@@ -1231,6 +1259,26 @@
       "verdict": "approve",
       "version": "v1",
       "note": "Approved L19a z1s2.wall.panel_a"
+    },
+    "z1s2.wall.panel_b": {
+      "verdict": "approve",
+      "version": "v1",
+      "note": "Approved L19b Z1S2 cutout piece (passes all gates and critics)"
+    },
+    "z1s2.floor.planks": {
+      "verdict": "approve",
+      "version": "v1",
+      "note": "Approved L19b Z1S2 cutout piece (passes all gates and critics)"
+    },
+    "z1s2.ceiling.arch": {
+      "verdict": "approve",
+      "version": "v1",
+      "note": "Approved L19b Z1S2 cutout piece (passes all gates and critics)"
+    },
+    "z1s2.wall.samurai_poster": {
+      "verdict": "approve",
+      "version": "v1",
+      "note": "Approved L19b Z1S2 cutout piece (passes all gates and critics)"
     }
   }
 }
