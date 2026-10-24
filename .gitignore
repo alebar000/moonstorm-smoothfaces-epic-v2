@@ -5,6 +5,8 @@ node_modules/
 dist/
 dist-ssr/
 .vite/
+release/
+.firebase/
 
 # Heavy binary archives from 2010 recovery (>15MB each)
 recovered/builds/*.7z

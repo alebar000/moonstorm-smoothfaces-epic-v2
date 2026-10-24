@@ -691,6 +691,307 @@ body.crt-enabled #stage-container::after {
 }
 
 /* =========================================================
+   SEXY 2-LOGO BOOT SPLASH SEQUENCE (#boot-splash-overlay)
+   Black -> Logo 1 (MoonStorm Studios) -> Black -> Logo 2 (MGWDBTTGPnP Lore) -> Title Stage
+   ========================================================= */
+.boot-splash-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 95;
+  background: #050307;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.boot-splash-overlay[data-phase="fadeout"] {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.boot-splash-overlay[data-phase="done"] {
+  display: none !important;
+}
+
+.boot-spotlight-glow {
+  position: absolute;
+  width: 920px;
+  height: 920px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(244, 203, 92, 0.16) 0%,
+    rgba(59, 232, 216, 0.06) 38%,
+    rgba(5, 3, 7, 0) 70%
+  );
+  opacity: 0;
+  transform: scale(0.75);
+  transition: opacity 0.85s ease, transform 1.2s ease;
+  pointer-events: none;
+}
+
+.boot-splash-overlay[data-phase="logo1"] .boot-spotlight-glow,
+.boot-splash-overlay[data-phase="logo2"] .boot-spotlight-glow {
+  opacity: 1;
+  transform: scale(1.06);
+}
+
+.boot-logo-stage {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  max-width: min(880px, 92vw);
+  text-align: center;
+  opacity: 0;
+  transform: translateY(14px) scale(0.94);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events: none;
+}
+
+.boot-splash-overlay[data-phase="logo1"] #boot-card-moonstorm {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.boot-splash-overlay[data-phase="logo2"] #boot-card-lore {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* LOGO 1: MOONSTORM STUDIOS */
+.boot-moon-emblem-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.boot-moon-halo {
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(246, 206, 85, 0.32) 0%, rgba(94, 242, 255, 0.12) 45%, transparent 72%);
+  filter: blur(8px);
+}
+
+.boot-moon-frame {
+  position: relative;
+  width: 320px;
+  height: 230px;
+  background: #140f18;
+  border: 5px solid #e8b84b;
+  outline: 4px solid #160d09;
+  border-radius: 18px;
+  padding: 8px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.95), 0 0 28px rgba(232, 184, 75, 0.28);
+  transform: rotate(-1.2deg);
+  overflow: hidden;
+}
+
+.boot-moon-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+.boot-studio-plaque {
+  background-color: #e8d8b9;
+  background-clip: padding-box;
+  border-style: solid;
+  border-width: 18px 24px;
+  border-image: url('/art/approved/ui/ui.scroll_banner.png') 42 52 fill / 18px 24px / 0 stretch;
+  filter: drop-shadow(6px 8px 0 rgba(0, 0, 0, 0.95));
+  padding: 10px 28px 12px;
+  transform: rotate(0.6deg);
+}
+
+.boot-studio-kicker {
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 900;
+  color: #8f1d1e;
+  letter-spacing: 0.14em;
+}
+
+.boot-studio-title {
+  margin: 4px 0 6px;
+  font-family: var(--font-display);
+  font-size: 2.65rem;
+  font-weight: 900;
+  color: var(--ink-dark);
+  letter-spacing: 0.10em;
+  text-shadow: 2px 2px 0 #f6ce55;
+  line-height: 1.02;
+}
+
+.boot-studio-divisions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-family: var(--font-mono);
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--ink-mid);
+}
+
+.boot-div-dot {
+  color: #8f1d1e;
+  font-weight: 900;
+}
+
+/* LOGO 2: WITTY IN-UNIVERSE LORE SYNDICATE SEAL */
+.boot-lore-crest-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
+
+.boot-lore-wing {
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
+  filter: drop-shadow(4px 6px 0 rgba(0, 0, 0, 0.92));
+}
+
+.boot-wing-left {
+  transform: rotate(-12deg);
+}
+
+.boot-wing-right {
+  transform: rotate(12deg);
+}
+
+.boot-lore-center-shield {
+  position: relative;
+  width: 155px;
+  height: 185px;
+  background: #e8d8b9;
+  border: 4px solid #160d09;
+  outline: 3px solid #e8b84b;
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.95);
+  transform: rotate(-1.5deg);
+}
+
+.boot-lore-poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.boot-lore-coin {
+  position: absolute;
+  right: -24px;
+  bottom: -18px;
+  width: 78px;
+  height: 78px;
+  background: url('/art/approved/ui/ui.portrait_frame.png') center / 114% 114% no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(3px 4px 0 rgba(0, 0, 0, 0.95));
+  transform: rotate(6deg);
+}
+
+.boot-lore-coin img {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.boot-lore-scroll {
+  background-color: #e8d8b9;
+  background-clip: padding-box;
+  border-style: solid;
+  border-width: 18px 26px;
+  border-image: url('/art/approved/ui/ui.scroll_banner.png') 42 52 fill / 18px 26px / 0 stretch;
+  filter: drop-shadow(6px 9px 0 rgba(0, 0, 0, 0.95));
+  padding: 10px 26px 12px;
+  transform: rotate(-0.5deg);
+}
+
+.boot-lore-kicker {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 900;
+  color: var(--ink-mid);
+  letter-spacing: 0.14em;
+}
+
+.boot-lore-acronym {
+  margin: 4px 0;
+  font-family: var(--font-display);
+  font-size: 2.55rem;
+  font-weight: 900;
+  color: #8f1d1e;
+  -webkit-text-stroke: 1.5px #160d09;
+  text-shadow: 3px 3px 0 #160d09, 0 0 12px rgba(246, 206, 85, 0.45);
+  letter-spacing: 0.06em;
+  line-height: 1.05;
+}
+
+.boot-lore-expanded {
+  font-family: var(--font-body);
+  font-size: 1.28rem;
+  font-weight: 900;
+  font-style: italic;
+  color: var(--ink-dark);
+  margin-top: 2px;
+}
+
+.boot-lore-tm {
+  font-family: var(--font-mono);
+  font-size: 0.90rem;
+  font-weight: 700;
+  color: #6b2020;
+  margin-top: 2px;
+}
+
+.boot-lore-fineprint {
+  background: rgba(24, 16, 13, 0.92);
+  border: 2px solid #8a6c46;
+  border-radius: 8px;
+  padding: 8px 18px;
+  color: #f3e2be;
+  font-family: var(--font-mono);
+  font-size: 0.92rem;
+  line-height: 1.38;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.85);
+}
+
+.boot-lore-fineprint strong {
+  color: #ffe27c;
+}
+
+.boot-skip-hint {
+  position: absolute;
+  bottom: 20px;
+  right: 28px;
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  color: rgba(242, 223, 184, 0.65);
+  letter-spacing: 0.04em;
+  pointer-events: none;
+}
+
+/* =========================================================
    LIVE 2.5D CUT-OUT STAGE TITLE SCREEN (ZERO SAAS CARDS!)
    ========================================================= */
 .overlay-screen {

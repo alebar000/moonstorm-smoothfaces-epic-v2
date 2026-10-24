@@ -136,6 +136,7 @@ class SmoothfacePilotGame {
   // Intro & Keypad State
   private currentIntroIndex = 0;
   private keypadEntered: string[] = [];
+  private bootTimers: number[] = [];
 
   private lastFrameTime = performance.now();
 
@@ -194,7 +195,100 @@ class SmoothfacePilotGame {
     // Expose debug/test API on window for automated verification
     (window as unknown as Record<string, unknown>).__SPARKLE_GAME__ = this;
 
+    // Launch the 2-Logo Boot Splash Intro (Black -> MoonStorm Studios -> MGWDBTTGPnP Lore -> Main Menu)
+    this.startBootSplashSequence();
+
     requestAnimationFrame((t) => this.loop(t));
+  }
+
+  private clearBootTimers(): void {
+    for (const id of this.bootTimers) {
+      window.clearTimeout(id);
+    }
+    this.bootTimers = [];
+  }
+
+  public startBootSplashSequence(): void {
+    const bootEl = document.getElementById('boot-splash-overlay');
+    if (!bootEl) return;
+    this.clearBootTimers();
+    bootEl.style.display = 'flex';
+    bootEl.setAttribute('data-phase', 'black1');
+
+    // 0.55s: Fade in Logo 1 (MoonStorm Studios 2010)
+    this.bootTimers.push(
+      window.setTimeout(() => {
+        bootEl.setAttribute('data-phase', 'logo1');
+      }, 550)
+    );
+
+    // 4.10s: Fade back to pitch black between logos
+    this.bootTimers.push(
+      window.setTimeout(() => {
+        bootEl.setAttribute('data-phase', 'black2');
+      }, 4100)
+    );
+
+    // 4.85s: Fade in Logo 2 (MGWDBTTGPnP Syndicate & Evil Deeds College Seal)
+    this.bootTimers.push(
+      window.setTimeout(() => {
+        bootEl.setAttribute('data-phase', 'logo2');
+      }, 4850)
+    );
+
+    // 9.10s: Dissolve into the Live Interactive Main Title Screen
+    this.bootTimers.push(
+      window.setTimeout(() => {
+        bootEl.setAttribute('data-phase', 'fadeout');
+      }, 9100)
+    );
+
+    // 9.90s: Remove overlay completely
+    this.bootTimers.push(
+      window.setTimeout(() => {
+        bootEl.setAttribute('data-phase', 'done');
+      }, 9900)
+    );
+  }
+
+  public advanceBootSplash(): void {
+    const bootEl = document.getElementById('boot-splash-overlay');
+    if (!bootEl) return;
+    const phase = bootEl.getAttribute('data-phase');
+    if (!phase || phase === 'done' || phase === 'fadeout') return;
+
+    this.audio.unlock();
+    this.clearBootTimers();
+
+    if (phase === 'black1' || phase === 'logo1') {
+      this.audio.playCombineSuccess();
+      bootEl.setAttribute('data-phase', 'logo2');
+      this.bootTimers.push(
+        window.setTimeout(() => {
+          bootEl.setAttribute('data-phase', 'fadeout');
+        }, 3400)
+      );
+      this.bootTimers.push(
+        window.setTimeout(() => {
+          bootEl.setAttribute('data-phase', 'done');
+        }, 4150)
+      );
+    } else {
+      this.audio.playStartStinger();
+      bootEl.setAttribute('data-phase', 'fadeout');
+      this.bootTimers.push(
+        window.setTimeout(() => {
+          bootEl.setAttribute('data-phase', 'done');
+        }, 720)
+      );
+    }
+  }
+
+  public skipBootSplash(): void {
+    const bootEl = document.getElementById('boot-splash-overlay');
+    if (!bootEl) return;
+    this.clearBootTimers();
+    bootEl.setAttribute('data-phase', 'done');
   }
 
   private preloadSceneAssets(): void {
@@ -641,8 +735,22 @@ class SmoothfacePilotGame {
       });
     });
 
+    // Boot Splash click-to-advance
+    document.getElementById('boot-splash-overlay')?.addEventListener('click', () => {
+      this.advanceBootSplash();
+    });
+
     // Keyboard shortcuts & LucasArts horizontal room scrolling / walking
     window.addEventListener('keydown', (e) => {
+      const bootEl = document.getElementById('boot-splash-overlay');
+      const bootPhase = bootEl?.getAttribute('data-phase');
+      if (bootPhase && bootPhase !== 'done' && bootPhase !== 'fadeout') {
+        if (e.key === ' ' || e.key === 'Enter' || e.key === 'Escape') {
+          e.preventDefault();
+          this.advanceBootSplash();
+          return;
+        }
+      }
       if (e.key === 'Tab') {
         e.preventDefault();
         this.streetSenseActive = true;

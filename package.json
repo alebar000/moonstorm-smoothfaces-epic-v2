@@ -8,7 +8,8 @@
     "dev": "vite --port 5173 --host",
     "build": "vite build",
     "preview": "vite preview --port 4173 --host",
-    "assets": "python scripts/build_mvp_assets.py"
+    "assets": "python scripts/build_mvp_assets.py",
+    "package:itch": "vite build && python tools/package_itchio.py"
   },
   "devDependencies": {
     "typescript": "^5.6.3",

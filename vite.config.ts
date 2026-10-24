@@ -46,6 +46,20 @@ function moonstormStudioSavePlugin() {
         });
       });
     },
+    closeBundle() {
+      // Copy runtime static asset directories into dist/ so dist/ is 100% self-contained
+      // for itch.io HTML5 embeds, Firebase Hosting, and GitHub Pages!
+      const rootDir = process.cwd();
+      const distDir = path.resolve(rootDir, 'dist');
+      const runtimeDirs = ['art/approved', 'art/archive_2010', 'characters', 'audio'];
+      for (const rel of runtimeDirs) {
+        const src = path.resolve(rootDir, rel);
+        const dst = path.resolve(distDir, rel);
+        if (fs.existsSync(src)) {
+          fs.cpSync(src, dst, { recursive: true, force: true });
+        }
+      }
+    },
   };
 }
 

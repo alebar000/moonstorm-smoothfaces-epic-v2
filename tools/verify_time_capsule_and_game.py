@@ -14,8 +14,25 @@ with sync_playwright() as p:
     page.on("console", lambda m: console_errs.append(m.text) if m.type == "error" else None)
     page.on("response", lambda r: failed_reqs.append(f"{r.status} {r.url}") if r.status >= 400 else None)
 
-    page.goto("http://127.0.0.1:8765/play", wait_until="networkidle")
-    page.wait_for_timeout(800)
+    page.goto("http://127.0.0.1:8765/play", wait_until="domcontentloaded")
+    page.wait_for_timeout(1200)
+    # Ensure Logo 1 (MoonStorm Studios 2010) is captured at full opacity
+    page.evaluate("""() => {
+        const g = window.__SPARKLE_GAME__;
+        g.clearBootTimers();
+        document.getElementById('boot-splash-overlay').setAttribute('data-phase', 'logo1');
+    }""")
+    page.wait_for_timeout(850)
+    page.screenshot(path=os.path.join(art_dir, "v9_boot_logo1_moonstorm.png"))
+
+    # Click once on the boot splash to advance to Logo 2 (MGWDBTTGPnP Lore Syndicate Seal)
+    page.click("#boot-splash-overlay")
+    page.wait_for_timeout(850)
+    page.screenshot(path=os.path.join(art_dir, "v9_boot_logo2_mgwdbttgpnp.png"))
+
+    # Click once more to dissolve into the Live Interactive Title Screen
+    page.click("#boot-splash-overlay")
+    page.wait_for_timeout(850)
     page.screenshot(path=os.path.join(art_dir, "v7_title_chap1_barbershop.png"))
 
     # Switch to Chapter II of Rupert's Life Story on the Title Stage and click on the cobblestone street

@@ -3464,3 +3464,20 @@ ef_z1s2_lobby_2010.png), normalizadas, validadas por gates.py (8/8 PASS) y aprob
   - `#main-menu-overlay` tiene `pointer-events: none` (con `pointer-events: auto` solo en los 5 tablones del menu izquierdo y en el pergamino narrador inferior), por lo que **hacer clic en cualquier punto del piso o sobre los recuerdos/retratos hace que Mr. Smoothface camine hasta ahi con chispas turquesas, adopte poses expresivas (lupa + signo `?`, llave inglesa + bombillo `!`, brazos cruzados + nube de tormenta) y actualice el pergamino `#title-origin-scroll` con ese recuerdo de su vida**.
   - Incluye **3 botones de capitulo** en el pergamino inferior (`I. Barbershop (Yr 0-12)`, `II. The Streets (Yr 13-19)`, `III. The Pier (Yr 20)`), transicion al caminar hacia el extremo derecho del escenario (`origin_to_streets`), y un **paseo autonomo (`originIdleTimer`)** cuando el jugador deja el mouse quieto.
 
+
+---
+
+## 2026-10-24 - Secuencia de Arranque de 2 Logos (`MoonStorm Studios` -> `MGWDBTTGPnP`) + Empaquetado Listo para Compartir (`itch.io`, `GitHub Pages`, `Firebase Hosting`)
+
+- **Secuencia Cinematografica de Arranque de 2 Logos (`#boot-splash-overlay` en `index.html`, `main.css`, `main.ts`)**:
+  1. **Pantalla Negra -> Logo 1 (`MOONSTORM STUDIOS - 2010`)**:
+     - Fundido desde negro absoluto (`#050307`) con halo dorado/turquesa hacia el emblema original `moonSplash.png` (Junio 2010) enmarcado en bronce y madera, acompañado del pergamino `MOONSTORM STUDIOS (EST. SAN JOSE, COSTA RICA - 2010)` y las dos divisiones originales (`BHS: Barquero, Ledezma, Morales` & `EOG: Garcia, Aguilar, BooT`).
+  2. **Pantalla Negra -> Logo 2 (`M.G.W.D.B.T.T.G.P.n.P.` Syndicate & Evil Deeds College Seal)**:
+     - Fundido hacia el escudo oficial del sindicato de villanos del lore canonico: el poster de *The Malefic Gentlemen* (`z1s3.wall.poster.png`) flanqueado por el timon de Da Vinci (`z1s3.wall.helm_wheel.png`) y la Super-Glue del Capitan Dread (`z1s3.prop.glue.png`), con el titulo **`M.G.W.D.B.T.T.G.P.n.P.`** (*"Malefic Gentlemen Who Do Bad Things To Good People & Pigeons - Trademark Pending, A Subsidiary of The League of Terror"*) y el sello de certificacion de **Evil Deeds College** y **World Barber Academy (WoBAca)**.
+  3. **Disolucion suave hacia la Pantalla Principal Interactiva (`ORIGIN`)** (o avance inmediato haciendo clic / presionando `Space`).
+- **Infraestructura Lista para Compartir con Amigos (`vite.config.ts`, `package.json`, `tools/package_itchio.py`, `.github/workflows/deploy-pages.yml`, `firebase.json`)**:
+  - `vite.config.ts` ahora copia automaticamente `art/approved`, `art/archive_2010`, `characters` y `audio` dentro de `dist/` al ejecutar `npm run build`, haciendo que `dist/` sea 100% autonomo.
+  - `npm run package:itch` genera `release/smoothfaces-epic-itchio.zip` listo para subir a **itch.io** como juego HTML5 jugable en el navegador.
+  - Añadido `.github/workflows/deploy-pages.yml` para despliegue automatico en **GitHub Pages** y `firebase.json` para **Firebase Hosting**.
+
+
