@@ -73,8 +73,15 @@ with sync_playwright() as p:
     # Open Island Map Modal to verify Aguilar's 2010 map
     page.click("#btn-island-map")
     page.wait_for_timeout(400)
-    page.screenshot(path=os.path.join(art_dir, "v3_island_map_modal.png"))
+    page.screenshot(path=os.path.join(art_dir, "v8_island_map_modal.png"))
     page.click("#btn-close-map")
+    page.wait_for_timeout(250)
+
+    # Open Evil Agenda / Da Vinci Contraption Schematic Modal and verify Escape closes it cleanly
+    page.click("#btn-evil-agenda")
+    page.wait_for_timeout(400)
+    page.screenshot(path=os.path.join(art_dir, "v8_agenda_modal.png"))
+    page.keyboard.press("Escape")
     page.wait_for_timeout(250)
 
     # Toggle 2010 Sketch Mode in Z1S3

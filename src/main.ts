@@ -631,6 +631,16 @@ class SmoothfacePilotGame {
       }
     });
 
+    // Close any modal when clicking its dark backdrop outside the card
+    document.querySelectorAll('.modal-backdrop').forEach((backdrop) => {
+      backdrop.addEventListener('mousedown', (e) => {
+        if (e.target === backdrop) {
+          const id = (backdrop as HTMLElement).id;
+          if (id) this.toggleModal(id, false);
+        }
+      });
+    });
+
     // Keyboard shortcuts & LucasArts horizontal room scrolling / walking
     window.addEventListener('keydown', (e) => {
       if (e.key === 'Tab') {
@@ -639,12 +649,25 @@ class SmoothfacePilotGame {
       } else if (e.key === ' ') {
         this.flushDialogueTypewriter();
       } else if (e.key === 'Escape') {
-        this.toggleModal('config-modal', true);
+        const openModals = Array.from(document.querySelectorAll('.modal-backdrop')).filter(
+          (m) => (m as HTMLElement).style.display !== 'none' && (m as HTMLElement).style.display !== ''
+        );
+        if (openModals.length > 0) {
+          for (const m of openModals) {
+            this.toggleModal((m as HTMLElement).id, false);
+          }
+        } else {
+          this.toggleModal('config-modal', true);
+        }
       } else if (e.key.toLowerCase() === 'm') {
-        this.toggleModal('map-modal', true);
+        const mEl = document.getElementById('map-modal');
+        const isOpen = mEl && mEl.style.display !== 'none' && mEl.style.display !== '';
+        this.toggleModal('map-modal', !isOpen);
       } else if (e.key.toLowerCase() === 'h') {
-        this.renderEvilAgenda();
-        this.toggleModal('agenda-modal', true);
+        const aEl = document.getElementById('agenda-modal');
+        const isOpen = aEl && aEl.style.display !== 'none' && aEl.style.display !== '';
+        if (!isOpen) this.renderEvilAgenda();
+        this.toggleModal('agenda-modal', !isOpen);
       } else if (e.key.toLowerCase() === 'k') {
         this.toggleSketchMode2010();
       } else if (e.key.toLowerCase() === 't') {
@@ -763,6 +786,17 @@ class SmoothfacePilotGame {
   public toggleModal(id: string, show: boolean): void {
     this.hideOverlays();
     this.flushDialogueTypewriter();
+    if (show) {
+      document.querySelectorAll('.modal-backdrop').forEach((m) => {
+        const el = m as HTMLElement;
+        if (el.id && el.id !== id) {
+          el.style.display = 'none';
+        }
+      });
+      if (id !== 'puzzle-keypad-modal') {
+        this.audio.setDucking('keypad', false);
+      }
+    }
     if (id === 'puzzle-keypad-modal') {
       this.audio.setDucking('keypad', show);
     }

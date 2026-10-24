@@ -1440,6 +1440,450 @@ body.crt-enabled #stage-container::after {
 
 
 /* =========================================================
+   BLACKSPIT ISLAND & SUBSTAMPEDE DECK CHART MODAL (#map-modal)
+   ========================================================= */
+.map-modal-card {
+  width: min(1020px, 95vw);
+}
+
+.map-modal-body {
+  display: grid;
+  grid-template-columns: 1.25fr 0.95fr;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.map-art-frame {
+  position: relative;
+  border: 3px solid var(--ink-dark);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #1a120d;
+  box-shadow: 4px 5px 0 rgba(12, 8, 6, 0.85);
+}
+
+.island-map-img {
+  width: 100%;
+  height: 100%;
+  max-height: 440px;
+  object-fit: cover;
+  display: block;
+}
+
+.map-pin-badge {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background-color: #f4cb5c;
+  background-clip: padding-box;
+  border-style: solid;
+  border-width: 5px 9px;
+  border-image: url('/art/approved/ui/ui.button_plate.png') 20 26 fill / 5px 9px / 0 stretch;
+  color: var(--ink-dark);
+  padding: 2px 8px;
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 900;
+  cursor: pointer;
+  white-space: nowrap;
+  filter: drop-shadow(2px 3px 0 rgba(12, 8, 6, 0.92));
+  transition: transform 0.14s, filter 0.14s;
+}
+
+.map-pin-badge:hover {
+  transform: translate(-50%, -56%) scale(1.08);
+  background-color: #ffe27c;
+}
+
+.map-room-cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.map-room-btn {
+  background-color: #e8d8b9;
+  background-clip: padding-box;
+  border-style: solid;
+  border-width: 10px 14px;
+  border-image: url('/art/approved/ui/ui.scroll_banner.png') 42 52 fill / 10px 14px / 0 stretch;
+  color: var(--ink-dark);
+  padding: 4px 10px;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  filter: drop-shadow(3px 4px 0 rgba(12, 8, 6, 0.88));
+  transition: transform 0.14s, background-color 0.14s;
+}
+
+.map-room-btn:hover {
+  background-color: #f4df9e;
+  transform: translateX(4px);
+}
+
+.map-room-thumb {
+  width: 68px;
+  height: 48px;
+  min-width: 68px;
+  object-fit: contain;
+  border-radius: 6px;
+  background: rgba(28, 18, 12, 0.12);
+  border: 2px solid #2b180a;
+  padding: 2px;
+}
+
+.map-room-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.map-room-btn strong {
+  font-family: var(--font-display);
+  color: var(--ink-dark);
+  font-size: 0.84rem;
+}
+
+.map-room-btn span {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--ink-mid);
+  line-height: 1.2;
+}
+
+/* =========================================================
+   OPEN TWO-PAGE ILLUSTRATED EVIL SKETCHBOOK & DA VINCI BLUEPRINT (#agenda-modal)
+   ========================================================= */
+.sketchbook-modal-card {
+  position: relative;
+  width: min(1080px, 95vw);
+  max-height: 88vh;
+  background: #241811;
+  border: 4px solid var(--ink-dark);
+  outline: 3px solid var(--paper-gold);
+  border-radius: 14px;
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.95), 8px 10px 0 rgba(12, 8, 6, 0.95);
+  padding: 18px 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.sketchbook-close-btn {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  z-index: 10;
+  width: 38px;
+  height: 36px;
+  font-size: 1.05rem;
+}
+
+.sketchbook-spread-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  width: 100%;
+  align-items: stretch;
+}
+
+.sketchbook-page-left {
+  background-color: #ece0c6;
+  background-clip: padding-box;
+  border-style: solid;
+  border-width: 14px 18px;
+  border-image: url('/art/approved/ui/ui.scroll_banner.png') 42 52 fill / 14px 18px / 0 stretch;
+  padding: 8px 12px;
+  color: var(--ink-dark);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  filter: drop-shadow(3px 4px 0 rgba(12, 8, 6, 0.85));
+}
+
+.sketchbook-page-right {
+  background:
+    linear-gradient(rgba(140, 215, 255, 0.10) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(140, 215, 255, 0.10) 1px, transparent 1px),
+    #11324d;
+  background-size: 22px 22px;
+  border: 3px solid #9beeff;
+  outline: 2px solid #0a1f33;
+  border-radius: 10px;
+  padding: 14px 16px;
+  color: #e9f6ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: inset 0 0 24px rgba(0, 0, 0, 0.55), 3px 4px 0 rgba(12, 8, 6, 0.85);
+}
+
+.sketch-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px dashed rgba(61, 36, 18, 0.45);
+  padding-bottom: 5px;
+  margin-bottom: 8px;
+}
+
+.sketch-page-header h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 0.98rem;
+  font-weight: 900;
+  color: #2b1508;
+  letter-spacing: 0.03em;
+}
+
+.sketch-page-header span {
+  font-family: var(--font-mono);
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: #8f1d1e;
+}
+
+.sketch-mission-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.sketch-mission-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 248, 231, 0.85);
+  border: 2px solid #3d2412;
+  border-radius: 8px;
+  padding: 7px 10px;
+  box-shadow: 2px 3px 0 rgba(28, 18, 12, 0.35);
+  position: relative;
+}
+
+.sketch-mission-card.done {
+  background: rgba(226, 248, 235, 0.90);
+  border-color: #1f5c3a;
+}
+
+.sketch-mission-thumb {
+  width: 46px;
+  height: 46px;
+  min-width: 46px;
+  max-width: 46px;
+  max-height: 46px;
+  object-fit: contain;
+  background: rgba(35, 19, 8, 0.10);
+  border: 1.5px solid #5c3a1e;
+  border-radius: 6px;
+  padding: 3px;
+}
+
+.sketch-mission-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.sketch-mission-body h4 {
+  margin: 0 0 2px;
+  font-family: var(--font-display);
+  font-size: 0.84rem;
+  font-weight: 900;
+  color: #231308;
+}
+
+.sketch-mission-body p {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #3d2412;
+}
+
+.sketch-stamp {
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  font-weight: 900;
+  padding: 3px 8px;
+  border-radius: 4px;
+  border: 2px solid #8c1d1d;
+  color: #8c1d1d;
+  transform: rotate(-5deg);
+  white-space: nowrap;
+}
+
+.sketch-stamp.locked {
+  border-color: #6b5b4e;
+  color: #6b5b4e;
+  background: rgba(235, 225, 210, 0.55);
+  transform: rotate(-2deg);
+}
+
+.sketch-mission-card.done .sketch-stamp {
+  border-color: #15693b;
+  color: #15693b;
+  background: rgba(255, 255, 255, 0.65);
+}
+
+.blueprint-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1.5px dashed rgba(175, 232, 255, 0.55);
+  padding-bottom: 5px;
+  padding-right: 42px;
+  margin-bottom: 8px;
+}
+
+.blueprint-page-header h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+  font-weight: 900;
+  color: #ffffff;
+}
+
+.blueprint-page-header span {
+  font-family: var(--font-mono);
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: #ffdf6b;
+  white-space: nowrap;
+}
+
+.blueprint-parts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  flex: 1;
+}
+
+.blueprint-part-card {
+  background: rgba(10, 32, 58, 0.72);
+  border: 2px dashed rgba(165, 228, 255, 0.72);
+  border-radius: 8px;
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.blueprint-part-card.collected {
+  background: rgba(14, 58, 68, 0.85);
+  border: 2px solid #5ef2ff;
+}
+
+.blueprint-part-card img {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  max-width: 48px;
+  max-height: 48px;
+  object-fit: contain;
+}
+
+.blueprint-part-card.missing img {
+  filter: grayscale(0.85) brightness(0.75) contrast(1.2);
+  opacity: 0.78;
+}
+
+.blueprint-part-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.blueprint-part-meta strong {
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  color: #ffffff;
+}
+
+.blueprint-part-meta span {
+  font-family: var(--font-mono);
+  font-size: 0.84rem;
+  color: #bfeaff;
+  line-height: 1.15;
+}
+
+.blueprint-part-status {
+  font-family: var(--font-display);
+  font-size: 0.70rem;
+  font-weight: 900;
+  color: #ffcf56;
+}
+
+.blueprint-part-card.collected .blueprint-part-status {
+  color: #5ef2ff;
+}
+
+.blueprint-assembly-footer {
+  margin-top: 10px;
+  background: rgba(8, 24, 46, 0.86);
+  border: 2px solid #9beeff;
+  border-radius: 8px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.blueprint-final-preview {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.blueprint-final-preview img {
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  max-width: 52px;
+  max-height: 52px;
+  object-fit: contain;
+}
+
+.blueprint-final-text strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  color: #ffdf6b;
+}
+
+.blueprint-final-text span {
+  font-family: var(--font-mono);
+  font-size: 0.80rem;
+  color: #d9f4ff;
+}
+
+.blueprint-assemble-btn {
+  background-color: #f4cb5c;
+  background-clip: padding-box;
+  border-style: solid;
+  border-width: 6px 10px;
+  border-image: url('/art/approved/ui/ui.button_plate.png') 20 26 fill / 6px 10px / 0 stretch;
+  color: var(--ink-dark);
+  padding: 4px 12px;
+  font-family: var(--font-display);
+  font-size: 0.74rem;
+  font-weight: 900;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.blueprint-assemble-btn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+/* =========================================================
    MOONSTORM ROOM & HOTSPOT STUDIO ("DESIGN ENGINE MODE")
    ========================================================= */
 #moonstorm-studio-overlay {
