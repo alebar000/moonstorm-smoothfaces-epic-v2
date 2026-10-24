@@ -1359,6 +1359,46 @@
       "meta": "art/candidates/ventrilo.shoes/meta.json",
       "approved_at": "2026-10-23T14:59:58",
       "reason": "L18 Ventriloquist & Rapoleon approved (passes all gates and critics)"
+    },
+    "z1s2.prop.iron_ladder": {
+      "path": "art/approved/z1s2/z1s2.prop.iron_ladder.png",
+      "version": "v1",
+      "sha256": "04bc056eeb17e109d0ab456699d5d7af522172e2fa50bcb5f19eb2d1b3443efd",
+      "category": "z1s2",
+      "kind": "prop",
+      "meta": "art/candidates/z1s2.prop.iron_ladder/meta.json",
+      "approved_at": "2026-10-23T18:19:48",
+      "reason": "L19a Z1S2 approved (passes all gates and critics)"
+    },
+    "z1s2.wall.cage_lamp": {
+      "path": "art/approved/z1s2/z1s2.wall.cage_lamp.png",
+      "version": "v1",
+      "sha256": "ea4e7431f95b26367ebb3bc665a52dade991e244d37bf46566eff949f2cb3983",
+      "category": "z1s2",
+      "kind": "prop",
+      "meta": "art/candidates/z1s2.wall.cage_lamp/meta.json",
+      "approved_at": "2026-10-23T18:19:48",
+      "reason": "L19a Z1S2 approved (passes all gates and critics)"
+    },
+    "z1s2.wall.katana_rack": {
+      "path": "art/approved/z1s2/z1s2.wall.katana_rack.png",
+      "version": "v1",
+      "sha256": "0b240bc2f79b3e39edd2c6e4bbf627b2308579e1fd3987fcba262ce907837d06",
+      "category": "z1s2",
+      "kind": "prop",
+      "meta": "art/candidates/z1s2.wall.katana_rack/meta.json",
+      "approved_at": "2026-10-23T18:19:48",
+      "reason": "L19a Z1S2 approved (passes all gates and critics)"
+    },
+    "z1s2.wall.panel_a": {
+      "path": "art/approved/z1s2/z1s2.wall.panel_a.png",
+      "version": "v1",
+      "sha256": "6a4fe3ab5641e0232e678c4e1a7dd9beb86f6fbb19cd9f8d5d4cd7ec8ae4f468",
+      "category": "z1s2",
+      "kind": "wall",
+      "meta": "art/candidates/z1s2.wall.panel_a/meta.json",
+      "approved_at": "2026-10-23T18:20:41",
+      "reason": "L19a Z1S2 approved"
     }
   },
   "superseded": [],
@@ -1472,6 +1512,10 @@
     "ventrilo.legs@v1@approved@2026-10-23T14:59:58",
     "ventrilo.shoes@v1@approved@2026-10-23T14:59:58",
     "ventrilo.torso@v1@approved@2026-10-23T14:59:58",
+    "z1s2.prop.iron_ladder@v1@approved@2026-10-23T18:19:48",
+    "z1s2.wall.cage_lamp@v1@approved@2026-10-23T18:19:48",
+    "z1s2.wall.katana_rack@v1@approved@2026-10-23T18:19:48",
+    "z1s2.wall.panel_a@v1@approved@2026-10-23T18:20:41",
     "z1s3.ceiling.beam_a@v2@approved@2026-10-22T20:18:33",
     "z1s3.ceiling.beam_b@v2@approved@2026-10-22T20:18:36",
     "z1s3.fg.card_table@v2@approved@2026-10-22T23:34:18",

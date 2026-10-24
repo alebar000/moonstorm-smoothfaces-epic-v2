@@ -1,0 +1,21 @@
+{
+  "id": "z1s2.wall.katana_rack",
+  "category": "z1s2",
+  "kind": "prop",
+  "what": "Z1S2 wall-mounted wooden sword rack holding three horizontal sheathed samurai katanas with wrapped hilts",
+  "target_height_px": 150,
+  "height_fraction_of_smoothface": 0.476,
+  "pivot_hint": "wall mount center",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/ref_z1s2_lobby_2010.png",
+    "art/references/palette_scenery.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "approved",
+  "proposed_version": "v1",
+  "version": "v1",
+  "approved_version": "v1"
+}

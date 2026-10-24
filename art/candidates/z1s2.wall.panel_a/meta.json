@@ -1,0 +1,21 @@
+{
+  "id": "z1s2.wall.panel_a",
+  "category": "z1s2",
+  "kind": "wall",
+  "what": "Z1S2 curved left submarine bulkhead wall panel in weathered olive-grey construction paper with bolted seam rivets and rust patches",
+  "target_height_px": 620,
+  "height_fraction_of_smoothface": 1.968,
+  "pivot_hint": "top-left wall corner",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/ref_z1s2_lobby_2010.png",
+    "art/references/palette_scenery.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "approved",
+  "proposed_version": "v1",
+  "version": "v1",
+  "approved_version": "v1"
+}
