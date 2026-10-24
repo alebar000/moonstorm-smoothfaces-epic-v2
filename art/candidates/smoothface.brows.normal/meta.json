@@ -22,7 +22,7 @@
     "version": "v2",
     "reason": "exactly the same as angry, has to be different"
   },
-  "status": "approved",
+  "status": "proposed",
   "proposed_version": "v3",
   "approved_version": "v3"
 }

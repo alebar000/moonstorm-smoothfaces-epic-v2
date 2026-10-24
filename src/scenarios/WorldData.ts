@@ -10,9 +10,9 @@ export type RoomId = 'Z1S3' | 'Z1S2' | 'Z1S1' | 'LOLDEMO';
 
 export const ROOM_WIDTHS: Record<RoomId, number> = {
   Z1S3: 2400,
-  Z1S2: 2200,
-  Z1S1: 2200,
-  LOLDEMO: 1920,
+  Z1S2: 2400,
+  Z1S1: 2400,
+  LOLDEMO: 2400,
 };
 
 export interface InventoryItemDef {
@@ -62,9 +62,9 @@ export const ITEMS_CATALOG: Record<string, InventoryItemDef> = {
   blueprint: {
     id: 'blueprint',
     name: "Da Vinci's Blueprint",
-    icon: 'art/approved/z1s3/z1s3.wall.poster.png',
+    icon: 'art/approved/z1s1/z1s1.item.davinci_blueprint.png',
     inspectText:
-      "Leonardo da Vinci's schematic for a Perpetual Movement Machine! Combine the Bag of Hammers, the Tripod Portrait Stand, and the Industrial Super-Glue from Captain Dread's Cabin!",
+      "Leonardo da Vinci's schematic for a Perpetual Movement Machine! Combine the Ship's Wooden Helm, Bag of Hammers, Tripod Portrait Stand, and Industrial Super-Glue!",
   },
   hammer_bag: {
     id: 'hammer_bag',
@@ -90,16 +90,16 @@ export const ITEMS_CATALOG: Record<string, InventoryItemDef> = {
   helm: {
     id: 'helm',
     name: "Ship's Wooden Helm",
-    icon: 'art/approved/z1s3/z1s3.wall.helm_wheel.png',
+    icon: 'art/approved/z1s2/z1s2.item.wooden_helm.png',
     inspectText:
-      "The Substampede's spare mahogany steering wheel. Eight solid spokes ready for counterweight hammers!",
+      "The Substampede's spare mahogany steering wheel from A Baby's Candy Vault. Eight solid spokes ready for counterweight hammers!",
   },
   perpetual_machine: {
     id: 'perpetual_machine',
     name: 'Perpetual Movement Machine',
-    icon: 'art/approved/z1s3/z1s3.wall.helm_wheel.png',
+    icon: 'art/approved/z1s1/z1s1.prop.perpetual_machine_installed.png',
     inspectText:
-      'Behold! A genuine Leonardo da Vinci Perpetual Movement Machine assembled from the Tripod Portrait Stand, the Bag of Hammers, and Captain Dread\'s Industrial Super-Glue!',
+      "Behold! A genuine Leonardo da Vinci Perpetual Movement Machine assembled from the Ship's Wooden Helm, Tripod Portrait Stand, Bag of Hammers, and Industrial Super-Glue!",
   },
 };
 
@@ -644,9 +644,98 @@ export const ROOM_OBJECTS: Record<RoomId, SceneObjectDef[]> = {
       inSituSeamless: true,
     },
   ],
-  Z1S2: [],
-  Z1S1: [],
-  LOLDEMO: [],
+  Z1S2: [
+    // PLANE 1: WALL HULL PANELS & CONTINUOUS CEILING ARCHES (parallaxFactor: 0.85)
+    { id: 'z1s2.wall.panel_a_left', imageKey: 'z1s2.wall.panel_a', x: -60, y: -40, w: 620, h: 740, sortY: 90, parallaxFactor: 0.85, inSituSeamless: true },
+    { id: 'z1s2.wall.panel_b_1', imageKey: 'z1s2.wall.panel_b', x: 480, y: -40, w: 1080, h: 740, sortY: 92, parallaxFactor: 0.85, inSituSeamless: true },
+    { id: 'z1s2.wall.panel_b_2', imageKey: 'z1s2.wall.panel_b', x: 1480, y: -40, w: 1080, h: 740, sortY: 94, parallaxFactor: 0.85, flipX: true, inSituSeamless: true },
+    { id: 'z1s2.ceiling.arch_1', imageKey: 'z1s2.ceiling.arch', x: -40, y: -125, w: 680, h: 215, sortY: 98, parallaxFactor: 0.85, inSituSeamless: true },
+    { id: 'z1s2.ceiling.arch_2', imageKey: 'z1s2.ceiling.arch', x: 580, y: -125, w: 680, h: 215, sortY: 98, parallaxFactor: 0.85, flipX: true, inSituSeamless: true },
+    { id: 'z1s2.ceiling.arch_3', imageKey: 'z1s2.ceiling.arch', x: 1200, y: -125, w: 680, h: 215, sortY: 99, parallaxFactor: 0.85, inSituSeamless: true },
+    { id: 'z1s2.ceiling.arch_4', imageKey: 'z1s2.ceiling.arch', x: 1820, y: -125, w: 680, h: 215, sortY: 99, parallaxFactor: 0.85, flipX: true, inSituSeamless: true },
+
+    // PLANE 2: WOODEN FLOOR PLANKS (parallaxFactor: 1.0, sortY: 550, covers down to y=945)
+    { id: 'z1s2.floor.planks_1', imageKey: 'z1s2.floor.planks', x: -80, y: 525, w: 940, h: 420, sortY: 550, parallaxFactor: 1.0, inSituSeamless: true },
+    { id: 'z1s2.floor.planks_2', imageKey: 'z1s2.floor.planks', x: 780, y: 525, w: 940, h: 420, sortY: 550, parallaxFactor: 1.0, flipX: true, inSituSeamless: true },
+    { id: 'z1s2.floor.planks_3', imageKey: 'z1s2.floor.planks', x: 1620, y: 525, w: 940, h: 420, sortY: 550, parallaxFactor: 1.0, inSituSeamless: true },
+
+    // PLANE 3: WALL PROPS & CANDY VAULT (parallaxFactor: 0.85 to lock with wall panels)
+    { id: 'z1s2.wall.cage_lamp_1', imageKey: 'z1s2.wall.cage_lamp', x: 520, y: 115, w: 76, h: 108, sortY: 560, parallaxFactor: 0.85 },
+    { id: 'z1s2.wall.cage_lamp_2', imageKey: 'z1s2.wall.cage_lamp', x: 1460, y: 115, w: 76, h: 108, sortY: 560, parallaxFactor: 0.85 },
+    { id: 'z1s2.wall.samurai_poster', hotspotId: 'z1s2_samurai_wall', imageKey: 'z1s2.wall.samurai_poster', x: 640, y: 185, w: 173, h: 220, sortY: 562, parallaxFactor: 0.85 },
+    { id: 'z1s2.wall.katana_rack', hotspotId: 'z1s2_samurai_wall', imageKey: 'z1s2.wall.katana_rack', x: 1120, y: 210, w: 270, h: 188, sortY: 563, parallaxFactor: 0.85 },
+    { id: 'z1s2.prop.candy_vault', hotspotId: 'z1s2_funky_vault', imageKey: 'z1s2.prop.candy_vault', x: 1550, y: 235, w: 274, h: 360, sortY: 565, parallaxFactor: 0.85 },
+    { id: 'z1s2.prop.funky_keypad', hotspotId: 'z1s2_funky_vault', imageKey: 'z1s2.prop.funky_keypad', x: 1835, y: 335, w: 148, h: 110, sortY: 566, parallaxFactor: 0.85 },
+    { id: 'z1s2.wall.door_cabin', hotspotId: 'z1s2_door_cabin', imageKey: 'z1s3.wall.door', x: 2005, y: 195, w: 295, h: 410, sortY: 564, parallaxFactor: 0.85 },
+
+    // PLANE 4: FLOOR PROPS (parallaxFactor: 1.0, Y-sorted with characters)
+    { id: 'z1s2.prop.iron_ladder', hotspotId: 'z1s2_ladder_engine', imageKey: 'z1s2.prop.iron_ladder', x: 220, y: 140, w: 250, h: 610, sortY: 735, parallaxFactor: 1.0 },
+    { id: 'z1s2.prop.tufted_sofa', hotspotId: 'z1s2_lounge_sofa', imageKey: 'z1s2.prop.tufted_sofa', x: 760, y: 455, w: 460, h: 295, sortY: 730, parallaxFactor: 1.0 },
+    { id: 'z1s2.prop.reed_vases', imageKey: 'z1s2.prop.reed_vases', x: 1340, y: 500, w: 145, h: 235, sortY: 732, parallaxFactor: 1.0 },
+    { id: 'z1s2.item.wooden_helm', hotspotId: 'z1s2_funky_vault', imageKey: 'z1s2.item.wooden_helm', x: 1840, y: 585, w: 135, h: 135, sortY: 738, parallaxFactor: 1.0, visibleWhen: (f) => f.vaultUnlocked && !f.gotHelm },
+
+    // PLANE 5: FOREGROUND PARALLAX & HULL RIBS (parallaxFactor: 1.14 - 1.20)
+    { id: 'z1s2.fg.dollhouse_bindle', imageKey: 'z1s2.fg.dollhouse_bindle', x: 260, y: 725, w: 330, h: 205, sortY: 920, parallaxFactor: 1.14 },
+    { id: 'z1s2.fg.mystery_crate', hotspotId: 'z1s2_mystery_box', imageKey: 'z1s2.fg.mystery_crate', x: 960, y: 735, w: 225, h: 200, sortY: 922, parallaxFactor: 1.14 },
+    { id: 'z1s2.fg.rotary_phone', imageKey: 'z1s2.fg.rotary_phone', x: 1760, y: 735, w: 215, h: 190, sortY: 924, parallaxFactor: 1.14 },
+    { id: 'z1s2.fg.hull_rib_left', imageKey: 'z1s3.fg.hull_rib_left', x: -60, y: -40, w: 280, h: 980, sortY: 940, parallaxFactor: 1.20, inSituSeamless: true },
+    { id: 'z1s2.fg.hull_rib_right', imageKey: 'z1s3.fg.hull_rib_right', x: 2260, y: -40, w: 280, h: 980, sortY: 940, parallaxFactor: 1.20, inSituSeamless: true },
+  ],
+  Z1S1: [
+    // PLANE 1: WALL HULL PANELS & CONTINUOUS RIVET ARCHES (parallaxFactor: 0.85)
+    { id: 'z1s1.wall.hull_panel_1', imageKey: 'z1s1.wall.hull_panel', x: -60, y: -35, w: 1020, h: 720, sortY: 90, parallaxFactor: 0.85, inSituSeamless: true },
+    { id: 'z1s1.wall.hull_panel_2', imageKey: 'z1s1.wall.hull_panel', x: 920, y: -35, w: 1020, h: 720, sortY: 92, parallaxFactor: 0.85, flipX: true, inSituSeamless: true },
+    { id: 'z1s1.wall.hull_panel_3', imageKey: 'z1s1.wall.hull_panel', x: 1860, y: -35, w: 720, h: 720, sortY: 94, parallaxFactor: 0.85, inSituSeamless: true },
+    { id: 'z1s1.ceiling.rivet_arch_1', imageKey: 'z1s1.ceiling.rivet_arch', x: -40, y: -135, w: 680, h: 225, sortY: 98, parallaxFactor: 0.85, inSituSeamless: true },
+    { id: 'z1s1.ceiling.rivet_arch_2', imageKey: 'z1s1.ceiling.rivet_arch', x: 580, y: -135, w: 680, h: 225, sortY: 98, parallaxFactor: 0.85, flipX: true, inSituSeamless: true },
+    { id: 'z1s1.ceiling.rivet_arch_3', imageKey: 'z1s1.ceiling.rivet_arch', x: 1200, y: -135, w: 680, h: 225, sortY: 99, parallaxFactor: 0.85, inSituSeamless: true },
+    { id: 'z1s1.ceiling.rivet_arch_4', imageKey: 'z1s1.ceiling.rivet_arch', x: 1820, y: -135, w: 680, h: 225, sortY: 99, parallaxFactor: 0.85, flipX: true, inSituSeamless: true },
+
+    // PLANE 2: BOLTED STEEL DECK FLOOR (parallaxFactor: 1.0, sortY: 550, covers down to y=945)
+    { id: 'z1s1.floor.steel_deck_1', imageKey: 'z1s1.floor.steel_deck', x: -80, y: 520, w: 1020, h: 425, sortY: 550, parallaxFactor: 1.0, inSituSeamless: true },
+    { id: 'z1s1.floor.steel_deck_2', imageKey: 'z1s1.floor.steel_deck', x: 880, y: 520, w: 1020, h: 425, sortY: 550, parallaxFactor: 1.0, flipX: true, inSituSeamless: true },
+    { id: 'z1s1.floor.steel_deck_3', imageKey: 'z1s1.floor.steel_deck', x: 1820, y: 520, w: 740, h: 425, sortY: 550, parallaxFactor: 1.0, inSituSeamless: true },
+
+    // PLANE 3: WALL PROPS (parallaxFactor: 0.85)
+    { id: 'z1s1.wall.book_shelf', imageKey: 'z1s1.wall.book_shelf', x: 520, y: 195, w: 336, h: 236, sortY: 560, parallaxFactor: 0.85 },
+    { id: 'z1s1.item.davinci_blueprint', hotspotId: 'z1s1_blueprint_pickup', imageKey: 'z1s1.item.davinci_blueprint', x: 850, y: 635, w: 150, h: 140, sortY: 738, parallaxFactor: 1.0, visibleWhen: (f) => !f.nihongoGaveBlueprint },
+
+    // PLANE 4: FLOOR PROPS & PEDAL DRIVE STATIONS (parallaxFactor: 1.0)
+    { id: 'z1s1.prop.pedal_station_intact', imageKey: 'z1s1.prop.pedal_station_intact', x: 960, y: 410, w: 440, h: 360, sortY: 730, parallaxFactor: 1.0 },
+    { id: 'z1s1.prop.pedal_station_broken', hotspotId: 'z1s1_pedal_engine', imageKey: 'z1s1.prop.pedal_station_broken', x: 1480, y: 465, w: 370, h: 305, sortY: 735, parallaxFactor: 1.0, visibleWhen: (f) => !f.perpetualMachineInstalled },
+    { id: 'z1s1.prop.perpetual_machine_installed', hotspotId: 'z1s1_pedal_engine', imageKey: 'z1s1.prop.perpetual_machine_installed', x: 1490, y: 345, w: 333, h: 435, sortY: 736, parallaxFactor: 1.0, visibleWhen: (f) => f.perpetualMachineInstalled },
+    { id: 'z1s1.prop.iron_ladder', hotspotId: 'z1s1_ladder_lounge', imageKey: 'z1s1.prop.iron_ladder', x: 1960, y: 115, w: 250, h: 640, sortY: 734, parallaxFactor: 1.0 },
+
+    // PLANE 5: BILGE FOREGROUND & HULL RINGS (parallaxFactor: 1.14 - 1.20)
+    { id: 'z1s1.fg.toxic_barrels', hotspotId: 'z1s1_rad_barrels', imageKey: 'z1s1.fg.toxic_barrels', x: 250, y: 695, w: 315, h: 255, sortY: 920, parallaxFactor: 1.14 },
+    { id: 'z1s1.fg.broken_toaster', hotspotId: 'z1s1_rat_tv', imageKey: 'z1s1.fg.broken_toaster', x: 820, y: 730, w: 215, h: 205, sortY: 922, parallaxFactor: 1.14 },
+    { id: 'z1s1.fg.potato_sacks', hotspotId: 'z1s1_rat_tv', imageKey: 'z1s1.fg.potato_sacks', x: 1340, y: 715, w: 315, h: 235, sortY: 924, parallaxFactor: 1.14 },
+    { id: 'z1s1.fg.bilge_rat', hotspotId: 'z1s1_rat_tv', imageKey: 'z1s1.fg.bilge_rat', x: 1710, y: 755, w: 145, h: 145, sortY: 926, parallaxFactor: 1.14 },
+    { id: 'z1s1.fg.hull_ring_left', imageKey: 'z1s1.fg.hull_ring_left', x: -80, y: -40, w: 340, h: 980, sortY: 940, parallaxFactor: 1.20, inSituSeamless: true },
+    { id: 'z1s1.fg.hull_ring_right', imageKey: 'z1s1.fg.hull_ring_right', x: 2160, y: -40, w: 340, h: 980, sortY: 940, parallaxFactor: 1.20, inSituSeamless: true },
+  ],
+  LOLDEMO: [
+    // PLANE 1: PAPER SKY & ROLLING HILLS (parallaxFactor: 0.82)
+    { id: 'z0.bg.sky_hills_1', imageKey: 'z0.bg.sky_hills', x: -80, y: -40, w: 1420, h: 860, sortY: 80, parallaxFactor: 0.82, inSituSeamless: true },
+    { id: 'z0.bg.sky_hills_2', imageKey: 'z0.bg.sky_hills', x: 1320, y: -40, w: 1420, h: 860, sortY: 82, parallaxFactor: 0.82, flipX: true, inSituSeamless: true },
+
+    // PLANE 2: HANGING CELESTIAL CUTOUTS (parallaxFactor: 0.82)
+    { id: 'z0.prop.two_faced_sun', hotspotId: 'lol_two_faced_sun', imageKey: 'z0.prop.two_faced_sun', x: 540, y: 15, w: 208, h: 266, sortY: 110, parallaxFactor: 0.82, idleAnim: 'swing' },
+    { id: 'z0.prop.paper_clouds_1', imageKey: 'z0.prop.paper_clouds', x: 880, y: 25, w: 329, h: 256, sortY: 112, parallaxFactor: 0.82, idleAnim: 'bob' },
+    { id: 'z0.prop.paper_clouds_2', imageKey: 'z0.prop.paper_clouds', x: 1680, y: 35, w: 329, h: 256, sortY: 114, parallaxFactor: 0.82, idleAnim: 'bob' },
+
+    // PLANE 3: SPOOKY PAPER CASTLE, TREES, DOOR & TROLL (parallaxFactor: 1.0)
+    { id: 'z0.prop.dead_tree_left', imageKey: 'z0.prop.dead_tree', x: 160, y: 245, w: 317, h: 534, sortY: 720, parallaxFactor: 1.0 },
+    { id: 'z0.prop.spooky_castle', imageKey: 'z0.prop.spooky_castle', x: 1120, y: 165, w: 642, h: 608, sortY: 725, parallaxFactor: 1.0 },
+    { id: 'z0.prop.castle_door', hotspotId: 'lol_castle_door', imageKey: 'z0.prop.castle_door', x: 1345, y: 525, w: 195, h: 240, sortY: 730, parallaxFactor: 1.0 },
+    { id: 'z0.prop.troll', hotspotId: 'lol_castle_door', imageKey: 'z0.prop.troll', x: 820, y: 420, w: 276, h: 372, sortY: 745, parallaxFactor: 1.0 },
+    { id: 'z0.prop.dead_tree_right', imageKey: 'z0.prop.dead_tree', x: 1920, y: 255, w: 317, h: 534, sortY: 722, parallaxFactor: 1.0, flipX: true },
+
+    // PLANE 4: FOREGROUND HILL SILHOUETTE BORDER (parallaxFactor: 1.15, covers down to y=940)
+    { id: 'z0.fg.hill_border_1', imageKey: 'z0.fg.hill_border', x: -80, y: 675, w: 1020, h: 265, sortY: 930, parallaxFactor: 1.15, inSituSeamless: true },
+    { id: 'z0.fg.hill_border_2', imageKey: 'z0.fg.hill_border', x: 860, y: 675, w: 1020, h: 265, sortY: 932, parallaxFactor: 1.15, flipX: true, inSituSeamless: true },
+    { id: 'z0.fg.hill_border_3', imageKey: 'z0.fg.hill_border', x: 1780, y: 675, w: 920, h: 265, sortY: 934, parallaxFactor: 1.15, inSituSeamless: true },
+  ],
 };
 
 export const ROOM_HOTSPOTS: Record<RoomId, HotspotDef[]> = {
@@ -931,9 +1020,208 @@ export const ROOM_HOTSPOTS: Record<RoomId, HotspotDef[]> = {
       parallaxFactor: 1.14,
     },
   ],
-  Z1S2: [],
-  Z1S1: [],
-  LOLDEMO: [],
+  Z1S2: [
+    {
+      id: 'z1s2_ladder_engine',
+      name: 'Iron Ladder Down to Machine Room (Z1S1)',
+      x: 170,
+      y: 160,
+      w: 240,
+      h: 580,
+      walkX: 310,
+      walkY: 785,
+      cursor: 'exit',
+      isExitTo: 'Z1S1',
+      parallaxFactor: 1.0,
+    },
+    {
+      id: 'z1s2_a_baby',
+      name: 'A Baby (Gorilla Mobster Toddler)',
+      x: 610,
+      y: 520,
+      w: 190,
+      h: 290,
+      walkX: 560,
+      walkY: 795,
+      cursor: 'talk',
+      parallaxFactor: 1.0,
+    },
+    {
+      id: 'z1s2_samurai_wall',
+      name: 'Samurai Poster & Katana Sword Rack',
+      x: 680,
+      y: 185,
+      w: 810,
+      h: 220,
+      walkX: 1050,
+      walkY: 780,
+      cursor: 'pointer',
+      parallaxFactor: 0.88,
+    },
+    {
+      id: 'z1s2_lounge_sofa',
+      name: 'Tufted VIP Lounge Sofa',
+      x: 820,
+      y: 455,
+      w: 480,
+      h: 300,
+      walkX: 1060,
+      walkY: 795,
+      cursor: 'pointer',
+      parallaxFactor: 1.0,
+    },
+    {
+      id: 'z1s2_ventriloquist',
+      name: 'The Ventriloquist & Rapoleon Dummy',
+      x: 1320,
+      y: 460,
+      w: 190,
+      h: 350,
+      walkX: 1260,
+      walkY: 795,
+      cursor: 'talk',
+      parallaxFactor: 1.0,
+    },
+    {
+      id: 'z1s2_funky_vault',
+      name: "A Baby's Musical Candy Vault & Keypad",
+      x: 1740,
+      y: 240,
+      w: 430,
+      h: 490,
+      walkX: 1720,
+      walkY: 790,
+      cursor: 'grab',
+      parallaxFactor: 0.88,
+    },
+    {
+      id: 'z1s2_door_cabin',
+      name: "Bulkhead Door to Captain Dread's Cabin (Z1S3)",
+      x: 2060,
+      y: 195,
+      w: 300,
+      h: 410,
+      walkX: 2040,
+      walkY: 785,
+      cursor: 'exit',
+      isExitTo: 'Z1S3',
+      parallaxFactor: 0.88,
+    },
+    {
+      id: 'z1s2_mystery_box',
+      name: 'Glowing-Eyed Mystery Crate',
+      x: 1090,
+      y: 725,
+      w: 235,
+      h: 210,
+      walkX: 1180,
+      walkY: 820,
+      cursor: 'pointer',
+      parallaxFactor: 1.14,
+    },
+  ],
+  Z1S1: [
+    {
+      id: 'z1s1_nihongo',
+      name: 'Nihongo Nohondes (Chief Pedal Engineer)',
+      x: 640,
+      y: 490,
+      w: 180,
+      h: 320,
+      walkX: 820,
+      walkY: 795,
+      cursor: 'talk',
+      parallaxFactor: 1.0,
+    },
+    {
+      id: 'z1s1_blueprint_pickup',
+      name: "Leonardo da Vinci's Perpetual Machine Blueprint",
+      x: 860,
+      y: 650,
+      w: 155,
+      h: 145,
+      walkX: 740,
+      walkY: 795,
+      cursor: 'grab',
+      parallaxFactor: 1.0,
+      visibleWhen: (f) => !f.nihongoGaveBlueprint,
+    },
+    {
+      id: 'z1s1_pedal_engine',
+      name: 'Submarine Pedal Drive Crank Station',
+      x: 1460,
+      y: 350,
+      w: 390,
+      h: 425,
+      walkX: 1420,
+      walkY: 795,
+      cursor: 'grab',
+      parallaxFactor: 1.0,
+    },
+    {
+      id: 'z1s1_ladder_lounge',
+      name: 'Iron Ladder Up to VIP Lounge (Z1S2)',
+      x: 1960,
+      y: 140,
+      w: 250,
+      h: 615,
+      walkX: 1940,
+      walkY: 790,
+      cursor: 'exit',
+      isExitTo: 'Z1S2',
+      parallaxFactor: 1.0,
+    },
+    {
+      id: 'z1s1_rad_barrels',
+      name: 'Leaking Bilge Sludge Barrels',
+      x: 250,
+      y: 695,
+      w: 315,
+      h: 255,
+      walkX: 440,
+      walkY: 820,
+      cursor: 'pointer',
+      parallaxFactor: 1.14,
+    },
+    {
+      id: 'z1s1_rat_tv',
+      name: 'Bilge Rat, Broken Toaster & Potato Sacks',
+      x: 820,
+      y: 715,
+      w: 1035,
+      h: 220,
+      walkX: 1280,
+      walkY: 820,
+      cursor: 'pointer',
+      parallaxFactor: 1.14,
+    },
+  ],
+  LOLDEMO: [
+    {
+      id: 'lol_two_faced_sun',
+      name: 'Two-Faced Paper Cut-Out Sun & Moon',
+      x: 540,
+      y: 15,
+      w: 208,
+      h: 266,
+      walkX: 640,
+      walkY: 785,
+      cursor: 'pointer',
+      parallaxFactor: 0.88,
+    },
+    {
+      id: 'lol_castle_door',
+      name: 'Spooky Paper Castle Door & Bridge Troll',
+      x: 820,
+      y: 380,
+      w: 730,
+      h: 410,
+      walkX: 1080,
+      walkY: 795,
+      cursor: 'grab',
+      parallaxFactor: 1.0,
+    },
+  ],
 };
 
 

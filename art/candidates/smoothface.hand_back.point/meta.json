@@ -17,7 +17,7 @@
   "versions": {
     "v1": "prompt_v1.txt"
   },
-  "status": "approved",
+  "status": "proposed",
   "proposed_version": "v2",
   "batch": "L2",
   "version": "v2",

@@ -1,6 +1,6 @@
 {
-  "file": "c:\\AntiGravityStuff\\Moonstorm2\\art\\candidates\\z1s1.prop.pedal_station_intact\\v1.png",
-  "ts": "2026-10-23T18:36:54",
+  "file": "C:\\AntiGravityStuff\\Moonstorm2\\art\\candidates\\z1s1.prop.pedal_station_intact\\v1.png",
+  "ts": "2026-10-23T19:00:20",
   "kind": "prop",
   "halo_fraction": 0.0,
   "halo_ok": true,
@@ -24,7 +24,7 @@
     7
   ],
   "ink_ok": true,
-  "soft_gradient_fraction": 0.2915,
+  "soft_gradient_fraction": 0.2899,
   "gradient_ok": true,
   "measured_height_px": 330,
   "target_height_px": 330,

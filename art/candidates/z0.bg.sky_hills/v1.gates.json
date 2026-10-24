@@ -1,6 +1,6 @@
 {
-  "file": "c:\\AntiGravityStuff\\Moonstorm2\\art\\candidates\\z0.bg.sky_hills\\v1.png",
-  "ts": "2026-10-23T18:39:44",
+  "file": "C:\\AntiGravityStuff\\Moonstorm2\\art\\candidates\\z0.bg.sky_hills\\v1.png",
+  "ts": "2026-10-23T18:55:19",
   "kind": "wall",
   "halo_fraction": 0.0,
   "halo_ok": true,
@@ -24,7 +24,7 @@
     5
   ],
   "ink_ok": true,
-  "soft_gradient_fraction": 0.1082,
+  "soft_gradient_fraction": 0.0961,
   "gradient_ok": true,
   "measured_height_px": 560,
   "target_height_px": 560,

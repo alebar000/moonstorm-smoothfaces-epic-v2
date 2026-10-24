@@ -1,6 +1,6 @@
 {
-  "file": "c:\\AntiGravityStuff\\Moonstorm2\\art\\candidates\\z1s1.floor.steel_deck\\v1.png",
-  "ts": "2026-10-23T18:36:53",
+  "file": "C:\\AntiGravityStuff\\Moonstorm2\\art\\candidates\\z1s1.floor.steel_deck\\v1.png",
+  "ts": "2026-10-23T18:55:19",
   "kind": "prop",
   "halo_fraction": 0.0,
   "halo_ok": true,
@@ -18,13 +18,13 @@
   "off_palette_fraction": 0.0,
   "palette_provisional": false,
   "palette_ok": true,
-  "ink_thickness_px": 6.0,
+  "ink_thickness_px": 4.0,
   "ink_range": [
     4,
     7
   ],
   "ink_ok": true,
-  "soft_gradient_fraction": 0.2985,
+  "soft_gradient_fraction": 0.2744,
   "gradient_ok": true,
   "measured_height_px": 240,
   "target_height_px": 240,

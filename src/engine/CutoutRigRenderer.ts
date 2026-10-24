@@ -2,9 +2,9 @@
  * MoonStorm Studios - Smoothface's Epic (Codename: Sparkle)
  * Multi-Part Hand-Drawn Paper Cut-Out Skeletal & Emotion Renderer (src/engine/CutoutRigRenderer.ts)
  *
- * Renders Mr. Smoothface and Captain Dread directly from their approved multi-part cutout pieces
- * in `art/approved/smoothface/` (27 pieces) and `art/approved/capdread/` (22 pieces) using the
- * calibrated coordinates from `characters/smoothface/rig.json` and `characters/capdread/rig.json`.
+ * Renders Mr. Smoothface, Captain Dread, Nihongo Nohondes, A Baby, and The Ventriloquist & Rapoleon
+ * directly from their approved multi-part cutout pieces in `art/approved/` using the calibrated
+ * coordinates from `characters/<id>/rig.json`.
  */
 
 export type CharacterId = 'smoothface' | 'cap_dread' | 'nihongo' | 'a_baby' | 'ventriloquist';
@@ -92,6 +92,49 @@ const CAPDREAD_BOXES: Record<string, PartBox> = {
   arm_front:        { x: 218, y: 176, w:  58, h: 124 },
 };
 
+const NIHONGO_BOXES: Record<string, PartBox> = {
+  shoe_back:        { x: 130, y: 310, w:  72, h:  46 },
+  leg_back:         { x: 140, y: 240, w:  56, h:  96 },
+  shoe_front:       { x: 172, y: 312, w:  74, h:  48 },
+  leg_front:        { x: 172, y: 242, w:  56, h:  98 },
+  hand_back:        { x: 254, y: 192, w:  36, h:  38 },
+  arm_back:         { x: 204, y: 138, w:  78, h:  92 },
+  torso:            { x: 108, y: 118, w: 160, h: 164 },
+  head:             { x: 142, y:  42, w:  96, h: 110 },
+  eyes_normal:      { x: 168, y:  86, w:  54, h:  24 },
+  eyes_closed:      { x: 168, y:  86, w:  54, h:  24 },
+  eyes_squint:      { x: 168, y:  86, w:  54, h:  24 },
+  brows_normal:     { x: 164, y:  74, w:  60, h:  22 },
+  brows_angry:      { x: 164, y:  72, w:  60, h:  24 },
+  headband:         { x: 116, y:  56, w: 116, h:  44 },
+  broom_katana:     { x: 138, y: 128, w:  68, h: 228 },
+  hand_front_fist:  { x: 152, y: 194, w:  36, h:  36 },
+  hand_front_open:  { x: 150, y: 190, w:  40, h:  42 },
+  arm_front:        { x: 106, y: 146, w:  82, h:  88 },
+};
+
+const ABABY_BOXES: Record<string, PartBox> = {
+  arm_back:         { x: 182, y: 128, w:  98, h: 144 },
+  legs_diaper:      { x: 108, y: 206, w: 116, h: 102 },
+  torso:            { x:  96, y: 104, w: 156, h: 146 },
+  head:             { x: 146, y:  52, w: 104, h: 106 },
+  eyes_normal:      { x: 174, y:  86, w:  56, h:  26 },
+  eyes_angry:       { x: 174, y:  84, w:  58, h:  28 },
+  bonnet:           { x: 128, y:  36, w: 112, h:  94 },
+  arm_front:        { x:  74, y: 138, w: 106, h: 152 },
+};
+
+const VENTRILO_BOXES: Record<string, PartBox> = {
+  shoes:            { x: 126, y: 332, w: 104, h:  46 },
+  legs:             { x: 118, y: 206, w:  78, h: 146 },
+  arm_back:         { x: 158, y: 118, w:  56, h: 114 },
+  torso:            { x: 112, y:  96, w:  92, h: 148 },
+  head_jaw:         { x: 130, y:  22, w:  76, h: 112 },
+  eyes_normal:      { x: 149, y:  54, w:  38, h:  24 },
+  arm_front:        { x: 118, y: 114, w: 104, h: 118 },
+  dummy_rapoleon:   { x: 146, y:  82, w: 122, h: 142 },
+};
+
 export class CutoutRigRenderer {
   private images: Map<string, HTMLImageElement> = new Map();
 
@@ -173,6 +216,56 @@ export class CutoutRigRenderer {
       ['cd_arm_front',        'art/approved/capdread/capdread.arm_front.png'],
     ];
     for (const [k, src] of cdPieces) {
+      this.loadImg(k, src);
+    }
+
+    const niPieces: Array<[string, string]> = [
+      ['ni_leg_back',         'art/approved/nihongo/nihongo.leg_back.png'],
+      ['ni_shoe_front',       'art/approved/nihongo/nihongo.shoe_front.png'],
+      ['ni_leg_front',        'art/approved/nihongo/nihongo.leg_front.png'],
+      ['ni_arm_back',         'art/approved/nihongo/nihongo.arm_back.png'],
+      ['ni_torso',            'art/approved/nihongo/nihongo.torso.png'],
+      ['ni_head',             'art/approved/nihongo/nihongo.head.png'],
+      ['ni_eyes_normal',      'art/approved/nihongo/nihongo.eyes.normal.png'],
+      ['ni_eyes_closed',      'art/approved/nihongo/nihongo.eyes.closed.png'],
+      ['ni_eyes_squint',      'art/approved/nihongo/nihongo.eyes.squint.png'],
+      ['ni_brows_normal',     'art/approved/nihongo/nihongo.brows.normal.png'],
+      ['ni_brows_angry',      'art/approved/nihongo/nihongo.brows.angry.png'],
+      ['ni_headband',         'art/approved/nihongo/nihongo.headband.png'],
+      ['ni_broom_katana',     'art/approved/nihongo/nihongo.prop.broom_katana.png'],
+      ['ni_hand_front_fist',  'art/approved/nihongo/nihongo.hand_front.fist.png'],
+      ['ni_hand_front_open',  'art/approved/nihongo/nihongo.hand_front.open.png'],
+      ['ni_arm_front',        'art/approved/nihongo/nihongo.arm_front.png'],
+    ];
+    for (const [k, src] of niPieces) {
+      this.loadImg(k, src);
+    }
+
+    const abPieces: Array<[string, string]> = [
+      ['ab_arm_back',         'art/approved/ababy/ababy.arm_back.png'],
+      ['ab_legs_diaper',      'art/approved/ababy/ababy.legs_diaper.png'],
+      ['ab_torso',            'art/approved/ababy/ababy.torso.png'],
+      ['ab_head',             'art/approved/ababy/ababy.head.png'],
+      ['ab_eyes_normal',      'art/approved/ababy/ababy.eyes.normal.png'],
+      ['ab_eyes_angry',       'art/approved/ababy/ababy.eyes.angry.png'],
+      ['ab_bonnet',           'art/approved/ababy/ababy.bonnet.png'],
+      ['ab_arm_front',        'art/approved/ababy/ababy.arm_front.png'],
+    ];
+    for (const [k, src] of abPieces) {
+      this.loadImg(k, src);
+    }
+
+    const vtPieces: Array<[string, string]> = [
+      ['vt_shoes',            'art/approved/ventriloquist/ventrilo.shoes.png'],
+      ['vt_legs',             'art/approved/ventriloquist/ventrilo.legs.png'],
+      ['vt_arm_back',         'art/approved/ventriloquist/ventrilo.arm_back.png'],
+      ['vt_torso',            'art/approved/ventriloquist/ventrilo.torso.png'],
+      ['vt_head_jaw',         'art/approved/ventriloquist/ventrilo.head_jaw.png'],
+      ['vt_eyes_normal',      'art/approved/ventriloquist/ventrilo.eyes.normal.png'],
+      ['vt_arm_front',        'art/approved/ventriloquist/ventrilo.arm_front.png'],
+      ['vt_dummy_rapoleon',   'art/approved/ventriloquist/ventrilo.dummy_rapoleon.png'],
+    ];
+    for (const [k, src] of vtPieces) {
       this.loadImg(k, src);
     }
   }
@@ -313,7 +406,6 @@ export class CutoutRigRenderer {
 
   /**
    * Renders Mr. Smoothface directly from his 27 approved cutout pieces (`art/approved/smoothface/`).
-   * Proportioned to match Aguilar's `GUImu003.jpg` side-by-side comparison with Captain Dread.
    */
   public renderSmoothfaceRig(ctx: CanvasRenderingContext2D, state: PuppetAnimState): void {
     const normScale = state.scale;
@@ -351,7 +443,6 @@ export class CutoutRigRenderer {
       browsKey = 'sf_brows_surprised';
     }
 
-    // Default hands are closed fists (matching composite_preview.png); only front hand points on inspect/grab
     let handFrontKey = 'sf_hand_front_fist';
     let handBackKey = 'sf_hand_back_fist';
     if (activePose === 3 || activePose === 7 || activePose === 8) {
@@ -375,36 +466,29 @@ export class CutoutRigRenderer {
     ctx.scale(cardScaleX * state.squashX * rigScale, state.squashY * rigScale);
     ctx.translate(-165, -406);
 
-    // Back leg & shoe stride
     const backStrideX = walkSin * -10;
     const backLiftY = Math.max(0, -walkCos) * -6;
     this.drawPart(ctx, 'sf_shoe_back', SMOOTHFACE_BOXES.shoe_back, backStrideX, backLiftY);
     this.drawPart(ctx, 'sf_leg_back', SMOOTHFACE_BOXES.leg_back, backStrideX * 0.6, backLiftY * 0.5);
 
-    // Front leg & shoe stride
     const frontStrideX = walkSin * 10;
     const frontLiftY = Math.max(0, walkCos) * -6;
     this.drawPart(ctx, 'sf_shoe_front', SMOOTHFACE_BOXES.shoe_front, frontStrideX, frontLiftY);
     this.drawPart(ctx, 'sf_leg_front', SMOOTHFACE_BOXES.leg_front, frontStrideX * 0.6, frontLiftY * 0.5);
 
-    // Pants
     this.drawPart(ctx, 'sf_pants', SMOOTHFACE_BOXES.pants, 0, bodyBob * 0.4);
 
-    // Back arm & back hand
     const hbBox = SMOOTHFACE_BOXES[handBackKey.replace('sf_', '')] || SMOOTHFACE_BOXES.hand_back_fist;
     this.drawPart(ctx, handBackKey, hbBox, 0, bodyBob - armSwing * 8, -armSwing * 0.2);
     this.drawPart(ctx, 'sf_arm_back', SMOOTHFACE_BOXES.arm_back, 0, bodyBob - armSwing * 8, -armSwing * 0.2);
 
-    // Head, eyes, brows (behind high coat collar per canon!)
     const headBob = bodyBob * 1.1;
     this.drawPart(ctx, 'sf_head', SMOOTHFACE_BOXES.head, 0, headBob);
     this.drawPart(ctx, eyesKey, SMOOTHFACE_BOXES[eyesKey.replace('sf_', '')], 0, headBob);
     this.drawPart(ctx, browsKey, SMOOTHFACE_BOXES[browsKey.replace('sf_', '')], 0, headBob);
 
-    // Torso (high collar overlaps lower face so mouth is permanently covered!)
     this.drawPart(ctx, 'sf_torso', SMOOTHFACE_BOXES.torso, 0, bodyBob);
 
-    // Front hand & front arm
     const hfBox = SMOOTHFACE_BOXES[handFrontKey.replace('sf_', '')] || SMOOTHFACE_BOXES.hand_front_fist;
     this.drawPart(ctx, handFrontKey, hfBox, 0, bodyBob + armSwing * 8, armSwing * 0.2);
     if (activePose === 4) {
@@ -415,7 +499,6 @@ export class CutoutRigRenderer {
     }
     this.drawPart(ctx, 'sf_arm_front', SMOOTHFACE_BOXES.arm_front, 0, bodyBob + armSwing * 8, armSwing * 0.2);
 
-    // Floating emotion cutout badge above Smoothface's head (only on explicit action poses)
     let activeEmotion: EmotionCutoutType | null = null;
     if (activePose === 4) activeEmotion = 'question';
     else if (activePose === 5 || activePose === 7) activeEmotion = 'idea';
@@ -430,9 +513,29 @@ export class CutoutRigRenderer {
   }
 
   /**
-   * Renders Captain Dread directly from his 22 approved cutout pieces (`art/approved/capdread/`).
+   * Dispatches NPC rendering across all 4 multi-part cutout rigs:
+   * - Captain Dread (`cap_dread`, 22 pieces, 330px)
+   * - Nihongo Nohondes (`nihongo`, 16 pieces, 300px)
+   * - A Baby (`a_baby`, 8 pieces, 270px)
+   * - The Ventriloquist & Rapoleon (`ventriloquist`, 8 pieces, 340px)
    */
   public renderNpcPuppet(ctx: CanvasRenderingContext2D, state: PuppetAnimState): void {
+    if (state.id === 'nihongo') {
+      this.renderNihongoRig(ctx, state);
+      return;
+    }
+    if (state.id === 'a_baby') {
+      this.renderABabyRig(ctx, state);
+      return;
+    }
+    if (state.id === 'ventriloquist') {
+      this.renderVentriloquistRig(ctx, state);
+      return;
+    }
+    this.renderCapDreadRig(ctx, state);
+  }
+
+  private renderCapDreadRig(ctx: CanvasRenderingContext2D, state: PuppetAnimState): void {
     const normScale = state.scale;
     const rigScale = 0.85 * normScale;
 
@@ -504,6 +607,123 @@ export class CutoutRigRenderer {
     const hfBox = CAPDREAD_BOXES[handFrontKey.replace('cd_', '')] || CAPDREAD_BOXES.hand_front_fist;
     this.drawPart(ctx, handFrontKey, hfBox, 0, bodyBob);
     this.drawPart(ctx, 'cd_arm_front', CAPDREAD_BOXES.arm_front, 0, bodyBob);
+
+    ctx.restore();
+  }
+
+  private renderNihongoRig(ctx: CanvasRenderingContext2D, state: PuppetAnimState): void {
+    const normScale = state.scale;
+    const rigScale = 0.94 * normScale;
+
+    ctx.save();
+    ctx.translate(state.x, state.y);
+    ctx.fillStyle = 'rgba(12, 9, 8, 0.35)';
+    ctx.beginPath();
+    ctx.ellipse(0, 0, 62 * normScale, 10 * normScale, 0, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.restore();
+
+    const bodyBob = Math.sin(state.idlePhase * 1.6) * 2.0 + (state.talkAmp > 0.04 ? Math.sin(state.idlePhase * 8) * state.talkAmp * 2.8 : 0);
+    let eyesKey = 'ni_eyes_normal';
+    if (state.blinkAmount > 0.55) {
+      eyesKey = 'ni_eyes_closed';
+    } else if (state.poseIndex === 1) {
+      eyesKey = 'ni_eyes_squint';
+    }
+    const browsKey = state.poseIndex === 1 ? 'ni_brows_angry' : 'ni_brows_normal';
+    const handKey = state.talkAmp > 0.05 || state.poseIndex >= 2 ? 'ni_hand_front_open' : 'ni_hand_front_fist';
+
+    ctx.save();
+    ctx.translate(state.x, state.y);
+    const cardScaleX = Math.abs(state.flipVisual) < 0.09 ? (state.flipVisual >= 0 ? 0.09 : -0.09) : state.flipVisual;
+    ctx.scale(cardScaleX * state.squashX * rigScale, state.squashY * rigScale);
+    ctx.translate(-188, -356);
+
+    this.drawPart(ctx, 'ni_shoe_front', NIHONGO_BOXES.shoe_back);
+    this.drawPart(ctx, 'ni_leg_back', NIHONGO_BOXES.leg_back);
+    this.drawPart(ctx, 'ni_shoe_front', NIHONGO_BOXES.shoe_front);
+    this.drawPart(ctx, 'ni_leg_front', NIHONGO_BOXES.leg_front);
+    this.drawPart(ctx, 'ni_hand_front_open', NIHONGO_BOXES.hand_back, 0, bodyBob * 0.8);
+    this.drawPart(ctx, 'ni_arm_back', NIHONGO_BOXES.arm_back, 0, bodyBob * 0.8);
+    this.drawPart(ctx, 'ni_torso', NIHONGO_BOXES.torso, 0, bodyBob);
+
+    const headBob = bodyBob * 1.15;
+    this.drawPart(ctx, 'ni_head', NIHONGO_BOXES.head, 0, headBob);
+    this.drawPart(ctx, eyesKey, NIHONGO_BOXES[eyesKey.replace('ni_', '')], 0, headBob);
+    this.drawPart(ctx, browsKey, NIHONGO_BOXES[browsKey.replace('ni_', '')], 0, headBob);
+    this.drawPart(ctx, 'ni_headband', NIHONGO_BOXES.headband, 0, headBob);
+
+    this.drawPart(ctx, 'ni_broom_katana', NIHONGO_BOXES.broom_katana, 0, bodyBob * 0.9);
+    this.drawPart(ctx, 'ni_arm_front', NIHONGO_BOXES.arm_front, 0, bodyBob);
+    this.drawPart(ctx, handKey, NIHONGO_BOXES[handKey.replace('ni_', '')], 0, bodyBob);
+
+    ctx.restore();
+  }
+
+  private renderABabyRig(ctx: CanvasRenderingContext2D, state: PuppetAnimState): void {
+    const normScale = state.scale;
+    const rigScale = 0.96 * normScale;
+
+    ctx.save();
+    ctx.translate(state.x, state.y);
+    ctx.fillStyle = 'rgba(12, 9, 8, 0.35)';
+    ctx.beginPath();
+    ctx.ellipse(0, 0, 68 * normScale, 11 * normScale, 0, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.restore();
+
+    const bodyBob = Math.sin(state.idlePhase * 1.5) * 2.0 + (state.talkAmp > 0.04 ? Math.sin(state.idlePhase * 7) * state.talkAmp * 2.6 : 0);
+    const eyesKey = state.poseIndex === 2 || state.talkAmp > 0.06 ? 'ab_eyes_angry' : 'ab_eyes_normal';
+
+    ctx.save();
+    ctx.translate(state.x, state.y);
+    const cardScaleX = Math.abs(state.flipVisual) < 0.09 ? (state.flipVisual >= 0 ? 0.09 : -0.09) : state.flipVisual;
+    ctx.scale(cardScaleX * state.squashX * rigScale, state.squashY * rigScale);
+    ctx.translate(-166, -304);
+
+    this.drawPart(ctx, 'ab_arm_back', ABABY_BOXES.arm_back, 0, bodyBob * 0.7);
+    this.drawPart(ctx, 'ab_legs_diaper', ABABY_BOXES.legs_diaper);
+    this.drawPart(ctx, 'ab_torso', ABABY_BOXES.torso, 0, bodyBob);
+
+    const headBob = bodyBob * 1.15;
+    this.drawPart(ctx, 'ab_bonnet', ABABY_BOXES.bonnet, 0, headBob);
+    this.drawPart(ctx, 'ab_head', ABABY_BOXES.head, 0, headBob);
+    this.drawPart(ctx, eyesKey, ABABY_BOXES[eyesKey.replace('ab_', '')], 0, headBob);
+    this.drawPart(ctx, 'ab_arm_front', ABABY_BOXES.arm_front, 0, bodyBob * 0.9);
+
+    ctx.restore();
+  }
+
+  private renderVentriloquistRig(ctx: CanvasRenderingContext2D, state: PuppetAnimState): void {
+    const normScale = state.scale;
+    const rigScale = 0.95 * normScale;
+
+    ctx.save();
+    ctx.translate(state.x, state.y);
+    ctx.fillStyle = 'rgba(12, 9, 8, 0.35)';
+    ctx.beginPath();
+    ctx.ellipse(0, 0, 64 * normScale, 10 * normScale, 0, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.restore();
+
+    const bodyBob = Math.sin(state.idlePhase * 1.3) * 1.6;
+    const dummyBob = state.talkAmp > 0.04 ? Math.sin(state.idlePhase * 10) * state.talkAmp * 6.0 : Math.sin(state.idlePhase * 2.4) * 2.2;
+    const dummyRot = state.talkAmp > 0.04 ? Math.sin(state.idlePhase * 8) * state.talkAmp * 0.08 : 0;
+
+    ctx.save();
+    ctx.translate(state.x, state.y);
+    const cardScaleX = Math.abs(state.flipVisual) < 0.09 ? (state.flipVisual >= 0 ? 0.09 : -0.09) : state.flipVisual;
+    ctx.scale(cardScaleX * state.squashX * rigScale, state.squashY * rigScale);
+    ctx.translate(-168, -376);
+
+    this.drawPart(ctx, 'vt_shoes', VENTRILO_BOXES.shoes);
+    this.drawPart(ctx, 'vt_legs', VENTRILO_BOXES.legs);
+    this.drawPart(ctx, 'vt_arm_back', VENTRILO_BOXES.arm_back, 0, bodyBob);
+    this.drawPart(ctx, 'vt_torso', VENTRILO_BOXES.torso, 0, bodyBob);
+    this.drawPart(ctx, 'vt_head_jaw', VENTRILO_BOXES.head_jaw, 0, bodyBob * 1.1);
+    this.drawPart(ctx, 'vt_eyes_normal', VENTRILO_BOXES.eyes_normal, 0, bodyBob * 1.1);
+    this.drawPart(ctx, 'vt_arm_front', VENTRILO_BOXES.arm_front, 0, bodyBob + dummyBob * 0.3);
+    this.drawPart(ctx, 'vt_dummy_rapoleon', VENTRILO_BOXES.dummy_rapoleon, 0, bodyBob + dummyBob, dummyRot);
 
     ctx.restore();
   }

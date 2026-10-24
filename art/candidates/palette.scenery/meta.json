@@ -28,7 +28,7 @@
     "v2": "k-means k=28 -> 12 Lab-deduplicated (min_dist>=24, -25% sat) across Z1S3 layers + Spook Castle + Desert",
     "v3": "v2 centroids muted further (S * 0.65, capped S <= 0.42, V <= 0.84) so scenery stays behind characters"
   },
-  "status": "approved",
+  "status": "proposed",
   "proposed_version": "v3",
   "last_rejection": {
     "version": "v1",

@@ -213,7 +213,8 @@ html, body {
 .active-item-banner {
   min-width: 155px;
   padding: 5px 14px;
-  background: transparent;
+  background-color: #d4bc96;
+  background-clip: padding-box;
   border-style: solid;
   border-width: 8px 12px;
   border-image: url('/art/approved/ui/ui.button_plate.png') 20 26 fill / 8px 12px / 0 stretch;
@@ -312,7 +313,10 @@ body.crt-enabled #stage-container::after {
   border-style: solid;
   border-width: 10px 14px;
   border-image: url('/art/approved/ui/ui.button_plate.png') 20 26 fill / 10px 14px / 0 stretch;
-  filter: drop-shadow(4px 5px 0 rgba(12, 8, 6, 0.85));
+  background-color: #d4bc96;
+  background-clip: padding-box;
+  box-shadow: none;
+  filter: drop-shadow(3px 4px 0 rgba(12, 8, 6, 0.88));
   padding: 6px 18px;
   font-family: var(--font-display);
   font-size: 0.90rem;
@@ -401,7 +405,8 @@ body.crt-enabled #stage-container::after {
 
 .rmb-verb-btn {
   width: 100%;
-  background: transparent;
+  background-color: #d4bc96;
+  background-clip: padding-box;
   border-style: solid;
   border-width: 8px 12px;
   border-image: url('/art/approved/ui/ui.button_plate.png') 20 26 fill / 8px 12px / 0 stretch;
@@ -455,7 +460,10 @@ body.crt-enabled #stage-container::after {
   border-style: solid;
   border-width: 20px 26px;
   border-image: url('/art/approved/ui/ui.scroll_banner.png') 42 52 fill / 20px 26px / 0 stretch;
-  filter: drop-shadow(6px 8px 0 rgba(12, 8, 6, 0.92));
+  background-color: #e8d8b9;
+  background-clip: padding-box;
+  box-shadow: none;
+  filter: drop-shadow(5px 6px 0 rgba(12, 8, 6, 0.92));
   display: flex;
   align-items: center;
   padding: 8px 18px;
@@ -1631,4 +1639,157 @@ body.crt-enabled #stage-container::after {
 .st-rot-row input[type="number"] {
   width: 52px !important;
   flex-shrink: 0;
+}
+
+/* =========================================================
+   A BABY'S CHOCOLATE-SMEARED MUSICAL VAULT SYNTHESIZER (KEYPAD-01)
+   ========================================================= */
+.keypad-modal-card {
+  width: min(760px, 92vw);
+  background: var(--paper-cream);
+}
+
+.keypad-instructions {
+  font-size: 1.05rem;
+  line-height: 1.4;
+  color: var(--ink-dark);
+  margin: 4px 0 12px;
+}
+
+.keypad-led-display {
+  background: #1b261e;
+  color: #8aff9e;
+  border: 3px solid var(--ink-dark);
+  border-radius: 7px;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.65), 2px 3px 0 var(--ink-dark);
+  padding: 10px 16px;
+  font-family: var(--font-mono);
+  font-size: 1.18rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.piano-keyboard-bed {
+  position: relative;
+  height: 210px;
+  background: #2b1d16;
+  border: 3.5px solid var(--ink-dark);
+  border-radius: 10px;
+  padding: 14px;
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.6), 4px 5px 0 var(--ink-dark);
+  user-select: none;
+}
+
+.piano-white-keys {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 5px;
+  height: 100%;
+}
+
+.piano-white-key {
+  position: relative;
+  background: linear-gradient(180deg, #fbf4e3 0%, #eadbc0 88%, #d4be98 100%);
+  border: 2.5px solid var(--ink-dark);
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 5px 0 #18100c;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 4px;
+  cursor: pointer;
+  color: var(--ink-dark);
+  font-family: var(--font-display);
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+
+.piano-white-key:hover {
+  background: linear-gradient(180deg, #fffdf7 0%, #f3e6cc 100%);
+}
+
+.piano-white-key:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 #18100c;
+}
+
+.piano-white-key strong {
+  font-size: 1.05rem;
+  font-weight: 900;
+}
+
+.piano-white-key small {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: #543d2c;
+  margin-top: 2px;
+}
+
+.piano-white-key.choco-smudge {
+  background:
+    radial-gradient(circle at 52% 62%, rgba(92, 48, 22, 0.88) 0%, rgba(110, 60, 28, 0.68) 24%, transparent 48%),
+    linear-gradient(180deg, #fbf4e3 0%, #e5d2b0 100%);
+  border-color: #3a1d0d;
+}
+
+.piano-white-key.choco-smudge small {
+  background: #4e2712;
+  color: #ffe7ba;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+.piano-black-keys {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  right: 14px;
+  height: 112px;
+  pointer-events: none;
+}
+
+.piano-black-key {
+  position: absolute;
+  top: 0;
+  width: 8.6%;
+  height: 100%;
+  pointer-events: auto;
+  background: linear-gradient(180deg, #2d231e 0%, #17110e 85%, #0d0907 100%);
+  border: 2.5px solid #090605;
+  border-radius: 0 0 6px 6px;
+  box-shadow: 2px 5px 0 rgba(0, 0, 0, 0.75);
+  color: #f6ebd4;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 8px 2px;
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  z-index: 4;
+}
+
+.piano-black-key.choco-smudge-black {
+  background:
+    radial-gradient(circle at 50% 55%, rgba(138, 74, 34, 0.92) 0%, rgba(98, 50, 22, 0.75) 35%, transparent 62%),
+    linear-gradient(180deg, #3b261b 0%, #1c120d 100%);
+  border-color: #d99b52;
+}
+
+.piano-black-key small {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: #ffdca2;
+}
+
+.keypad-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
 }

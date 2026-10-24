@@ -163,8 +163,8 @@ class SmoothfacePilotGame {
     this.npcs = {
       cap_dread: this.rigs.createAnimState('cap_dread', Z1S3_CHARACTER_SPAWNS.cap_dread.x, Z1S3_CHARACTER_SPAWNS.cap_dread.y, 1.0, Z1S3_CHARACTER_SPAWNS.cap_dread.facing),
       nihongo: this.rigs.createAnimState('nihongo', 725, 810, 1.0, 1),
-      a_baby: this.rigs.createAnimState('a_baby', 705, 815, 1.0, 1),
-      ventriloquist: this.rigs.createAnimState('ventriloquist', 1410, 815, 1.0, -1),
+      a_baby: this.rigs.createAnimState('a_baby', 1555, 805, 1.0, -1),
+      ventriloquist: this.rigs.createAnimState('ventriloquist', 1175, 805, 1.0, 1),
     };
 
     this.preloadSceneAssets();
@@ -225,8 +225,40 @@ class SmoothfacePilotGame {
       im.src = `art/approved/z1s3/${id}.png`;
       this.imgs.set(id, im);
     }
+    const z1s2Ids = [
+      'z1s2.wall.panel_a', 'z1s2.wall.panel_b', 'z1s2.floor.planks', 'z1s2.ceiling.arch',
+      'z1s2.prop.iron_ladder', 'z1s2.wall.cage_lamp', 'z1s2.wall.katana_rack', 'z1s2.wall.samurai_poster',
+      'z1s2.prop.tufted_sofa', 'z1s2.prop.reed_vases', 'z1s2.prop.candy_vault', 'z1s2.prop.funky_keypad',
+      'z1s2.item.wooden_helm', 'z1s2.fg.mystery_crate', 'z1s2.fg.rotary_phone', 'z1s2.fg.dollhouse_bindle',
+    ];
+    for (const id of z1s2Ids) {
+      const im = new Image();
+      im.src = `art/approved/z1s2/${id}.png`;
+      this.imgs.set(id, im);
+    }
+    const z1s1Ids = [
+      'z1s1.wall.hull_panel', 'z1s1.floor.steel_deck', 'z1s1.ceiling.rivet_arch', 'z1s1.prop.iron_ladder',
+      'z1s1.wall.book_shelf', 'z1s1.prop.pedal_station_intact', 'z1s1.prop.pedal_station_broken',
+      'z1s1.item.davinci_blueprint', 'z1s1.prop.perpetual_machine_installed', 'z1s1.fg.toxic_barrels',
+      'z1s1.fg.broken_toaster', 'z1s1.fg.potato_sacks', 'z1s1.fg.bilge_rat', 'z1s1.fg.hull_ring_left',
+      'z1s1.fg.hull_ring_right',
+    ];
+    for (const id of z1s1Ids) {
+      const im = new Image();
+      im.src = `art/approved/z1s1/${id}.png`;
+      this.imgs.set(id, im);
+    }
+    const z0Ids = [
+      'z0.bg.sky_hills', 'z0.prop.spooky_castle', 'z0.prop.castle_door', 'z0.prop.troll',
+      'z0.prop.two_faced_sun', 'z0.prop.paper_clouds', 'z0.prop.dead_tree', 'z0.fg.hill_border',
+    ];
+    for (const id of z0Ids) {
+      const im = new Image();
+      im.src = `art/approved/z0/${id}.png`;
+      this.imgs.set(id, im);
+    }
     const helmIm = new Image();
-    helmIm.src = 'art/approved/z1s3/z1s3.wall.helm_wheel.png';
+    helmIm.src = 'art/approved/z1s2/z1s2.item.wooden_helm.png';
     this.imgs.set('item_helm', helmIm);
   }
 
@@ -706,10 +738,10 @@ class SmoothfacePilotGame {
       );
     } else if (room === 'Z1S2') {
       banner.textContent = 'Submarine VIP Lounge & Candy Vault';
-      this.player.x = prevRoom === 'Z1S3' ? 1580 : 540;
-      this.player.y = 645;
-      this.player.facing = prevRoom === 'Z1S3' ? -1 : 1;
-      this.cameraX = Math.max(0, Math.min(600, this.player.x - 800));
+      this.player.x = prevRoom === 'Z1S1' ? 420 : 1880;
+      this.player.y = 795;
+      this.player.facing = prevRoom === 'Z1S1' ? 1 : -1;
+      this.cameraX = Math.max(0, Math.min(800, this.player.x - 800));
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
@@ -719,25 +751,25 @@ class SmoothfacePilotGame {
       );
     } else if (room === 'Z1S1') {
       banner.textContent = 'Submarine Engine Room (Lower Deck)';
-      this.player.x = 995;
-      this.player.y = 635;
+      this.player.x = 1120;
+      this.player.y = 795;
       this.player.facing = -1;
-      this.cameraX = 200;
+      this.cameraX = 320;
 
       if (!this.flags.pedalBrokenBam) {
         this.npcs.nihongo.poseIndex = 0;
         this.speakLine(
           'NIHONGO NOHONDES',
           'nihongo',
-          'assets/portraits/nihongo.png',
+          'characters/nihongo/portrait.png',
           'EXHAUSTED',
           'Huff... puff... I have been pedaling this rusty submarine since Port Machete! Wait... what is that horrible cracking sound in the main pedal crank?!',
           [
             {
-              label: 'Inspect the straining bicycle pedal crank (Trigger BAM!)',
+              label: 'Inspect the straining bicycle pedal crank',
               replySpeaker: 'NIHONGO NOHONDES',
               replyVoice: 'nihongo',
-              replyPortrait: 'assets/portraits/nihongo.png',
+              replyPortrait: 'characters/nihongo/portrait.png',
               replyMood: 'PANIC!',
               replyText:
                 "BAM!! AIEEE! The main pedal snapped right off! I quit! Take Leonardo da Vinci's Perpetual Movement Machine blueprint on the floor and fix it yourself!",
@@ -767,10 +799,10 @@ class SmoothfacePilotGame {
       }
     } else if (room === 'LOLDEMO') {
       banner.textContent = 'Haunted Castle Courtyard (2010 Tribute)';
-      this.player.x = 380;
-      this.player.y = 720;
+      this.player.x = 520;
+      this.player.y = 790;
       this.player.facing = 1;
-      this.cameraX = 0;
+      this.cameraX = 180;
       this.speakLine(
         'MR. SMOOTHFACE',
         'smoothface',
@@ -978,27 +1010,9 @@ class SmoothfacePilotGame {
 
   private clampToWalkbox(x: number, y: number): { x: number; y: number } {
     const maxW = this.getRoomWidth();
-    if (this.currentRoom === 'Z1S3') {
-      return {
-        x: Math.max(150, Math.min(maxW - 150, x)),
-        y: Math.max(730, Math.min(855, y)),
-      };
-    }
-    if (this.currentRoom === 'Z1S1') {
-      return {
-        x: Math.max(220, Math.min(maxW - 220, x)),
-        y: Math.max(600, Math.min(685, y)),
-      };
-    }
-    if (this.currentRoom === 'LOLDEMO') {
-      return {
-        x: Math.max(160, Math.min(maxW - 180, x)),
-        y: Math.max(665, Math.min(835, y)),
-      };
-    }
     return {
-      x: Math.max(150, Math.min(maxW - 150, x)),
-      y: Math.max(730, Math.min(855, y)),
+      x: Math.max(160, Math.min(maxW - 160, x)),
+      y: Math.max(730, Math.min(850, y)),
     };
   }
 
@@ -1034,7 +1048,7 @@ class SmoothfacePilotGame {
       this.setTemporaryPlayerPose(5, 1600, false); // Wrench Tinker + Idea Lightbulb Cutout
     }
 
-    // Handle Z1S3 Bulkhead Door in Slice 1
+    // Handle Z1S3 Bulkhead Door -> transitions to Z1S2 VIP Lounge
     if (hit.id === 'z1s3_door_lounge') {
       if (verb === 'talk') {
         this.setTemporaryPlayerPose(6, 2000, true);
@@ -1047,26 +1061,7 @@ class SmoothfacePilotGame {
         );
         return;
       }
-      if (this.flags.perpetualMachineBuilt) {
-        this.speakLine(
-          'MR. SMOOTHFACE',
-          'smoothface',
-          'characters/smoothface/portrait.png',
-          'VICTORY!',
-          "With Leonardo da Vinci's Perpetual Movement Machine assembled in my pockets, I am ready to march out of Captain Dread's cabin and power the Substampede to Blackspit Island!"
-        );
-        window.setTimeout(() => {
-          this.toggleModal('victory-credits-modal', true);
-        }, 1200);
-      } else {
-        this.speakLine(
-          'MR. SMOOTHFACE',
-          'smoothface',
-          'characters/smoothface/portrait.png',
-          'INSPECTING PASSAGE',
-          "That heavy bulkhead door leads forward toward the submarine drive room. Before I head out, I must scavenge the Bag of Hammers, the Tripod Portrait Stand, and the Desk Super-Glue here in Captain Dread's Cabin and assemble the Perpetual Movement Machine!"
-        );
-      }
+      this.switchRoom('Z1S2');
       return;
     }
 
@@ -1522,7 +1517,7 @@ class SmoothfacePilotGame {
         this.speakLine(
           'A BABY',
           'a_baby',
-          'assets/portraits/a_baby.png',
+          'characters/ababy/portrait.png',
           'GROWLING',
           'Try to pick me up like a normal toddler, baldy, and you will be swimming with the sea-monkeys!'
         );
@@ -1532,7 +1527,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'A BABY',
         'a_baby',
-        'assets/portraits/a_baby.png',
+        'characters/ababy/portrait.png',
         'MOBSTER TODDLER',
         'Goo-goo badda-bing, baldy. You touch my High-Tech Candy Vault without knowing the four-note disco password, and I fold you like a stroller.',
         [
@@ -1540,7 +1535,7 @@ class SmoothfacePilotGame {
             label: '"Why are there chocolate smudges on three of the synthesizer keys?"',
             replySpeaker: 'A BABY',
             replyVoice: 'a_baby',
-            replyPortrait: 'assets/portraits/a_baby.png',
+            replyPortrait: 'characters/ababy/portrait.png',
             replyMood: 'SMUG',
             replyText:
               'Heh. Maybe I was eating fudge before punching in my favorite 1980 disco classic: "Funky Town"! The smudges are on DO (C5), TIb (Bb4), and SOL (G4). First four notes open the vault: DO - DO - TIb - DO!',
@@ -1575,7 +1570,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'CLASH McTREVOR (THE WOODEN DUMMY)',
         'rapoleon',
-        'assets/portraits/ventriloquist.png',
+        'characters/ventriloquist/portrait.png',
         'HYPED MC',
         'YO! Do not talk to the tall sleepy guy in the suit, talk to ME: Clash McTrevor, aka RAPOLEON! Want a rhyme or an emergency siren?',
         [
@@ -1583,7 +1578,7 @@ class SmoothfacePilotGame {
             label: '"Drop a Medieval French Rap clue about A Baby\'s vault!"',
             replySpeaker: 'RAPOLEON (THE DUMMY)',
             replyVoice: 'rapoleon',
-            replyPortrait: 'assets/portraits/ventriloquist.png',
+            replyPortrait: 'characters/ventriloquist/portrait.png',
             replyMood: 'RAPPING',
             replyText:
               "Sacre bleu, check the chocolate stain! Hit DO (C5) twice, then TI-flat (Bb4) again, finish on DO (C5) to unlock the wheel, and build da Vinci's machine of steel!",
@@ -1593,7 +1588,7 @@ class SmoothfacePilotGame {
             label: '"Why do you have a red police light bolted to your bicorne hat?"',
             replySpeaker: 'AMBULANCE SIREN DUMMY',
             replyVoice: 'siren',
-            replyPortrait: 'assets/portraits/ventriloquist.png',
+            replyPortrait: 'characters/ventriloquist/portrait.png',
             replyMood: 'WEE-OO! WEE-OO!',
             replyText:
               'WEE-OO! WEE-OO! BECAUSE AT CIRQUE DU SOLAME I DOUBLE AS AN EMERGENCY AMBULANCE! WEE-OO! WEE-OO!',
@@ -1680,7 +1675,7 @@ class SmoothfacePilotGame {
         this.speakLine(
           'NIHONGO NOHONDES',
           'nihongo',
-          'assets/portraits/nihongo.png',
+          'characters/nihongo/portrait.png',
           'DESPERATE',
           "Here! Take Leonardo da Vinci's Perpetual Movement Machine Blueprint! Combine the Ship's Helm, Portrait Stand, Bag of Hammers, and Super-Glue in your inventory, then use the machine on the broken pedal!"
         );
@@ -1689,7 +1684,7 @@ class SmoothfacePilotGame {
         this.speakLine(
           'NIHONGO NOHONDES',
           'nihongo',
-          'assets/portraits/nihongo.png',
+          'characters/nihongo/portrait.png',
           'COACHING',
           "You have the blueprint! Collect: (1) Bag of Hammers, (2) Portrait Stand, and (3) Super-Glue from Captain's Cabin, plus (4) Ship's Helm from A Baby's Vault in the VIP Lounge! Click them in your inventory to assemble the machine!"
         );
@@ -1698,7 +1693,7 @@ class SmoothfacePilotGame {
         this.speakLine(
           'NIHONGO NOHONDES',
           'nihongo',
-          'assets/portraits/nihongo.png',
+          'characters/nihongo/portrait.png',
           'SALUTING',
           'Arigato, Mr. Smoothface! My calves are finally free! The Perpetual Movement Machine is spinning by itself forever!'
         );
@@ -1795,7 +1790,7 @@ class SmoothfacePilotGame {
       this.speakLine(
         'ALEX CASTLE TROLL',
         'troll',
-        'assets/loldemo/troll_alex.png',
+        'art/approved/z0/z0.prop.troll.png',
         'ACHIEVEMENT: GOSU!',
         'ROOOAAARGH!! You knocked on the haunted castle door! Achievement Unlocked: GOSU!'
       );
@@ -1825,7 +1820,7 @@ class SmoothfacePilotGame {
     this.speakLine(
       'NIHONGO NOHONDES',
       'nihongo',
-      'assets/portraits/nihongo.png',
+      'characters/nihongo/portrait.png',
       'BAM!! PEDAL SNAPPED!',
       "BAM!! AIEEE! The main bicycle pedal just snapped off in a shower of sparks! Pick up Leonardo da Vinci's Blueprint on the floor or talk to me!"
     );
@@ -1873,7 +1868,7 @@ class SmoothfacePilotGame {
         this.speakLine(
           'A BABY',
           'a_baby',
-          'assets/portraits/a_baby.png',
+          'characters/ababy/portrait.png',
           'RESPECT',
           'Well blow me pacifier, baldy! You played "Funky Town" like a true disco don! Here is Captain Dread\'s Wooden Ship\'s Helm from inside the vault!'
         );
@@ -2058,7 +2053,7 @@ class SmoothfacePilotGame {
         title: 'Engine Room Pedal Crisis',
         done: this.flags.pedalBrokenBam && this.flags.nihongoGaveBlueprint,
         locked: false,
-        icon: 'assets/props/item_blueprint.png',
+        icon: 'art/approved/z1s1/z1s1.item.davinci_blueprint.png',
         note: "Climb down to the Engine Room, witness the pedal snap (BAM!), and take da Vinci's Blueprint.",
       },
       {
@@ -2066,7 +2061,7 @@ class SmoothfacePilotGame {
         title: "Scavenge Captain's Quarters",
         done: this.flags.gotHammerBag && this.flags.gotPortraitStand && this.flags.gotGlue,
         locked: false,
-        icon: 'assets/props/hammer_bag.png',
+        icon: 'art/approved/z1s3/z1s3.prop.hammer_bag.png',
         note: "Collect the Bag of Hammers, Tripod Portrait Stand, and Super-Glue from Dread's Cabin.",
       },
       {
@@ -2074,7 +2069,7 @@ class SmoothfacePilotGame {
         title: 'Crack the "Funky Town" Vault',
         done: this.flags.gotHelm,
         locked: false,
-        icon: 'assets/objects/obj_funky_vault.png',
+        icon: 'art/approved/z1s2/z1s2.prop.candy_vault.png',
         note: 'Play DO - DO - TIb - DO on A Baby\'s chocolate-stained synth lock to win the Ship\'s Helm.',
       },
       {
@@ -2082,7 +2077,7 @@ class SmoothfacePilotGame {
         title: 'Install Perpetual Machine',
         done: this.flags.perpetualMachineInstalled,
         locked: !allPartsFound && !this.flags.perpetualMachineBuilt && !this.flags.perpetualMachineInstalled,
-        icon: 'assets/props/perpetual_machine_cutout.png',
+        icon: 'art/approved/z1s1/z1s1.prop.perpetual_machine_installed.png',
         note: 'Combine all 4 parts into the Perpetual Movement Machine and bolt it to the Engine Crank!',
       },
     ];
@@ -2094,7 +2089,7 @@ class SmoothfacePilotGame {
         id: 'helm',
         name: "Wooden Ship's Helm",
         room: 'VIP Lounge Vault',
-        icon: 'assets/props/item_helm.png',
+        icon: 'art/approved/z1s2/z1s2.item.wooden_helm.png',
         found:
           this.flags.gotHelm ||
           this.flags.perpetualMachineBuilt ||
@@ -2104,7 +2099,7 @@ class SmoothfacePilotGame {
         id: 'portrait_stand',
         name: 'Tripod Portrait Stand',
         room: "Captain's Cabin",
-        icon: 'assets/props/item_portrait_stand.png',
+        icon: 'art/approved/z1s3/z1s3.prop.easel_portrait.png',
         found:
           this.flags.gotPortraitStand ||
           this.flags.perpetualMachineBuilt ||
@@ -2114,7 +2109,7 @@ class SmoothfacePilotGame {
         id: 'hammer_bag',
         name: 'Bag of Hammers',
         room: "Captain's Cabin Floor",
-        icon: 'assets/props/hammer_bag.png',
+        icon: 'art/approved/z1s3/z1s3.prop.hammer_bag.png',
         found:
           this.flags.gotHammerBag ||
           this.flags.perpetualMachineBuilt ||
@@ -2124,7 +2119,7 @@ class SmoothfacePilotGame {
         id: 'glue',
         name: 'Industrial Super-Glue',
         room: "Captain's Desk Drawer",
-        icon: 'assets/props/item_glue.png',
+        icon: 'art/approved/z1s3/z1s3.prop.glue.png',
         found:
           this.flags.gotGlue ||
           this.flags.perpetualMachineBuilt ||
@@ -2184,7 +2179,7 @@ class SmoothfacePilotGame {
         </div>
         <div class="blueprint-assembly-footer">
           <div class="blueprint-final-preview">
-            <img src="assets/props/perpetual_machine_cutout.png" alt="Perpetual Machine" />
+            <img src="art/approved/z1s1/z1s1.prop.perpetual_machine_installed.png" alt="Perpetual Machine" />
             <div class="blueprint-final-text">
               <strong>PERPETUAL MOVEMENT MACHINE</strong>
               <span>${
@@ -2548,16 +2543,12 @@ class SmoothfacePilotGame {
     // LAYER 1: WIDE SCROLLING ROOM SHELL (OR 2010 AGUILAR SKETCH MODE!)
     // ---------------------------------------------------------
     const roomW = this.getRoomWidth();
-    if (this.currentRoom === 'LOLDEMO') {
-      this.renderLolDemoRoom(ctx, parX, parY, roomW, h);
-    } else {
-      const shellKey = this.sketchMode2010
-        ? `${this.currentRoom.toLowerCase()}_sketch_2010`
-        : `${this.currentRoom.toLowerCase()}_shell`;
-      const shellImg = this.getImg(shellKey) || this.getImg(`${this.currentRoom.toLowerCase()}_shell`);
-      if (shellImg) {
-        ctx.drawImage(shellImg, -10 + parX * 0.35, -6 + parY * 0.35, roomW + 20, h + 12);
-      }
+    const shellKey = this.sketchMode2010
+      ? `${this.currentRoom.toLowerCase()}_sketch_2010`
+      : `${this.currentRoom.toLowerCase()}_shell`;
+    const shellImg = this.getImg(shellKey) || this.getImg(`${this.currentRoom.toLowerCase()}_shell`);
+    if (shellImg) {
+      ctx.drawImage(shellImg, -10 + parX * 0.35, -6 + parY * 0.35, roomW + 20, h + 12);
     }
 
     // ---------------------------------------------------------
@@ -2690,7 +2681,7 @@ class SmoothfacePilotGame {
     }
 
     // Mask exterior submarine hull spandrel outside the curved left and right foreground hull ribs
-    if (obj.id === 'z1s3.fg.hull_rib_left') {
+    if (obj.id === 'z1s3.fg.hull_rib_left' || obj.id === 'z1s2.fg.hull_rib_left' || obj.id === 'z1s1.fg.hull_ring_left') {
       ctx.save();
       ctx.fillStyle = '#151018';
       ctx.beginPath();
@@ -2703,7 +2694,7 @@ class SmoothfacePilotGame {
       ctx.closePath();
       ctx.fill();
       ctx.restore();
-    } else if (obj.id === 'z1s3.fg.hull_rib_right') {
+    } else if (obj.id === 'z1s3.fg.hull_rib_right' || obj.id === 'z1s2.fg.hull_rib_right' || obj.id === 'z1s1.fg.hull_ring_right') {
       ctx.save();
       ctx.fillStyle = '#151018';
       ctx.beginPath();

@@ -15,7 +15,7 @@
     "v2": "prompt_v2.txt",
     "v3": "prompt_v3.txt"
   },
-  "status": "approved",
+  "status": "proposed",
   "proposed_version": "v3",
   "approved_version": "v3"
 }

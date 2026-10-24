@@ -27,7 +27,7 @@
   "versions": {
     "v1": "k-means k=8 (+10% sat) on Aguilar colored art + 4 Smoothface canon fixed slots"
   },
-  "status": "approved",
+  "status": "proposed",
   "proposed_version": "v1",
   "approved_version": "v1"
 }
