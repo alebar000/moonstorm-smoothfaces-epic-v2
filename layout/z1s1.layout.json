@@ -1,0 +1,280 @@
+{
+  "room": "z1s1",
+  "size": {
+    "w": 2400,
+    "h": 900
+  },
+  "camera": {
+    "viewport_w": 1600,
+    "viewport_h": 900,
+    "follow": "player",
+    "edge_scroll": true
+  },
+  "light": {
+    "x": 1200,
+    "y": 110
+  },
+  "planes": [
+    {
+      "id": "wall",
+      "parallax": 0.85
+    },
+    {
+      "id": "wall_props",
+      "parallax": 0.85
+    },
+    {
+      "id": "floor",
+      "parallax": 1.0,
+      "y_sort": true
+    },
+    {
+      "id": "foreground",
+      "parallax": 1.14
+    }
+  ],
+  "walkable": [
+    [
+      180,
+      660
+    ],
+    [
+      2220,
+      660
+    ],
+    [
+      2220,
+      860
+    ],
+    [
+      180,
+      860
+    ]
+  ],
+  "foot_baseline_y": 815,
+  "perspective_scale": {
+    "y_far": 660,
+    "scale_far": 0.9,
+    "y_near": 860,
+    "scale_near": 1.05
+  },
+  "objects": [
+    {
+      "id": "z1s1.wall.hull_panel_1",
+      "asset": "art/approved/z1s1/z1s1.wall.hull_panel.png",
+      "plane": "wall",
+      "x": 120,
+      "y": 90,
+      "scale": 1.0,
+      "anchor": "top-left",
+      "sort_y": 90
+    },
+    {
+      "id": "z1s1.wall.hull_panel_2",
+      "asset": "art/approved/z1s1/z1s1.wall.hull_panel.png",
+      "plane": "wall",
+      "x": 920,
+      "y": 90,
+      "scale": 1.0,
+      "anchor": "top-left",
+      "sort_y": 92
+    },
+    {
+      "id": "z1s1.wall.hull_panel_3",
+      "asset": "art/approved/z1s1/z1s1.wall.hull_panel.png",
+      "plane": "wall",
+      "x": 1680,
+      "y": 90,
+      "scale": 1.0,
+      "anchor": "top-left",
+      "sort_y": 94
+    },
+    {
+      "id": "z1s1.ceiling.rivet_arch_1",
+      "asset": "art/approved/z1s1/z1s1.ceiling.rivet_arch.png",
+      "plane": "wall",
+      "x": 360,
+      "y": 0,
+      "scale": 1.0,
+      "anchor": "top-left",
+      "sort_y": 98
+    },
+    {
+      "id": "z1s1.ceiling.rivet_arch_2",
+      "asset": "art/approved/z1s1/z1s1.ceiling.rivet_arch.png",
+      "plane": "wall",
+      "x": 1340,
+      "y": 0,
+      "scale": 1.0,
+      "anchor": "top-left",
+      "sort_y": 99
+    },
+    {
+      "id": "z1s1.floor.steel_deck_1",
+      "asset": "art/approved/z1s1/z1s1.floor.steel_deck.png",
+      "plane": "floor",
+      "x": 140,
+      "y": 620,
+      "scale": 1.0,
+      "anchor": "top-left",
+      "sort_y": 110
+    },
+    {
+      "id": "z1s1.floor.steel_deck_2",
+      "asset": "art/approved/z1s1/z1s1.floor.steel_deck.png",
+      "plane": "floor",
+      "x": 980,
+      "y": 620,
+      "scale": 1.0,
+      "anchor": "top-left",
+      "sort_y": 110
+    },
+    {
+      "id": "z1s1.floor.steel_deck_3",
+      "asset": "art/approved/z1s1/z1s1.floor.steel_deck.png",
+      "plane": "floor",
+      "x": 1680,
+      "y": 620,
+      "scale": 1.0,
+      "anchor": "top-left",
+      "sort_y": 110
+    },
+    {
+      "id": "z1s1.wall.book_shelf",
+      "asset": "art/approved/z1s1/z1s1.wall.book_shelf.png",
+      "plane": "wall_props",
+      "x": 640,
+      "y": 210,
+      "scale": 1.0,
+      "anchor": "top-left",
+      "sort_y": 140,
+      "interact": true
+    },
+    {
+      "id": "z1s1.item.davinci_blueprint",
+      "asset": "art/approved/z1s1/z1s1.item.davinci_blueprint.png",
+      "plane": "wall_props",
+      "x": 450,
+      "y": 280,
+      "scale": 1.0,
+      "anchor": "top-left",
+      "sort_y": 145,
+      "interact": true
+    },
+    {
+      "id": "z1s1.prop.iron_ladder",
+      "asset": "art/approved/z1s1/z1s1.prop.iron_ladder.png",
+      "plane": "floor",
+      "x": 2100,
+      "y": 735,
+      "scale": 1.0,
+      "anchor": "bottom-center",
+      "sort_y": 735,
+      "interact": true
+    },
+    {
+      "id": "z1s1.prop.pedal_station_intact_1",
+      "asset": "art/approved/z1s1/z1s1.prop.pedal_station_intact.png",
+      "plane": "floor",
+      "x": 960,
+      "y": 755,
+      "scale": 1.0,
+      "anchor": "bottom-center",
+      "sort_y": 755,
+      "interact": true
+    },
+    {
+      "id": "z1s1.prop.pedal_station_intact_2",
+      "asset": "art/approved/z1s1/z1s1.prop.pedal_station_intact.png",
+      "plane": "floor",
+      "x": 1380,
+      "y": 755,
+      "scale": 1.0,
+      "anchor": "bottom-center",
+      "sort_y": 755,
+      "interact": true
+    },
+    {
+      "id": "z1s1.prop.pedal_station_broken",
+      "asset": "art/approved/z1s1/z1s1.prop.pedal_station_broken.png",
+      "plane": "floor",
+      "x": 1780,
+      "y": 765,
+      "scale": 1.0,
+      "anchor": "bottom-center",
+      "sort_y": 765,
+      "interact": true
+    },
+    {
+      "id": "z1s1.prop.perpetual_machine_installed",
+      "asset": "art/approved/z1s1/z1s1.prop.perpetual_machine_installed.png",
+      "plane": "floor",
+      "x": 540,
+      "y": 765,
+      "scale": 1.0,
+      "anchor": "bottom-center",
+      "sort_y": 765,
+      "interact": false
+    },
+    {
+      "id": "z1s1.fg.hull_ring_left",
+      "asset": "art/approved/z1s1/z1s1.fg.hull_ring_left.png",
+      "plane": "foreground",
+      "x": 120,
+      "y": 895,
+      "scale": 1.0,
+      "anchor": "bottom-center",
+      "sort_y": 980
+    },
+    {
+      "id": "z1s1.fg.toxic_barrels",
+      "asset": "art/approved/z1s1/z1s1.fg.toxic_barrels.png",
+      "plane": "foreground",
+      "x": 460,
+      "y": 895,
+      "scale": 1.0,
+      "anchor": "bottom-center",
+      "sort_y": 950
+    },
+    {
+      "id": "z1s1.fg.broken_toaster",
+      "asset": "art/approved/z1s1/z1s1.fg.broken_toaster.png",
+      "plane": "foreground",
+      "x": 980,
+      "y": 895,
+      "scale": 1.0,
+      "anchor": "bottom-center",
+      "sort_y": 955
+    },
+    {
+      "id": "z1s1.fg.potato_sacks",
+      "asset": "art/approved/z1s1/z1s1.fg.potato_sacks.png",
+      "plane": "foreground",
+      "x": 1540,
+      "y": 895,
+      "scale": 1.0,
+      "anchor": "bottom-center",
+      "sort_y": 960
+    },
+    {
+      "id": "z1s1.fg.bilge_rat",
+      "asset": "art/approved/z1s1/z1s1.fg.bilge_rat.png",
+      "plane": "foreground",
+      "x": 1920,
+      "y": 895,
+      "scale": 1.0,
+      "anchor": "bottom-center",
+      "sort_y": 965
+    },
+    {
+      "id": "z1s1.fg.hull_ring_right",
+      "asset": "art/approved/z1s1/z1s1.fg.hull_ring_right.png",
+      "plane": "foreground",
+      "x": 2280,
+      "y": 895,
+      "scale": 1.0,
+      "anchor": "bottom-center",
+      "sort_y": 980
+    }
+  ]
+}

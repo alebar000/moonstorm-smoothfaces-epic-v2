@@ -1,0 +1,22 @@
+{
+  "id": "z1s1.prop.iron_ladder",
+  "category": "z1s1",
+  "kind": "prop",
+  "what": "Z1S1 tall riveted iron submarine ladder climbing up to the Z1S2 hatch",
+  "target_height_px": 580,
+  "height_fraction_of_smoothface": 1.841,
+  "pivot_hint": "bottom-center on Z1S1 floor",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/ref_z1s1_machineroom_2010.png",
+    "art/references/ref_z1s1_machineroom_psd_composite.png",
+    "art/references/palette_scenery.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "approved",
+  "proposed_version": "v1",
+  "version": "v1",
+  "approved_version": "v1"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "z1s2.fg.dollhouse_bindle",
+  "category": "z1s2",
+  "kind": "foreground",
+  "what": "Z1S2 foreground crooked two-story dollhouse, polka-dot hobo bindle on a stick, and dented tin mug",
+  "target_height_px": 195,
+  "height_fraction_of_smoothface": 0.619,
+  "pivot_hint": "bottom-center foreground",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/ref_z1s2_lobby_2010.png",
+    "art/references/palette_scenery.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "approved",
+  "proposed_version": "v1",
+  "version": "v1",
+  "approved_version": "v1"
+}

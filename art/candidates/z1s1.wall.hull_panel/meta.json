@@ -1,0 +1,22 @@
+{
+  "id": "z1s1.wall.hull_panel",
+  "category": "z1s1",
+  "kind": "wall",
+  "what": "Z1S1 curved riveted iron submarine machine room wall panel with rusted pipes and pressure gauges",
+  "target_height_px": 540,
+  "height_fraction_of_smoothface": 1.714,
+  "pivot_hint": "top-left on Z1S1 wall",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/ref_z1s1_machineroom_2010.png",
+    "art/references/ref_z1s1_machineroom_psd_composite.png",
+    "art/references/palette_scenery.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "approved",
+  "proposed_version": "v1",
+  "version": "v1",
+  "approved_version": "v1"
+}

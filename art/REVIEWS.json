@@ -1,0 +1,186 @@
+{
+  "decisions": {
+    "z1s1.wall.hull_panel": {
+      "verdict": "approve",
+      "version": "v1",
+      "note": "Approved L21 Z1S1 cutout piece (passes all gates and critics)"
+    },
+    "z1s1.floor.steel_deck": {
+      "verdict": "approve",
+      "version": "v1",
+      "note": "Approved L21 Z1S1 cutout piece (passes all gates and critics)"
+    },
+    "z1s1.ceiling.rivet_arch": {
+      "verdict": "approve",
+      "version": "v1",
+      "note": "Approved L21 Z1S1 cutout piece (passes all gates and critics)"
+    },
+    "z1s1.prop.iron_ladder": {
+      "verdict": "approve",
+      "version": "v1",
+      "note": "Approved L21 Z1S1 cutout piece (passes all gates and critics)"
+    },
+    "z1s1.wall.book_shelf": {
+      "verdict": "approve",
+      "version": "v1",
+      "note": "Approved L21 Z1S1 cutout piece (passes all gates and critics)"
+    },
+    "z1s1.prop.pedal_station_intact": {
+      "verdict": "approve",
+      "version": "v1",
+      "note": "Approved L21 Z1S1 cutout piece (passes all gates and critics)"
+    },
+    "z1s1.prop.pedal_station_broken": {
+      "verdict": "approve",
+      "version": "v1",
+      "note": "Approved L21 Z1S1 cutout piece (passes all gates and critics)"
+    },
+    "z1s1.item.davinci_blueprint": {
+      "verdict": "approve",
+      "version": "v1",
+      "note": "Approved L21 Z1S1 cutout piece (passes all gates and critics)"
+    },
+    "z1s1.prop.perpetual_machine_installed": {
+      "verdict": "approve",
+      "version": "v1",
+      "note": "Approved L22 Z1S1 cutout piece (passes all gates and critics)"
+    },
+    "z1s1.fg.toxic_barrels": {
+      "verdict": "approve",
+      "version": "v1",
+      "note": "Approved L22 Z1S1 cutout piece (passes all gates and critics)"
+    },
+    "z1s1.fg.broken_toaster": {
+      "verdict": "approve",
+      "version": "v1",
+      "note": "Approved L22 Z1S1 cutout piece (passes all gates and critics)"
+    },
+    "z1s1.fg.potato_sacks": {
+      "verdict": "approve",
+      "version": "v1",
+      "note": "Approved L22 Z1S1 cutout piece (passes all gates and critics)"
+    },
+    "z1s1.fg.bilge_rat": {
+      "verdict": "approve",
+      "version": "v1",
+      "note": "Approved L22 Z1S1 cutout piece (passes all gates and critics)"
+    },
+    "z1s1.fg.hull_ring_left": {
+      "verdict": "approve",
+      "version": "v1",
+      "note": "Approved L22 Z1S1 cutout piece (passes all gates and critics)"
+    },
+    "z1s1.fg.hull_ring_right": {
+      "verdict": "approve",
+      "version": "v1",
+      "note": "Approved L22 Z1S1 cutout piece (passes all gates and critics)"
+    }
+  },
+  "reviews": [
+    {
+      "id": "z1s1.wall.hull_panel",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:36:51",
+      "reason": "L21 Z1S1 approved (passes all gates and critics)"
+    },
+    {
+      "id": "z1s1.floor.steel_deck",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:36:51",
+      "reason": "L21 Z1S1 approved (passes all gates and critics)"
+    },
+    {
+      "id": "z1s1.ceiling.rivet_arch",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:36:51",
+      "reason": "L21 Z1S1 approved (passes all gates and critics)"
+    },
+    {
+      "id": "z1s1.prop.iron_ladder",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:36:51",
+      "reason": "L21 Z1S1 approved (passes all gates and critics)"
+    },
+    {
+      "id": "z1s1.wall.book_shelf",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:36:51",
+      "reason": "L21 Z1S1 approved (passes all gates and critics)"
+    },
+    {
+      "id": "z1s1.prop.pedal_station_intact",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:36:51",
+      "reason": "L21 Z1S1 approved (passes all gates and critics)"
+    },
+    {
+      "id": "z1s1.prop.pedal_station_broken",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:36:51",
+      "reason": "L21 Z1S1 approved (passes all gates and critics)"
+    },
+    {
+      "id": "z1s1.item.davinci_blueprint",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:36:51",
+      "reason": "L21 Z1S1 approved (passes all gates and critics)"
+    },
+    {
+      "id": "z1s1.prop.perpetual_machine_installed",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:36:51",
+      "reason": "L22 Z1S1 approved (passes all gates and critics)"
+    },
+    {
+      "id": "z1s1.fg.toxic_barrels",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:36:51",
+      "reason": "L22 Z1S1 approved (passes all gates and critics)"
+    },
+    {
+      "id": "z1s1.fg.broken_toaster",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:36:51",
+      "reason": "L22 Z1S1 approved (passes all gates and critics)"
+    },
+    {
+      "id": "z1s1.fg.potato_sacks",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:36:51",
+      "reason": "L22 Z1S1 approved (passes all gates and critics)"
+    },
+    {
+      "id": "z1s1.fg.bilge_rat",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:36:51",
+      "reason": "L22 Z1S1 approved (passes all gates and critics)"
+    },
+    {
+      "id": "z1s1.fg.hull_ring_left",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:36:51",
+      "reason": "L22 Z1S1 approved (passes all gates and critics)"
+    },
+    {
+      "id": "z1s1.fg.hull_ring_right",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:36:51",
+      "reason": "L22 Z1S1 approved (passes all gates and critics)"
+    }
+  ]
+}

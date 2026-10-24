@@ -1,0 +1,261 @@
+{
+  "room": "z1s2",
+  "size": {
+    "w": 2400,
+    "h": 900
+  },
+  "camera": {
+    "viewport_w": 1600,
+    "viewport_h": 900,
+    "follow": "player",
+    "edge_scroll": true
+  },
+  "light": {
+    "x": 1200,
+    "y": 110
+  },
+  "planes": [
+    {
+      "id": "wall",
+      "parallax": 0.85
+    },
+    {
+      "id": "wall_props",
+      "parallax": 0.85
+    },
+    {
+      "id": "floor",
+      "parallax": 1.0,
+      "y_sort": true
+    },
+    {
+      "id": "foreground",
+      "parallax": 1.14
+    }
+  ],
+  "walkable": [
+    [
+      140,
+      650
+    ],
+    [
+      2260,
+      650
+    ],
+    [
+      2260,
+      860
+    ],
+    [
+      140,
+      860
+    ]
+  ],
+  "foot_baseline_y": 810,
+  "perspective_scale": {
+    "y_far": 650,
+    "scale_far": 0.9,
+    "y_near": 860,
+    "scale_near": 1.05
+  },
+  "objects": [
+    {
+      "id": "z1s2.wall.panel_a_left",
+      "asset": "art/approved/z1s2/z1s2.wall.panel_a.png",
+      "plane": "wall",
+      "x": 0,
+      "y": 40,
+      "scale": 1.0,
+      "anchor": "top-left",
+      "sort_y": 90
+    },
+    {
+      "id": "z1s2.wall.panel_b_mid1",
+      "asset": "art/approved/z1s2/z1s2.wall.panel_b.png",
+      "plane": "wall",
+      "x": 420,
+      "y": 60,
+      "scale": 1.0,
+      "anchor": "top-left",
+      "sort_y": 92
+    },
+    {
+      "id": "z1s2.wall.panel_b_mid2",
+      "asset": "art/approved/z1s2/z1s2.wall.panel_b.png",
+      "plane": "wall",
+      "x": 1320,
+      "y": 60,
+      "scale": 1.0,
+      "anchor": "top-left",
+      "sort_y": 93
+    },
+    {
+      "id": "z1s2.ceiling.arch_top",
+      "asset": "art/approved/z1s2/z1s2.ceiling.arch.png",
+      "plane": "wall",
+      "x": 580,
+      "y": 0,
+      "scale": 1.0,
+      "anchor": "top-left",
+      "sort_y": 98
+    },
+    {
+      "id": "z1s2.floor.planks_1",
+      "asset": "art/approved/z1s2/z1s2.floor.planks.png",
+      "plane": "floor",
+      "x": 80,
+      "y": 620,
+      "scale": 1.0,
+      "anchor": "top-left",
+      "sort_y": 110
+    },
+    {
+      "id": "z1s2.floor.planks_2",
+      "asset": "art/approved/z1s2/z1s2.floor.planks.png",
+      "plane": "floor",
+      "x": 1220,
+      "y": 620,
+      "scale": 1.0,
+      "anchor": "top-left",
+      "sort_y": 110
+    },
+    {
+      "id": "z1s2.wall.cage_lamp_1",
+      "asset": "art/approved/z1s2/z1s2.wall.cage_lamp.png",
+      "plane": "wall_props",
+      "x": 540,
+      "y": 140,
+      "scale": 1.0,
+      "anchor": "top-left",
+      "sort_y": 130
+    },
+    {
+      "id": "z1s2.wall.cage_lamp_2",
+      "asset": "art/approved/z1s2/z1s2.wall.cage_lamp.png",
+      "plane": "wall_props",
+      "x": 1760,
+      "y": 140,
+      "scale": 1.0,
+      "anchor": "top-left",
+      "sort_y": 130
+    },
+    {
+      "id": "z1s2.wall.samurai_poster",
+      "asset": "art/approved/z1s2/z1s2.wall.samurai_poster.png",
+      "plane": "wall_props",
+      "x": 760,
+      "y": 210,
+      "scale": 1.0,
+      "anchor": "top-left",
+      "sort_y": 140,
+      "interact": true
+    },
+    {
+      "id": "z1s2.wall.katana_rack",
+      "asset": "art/approved/z1s2/z1s2.wall.katana_rack.png",
+      "plane": "wall_props",
+      "x": 1460,
+      "y": 230,
+      "scale": 1.0,
+      "anchor": "top-left",
+      "sort_y": 142,
+      "interact": true
+    },
+    {
+      "id": "z1s2.prop.candy_vault",
+      "asset": "art/approved/z1s2/z1s2.prop.candy_vault.png",
+      "plane": "wall_props",
+      "x": 1880,
+      "y": 250,
+      "scale": 1.0,
+      "anchor": "top-left",
+      "sort_y": 145,
+      "interact": true
+    },
+    {
+      "id": "z1s2.prop.funky_keypad",
+      "asset": "art/approved/z1s2/z1s2.prop.funky_keypad.png",
+      "plane": "wall_props",
+      "x": 2160,
+      "y": 360,
+      "scale": 1.0,
+      "anchor": "top-left",
+      "sort_y": 148,
+      "interact": true
+    },
+    {
+      "id": "z1s2.prop.iron_ladder",
+      "asset": "art/approved/z1s2/z1s2.prop.iron_ladder.png",
+      "plane": "floor",
+      "x": 280,
+      "y": 730,
+      "scale": 1.0,
+      "anchor": "bottom-center",
+      "sort_y": 730,
+      "interact": true
+    },
+    {
+      "id": "z1s2.prop.tufted_sofa",
+      "asset": "art/approved/z1s2/z1s2.prop.tufted_sofa.png",
+      "plane": "floor",
+      "x": 1080,
+      "y": 740,
+      "scale": 1.0,
+      "anchor": "bottom-center",
+      "sort_y": 740,
+      "interact": true
+    },
+    {
+      "id": "z1s2.prop.reed_vases",
+      "asset": "art/approved/z1s2/z1s2.prop.reed_vases.png",
+      "plane": "floor",
+      "x": 1520,
+      "y": 735,
+      "scale": 1.0,
+      "anchor": "bottom-center",
+      "sort_y": 735,
+      "interact": true
+    },
+    {
+      "id": "z1s2.item.wooden_helm",
+      "asset": "art/approved/z1s2/z1s2.item.wooden_helm.png",
+      "plane": "floor",
+      "x": 1720,
+      "y": 810,
+      "scale": 0.85,
+      "anchor": "bottom-center",
+      "sort_y": 810,
+      "interact": true
+    },
+    {
+      "id": "z1s2.fg.dollhouse_bindle",
+      "asset": "art/approved/z1s2/z1s2.fg.dollhouse_bindle.png",
+      "plane": "foreground",
+      "x": 360,
+      "y": 890,
+      "scale": 1.0,
+      "anchor": "bottom-center",
+      "sort_y": 950
+    },
+    {
+      "id": "z1s2.fg.mystery_crate",
+      "asset": "art/approved/z1s2/z1s2.fg.mystery_crate.png",
+      "plane": "foreground",
+      "x": 1180,
+      "y": 895,
+      "scale": 1.0,
+      "anchor": "bottom-center",
+      "sort_y": 960
+    },
+    {
+      "id": "z1s2.fg.rotary_phone",
+      "asset": "art/approved/z1s2/z1s2.fg.rotary_phone.png",
+      "plane": "foreground",
+      "x": 1980,
+      "y": 895,
+      "scale": 1.0,
+      "anchor": "bottom-center",
+      "sort_y": 965
+    }
+  ]
+}

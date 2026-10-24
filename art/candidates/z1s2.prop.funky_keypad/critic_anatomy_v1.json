@@ -1,0 +1,8 @@
+{
+  "piece": "z1s2.prop.funky_keypad",
+  "version": "v1",
+  "critic": "anatomy-critic",
+  "verdict": "sin_objeciones",
+  "defects": [],
+  "notes": "Calibrated to Z1S2 room proportions (target_height_px=96)."
+}

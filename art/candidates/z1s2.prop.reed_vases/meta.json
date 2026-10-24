@@ -1,0 +1,21 @@
+{
+  "id": "z1s2.prop.reed_vases",
+  "category": "z1s2",
+  "kind": "prop",
+  "what": "Z1S2 pair of Japanese earthenware floor vases with dried paper reeds",
+  "target_height_px": 220,
+  "height_fraction_of_smoothface": 0.698,
+  "pivot_hint": "bottom-center on Z1S2 floor",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/ref_z1s2_lobby_2010.png",
+    "art/references/palette_scenery.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "approved",
+  "proposed_version": "v1",
+  "version": "v1",
+  "approved_version": "v1"
+}

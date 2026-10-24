@@ -1,0 +1,21 @@
+{
+  "id": "z1s2.item.wooden_helm",
+  "category": "z1s2",
+  "kind": "prop",
+  "what": "Z1S2 spare 8-spoke wooden ship steering wheel (4th component of Perpetual Movement Machine) with chocolate smudge",
+  "target_height_px": 140,
+  "height_fraction_of_smoothface": 0.444,
+  "pivot_hint": "center hub",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/ref_z1s2_lobby_2010.png",
+    "art/references/palette_scenery.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "approved",
+  "proposed_version": "v1",
+  "version": "v1",
+  "approved_version": "v1"
+}

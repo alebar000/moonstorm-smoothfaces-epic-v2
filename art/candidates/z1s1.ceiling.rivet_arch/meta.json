@@ -1,0 +1,22 @@
+{
+  "id": "z1s1.ceiling.rivet_arch",
+  "category": "z1s1",
+  "kind": "wall",
+  "what": "Z1S1 upper curved iron submarine ceiling beam arch with heavy rivets and steam pipes",
+  "target_height_px": 220,
+  "height_fraction_of_smoothface": 0.698,
+  "pivot_hint": "top-left on Z1S1 ceiling",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/ref_z1s1_machineroom_2010.png",
+    "art/references/ref_z1s1_machineroom_psd_composite.png",
+    "art/references/palette_scenery.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "approved",
+  "proposed_version": "v1",
+  "version": "v1",
+  "approved_version": "v1"
+}

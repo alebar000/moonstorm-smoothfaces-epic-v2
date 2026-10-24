@@ -1,0 +1,22 @@
+{
+  "id": "z1s1.fg.toxic_barrels",
+  "category": "z1s1",
+  "kind": "foreground",
+  "what": "Z1S1 foreground bilge cluster of two dented industrial drums oozing green sludge",
+  "target_height_px": 240,
+  "height_fraction_of_smoothface": 0.762,
+  "pivot_hint": "bottom-center on Z1S1 foreground",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/ref_z1s1_machineroom_2010.png",
+    "art/references/ref_z1s1_machineroom_psd_composite.png",
+    "art/references/palette_scenery.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "approved",
+  "proposed_version": "v1",
+  "version": "v1",
+  "approved_version": "v1"
+}
