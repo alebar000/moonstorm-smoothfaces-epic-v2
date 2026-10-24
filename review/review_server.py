@@ -82,6 +82,12 @@ class H(SimpleHTTPRequestHandler):
         if u.path == "/api/candidates": return self._json(candidates(q.get("all", ["0"])[0] == "1"))
         if u.path == "/api/reviews": return self._json(jload(os.path.join(ROOT, "review", "review.json"), {"reviews": []}))
         if u.path == "/api/shots": return self._json(layout_shots())
+        if u.path in ("/play", "/play/", "/dist", "/dist/", "/dist/index.html"):
+            p = os.path.join(ROOT, "dist", "index.html")
+            if os.path.isfile(p):
+                b = open(p, "rb").read()
+                self.send_response(200); self.send_header("Content-Type", "text/html; charset=utf-8")
+                self.send_header("Content-Length", str(len(b))); self.end_headers(); self.wfile.write(b); return
         if u.path.startswith("/file/"):
             relp = urllib.parse.unquote(u.path[6:])
             full = os.path.normpath(os.path.join(ROOT, relp))
@@ -92,6 +98,18 @@ class H(SimpleHTTPRequestHandler):
             self.send_response(200); self.send_header("Content-Type", ctype)
             self.send_header("Content-Length", str(len(b))); self.send_header("Cache-Control", "no-store")
             self.end_headers(); self.wfile.write(b); return
+        # Serve static game assets from dist/ or ROOT
+        clean_rel = urllib.parse.unquote(u.path.lstrip("/"))
+        if clean_rel.startswith("dist/"):
+            clean_rel = clean_rel[5:]
+        for base_dir in (os.path.join(ROOT, "dist"), ROOT):
+            cand = os.path.normpath(os.path.join(base_dir, clean_rel))
+            if cand.startswith(os.path.normpath(base_dir)) and os.path.isfile(cand):
+                ctype = mimetypes.guess_type(cand)[0] or "application/octet-stream"
+                b = open(cand, "rb").read()
+                self.send_response(200); self.send_header("Content-Type", ctype)
+                self.send_header("Content-Length", str(len(b))); self.send_header("Cache-Control", "no-store")
+                self.end_headers(); self.wfile.write(b); return
         self.send_error(404)
 
     def do_POST(self):

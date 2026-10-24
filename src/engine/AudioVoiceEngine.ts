@@ -194,6 +194,32 @@ export class AudioVoiceEngine {
     this.playChord([261.63, 329.63, 392.0, 523.25], 0.45, 'triangle');
   }
 
+  public playArchiveTrack(trackFile: 'stuff2.ogg' | 'start_the_game.mp3'): void {
+    this.unlock();
+    if (trackFile === 'stuff2.ogg') {
+      if (this.stingerAudio) this.stingerAudio.pause();
+      if (this.bgmAudio) {
+        this.bgmAudio.currentTime = 0;
+        this.bgmAudio.volume = Math.max(0.25, this.masterVolume * this.musicVolume * 0.85);
+        this.bgmAudio.play().catch(() => {});
+        this.musicStarted = true;
+      }
+    } else {
+      if (this.bgmAudio) this.bgmAudio.pause();
+      if (this.stingerAudio) {
+        this.stingerAudio.loop = true;
+        this.stingerAudio.currentTime = 0;
+        this.stingerAudio.volume = Math.max(0.25, this.masterVolume * this.sfxVolume * 0.85);
+        this.stingerAudio.play().catch(() => {});
+      }
+    }
+  }
+
+  public stopArchiveTrack(): void {
+    if (this.bgmAudio) this.bgmAudio.pause();
+    if (this.stingerAudio) this.stingerAudio.pause();
+  }
+
   public getVoiceAmplitude(): number {
     // Smooth exponential decay for 60 FPS jaw/head lip-sync
     this.voiceAmplitude *= 0.86;

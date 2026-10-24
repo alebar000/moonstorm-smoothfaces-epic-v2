@@ -7,6 +7,7 @@ import { AudioVoiceEngine, VoiceProfileId } from './engine/AudioVoiceEngine';
 import { CutoutRigRenderer, PuppetAnimState } from './engine/CutoutRigRenderer';
 import { INTRO_SCENES_8, IntroPuppetTheatre } from './engine/IntroPuppetTheatre';
 import { RoomLayoutStudio } from './engine/RoomLayoutStudio';
+import { TimeCapsuleMuseum } from './ui/TimeCapsuleMuseum';
 import {
   createInitialFlags,
   DialogueOption,
@@ -61,6 +62,7 @@ interface SteamPuff {
 class SmoothfacePilotGame {
   public canvas: HTMLCanvasElement;
   public studio!: RoomLayoutStudio;
+  public archiveMuseum!: TimeCapsuleMuseum;
   private ctx: CanvasRenderingContext2D;
   private menuPuppetCanvas: HTMLCanvasElement;
   private menuPuppetCtx: CanvasRenderingContext2D;
@@ -163,7 +165,7 @@ class SmoothfacePilotGame {
     this.npcs = {
       cap_dread: this.rigs.createAnimState('cap_dread', Z1S3_CHARACTER_SPAWNS.cap_dread.x, Z1S3_CHARACTER_SPAWNS.cap_dread.y, 1.0, Z1S3_CHARACTER_SPAWNS.cap_dread.facing),
       nihongo: this.rigs.createAnimState('nihongo', 725, 810, 1.0, 1),
-      a_baby: this.rigs.createAnimState('a_baby', 1555, 805, 1.0, -1),
+      a_baby: this.rigs.createAnimState('a_baby', 1475, 805, 1.0, -1),
       ventriloquist: this.rigs.createAnimState('ventriloquist', 1175, 805, 1.0, 1),
       troll: this.rigs.createAnimState('troll', 960, 790, 1.0, 1),
     };
@@ -173,6 +175,16 @@ class SmoothfacePilotGame {
     this.bindDomEvents();
     this.renderInventoryBar();
     this.studio = new RoomLayoutStudio(this);
+    this.archiveMuseum = new TimeCapsuleMuseum({
+      switchRoom: (room) => this.switchRoom(room),
+      enterGameplay: (room) => this.enterGameplay(room),
+      toggleSketchMode2010: () => {
+        if (!this.sketchMode2010) this.toggleSketchMode2010();
+      },
+      playUiClick: (freq) => this.audio.playUiClick(freq),
+      playArchiveTrack: (track) => this.audio.playArchiveTrack(track),
+      stopArchiveTrack: () => this.audio.stopArchiveTrack(),
+    });
 
     // Expose debug/test API on window for automated verification
     (window as unknown as Record<string, unknown>).__SPARKLE_GAME__ = this;
@@ -261,6 +273,18 @@ class SmoothfacePilotGame {
     const helmIm = new Image();
     helmIm.src = 'art/approved/z1s2/z1s2.item.wooden_helm.png';
     this.imgs.set('item_helm', helmIm);
+
+    const sketch2010Map: Record<string, string> = {
+      z1s3_sketch_2010: 'art/archive_2010/Z1S3_captainroom_2010.png',
+      z1s2_sketch_2010: 'art/archive_2010/Z1S2_lobby_2010.png',
+      z1s1_sketch_2010: 'art/archive_2010/Z1S1_machineroom_2010.png',
+      loldemo_sketch_2010: 'art/archive_2010/psd_spook_castle.jpg',
+    };
+    for (const [k, src] of Object.entries(sketch2010Map)) {
+      const im = new Image();
+      im.src = src;
+      this.imgs.set(k, im);
+    }
   }
 
   public getImgForStudio(key: string): HTMLImageElement | null {
@@ -326,6 +350,11 @@ class SmoothfacePilotGame {
       this.enterGameplay('Z1S3');
     });
 
+    document.getElementById('btn-menu-castle')?.addEventListener('click', () => {
+      this.audio.playStartStinger();
+      this.enterGameplay('LOLDEMO');
+    });
+
     document.getElementById('btn-menu-studio')?.addEventListener('click', () => {
       this.audio.playStartStinger();
       this.enterGameplay('Z1S3');
@@ -351,15 +380,19 @@ class SmoothfacePilotGame {
     });
 
     document.getElementById('btn-menu-credits')?.addEventListener('click', () => {
-      this.audio.playUiClick();
-      this.enterGameplay('Z1S3');
-      this.speakLine(
-        'MOONSTORM STUDIOS',
-        'smoothface',
-        'characters/smoothface/portrait.png',
-        'CREDITS',
-        'Created by Alexander Barquero, Jose David Aguilar, Juan Vicente Garcia, Luis F. Ledezma, Cristian Morales, and Brian "BooT". Welcome aboard the Substampede!'
-      );
+      this.audio.playUiClick(560);
+      this.archiveMuseum.open('team');
+    });
+
+    document.getElementById('btn-open-archive')?.addEventListener('click', () => {
+      this.audio.playUiClick(560);
+      this.archiveMuseum.open('team');
+    });
+
+    document.getElementById('btn-victory-archive')?.addEventListener('click', () => {
+      this.audio.playUiClick(560);
+      this.toggleModal('victory-credits-modal', false);
+      this.archiveMuseum.open('team');
     });
 
     // Intro controls (8-Scene Real-Time 60 FPS Puppet Theatre)
@@ -571,6 +604,8 @@ class SmoothfacePilotGame {
         this.toggleModal('agenda-modal', true);
       } else if (e.key.toLowerCase() === 'k') {
         this.toggleSketchMode2010();
+      } else if (e.key.toLowerCase() === 't') {
+        this.archiveMuseum.open('team');
       } else if (e.key === 'ArrowLeft' || e.key.toLowerCase() === 'a') {
         const dest = this.clampToWalkbox(this.player.x - 420, this.player.y);
         this.walkTo(dest.x, dest.y, null);
@@ -621,6 +656,15 @@ class SmoothfacePilotGame {
     const btn = document.getElementById('btn-sketch-mode');
     if (btn) {
       btn.classList.toggle('active-toggle', this.sketchMode2010);
+    }
+    if (this.sketchMode2010) {
+      this.speakLine(
+        'MR. SMOOTHFACE',
+        'smoothface',
+        'characters/smoothface/portrait.png',
+        '2010 SKETCH MODE ON!',
+        'Behold! Jose David Aguilar and Cristian Morales\'s original 2010 concept sketch is now projected right behind our 2026 paper cut-out stage! Press K again anytime to switch back.'
+      );
     }
   }
 
@@ -1251,6 +1295,15 @@ class SmoothfacePilotGame {
             replyText:
               'BWAHAHA! Jealousy will get ye nowhere, cue-ball! Climb down the iron ladder if ye want to see real submarine engineering!',
           },
+          {
+            label: '"Tell me about Sardonia, Il Douche, and the 1720 War on Pigeons!"',
+            replySpeaker: 'CAPTAIN DREAD',
+            replyVoice: 'cap_dread',
+            replyPortrait: 'characters/capdread/portrait.png',
+            replyMood: 'ROYAL EXILE',
+            replyText:
+              'Aye! I was born into the royal family of Sardonia until Il Douche invaded me homeland! Now I run the League of Terror on Blackspit Island: where all pigeons have been missing since the Great Pigeon War of 1720!',
+          },
         ]
       );
       return;
@@ -1356,8 +1409,28 @@ class SmoothfacePilotGame {
         'MR. SMOOTHFACE',
         'smoothface',
         'characters/smoothface/portrait.png',
-        'FOURTH WALL',
-        '"MOONSTORM STUDIOS". Six Costa Rican gentlemen who had the audacity to draw me without a single hair on my chin!'
+        'FOURTH WALL (2010)',
+        '"MOONSTORM STUDIOS - COSTA RICA, 2010". Six gentlemen from the Black Hole Sun and Ecstasy of Gold squads who drew me without a single whisker!',
+        [
+          {
+            label: '"Read the 6 founders\' secret 2010 quotes on the poster"',
+            replySpeaker: 'MR. SMOOTHFACE',
+            replyVoice: 'smoothface',
+            replyPortrait: 'characters/smoothface/portrait.png',
+            replyMood: 'READING LORE',
+            replyText:
+              'Psytech: "Lampino y Bigotes son nombres clave, TODO EVERYWHERE!" Xygvot: "WE GOT ART STYLE imo!" Juancho: "No se puede click secundario, FAIL!" Ledezman: "Un troll que los owneara!" c0pp3r: "7. Burst into dance!" BooT: "UDK FTW!"',
+          },
+          {
+            label: 'Open the MoonStorm 2010-2026 Time Capsule Museum & Original Art Gallery!',
+            replySpeaker: 'MR. SMOOTHFACE',
+            replyVoice: 'smoothface',
+            replyPortrait: 'characters/smoothface/portrait.png',
+            replyMood: 'TIME CAPSULE',
+            replyText: 'Opening the MoonStorm Studios 2010-2026 Time Capsule Museum!',
+            openModal: 'archive',
+          },
+        ]
       );
       return;
     }
@@ -1551,6 +1624,15 @@ class SmoothfacePilotGame {
             replyText: 'Let us play the 4-note "Funky Town" melody on these chocolate-stained keys!',
             openModal: 'keypad',
           },
+          {
+            label: '"Wait: weren\'t you once the feared League brute known as Facepuncher?"',
+            replySpeaker: 'A BABY',
+            replyVoice: 'a_baby',
+            replyPortrait: 'characters/ababy/portrait.png',
+            replyMood: 'FLASHBACK',
+            replyText:
+              'Goo-goo grrr! Before I fell on my head fighting my arch-nemesis El Chulethal, I was Facepuncher! Now I just want my candy collection, and keep Hightower and those creepy Midget Security guards away from me!',
+          },
         ]
       );
       return;
@@ -1563,7 +1645,7 @@ class SmoothfacePilotGame {
           'smoothface',
           'characters/smoothface/portrait.png',
           'INSPECTING',
-          'An exhausted stage ventriloquist holding Clash McTrevor, a wooden dummy wearing a Napoleonic bicorne hat with a live red ambulance siren bolted on top.'
+          'Janus Vertrolikwoski: an escaped mental patient with three personalities holding Clash McTrevor (aka Rapoleon), a wooden dummy with a live ambulance siren bolted to his Napoleonic bicorne hat.'
         );
         return;
       }
@@ -1594,6 +1676,15 @@ class SmoothfacePilotGame {
             replyText:
               'WEE-OO! WEE-OO! BECAUSE AT CIRQUE DU SOLAME I DOUBLE AS AN EMERGENCY AMBULANCE! WEE-OO! WEE-OO!',
             onSelectFlag: 'sirenTriggered',
+          },
+          {
+            label: '"Is it true you are the ONLY person who can pronounce MGWDBTTGPnP?!"',
+            replySpeaker: 'JANUS VERTROLIKWOSKI & RAPOLEON',
+            replyVoice: 'ventriloquist',
+            replyPortrait: 'characters/ventriloquist/portrait.png',
+            replyMood: 'TONGUE TWISTER MASTER',
+            replyText:
+              'Elementary! "M-G-W-D-B-T-T-G-P-n-P: Malefic Gentlemen Who Do Bad Things To Good People & Pigeons (trademark pending)!" Good luck pronouncing that at Lord Goat\'s Thundercano without recording my voice on tape!',
           },
         ]
       );
@@ -1779,9 +1870,38 @@ class SmoothfacePilotGame {
       return;
     }
 
+    if (hit.id === 'z1s1_book_shelf') {
+      this.setTemporaryPlayerPose(4, 2000, false);
+      this.speakLine(
+        'MR. SMOOTHFACE',
+        'smoothface',
+        'characters/smoothface/portrait.png',
+        'SCHOLAR OF EVIL',
+        'A rusty submarine bookshelf! It holds the "Evil Deeds College Syllabus" (Maniacal Laughter 101 by Cutter McGreen, Diabolic Machines by The Mech-alomaniac, and Kung FOOM! by Bruise Li: "Excuse me sir please bacFOOM FOOM FOOM!"), plus scripts for "Space Wolves: Howlin\' Stars" and "El Dia de los Muertos (DDLM)"!'
+      );
+      return;
+    }
+
     // ---------------------------------------------------------
     // BONUS: HAUNTED CASTLE COURTYARD
     // ---------------------------------------------------------
+    if (hit.id === 'lol_return_sub') {
+      this.switchRoom('Z1S3');
+      return;
+    }
+
+    if (hit.id === 'lol_dead_tree_left') {
+      this.setTemporaryPlayerPose(4, 2000, false);
+      this.speakLine(
+        'MR. SMOOTHFACE',
+        'smoothface',
+        'characters/smoothface/portrait.png',
+        'TORQUE 2D LORE (2010)',
+        'A crooked paper cut-out tree from June 2010! Thanks to Ledezman\'s Torque 2D foot-collision breakthrough, only my boots have collision polygons so my giant bald head never gets stuck on branches. Also, as Juancho famously said on June 28, 2010: "No se puede click secundario, FAIL!"'
+      );
+      return;
+    }
+
     if (hit.id === 'lol_castle_door') {
       this.flags.trollSpawned = true;
       this.cameraShakeTime = 0.55;
@@ -1963,7 +2083,7 @@ class SmoothfacePilotGame {
   private tryCombineItems(itemA: string, itemB: string): void {
     const machineParts = ['hammer_bag', 'portrait_stand', 'glue', 'helm', 'blueprint'];
     if (machineParts.includes(itemA) && machineParts.includes(itemB)) {
-      const required = ['hammer_bag', 'portrait_stand', 'glue'];
+      const required = ['hammer_bag', 'portrait_stand', 'glue', 'helm'];
       const missing = required.filter((r) => !this.inventory.includes(r));
       if (missing.length === 0) {
         this.assemblePerpetualMachine();
@@ -1976,7 +2096,7 @@ class SmoothfacePilotGame {
           'smoothface',
           'characters/smoothface/portrait.png',
           'ALMOST READY!',
-          `To finish assembling da Vinci's Perpetual Movement Machine in my pockets, I still need to scavenge: ${missingNames}!`
+          `To finish assembling da Vinci's Perpetual Movement Machine in my pockets, I still need to scavenge: ${missingNames}! (Check Captain's Cabin and A Baby's Candy Vault in the VIP Lounge!)`
         );
       }
       return;
@@ -2009,11 +2129,8 @@ class SmoothfacePilotGame {
       'smoothface',
       'characters/smoothface/portrait.png',
       'INVENTION COMPLETE!',
-      "BWAHAHA! By gluing the Bag of Hammers onto the Tripod Portrait Stand with Captain Dread's Industrial Super-Glue, I have assembled Leonardo da Vinci's Perpetual Movement Machine!"
+      "BWAHAHA! By gluing the Bag of Hammers and Wooden Ship's Helm onto the Tripod Portrait Stand with Captain Dread's Super-Glue, I have assembled Leonardo da Vinci's Perpetual Movement Machine! Now let us take it down to the Engine Room (Z1S1) and bolt it onto the broken Pedal Crank!"
     );
-    window.setTimeout(() => {
-      this.toggleModal('victory-credits-modal', true);
-    }, 2200);
   }
 
   public installPerpetualMachine(): void {
@@ -2260,6 +2377,8 @@ class SmoothfacePilotGame {
         if (c.openModal === 'keypad') {
           this.keypadEntered = [];
           this.toggleModal('puzzle-keypad-modal', true);
+        } else if (c.openModal === 'archive') {
+          this.archiveMuseum.open('team');
         }
         this.speakLine(c.replySpeaker, c.replyVoice, c.replyPortrait, c.replyMood, c.replyText);
       });

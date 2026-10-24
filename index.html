@@ -49,6 +49,18 @@
         <button id="btn-street-sense" class="hud-util-btn" title="Peek at Everything in the Room (Hold TAB)">
           <img src="art/approved/smoothface/smoothface.prop.magnifying_glass.png" alt="" class="hud-mini-tile" /> Peek
         </button>
+        <button id="btn-evil-agenda" class="hud-util-btn" title="Rupert's Evil Dossier &amp; Da Vinci Schematic (Shortcut: H)">
+          <img src="art/approved/z1s1/z1s1.item.davinci_blueprint.png" alt="" class="hud-mini-tile" /> Plan
+        </button>
+        <button id="btn-island-map" class="hud-util-btn" title="Blackspit Island &amp; Submarine Deck Chart (Shortcut: M)">
+          <img src="art/approved/z1s3/z1s3.wall.helm_wheel.png" alt="" class="hud-mini-tile" /> Map
+        </button>
+        <button id="btn-sketch-mode" class="hud-util-btn sketch-mode-btn" title="Overlay Jose David Aguilar's Original 2010 Sketch Behind the Cut-Out Stage! (Shortcut: K)">
+          &#9998; 2010 Sketch
+        </button>
+        <button id="btn-open-archive" class="hud-util-btn archive-hud-btn" title="MoonStorm Studios 2010-2026 Time Capsule: Founders, Timeline &amp; Original Art Gallery (Shortcut: T)">
+          <img src="art/approved/z1s3/z1s3.wall.poster.png" alt="" class="hud-mini-tile" /> 2010 Museum
+        </button>
         <button id="btn-open-config" class="hud-util-btn" title="Gramophone &amp; Stage Options (ESC)">
           <img src="art/approved/smoothface/smoothface.prop.skeleton_key.png" alt="" class="hud-mini-tile" /> Options
         </button>
@@ -116,23 +128,27 @@
 
             <div class="menu-button-stack">
               <button id="btn-menu-start-intro" class="menu-primary-btn">
-                <span>BEGIN THE TALE</span>
+                <span>BEGIN THE TALE (4-SCENE INTRO)</span>
               </button>
               <button id="btn-menu-quick-play" class="menu-secondary-btn">
                 <img src="art/approved/z1s3/z1s3.wall.helm_wheel.png" alt="" class="btn-cutout-tile" />
-                <span>ENTER CAPTAIN DREAD'S CABIN</span>
+                <span>ENTER CAPTAIN DREAD'S CABIN (Z1S3)</span>
+              </button>
+              <button id="btn-menu-castle" class="menu-secondary-btn" style="background:linear-gradient(180deg,#3d2647 0%,#24152c 100%);border-color:#c98cff;">
+                <img src="art/approved/z0/z0.prop.two_faced_sun.png" alt="" class="btn-cutout-tile" />
+                <span>2010 PROTOTYPE: SPOOKY CASTLE (LOLDEMO1)</span>
               </button>
               <button id="btn-menu-studio" class="menu-secondary-btn" style="display:none;background:#3e281b;color:#ffe596;border-color:#e5b94c;">
                 <span>STAGE LAYOUT WORKSHOP</span>
               </button>
               <div class="menu-bottom-actions">
+                <button id="btn-menu-credits" class="menu-Action-btn archive-highlight-btn">
+                  <img src="art/approved/z1s3/z1s3.wall.poster.png" alt="" class="btn-cutout-mini" />
+                  <span>MoonStorm 2010 Time Capsule (Crew &amp; Art)</span>
+                </button>
                 <button id="btn-menu-config" class="menu-Action-btn">
                   <img src="art/approved/smoothface/smoothface.prop.skeleton_key.png" alt="" class="btn-cutout-mini" />
                   <span>Stage &amp; Gramophone</span>
-                </button>
-                <button id="btn-menu-credits" class="menu-Action-btn">
-                  <img src="art/approved/z1s3/z1s3.wall.poster.png" alt="" class="btn-cutout-mini" />
-                  <span>MoonStorm Crew</span>
                 </button>
               </div>
             </div>
@@ -366,7 +382,7 @@
           </div>
           <div class="map-modal-body">
             <div class="map-art-frame">
-              <img src="art/approved/intro/intro.scene2.sub_periscope.png" alt="Blackspit Island Chart" class="island-map-img" />
+              <img src="art/archive_2010/Sparkle_Main_Island_map.png" alt="Blackspit Island Chart (Jose David Aguilar, July 2010)" class="island-map-img" />
               <button class="map-pin-badge" style="left:21%;top:82%;" data-room="Z1S3" title="Jump to Captain Dread's Cabin">&#9875; Port Machete / Sub</button>
               <button class="map-pin-badge" style="left:46%;top:54%;" data-room="Z1S2" title="Jump to Submarine VIP Lounge">&#127914; Cirque / Lounge</button>
               <button class="map-pin-badge" style="left:38%;top:22%;" data-room="LOLDEMO" title="Jump to Spooky Castle Prototype">&#127984; Evil Deeds / Castle</button>
@@ -444,7 +460,63 @@
             </div>
           </div>
           <div class="modal-footer">
-            <button id="btn-victory-keep-playing" class="menu-primary-btn" style="padding:8px 22px;font-size:0.95rem;">Keep Exploring Captain's Cabin</button>
+            <button id="btn-victory-castle" class="hud-util-btn">&#127984; Visit 2010 Spooky Castle (LolDemo1)</button>
+            <button id="btn-victory-archive" class="hud-util-btn archive-hud-btn">&#127912; Open 2010 Time Capsule &amp; Gallery</button>
+            <button id="btn-victory-keep-playing" class="menu-primary-btn" style="padding:8px 22px;font-size:0.95rem;">Keep Exploring Submarine</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- MoonStorm Studios 2010-2026 Interactive Time Capsule, Founders Showcase, Dynamic Timeline & Original Art Gallery -->
+      <section id="archive-museum-modal" class="modal-backdrop" style="display:none;">
+        <div class="modal-card archive-museum-card">
+          <div class="archive-museum-header">
+            <div class="archive-title-block">
+              <img src="art/archive_2010/moonSplash.png" alt="MoonStorm 2010" class="archive-logo-badge" />
+              <div>
+                <h3>MOONSTORM STUDIOS: CAPSULA DEL TIEMPO (2010 - 2026)</h3>
+                <span class="archive-subtitle">Los 6 Fundadores &bull; Cronologia Interactiva &bull; 35 Fuentes Originales 2010 &bull; Comparador &bull; Easter Eggs</span>
+              </div>
+            </div>
+            <div class="archive-jukebox-bar">
+              <button id="btn-jukebox-stuff2" class="jukebox-pill-btn" title="Escuchar el soundtrack original de LolDemo1 (Junio 2010)">
+                &#9835; LolDemo1 2010 (stuff2.ogg)
+              </button>
+              <button id="btn-jukebox-visionaire" class="jukebox-pill-btn" title="Escuchar el tema de inicio de LolGame1 Visionaire (Julio 2010)">
+                &#9835; Visionaire 2010 (start_the_game.mp3)
+              </button>
+              <button id="btn-close-archive" class="modal-close-btn" title="Cerrar Capsula del Tiempo">&#10005;</button>
+            </div>
+          </div>
+
+          <nav class="archive-tabs-bar">
+            <button class="archive-tab-btn active" data-tab="team">&#128101; El Equipo (6 Fundadores)</button>
+            <button class="archive-tab-btn" data-tab="timeline">&#9203; Cronologia Dinamica (2010-2026)</button>
+            <button class="archive-tab-btn" data-tab="gallery">&#127912; Galeria Original 2010 (35 Fuentes)</button>
+            <button class="archive-tab-btn" data-tab="compare">&#128260; Comparador 2010 vs 2026</button>
+            <button class="archive-tab-btn" data-tab="docs">&#128214; Documentos &amp; 12 Easter Eggs</button>
+          </nav>
+
+          <div id="archive-museum-body" class="archive-museum-body"></div>
+        </div>
+      </section>
+
+      <!-- High-Resolution Lightbox Viewer for 2010 Original Sources -->
+      <section id="archive-lightbox-overlay" class="modal-backdrop lightbox-backdrop" style="display:none;">
+        <div class="lightbox-card">
+          <div class="lightbox-header">
+            <div>
+              <h3 id="lightbox-title">Artefacto Original 2010</h3>
+              <div id="lightbox-meta" class="lightbox-meta"></div>
+            </div>
+            <button id="btn-close-lightbox" class="modal-close-btn">&#10005;</button>
+          </div>
+          <div class="lightbox-img-stage">
+            <img id="lightbox-img" src="" alt="Original 2010 Source" />
+          </div>
+          <div class="lightbox-footer">
+            <p id="lightbox-desc"></p>
+            <blockquote id="lightbox-quote" class="lightbox-quote" style="display:none;"></blockquote>
           </div>
         </div>
       </section>
