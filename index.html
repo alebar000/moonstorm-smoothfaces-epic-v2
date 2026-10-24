@@ -61,6 +61,9 @@
         <button id="btn-open-archive" class="hud-util-btn archive-hud-btn" title="MoonStorm Studios 2010-2026 Time Capsule: Founders, Timeline &amp; Original Art Gallery (Shortcut: T)">
           <img src="art/approved/z1s3/z1s3.wall.poster.png" alt="" class="hud-mini-tile" /> 2010 Museum
         </button>
+        <button id="btn-hud-music" class="hud-util-btn music-hud-btn" title="Cycle Background Music Mode: Dynamic Room Score / Submarine Ambience Only / 2010 Classic / Muted (Shortcut: N)">
+          &#9835; <span id="hud-music-label">Score: Dynamic</span>
+        </button>
         <button id="btn-open-config" class="hud-util-btn" title="Gramophone &amp; Stage Options (ESC)">
           <img src="art/approved/smoothface/smoothface.prop.skeleton_key.png" alt="" class="hud-mini-tile" /> Options
         </button>
@@ -305,6 +308,15 @@
                 <input type="range" id="cfg-music-vol" min="0" max="100" value="55" />
                 <span id="lbl-music-vol">55%</span>
               </label>
+              <div class="config-row" style="margin-bottom:8px;">
+                <span>Soundtrack Style</span>
+                <select id="cfg-music-mode" class="config-select">
+                  <option value="dynamic">Dynamic Per-Room Score + Breathing Ambience (iMUSE)</option>
+                  <option value="ambience">Submarine Ambience Only (Zero Melody)</option>
+                  <option value="classic2010">2010 LolDemo1 Archive Loop (stuff2.ogg)</option>
+                  <option value="muted">Mute Background Music</option>
+                </select>
+              </div>
               <label class="config-row">
                 <span>Puppet Babble Voices</span>
                 <input type="range" id="cfg-voice-vol" min="0" max="100" value="90" />

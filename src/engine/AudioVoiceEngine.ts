@@ -1,8 +1,19 @@
 /**
  * MoonStorm Studios - Smoothface's Epic (Codename: Sparkle)
- * Dual-Layer WebAudio & Multi-Formant Voice Synthesis Engine (src/engine/AudioVoiceEngine.ts)
- * Plays original 2010 OGG/MP3 tracks + procedural submarine ambience, formant speech lip-sync,
- * and foley/musical puzzle sound effects.
+ * iMUSE-Style Adaptive Room Soundtrack, Submarine Soundscape & Multi-Formant Voice Engine
+ * (src/engine/AudioVoiceEngine.ts)
+ *
+ * Solves repetitive background music fatigue by providing:
+ *  1. Room-Specific Physical-Modeling Musical Cues with built-in 16-20s ambient breathing bridges:
+ *     - MENU / INTRO : 'menu_overture.wav'       ("The Ballad of Rupert & Morgan Stache")
+ *     - Z1S3         : 'z1s3_dread_cabin.wav'    ("Ghost of Sardonia" - Nautical Concertina & Nylon Guitar)
+ *     - Z1S2         : 'z1s2_vip_lounge.wav'     ("Blackspit VIP Lounge" - Cool Vibraphone & Walking Bass)
+ *     - Z1S1 (Broken): 'z1s1_engine_broken.wav'  ("Sweat & Shamisen in the Bilge" - Nihongo's Theme)
+ *     - Z1S1 (Fixed) : 'z1s1_engine_triumph.wav' ("Da Vinci's Clockwork Triumph")
+ *     - LOLDEMO (Z0) : 'stuff2.ogg'              (Ledezman's original June 2010 LolDemo1 track)
+ *  2. Continuous Submarine Ambience Cushion ('sub_ambience.wav') + 'Ambience Only' mode for zero-melody play.
+ *  3. Smooth 1.0s room-to-room crossfading and automatic volume ducking during dialogue, museum browsing,
+ *     and the 'Funky Town' musical keypad puzzle.
  */
 
 export type VoiceProfileId =
@@ -14,6 +25,26 @@ export type VoiceProfileId =
   | 'rapoleon'
   | 'siren'
   | 'troll';
+
+export type MusicCueId =
+  | 'MENU'
+  | 'INTRO'
+  | 'Z1S3'
+  | 'Z1S2'
+  | 'Z1S1_BROKEN'
+  | 'Z1S1_TRIUMPH'
+  | 'LOLDEMO';
+
+export type SoundtrackMode = 'dynamic' | 'ambience' | 'classic2010' | 'muted';
+
+export type ArchiveJukeboxTrackId =
+  | 'stuff2.ogg'
+  | 'start_the_game.mp3'
+  | 'z1s3_dread_cabin.wav'
+  | 'z1s2_vip_lounge.wav'
+  | 'z1s1_engine_broken.wav'
+  | 'z1s1_engine_triumph.wav'
+  | 'sub_ambience.wav';
 
 interface VoiceSpec {
   baseFreq: number;
@@ -125,33 +156,109 @@ export const NOTE_FREQS: Record<string, number> = {
   F5: 698.46,
 };
 
+export const CUE_METADATA: Record<MusicCueId, { file: string; title: string; gain: number; submarineAmbience: number }> = {
+  MENU: {
+    file: 'assets/audio/menu_overture.wav',
+    title: 'The Ballad of Smoothface (Overture)',
+    gain: 0.58,
+    submarineAmbience: 0.18,
+  },
+  INTRO: {
+    file: 'assets/audio/menu_overture.wav',
+    title: 'The Ballad of Smoothface (Intro Theatre)',
+    gain: 0.52,
+    submarineAmbience: 0.25,
+  },
+  Z1S3: {
+    file: 'assets/audio/z1s3_dread_cabin.wav',
+    title: 'Ghost of Sardonia (Captain Dread Cabin)',
+    gain: 0.62,
+    submarineAmbience: 0.35,
+  },
+  Z1S2: {
+    file: 'assets/audio/z1s2_vip_lounge.wav',
+    title: 'Blackspit VIP Lounge (Cool Vibraphone)',
+    gain: 0.62,
+    submarineAmbience: 0.28,
+  },
+  Z1S1_BROKEN: {
+    file: 'assets/audio/z1s1_engine_broken.wav',
+    title: 'Sweat & Shamisen in the Bilge (Engine Room)',
+    gain: 0.64,
+    submarineAmbience: 0.42,
+  },
+  Z1S1_TRIUMPH: {
+    file: 'assets/audio/z1s1_engine_triumph.wav',
+    title: "Da Vinci's Clockwork Triumph (900 Knots!)",
+    gain: 0.66,
+    submarineAmbience: 0.30,
+  },
+  LOLDEMO: {
+    file: 'assets/audio/stuff2.ogg',
+    title: '2010 LolDemo1 Original (stuff2.ogg)',
+    gain: 0.58,
+    submarineAmbience: 0.0,
+  },
+};
+
 export class AudioVoiceEngine {
   private ctx: AudioContext | null = null;
-  private bgmAudio: HTMLAudioElement | null = null;
+  private trackElements: Map<string, HTMLAudioElement> = new Map();
+  private trackCurrentFade: Map<string, number> = new Map();
+  private ambienceAudio: HTMLAudioElement | null = null;
   private stingerAudio: HTMLAudioElement | null = null;
+  private jukeboxOverrideFile: string | null = null;
 
   public masterVolume = 0.85;
   public musicVolume = 0.55;
   public voiceVolume = 0.9;
   public sfxVolume = 0.85;
 
+  private soundtrackMode: SoundtrackMode = 'dynamic';
+  private currentCue: MusicCueId = 'MENU';
+  private unlocked = false;
+
+  // Smart ducking states
+  private duckKeypad = false;
+  private duckMuseum = false;
+  private lastVoiceTimeMs = 0;
+
   private activeSpeaker: VoiceProfileId = 'smoothface';
   private voiceAmplitude = 0;
   private lastSyllableTime = 0;
-  private musicStarted = false;
 
   constructor() {
     this.setupHtmlAudio();
+    window.setInterval(() => this.tickAudioFader(), 40);
   }
 
   private setupHtmlAudio(): void {
     try {
-      this.bgmAudio = new Audio('assets/audio/stuff2.ogg');
-      this.bgmAudio.loop = true;
-      this.bgmAudio.volume = this.masterVolume * this.musicVolume * 0.65;
+      const files = [
+        'assets/audio/menu_overture.wav',
+        'assets/audio/z1s3_dread_cabin.wav',
+        'assets/audio/z1s2_vip_lounge.wav',
+        'assets/audio/z1s1_engine_broken.wav',
+        'assets/audio/z1s1_engine_triumph.wav',
+        'assets/audio/stuff2.ogg',
+      ];
+      for (const f of files) {
+        const el = new Audio(f);
+        el.loop = true;
+        el.preload = 'auto';
+        el.volume = 0;
+        this.trackElements.set(f, el);
+        this.trackCurrentFade.set(f, 0);
+      }
+
+      this.ambienceAudio = new Audio('assets/audio/sub_ambience.wav');
+      this.ambienceAudio.loop = true;
+      this.ambienceAudio.preload = 'auto';
+      this.ambienceAudio.volume = 0;
 
       this.stingerAudio = new Audio('assets/audio/start_the_game.mp3');
-      this.stingerAudio.volume = this.masterVolume * this.sfxVolume * 0.75;
+      this.stingerAudio.preload = 'auto';
+      this.stingerAudio.volume = this.masterVolume * this.sfxVolume * 0.65;
     } catch {
       // Fallback handled by WebAudio procedural synth
     }
@@ -167,57 +274,243 @@ export class AudioVoiceEngine {
     if (this.ctx && this.ctx.state === 'suspended') {
       this.ctx.resume().catch(() => {});
     }
-    if (!this.musicStarted && this.bgmAudio) {
-      this.bgmAudio.volume = this.masterVolume * this.musicVolume * 0.6;
-      this.bgmAudio.play().then(() => {
-        this.musicStarted = true;
-      }).catch(() => {});
+    if (!this.unlocked) {
+      this.unlocked = true;
+      this.ensureActiveTracksPlaying();
     }
     return this.ctx;
   }
 
+  public setRoomCue(cue: MusicCueId): void {
+    this.currentCue = cue;
+    if (this.unlocked) {
+      this.ensureActiveTracksPlaying();
+    }
+  }
+
+  public getRoomCue(): MusicCueId {
+    return this.currentCue;
+  }
+
+  public setSoundtrackMode(mode: SoundtrackMode): void {
+    this.soundtrackMode = mode;
+    this.jukeboxOverrideFile = null;
+    this.unlock();
+    this.ensureActiveTracksPlaying();
+  }
+
+  public getSoundtrackMode(): SoundtrackMode {
+    return this.soundtrackMode;
+  }
+
+  public cycleSoundtrackMode(): SoundtrackMode {
+    const order: SoundtrackMode[] = ['dynamic', 'ambience', 'classic2010', 'muted'];
+    const nextIdx = (order.indexOf(this.soundtrackMode) + 1) % order.length;
+    this.setSoundtrackMode(order[nextIdx]);
+    return this.soundtrackMode;
+  }
+
+  public getSoundtrackStatusLabel(): string {
+    if (this.soundtrackMode === 'muted') {
+      return 'Score: Muted';
+    }
+    if (this.soundtrackMode === 'ambience') {
+      return 'Score: Ambience Only';
+    }
+    if (this.soundtrackMode === 'classic2010') {
+      return 'Score: 2010 Classic';
+    }
+    const shortNames: Record<MusicCueId, string> = {
+      MENU: 'Score: Overture',
+      INTRO: 'Score: Intro Waltz',
+      Z1S3: "Score: Dread's Shanty",
+      Z1S2: 'Score: VIP Lounge Jazz',
+      Z1S1_BROKEN: 'Score: Bilge Shamisen',
+      Z1S1_TRIUMPH: 'Score: Da Vinci March',
+      LOLDEMO: 'Score: LolDemo1 (2010)',
+    };
+    return shortNames[this.currentCue] || 'Score: Dynamic';
+  }
+
+  public getCurrentCueTitle(): string {
+    if (this.soundtrackMode === 'muted') return 'Background Music Muted (SFX & Voices Active)';
+    if (this.soundtrackMode === 'ambience') return 'Deep Submarine Hull & Ocean Ambience Only';
+    if (this.soundtrackMode === 'classic2010') return '2010 LolDemo1 Original (stuff2.ogg)';
+    return CUE_METADATA[this.currentCue]?.title || 'Dynamic Submarine Soundtrack';
+  }
+
+  public setDucking(reason: 'keypad' | 'museum', active: boolean): void {
+    if (reason === 'keypad') this.duckKeypad = active;
+    if (reason === 'museum') {
+      this.duckMuseum = active;
+      if (!active && this.jukeboxOverrideFile) {
+        this.stopArchiveTrack();
+      }
+    }
+  }
+
+  private getTargetTrackFile(): string | null {
+    if (this.jukeboxOverrideFile) {
+      if (this.jukeboxOverrideFile === 'assets/audio/sub_ambience.wav' || this.jukeboxOverrideFile === 'assets/audio/start_the_game.mp3') {
+        return null;
+      }
+      return this.jukeboxOverrideFile;
+    }
+    if (this.soundtrackMode === 'muted' || this.soundtrackMode === 'ambience') {
+      return null;
+    }
+    if (this.soundtrackMode === 'classic2010') {
+      return 'assets/audio/stuff2.ogg';
+    }
+    return CUE_METADATA[this.currentCue]?.file || 'assets/audio/z1s3_dread_cabin.wav';
+  }
+
+  private ensureActiveTracksPlaying(): void {
+    const targetFile = this.getTargetTrackFile();
+    if (targetFile) {
+      const el = this.trackElements.get(targetFile);
+      if (el && el.paused) {
+        el.play().catch(() => {});
+      }
+    }
+    if (this.ambienceAudio && this.soundtrackMode !== 'muted') {
+      if (this.ambienceAudio.paused) {
+        this.ambienceAudio.play().catch(() => {});
+      }
+    }
+  }
+
+  private tickAudioFader(): void {
+    if (!this.unlocked) return;
+
+    const targetFile = this.getTargetTrackFile();
+    const nowMs = performance.now();
+    const voiceDuckActive = nowMs - this.lastVoiceTimeMs < 1100;
+
+    let duckMultiplier = 1.0;
+    if (this.duckKeypad) {
+      duckMultiplier = 0.0; // Total silence while playing Funky Town keypad notes!
+    } else if (this.jukeboxOverrideFile) {
+      duckMultiplier = 1.0;
+    } else if (this.duckMuseum) {
+      duckMultiplier = 0.22;
+    } else if (voiceDuckActive) {
+      duckMultiplier = 0.36; // Smoothly duck background music while characters speak
+    }
+
+    const baseMasterMusic = this.masterVolume * this.musicVolume;
+    const cueInfo = CUE_METADATA[this.currentCue] || CUE_METADATA.Z1S3;
+
+    for (const [file, el] of this.trackElements.entries()) {
+      const currentFade = this.trackCurrentFade.get(file) || 0;
+      const targetFade = file === targetFile ? 1.0 : 0.0;
+      const step = targetFade > currentFade ? 0.05 : 0.06;
+      const nextFade =
+        Math.abs(targetFade - currentFade) <= step
+          ? targetFade
+          : currentFade + Math.sign(targetFade - currentFade) * step;
+
+      this.trackCurrentFade.set(file, nextFade);
+
+      const gain = file === 'assets/audio/stuff2.ogg' ? 0.56 : cueInfo.gain;
+      const finalVol = Math.max(0, Math.min(1, baseMasterMusic * gain * nextFade * duckMultiplier));
+      el.volume = finalVol;
+
+      if (nextFade <= 0.001 && !el.paused && file !== targetFile) {
+        el.pause();
+      } else if (nextFade > 0.01 && el.paused && file === targetFile) {
+        el.play().catch(() => {});
+      }
+    }
+
+    // Submarine ambience cushion
+    if (this.ambienceAudio) {
+      let targetAmb = 0;
+      if (this.jukeboxOverrideFile === 'assets/audio/sub_ambience.wav') {
+        targetAmb = 0.85;
+      } else if (this.soundtrackMode === 'ambience') {
+        targetAmb = 0.80 * (this.duckKeypad ? 0.15 : 1.0);
+      } else if (this.soundtrackMode === 'dynamic') {
+        targetAmb = cueInfo.submarineAmbience * (this.duckKeypad ? 0.1 : 1.0);
+      }
+      const desiredVol = Math.max(0, Math.min(1, baseMasterMusic * targetAmb));
+      const curVol = this.ambienceAudio.volume;
+      const diff = desiredVol - curVol;
+      this.ambienceAudio.volume = Math.abs(diff) < 0.02 ? desiredVol : curVol + diff * 0.15;
+
+      if (this.ambienceAudio.volume <= 0.002 && !this.ambienceAudio.paused && targetAmb === 0) {
+        this.ambienceAudio.pause();
+      } else if (targetAmb > 0.01 && this.ambienceAudio.paused) {
+        this.ambienceAudio.play().catch(() => {});
+      }
+    }
+  }
+
   public updateVolumes(): void {
-    if (this.bgmAudio) {
-      this.bgmAudio.volume = Math.max(0, Math.min(1, this.masterVolume * this.musicVolume * 0.65));
-    }
     if (this.stingerAudio) {
-      this.stingerAudio.volume = Math.max(0, Math.min(1, this.masterVolume * this.sfxVolume * 0.75));
+      this.stingerAudio.volume = Math.max(0, Math.min(1, this.masterVolume * this.sfxVolume * 0.65));
     }
+    this.tickAudioFader();
   }
 
   public playStartStinger(): void {
     this.unlock();
     if (this.stingerAudio) {
+      this.stingerAudio.loop = false;
       this.stingerAudio.currentTime = 0;
+      this.stingerAudio.volume = Math.max(0, Math.min(1, this.masterVolume * this.sfxVolume * 0.55));
       this.stingerAudio.play().catch(() => {});
     }
     this.playChord([261.63, 329.63, 392.0, 523.25], 0.45, 'triangle');
   }
 
-  public playArchiveTrack(trackFile: 'stuff2.ogg' | 'start_the_game.mp3'): void {
+  public playArchiveTrack(trackFile: ArchiveJukeboxTrackId): void {
     this.unlock();
-    if (trackFile === 'stuff2.ogg') {
-      if (this.stingerAudio) this.stingerAudio.pause();
-      if (this.bgmAudio) {
-        this.bgmAudio.currentTime = 0;
-        this.bgmAudio.volume = Math.max(0.25, this.masterVolume * this.musicVolume * 0.85);
-        this.bgmAudio.play().catch(() => {});
-        this.musicStarted = true;
-      }
-    } else {
-      if (this.bgmAudio) this.bgmAudio.pause();
+    const fullPath = `assets/audio/${trackFile}`;
+    this.jukeboxOverrideFile = fullPath;
+
+    if (trackFile === 'start_the_game.mp3') {
+      for (const el of this.trackElements.values()) el.pause();
       if (this.stingerAudio) {
         this.stingerAudio.loop = true;
         this.stingerAudio.currentTime = 0;
-        this.stingerAudio.volume = Math.max(0.25, this.masterVolume * this.sfxVolume * 0.85);
+        this.stingerAudio.volume = Math.max(0.25, this.masterVolume * this.musicVolume * 0.8);
         this.stingerAudio.play().catch(() => {});
       }
+      return;
+    }
+
+    if (this.stingerAudio) {
+      this.stingerAudio.loop = false;
+      this.stingerAudio.pause();
+    }
+
+    if (trackFile === 'sub_ambience.wav') {
+      for (const el of this.trackElements.values()) el.pause();
+      if (this.ambienceAudio) {
+        this.ambienceAudio.currentTime = 0;
+        this.ambienceAudio.volume = Math.max(0.3, this.masterVolume * this.musicVolume * 0.85);
+        this.ambienceAudio.play().catch(() => {});
+      }
+      return;
+    }
+
+    const targetEl = this.trackElements.get(fullPath);
+    if (targetEl) {
+      targetEl.currentTime = 0;
+      this.trackCurrentFade.set(fullPath, 1.0);
+      targetEl.volume = Math.max(0.25, this.masterVolume * this.musicVolume * 0.78);
+      targetEl.play().catch(() => {});
     }
   }
 
   public stopArchiveTrack(): void {
-    if (this.bgmAudio) this.bgmAudio.pause();
-    if (this.stingerAudio) this.stingerAudio.pause();
+    this.jukeboxOverrideFile = null;
+    if (this.stingerAudio) {
+      this.stingerAudio.loop = false;
+      this.stingerAudio.pause();
+    }
+    this.ensureActiveTracksPlaying();
   }
 
   public getVoiceAmplitude(): number {
@@ -245,6 +538,7 @@ export class AudioVoiceEngine {
       return;
     }
     this.lastSyllableTime = nowMs;
+    this.lastVoiceTimeMs = nowMs;
     this.activeSpeaker = profile;
 
     const gainLevel = this.masterVolume * this.voiceVolume * 0.24;

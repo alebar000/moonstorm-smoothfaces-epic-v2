@@ -3,7 +3,7 @@
  * Main 1600x900 Modular Paper Cut-Out Adventure Engine, Living Environmental FX & Puzzle State Machine (src/main.ts)
  */
 
-import { AudioVoiceEngine, VoiceProfileId } from './engine/AudioVoiceEngine';
+import { AudioVoiceEngine, SoundtrackMode, VoiceProfileId } from './engine/AudioVoiceEngine';
 import { CutoutRigRenderer, PuppetAnimState } from './engine/CutoutRigRenderer';
 import { INTRO_SCENES_8, IntroPuppetTheatre } from './engine/IntroPuppetTheatre';
 import { RoomLayoutStudio } from './engine/RoomLayoutStudio';
@@ -184,6 +184,7 @@ class SmoothfacePilotGame {
       playUiClick: (freq) => this.audio.playUiClick(freq),
       playArchiveTrack: (track) => this.audio.playArchiveTrack(track),
       stopArchiveTrack: () => this.audio.stopArchiveTrack(),
+      onOpenChange: (isOpen) => this.audio.setDucking('museum', isOpen),
     });
 
     // Expose debug/test API on window for automated verification
@@ -419,9 +420,15 @@ class SmoothfacePilotGame {
     // Top HUD controls
     document.getElementById('btn-open-menu')?.addEventListener('click', () => {
       this.audio.playUiClick();
+      this.audio.setRoomCue('MENU');
+      this.syncMusicHudUi();
       document.getElementById('main-menu-overlay')!.style.display = 'flex';
       document.getElementById('hud-top-bar')!.classList.add('hud-hidden');
       document.getElementById('hud-bottom-box')!.classList.add('hud-hidden');
+    });
+
+    document.getElementById('btn-hud-music')?.addEventListener('click', () => {
+      this.cycleSoundtrackMode();
     });
 
     document.getElementById('btn-mode-select')?.addEventListener('click', () => {
@@ -488,6 +495,11 @@ class SmoothfacePilotGame {
     this.bindVolumeSlider('cfg-music-vol', 'lbl-music-vol', (v) => {
       this.audio.musicVolume = v;
       this.audio.updateVolumes();
+    });
+    document.getElementById('cfg-music-mode')?.addEventListener('change', (e) => {
+      const mode = (e.target as HTMLSelectElement).value as SoundtrackMode;
+      this.audio.setSoundtrackMode(mode);
+      this.syncMusicHudUi();
     });
     this.bindVolumeSlider('cfg-voice-vol', 'lbl-voice-vol', (v) => {
       this.audio.voiceVolume = v;
@@ -606,6 +618,8 @@ class SmoothfacePilotGame {
         this.toggleSketchMode2010();
       } else if (e.key.toLowerCase() === 't') {
         this.archiveMuseum.open('team');
+      } else if (e.key.toLowerCase() === 'n') {
+        this.cycleSoundtrackMode();
       } else if (e.key === 'ArrowLeft' || e.key.toLowerCase() === 'a') {
         const dest = this.clampToWalkbox(this.player.x - 420, this.player.y);
         this.walkTo(dest.x, dest.y, null);
@@ -693,15 +707,42 @@ class SmoothfacePilotGame {
     });
   }
 
+  public cycleSoundtrackMode(): void {
+    this.audio.playUiClick(600);
+    this.audio.cycleSoundtrackMode();
+    this.syncMusicHudUi();
+  }
+
+  public syncMusicHudUi(): void {
+    const lbl = document.getElementById('hud-music-label');
+    if (lbl) {
+      lbl.textContent = this.audio.getSoundtrackStatusLabel();
+    }
+    const btn = document.getElementById('btn-hud-music');
+    if (btn) {
+      btn.title = `${this.audio.getCurrentCueTitle()} (Click or press N to cycle: Dynamic Room Score / Submarine Ambience Only / 2010 Classic / Muted)`;
+      btn.classList.toggle('active-toggle', this.audio.getSoundtrackMode() === 'ambience');
+    }
+    const sel = document.getElementById('cfg-music-mode') as HTMLSelectElement | null;
+    if (sel) {
+      sel.value = this.audio.getSoundtrackMode();
+    }
+  }
+
   public toggleModal(id: string, show: boolean): void {
     this.hideOverlays();
     this.flushDialogueTypewriter();
+    if (id === 'puzzle-keypad-modal') {
+      this.audio.setDucking('keypad', show);
+    }
     const el = document.getElementById(id);
     if (el) el.style.display = show ? 'flex' : 'none';
   }
 
   public startIntroCinematic(): void {
     this.hideOverlays();
+    this.audio.setRoomCue('INTRO');
+    this.syncMusicHudUi();
     document.getElementById('main-menu-overlay')!.style.display = 'none';
     document.getElementById('intro-overlay')!.style.display = 'flex';
     this.introTheatre.autoPlay = true;
@@ -766,6 +807,7 @@ class SmoothfacePilotGame {
 
     const banner = document.getElementById('room-banner')!;
     if (room === 'Z1S3') {
+      this.audio.setRoomCue('Z1S3');
       banner.textContent = "Captain Dread's Cabin";
       this.player.x = Z1S3_CHARACTER_SPAWNS.smoothface.x;
       this.player.y = Z1S3_CHARACTER_SPAWNS.smoothface.y;
@@ -782,6 +824,7 @@ class SmoothfacePilotGame {
         "Captain Dread's submarine quarters! Scavenge the Bag of Hammers, Tripod Portrait Stand, and Desk Super-Glue to assemble da Vinci's Perpetual Movement Machine!"
       );
     } else if (room === 'Z1S2') {
+      this.audio.setRoomCue('Z1S2');
       banner.textContent = 'Submarine VIP Lounge & Candy Vault';
       this.player.x = prevRoom === 'Z1S1' ? 420 : 1880;
       this.player.y = 795;
@@ -795,6 +838,7 @@ class SmoothfacePilotGame {
         'The Submarine VIP Lounge. A Baby is guarding his musical Candy Vault, and the Ventriloquist is arguing with his wooden dummy.'
       );
     } else if (room === 'Z1S1') {
+      this.audio.setRoomCue(this.flags.perpetualMachineInstalled ? 'Z1S1_TRIUMPH' : 'Z1S1_BROKEN');
       banner.textContent = 'Submarine Engine Room (Lower Deck)';
       this.player.x = 1120;
       this.player.y = 795;
@@ -843,6 +887,7 @@ class SmoothfacePilotGame {
         );
       }
     } else if (room === 'LOLDEMO') {
+      this.audio.setRoomCue('LOLDEMO');
       banner.textContent = 'Haunted Castle Courtyard (2010 Tribute)';
       this.player.x = 520;
       this.player.y = 790;
@@ -856,6 +901,7 @@ class SmoothfacePilotGame {
         'The Haunted Castle Courtyard! Look at that creepy two-faced cut-out sun. Whatever you do, do NOT knock on the haunted castle door...'
       );
     }
+    this.syncMusicHudUi();
   }
 
   public getRoomWidth(): number {
@@ -2135,6 +2181,8 @@ class SmoothfacePilotGame {
 
   public installPerpetualMachine(): void {
     this.flags.perpetualMachineInstalled = true;
+    this.audio.setRoomCue('Z1S1_TRIUMPH');
+    this.syncMusicHudUi();
     this.inventory = this.inventory.filter((id) => id !== 'perpetual_machine');
     this.selectInventoryItem(null);
     this.npcs.nihongo.poseIndex = 3;

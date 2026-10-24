@@ -75,6 +75,21 @@ with sync_playwright() as p:
     page.wait_for_timeout(500)
     page.screenshot(path=os.path.join(art_dir, "v3_z1s3_sketch_mode.png"))
 
+    # Verify iMUSE room cues and HUD music cycling button
+    cues = []
+    cues.append(page.locator("#hud-music-label").inner_text())
+    page.evaluate('window.__SPARKLE_GAME__.switchRoom("Z1S2")')
+    cues.append(page.locator("#hud-music-label").inner_text())
+    page.evaluate('window.__SPARKLE_GAME__.switchRoom("Z1S1")')
+    cues.append(page.locator("#hud-music-label").inner_text())
+    page.evaluate('window.__SPARKLE_GAME__.installPerpetualMachine()')
+    cues.append(page.locator("#hud-music-label").inner_text())
+    page.evaluate('window.__SPARKLE_GAME__.switchRoom("LOLDEMO")')
+    cues.append(page.locator("#hud-music-label").inner_text())
+    page.click("#btn-hud-music")
+    cues.append(page.locator("#hud-music-label").inner_text())
+    print("Verified Music Cues:", " -> ".join(cues))
+
     browser.close()
 
 print("Console errors:", console_errs)

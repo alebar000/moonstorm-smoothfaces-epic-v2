@@ -3401,3 +3401,29 @@ ef_z1s2_lobby_2010.png), normalizadas, validadas por gates.py (8/8 PASS) y aprob
   - **Pestaña 5 (`Documentos & 12 Easter Eggs`)**: Lector integrado de los 5 documentos originales de diseño (`Sparkle - Story`, `Sparkle - Characters`, `Level-Macro`, `The Initiative & PFG`, `Dr. Stache / DDLM / Space Wolves / Twistoria`) + Guia interactiva de los **12 Easter Eggs Jugables** con botones `"Ir ahi"` que teletransportan al cuarto correspondiente.
 - **Servidor Unificado en Puerto `8765` (`review/review_server.py`)**:
   - Ahora sirve tanto la Mesa de Luz (`http://localhost:8765/`) como el juego completo compilado (`http://localhost:8765/play` o `http://localhost:8765/dist/index.html`) con `0` errores de consola y `0` errores HTTP `404`.
+
+
+---
+
+## 2026-10-24 - Sistema Musical Adaptativo por Habitacion estilo LucasArts iMUSE + Ambiente Submarino y Pausas de Respiracion (`AudioVoiceEngine.ts`, `generate_room_soundtracks.py`)
+
+- **Problema detectado por Alex (`"I don't like the same song in the bg all the time" / "Think it through"`)**:
+  - Anteriormente, `AudioVoiceEngine.ts` iniciaba `stuff2.ogg` (el loop corto de Junio 2010 de `LolDemo1`) con `loop = true` desde el primer clic y lo repetia sin parar en el Menu Principal, el Teatro de Intro, `Z1S3`, `Z1S2`, `Z1S1` y el Museo, causando fatiga auditiva y rompiendo la atmosfera de cada cuarto.
+- **Arquitectura implementada ([AudioVoiceEngine.ts](file:///C:/AntiGravityStuff/Moonstorm2/src/engine/AudioVoiceEngine.ts) + [generate_room_soundtracks.py](file:///C:/AntiGravityStuff/Moonstorm2/tools/generate_room_soundtracks.py))**:
+  1. **6 Temas Estereo por Modelado Fisico (`Karplus-Strong`, lengüeta de concertina/acordeon, vibrafono con tremolo, contrabajo pizzicato y shakuhachi/shamisen) con puentes de respiracion ambiental de 16-20s integrados**:
+     - **`MENU` / `INTRO` (`menu_overture.wav`)**: *"The Ballad of Rupert & Morgan Stache"* - Vals comico neo-victoriano en Re menor (clavecin/laud punteado, contrabajo pizzicato y fagot).
+     - **`Z1S3` Camarote del Capitan Dread (`z1s3_dread_cabin.wav`)**: *"Ghost of Sardonia"* - Vals nautico lento en Do menor con concertina calida, guitarra acustica de nylon y celesta, seguido de un **puente de respiracion ambiental de 17 segundos** donde la melodia descansa y solo suenan el crujido del casco del submarino, el sonar lejano y armonicos suaves de guitarra.
+     - **`Z1S2` VIP Lounge (`z1s2_vip_lounge.wav`)**: *"Blackspit VIP Lounge"* - Cool-jazz/bossa de espionaje años 60 con vibrafono calido, escobillas suaves y un contrabajo caminante que cita sutilmente el ritmo de *Funky Town* (`C - C - Bb - C`) cada 8 compases como pista musical del puzzle de la boveda.
+     - **`Z1S1` Sala de Maquinas con Pedal Roto (`z1s1_engine_broken.wav`)**: *"Sweat & Shamisen in the Bilge"* - Vapor industrial y sentina burbujeante combinados con un motivo pentatonico japones *In-Sen* en shamisen/koto y flauta shakuhachi para **Nihongo Nohondes**.
+     - **`Z1S1` Sala de Maquinas con Maquina de Da Vinci Instalada (`z1s1_engine_triumph.wav`)**: *"Da Vinci's Clockwork Triumph"* - Marcha renacentista de relojeria (laud, clavecin y martillos ritmicos) al instalar la **Perpetual Movement Machine**.
+     - **`Z0` (`LOLDEMO` Spooky Paper Castle)**: Reproduce exclusivamente el tema original **`stuff2.ogg`** de Junio 2010 en su escenario canonico.
+  2. **Crossfade Suave y Ducking Inteligente (iMUSE)**:
+     - Transicion con fundido cruzado (`crossfade` de ~1.0s) al cambiar de habitacion.
+     - **Ducking automatico en dialogos**: Cuando cualquier personaje habla, la musica baja suavemente al `36%` para que las voces se escuchen claras y vuelve a subir al terminar.
+     - **Silencio automatico en el Teclado Musical *Funky Town* (`#puzzle-keypad-modal`)**: Al abrir el teclado de la boveda en `Z1S2`, la musica de fondo baja a `0%` para que las notas del sintetizador (`DO - DO - TIb - DO`) se escuchen sin interferencia armonica.
+  3. **Control Directo en el HUD (`♫ Score: ...` / Tecla `N`) y en Opciones**:
+     - Boton ciclico en la barra superior (`#btn-hud-music`, atajo **`N`**) y selector en Opciones (`#cfg-music-mode`) para alternar en cualquier momento entre:
+       1. **`Dynamic Room Score`** (cambia segun la habitacion + colchon de ambiente submarino),
+       2. **`Ambience Only`** (`sub_ambience.wav`: cero melodia, solo el rumor profundo del oceano, crujidos del casco, burbujas y sonar lejano),
+       3. **`2010 Classic`** (`stuff2.ogg`),
+       4. **`Muted`** (musica en silencio manteniendo voces y efectos).

@@ -1007,6 +1007,7 @@ export interface TimeCapsuleHost {
   playUiClick: (freq?: number) => void;
   playArchiveTrack: (trackFile: 'stuff2.ogg' | 'start_the_game.mp3') => void;
   stopArchiveTrack: () => void;
+  onOpenChange?: (isOpen: boolean) => void;
 }
 
 export class TimeCapsuleMuseum {
@@ -1097,6 +1098,7 @@ export class TimeCapsuleMuseum {
     const modal = document.getElementById('archive-museum-modal');
     if (!modal) return;
     modal.style.display = 'flex';
+    this.host.onOpenChange?.(true);
     this.setTab(initialTab);
     this.updateJukeboxButtons();
   }
@@ -1104,6 +1106,9 @@ export class TimeCapsuleMuseum {
   public close(): void {
     const modal = document.getElementById('archive-museum-modal');
     if (modal) modal.style.display = 'none';
+    this.currentTrack = null;
+    this.updateJukeboxButtons();
+    this.host.onOpenChange?.(false);
     this.closeLightbox();
   }
 
