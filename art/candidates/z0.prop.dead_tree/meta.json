@@ -1,0 +1,21 @@
+{
+  "id": "z0.prop.dead_tree",
+  "category": "z0",
+  "kind": "prop",
+  "what": "Z0 crooked spooky twisted leafless paper-cutout tree with gnarled branches and hollow knot hole",
+  "target_height_px": 460,
+  "height_fraction_of_smoothface": 1.46,
+  "pivot_hint": "bottom-center on Z0 hill",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/ref_z0_spook_castle_psd_composite.png",
+    "art/references/palette_scenery.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "approved",
+  "proposed_version": "v1",
+  "version": "v1",
+  "approved_version": "v1"
+}

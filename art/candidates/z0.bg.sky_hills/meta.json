@@ -1,0 +1,21 @@
+{
+  "id": "z0.bg.sky_hills",
+  "category": "z0",
+  "kind": "wall",
+  "what": "Z0 Tributo LolDemo1 layered construction paper rolling olive-sage hills and dusk sky backdrop",
+  "target_height_px": 560,
+  "height_fraction_of_smoothface": 1.778,
+  "pivot_hint": "top-left on Z0 backdrop",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/ref_z0_spook_castle_psd_composite.png",
+    "art/references/palette_scenery.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "approved",
+  "proposed_version": "v1",
+  "version": "v1",
+  "approved_version": "v1"
+}

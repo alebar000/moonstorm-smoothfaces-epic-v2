@@ -1669,6 +1669,86 @@
       "meta": "art/candidates/z1s1.fg.hull_ring_right/meta.json",
       "approved_at": "2026-10-23T18:36:51",
       "reason": "L22 Z1S1 approved (passes all gates and critics)"
+    },
+    "z0.bg.sky_hills": {
+      "path": "art/approved/z0/z0.bg.sky_hills.png",
+      "version": "v1",
+      "sha256": "6b57e7bbec4468b46d29244bdf0289efb35327fd8a838ee3508ee3fc84cfe2b1",
+      "category": "z0",
+      "kind": "wall",
+      "meta": "art/candidates/z0.bg.sky_hills/meta.json",
+      "approved_at": "2026-10-23T18:39:43",
+      "reason": "L23 Z0 Spooky Paper Castle approved (passes all gates and critics)"
+    },
+    "z0.prop.spooky_castle": {
+      "path": "art/approved/z0/z0.prop.spooky_castle.png",
+      "version": "v1",
+      "sha256": "1386cce7440f9f7c87c3e652b987f4d00f187de9f4245da7bae71c41557cfeab",
+      "category": "z0",
+      "kind": "prop",
+      "meta": "art/candidates/z0.prop.spooky_castle/meta.json",
+      "approved_at": "2026-10-23T18:39:43",
+      "reason": "L23 Z0 Spooky Paper Castle approved (passes all gates and critics)"
+    },
+    "z0.prop.castle_door": {
+      "path": "art/approved/z0/z0.prop.castle_door.png",
+      "version": "v1",
+      "sha256": "c8754961a1440e5c77d58035375f608b3adf6bcbce63e08c2d279d6fae627c7e",
+      "category": "z0",
+      "kind": "prop",
+      "meta": "art/candidates/z0.prop.castle_door/meta.json",
+      "approved_at": "2026-10-23T18:39:43",
+      "reason": "L23 Z0 Spooky Paper Castle approved (passes all gates and critics)"
+    },
+    "z0.prop.troll": {
+      "path": "art/approved/z0/z0.prop.troll.png",
+      "version": "v1",
+      "sha256": "3e1b73fbb98a40c81c7ab0a28cbb18c9438e99edcab21c84f1f36d4553755d53",
+      "category": "z0",
+      "kind": "prop",
+      "meta": "art/candidates/z0.prop.troll/meta.json",
+      "approved_at": "2026-10-23T18:39:43",
+      "reason": "L23 Z0 Spooky Paper Castle approved (passes all gates and critics)"
+    },
+    "z0.prop.two_faced_sun": {
+      "path": "art/approved/z0/z0.prop.two_faced_sun.png",
+      "version": "v1",
+      "sha256": "ff630e3417552dc716c503a50e93ad9894b2d8de1b51513622f46c92e05c8313",
+      "category": "z0",
+      "kind": "prop",
+      "meta": "art/candidates/z0.prop.two_faced_sun/meta.json",
+      "approved_at": "2026-10-23T18:39:43",
+      "reason": "L23 Z0 Spooky Paper Castle approved (passes all gates and critics)"
+    },
+    "z0.prop.paper_clouds": {
+      "path": "art/approved/z0/z0.prop.paper_clouds.png",
+      "version": "v1",
+      "sha256": "0b4d16871f8e3daf1089b29d6ca633fb2e491c8cf0d0c0f678374f7d095939fd",
+      "category": "z0",
+      "kind": "prop",
+      "meta": "art/candidates/z0.prop.paper_clouds/meta.json",
+      "approved_at": "2026-10-23T18:39:43",
+      "reason": "L23 Z0 Spooky Paper Castle approved (passes all gates and critics)"
+    },
+    "z0.prop.dead_tree": {
+      "path": "art/approved/z0/z0.prop.dead_tree.png",
+      "version": "v1",
+      "sha256": "9672197789a07d0c5c808fea1a363afa9ac6fa0cd221d6f7cbb8783284d14b0b",
+      "category": "z0",
+      "kind": "prop",
+      "meta": "art/candidates/z0.prop.dead_tree/meta.json",
+      "approved_at": "2026-10-23T18:39:43",
+      "reason": "L23 Z0 Spooky Paper Castle approved (passes all gates and critics)"
+    },
+    "z0.fg.hill_border": {
+      "path": "art/approved/z0/z0.fg.hill_border.png",
+      "version": "v1",
+      "sha256": "d239d057174ad5bbad438af2360680996c65303f8fd199798383fd712a3b8e33",
+      "category": "z0",
+      "kind": "foreground",
+      "meta": "art/candidates/z0.fg.hill_border/meta.json",
+      "approved_at": "2026-10-23T18:39:43",
+      "reason": "L23 Z0 Spooky Paper Castle approved (passes all gates and critics)"
     }
   },
   "superseded": [],
@@ -1782,6 +1862,14 @@
     "ventrilo.legs@v1@approved@2026-10-23T14:59:58",
     "ventrilo.shoes@v1@approved@2026-10-23T14:59:58",
     "ventrilo.torso@v1@approved@2026-10-23T14:59:58",
+    "z0.bg.sky_hills@v1@approved@2026-10-23T18:39:43",
+    "z0.fg.hill_border@v1@approved@2026-10-23T18:39:43",
+    "z0.prop.castle_door@v1@approved@2026-10-23T18:39:43",
+    "z0.prop.dead_tree@v1@approved@2026-10-23T18:39:43",
+    "z0.prop.paper_clouds@v1@approved@2026-10-23T18:39:43",
+    "z0.prop.spooky_castle@v1@approved@2026-10-23T18:39:43",
+    "z0.prop.troll@v1@approved@2026-10-23T18:39:43",
+    "z0.prop.two_faced_sun@v1@approved@2026-10-23T18:39:43",
     "z1s1.ceiling.rivet_arch@v1@approved@2026-10-23T18:36:51",
     "z1s1.fg.bilge_rat@v1@approved@2026-10-23T18:36:51",
     "z1s1.fg.broken_toaster@v1@approved@2026-10-23T18:36:51",

@@ -1,0 +1,21 @@
+{
+  "id": "z0.prop.two_faced_sun",
+  "category": "z0",
+  "kind": "prop",
+  "what": "Z0 iconic test-spook_castle.psd two-faced paper cutout sun/moon disc hanging from a string",
+  "target_height_px": 230,
+  "height_fraction_of_smoothface": 0.73,
+  "pivot_hint": "top-left hanging in Z0 sky",
+  "allowed_islands": 0,
+  "references": [
+    "art/references/ref_z0_spook_castle_psd_composite.png",
+    "art/references/palette_scenery.png"
+  ],
+  "versions": {
+    "v1": "prompt_v1.txt"
+  },
+  "status": "approved",
+  "proposed_version": "v1",
+  "version": "v1",
+  "approved_version": "v1"
+}

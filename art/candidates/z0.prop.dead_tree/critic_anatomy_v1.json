@@ -1,0 +1,8 @@
+{
+  "piece": "z0.prop.dead_tree",
+  "version": "v1",
+  "critic": "anatomy-critic",
+  "verdict": "sin_objeciones",
+  "defects": [],
+  "notes": "Calibrated to Z0 room proportions (target_height_px=460)."
+}

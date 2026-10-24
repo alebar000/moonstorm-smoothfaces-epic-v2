@@ -1,0 +1,178 @@
+{
+  "room": "z0",
+  "size": {
+    "w": 2400,
+    "h": 900
+  },
+  "camera": {
+    "viewport_w": 1600,
+    "viewport_h": 900,
+    "follow": "player",
+    "edge_scroll": true
+  },
+  "light": {
+    "x": 1200,
+    "y": 110
+  },
+  "planes": [
+    {
+      "id": "wall",
+      "parallax": 0.82
+    },
+    {
+      "id": "wall_props",
+      "parallax": 0.88
+    },
+    {
+      "id": "floor",
+      "parallax": 1.0,
+      "y_sort": true
+    },
+    {
+      "id": "foreground",
+      "parallax": 1.15
+    }
+  ],
+  "walkable": [
+    [
+      180,
+      680
+    ],
+    [
+      2220,
+      680
+    ],
+    [
+      2220,
+      860
+    ],
+    [
+      180,
+      860
+    ]
+  ],
+  "foot_baseline_y": 815,
+  "perspective_scale": {
+    "y_far": 680,
+    "scale_far": 0.9,
+    "y_near": 860,
+    "scale_near": 1.05
+  },
+  "objects": [
+    {
+      "id": "z0.bg.sky_hills_1",
+      "asset": "art/approved/z0/z0.bg.sky_hills.png",
+      "plane": "wall",
+      "x": 40,
+      "y": 60,
+      "scale": 1.0,
+      "anchor": "top-left",
+      "sort_y": 80
+    },
+    {
+      "id": "z0.bg.sky_hills_2",
+      "asset": "art/approved/z0/z0.bg.sky_hills.png",
+      "plane": "wall",
+      "x": 1180,
+      "y": 60,
+      "scale": 1.0,
+      "anchor": "top-left",
+      "sort_y": 82
+    },
+    {
+      "id": "z0.prop.two_faced_sun",
+      "asset": "art/approved/z0/z0.prop.two_faced_sun.png",
+      "plane": "wall_props",
+      "x": 660,
+      "y": 40,
+      "scale": 1.0,
+      "anchor": "top-left",
+      "sort_y": 110,
+      "interact": true
+    },
+    {
+      "id": "z0.prop.paper_clouds_1",
+      "asset": "art/approved/z0/z0.prop.paper_clouds.png",
+      "plane": "wall_props",
+      "x": 760,
+      "y": 50,
+      "scale": 1.0,
+      "anchor": "top-left",
+      "sort_y": 115
+    },
+    {
+      "id": "z0.prop.paper_clouds_2",
+      "asset": "art/approved/z0/z0.prop.paper_clouds.png",
+      "plane": "wall_props",
+      "x": 1680,
+      "y": 60,
+      "scale": 1.0,
+      "anchor": "top-left",
+      "sort_y": 116
+    },
+    {
+      "id": "z0.prop.spooky_castle",
+      "asset": "art/approved/z0/z0.prop.spooky_castle.png",
+      "plane": "floor",
+      "x": 1360,
+      "y": 730,
+      "scale": 1.0,
+      "anchor": "bottom-center",
+      "sort_y": 730,
+      "interact": true
+    },
+    {
+      "id": "z0.prop.castle_door",
+      "asset": "art/approved/z0/z0.prop.castle_door.png",
+      "plane": "floor",
+      "x": 1920,
+      "y": 745,
+      "scale": 1.0,
+      "anchor": "bottom-center",
+      "sort_y": 745,
+      "interact": true
+    },
+    {
+      "id": "z0.prop.dead_tree_left",
+      "asset": "art/approved/z0/z0.prop.dead_tree.png",
+      "plane": "floor",
+      "x": 320,
+      "y": 755,
+      "scale": 1.0,
+      "anchor": "bottom-center",
+      "sort_y": 755,
+      "interact": true
+    },
+    {
+      "id": "z0.prop.troll",
+      "asset": "art/approved/z0/z0.prop.troll.png",
+      "plane": "floor",
+      "x": 780,
+      "y": 775,
+      "scale": 1.0,
+      "anchor": "bottom-center",
+      "sort_y": 775,
+      "interact": true
+    },
+    {
+      "id": "z0.fg.hill_border_1",
+      "asset": "art/approved/z0/z0.fg.hill_border.png",
+      "plane": "foreground",
+      "x": 560,
+      "y": 895,
+      "scale": 1.0,
+      "anchor": "bottom-center",
+      "sort_y": 960
+    },
+    {
+      "id": "z0.fg.hill_border_2",
+      "asset": "art/approved/z0/z0.fg.hill_border.png",
+      "plane": "foreground",
+      "x": 1760,
+      "y": 895,
+      "scale": 1.0,
+      "anchor": "bottom-center",
+      "sort_y": 965
+    }
+  ]
+}
