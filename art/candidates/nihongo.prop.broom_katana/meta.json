@@ -2,20 +2,14 @@
   "id": "nihongo.prop.broom_katana",
   "category": "nihongo",
   "kind": "prop",
-  "what": "Nihongo Nohondes Janitor Katana-Broom hybrid prop: wrapped katana tsuka hilt and brass tsuba guard on a wooden broomstick with straw broom head",
+  "what": "Janitor push-broom modified with katana hilt and brass tsuba guard",
   "target_height_px": 250,
   "height_fraction_of_smoothface": 0.794,
-  "pivot_hint": "katana grip center above tsuba",
   "allowed_islands": 0,
   "references": [
     "art/references/palette_characters.png",
     "art/references/ref_z1s2_lobby_2010.png"
   ],
-  "versions": {
-    "v1": "prompt_v1.txt"
-  },
   "status": "proposed",
-  "proposed_version": "v1",
-  "version": "v1",
-  "approved_version": "v1"
+  "proposed_version": "v1"
 }

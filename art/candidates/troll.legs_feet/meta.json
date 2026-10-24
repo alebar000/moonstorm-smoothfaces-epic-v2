@@ -1,9 +1,14 @@
 {
-  "piece_id": "troll.legs_feet",
-  "status": "approved",
-  "selected_variant": "v1.png",
-  "size": [
-    128,
-    142
-  ]
+  "id": "troll.legs_feet",
+  "category": "z0",
+  "kind": "body_part",
+  "what": "Stumpy green paper ogre legs in dark breeches with 3-toed feet",
+  "target_height_px": 135,
+  "height_fraction_of_smoothface": 0.429,
+  "allowed_islands": 0,
+  "references": [
+    "ref_canonical_2010"
+  ],
+  "status": "proposed",
+  "proposed_version": "v1"
 }

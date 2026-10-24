@@ -1,9 +1,14 @@
 {
-  "piece_id": "z1s1.wall.caged_lamp",
-  "status": "approved",
-  "selected_variant": "v1.png",
-  "size": [
-    83,
-    138
-  ]
+  "id": "z1s1.wall.caged_lamp",
+  "category": "z1s1",
+  "kind": "prop",
+  "what": "Oval industrial submarine bulkhead caged lamp",
+  "target_height_px": 120,
+  "height_fraction_of_smoothface": 0.381,
+  "allowed_islands": 0,
+  "references": [
+    "ref_canonical_2010"
+  ],
+  "status": "proposed",
+  "proposed_version": "v1"
 }

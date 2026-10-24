@@ -1,8 +1,4 @@
 {
-  "piece": "nihongo.eyes.normal",
-  "version": "v1",
-  "critic": "anatomy-critic",
   "verdict": "sin_objeciones",
-  "defects": [],
-  "notes": "Calibrated to Nihongo 300px rig proportions (target_height_px=26) with clean transparent cutout silhouette."
+  "defects": []
 }

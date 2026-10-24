@@ -1,8 +1,4 @@
 {
-  "piece": "ababy.torso",
-  "version": "v1",
-  "critic": "anatomy-critic",
   "verdict": "sin_objeciones",
-  "defects": [],
-  "notes": "Calibrated to A Baby 270px rig proportions (target_height_px=146)."
+  "defects": []
 }

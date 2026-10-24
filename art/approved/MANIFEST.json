@@ -7,8 +7,8 @@
       "category": "palette",
       "kind": "ui",
       "meta": "art/candidates/palette.characters/meta.json",
-      "approved_at": "2026-10-21T21:26:19",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "palette.scenery": {
       "path": "art/approved/palette/palette.scenery.png",
@@ -17,8 +17,8 @@
       "category": "palette",
       "kind": "ui",
       "meta": "art/candidates/palette.scenery/meta.json",
-      "approved_at": "2026-10-21T21:38:16",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "smoothface.torso": {
       "path": "art/approved/smoothface/smoothface.torso.png",
@@ -27,8 +27,8 @@
       "category": "smoothface",
       "kind": "body_part",
       "meta": "art/candidates/smoothface.torso/meta.json",
-      "approved_at": "2026-10-21T22:24:07",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s3.prop.sarcophagus": {
       "path": "art/approved/z1s3/z1s3.prop.sarcophagus.png",
@@ -37,8 +37,8 @@
       "category": "z1s3",
       "kind": "prop",
       "meta": "art/candidates/z1s3.prop.sarcophagus/meta.json",
-      "approved_at": "2026-10-21T22:24:10",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s3.wall.panel_a": {
       "path": "art/approved/z1s3/z1s3.wall.panel_a.png",
@@ -47,8 +47,8 @@
       "category": "z1s3",
       "kind": "wall",
       "meta": "art/candidates/z1s3.wall.panel_a/meta.json",
-      "approved_at": "2026-10-21T22:24:16",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "smoothface.brows.angry": {
       "path": "art/approved/smoothface/smoothface.brows.angry.png",
@@ -57,8 +57,8 @@
       "category": "smoothface",
       "kind": "body_part",
       "meta": "art/candidates/smoothface.brows.angry/meta.json",
-      "approved_at": "2026-10-21T23:35:34",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "smoothface.brows.surprised": {
       "path": "art/approved/smoothface/smoothface.brows.surprised.png",
@@ -67,8 +67,8 @@
       "category": "smoothface",
       "kind": "body_part",
       "meta": "art/candidates/smoothface.brows.surprised/meta.json",
-      "approved_at": "2026-10-21T23:35:52",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "smoothface.eyes.closed": {
       "path": "art/approved/smoothface/smoothface.eyes.closed.png",
@@ -77,8 +77,8 @@
       "category": "smoothface",
       "kind": "body_part",
       "meta": "art/candidates/smoothface.eyes.closed/meta.json",
-      "approved_at": "2026-10-21T23:35:54",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "smoothface.eyes.normal": {
       "path": "art/approved/smoothface/smoothface.eyes.normal.png",
@@ -87,8 +87,8 @@
       "category": "smoothface",
       "kind": "body_part",
       "meta": "art/candidates/smoothface.eyes.normal/meta.json",
-      "approved_at": "2026-10-21T23:35:55",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "smoothface.eyes.squint": {
       "path": "art/approved/smoothface/smoothface.eyes.squint.png",
@@ -97,8 +97,8 @@
       "category": "smoothface",
       "kind": "body_part",
       "meta": "art/candidates/smoothface.eyes.squint/meta.json",
-      "approved_at": "2026-10-21T23:35:57",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "smoothface.head": {
       "path": "art/approved/smoothface/smoothface.head.png",
@@ -107,8 +107,8 @@
       "category": "smoothface",
       "kind": "body_part",
       "meta": "art/candidates/smoothface.head/meta.json",
-      "approved_at": "2026-10-21T23:35:58",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "smoothface.arm_front": {
       "path": "art/approved/smoothface/smoothface.arm_front.png",
@@ -117,8 +117,8 @@
       "category": "smoothface",
       "kind": "body_part",
       "meta": "art/candidates/smoothface.arm_front/meta.json",
-      "approved_at": "2026-10-22T07:41:03",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "smoothface.brows.normal": {
       "path": "art/approved/smoothface/smoothface.brows.normal.png",
@@ -127,8 +127,8 @@
       "category": "smoothface",
       "kind": "body_part",
       "meta": "art/candidates/smoothface.brows.normal/meta.json",
-      "approved_at": "2026-10-22T07:41:05",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "smoothface.leg_back": {
       "path": "art/approved/smoothface/smoothface.leg_back.png",
@@ -137,8 +137,8 @@
       "category": "smoothface",
       "kind": "body_part",
       "meta": "art/candidates/smoothface.leg_back/meta.json",
-      "approved_at": "2026-10-22T07:41:42",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "smoothface.leg_front": {
       "path": "art/approved/smoothface/smoothface.leg_front.png",
@@ -147,8 +147,8 @@
       "category": "smoothface",
       "kind": "body_part",
       "meta": "art/candidates/smoothface.leg_front/meta.json",
-      "approved_at": "2026-10-22T07:41:43",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "smoothface.pants": {
       "path": "art/approved/smoothface/smoothface.pants.png",
@@ -157,8 +157,8 @@
       "category": "smoothface",
       "kind": "body_part",
       "meta": "art/candidates/smoothface.pants/meta.json",
-      "approved_at": "2026-10-22T07:41:44",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "smoothface.arm_back": {
       "path": "art/approved/smoothface/smoothface.arm_back.png",
@@ -167,8 +167,8 @@
       "category": "smoothface",
       "kind": "body_part",
       "meta": "art/candidates/smoothface.arm_back/meta.json",
-      "approved_at": "2026-10-22T15:56:20",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "smoothface.hand_back.fist": {
       "path": "art/approved/smoothface/smoothface.hand_back.fist.png",
@@ -177,8 +177,8 @@
       "category": "smoothface",
       "kind": "body_part",
       "meta": "art/candidates/smoothface.hand_back.fist/meta.json",
-      "approved_at": "2026-10-22T15:56:22",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "smoothface.hand_back.open": {
       "path": "art/approved/smoothface/smoothface.hand_back.open.png",
@@ -187,8 +187,8 @@
       "category": "smoothface",
       "kind": "body_part",
       "meta": "art/candidates/smoothface.hand_back.open/meta.json",
-      "approved_at": "2026-10-22T15:56:23",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "smoothface.hand_front.fist": {
       "path": "art/approved/smoothface/smoothface.hand_front.fist.png",
@@ -197,8 +197,8 @@
       "category": "smoothface",
       "kind": "body_part",
       "meta": "art/candidates/smoothface.hand_front.fist/meta.json",
-      "approved_at": "2026-10-22T15:56:24",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "smoothface.hand_front.open": {
       "path": "art/approved/smoothface/smoothface.hand_front.open.png",
@@ -207,8 +207,8 @@
       "category": "smoothface",
       "kind": "body_part",
       "meta": "art/candidates/smoothface.hand_front.open/meta.json",
-      "approved_at": "2026-10-22T15:56:29",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "smoothface.hand_front.point": {
       "path": "art/approved/smoothface/smoothface.hand_front.point.png",
@@ -217,8 +217,8 @@
       "category": "smoothface",
       "kind": "body_part",
       "meta": "art/candidates/smoothface.hand_front.point/meta.json",
-      "approved_at": "2026-10-22T15:56:30",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "smoothface.shoe_back": {
       "path": "art/approved/smoothface/smoothface.shoe_back.png",
@@ -227,8 +227,8 @@
       "category": "smoothface",
       "kind": "body_part",
       "meta": "art/candidates/smoothface.shoe_back/meta.json",
-      "approved_at": "2026-10-22T15:56:32",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "smoothface.shoe_front": {
       "path": "art/approved/smoothface/smoothface.shoe_front.png",
@@ -237,8 +237,8 @@
       "category": "smoothface",
       "kind": "body_part",
       "meta": "art/candidates/smoothface.shoe_front/meta.json",
-      "approved_at": "2026-10-22T15:56:32",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "capdread.arm_back": {
       "path": "art/approved/capdread/capdread.arm_back.png",
@@ -247,8 +247,8 @@
       "category": "capdread",
       "kind": "body_part",
       "meta": "art/candidates/capdread.arm_back/meta.json",
-      "approved_at": "2026-10-22T20:16:23",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "capdread.arm_front": {
       "path": "art/approved/capdread/capdread.arm_front.png",
@@ -257,8 +257,8 @@
       "category": "capdread",
       "kind": "body_part",
       "meta": "art/candidates/capdread.arm_front/meta.json",
-      "approved_at": "2026-10-22T20:16:24",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "capdread.beard": {
       "path": "art/approved/capdread/capdread.beard.png",
@@ -267,8 +267,8 @@
       "category": "capdread",
       "kind": "body_part",
       "meta": "art/candidates/capdread.beard/meta.json",
-      "approved_at": "2026-10-22T20:16:24",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "capdread.boot_back": {
       "path": "art/approved/capdread/capdread.boot_back.png",
@@ -277,8 +277,8 @@
       "category": "capdread",
       "kind": "body_part",
       "meta": "art/candidates/capdread.boot_back/meta.json",
-      "approved_at": "2026-10-22T20:16:25",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "capdread.boot_front": {
       "path": "art/approved/capdread/capdread.boot_front.png",
@@ -287,8 +287,8 @@
       "category": "capdread",
       "kind": "body_part",
       "meta": "art/candidates/capdread.boot_front/meta.json",
-      "approved_at": "2026-10-22T20:16:25",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "capdread.brows.angry": {
       "path": "art/approved/capdread/capdread.brows.angry.png",
@@ -297,8 +297,8 @@
       "category": "capdread",
       "kind": "body_part",
       "meta": "art/candidates/capdread.brows.angry/meta.json",
-      "approved_at": "2026-10-22T20:16:26",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "capdread.brows.normal": {
       "path": "art/approved/capdread/capdread.brows.normal.png",
@@ -307,8 +307,8 @@
       "category": "capdread",
       "kind": "body_part",
       "meta": "art/candidates/capdread.brows.normal/meta.json",
-      "approved_at": "2026-10-22T20:16:27",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "capdread.brows.surprised": {
       "path": "art/approved/capdread/capdread.brows.surprised.png",
@@ -317,8 +317,8 @@
       "category": "capdread",
       "kind": "body_part",
       "meta": "art/candidates/capdread.brows.surprised/meta.json",
-      "approved_at": "2026-10-22T20:16:29",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "capdread.eyes.closed": {
       "path": "art/approved/capdread/capdread.eyes.closed.png",
@@ -327,8 +327,8 @@
       "category": "capdread",
       "kind": "body_part",
       "meta": "art/candidates/capdread.eyes.closed/meta.json",
-      "approved_at": "2026-10-22T20:16:30",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "capdread.eyes.normal": {
       "path": "art/approved/capdread/capdread.eyes.normal.png",
@@ -337,8 +337,8 @@
       "category": "capdread",
       "kind": "body_part",
       "meta": "art/candidates/capdread.eyes.normal/meta.json",
-      "approved_at": "2026-10-22T20:16:35",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "capdread.eyes.squint": {
       "path": "art/approved/capdread/capdread.eyes.squint.png",
@@ -347,8 +347,8 @@
       "category": "capdread",
       "kind": "body_part",
       "meta": "art/candidates/capdread.eyes.squint/meta.json",
-      "approved_at": "2026-10-22T20:16:37",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "capdread.hand_back.fist": {
       "path": "art/approved/capdread/capdread.hand_back.fist.png",
@@ -357,8 +357,8 @@
       "category": "capdread",
       "kind": "body_part",
       "meta": "art/candidates/capdread.hand_back.fist/meta.json",
-      "approved_at": "2026-10-22T20:16:43",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "capdread.hand_front.fist": {
       "path": "art/approved/capdread/capdread.hand_front.fist.png",
@@ -367,8 +367,8 @@
       "category": "capdread",
       "kind": "body_part",
       "meta": "art/candidates/capdread.hand_front.fist/meta.json",
-      "approved_at": "2026-10-22T20:17:05",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "capdread.head": {
       "path": "art/approved/capdread/capdread.head.png",
@@ -377,8 +377,8 @@
       "category": "capdread",
       "kind": "body_part",
       "meta": "art/candidates/capdread.head/meta.json",
-      "approved_at": "2026-10-22T20:18:10",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "capdread.leg_back": {
       "path": "art/approved/capdread/capdread.leg_back.png",
@@ -387,8 +387,8 @@
       "category": "capdread",
       "kind": "body_part",
       "meta": "art/candidates/capdread.leg_back/meta.json",
-      "approved_at": "2026-10-22T20:18:11",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "capdread.leg_front": {
       "path": "art/approved/capdread/capdread.leg_front.png",
@@ -397,8 +397,8 @@
       "category": "capdread",
       "kind": "body_part",
       "meta": "art/candidates/capdread.leg_front/meta.json",
-      "approved_at": "2026-10-22T20:18:12",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "capdread.pants": {
       "path": "art/approved/capdread/capdread.pants.png",
@@ -407,8 +407,8 @@
       "category": "capdread",
       "kind": "body_part",
       "meta": "art/candidates/capdread.pants/meta.json",
-      "approved_at": "2026-10-22T20:18:12",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "capdread.torso": {
       "path": "art/approved/capdread/capdread.torso.png",
@@ -417,8 +417,8 @@
       "category": "capdread",
       "kind": "body_part",
       "meta": "art/candidates/capdread.torso/meta.json",
-      "approved_at": "2026-10-22T20:18:14",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "smoothface.emotion.anger_vein": {
       "path": "art/approved/smoothface/smoothface.emotion.anger_vein.png",
@@ -427,8 +427,8 @@
       "category": "smoothface",
       "kind": "emotion",
       "meta": "art/candidates/smoothface.emotion.anger_vein/meta.json",
-      "approved_at": "2026-10-22T20:18:21",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "smoothface.emotion.exclamation": {
       "path": "art/approved/smoothface/smoothface.emotion.exclamation.png",
@@ -437,8 +437,8 @@
       "category": "smoothface",
       "kind": "emotion",
       "meta": "art/candidates/smoothface.emotion.exclamation/meta.json",
-      "approved_at": "2026-10-22T20:18:22",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "smoothface.emotion.idea_bulb": {
       "path": "art/approved/smoothface/smoothface.emotion.idea_bulb.png",
@@ -447,8 +447,8 @@
       "category": "smoothface",
       "kind": "emotion",
       "meta": "art/candidates/smoothface.emotion.idea_bulb/meta.json",
-      "approved_at": "2026-10-22T20:18:23",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "smoothface.emotion.question_mark": {
       "path": "art/approved/smoothface/smoothface.emotion.question_mark.png",
@@ -457,8 +457,8 @@
       "category": "smoothface",
       "kind": "emotion",
       "meta": "art/candidates/smoothface.emotion.question_mark/meta.json",
-      "approved_at": "2026-10-22T20:18:23",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "smoothface.emotion.sweat_drop": {
       "path": "art/approved/smoothface/smoothface.emotion.sweat_drop.png",
@@ -467,8 +467,8 @@
       "category": "smoothface",
       "kind": "emotion",
       "meta": "art/candidates/smoothface.emotion.sweat_drop/meta.json",
-      "approved_at": "2026-10-22T20:18:24",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "smoothface.hand_back.point": {
       "path": "art/approved/smoothface/smoothface.hand_back.point.png",
@@ -477,8 +477,8 @@
       "category": "smoothface",
       "kind": "body_part",
       "meta": "art/candidates/smoothface.hand_back.point/meta.json",
-      "approved_at": "2026-10-22T20:18:27",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "smoothface.prop.magnifying_glass": {
       "path": "art/approved/smoothface/smoothface.prop.magnifying_glass.png",
@@ -487,8 +487,8 @@
       "category": "smoothface",
       "kind": "prop",
       "meta": "art/candidates/smoothface.prop.magnifying_glass/meta.json",
-      "approved_at": "2026-10-22T20:18:28",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "smoothface.prop.skeleton_key": {
       "path": "art/approved/smoothface/smoothface.prop.skeleton_key.png",
@@ -497,8 +497,8 @@
       "category": "smoothface",
       "kind": "prop",
       "meta": "art/candidates/smoothface.prop.skeleton_key/meta.json",
-      "approved_at": "2026-10-22T20:18:28",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s3.ceiling.beam_a": {
       "path": "art/approved/z1s3/z1s3.ceiling.beam_a.png",
@@ -507,8 +507,8 @@
       "category": "z1s3",
       "kind": "wall",
       "meta": "art/candidates/z1s3.ceiling.beam_a/meta.json",
-      "approved_at": "2026-10-22T20:18:33",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s3.ceiling.beam_b": {
       "path": "art/approved/z1s3/z1s3.ceiling.beam_b.png",
@@ -517,8 +517,8 @@
       "category": "z1s3",
       "kind": "wall",
       "meta": "art/candidates/z1s3.ceiling.beam_b/meta.json",
-      "approved_at": "2026-10-22T20:18:36",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s3.floor.planks_a": {
       "path": "art/approved/z1s3/z1s3.floor.planks_a.png",
@@ -527,8 +527,8 @@
       "category": "z1s3",
       "kind": "floor",
       "meta": "art/candidates/z1s3.floor.planks_a/meta.json",
-      "approved_at": "2026-10-22T20:18:36",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s3.floor.planks_b": {
       "path": "art/approved/z1s3/z1s3.floor.planks_b.png",
@@ -537,8 +537,8 @@
       "category": "z1s3",
       "kind": "floor",
       "meta": "art/candidates/z1s3.floor.planks_b/meta.json",
-      "approved_at": "2026-10-22T20:18:37",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s3.prop.coat": {
       "path": "art/approved/z1s3/z1s3.prop.coat.png",
@@ -547,8 +547,8 @@
       "category": "z1s3",
       "kind": "prop",
       "meta": "art/candidates/z1s3.prop.coat/meta.json",
-      "approved_at": "2026-10-22T20:18:41",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s3.prop.coat_rack": {
       "path": "art/approved/z1s3/z1s3.prop.coat_rack.png",
@@ -557,8 +557,8 @@
       "category": "z1s3",
       "kind": "prop",
       "meta": "art/candidates/z1s3.prop.coat_rack/meta.json",
-      "approved_at": "2026-10-22T20:18:44",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s3.prop.desk": {
       "path": "art/approved/z1s3/z1s3.prop.desk.png",
@@ -567,8 +567,8 @@
       "category": "z1s3",
       "kind": "prop",
       "meta": "art/candidates/z1s3.prop.desk/meta.json",
-      "approved_at": "2026-10-22T20:18:45",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s3.prop.fishbowl": {
       "path": "art/approved/z1s3/z1s3.prop.fishbowl.png",
@@ -577,8 +577,8 @@
       "category": "z1s3",
       "kind": "prop",
       "meta": "art/candidates/z1s3.prop.fishbowl/meta.json",
-      "approved_at": "2026-10-22T20:18:47",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s3.prop.hat": {
       "path": "art/approved/z1s3/z1s3.prop.hat.png",
@@ -587,8 +587,8 @@
       "category": "z1s3",
       "kind": "prop",
       "meta": "art/candidates/z1s3.prop.hat/meta.json",
-      "approved_at": "2026-10-22T20:18:48",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s3.prop.nightstand": {
       "path": "art/approved/z1s3/z1s3.prop.nightstand.png",
@@ -597,8 +597,8 @@
       "category": "z1s3",
       "kind": "prop",
       "meta": "art/candidates/z1s3.prop.nightstand/meta.json",
-      "approved_at": "2026-10-22T20:18:49",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s3.prop.tv": {
       "path": "art/approved/z1s3/z1s3.prop.tv.png",
@@ -607,8 +607,8 @@
       "category": "z1s3",
       "kind": "prop",
       "meta": "art/candidates/z1s3.prop.tv/meta.json",
-      "approved_at": "2026-10-22T20:18:49",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s3.wall.door": {
       "path": "art/approved/z1s3/z1s3.wall.door.png",
@@ -617,8 +617,8 @@
       "category": "z1s3",
       "kind": "wall",
       "meta": "art/candidates/z1s3.wall.door/meta.json",
-      "approved_at": "2026-10-22T20:18:50",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s3.wall.helm_wheel": {
       "path": "art/approved/z1s3/z1s3.wall.helm_wheel.png",
@@ -627,8 +627,8 @@
       "category": "z1s3",
       "kind": "wall",
       "meta": "art/candidates/z1s3.wall.helm_wheel/meta.json",
-      "approved_at": "2026-10-22T20:18:51",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s3.wall.mask_a": {
       "path": "art/approved/z1s3/z1s3.wall.mask_a.png",
@@ -637,8 +637,8 @@
       "category": "z1s3",
       "kind": "wall",
       "meta": "art/candidates/z1s3.wall.mask_a/meta.json",
-      "approved_at": "2026-10-22T20:18:52",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s3.wall.mask_b": {
       "path": "art/approved/z1s3/z1s3.wall.mask_b.png",
@@ -647,8 +647,8 @@
       "category": "z1s3",
       "kind": "wall",
       "meta": "art/candidates/z1s3.wall.mask_b/meta.json",
-      "approved_at": "2026-10-22T20:18:52",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s3.wall.panel_b": {
       "path": "art/approved/z1s3/z1s3.wall.panel_b.png",
@@ -657,8 +657,8 @@
       "category": "z1s3",
       "kind": "wall",
       "meta": "art/candidates/z1s3.wall.panel_b/meta.json",
-      "approved_at": "2026-10-22T20:18:56",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s3.wall.panel_c": {
       "path": "art/approved/z1s3/z1s3.wall.panel_c.png",
@@ -667,8 +667,8 @@
       "category": "z1s3",
       "kind": "wall",
       "meta": "art/candidates/z1s3.wall.panel_c/meta.json",
-      "approved_at": "2026-10-22T20:18:57",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s3.wall.pipes": {
       "path": "art/approved/z1s3/z1s3.wall.pipes.png",
@@ -677,8 +677,8 @@
       "category": "z1s3",
       "kind": "wall",
       "meta": "art/candidates/z1s3.wall.pipes/meta.json",
-      "approved_at": "2026-10-22T20:18:57",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s3.wall.porthole": {
       "path": "art/approved/z1s3/z1s3.wall.porthole.png",
@@ -687,8 +687,8 @@
       "category": "z1s3",
       "kind": "wall",
       "meta": "art/candidates/z1s3.wall.porthole/meta.json",
-      "approved_at": "2026-10-22T20:18:58",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s3.wall.poster": {
       "path": "art/approved/z1s3/z1s3.wall.poster.png",
@@ -697,8 +697,8 @@
       "category": "z1s3",
       "kind": "wall",
       "meta": "art/candidates/z1s3.wall.poster/meta.json",
-      "approved_at": "2026-10-22T20:19:00",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s3.wall.seam_strip": {
       "path": "art/approved/z1s3/z1s3.wall.seam_strip.png",
@@ -707,8 +707,8 @@
       "category": "z1s3",
       "kind": "wall",
       "meta": "art/candidates/z1s3.wall.seam_strip/meta.json",
-      "approved_at": "2026-10-22T20:19:00",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s3.wall.shelf": {
       "path": "art/approved/z1s3/z1s3.wall.shelf.png",
@@ -717,8 +717,8 @@
       "category": "z1s3",
       "kind": "wall",
       "meta": "art/candidates/z1s3.wall.shelf/meta.json",
-      "approved_at": "2026-10-22T20:19:02",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "capdread.hand_back.open": {
       "path": "art/approved/capdread/capdread.hand_back.open.png",
@@ -727,8 +727,8 @@
       "category": "capdread",
       "kind": "body_part",
       "meta": "art/candidates/capdread.hand_back.open/meta.json",
-      "approved_at": "2026-10-22T20:53:39",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "capdread.hand_front.open": {
       "path": "art/approved/capdread/capdread.hand_front.open.png",
@@ -737,8 +737,8 @@
       "category": "capdread",
       "kind": "body_part",
       "meta": "art/candidates/capdread.hand_front.open/meta.json",
-      "approved_at": "2026-10-22T20:53:40",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "capdread.hand_front.point": {
       "path": "art/approved/capdread/capdread.hand_front.point.png",
@@ -747,8 +747,8 @@
       "category": "capdread",
       "kind": "body_part",
       "meta": "art/candidates/capdread.hand_front.point/meta.json",
-      "approved_at": "2026-10-22T20:53:40",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "capdread.hat": {
       "path": "art/approved/capdread/capdread.hat.png",
@@ -757,8 +757,8 @@
       "category": "capdread",
       "kind": "body_part",
       "meta": "art/candidates/capdread.hat/meta.json",
-      "approved_at": "2026-10-22T20:53:41",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "intro.bg.barbershop": {
       "path": "art/approved/intro/intro.bg.barbershop.png",
@@ -767,8 +767,8 @@
       "category": "intro",
       "kind": "wall",
       "meta": "art/candidates/intro.bg.barbershop/meta.json",
-      "approved_at": "2026-10-22T23:33:43",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "intro.bg.blackspit_dock": {
       "path": "art/approved/intro/intro.bg.blackspit_dock.png",
@@ -777,8 +777,8 @@
       "category": "intro",
       "kind": "wall",
       "meta": "art/candidates/intro.bg.blackspit_dock/meta.json",
-      "approved_at": "2026-10-22T23:33:44",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "intro.bg.cabin_ambush": {
       "path": "art/approved/intro/intro.bg.cabin_ambush.png",
@@ -787,8 +787,8 @@
       "category": "intro",
       "kind": "wall",
       "meta": "art/candidates/intro.bg.cabin_ambush/meta.json",
-      "approved_at": "2026-10-22T23:33:45",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "intro.bg.envy_mirror": {
       "path": "art/approved/intro/intro.bg.envy_mirror.png",
@@ -797,8 +797,8 @@
       "category": "intro",
       "kind": "wall",
       "meta": "art/candidates/intro.bg.envy_mirror/meta.json",
-      "approved_at": "2026-10-22T23:33:48",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "intro.curtain": {
       "path": "art/approved/intro/intro.curtain.png",
@@ -807,8 +807,8 @@
       "category": "intro",
       "kind": "foreground",
       "meta": "art/candidates/intro.curtain/meta.json",
-      "approved_at": "2026-10-22T23:33:52",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "intro.proscenium": {
       "path": "art/approved/intro/intro.proscenium.png",
@@ -817,8 +817,8 @@
       "category": "intro",
       "kind": "foreground",
       "meta": "art/candidates/intro.proscenium/meta.json",
-      "approved_at": "2026-10-22T23:33:53",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "ui.action.inspect": {
       "path": "art/approved/ui/ui.action.inspect.png",
@@ -827,8 +827,8 @@
       "category": "ui",
       "kind": "prop",
       "meta": "art/candidates/ui.action.inspect/meta.json",
-      "approved_at": "2026-10-22T23:34:01",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "ui.action.talk": {
       "path": "art/approved/ui/ui.action.talk.png",
@@ -837,8 +837,8 @@
       "category": "ui",
       "kind": "prop",
       "meta": "art/candidates/ui.action.talk/meta.json",
-      "approved_at": "2026-10-22T23:34:03",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "ui.action.use": {
       "path": "art/approved/ui/ui.action.use.png",
@@ -847,8 +847,8 @@
       "category": "ui",
       "kind": "prop",
       "meta": "art/candidates/ui.action.use/meta.json",
-      "approved_at": "2026-10-22T23:34:06",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "ui.button_plate": {
       "path": "art/approved/ui/ui.button_plate.png",
@@ -857,8 +857,8 @@
       "category": "ui",
       "kind": "prop",
       "meta": "art/candidates/ui.button_plate/meta.json",
-      "approved_at": "2026-10-22T23:34:09",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "ui.cursor.default": {
       "path": "art/approved/ui/ui.cursor.default.png",
@@ -867,8 +867,8 @@
       "category": "ui",
       "kind": "prop",
       "meta": "art/candidates/ui.cursor.default/meta.json",
-      "approved_at": "2026-10-22T23:34:10",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "ui.cursor.interact": {
       "path": "art/approved/ui/ui.cursor.interact.png",
@@ -877,8 +877,8 @@
       "category": "ui",
       "kind": "prop",
       "meta": "art/candidates/ui.cursor.interact/meta.json",
-      "approved_at": "2026-10-22T23:34:12",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "ui.portrait_frame": {
       "path": "art/approved/ui/ui.portrait_frame.png",
@@ -887,8 +887,8 @@
       "category": "ui",
       "kind": "prop",
       "meta": "art/candidates/ui.portrait_frame/meta.json",
-      "approved_at": "2026-10-22T23:34:14",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "ui.scroll_banner": {
       "path": "art/approved/ui/ui.scroll_banner.png",
@@ -897,8 +897,8 @@
       "category": "ui",
       "kind": "prop",
       "meta": "art/candidates/ui.scroll_banner/meta.json",
-      "approved_at": "2026-10-22T23:34:15",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "ui.slot_frame": {
       "path": "art/approved/ui/ui.slot_frame.png",
@@ -907,8 +907,8 @@
       "category": "ui",
       "kind": "prop",
       "meta": "art/candidates/ui.slot_frame/meta.json",
-      "approved_at": "2026-10-22T23:34:16",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s3.fg.card_table": {
       "path": "art/approved/z1s3/z1s3.fg.card_table.png",
@@ -917,8 +917,8 @@
       "category": "z1s3",
       "kind": "foreground",
       "meta": "art/candidates/z1s3.fg.card_table/meta.json",
-      "approved_at": "2026-10-22T23:34:18",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s3.fg.chest": {
       "path": "art/approved/z1s3/z1s3.fg.chest.png",
@@ -927,8 +927,8 @@
       "category": "z1s3",
       "kind": "foreground",
       "meta": "art/candidates/z1s3.fg.chest/meta.json",
-      "approved_at": "2026-10-22T23:34:19",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s3.fg.clown_bust": {
       "path": "art/approved/z1s3/z1s3.fg.clown_bust.png",
@@ -937,8 +937,8 @@
       "category": "z1s3",
       "kind": "foreground",
       "meta": "art/candidates/z1s3.fg.clown_bust/meta.json",
-      "approved_at": "2026-10-22T23:34:22",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s3.fg.hull_rib_left": {
       "path": "art/approved/z1s3/z1s3.fg.hull_rib_left.png",
@@ -947,8 +947,8 @@
       "category": "z1s3",
       "kind": "foreground",
       "meta": "art/candidates/z1s3.fg.hull_rib_left/meta.json",
-      "approved_at": "2026-10-22T23:34:23",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s3.fg.hull_rib_right": {
       "path": "art/approved/z1s3/z1s3.fg.hull_rib_right.png",
@@ -957,8 +957,8 @@
       "category": "z1s3",
       "kind": "foreground",
       "meta": "art/candidates/z1s3.fg.hull_rib_right/meta.json",
-      "approved_at": "2026-10-22T23:34:24",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s3.fg.ship_in_bottle": {
       "path": "art/approved/z1s3/z1s3.fg.ship_in_bottle.png",
@@ -967,8 +967,8 @@
       "category": "z1s3",
       "kind": "foreground",
       "meta": "art/candidates/z1s3.fg.ship_in_bottle/meta.json",
-      "approved_at": "2026-10-22T23:34:25",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s3.fg.voodoo_doll": {
       "path": "art/approved/z1s3/z1s3.fg.voodoo_doll.png",
@@ -977,8 +977,8 @@
       "category": "z1s3",
       "kind": "foreground",
       "meta": "art/candidates/z1s3.fg.voodoo_doll/meta.json",
-      "approved_at": "2026-10-22T23:34:29",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s3.prop.bed": {
       "path": "art/approved/z1s3/z1s3.prop.bed.png",
@@ -987,8 +987,8 @@
       "category": "z1s3",
       "kind": "prop",
       "meta": "art/candidates/z1s3.prop.bed/meta.json",
-      "approved_at": "2026-10-22T23:34:31",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s3.prop.dirty_laundry": {
       "path": "art/approved/z1s3/z1s3.prop.dirty_laundry.png",
@@ -997,8 +997,8 @@
       "category": "z1s3",
       "kind": "prop",
       "meta": "art/candidates/z1s3.prop.dirty_laundry/meta.json",
-      "approved_at": "2026-10-22T23:34:32",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s3.prop.easel_portrait": {
       "path": "art/approved/z1s3/z1s3.prop.easel_portrait.png",
@@ -1007,8 +1007,8 @@
       "category": "z1s3",
       "kind": "prop",
       "meta": "art/candidates/z1s3.prop.easel_portrait/meta.json",
-      "approved_at": "2026-10-22T23:34:33",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s3.prop.glue": {
       "path": "art/approved/z1s3/z1s3.prop.glue.png",
@@ -1017,8 +1017,8 @@
       "category": "z1s3",
       "kind": "prop",
       "meta": "art/candidates/z1s3.prop.glue/meta.json",
-      "approved_at": "2026-10-22T23:34:33",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s3.prop.hammer_bag": {
       "path": "art/approved/z1s3/z1s3.prop.hammer_bag.png",
@@ -1027,8 +1027,8 @@
       "category": "z1s3",
       "kind": "prop",
       "meta": "art/candidates/z1s3.prop.hammer_bag/meta.json",
-      "approved_at": "2026-10-22T23:34:35",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s3.prop.lamp": {
       "path": "art/approved/z1s3/z1s3.prop.lamp.png",
@@ -1037,338 +1037,338 @@
       "category": "z1s3",
       "kind": "prop",
       "meta": "art/candidates/z1s3.prop.lamp/meta.json",
-      "approved_at": "2026-10-22T23:34:40",
-      "reason": ""
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "nihongo.torso": {
       "path": "art/approved/nihongo/nihongo.torso.png",
       "version": "v1",
-      "sha256": "37ca3683dd2ece13f4722efb4d3ba105920766517e4d8e9af74864f82aff0f2c",
+      "sha256": "0090b8e06b6337ca37f88b027f5bc933579c68345ae2f353fde8aa4efb10d58f",
       "category": "nihongo",
       "kind": "body_part",
       "meta": "art/candidates/nihongo.torso/meta.json",
-      "approved_at": "2026-10-23T14:47:59",
-      "reason": "L15 Nihongo Nohondes Part 1 approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "nihongo.head": {
       "path": "art/approved/nihongo/nihongo.head.png",
       "version": "v1",
-      "sha256": "b7ee659d60dbda2755b93fd9ae47036a597d984b13fd7b1e5ba55b8d1dd32ab4",
+      "sha256": "1511d9f8dd7be41957d49c1b31eedf0804677ede4f56ae97845a63a28edef1f1",
       "category": "nihongo",
       "kind": "body_part",
       "meta": "art/candidates/nihongo.head/meta.json",
-      "approved_at": "2026-10-23T14:47:59",
-      "reason": "L15 Nihongo Nohondes Part 1 approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "nihongo.headband": {
       "path": "art/approved/nihongo/nihongo.headband.png",
       "version": "v1",
-      "sha256": "de640ad75cf1be69ba48f0d9beea320abc93c96e97fe2d0dd9a56de58029f943",
+      "sha256": "c3e5a30d7da5ad9ffe99095e2e58f0c4343fbdef03bf765a87894536a0969a22",
       "category": "nihongo",
       "kind": "body_part",
       "meta": "art/candidates/nihongo.headband/meta.json",
-      "approved_at": "2026-10-23T14:47:59",
-      "reason": "L15 Nihongo Nohondes Part 1 approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "nihongo.eyes.normal": {
       "path": "art/approved/nihongo/nihongo.eyes.normal.png",
       "version": "v1",
-      "sha256": "e83e2c5042937edef1dd664184e4fcbd2bcb1ae89bc5a98425a018ed4ef259ab",
+      "sha256": "8f9ae07612938f6cc7b003c7e4d53fed788c977ad11e1e94d0dc41286b11cf63",
       "category": "nihongo",
       "kind": "body_part",
       "meta": "art/candidates/nihongo.eyes.normal/meta.json",
-      "approved_at": "2026-10-23T14:47:59",
-      "reason": "L15 Nihongo Nohondes Part 1 approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "nihongo.eyes.closed": {
       "path": "art/approved/nihongo/nihongo.eyes.closed.png",
       "version": "v1",
-      "sha256": "9c881dbaf504a310c460d367683203a0ad06c8dde280c0edc5bc0084eafa2201",
+      "sha256": "fbb71d0e20bc19258d15a11f209fafe562931922d328afec9d864b76811427e9",
       "category": "nihongo",
       "kind": "body_part",
       "meta": "art/candidates/nihongo.eyes.closed/meta.json",
-      "approved_at": "2026-10-23T14:47:59",
-      "reason": "L15 Nihongo Nohondes Part 1 approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "nihongo.eyes.squint": {
       "path": "art/approved/nihongo/nihongo.eyes.squint.png",
       "version": "v1",
-      "sha256": "80da4ae6bbca8dd5a57b2f320a051a8f38e9761ea91f8bc3c999deb972cc4aa6",
+      "sha256": "0a9e05675d3ab2a12cd50d42ba5d24b407093ac0c0fd97b5d2febb6403746321",
       "category": "nihongo",
       "kind": "body_part",
       "meta": "art/candidates/nihongo.eyes.squint/meta.json",
-      "approved_at": "2026-10-23T14:47:59",
-      "reason": "L15 Nihongo Nohondes Part 1 approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "nihongo.brows.normal": {
       "path": "art/approved/nihongo/nihongo.brows.normal.png",
       "version": "v1",
-      "sha256": "a80807674cab33fa5bf60b92f0d1dd48e23d452a692ce5d7f58cf87daf5effe2",
+      "sha256": "a7f3d27b2aaa759b47cdec9b77a731452b20505920428bdf19fae5dec17a4739",
       "category": "nihongo",
       "kind": "body_part",
       "meta": "art/candidates/nihongo.brows.normal/meta.json",
-      "approved_at": "2026-10-23T14:47:59",
-      "reason": "L15 Nihongo Nohondes Part 1 approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "nihongo.brows.angry": {
       "path": "art/approved/nihongo/nihongo.brows.angry.png",
       "version": "v1",
-      "sha256": "4adf6da7f1fe4b8da23752f57f8b08d1410f7a5d362e3ee1ec15c3190611e4bf",
+      "sha256": "5dc764dfbf592509e4a83316da8430676a5985236550394bb7769f8a1d51d2a9",
       "category": "nihongo",
       "kind": "body_part",
       "meta": "art/candidates/nihongo.brows.angry/meta.json",
-      "approved_at": "2026-10-23T14:47:59",
-      "reason": "L15 Nihongo Nohondes Part 1 approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "nihongo.arm_front": {
       "path": "art/approved/nihongo/nihongo.arm_front.png",
       "version": "v1",
-      "sha256": "e2a0d2eb4dc5ae07895ffa81b7fc14a21ad3fde19947d11906a4096995d391a2",
+      "sha256": "d43d011cc660adc886a8c937f051aba1aed822860b4cf9e82665d00e6a13d3c5",
       "category": "nihongo",
       "kind": "body_part",
       "meta": "art/candidates/nihongo.arm_front/meta.json",
-      "approved_at": "2026-10-23T14:51:17",
-      "reason": "L16 Nihongo Nohondes Part 2 approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "nihongo.arm_back": {
       "path": "art/approved/nihongo/nihongo.arm_back.png",
       "version": "v1",
-      "sha256": "7ee6ad74e02b249318373ce476062484940a52f415038d5cfb85e591c7fe1261",
+      "sha256": "baac6c4cc1f33dd1898c7c8552c3b4c34f9f0f4e714853c6db90a3d157fbfff0",
       "category": "nihongo",
       "kind": "body_part",
       "meta": "art/candidates/nihongo.arm_back/meta.json",
-      "approved_at": "2026-10-23T14:51:17",
-      "reason": "L16 Nihongo Nohondes Part 2 approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "nihongo.hand_front.fist": {
       "path": "art/approved/nihongo/nihongo.hand_front.fist.png",
       "version": "v1",
-      "sha256": "522cc2ab13514659c97a060026a713ca69d22c6101b09e3f899033464e842c76",
+      "sha256": "b3777ecab444edacdf0208d292f4e030228e8e72e657d9fa691a880350909d94",
       "category": "nihongo",
       "kind": "body_part",
       "meta": "art/candidates/nihongo.hand_front.fist/meta.json",
-      "approved_at": "2026-10-23T14:51:17",
-      "reason": "L16 Nihongo Nohondes Part 2 approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "nihongo.hand_front.open": {
       "path": "art/approved/nihongo/nihongo.hand_front.open.png",
       "version": "v1",
-      "sha256": "1fcce0cf278ace4ac0e433728d78a35f8f4343967a0b6fa08a7f3628f5d05f72",
+      "sha256": "5b9b99c48a8aa3830eb97d4faf728b2a6dcb96ab14a3d16d73e78e702a41ff8b",
       "category": "nihongo",
       "kind": "body_part",
       "meta": "art/candidates/nihongo.hand_front.open/meta.json",
-      "approved_at": "2026-10-23T14:51:17",
-      "reason": "L16 Nihongo Nohondes Part 2 approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "nihongo.leg_back": {
       "path": "art/approved/nihongo/nihongo.leg_back.png",
       "version": "v1",
-      "sha256": "3a66a9aedff5a6d40d682d1e0a7614e862fa7bcf610fb15bcbbd285d837d8cd4",
+      "sha256": "d2e94b7f78d0409a4bdc480cb107af55ffa1ffc726fac8ab5c266990efd79cd3",
       "category": "nihongo",
       "kind": "body_part",
       "meta": "art/candidates/nihongo.leg_back/meta.json",
-      "approved_at": "2026-10-23T14:51:17",
-      "reason": "L16 Nihongo Nohondes Part 2 approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "nihongo.shoe_front": {
       "path": "art/approved/nihongo/nihongo.shoe_front.png",
       "version": "v1",
-      "sha256": "411a5330a0a65eda0998c88dc980ec0b1095c150fcad0877f181bb64b13983ef",
+      "sha256": "4024721ab15a7556370b6ac99966bb2028c3c44844412c8a35b8f91b17d7df2a",
       "category": "nihongo",
       "kind": "body_part",
       "meta": "art/candidates/nihongo.shoe_front/meta.json",
-      "approved_at": "2026-10-23T14:51:17",
-      "reason": "L16 Nihongo Nohondes Part 2 approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "nihongo.prop.broom_katana": {
       "path": "art/approved/nihongo/nihongo.prop.broom_katana.png",
       "version": "v1",
-      "sha256": "1ea5d453cfcec69a0841f290282b7720364ad43cccfc97f5436293242cfbc013",
+      "sha256": "bfcc29ac536e956c3396dfb6480e0e429c900a3af45e2b9c20f20facac7a8cba",
       "category": "nihongo",
       "kind": "prop",
       "meta": "art/candidates/nihongo.prop.broom_katana/meta.json",
-      "approved_at": "2026-10-23T14:51:17",
-      "reason": "L16 Nihongo Nohondes Part 2 approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "nihongo.leg_front": {
       "path": "art/approved/nihongo/nihongo.leg_front.png",
       "version": "v1",
-      "sha256": "240fecd71e621b058afc0dd035c74c1fe89fdb534a3ea87ed79bda0840ffd17a",
+      "sha256": "e53570a1e886da8c31b2fba3d1a784793ef0264d8764f3738a23433d00c98279",
       "category": "nihongo",
       "kind": "body_part",
       "meta": "art/candidates/nihongo.leg_front/meta.json",
-      "approved_at": "2026-10-23T14:52:03",
-      "reason": "L16 Nihongo Nohondes Part 2 approved"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "ababy.torso": {
       "path": "art/approved/ababy/ababy.torso.png",
       "version": "v1",
-      "sha256": "7ddc38b7195825af0fddebe5ad71787a07c156a51608aceeb8dfa7717ea9d58e",
+      "sha256": "cecf03ab244d4bb9fd037628d6e6f7c8eaf14048b6243c87143208830b0da431",
       "category": "ababy",
       "kind": "body_part",
       "meta": "art/candidates/ababy.torso/meta.json",
-      "approved_at": "2026-10-23T14:55:24",
-      "reason": "L17 A Baby approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "ababy.head": {
       "path": "art/approved/ababy/ababy.head.png",
       "version": "v1",
-      "sha256": "5097fa3e25db4dfabfae79c908c409ba34e6ca009f35350600069ffd4de6105b",
+      "sha256": "385f99e33a07b2fe986e232bc3e26b9ccbf56526cd6fa7c7f5b1a2e083ccb70a",
       "category": "ababy",
       "kind": "body_part",
       "meta": "art/candidates/ababy.head/meta.json",
-      "approved_at": "2026-10-23T14:55:24",
-      "reason": "L17 A Baby approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "ababy.bonnet": {
       "path": "art/approved/ababy/ababy.bonnet.png",
       "version": "v1",
-      "sha256": "a5d119eccca9626599f5666c4ab6aa0d116779824f65b2d865b37f0ed6e40f05",
+      "sha256": "7e66735bf92e40c02d6dc965dc040fdae2a6e08f25105f668084fb2f4081f407",
       "category": "ababy",
       "kind": "body_part",
       "meta": "art/candidates/ababy.bonnet/meta.json",
-      "approved_at": "2026-10-23T14:55:24",
-      "reason": "L17 A Baby approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "ababy.eyes.normal": {
       "path": "art/approved/ababy/ababy.eyes.normal.png",
       "version": "v1",
-      "sha256": "a1389865e4f95917d2a8bbeb428b54c85e7953bfc53e215d1bbd741b5a6c169f",
+      "sha256": "ca9cf18bd021c9ab37615b6c0438fa9e689748085991f66f614c088c8f181eb5",
       "category": "ababy",
       "kind": "body_part",
       "meta": "art/candidates/ababy.eyes.normal/meta.json",
-      "approved_at": "2026-10-23T14:55:24",
-      "reason": "L17 A Baby approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "ababy.eyes.angry": {
       "path": "art/approved/ababy/ababy.eyes.angry.png",
       "version": "v1",
-      "sha256": "65d1233443b9c826993e18411503389ef5177bc08b515561b49a5b16c1e0b480",
+      "sha256": "b9bffc4d0a9ff01b2f952f8d28e4edf172df4410b1caf872c83e5ef764b234da",
       "category": "ababy",
       "kind": "body_part",
       "meta": "art/candidates/ababy.eyes.angry/meta.json",
-      "approved_at": "2026-10-23T14:55:24",
-      "reason": "L17 A Baby approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "ababy.arm_front": {
       "path": "art/approved/ababy/ababy.arm_front.png",
       "version": "v1",
-      "sha256": "85f304041c58c99f8f9f783403e5ac12471db4fba79846bde26971232a24abf5",
+      "sha256": "b07e1d949219974fe38c30da5e7685dbd5b60025e6c983c29b232fd978a05740",
       "category": "ababy",
       "kind": "body_part",
       "meta": "art/candidates/ababy.arm_front/meta.json",
-      "approved_at": "2026-10-23T14:55:24",
-      "reason": "L17 A Baby approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "ababy.arm_back": {
       "path": "art/approved/ababy/ababy.arm_back.png",
       "version": "v1",
-      "sha256": "0709c48c707a00acd4a49ecc31f0f90e427c85873c21ec8c636f5da44c99be31",
+      "sha256": "b919e8e5c3434f98355bf2f508322d8d8e237e6eb76102acbfb7e2d582cd18d2",
       "category": "ababy",
       "kind": "body_part",
       "meta": "art/candidates/ababy.arm_back/meta.json",
-      "approved_at": "2026-10-23T14:55:24",
-      "reason": "L17 A Baby approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "ababy.legs_diaper": {
       "path": "art/approved/ababy/ababy.legs_diaper.png",
       "version": "v1",
-      "sha256": "c2d13431dd0cf180b2f6f1462fa438bc5fe9c8ec496171d6796eaf3ae17d5509",
+      "sha256": "a948d3552d47b25664c8aa37d5adf5f75d38ca41b34c32ed27aad8133dc0ace1",
       "category": "ababy",
       "kind": "body_part",
       "meta": "art/candidates/ababy.legs_diaper/meta.json",
-      "approved_at": "2026-10-23T14:55:24",
-      "reason": "L17 A Baby approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "ventrilo.torso": {
       "path": "art/approved/ventriloquist/ventrilo.torso.png",
       "version": "v1",
-      "sha256": "52f7875a96d950ac5c421440e7e60a2db5c520c96d6d193aad8576780f48161e",
+      "sha256": "705ab2f3b60baa724fc29f11bbb609a6e7ddb2950073f7aed80a2e60b7135881",
       "category": "ventriloquist",
       "kind": "body_part",
       "meta": "art/candidates/ventrilo.torso/meta.json",
-      "approved_at": "2026-10-23T14:59:58",
-      "reason": "L18 Ventriloquist & Rapoleon approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "ventrilo.head_jaw": {
       "path": "art/approved/ventriloquist/ventrilo.head_jaw.png",
       "version": "v1",
-      "sha256": "9edc59f32f98defeacc623986b0af273c6f5bffd37af40a9f390a2e071d8770b",
+      "sha256": "4bb185bacddf198b066400a03967b77e1723ac3d6766325ff7fbe96fca48c743",
       "category": "ventriloquist",
       "kind": "body_part",
       "meta": "art/candidates/ventrilo.head_jaw/meta.json",
-      "approved_at": "2026-10-23T14:59:58",
-      "reason": "L18 Ventriloquist & Rapoleon approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "ventrilo.eyes.normal": {
       "path": "art/approved/ventriloquist/ventrilo.eyes.normal.png",
       "version": "v1",
-      "sha256": "ab50ec2a5fab47484850182404333c46e165513de402ec3f16d621c8dfba9032",
+      "sha256": "abb55ffe609d88a52421a019c85b6da8b41c0aa1de3cf236bf28b3452855fdf0",
       "category": "ventriloquist",
       "kind": "body_part",
       "meta": "art/candidates/ventrilo.eyes.normal/meta.json",
-      "approved_at": "2026-10-23T14:59:58",
-      "reason": "L18 Ventriloquist & Rapoleon approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "ventrilo.arm_front": {
       "path": "art/approved/ventriloquist/ventrilo.arm_front.png",
       "version": "v1",
-      "sha256": "15fba1ddcfa60459709e5a218564ed0eff10fe72e958c6697d750c5de050c85a",
+      "sha256": "293981147e7183503b846554867692317f4a870fdd03534dd397bea1783e0305",
       "category": "ventriloquist",
       "kind": "body_part",
       "meta": "art/candidates/ventrilo.arm_front/meta.json",
-      "approved_at": "2026-10-23T14:59:58",
-      "reason": "L18 Ventriloquist & Rapoleon approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "ventrilo.arm_back": {
       "path": "art/approved/ventriloquist/ventrilo.arm_back.png",
       "version": "v1",
-      "sha256": "74929f84e8391fd5d20331c50e0ea3541b214b91bc2c30fa71b3d16f06446d39",
+      "sha256": "2e33fd96d2941091558105b237544a86b9d725408f746304e2886042ee4bcdab",
       "category": "ventriloquist",
       "kind": "body_part",
       "meta": "art/candidates/ventrilo.arm_back/meta.json",
-      "approved_at": "2026-10-23T14:59:58",
-      "reason": "L18 Ventriloquist & Rapoleon approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "ventrilo.dummy_rapoleon": {
       "path": "art/approved/ventriloquist/ventrilo.dummy_rapoleon.png",
       "version": "v1",
-      "sha256": "6dce94c0267ce0678c53ad729bbc25d24095151715bb6dc488f45e9872c29878",
+      "sha256": "664ff0bdfa28b812dea142d8aeef3c5aba2560e96a62c1f5db1349946acd98b5",
       "category": "ventriloquist",
       "kind": "body_part",
       "meta": "art/candidates/ventrilo.dummy_rapoleon/meta.json",
-      "approved_at": "2026-10-23T14:59:58",
-      "reason": "L18 Ventriloquist & Rapoleon approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "ventrilo.legs": {
       "path": "art/approved/ventriloquist/ventrilo.legs.png",
       "version": "v1",
-      "sha256": "9e09baf7f2326b8006b3733d045a957bf58891f65985f58234b00e15accb1d63",
+      "sha256": "aa0dc152860a4a080ab1360222407596acddb551ed3f1e9a00b3ea02eb51dcb7",
       "category": "ventriloquist",
       "kind": "body_part",
       "meta": "art/candidates/ventrilo.legs/meta.json",
-      "approved_at": "2026-10-23T14:59:58",
-      "reason": "L18 Ventriloquist & Rapoleon approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "ventrilo.shoes": {
       "path": "art/approved/ventriloquist/ventrilo.shoes.png",
       "version": "v1",
-      "sha256": "9b7a4776789fb48735008d0ba4102b958dce5ee234d27cf20d728d39ed5c7104",
+      "sha256": "de159ce8558430fe926f4bf9d51366462affd79ff399af853a0bc28bfeadc2fb",
       "category": "ventriloquist",
       "kind": "body_part",
       "meta": "art/candidates/ventrilo.shoes/meta.json",
-      "approved_at": "2026-10-23T14:59:58",
-      "reason": "L18 Ventriloquist & Rapoleon approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s2.prop.iron_ladder": {
       "path": "art/approved/z1s2/z1s2.prop.iron_ladder.png",
       "version": "v1",
-      "sha256": "04bc056eeb17e109d0ab456699d5d7af522172e2fa50bcb5f19eb2d1b3443efd",
+      "sha256": "80638de14f611b68da0b6ed9a5f1626d7089e94f28328fac8d5ca90466d81ec9",
       "category": "z1s2",
       "kind": "prop",
       "meta": "art/candidates/z1s2.prop.iron_ladder/meta.json",
-      "approved_at": "2026-10-23T18:19:48",
-      "reason": "L19a Z1S2 approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s2.wall.cage_lamp": {
       "path": "art/approved/z1s2/z1s2.wall.cage_lamp.png",
@@ -1377,68 +1377,68 @@
       "category": "z1s2",
       "kind": "prop",
       "meta": "art/candidates/z1s2.wall.cage_lamp/meta.json",
-      "approved_at": "2026-10-23T18:19:48",
-      "reason": "L19a Z1S2 approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s2.wall.katana_rack": {
       "path": "art/approved/z1s2/z1s2.wall.katana_rack.png",
       "version": "v1",
-      "sha256": "0b240bc2f79b3e39edd2c6e4bbf627b2308579e1fd3987fcba262ce907837d06",
+      "sha256": "5748056a598f194eee25cb72c45a26f659520b9f532cc0a3aba2cf9f08f24cfb",
       "category": "z1s2",
       "kind": "prop",
       "meta": "art/candidates/z1s2.wall.katana_rack/meta.json",
-      "approved_at": "2026-10-23T18:19:48",
-      "reason": "L19a Z1S2 approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s2.wall.panel_a": {
       "path": "art/approved/z1s2/z1s2.wall.panel_a.png",
       "version": "v1",
-      "sha256": "6a4fe3ab5641e0232e678c4e1a7dd9beb86f6fbb19cd9f8d5d4cd7ec8ae4f468",
+      "sha256": "80783e13fcc1bff9328f8152a0f8d683a9ac2f659ae7a2b49ea5b667a055867d",
       "category": "z1s2",
       "kind": "wall",
       "meta": "art/candidates/z1s2.wall.panel_a/meta.json",
-      "approved_at": "2026-10-23T18:20:41",
-      "reason": "L19a Z1S2 approved"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s2.wall.panel_b": {
       "path": "art/approved/z1s2/z1s2.wall.panel_b.png",
       "version": "v1",
-      "sha256": "158d3fc92e833882f9441123229754e009fa8efb239e07f55736e68c846f66fb",
+      "sha256": "2f564afdba5526e46036d318b83f462d5e8fb6ed9928ff3ec498ebc6fe347836",
       "category": "z1s2",
       "kind": "wall",
       "meta": "art/candidates/z1s2.wall.panel_b/meta.json",
-      "approved_at": "2026-10-23T18:24:05",
-      "reason": "L19b Z1S2 approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s2.floor.planks": {
       "path": "art/approved/z1s2/z1s2.floor.planks.png",
       "version": "v1",
-      "sha256": "7646d5a54cce8b23a54ac796ef5834f808c29e9d422303d435e792bdea54d212",
+      "sha256": "58510581fa37e496b5f940ee5e5392b514e1014fa5098b8d76a0c15d5b8f8933",
       "category": "z1s2",
       "kind": "prop",
       "meta": "art/candidates/z1s2.floor.planks/meta.json",
-      "approved_at": "2026-10-23T18:24:05",
-      "reason": "L19b Z1S2 approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s2.ceiling.arch": {
       "path": "art/approved/z1s2/z1s2.ceiling.arch.png",
       "version": "v1",
-      "sha256": "d56ac13f82ca42aec607b2fb4f768f1ab44fb38a610aae3e378699911b236bf9",
+      "sha256": "8e883f5e894f1d0450ecb29deb430c0533f70b7a6c8ba85a2a3b2f70206174a9",
       "category": "z1s2",
       "kind": "prop",
       "meta": "art/candidates/z1s2.ceiling.arch/meta.json",
-      "approved_at": "2026-10-23T18:24:05",
-      "reason": "L19b Z1S2 approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s2.wall.samurai_poster": {
       "path": "art/approved/z1s2/z1s2.wall.samurai_poster.png",
       "version": "v1",
-      "sha256": "821e50fb6096614c2d80b5a8de4806e8c0e2380035e4d552c2c3b2a253d080fa",
+      "sha256": "d39c165ce42b5624c46a6b6e6f7480d9cee8093f4fee7d14c0bf5bcc3bde2fc6",
       "category": "z1s2",
       "kind": "prop",
       "meta": "art/candidates/z1s2.wall.samurai_poster/meta.json",
-      "approved_at": "2026-10-23T18:24:05",
-      "reason": "L19b Z1S2 approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s2.prop.tufted_sofa": {
       "path": "art/approved/z1s2/z1s2.prop.tufted_sofa.png",
@@ -1447,38 +1447,38 @@
       "category": "z1s2",
       "kind": "prop",
       "meta": "art/candidates/z1s2.prop.tufted_sofa/meta.json",
-      "approved_at": "2026-10-23T18:31:06",
-      "reason": "L20 Z1S2 approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s2.prop.reed_vases": {
       "path": "art/approved/z1s2/z1s2.prop.reed_vases.png",
       "version": "v1",
-      "sha256": "2390611eccbe1138276d6757175d2af1f1206a48b787bca6b81b9233a59ba41c",
+      "sha256": "60eb6bf1a0aaf9fba51ac2fcac29b8626abc34c8157746236b1cba1e909a60fa",
       "category": "z1s2",
       "kind": "prop",
       "meta": "art/candidates/z1s2.prop.reed_vases/meta.json",
-      "approved_at": "2026-10-23T18:31:06",
-      "reason": "L20 Z1S2 approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s2.prop.candy_vault": {
       "path": "art/approved/z1s2/z1s2.prop.candy_vault.png",
       "version": "v1",
-      "sha256": "b637e0f1b470f3b4dc8294815145803001de85defcd87d8d7851e23b884beb2d",
+      "sha256": "fc92266ed9d02d7c6dd47f16ad52f57b8f953bad297ac25e2dbddebe59bbc049",
       "category": "z1s2",
       "kind": "prop",
       "meta": "art/candidates/z1s2.prop.candy_vault/meta.json",
-      "approved_at": "2026-10-23T18:31:06",
-      "reason": "L20 Z1S2 approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s2.prop.funky_keypad": {
       "path": "art/approved/z1s2/z1s2.prop.funky_keypad.png",
       "version": "v1",
-      "sha256": "212facc32d690b423cf8407f99ca3364795846effbc57195a155b8dab2bc27c7",
+      "sha256": "86a369a8dea96c9a6b987533438ac110772a18e9366a5a1c2fb5b1fd53742b44",
       "category": "z1s2",
       "kind": "prop",
       "meta": "art/candidates/z1s2.prop.funky_keypad/meta.json",
-      "approved_at": "2026-10-23T18:31:06",
-      "reason": "L20 Z1S2 approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s2.item.wooden_helm": {
       "path": "art/approved/z1s2/z1s2.item.wooden_helm.png",
@@ -1487,8 +1487,8 @@
       "category": "z1s2",
       "kind": "prop",
       "meta": "art/candidates/z1s2.item.wooden_helm/meta.json",
-      "approved_at": "2026-10-23T18:31:06",
-      "reason": "L20 Z1S2 approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s2.fg.mystery_crate": {
       "path": "art/approved/z1s2/z1s2.fg.mystery_crate.png",
@@ -1497,8 +1497,8 @@
       "category": "z1s2",
       "kind": "foreground",
       "meta": "art/candidates/z1s2.fg.mystery_crate/meta.json",
-      "approved_at": "2026-10-23T18:31:06",
-      "reason": "L20 Z1S2 approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s2.fg.rotary_phone": {
       "path": "art/approved/z1s2/z1s2.fg.rotary_phone.png",
@@ -1507,8 +1507,8 @@
       "category": "z1s2",
       "kind": "foreground",
       "meta": "art/candidates/z1s2.fg.rotary_phone/meta.json",
-      "approved_at": "2026-10-23T18:31:06",
-      "reason": "L20 Z1S2 approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s2.fg.dollhouse_bindle": {
       "path": "art/approved/z1s2/z1s2.fg.dollhouse_bindle.png",
@@ -1517,78 +1517,78 @@
       "category": "z1s2",
       "kind": "foreground",
       "meta": "art/candidates/z1s2.fg.dollhouse_bindle/meta.json",
-      "approved_at": "2026-10-23T18:31:06",
-      "reason": "L20 Z1S2 approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s1.wall.hull_panel": {
       "path": "art/approved/z1s1/z1s1.wall.hull_panel.png",
       "version": "v1",
-      "sha256": "dbb8e5e6074e8a497eab047fc5fb22b6917edd2f1144b20819b3aa4878be238d",
+      "sha256": "d1703d8cfe44f7785d0d4c7d6273fae4ce8820db2a2d5e2e1debcb26a5fba5f7",
       "category": "z1s1",
       "kind": "wall",
       "meta": "art/candidates/z1s1.wall.hull_panel/meta.json",
-      "approved_at": "2026-10-23T18:36:51",
-      "reason": "L21 Z1S1 approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s1.floor.steel_deck": {
       "path": "art/approved/z1s1/z1s1.floor.steel_deck.png",
       "version": "v1",
-      "sha256": "6f7ee3cd8dd8488eb2e7ca9dcecac1e598b0d4a53d016cad8ca3663aa2befa0b",
+      "sha256": "e839db5d172cf3414da45cb1aea89fc7c9785cce951325b21af8766f4a0a5060",
       "category": "z1s1",
       "kind": "prop",
       "meta": "art/candidates/z1s1.floor.steel_deck/meta.json",
-      "approved_at": "2026-10-23T18:36:51",
-      "reason": "L21 Z1S1 approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s1.ceiling.rivet_arch": {
       "path": "art/approved/z1s1/z1s1.ceiling.rivet_arch.png",
       "version": "v1",
-      "sha256": "60f15bdcd88492b5bb4f7e01533cdba8829b1e85cf650ce4e9e3f62ad49557cc",
+      "sha256": "41aef4bd191fb806cc6389f773691f558ce3b0da43e96cb861f3e39767892d80",
       "category": "z1s1",
       "kind": "wall",
       "meta": "art/candidates/z1s1.ceiling.rivet_arch/meta.json",
-      "approved_at": "2026-10-23T18:36:51",
-      "reason": "L21 Z1S1 approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s1.prop.iron_ladder": {
       "path": "art/approved/z1s1/z1s1.prop.iron_ladder.png",
       "version": "v1",
-      "sha256": "54417596353a56d84ec86367032b29fbfd4b53547b08b04006c7b73e14127f4f",
+      "sha256": "1afcc6ab6a306ce3e60153d3c3d6aca76d70648fe7b47c25cf65e757d26ad8b8",
       "category": "z1s1",
       "kind": "prop",
       "meta": "art/candidates/z1s1.prop.iron_ladder/meta.json",
-      "approved_at": "2026-10-23T18:36:51",
-      "reason": "L21 Z1S1 approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s1.wall.book_shelf": {
       "path": "art/approved/z1s1/z1s1.wall.book_shelf.png",
       "version": "v1",
-      "sha256": "5cff8d051fa9b110e27ee329b7cd6fe717a954bbf55dd26002c6905783e272eb",
+      "sha256": "46442d4a3106ea753b0f81cb1567338a3222b63a9efcfba960104e9131f69db1",
       "category": "z1s1",
       "kind": "prop",
       "meta": "art/candidates/z1s1.wall.book_shelf/meta.json",
-      "approved_at": "2026-10-23T18:36:51",
-      "reason": "L21 Z1S1 approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s1.prop.pedal_station_intact": {
       "path": "art/approved/z1s1/z1s1.prop.pedal_station_intact.png",
       "version": "v1",
-      "sha256": "c3511061865af232e24ee523c7aa6fc1651b8d4393eed876f463735b89c5fdf8",
+      "sha256": "99043a57bcdb856650f932ed6078e941adf89fe11ba70e607780b9ad2a540d9d",
       "category": "z1s1",
       "kind": "prop",
       "meta": "art/candidates/z1s1.prop.pedal_station_intact/meta.json",
-      "approved_at": "2026-10-23T18:36:51",
-      "reason": "L21 Z1S1 approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s1.prop.pedal_station_broken": {
       "path": "art/approved/z1s1/z1s1.prop.pedal_station_broken.png",
       "version": "v1",
-      "sha256": "777610aafed4e84cfff1032948d532971ff99e2a9fe493af571a55d0882d0f22",
+      "sha256": "56bbf6f1848187f244427aed1800afe27fb328606a781a338c3e4bd40106efe8",
       "category": "z1s1",
       "kind": "prop",
       "meta": "art/candidates/z1s1.prop.pedal_station_broken/meta.json",
-      "approved_at": "2026-10-23T18:36:51",
-      "reason": "L21 Z1S1 approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s1.item.davinci_blueprint": {
       "path": "art/approved/z1s1/z1s1.item.davinci_blueprint.png",
@@ -1597,18 +1597,18 @@
       "category": "z1s1",
       "kind": "prop",
       "meta": "art/candidates/z1s1.item.davinci_blueprint/meta.json",
-      "approved_at": "2026-10-23T18:36:51",
-      "reason": "L21 Z1S1 approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s1.prop.perpetual_machine_installed": {
       "path": "art/approved/z1s1/z1s1.prop.perpetual_machine_installed.png",
       "version": "v1",
-      "sha256": "8a4d4cd32dfebf7110ee84076e48d163b56872077aac33c5b0ac39cc3e374b9c",
+      "sha256": "7edf842ae5833d98cd3635f2329b208c67a5f53cb82df7000985f5302630892e",
       "category": "z1s1",
       "kind": "prop",
       "meta": "art/candidates/z1s1.prop.perpetual_machine_installed/meta.json",
-      "approved_at": "2026-10-23T18:36:51",
-      "reason": "L22 Z1S1 approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s1.fg.toxic_barrels": {
       "path": "art/approved/z1s1/z1s1.fg.toxic_barrels.png",
@@ -1617,8 +1617,8 @@
       "category": "z1s1",
       "kind": "foreground",
       "meta": "art/candidates/z1s1.fg.toxic_barrels/meta.json",
-      "approved_at": "2026-10-23T18:36:51",
-      "reason": "L22 Z1S1 approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s1.fg.broken_toaster": {
       "path": "art/approved/z1s1/z1s1.fg.broken_toaster.png",
@@ -1627,8 +1627,8 @@
       "category": "z1s1",
       "kind": "foreground",
       "meta": "art/candidates/z1s1.fg.broken_toaster/meta.json",
-      "approved_at": "2026-10-23T18:36:51",
-      "reason": "L22 Z1S1 approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s1.fg.potato_sacks": {
       "path": "art/approved/z1s1/z1s1.fg.potato_sacks.png",
@@ -1637,8 +1637,8 @@
       "category": "z1s1",
       "kind": "foreground",
       "meta": "art/candidates/z1s1.fg.potato_sacks/meta.json",
-      "approved_at": "2026-10-23T18:36:51",
-      "reason": "L22 Z1S1 approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s1.fg.bilge_rat": {
       "path": "art/approved/z1s1/z1s1.fg.bilge_rat.png",
@@ -1647,8 +1647,8 @@
       "category": "z1s1",
       "kind": "foreground",
       "meta": "art/candidates/z1s1.fg.bilge_rat/meta.json",
-      "approved_at": "2026-10-23T18:36:51",
-      "reason": "L22 Z1S1 approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s1.fg.hull_ring_left": {
       "path": "art/approved/z1s1/z1s1.fg.hull_ring_left.png",
@@ -1657,8 +1657,8 @@
       "category": "z1s1",
       "kind": "foreground",
       "meta": "art/candidates/z1s1.fg.hull_ring_left/meta.json",
-      "approved_at": "2026-10-23T18:36:51",
-      "reason": "L22 Z1S1 approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z1s1.fg.hull_ring_right": {
       "path": "art/approved/z1s1/z1s1.fg.hull_ring_right.png",
@@ -1667,18 +1667,18 @@
       "category": "z1s1",
       "kind": "foreground",
       "meta": "art/candidates/z1s1.fg.hull_ring_right/meta.json",
-      "approved_at": "2026-10-23T18:36:51",
-      "reason": "L22 Z1S1 approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z0.bg.sky_hills": {
       "path": "art/approved/z0/z0.bg.sky_hills.png",
       "version": "v1",
-      "sha256": "6b57e7bbec4468b46d29244bdf0289efb35327fd8a838ee3508ee3fc84cfe2b1",
+      "sha256": "df439ec665b1803b944f502f5ba44d1f57127b13a7b504b656a232507f8c4600",
       "category": "z0",
       "kind": "wall",
       "meta": "art/candidates/z0.bg.sky_hills/meta.json",
-      "approved_at": "2026-10-23T18:39:43",
-      "reason": "L23 Z0 Spooky Paper Castle approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z0.prop.spooky_castle": {
       "path": "art/approved/z0/z0.prop.spooky_castle.png",
@@ -1687,8 +1687,8 @@
       "category": "z0",
       "kind": "prop",
       "meta": "art/candidates/z0.prop.spooky_castle/meta.json",
-      "approved_at": "2026-10-23T18:39:43",
-      "reason": "L23 Z0 Spooky Paper Castle approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z0.prop.castle_door": {
       "path": "art/approved/z0/z0.prop.castle_door.png",
@@ -1697,18 +1697,18 @@
       "category": "z0",
       "kind": "prop",
       "meta": "art/candidates/z0.prop.castle_door/meta.json",
-      "approved_at": "2026-10-23T18:39:43",
-      "reason": "L23 Z0 Spooky Paper Castle approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z0.prop.troll": {
       "path": "art/approved/z0/z0.prop.troll.png",
       "version": "v1",
-      "sha256": "3e1b73fbb98a40c81c7ab0a28cbb18c9438e99edcab21c84f1f36d4553755d53",
+      "sha256": "e09f16099cd5cf84244e006ef8b829eba49804c0be98ee3443814681a7ebd314",
       "category": "z0",
-      "kind": "prop",
+      "kind": "body_part",
       "meta": "art/candidates/z0.prop.troll/meta.json",
-      "approved_at": "2026-10-23T18:39:43",
-      "reason": "L23 Z0 Spooky Paper Castle approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z0.prop.two_faced_sun": {
       "path": "art/approved/z0/z0.prop.two_faced_sun.png",
@@ -1717,8 +1717,8 @@
       "category": "z0",
       "kind": "prop",
       "meta": "art/candidates/z0.prop.two_faced_sun/meta.json",
-      "approved_at": "2026-10-23T18:39:43",
-      "reason": "L23 Z0 Spooky Paper Castle approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z0.prop.paper_clouds": {
       "path": "art/approved/z0/z0.prop.paper_clouds.png",
@@ -1727,8 +1727,8 @@
       "category": "z0",
       "kind": "prop",
       "meta": "art/candidates/z0.prop.paper_clouds/meta.json",
-      "approved_at": "2026-10-23T18:39:43",
-      "reason": "L23 Z0 Spooky Paper Castle approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z0.prop.dead_tree": {
       "path": "art/approved/z0/z0.prop.dead_tree.png",
@@ -1737,18 +1737,88 @@
       "category": "z0",
       "kind": "prop",
       "meta": "art/candidates/z0.prop.dead_tree/meta.json",
-      "approved_at": "2026-10-23T18:39:43",
-      "reason": "L23 Z0 Spooky Paper Castle approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     },
     "z0.fg.hill_border": {
       "path": "art/approved/z0/z0.fg.hill_border.png",
       "version": "v1",
-      "sha256": "d239d057174ad5bbad438af2360680996c65303f8fd199798383fd712a3b8e33",
+      "sha256": "c3082c3cb41cd7655f202be7145ea95042714f53c7b24d85713465481bad06a9",
       "category": "z0",
       "kind": "foreground",
       "meta": "art/candidates/z0.fg.hill_border/meta.json",
-      "approved_at": "2026-10-23T18:39:43",
-      "reason": "L23 Z0 Spooky Paper Castle approved (passes all gates and critics)"
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
+    },
+    "troll.arm_back": {
+      "path": "art/approved/z0/troll.arm_back.png",
+      "version": "v1",
+      "sha256": "33c3aeca45e37a69618dad7b339f8fde44eee3684596733c162fcfa85d9d626a",
+      "category": "z0",
+      "kind": "body_part",
+      "meta": "art/candidates/troll.arm_back/meta.json",
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
+    },
+    "troll.arm_front_club": {
+      "path": "art/approved/z0/troll.arm_front_club.png",
+      "version": "v1",
+      "sha256": "19b9e64185221df2ebda3e7c6018e3dead1233e706450c525cdffc48e154842d",
+      "category": "z0",
+      "kind": "body_part",
+      "meta": "art/candidates/troll.arm_front_club/meta.json",
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
+    },
+    "troll.eyes": {
+      "path": "art/approved/z0/troll.eyes.png",
+      "version": "v1",
+      "sha256": "8eeb99e1faa974b9a08933753e5fbe08361d9bf218a7bfc4585552dc29e03198",
+      "category": "z0",
+      "kind": "body_part",
+      "meta": "art/candidates/troll.eyes/meta.json",
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
+    },
+    "troll.head_jaw": {
+      "path": "art/approved/z0/troll.head_jaw.png",
+      "version": "v1",
+      "sha256": "3bb698fab9e1fecbe6c5da7fb2f7bc99ac19cf6877245b47fd6cff64e5560941",
+      "category": "z0",
+      "kind": "body_part",
+      "meta": "art/candidates/troll.head_jaw/meta.json",
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
+    },
+    "troll.legs_feet": {
+      "path": "art/approved/z0/troll.legs_feet.png",
+      "version": "v1",
+      "sha256": "6208dc85790c6715fd9f649250134b0c9429b505e2cb1dd7fd9de7db39a2829d",
+      "category": "z0",
+      "kind": "body_part",
+      "meta": "art/candidates/troll.legs_feet/meta.json",
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
+    },
+    "troll.torso_tunic": {
+      "path": "art/approved/z0/troll.torso_tunic.png",
+      "version": "v1",
+      "sha256": "6b0a5ea9a37c7f073ade3ac036359e42e75a057806c000da09ac08b6cb9bc4b8",
+      "category": "z0",
+      "kind": "body_part",
+      "meta": "art/candidates/troll.torso_tunic/meta.json",
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
+    },
+    "z1s1.wall.caged_lamp": {
+      "path": "art/approved/z1s1/z1s1.wall.caged_lamp.png",
+      "version": "v1",
+      "sha256": "61f44debb5add1b53a7798c93c9bcba4d049504db966a58ec7dabe396e6b9042",
+      "category": "z1s1",
+      "kind": "prop",
+      "meta": "art/candidates/z1s1.wall.caged_lamp/meta.json",
+      "approved_at": "2026-10-24T06:18:00",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates"
     }
   },
   "superseded": [],

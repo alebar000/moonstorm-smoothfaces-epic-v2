@@ -1,6 +1,6 @@
 {
-  "file": "c:\\AntiGravityStuff\\Moonstorm2\\art\\candidates\\z1s1.prop.perpetual_machine_installed\\v1.png",
-  "ts": "2026-10-23T18:36:55",
+  "file": "C:\\AntiGravityStuff\\Moonstorm2\\art\\candidates\\z1s1.prop.perpetual_machine_installed\\v1.png",
+  "ts": "2026-10-24T06:05:00",
   "kind": "prop",
   "halo_fraction": 0.0,
   "halo_ok": true,
@@ -15,16 +15,16 @@
   "touches_border_sides": 0,
   "border_ok": true,
   "palette_used": "scenery",
-  "off_palette_fraction": 0.0,
+  "off_palette_fraction": 0.0004,
   "palette_provisional": false,
   "palette_ok": true,
-  "ink_thickness_px": 6.0,
+  "ink_thickness_px": 4.39,
   "ink_range": [
     4,
     7
   ],
   "ink_ok": true,
-  "soft_gradient_fraction": 0.2028,
+  "soft_gradient_fraction": 0.1368,
   "gradient_ok": true,
   "measured_height_px": 380,
   "target_height_px": 380,

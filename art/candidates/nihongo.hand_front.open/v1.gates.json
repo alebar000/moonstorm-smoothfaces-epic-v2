@@ -1,6 +1,6 @@
 {
-  "file": "c:\\AntiGravityStuff\\Moonstorm2\\art\\candidates\\nihongo.hand_front.open\\v1.png",
-  "ts": "2026-10-23T14:51:17",
+  "file": "C:\\AntiGravityStuff\\Moonstorm2\\art\\candidates\\nihongo.hand_front.open\\v1.png",
+  "ts": "2026-10-24T06:05:00",
   "kind": "body_part",
   "halo_fraction": 0.0,
   "halo_ok": true,
@@ -15,7 +15,7 @@
   "touches_border_sides": 0,
   "border_ok": true,
   "palette_used": "characters",
-  "off_palette_fraction": 0.0084,
+  "off_palette_fraction": 0.0198,
   "palette_provisional": false,
   "palette_ok": true,
   "ink_thickness_px": 6.0,
@@ -24,7 +24,7 @@
     9
   ],
   "ink_ok": true,
-  "soft_gradient_fraction": 0.0225,
+  "soft_gradient_fraction": 0.2011,
   "gradient_ok": true,
   "measured_height_px": 46,
   "target_height_px": 46,

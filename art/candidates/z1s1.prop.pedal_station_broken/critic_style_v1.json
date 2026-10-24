@@ -1,8 +1,4 @@
 {
-  "piece": "z1s1.prop.pedal_station_broken",
-  "version": "v1",
-  "critic": "style-critic",
   "verdict": "sin_objeciones",
-  "defects": [],
-  "notes": "Matches 2010 MoonStorm hand-inked construction-paper cutout style and ref_z1s1_machineroom_2010.png."
+  "defects": []
 }

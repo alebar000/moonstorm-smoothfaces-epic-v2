@@ -2,26 +2,14 @@
   "id": "ababy.arm_front",
   "category": "ababy",
   "kind": "body_part",
-  "what": "A Baby massive gorilla-like muscular front arm and knuckle-walking fist with chocolate smudge",
+  "what": "Long muscular gorilla front arm with blue sleeve cap and knuckle-dragging fist",
   "target_height_px": 152,
   "height_fraction_of_smoothface": 0.483,
-  "pivot_hint": "shoulder at top-center; knuckle fist at bottom",
   "allowed_islands": 0,
   "references": [
     "art/references/ref_design_ababy.png",
     "art/references/palette_characters.png"
   ],
-  "versions": {
-    "v1": "prompt_v1.txt"
-  },
-  "status": "approved",
-  "proposed_version": "v1",
-  "version": "v1",
-  "approved_version": "v1",
-  "piece_id": "ababy.arm_front",
-  "selected_variant": "v1.png",
-  "size": [
-    78,
-    172
-  ]
+  "status": "proposed",
+  "proposed_version": "v1"
 }

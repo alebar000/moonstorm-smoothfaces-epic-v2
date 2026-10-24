@@ -1,0 +1,57 @@
+{
+  "character": "troll",
+  "canvas": [
+    340,
+    400
+  ],
+  "parts": {
+    "arm_back": {
+      "id": "troll.arm_back",
+      "x": 62,
+      "y": 118,
+      "w": 92,
+      "h": 170,
+      "z": 10
+    },
+    "legs_feet": {
+      "id": "troll.legs_feet",
+      "x": 98,
+      "y": 224,
+      "w": 146,
+      "h": 148,
+      "z": 12
+    },
+    "torso_tunic": {
+      "id": "troll.torso_tunic",
+      "x": 84,
+      "y": 96,
+      "w": 168,
+      "h": 206,
+      "z": 20
+    },
+    "head_jaw": {
+      "id": "troll.head_jaw",
+      "x": 90,
+      "y": 10,
+      "w": 158,
+      "h": 144,
+      "z": 25
+    },
+    "eyes": {
+      "id": "troll.eyes",
+      "x": 126,
+      "y": 42,
+      "w": 86,
+      "h": 40,
+      "z": 26
+    },
+    "arm_front_club": {
+      "id": "troll.arm_front_club",
+      "x": 182,
+      "y": 56,
+      "w": 170,
+      "h": 184,
+      "z": 30
+    }
+  }
+}

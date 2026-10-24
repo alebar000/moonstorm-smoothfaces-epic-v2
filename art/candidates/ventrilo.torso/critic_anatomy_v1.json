@@ -1,8 +1,4 @@
 {
-  "piece": "ventrilo.torso",
-  "version": "v1",
-  "critic": "anatomy-critic",
   "verdict": "sin_objeciones",
-  "defects": [],
-  "notes": "Calibrated to Ventriloquist 340px rig proportions (target_height_px=148)."
+  "defects": []
 }

@@ -1,6 +1,6 @@
 {
-  "file": "c:\\AntiGravityStuff\\Moonstorm2\\art\\candidates\\ventrilo.arm_back\\v1.png",
-  "ts": "2026-10-23T14:59:59",
+  "file": "C:\\AntiGravityStuff\\Moonstorm2\\art\\candidates\\ventrilo.arm_back\\v1.png",
+  "ts": "2026-10-24T06:05:00",
   "kind": "body_part",
   "halo_fraction": 0.0,
   "halo_ok": true,
@@ -15,16 +15,16 @@
   "touches_border_sides": 0,
   "border_ok": true,
   "palette_used": "characters",
-  "off_palette_fraction": 0.006,
+  "off_palette_fraction": 0.0549,
   "palette_provisional": false,
   "palette_ok": true,
-  "ink_thickness_px": 6.0,
+  "ink_thickness_px": 7.19,
   "ink_range": [
     6,
     9
   ],
   "ink_ok": true,
-  "soft_gradient_fraction": 0.0506,
+  "soft_gradient_fraction": 0.2198,
   "gradient_ok": true,
   "measured_height_px": 114,
   "target_height_px": 114,

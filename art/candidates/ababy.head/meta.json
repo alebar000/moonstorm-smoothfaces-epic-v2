@@ -2,26 +2,14 @@
   "id": "ababy.head",
   "category": "ababy",
   "kind": "body_part",
-  "what": "A Baby grumpy heavy-jawed cartoon baby head in 3/4 view facing right with chubby cheeks, scowl with drool drop, and blank upper face",
+  "what": "Square bulldog jaw with underbite teeth, stubbly chin, and blank eye area",
   "target_height_px": 106,
   "height_fraction_of_smoothface": 0.337,
-  "pivot_hint": "neck base at bottom-center",
   "allowed_islands": 0,
   "references": [
     "art/references/ref_design_ababy.png",
     "art/references/palette_characters.png"
   ],
-  "versions": {
-    "v1": "prompt_v1.txt"
-  },
-  "status": "approved",
-  "proposed_version": "v1",
-  "version": "v1",
-  "approved_version": "v1",
-  "piece_id": "ababy.head",
-  "selected_variant": "v1.png",
-  "size": [
-    93,
-    112
-  ]
+  "status": "proposed",
+  "proposed_version": "v1"
 }

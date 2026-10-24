@@ -2,20 +2,14 @@
   "id": "ventrilo.legs",
   "category": "ventriloquist",
   "kind": "body_part",
-  "what": "The Ventriloquist long lanky slate-blue trouser legs slightly bent at knees in 3/4 view facing right",
+  "what": "Long skinny charcoal trousers with vertical creases",
   "target_height_px": 146,
   "height_fraction_of_smoothface": 0.463,
-  "pivot_hint": "waist at top-center; ankles at bottom",
   "allowed_islands": 0,
   "references": [
     "art/references/ref_design_ventriloquist.png",
     "art/references/palette_characters.png"
   ],
-  "versions": {
-    "v1": "prompt_v1.txt"
-  },
   "status": "proposed",
-  "proposed_version": "v1",
-  "version": "v1",
-  "approved_version": "v1"
+  "proposed_version": "v1"
 }

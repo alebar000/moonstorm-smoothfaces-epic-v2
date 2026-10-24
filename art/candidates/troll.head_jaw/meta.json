@@ -1,9 +1,14 @@
 {
-  "piece_id": "troll.head_jaw",
-  "status": "approved",
-  "selected_variant": "v1.png",
-  "size": [
-    126,
-    138
-  ]
+  "id": "troll.head_jaw",
+  "category": "z0",
+  "kind": "body_part",
+  "what": "Scissor-cut green ogre head with pointed ears, hinged tusk jaw, brass brads, and blank eye zone",
+  "target_height_px": 130,
+  "height_fraction_of_smoothface": 0.413,
+  "allowed_islands": 0,
+  "references": [
+    "ref_canonical_2010"
+  ],
+  "status": "proposed",
+  "proposed_version": "v1"
 }

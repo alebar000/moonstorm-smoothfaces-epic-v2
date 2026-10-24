@@ -2,26 +2,14 @@
   "id": "nihongo.arm_front",
   "category": "nihongo",
   "kind": "body_part",
-  "what": "Nihongo Nohondes front arm in wide indigo samue sleeve with stitched brown elbow patch and off-white cloth wrist wrap (kote)",
+  "what": "Bare muscular front arm with charcoal wrist bracer",
   "target_height_px": 108,
   "height_fraction_of_smoothface": 0.343,
-  "pivot_hint": "shoulder joint at top-left; wrist joint at bottom-right cuff",
   "allowed_islands": 0,
   "references": [
     "art/references/palette_characters.png",
     "art/references/ref_z1s2_lobby_2010.png"
   ],
-  "versions": {
-    "v1": "prompt_v1.txt"
-  },
-  "status": "approved",
-  "proposed_version": "v1",
-  "version": "v1",
-  "approved_version": "v1",
-  "piece_id": "nihongo.arm_front",
-  "selected_variant": "v1.png",
-  "size": [
-    101,
-    112
-  ]
+  "status": "proposed",
+  "proposed_version": "v1"
 }

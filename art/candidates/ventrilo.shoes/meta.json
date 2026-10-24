@@ -2,20 +2,14 @@
   "id": "ventrilo.shoes",
   "category": "ventriloquist",
   "kind": "body_part",
-  "what": "Pair of The Ventriloquist pointed two-tone brown and off-white spats stage shoes in 3/4 view facing right",
+  "what": "Pair of dark dress shoes aligned with trouser ankles",
   "target_height_px": 46,
   "height_fraction_of_smoothface": 0.146,
-  "pivot_hint": "ankles at top-left",
   "allowed_islands": 1,
   "references": [
     "art/references/ref_design_ventriloquist.png",
     "art/references/palette_characters.png"
   ],
-  "versions": {
-    "v1": "prompt_v1.txt"
-  },
   "status": "proposed",
-  "proposed_version": "v1",
-  "version": "v1",
-  "approved_version": "v1"
+  "proposed_version": "v1"
 }

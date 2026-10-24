@@ -2,26 +2,14 @@
   "id": "ventrilo.eyes.normal",
   "category": "ventriloquist",
   "kind": "body_part",
-  "what": "Pair of The Ventriloquist wide exhausted manic stage eyes with under-eye bags in 3/4 view facing right",
+  "what": "Half-lidded nervous eyes looking sideways at Rapoleon with flat worried brows",
   "target_height_px": 28,
   "height_fraction_of_smoothface": 0.089,
-  "pivot_hint": "eye center on ventrilo.head_jaw",
   "allowed_islands": 1,
   "references": [
     "art/references/ref_design_ventriloquist.png",
     "art/references/palette_characters.png"
   ],
-  "versions": {
-    "v1": "prompt_v1.txt"
-  },
-  "status": "approved",
-  "proposed_version": "v1",
-  "version": "v1",
-  "approved_version": "v1",
-  "piece_id": "ventrilo.eyes.normal",
-  "selected_variant": "v1.png",
-  "size": [
-    31,
-    28
-  ]
+  "status": "proposed",
+  "proposed_version": "v1"
 }

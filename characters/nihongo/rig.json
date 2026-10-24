@@ -1,382 +1,145 @@
 {
-  "id": "nihongo",
-  "name": "Nihongo Nohondes",
-  "height_px": 300,
-  "height_tolerance": 0.04,
-  "facing_default": 1,
-  "root": "torso",
-  "canvas": {
-    "w": 380,
-    "h": 400
-  },
+  "character": "nihongo",
+  "canvas": [
+    340,
+    400
+  ],
   "parts": {
+    "shoe_back": {
+      "id": "nihongo.shoe_front",
+      "x": 152,
+      "y": 318,
+      "w": 68,
+      "h": 58,
+      "z": 10
+    },
     "leg_back": {
-      "asset": "art/approved/nihongo/nihongo.leg_back.png",
-      "z_index": 11,
-      "parent": "torso",
-      "offset": [
-        140,
-        240
-      ],
-      "size": [
-        56,
-        96
-      ],
-      "pivots": {
-        "hip": [
-          168,
-          245
-        ],
-        "ankle": [
-          168,
-          326
-        ]
-      }
+      "id": "nihongo.leg_back",
+      "x": 152,
+      "y": 232,
+      "w": 65,
+      "h": 108,
+      "z": 11
     },
     "shoe_front": {
-      "asset": "art/approved/nihongo/nihongo.shoe_front.png",
-      "z_index": 12,
-      "parent": "leg_front",
-      "offset": [
-        172,
-        312
-      ],
-      "size": [
-        74,
-        48
-      ],
-      "pivots": {
-        "ankle": [
-          198,
-          326
-        ]
-      }
+      "id": "nihongo.shoe_front",
+      "x": 108,
+      "y": 322,
+      "w": 68,
+      "h": 58,
+      "z": 12
     },
     "leg_front": {
-      "asset": "art/approved/nihongo/nihongo.leg_front.png",
-      "z_index": 13,
-      "parent": "torso",
-      "offset": [
-        172,
-        242
-      ],
-      "size": [
-        56,
-        98
-      ],
-      "pivots": {
-        "hip": [
-          198,
-          245
-        ],
-        "ankle": [
-          198,
-          326
-        ]
-      }
+      "id": "nihongo.leg_front",
+      "x": 108,
+      "y": 234,
+      "w": 67,
+      "h": 112,
+      "z": 13
     },
     "arm_back": {
-      "asset": "art/approved/nihongo/nihongo.arm_back.png",
-      "z_index": 18,
-      "parent": "torso",
-      "offset": [
-        200,
-        124
-      ],
-      "size": [
-        84,
-        108
-      ],
-      "pivots": {
-        "shoulder": [
-          218,
-          152
-        ],
-        "wrist": [
-          272,
-          214
-        ]
-      }
+      "id": "nihongo.arm_back",
+      "x": 185,
+      "y": 118,
+      "w": 62,
+      "h": 110,
+      "z": 16
     },
     "torso": {
-      "asset": "art/approved/nihongo/nihongo.torso.png",
-      "z_index": 20,
-      "parent": null,
-      "offset": [
-        132,
-        102
-      ],
-      "size": [
-        112,
-        186
-      ],
-      "pivots": {
-        "neck": [
-          188,
-          128
-        ],
-        "shoulder_front": [
-          135,
-          150
-        ],
-        "shoulder_back": [
-          218,
-          152
-        ],
-        "waist": [
-          188,
-          245
-        ]
-      }
+      "id": "nihongo.torso",
+      "x": 92,
+      "y": 98,
+      "w": 148,
+      "h": 196,
+      "z": 20
     },
     "head": {
-      "asset": "art/approved/nihongo/nihongo.head.png",
-      "z_index": 30,
-      "parent": "torso",
-      "offset": [
-        146,
-        36
-      ],
-      "size": [
-        83,
-        124
-      ],
-      "pivots": {
-        "neck": [
-          188,
-          128
-        ],
-        "eyes": [
-          196,
-          96
-        ],
-        "brows": [
-          196,
-          84
-        ],
-        "headband": [
-          188,
-          72
-        ]
-      }
+      "id": "nihongo.head",
+      "x": 124,
+      "y": 14,
+      "w": 82,
+      "h": 130,
+      "z": 25
     },
-    "eyes.normal": {
-      "asset": "art/approved/nihongo/nihongo.eyes.normal.png",
-      "z_index": 32,
-      "parent": "head",
-      "offset": [
-        170,
-        88
-      ],
-      "size": [
-        44,
-        18
-      ],
-      "pivots": {
-        "anchor": [
-          196,
-          96
-        ]
-      }
+    "eyes_normal": {
+      "id": "nihongo.eyes.normal",
+      "x": 144,
+      "y": 54,
+      "w": 48,
+      "h": 22,
+      "z": 26
     },
-    "eyes.closed": {
-      "asset": "art/approved/nihongo/nihongo.eyes.closed.png",
-      "z_index": 32,
-      "parent": "head",
-      "offset": [
-        170,
-        88
-      ],
-      "size": [
-        42,
-        20
-      ],
-      "pivots": {
-        "anchor": [
-          196,
-          96
-        ]
-      }
+    "eyes_closed": {
+      "id": "nihongo.eyes.closed",
+      "x": 144,
+      "y": 54,
+      "w": 48,
+      "h": 22,
+      "z": 26
     },
-    "eyes.squint": {
-      "asset": "art/approved/nihongo/nihongo.eyes.squint.png",
-      "z_index": 32,
-      "parent": "head",
-      "offset": [
-        170,
-        88
-      ],
-      "size": [
-        44,
-        17
-      ],
-      "pivots": {
-        "anchor": [
-          196,
-          96
-        ]
-      }
+    "eyes_squint": {
+      "id": "nihongo.eyes.squint",
+      "x": 144,
+      "y": 54,
+      "w": 48,
+      "h": 22,
+      "z": 26
     },
-    "brows.normal": {
-      "asset": "art/approved/nihongo/nihongo.brows.normal.png",
-      "z_index": 33,
-      "parent": "head",
-      "offset": [
-        168,
-        76
-      ],
-      "size": [
-        48,
-        15
-      ],
-      "pivots": {
-        "anchor": [
-          196,
-          84
-        ]
-      }
+    "brows_normal": {
+      "id": "nihongo.brows.normal",
+      "x": 140,
+      "y": 42,
+      "w": 56,
+      "h": 16,
+      "z": 27
     },
-    "brows.angry": {
-      "asset": "art/approved/nihongo/nihongo.brows.angry.png",
-      "z_index": 33,
-      "parent": "head",
-      "offset": [
-        168,
-        74
-      ],
-      "size": [
-        46,
-        18
-      ],
-      "pivots": {
-        "anchor": [
-          196,
-          84
-        ]
-      }
+    "brows_angry": {
+      "id": "nihongo.brows.angry",
+      "x": 140,
+      "y": 41,
+      "w": 56,
+      "h": 18,
+      "z": 27
     },
     "headband": {
-      "asset": "art/approved/nihongo/nihongo.headband.png",
-      "z_index": 35,
-      "parent": "head",
-      "offset": [
-        118,
-        52
-      ],
-      "size": [
-        116,
-        44
-      ],
-      "pivots": {
-        "anchor": [
-          188,
-          72
-        ]
-      }
+      "id": "nihongo.headband",
+      "x": 96,
+      "y": 20,
+      "w": 114,
+      "h": 52,
+      "z": 28
     },
-    "prop.broom_katana": {
-      "asset": "art/approved/nihongo/nihongo.prop.broom_katana.png",
-      "z_index": 38,
-      "parent": "hand_front.fist",
-      "offset": [
-        148,
-        126
-      ],
-      "size": [
-        68,
-        228
-      ],
-      "pivots": {
-        "grip": [
-          178,
-          212
-        ]
-      }
-    },
-    "hand_front.fist": {
-      "asset": "art/approved/nihongo/nihongo.hand_front.fist.png",
-      "z_index": 40,
-      "parent": "arm_front",
-      "offset": [
-        164,
-        194
-      ],
-      "size": [
-        36,
-        36
-      ],
-      "pivots": {
-        "wrist": [
-          172,
-          208
-        ]
-      }
-    },
-    "hand_front.open": {
-      "asset": "art/approved/nihongo/nihongo.hand_front.open.png",
-      "z_index": 40,
-      "parent": "arm_front",
-      "offset": [
-        162,
-        190
-      ],
-      "size": [
-        40,
-        42
-      ],
-      "pivots": {
-        "wrist": [
-          172,
-          208
-        ]
-      }
+    "broom_katana": {
+      "id": "nihongo.prop.broom_katana",
+      "x": 116,
+      "y": 94,
+      "w": 140,
+      "h": 248,
+      "z": 30
     },
     "arm_front": {
-      "asset": "art/approved/nihongo/nihongo.arm_front.png",
-      "z_index": 41,
-      "parent": "torso",
-      "offset": [
-        106,
-        122
-      ],
-      "size": [
-        101,
-        112
-      ],
-      "pivots": {
-        "shoulder": [
-          135,
-          150
-        ],
-        "wrist": [
-          172,
-          208
-        ]
-      }
-    }
-  },
-  "variant_groups": {
-    "eyes": {
-      "default": "normal",
-      "variants": {
-        "normal": "eyes.normal",
-        "closed": "eyes.closed",
-        "squint": "eyes.squint"
-      }
+      "id": "nihongo.arm_front",
+      "x": 96,
+      "y": 116,
+      "w": 88,
+      "h": 116,
+      "z": 32
     },
-    "brows": {
-      "default": "normal",
-      "variants": {
-        "normal": "brows.normal",
-        "angry": "brows.angry"
-      }
+    "hand_front_fist": {
+      "id": "nihongo.hand_front.fist",
+      "x": 166,
+      "y": 182,
+      "w": 38,
+      "h": 42,
+      "z": 34
     },
-    "hand_front": {
-      "default": "fist",
-      "variants": {
-        "fist": "hand_front.fist",
-        "open": "hand_front.open"
-      }
+    "hand_front_open": {
+      "id": "nihongo.hand_front.open",
+      "x": 164,
+      "y": 178,
+      "w": 44,
+      "h": 46,
+      "z": 34
     }
   }
 }

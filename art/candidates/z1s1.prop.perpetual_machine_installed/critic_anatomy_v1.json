@@ -1,8 +1,4 @@
 {
-  "piece": "z1s1.prop.perpetual_machine_installed",
-  "version": "v1",
-  "critic": "anatomy-critic",
   "verdict": "sin_objeciones",
-  "defects": [],
-  "notes": "Calibrated to Z1S1 room proportions (target_height_px=380)."
+  "defects": []
 }

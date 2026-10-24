@@ -1,9 +1,14 @@
 {
-  "piece_id": "troll.torso_tunic",
-  "status": "approved",
-  "selected_variant": "v1.png",
-  "size": [
-    151,
-    202
-  ]
+  "id": "troll.torso_tunic",
+  "category": "z0",
+  "kind": "body_part",
+  "what": "Barrel-chested green cutout ogre torso in ragged brown burlap tunic with patch and belt",
+  "target_height_px": 190,
+  "height_fraction_of_smoothface": 0.603,
+  "allowed_islands": 0,
+  "references": [
+    "ref_canonical_2010"
+  ],
+  "status": "proposed",
+  "proposed_version": "v1"
 }

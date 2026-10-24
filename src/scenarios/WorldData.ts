@@ -686,10 +686,10 @@ export const ROOM_OBJECTS: Record<RoomId, SceneObjectDef[]> = {
     { id: 'z1s1.wall.hull_panel_1', imageKey: 'z1s1.wall.hull_panel', x: -60, y: -35, w: 1020, h: 720, sortY: 90, parallaxFactor: 0.85, inSituSeamless: true },
     { id: 'z1s1.wall.hull_panel_2', imageKey: 'z1s1.wall.hull_panel', x: 920, y: -35, w: 1020, h: 720, sortY: 92, parallaxFactor: 0.85, flipX: true, inSituSeamless: true },
     { id: 'z1s1.wall.hull_panel_3', imageKey: 'z1s1.wall.hull_panel', x: 1860, y: -35, w: 720, h: 720, sortY: 94, parallaxFactor: 0.85, inSituSeamless: true },
-    { id: 'z1s1.ceiling.rivet_arch_1', imageKey: 'z1s1.ceiling.rivet_arch', x: -40, y: -135, w: 680, h: 225, sortY: 98, parallaxFactor: 0.85, inSituSeamless: true },
-    { id: 'z1s1.ceiling.rivet_arch_2', imageKey: 'z1s1.ceiling.rivet_arch', x: 580, y: -135, w: 680, h: 225, sortY: 98, parallaxFactor: 0.85, flipX: true, inSituSeamless: true },
-    { id: 'z1s1.ceiling.rivet_arch_3', imageKey: 'z1s1.ceiling.rivet_arch', x: 1200, y: -135, w: 680, h: 225, sortY: 99, parallaxFactor: 0.85, inSituSeamless: true },
-    { id: 'z1s1.ceiling.rivet_arch_4', imageKey: 'z1s1.ceiling.rivet_arch', x: 1820, y: -135, w: 680, h: 225, sortY: 99, parallaxFactor: 0.85, flipX: true, inSituSeamless: true },
+    { id: 'z1s1.ceiling.rivet_arch_1', imageKey: 'z1s1.ceiling.rivet_arch', x: -40, y: -55, w: 680, h: 225, sortY: 98, parallaxFactor: 0.85, inSituSeamless: true },
+    { id: 'z1s1.ceiling.rivet_arch_2', imageKey: 'z1s1.ceiling.rivet_arch', x: 580, y: -55, w: 680, h: 225, sortY: 98, parallaxFactor: 0.85, flipX: true, inSituSeamless: true },
+    { id: 'z1s1.ceiling.rivet_arch_3', imageKey: 'z1s1.ceiling.rivet_arch', x: 1200, y: -55, w: 680, h: 225, sortY: 99, parallaxFactor: 0.85, inSituSeamless: true },
+    { id: 'z1s1.ceiling.rivet_arch_4', imageKey: 'z1s1.ceiling.rivet_arch', x: 1820, y: -55, w: 680, h: 225, sortY: 99, parallaxFactor: 0.85, flipX: true, inSituSeamless: true },
 
     // PLANE 2: BOLTED STEEL DECK FLOOR (parallaxFactor: 1.0, sortY: 550, covers down to y=945)
     { id: 'z1s1.floor.steel_deck_1', imageKey: 'z1s1.floor.steel_deck', x: -80, y: 520, w: 1020, h: 425, sortY: 550, parallaxFactor: 1.0, inSituSeamless: true },
@@ -697,27 +697,27 @@ export const ROOM_OBJECTS: Record<RoomId, SceneObjectDef[]> = {
     { id: 'z1s1.floor.steel_deck_3', imageKey: 'z1s1.floor.steel_deck', x: 1820, y: 520, w: 740, h: 425, sortY: 550, parallaxFactor: 1.0, inSituSeamless: true },
 
     // PLANE 3: WALL PROPS & CAGED SUBMARINE LAMPS (parallaxFactor: 0.85, matching ref_z1s1_machineroom_2010.png)
-    { id: 'z1s1.wall.caged_lamp_1', imageKey: 'z1s1.wall.caged_lamp', x: 540, y: 185, w: 83, h: 138, sortY: 558, parallaxFactor: 0.85 },
-    { id: 'z1s1.wall.book_shelf', imageKey: 'z1s1.wall.book_shelf', x: 760, y: 175, w: 320, h: 224, sortY: 560, parallaxFactor: 0.85 },
-    { id: 'z1s1.wall.caged_lamp_2', imageKey: 'z1s1.wall.caged_lamp', x: 1520, y: 185, w: 83, h: 138, sortY: 558, parallaxFactor: 0.85 },
-    { id: 'z1s1.wall.caged_lamp_3', imageKey: 'z1s1.wall.caged_lamp', x: 1980, y: 185, w: 83, h: 138, sortY: 558, parallaxFactor: 0.85 },
-    { id: 'z1s1.prop.iron_ladder', hotspotId: 'z1s1_ladder_lounge', imageKey: 'z1s1.prop.iron_ladder', x: 1125, y: 75, w: 220, h: 555, sortY: 565, parallaxFactor: 0.92 },
+    { id: 'z1s1.wall.caged_lamp_1', imageKey: 'z1s1.wall.caged_lamp', x: 520, y: 185, w: 96, h: 128, sortY: 558, parallaxFactor: 0.85 },
+    { id: 'z1s1.wall.book_shelf', imageKey: 'z1s1.wall.book_shelf', x: 740, y: 175, w: 330, h: 230, sortY: 560, parallaxFactor: 0.85 },
+    { id: 'z1s1.wall.caged_lamp_2', imageKey: 'z1s1.wall.caged_lamp', x: 1500, y: 185, w: 96, h: 128, sortY: 558, parallaxFactor: 0.85 },
+    { id: 'z1s1.wall.caged_lamp_3', imageKey: 'z1s1.wall.caged_lamp', x: 1960, y: 185, w: 96, h: 128, sortY: 558, parallaxFactor: 0.85 },
+    { id: 'z1s1.prop.iron_ladder', hotspotId: 'z1s1_ladder_lounge', imageKey: 'z1s1.prop.iron_ladder', x: 1125, y: 65, w: 220, h: 565, sortY: 565, parallaxFactor: 0.92 },
 
-    // PLANE 4: 4 RECUMBENT SUBMARINE PEDAL-CRANK STATIONS IN A ROW & PERPETUAL MACHINE (parallaxFactor: 1.0)
-    { id: 'z1s1.prop.pedal_station_1', imageKey: 'z1s1.prop.pedal_station_intact', x: 260, y: 420, w: 390, h: 266, sortY: 726, parallaxFactor: 1.0 },
-    { id: 'z1s1.prop.pedal_station_2', imageKey: 'z1s1.prop.pedal_station_intact', x: 690, y: 420, w: 390, h: 266, sortY: 728, parallaxFactor: 1.0 },
-    { id: 'z1s1.prop.pedal_station_intact', imageKey: 'z1s1.prop.pedal_station_intact', x: 1120, y: 420, w: 390, h: 266, sortY: 730, parallaxFactor: 1.0 },
-    { id: 'z1s1.prop.pedal_station_broken', hotspotId: 'z1s1_pedal_engine', imageKey: 'z1s1.prop.pedal_station_broken', x: 1545, y: 420, w: 390, h: 266, sortY: 735, parallaxFactor: 1.0, visibleWhen: (f) => !f.perpetualMachineInstalled },
-    { id: 'z1s1.prop.perpetual_machine_installed', hotspotId: 'z1s1_pedal_engine', imageKey: 'z1s1.prop.perpetual_machine_installed', x: 1475, y: 340, w: 475, h: 350, sortY: 736, parallaxFactor: 1.0, visibleWhen: (f) => f.perpetualMachineInstalled },
-    { id: 'z1s1.item.davinci_blueprint', hotspotId: 'z1s1_blueprint_pickup', imageKey: 'z1s1.item.davinci_blueprint', x: 865, y: 615, w: 145, h: 135, sortY: 738, parallaxFactor: 1.0, visibleWhen: (f) => !f.nihongoGaveBlueprint },
+    // PLANE 4: 4 SUBMARINE PEDAL-CRANK GENERATOR STATIONS & DA VINCI PERPETUAL MACHINE (parallaxFactor: 1.0)
+    { id: 'z1s1.prop.pedal_station_1', imageKey: 'z1s1.prop.pedal_station_intact', x: 290, y: 380, w: 325, h: 324, sortY: 726, parallaxFactor: 1.0 },
+    { id: 'z1s1.prop.pedal_station_2', imageKey: 'z1s1.prop.pedal_station_intact', x: 710, y: 380, w: 325, h: 324, sortY: 728, parallaxFactor: 1.0 },
+    { id: 'z1s1.prop.pedal_station_intact', imageKey: 'z1s1.prop.pedal_station_intact', x: 1135, y: 380, w: 325, h: 324, sortY: 730, parallaxFactor: 1.0 },
+    { id: 'z1s1.prop.pedal_station_broken', hotspotId: 'z1s1_pedal_engine', imageKey: 'z1s1.prop.pedal_station_broken', x: 1555, y: 415, w: 320, h: 292, sortY: 735, parallaxFactor: 1.0, visibleWhen: (f) => !f.perpetualMachineInstalled },
+    { id: 'z1s1.prop.perpetual_machine_installed', hotspotId: 'z1s1_pedal_engine', imageKey: 'z1s1.prop.perpetual_machine_installed', x: 1500, y: 305, w: 405, h: 412, sortY: 736, parallaxFactor: 1.0, visibleWhen: (f) => f.perpetualMachineInstalled },
+    { id: 'z1s1.item.davinci_blueprint', hotspotId: 'z1s1_blueprint_pickup', imageKey: 'z1s1.item.davinci_blueprint', x: 865, y: 605, w: 145, h: 135, sortY: 738, parallaxFactor: 1.0, visibleWhen: (f) => !f.nihongoGaveBlueprint },
 
-    // PLANE 5: CONTINUOUS BILGE GARBAGE TRENCH & SUBMARINE HULL RINGS (parallaxFactor: 1.14 - 1.20)
-    { id: 'z1s1.fg.toxic_barrels', hotspotId: 'z1s1_rad_barrels', imageKey: 'z1s1.fg.toxic_barrels', x: 360, y: 675, w: 305, h: 250, sortY: 920, parallaxFactor: 1.14 },
-    { id: 'z1s1.fg.toxic_barrels_2', hotspotId: 'z1s1_rad_barrels', imageKey: 'z1s1.fg.toxic_barrels', x: 615, y: 705, w: 285, h: 235, sortY: 921, parallaxFactor: 1.14, flipX: true },
-    { id: 'z1s1.fg.broken_toaster', hotspotId: 'z1s1_rat_tv', imageKey: 'z1s1.fg.broken_toaster', x: 895, y: 715, w: 215, h: 205, sortY: 922, parallaxFactor: 1.14 },
-    { id: 'z1s1.fg.bilge_rat', hotspotId: 'z1s1_rat_tv', imageKey: 'z1s1.fg.bilge_rat', x: 1085, y: 750, w: 145, h: 145, sortY: 926, parallaxFactor: 1.14 },
-    { id: 'z1s1.fg.potato_sacks', hotspotId: 'z1s1_rat_tv', imageKey: 'z1s1.fg.potato_sacks', x: 1235, y: 695, w: 315, h: 235, sortY: 924, parallaxFactor: 1.14 },
-    { id: 'z1s1.fg.potato_sacks_2', hotspotId: 'z1s1_rat_tv', imageKey: 'z1s1.fg.potato_sacks', x: 1515, y: 710, w: 300, h: 225, sortY: 925, parallaxFactor: 1.14, flipX: true },
+    // PLANE 5: PROMINENT FOREGROUND BILGE GARBAGE TRENCH (003_front_panel.png, visible above HUD bar!)
+    { id: 'z1s1.fg.toxic_barrels', hotspotId: 'z1s1_rad_barrels', imageKey: 'z1s1.fg.toxic_barrels', x: 290, y: 545, w: 340, h: 275, sortY: 920, parallaxFactor: 1.14 },
+    { id: 'z1s1.fg.toxic_barrels_2', hotspotId: 'z1s1_rad_barrels', imageKey: 'z1s1.fg.toxic_barrels', x: 575, y: 575, w: 315, h: 255, sortY: 921, parallaxFactor: 1.14, flipX: true },
+    { id: 'z1s1.fg.broken_toaster', hotspotId: 'z1s1_rat_tv', imageKey: 'z1s1.fg.broken_toaster', x: 880, y: 595, w: 235, h: 220, sortY: 922, parallaxFactor: 1.14 },
+    { id: 'z1s1.fg.bilge_rat', hotspotId: 'z1s1_rat_tv', imageKey: 'z1s1.fg.bilge_rat', x: 1095, y: 635, w: 155, h: 155, sortY: 926, parallaxFactor: 1.14 },
+    { id: 'z1s1.fg.potato_sacks', hotspotId: 'z1s1_rat_tv', imageKey: 'z1s1.fg.potato_sacks', x: 1245, y: 565, w: 345, h: 260, sortY: 924, parallaxFactor: 1.14 },
+    { id: 'z1s1.fg.potato_sacks_2', hotspotId: 'z1s1_rat_tv', imageKey: 'z1s1.fg.potato_sacks', x: 1545, y: 580, w: 330, h: 250, sortY: 925, parallaxFactor: 1.14, flipX: true },
     { id: 'z1s1.fg.hull_ring_left', imageKey: 'z1s1.fg.hull_ring_left', x: 180, y: -40, w: 340, h: 980, sortY: 940, parallaxFactor: 1.12, inSituSeamless: true },
     { id: 'z1s1.fg.hull_ring_right', imageKey: 'z1s1.fg.hull_ring_right', x: 1920, y: -40, w: 340, h: 980, sortY: 940, parallaxFactor: 1.12, inSituSeamless: true },
   ],

@@ -2,26 +2,14 @@
   "id": "ababy.arm_back",
   "category": "ababy",
   "kind": "body_part",
-  "what": "A Baby massive gorilla-like muscular back arm and knuckle-walking fist in darker shaded skin",
+  "what": "Long muscular gorilla rear arm with blue sleeve cap and knuckle-dragging fist",
   "target_height_px": 144,
   "height_fraction_of_smoothface": 0.457,
-  "pivot_hint": "shoulder at top-center; knuckle fist at bottom",
   "allowed_islands": 0,
   "references": [
     "art/references/ref_design_ababy.png",
     "art/references/palette_characters.png"
   ],
-  "versions": {
-    "v1": "prompt_v1.txt"
-  },
-  "status": "approved",
-  "proposed_version": "v1",
-  "version": "v1",
-  "approved_version": "v1",
-  "piece_id": "ababy.arm_back",
-  "selected_variant": "v1.png",
-  "size": [
-    84,
-    168
-  ]
+  "status": "proposed",
+  "proposed_version": "v1"
 }

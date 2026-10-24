@@ -8,7 +8,7 @@ los veredictos de Alex en review/review.json. Sin dependencias externas.
 """
 import argparse, json, os, sys, mimetypes, urllib.parse
 from datetime import datetime
-from http.server import HTTPServer, SimpleHTTPRequestHandler
+from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 
 ROOT = None
 
@@ -33,7 +33,7 @@ def candidates(show_all=False):
         d = os.path.join(cdir, pid)
         meta = jload(os.path.join(d, "meta.json"), None)
         if not meta: continue
-        if not show_all and meta.get("status") != "proposed": continue
+        if not show_all and meta.get("status") not in ("proposed", "approved"): continue
         v = meta.get("proposed_version") or sorted([f[:-4] for f in os.listdir(d) if f.endswith(".png") and f.startswith("v") and "_raw" not in f])[-1:] or ["v1"]
         v = v if isinstance(v, str) else v[0]
         def jf(name): return jload(os.path.join(d, name), None)
@@ -64,6 +64,7 @@ def layout_shots():
     return out
 
 class H(SimpleHTTPRequestHandler):
+    protocol_version = "HTTP/1.1"
     def log_message(self, *a): pass
 
     def _json(self, obj, code=200):
@@ -120,7 +121,7 @@ def main():
     a = ap.parse_args()
     ROOT = os.path.abspath(a.root)
     print(f"Hoja de revisión: http://localhost:{a.port}/   (raíz: {ROOT})")
-    HTTPServer(("127.0.0.1", a.port), H).serve_forever()
+    ThreadingHTTPServer(("127.0.0.1", a.port), H).serve_forever()
 
 if __name__ == "__main__":
     main()

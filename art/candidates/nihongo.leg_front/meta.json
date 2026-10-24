@@ -2,20 +2,14 @@
   "id": "nihongo.leg_front",
   "category": "nihongo",
   "kind": "body_part",
-  "what": "Nihongo Nohondes baggy pleated indigo samurai trouser leg (hakama) tapering into off-white cloth shin wraps (kyahan)",
+  "what": "Front baggy cream gi trouser leg with dark shin wrap",
   "target_height_px": 104,
   "height_fraction_of_smoothface": 0.33,
-  "pivot_hint": "hip joint at top-center; ankle joint at bottom-center",
   "allowed_islands": 0,
   "references": [
     "art/references/palette_characters.png",
     "art/references/ref_z1s2_lobby_2010.png"
   ],
-  "versions": {
-    "v1": "prompt_v1.txt"
-  },
   "status": "proposed",
-  "proposed_version": "v1",
-  "version": "v1",
-  "approved_version": "v1"
+  "proposed_version": "v1"
 }

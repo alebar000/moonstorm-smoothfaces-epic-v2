@@ -2,26 +2,14 @@
   "id": "nihongo.arm_back",
   "category": "nihongo",
   "kind": "body_part",
-  "what": "Nihongo Nohondes back arm in darker shaded indigo samue sleeve with off-white cloth wrist wrap",
+  "what": "Bare muscular rear arm with charcoal wrist bracer and fist",
   "target_height_px": 102,
   "height_fraction_of_smoothface": 0.324,
-  "pivot_hint": "shoulder joint at top-left; wrist joint at bottom-right cuff",
   "allowed_islands": 0,
   "references": [
     "art/references/palette_characters.png",
     "art/references/ref_z1s2_lobby_2010.png"
   ],
-  "versions": {
-    "v1": "prompt_v1.txt"
-  },
-  "status": "approved",
-  "proposed_version": "v1",
-  "version": "v1",
-  "approved_version": "v1",
-  "piece_id": "nihongo.arm_back",
-  "selected_variant": "v1.png",
-  "size": [
-    84,
-    108
-  ]
+  "status": "proposed",
+  "proposed_version": "v1"
 }

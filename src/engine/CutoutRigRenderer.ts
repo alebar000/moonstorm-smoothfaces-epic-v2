@@ -93,55 +93,54 @@ const CAPDREAD_BOXES: Record<string, PartBox> = {
 };
 
 const NIHONGO_BOXES: Record<string, PartBox> = {
-  shoe_back:        { x: 158, y: 306, w:  72, h:  62 },
-  leg_back:         { x: 164, y: 238, w:  60, h:  98 },
-  shoe_front:       { x: 118, y: 312, w:  72, h:  62 },
-  leg_front:        { x: 130, y: 242, w:  56, h: 104 },
-  hand_back:        { x: 214, y: 188, w:  38, h:  41 },
-  arm_back:         { x: 156, y: 114, w:  84, h: 108 },
-  torso:            { x: 110, y:  98, w: 112, h: 186 },
-  head:             { x: 126, y:  18, w:  83, h: 124 },
-  eyes_normal:      { x: 152, y:  64, w:  44, h:  18 },
-  eyes_closed:      { x: 152, y:  64, w:  42, h:  20 },
-  eyes_squint:      { x: 152, y:  64, w:  44, h:  17 },
-  brows_normal:     { x: 150, y:  50, w:  48, h:  15 },
-  brows_angry:      { x: 150, y:  49, w:  46, h:  18 },
-  headband:         { x: 110, y:  30, w: 102, h:  51 },
-  broom_katana:     { x: 142, y: 128, w:  76, h: 212 },
-  hand_front_fist:  { x: 162, y: 194, w:  36, h:  37 },
-  hand_front_open:  { x: 160, y: 190, w:  38, h:  41 },
-  arm_front:        { x:  84, y: 114, w: 101, h: 112 },
+  shoe_back:        { x: 152, y: 318, w:  68, h:  58 },
+  leg_back:         { x: 152, y: 232, w:  65, h: 108 },
+  shoe_front:       { x: 108, y: 322, w:  68, h:  58 },
+  leg_front:        { x: 108, y: 234, w:  67, h: 112 },
+  arm_back:         { x: 185, y: 118, w:  62, h: 110 },
+  torso:            { x:  92, y:  98, w: 148, h: 196 },
+  head:             { x: 124, y:  14, w:  82, h: 130 },
+  eyes_normal:      { x: 144, y:  54, w:  48, h:  22 },
+  eyes_closed:      { x: 144, y:  54, w:  48, h:  22 },
+  eyes_squint:      { x: 144, y:  54, w:  48, h:  22 },
+  brows_normal:     { x: 140, y:  42, w:  56, h:  16 },
+  brows_angry:      { x: 140, y:  41, w:  56, h:  18 },
+  headband:         { x:  96, y:  20, w: 114, h:  52 },
+  broom_katana:     { x: 116, y:  94, w: 140, h: 248 },
+  arm_front:        { x:  96, y: 116, w:  88, h: 116 },
+  hand_front_fist:  { x: 166, y: 182, w:  38, h:  42 },
+  hand_front_open:  { x: 164, y: 178, w:  44, h:  46 },
 };
 
 const ABABY_BOXES: Record<string, PartBox> = {
-  arm_back:         { x: 174, y: 134, w:  84, h: 168 },
-  legs_diaper:      { x: 118, y: 192, w: 101, h: 112 },
-  arm_front:        { x:  82, y: 136, w:  78, h: 172 },
-  torso:            { x:  88, y:  84, w: 157, h: 154 },
-  head:             { x: 132, y:  32, w:  93, h: 112 },
-  eyes_normal:      { x: 164, y:  54, w:  44, h:  27 },
-  eyes_angry:       { x: 163, y:  54, w:  46, h:  25 },
-  bonnet:           { x: 124, y:  18, w:  78, h:  72 },
+  arm_back:         { x: 186, y: 112, w:  95, h: 168 },
+  legs_diaper:      { x: 108, y: 214, w: 118, h: 125 },
+  torso:            { x:  96, y:  92, w: 142, h: 172 },
+  arm_front:        { x:  58, y: 112, w:  99, h: 176 },
+  head:             { x: 116, y:  18, w: 104, h: 122 },
+  eyes_normal:      { x: 134, y:  44, w:  68, h:  31 },
+  eyes_angry:       { x: 133, y:  44, w:  70, h:  32 },
+  bonnet:           { x:  98, y:   4, w: 140, h:  99 },
 };
 
 const VENTRILO_BOXES: Record<string, PartBox> = {
-  shoes:            { x: 118, y: 326, w:  99, h:  62 },
-  legs:             { x: 112, y: 198, w:  82, h: 170 },
-  arm_back:         { x: 168, y: 108, w:  47, h: 132 },
-  torso:            { x: 106, y:  86, w:  95, h: 156 },
-  head_jaw:         { x: 122, y:   6, w:  65, h: 126 },
-  eyes_normal:      { x: 146, y:  44, w:  31, h:  28 },
-  arm_front:        { x: 104, y: 118, w: 112, h:  75 },
-  dummy_rapoleon:   { x: 148, y:  68, w: 115, h: 168 },
+  shoes:            { x: 106, y: 324, w:  96, h:  42 },
+  legs:             { x: 110, y: 196, w:  87, h: 170 },
+  arm_back:         { x:  82, y: 104, w:  72, h: 122 },
+  torso:            { x: 104, y:  88, w: 102, h: 172 },
+  head_jaw:         { x: 116, y:   6, w:  78, h: 136 },
+  eyes_normal:      { x: 132, y:  48, w:  48, h:  22 },
+  arm_front:        { x: 124, y: 122, w:  96, h: 110 },
+  dummy_rapoleon:   { x: 166, y:  78, w: 120, h: 168 },
 };
 
 const TROLL_BOXES: Record<string, PartBox> = {
-  arm_back:         { x: 182, y: 106, w: 103, h: 174 },
-  legs_feet:        { x: 104, y: 232, w: 128, h: 142 },
-  torso_tunic:      { x:  88, y:  96, w: 151, h: 202 },
-  head_jaw:         { x: 106, y:  16, w: 126, h: 138 },
-  eyes:             { x: 148, y:  52, w:  68, h:  44 },
-  arm_front_club:   { x:  48, y: 108, w: 180, h: 216 },
+  arm_back:         { x:  62, y: 118, w:  92, h: 170 },
+  legs_feet:        { x:  98, y: 224, w: 146, h: 148 },
+  torso_tunic:      { x:  84, y:  96, w: 168, h: 206 },
+  head_jaw:         { x:  90, y:  10, w: 158, h: 144 },
+  eyes:             { x: 126, y:  42, w:  86, h:  40 },
+  arm_front_club:   { x: 182, y:  56, w: 170, h: 184 },
 };
 
 export class CutoutRigRenderer {
@@ -679,7 +678,6 @@ export class CutoutRigRenderer {
     this.drawPart(ctx, 'ni_leg_back', NIHONGO_BOXES.leg_back, 0, 0, 0, true);
     this.drawPart(ctx, 'ni_shoe_front', NIHONGO_BOXES.shoe_front, 0, 0, 0, true);
     this.drawPart(ctx, 'ni_leg_front', NIHONGO_BOXES.leg_front, 0, 0, 0, true);
-    this.drawPart(ctx, 'ni_hand_front_open', NIHONGO_BOXES.hand_back, 0, bodyBob * 0.8, 0, true);
     this.drawPart(ctx, 'ni_arm_back', NIHONGO_BOXES.arm_back, 0, bodyBob * 0.8, 0, true);
     this.drawPart(ctx, 'ni_torso', NIHONGO_BOXES.torso, 0, bodyBob, 0, true);
 
@@ -719,8 +717,8 @@ export class CutoutRigRenderer {
 
     this.drawPart(ctx, 'ab_arm_back', ABABY_BOXES.arm_back, 0, bodyBob * 0.5, 0, true);
     this.drawPart(ctx, 'ab_legs_diaper', ABABY_BOXES.legs_diaper, 0, bodyBob * 0.7, 0, true);
-    this.drawPart(ctx, 'ab_arm_front', ABABY_BOXES.arm_front, 0, bodyBob * 0.5, 0, true);
     this.drawPart(ctx, 'ab_torso', ABABY_BOXES.torso, 0, bodyBob, 0, true);
+    this.drawPart(ctx, 'ab_arm_front', ABABY_BOXES.arm_front, 0, bodyBob * 0.5, 0, true);
 
     const headBob = bodyBob * 1.15;
     this.drawPart(ctx, 'ab_head', ABABY_BOXES.head, 0, headBob, 0, true);

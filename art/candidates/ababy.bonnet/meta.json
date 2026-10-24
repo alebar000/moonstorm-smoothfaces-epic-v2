@@ -2,26 +2,14 @@
   "id": "ababy.bonnet",
   "category": "ababy",
   "kind": "body_part",
-  "what": "A Baby frilly off-white construction-paper baby bonnet with ruffled trim and dangling ribbon ties in 3/4 view facing right",
+  "what": "Frilly baby bonnet cap fitting snugly over head top with lace trim",
   "target_height_px": 94,
   "height_fraction_of_smoothface": 0.298,
-  "pivot_hint": "crown of ababy.head",
   "allowed_islands": 0,
   "references": [
     "art/references/ref_design_ababy.png",
     "art/references/palette_characters.png"
   ],
-  "versions": {
-    "v1": "prompt_v1.txt"
-  },
-  "status": "approved",
-  "proposed_version": "v1",
-  "version": "v1",
-  "approved_version": "v1",
-  "piece_id": "ababy.bonnet",
-  "selected_variant": "v1.png",
-  "size": [
-    78,
-    72
-  ]
+  "status": "proposed",
+  "proposed_version": "v1"
 }

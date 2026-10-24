@@ -1,9 +1,14 @@
 {
-  "piece_id": "troll.eyes",
-  "status": "approved",
-  "selected_variant": "v1.png",
-  "size": [
-    68,
-    44
-  ]
+  "id": "troll.eyes",
+  "category": "z0",
+  "kind": "body_part",
+  "what": "Yellow paper eyeballs and heavy black monobrow with zero green skin patch",
+  "target_height_px": 42,
+  "height_fraction_of_smoothface": 0.133,
+  "allowed_islands": 1,
+  "references": [
+    "ref_canonical_2010"
+  ],
+  "status": "proposed",
+  "proposed_version": "v1"
 }

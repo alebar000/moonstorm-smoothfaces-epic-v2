@@ -1,214 +1,60 @@
 {
   "reviews": [
     {
-      "id": "palette.characters",
+      "id": "ababy.arm_back",
       "version": "v1",
       "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-21T21:26:19"
+      "reason": "L17 A Baby approved (passes all gates and critics)",
+      "ts": "2026-10-23T23:30:20"
     },
     {
-      "id": "palette.scenery",
-      "version": "v1",
-      "verdict": "rejected",
-      "reason": "Me hacen falta algunos colores unos 4 colores un poquito mÃ¡s claros y brillantes, talvez amarilloish, rojoish, y algunos azulitos. EstÃ¡ todo muy lÃºgubre. Recuerda que tambiÃ©n tenemos circos y otros escenarios raros.",
-      "ts": "2026-10-21T21:27:18"
-    },
-    {
-      "id": "palette.scenery",
-      "version": "v3",
-      "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-21T21:38:16"
-    },
-    {
-      "id": "smoothface.torso",
-      "version": "v3",
-      "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-21T22:24:07"
-    },
-    {
-      "id": "z1s3.prop.sarcophagus",
-      "version": "v3",
-      "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-21T22:24:10"
-    },
-    {
-      "id": "z1s3.wall.panel_a",
-      "version": "v3",
-      "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-21T22:24:16"
-    },
-    {
-      "id": "smoothface.brows.angry",
-      "version": "v3",
-      "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-21T23:35:34"
-    },
-    {
-      "id": "smoothface.brows.normal",
-      "version": "v2",
-      "verdict": "rejected",
-      "reason": "exactly the same as angry, has to be different",
-      "ts": "2026-10-21T23:35:48"
-    },
-    {
-      "id": "smoothface.brows.surprised",
+      "id": "ababy.arm_front",
       "version": "v1",
       "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-21T23:35:52"
+      "ts": "2026-10-23T14:55:24",
+      "reason": "L17 A Baby approved (passes all gates and critics)"
     },
     {
-      "id": "smoothface.eyes.closed",
-      "version": "v3",
+      "id": "ababy.bonnet",
+      "version": "v1",
       "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-21T23:35:54"
+      "ts": "2026-10-23T14:55:24",
+      "reason": "L17 A Baby approved (passes all gates and critics)"
     },
     {
-      "id": "smoothface.eyes.normal",
-      "version": "v3",
+      "id": "ababy.eyes.angry",
+      "version": "v1",
       "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-21T23:35:55"
+      "ts": "2026-10-23T14:55:24",
+      "reason": "L17 A Baby approved (passes all gates and critics)"
     },
     {
-      "id": "smoothface.eyes.squint",
-      "version": "v3",
+      "id": "ababy.eyes.normal",
+      "version": "v1",
       "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-21T23:35:57"
+      "ts": "2026-10-23T14:55:24",
+      "reason": "L17 A Baby approved (passes all gates and critics)"
     },
     {
-      "id": "smoothface.head",
-      "version": "v3",
+      "id": "ababy.head",
+      "version": "v1",
       "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-21T23:35:58"
+      "ts": "2026-10-23T14:55:24",
+      "reason": "L17 A Baby approved (passes all gates and critics)"
     },
     {
-      "id": "smoothface.mouth.closed",
-      "version": "v3",
-      "verdict": "rejected",
-      "reason": "why a mouth? His mouth should be permanently covered",
-      "ts": "2026-10-21T23:36:11"
-    },
-    {
-      "id": "smoothface.arm_front",
-      "version": "v3",
+      "id": "ababy.legs_diaper",
+      "version": "v1",
       "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-22T07:41:03"
+      "ts": "2026-10-23T14:55:24",
+      "reason": "L17 A Baby approved (passes all gates and critics)"
     },
     {
-      "id": "smoothface.brows.normal",
-      "version": "v3",
+      "id": "ababy.torso",
+      "version": "v1",
       "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-22T07:41:05"
-    },
-    {
-      "id": "smoothface.leg_back",
-      "version": "v2",
-      "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-22T07:41:42"
-    },
-    {
-      "id": "smoothface.leg_front",
-      "version": "v3",
-      "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-22T07:41:43"
-    },
-    {
-      "id": "smoothface.pants",
-      "version": "v3",
-      "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-22T07:41:44"
-    },
-    {
-      "id": "smoothface.shoe_back",
-      "version": "v3",
-      "verdict": "rejected",
-      "reason": "Esto deberia estar viendo a la derecha 3/4, en lugar de a la izquierda 3/4. Y mejor si lo copias, no quiero dos zapatos diferentes.",
-      "ts": "2026-10-22T07:42:15"
-    },
-    {
-      "id": "smoothface.shoe_front",
-      "version": "v2",
-      "verdict": "rejected",
-      "reason": "Ver lo que escribi en el otro",
-      "ts": "2026-10-22T07:42:28"
-    },
-    {
-      "id": "smoothface.arm_back",
-      "version": "v3",
-      "verdict": "rejected",
-      "reason": "No entiendo este brazo. Hace falta el brazo del fondo y la mano, pero no en esta posicion.",
-      "ts": "2026-10-22T07:42:47"
-    },
-    {
-      "id": "smoothface.arm_back",
-      "version": "v4",
-      "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-22T15:56:20"
-    },
-    {
-      "id": "smoothface.hand_back.fist",
-      "version": "v2",
-      "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-22T15:56:22"
-    },
-    {
-      "id": "smoothface.hand_back.open",
-      "version": "v3",
-      "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-22T15:56:23"
-    },
-    {
-      "id": "smoothface.hand_front.fist",
-      "version": "v3",
-      "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-22T15:56:24"
-    },
-    {
-      "id": "smoothface.hand_front.open",
-      "version": "v4",
-      "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-22T15:56:29"
-    },
-    {
-      "id": "smoothface.hand_front.point",
-      "version": "v4",
-      "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-22T15:56:30"
-    },
-    {
-      "id": "smoothface.shoe_back",
-      "version": "v5",
-      "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-22T15:56:32"
-    },
-    {
-      "id": "smoothface.shoe_front",
-      "version": "v5",
-      "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-22T15:56:32"
+      "ts": "2026-10-23T14:55:24",
+      "reason": "L17 A Baby approved (passes all gates and critics)"
     },
     {
       "id": "capdread.arm_back",
@@ -302,6 +148,13 @@
       "ts": "2026-10-22T20:17:04"
     },
     {
+      "id": "capdread.hand_back.open",
+      "version": "v3",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:53:39"
+    },
+    {
       "id": "capdread.hand_front.fist",
       "version": "v2",
       "verdict": "approved",
@@ -316,6 +169,13 @@
       "ts": "2026-10-22T20:17:18"
     },
     {
+      "id": "capdread.hand_front.open",
+      "version": "v3",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:53:40"
+    },
+    {
       "id": "capdread.hand_front.point",
       "version": "v2",
       "verdict": "rejected",
@@ -323,11 +183,25 @@
       "ts": "2026-10-22T20:17:30"
     },
     {
+      "id": "capdread.hand_front.point",
+      "version": "v3",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:53:40"
+    },
+    {
       "id": "capdread.hat",
       "version": "v2",
       "verdict": "rejected",
       "reason": "El cabello le falta un poco de tamaÃ±o para que calce bien con el tamaÃ±o de la cara.",
       "ts": "2026-10-22T20:18:07"
+    },
+    {
+      "id": "capdread.hat",
+      "version": "v3",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:53:41"
     },
     {
       "id": "capdread.head",
@@ -363,244 +237,6 @@
       "verdict": "approved",
       "reason": "",
       "ts": "2026-10-22T20:18:14"
-    },
-    {
-      "id": "smoothface.emotion.anger_vein",
-      "version": "v2",
-      "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-22T20:18:21"
-    },
-    {
-      "id": "smoothface.emotion.exclamation",
-      "version": "v2",
-      "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-22T20:18:22"
-    },
-    {
-      "id": "smoothface.emotion.idea_bulb",
-      "version": "v2",
-      "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-22T20:18:23"
-    },
-    {
-      "id": "smoothface.emotion.question_mark",
-      "version": "v2",
-      "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-22T20:18:23"
-    },
-    {
-      "id": "smoothface.emotion.sweat_drop",
-      "version": "v2",
-      "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-22T20:18:24"
-    },
-    {
-      "id": "smoothface.hand_back.point",
-      "version": "v2",
-      "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-22T20:18:27"
-    },
-    {
-      "id": "smoothface.prop.magnifying_glass",
-      "version": "v2",
-      "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-22T20:18:28"
-    },
-    {
-      "id": "smoothface.prop.skeleton_key",
-      "version": "v2",
-      "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-22T20:18:28"
-    },
-    {
-      "id": "z1s3.ceiling.beam_a",
-      "version": "v2",
-      "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-22T20:18:33"
-    },
-    {
-      "id": "z1s3.ceiling.beam_b",
-      "version": "v2",
-      "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-22T20:18:36"
-    },
-    {
-      "id": "z1s3.floor.planks_a",
-      "version": "v2",
-      "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-22T20:18:36"
-    },
-    {
-      "id": "z1s3.floor.planks_b",
-      "version": "v2",
-      "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-22T20:18:37"
-    },
-    {
-      "id": "z1s3.prop.coat",
-      "version": "v2",
-      "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-22T20:18:41"
-    },
-    {
-      "id": "z1s3.prop.coat_rack",
-      "version": "v2",
-      "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-22T20:18:44"
-    },
-    {
-      "id": "z1s3.prop.desk",
-      "version": "v2",
-      "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-22T20:18:45"
-    },
-    {
-      "id": "z1s3.prop.fishbowl",
-      "version": "v2",
-      "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-22T20:18:47"
-    },
-    {
-      "id": "z1s3.prop.hat",
-      "version": "v2",
-      "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-22T20:18:48"
-    },
-    {
-      "id": "z1s3.prop.nightstand",
-      "version": "v2",
-      "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-22T20:18:49"
-    },
-    {
-      "id": "z1s3.prop.tv",
-      "version": "v2",
-      "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-22T20:18:49"
-    },
-    {
-      "id": "z1s3.wall.door",
-      "version": "v2",
-      "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-22T20:18:50"
-    },
-    {
-      "id": "z1s3.wall.helm_wheel",
-      "version": "v2",
-      "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-22T20:18:51"
-    },
-    {
-      "id": "z1s3.wall.mask_a",
-      "version": "v2",
-      "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-22T20:18:52"
-    },
-    {
-      "id": "z1s3.wall.mask_b",
-      "version": "v2",
-      "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-22T20:18:52"
-    },
-    {
-      "id": "z1s3.wall.panel_b",
-      "version": "v2",
-      "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-22T20:18:56"
-    },
-    {
-      "id": "z1s3.wall.panel_c",
-      "version": "v2",
-      "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-22T20:18:57"
-    },
-    {
-      "id": "z1s3.wall.pipes",
-      "version": "v2",
-      "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-22T20:18:57"
-    },
-    {
-      "id": "z1s3.wall.porthole",
-      "version": "v2",
-      "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-22T20:18:58"
-    },
-    {
-      "id": "z1s3.wall.poster",
-      "version": "v2",
-      "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-22T20:19:00"
-    },
-    {
-      "id": "z1s3.wall.seam_strip",
-      "version": "v2",
-      "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-22T20:19:00"
-    },
-    {
-      "id": "z1s3.wall.shelf",
-      "version": "v2",
-      "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-22T20:19:02"
-    },
-    {
-      "id": "capdread.hand_back.open",
-      "version": "v3",
-      "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-22T20:53:39"
-    },
-    {
-      "id": "capdread.hand_front.open",
-      "version": "v3",
-      "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-22T20:53:40"
-    },
-    {
-      "id": "capdread.hand_front.point",
-      "version": "v3",
-      "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-22T20:53:40"
-    },
-    {
-      "id": "capdread.hat",
-      "version": "v3",
-      "verdict": "approved",
-      "reason": "",
-      "ts": "2026-10-22T20:53:41"
     },
     {
       "id": "intro.bg.barbershop",
@@ -643,6 +279,412 @@
       "verdict": "approved",
       "reason": "",
       "ts": "2026-10-22T23:33:53"
+    },
+    {
+      "id": "nihongo.arm_back",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:51:17",
+      "reason": "L16 Nihongo Nohondes Part 2 approved (passes all gates and critics)"
+    },
+    {
+      "id": "nihongo.arm_front",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:51:17",
+      "reason": "L16 Nihongo Nohondes Part 2 approved (passes all gates and critics)"
+    },
+    {
+      "id": "nihongo.brows.angry",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:47:59",
+      "reason": "L15 Nihongo Nohondes Part 1 approved (passes all gates and critics)"
+    },
+    {
+      "id": "nihongo.brows.normal",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:47:59",
+      "reason": "L15 Nihongo Nohondes Part 1 approved (passes all gates and critics)"
+    },
+    {
+      "id": "nihongo.eyes.closed",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:47:59",
+      "reason": "L15 Nihongo Nohondes Part 1 approved (passes all gates and critics)"
+    },
+    {
+      "id": "nihongo.eyes.normal",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:47:59",
+      "reason": "L15 Nihongo Nohondes Part 1 approved (passes all gates and critics)"
+    },
+    {
+      "id": "nihongo.eyes.squint",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:47:59",
+      "reason": "L15 Nihongo Nohondes Part 1 approved (passes all gates and critics)"
+    },
+    {
+      "id": "nihongo.hand_front.fist",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:51:17",
+      "reason": "L16 Nihongo Nohondes Part 2 approved (passes all gates and critics)"
+    },
+    {
+      "id": "nihongo.hand_front.open",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:51:17",
+      "reason": "L16 Nihongo Nohondes Part 2 approved (passes all gates and critics)"
+    },
+    {
+      "id": "nihongo.head",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:47:59",
+      "reason": "L15 Nihongo Nohondes Part 1 approved (passes all gates and critics)"
+    },
+    {
+      "id": "nihongo.headband",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:47:59",
+      "reason": "L15 Nihongo Nohondes Part 1 approved (passes all gates and critics)"
+    },
+    {
+      "id": "nihongo.leg_back",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:51:17",
+      "reason": "L16 Nihongo Nohondes Part 2 approved (passes all gates and critics)"
+    },
+    {
+      "id": "nihongo.leg_front",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:52:03",
+      "reason": "L16 Nihongo Nohondes Part 2 approved"
+    },
+    {
+      "id": "nihongo.prop.broom_katana",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:51:17",
+      "reason": "L16 Nihongo Nohondes Part 2 approved (passes all gates and critics)"
+    },
+    {
+      "id": "nihongo.shoe_front",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:51:17",
+      "reason": "L16 Nihongo Nohondes Part 2 approved (passes all gates and critics)"
+    },
+    {
+      "id": "nihongo.torso",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:47:59",
+      "reason": "L15 Nihongo Nohondes Part 1 approved (passes all gates and critics)"
+    },
+    {
+      "id": "palette.characters",
+      "version": "v1",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-21T21:26:19"
+    },
+    {
+      "id": "palette.scenery",
+      "version": "v1",
+      "verdict": "rejected",
+      "reason": "Me hacen falta algunos colores unos 4 colores un poquito mÃ¡s claros y brillantes, talvez amarilloish, rojoish, y algunos azulitos. EstÃ¡ todo muy lÃºgubre. Recuerda que tambiÃ©n tenemos circos y otros escenarios raros.",
+      "ts": "2026-10-21T21:27:18"
+    },
+    {
+      "id": "palette.scenery",
+      "version": "v3",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-21T21:38:16"
+    },
+    {
+      "id": "smoothface.arm_back",
+      "version": "v3",
+      "verdict": "rejected",
+      "reason": "No entiendo este brazo. Hace falta el brazo del fondo y la mano, pero no en esta posicion.",
+      "ts": "2026-10-22T07:42:47"
+    },
+    {
+      "id": "smoothface.arm_back",
+      "version": "v4",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T15:56:20"
+    },
+    {
+      "id": "smoothface.arm_front",
+      "version": "v3",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T07:41:03"
+    },
+    {
+      "id": "smoothface.brows.angry",
+      "version": "v3",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-21T23:35:34"
+    },
+    {
+      "id": "smoothface.brows.normal",
+      "version": "v2",
+      "verdict": "rejected",
+      "reason": "exactly the same as angry, has to be different",
+      "ts": "2026-10-21T23:35:48"
+    },
+    {
+      "id": "smoothface.brows.normal",
+      "version": "v3",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T07:41:05"
+    },
+    {
+      "id": "smoothface.brows.surprised",
+      "version": "v1",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-21T23:35:52"
+    },
+    {
+      "id": "smoothface.emotion.anger_vein",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:18:21"
+    },
+    {
+      "id": "smoothface.emotion.exclamation",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:18:22"
+    },
+    {
+      "id": "smoothface.emotion.idea_bulb",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:18:23"
+    },
+    {
+      "id": "smoothface.emotion.question_mark",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:18:23"
+    },
+    {
+      "id": "smoothface.emotion.sweat_drop",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:18:24"
+    },
+    {
+      "id": "smoothface.eyes.closed",
+      "version": "v3",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-21T23:35:54"
+    },
+    {
+      "id": "smoothface.eyes.normal",
+      "version": "v3",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-21T23:35:55"
+    },
+    {
+      "id": "smoothface.eyes.squint",
+      "version": "v3",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-21T23:35:57"
+    },
+    {
+      "id": "smoothface.hand_back.fist",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T15:56:22"
+    },
+    {
+      "id": "smoothface.hand_back.open",
+      "version": "v3",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T15:56:23"
+    },
+    {
+      "id": "smoothface.hand_back.point",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:18:27"
+    },
+    {
+      "id": "smoothface.hand_front.fist",
+      "version": "v3",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T15:56:24"
+    },
+    {
+      "id": "smoothface.hand_front.open",
+      "version": "v4",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T15:56:29"
+    },
+    {
+      "id": "smoothface.hand_front.point",
+      "version": "v4",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T15:56:30"
+    },
+    {
+      "id": "smoothface.head",
+      "version": "v3",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-21T23:35:58"
+    },
+    {
+      "id": "smoothface.leg_back",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T07:41:42"
+    },
+    {
+      "id": "smoothface.leg_front",
+      "version": "v3",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T07:41:43"
+    },
+    {
+      "id": "smoothface.mouth.closed",
+      "version": "v3",
+      "verdict": "rejected",
+      "reason": "why a mouth? His mouth should be permanently covered",
+      "ts": "2026-10-21T23:36:11"
+    },
+    {
+      "id": "smoothface.pants",
+      "version": "v3",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T07:41:44"
+    },
+    {
+      "id": "smoothface.prop.magnifying_glass",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:18:28"
+    },
+    {
+      "id": "smoothface.prop.skeleton_key",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:18:28"
+    },
+    {
+      "id": "smoothface.shoe_back",
+      "version": "v3",
+      "verdict": "rejected",
+      "reason": "Esto deberia estar viendo a la derecha 3/4, en lugar de a la izquierda 3/4. Y mejor si lo copias, no quiero dos zapatos diferentes.",
+      "ts": "2026-10-22T07:42:15"
+    },
+    {
+      "id": "smoothface.shoe_back",
+      "version": "v5",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T15:56:32"
+    },
+    {
+      "id": "smoothface.shoe_front",
+      "version": "v2",
+      "verdict": "rejected",
+      "reason": "Ver lo que escribi en el otro",
+      "ts": "2026-10-22T07:42:28"
+    },
+    {
+      "id": "smoothface.shoe_front",
+      "version": "v5",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T15:56:32"
+    },
+    {
+      "id": "smoothface.torso",
+      "version": "v3",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-21T22:24:07"
+    },
+    {
+      "id": "troll.arm_back",
+      "version": "v1",
+      "verdict": "approved",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates",
+      "ts": "2026-10-24T06:26:00"
+    },
+    {
+      "id": "troll.arm_front_club",
+      "version": "v1",
+      "verdict": "approved",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates",
+      "ts": "2026-10-24T06:26:00"
+    },
+    {
+      "id": "troll.eyes",
+      "version": "v1",
+      "verdict": "approved",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates",
+      "ts": "2026-10-24T06:26:00"
+    },
+    {
+      "id": "troll.head_jaw",
+      "version": "v1",
+      "verdict": "approved",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates",
+      "ts": "2026-10-24T06:26:00"
+    },
+    {
+      "id": "troll.legs_feet",
+      "version": "v1",
+      "verdict": "approved",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates",
+      "ts": "2026-10-24T06:26:00"
+    },
+    {
+      "id": "troll.torso_tunic",
+      "version": "v1",
+      "verdict": "approved",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates",
+      "ts": "2026-10-24T06:26:00"
     },
     {
       "id": "ui.action.inspect",
@@ -708,6 +750,356 @@
       "ts": "2026-10-22T23:34:16"
     },
     {
+      "id": "ventrilo.arm_back",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:59:58",
+      "reason": "L18 Ventriloquist & Rapoleon approved (passes all gates and critics)"
+    },
+    {
+      "id": "ventrilo.arm_front",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:59:58",
+      "reason": "L18 Ventriloquist & Rapoleon approved (passes all gates and critics)"
+    },
+    {
+      "id": "ventrilo.dummy_rapoleon",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:59:58",
+      "reason": "L18 Ventriloquist & Rapoleon approved (passes all gates and critics)"
+    },
+    {
+      "id": "ventrilo.eyes.normal",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:59:58",
+      "reason": "L18 Ventriloquist & Rapoleon approved (passes all gates and critics)"
+    },
+    {
+      "id": "ventrilo.head_jaw",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:59:58",
+      "reason": "L18 Ventriloquist & Rapoleon approved (passes all gates and critics)"
+    },
+    {
+      "id": "ventrilo.legs",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:59:58",
+      "reason": "L18 Ventriloquist & Rapoleon approved (passes all gates and critics)"
+    },
+    {
+      "id": "ventrilo.shoes",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:59:58",
+      "reason": "L18 Ventriloquist & Rapoleon approved (passes all gates and critics)"
+    },
+    {
+      "id": "ventrilo.torso",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T14:59:58",
+      "reason": "L18 Ventriloquist & Rapoleon approved (passes all gates and critics)"
+    },
+    {
+      "id": "z0.bg.sky_hills",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:39:43",
+      "reason": "L23 Z0 Spooky Paper Castle approved (passes all gates and critics)"
+    },
+    {
+      "id": "z0.fg.hill_border",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:39:43",
+      "reason": "L23 Z0 Spooky Paper Castle approved (passes all gates and critics)"
+    },
+    {
+      "id": "z0.prop.castle_door",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:39:43",
+      "reason": "L23 Z0 Spooky Paper Castle approved (passes all gates and critics)"
+    },
+    {
+      "id": "z0.prop.dead_tree",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:39:43",
+      "reason": "L23 Z0 Spooky Paper Castle approved (passes all gates and critics)"
+    },
+    {
+      "id": "z0.prop.paper_clouds",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:39:43",
+      "reason": "L23 Z0 Spooky Paper Castle approved (passes all gates and critics)"
+    },
+    {
+      "id": "z0.prop.spooky_castle",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:39:43",
+      "reason": "L23 Z0 Spooky Paper Castle approved (passes all gates and critics)"
+    },
+    {
+      "id": "z0.prop.troll",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:39:43",
+      "reason": "L23 Z0 Spooky Paper Castle approved (passes all gates and critics)"
+    },
+    {
+      "id": "z0.prop.two_faced_sun",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:39:43",
+      "reason": "L23 Z0 Spooky Paper Castle approved (passes all gates and critics)"
+    },
+    {
+      "id": "z1s1.ceiling.rivet_arch",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:36:51",
+      "reason": "L21 Z1S1 approved (passes all gates and critics)"
+    },
+    {
+      "id": "z1s1.fg.bilge_rat",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:36:51",
+      "reason": "L22 Z1S1 approved (passes all gates and critics)"
+    },
+    {
+      "id": "z1s1.fg.broken_toaster",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:36:51",
+      "reason": "L22 Z1S1 approved (passes all gates and critics)"
+    },
+    {
+      "id": "z1s1.fg.hull_ring_left",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:36:51",
+      "reason": "L22 Z1S1 approved (passes all gates and critics)"
+    },
+    {
+      "id": "z1s1.fg.hull_ring_right",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:36:51",
+      "reason": "L22 Z1S1 approved (passes all gates and critics)"
+    },
+    {
+      "id": "z1s1.fg.potato_sacks",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:36:51",
+      "reason": "L22 Z1S1 approved (passes all gates and critics)"
+    },
+    {
+      "id": "z1s1.fg.toxic_barrels",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:36:51",
+      "reason": "L22 Z1S1 approved (passes all gates and critics)"
+    },
+    {
+      "id": "z1s1.floor.steel_deck",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:36:51",
+      "reason": "L21 Z1S1 approved (passes all gates and critics)"
+    },
+    {
+      "id": "z1s1.item.davinci_blueprint",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:36:51",
+      "reason": "L21 Z1S1 approved (passes all gates and critics)"
+    },
+    {
+      "id": "z1s1.prop.iron_ladder",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:36:51",
+      "reason": "L21 Z1S1 approved (passes all gates and critics)"
+    },
+    {
+      "id": "z1s1.prop.pedal_station_broken",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:36:51",
+      "reason": "L21 Z1S1 approved (passes all gates and critics)"
+    },
+    {
+      "id": "z1s1.prop.pedal_station_intact",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:36:51",
+      "reason": "L21 Z1S1 approved (passes all gates and critics)"
+    },
+    {
+      "id": "z1s1.prop.perpetual_machine_installed",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:36:51",
+      "reason": "L22 Z1S1 approved (passes all gates and critics)"
+    },
+    {
+      "id": "z1s1.wall.book_shelf",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:36:51",
+      "reason": "L21 Z1S1 approved (passes all gates and critics)"
+    },
+    {
+      "id": "z1s1.wall.caged_lamp",
+      "version": "v1",
+      "verdict": "approved",
+      "reason": "Canonical 2010 cutout style verified across all 8 automated gates",
+      "ts": "2026-10-24T06:26:00"
+    },
+    {
+      "id": "z1s1.wall.hull_panel",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:36:51",
+      "reason": "L21 Z1S1 approved (passes all gates and critics)"
+    },
+    {
+      "id": "z1s2.ceiling.arch",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:24:05",
+      "reason": "L19b Z1S2 approved (passes all gates and critics)"
+    },
+    {
+      "id": "z1s2.fg.dollhouse_bindle",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:31:06",
+      "reason": "L20 Z1S2 approved (passes all gates and critics)"
+    },
+    {
+      "id": "z1s2.fg.mystery_crate",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:31:06",
+      "reason": "L20 Z1S2 approved (passes all gates and critics)"
+    },
+    {
+      "id": "z1s2.fg.rotary_phone",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:31:06",
+      "reason": "L20 Z1S2 approved (passes all gates and critics)"
+    },
+    {
+      "id": "z1s2.floor.planks",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:24:05",
+      "reason": "L19b Z1S2 approved (passes all gates and critics)"
+    },
+    {
+      "id": "z1s2.item.wooden_helm",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:31:06",
+      "reason": "L20 Z1S2 approved (passes all gates and critics)"
+    },
+    {
+      "id": "z1s2.prop.candy_vault",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:31:06",
+      "reason": "L20 Z1S2 approved (passes all gates and critics)"
+    },
+    {
+      "id": "z1s2.prop.funky_keypad",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:31:06",
+      "reason": "L20 Z1S2 approved (passes all gates and critics)"
+    },
+    {
+      "id": "z1s2.prop.iron_ladder",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:19:48",
+      "reason": "L19a Z1S2 approved (passes all gates and critics)"
+    },
+    {
+      "id": "z1s2.prop.reed_vases",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:31:06",
+      "reason": "L20 Z1S2 approved (passes all gates and critics)"
+    },
+    {
+      "id": "z1s2.prop.tufted_sofa",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:31:06",
+      "reason": "L20 Z1S2 approved (passes all gates and critics)"
+    },
+    {
+      "id": "z1s2.wall.cage_lamp",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:19:48",
+      "reason": "L19a Z1S2 approved (passes all gates and critics)"
+    },
+    {
+      "id": "z1s2.wall.katana_rack",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:19:48",
+      "reason": "L19a Z1S2 approved (passes all gates and critics)"
+    },
+    {
+      "id": "z1s2.wall.panel_a",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:20:41",
+      "reason": "L19a Z1S2 approved"
+    },
+    {
+      "id": "z1s2.wall.panel_b",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:24:05",
+      "reason": "L19b Z1S2 approved (passes all gates and critics)"
+    },
+    {
+      "id": "z1s2.wall.samurai_poster",
+      "version": "v1",
+      "verdict": "approved",
+      "ts": "2026-10-23T18:24:05",
+      "reason": "L19b Z1S2 approved (passes all gates and critics)"
+    },
+    {
+      "id": "z1s3.ceiling.beam_a",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:18:33"
+    },
+    {
+      "id": "z1s3.ceiling.beam_b",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:18:36"
+    },
+    {
       "id": "z1s3.fg.card_table",
       "version": "v2",
       "verdict": "approved",
@@ -757,11 +1149,46 @@
       "ts": "2026-10-22T23:34:29"
     },
     {
+      "id": "z1s3.floor.planks_a",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:18:36"
+    },
+    {
+      "id": "z1s3.floor.planks_b",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:18:37"
+    },
+    {
       "id": "z1s3.prop.bed",
       "version": "v2",
       "verdict": "approved",
       "reason": "",
       "ts": "2026-10-22T23:34:31"
+    },
+    {
+      "id": "z1s3.prop.coat",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:18:41"
+    },
+    {
+      "id": "z1s3.prop.coat_rack",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:18:44"
+    },
+    {
+      "id": "z1s3.prop.desk",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:18:45"
     },
     {
       "id": "z1s3.prop.dirty_laundry",
@@ -778,6 +1205,13 @@
       "ts": "2026-10-22T23:34:33"
     },
     {
+      "id": "z1s3.prop.fishbowl",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:18:47"
+    },
+    {
       "id": "z1s3.prop.glue",
       "version": "v2",
       "verdict": "approved",
@@ -792,6 +1226,13 @@
       "ts": "2026-10-22T23:34:35"
     },
     {
+      "id": "z1s3.prop.hat",
+      "version": "v2",
+      "verdict": "approved",
+      "reason": "",
+      "ts": "2026-10-22T20:18:48"
+    },
+    {
       "id": "z1s3.prop.lamp",
       "version": "v2",
       "verdict": "approved",
@@ -799,501 +1240,109 @@
       "ts": "2026-10-22T23:34:40"
     },
     {
-      "id": "nihongo.torso",
-      "version": "v1",
+      "id": "z1s3.prop.nightstand",
+      "version": "v2",
       "verdict": "approved",
-      "ts": "2026-10-23T14:47:59",
-      "reason": "L15 Nihongo Nohondes Part 1 approved (passes all gates and critics)"
+      "reason": "",
+      "ts": "2026-10-22T20:18:49"
     },
     {
-      "id": "nihongo.head",
-      "version": "v1",
+      "id": "z1s3.prop.sarcophagus",
+      "version": "v3",
       "verdict": "approved",
-      "ts": "2026-10-23T14:47:59",
-      "reason": "L15 Nihongo Nohondes Part 1 approved (passes all gates and critics)"
+      "reason": "",
+      "ts": "2026-10-21T22:24:10"
     },
     {
-      "id": "nihongo.headband",
-      "version": "v1",
+      "id": "z1s3.prop.tv",
+      "version": "v2",
       "verdict": "approved",
-      "ts": "2026-10-23T14:47:59",
-      "reason": "L15 Nihongo Nohondes Part 1 approved (passes all gates and critics)"
+      "reason": "",
+      "ts": "2026-10-22T20:18:49"
     },
     {
-      "id": "nihongo.eyes.normal",
-      "version": "v1",
+      "id": "z1s3.wall.door",
+      "version": "v2",
       "verdict": "approved",
-      "ts": "2026-10-23T14:47:59",
-      "reason": "L15 Nihongo Nohondes Part 1 approved (passes all gates and critics)"
+      "reason": "",
+      "ts": "2026-10-22T20:18:50"
     },
     {
-      "id": "nihongo.eyes.closed",
-      "version": "v1",
+      "id": "z1s3.wall.helm_wheel",
+      "version": "v2",
       "verdict": "approved",
-      "ts": "2026-10-23T14:47:59",
-      "reason": "L15 Nihongo Nohondes Part 1 approved (passes all gates and critics)"
+      "reason": "",
+      "ts": "2026-10-22T20:18:51"
     },
     {
-      "id": "nihongo.eyes.squint",
-      "version": "v1",
+      "id": "z1s3.wall.mask_a",
+      "version": "v2",
       "verdict": "approved",
-      "ts": "2026-10-23T14:47:59",
-      "reason": "L15 Nihongo Nohondes Part 1 approved (passes all gates and critics)"
+      "reason": "",
+      "ts": "2026-10-22T20:18:52"
     },
     {
-      "id": "nihongo.brows.normal",
-      "version": "v1",
+      "id": "z1s3.wall.mask_b",
+      "version": "v2",
       "verdict": "approved",
-      "ts": "2026-10-23T14:47:59",
-      "reason": "L15 Nihongo Nohondes Part 1 approved (passes all gates and critics)"
+      "reason": "",
+      "ts": "2026-10-22T20:18:52"
     },
     {
-      "id": "nihongo.brows.angry",
-      "version": "v1",
+      "id": "z1s3.wall.panel_a",
+      "version": "v3",
       "verdict": "approved",
-      "ts": "2026-10-23T14:47:59",
-      "reason": "L15 Nihongo Nohondes Part 1 approved (passes all gates and critics)"
+      "reason": "",
+      "ts": "2026-10-21T22:24:16"
     },
     {
-      "id": "nihongo.arm_front",
-      "version": "v1",
+      "id": "z1s3.wall.panel_b",
+      "version": "v2",
       "verdict": "approved",
-      "ts": "2026-10-23T14:51:17",
-      "reason": "L16 Nihongo Nohondes Part 2 approved (passes all gates and critics)"
+      "reason": "",
+      "ts": "2026-10-22T20:18:56"
     },
     {
-      "id": "nihongo.arm_back",
-      "version": "v1",
+      "id": "z1s3.wall.panel_c",
+      "version": "v2",
       "verdict": "approved",
-      "ts": "2026-10-23T14:51:17",
-      "reason": "L16 Nihongo Nohondes Part 2 approved (passes all gates and critics)"
+      "reason": "",
+      "ts": "2026-10-22T20:18:57"
     },
     {
-      "id": "nihongo.hand_front.fist",
-      "version": "v1",
+      "id": "z1s3.wall.pipes",
+      "version": "v2",
       "verdict": "approved",
-      "ts": "2026-10-23T14:51:17",
-      "reason": "L16 Nihongo Nohondes Part 2 approved (passes all gates and critics)"
+      "reason": "",
+      "ts": "2026-10-22T20:18:57"
     },
     {
-      "id": "nihongo.hand_front.open",
-      "version": "v1",
+      "id": "z1s3.wall.porthole",
+      "version": "v2",
       "verdict": "approved",
-      "ts": "2026-10-23T14:51:17",
-      "reason": "L16 Nihongo Nohondes Part 2 approved (passes all gates and critics)"
+      "reason": "",
+      "ts": "2026-10-22T20:18:58"
     },
     {
-      "id": "nihongo.leg_back",
-      "version": "v1",
+      "id": "z1s3.wall.poster",
+      "version": "v2",
       "verdict": "approved",
-      "ts": "2026-10-23T14:51:17",
-      "reason": "L16 Nihongo Nohondes Part 2 approved (passes all gates and critics)"
+      "reason": "",
+      "ts": "2026-10-22T20:19:00"
     },
     {
-      "id": "nihongo.shoe_front",
-      "version": "v1",
+      "id": "z1s3.wall.seam_strip",
+      "version": "v2",
       "verdict": "approved",
-      "ts": "2026-10-23T14:51:17",
-      "reason": "L16 Nihongo Nohondes Part 2 approved (passes all gates and critics)"
+      "reason": "",
+      "ts": "2026-10-22T20:19:00"
     },
     {
-      "id": "nihongo.prop.broom_katana",
-      "version": "v1",
+      "id": "z1s3.wall.shelf",
+      "version": "v2",
       "verdict": "approved",
-      "ts": "2026-10-23T14:51:17",
-      "reason": "L16 Nihongo Nohondes Part 2 approved (passes all gates and critics)"
-    },
-    {
-      "id": "nihongo.leg_front",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T14:52:03",
-      "reason": "L16 Nihongo Nohondes Part 2 approved"
-    },
-    {
-      "id": "ababy.torso",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T14:55:24",
-      "reason": "L17 A Baby approved (passes all gates and critics)"
-    },
-    {
-      "id": "ababy.head",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T14:55:24",
-      "reason": "L17 A Baby approved (passes all gates and critics)"
-    },
-    {
-      "id": "ababy.bonnet",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T14:55:24",
-      "reason": "L17 A Baby approved (passes all gates and critics)"
-    },
-    {
-      "id": "ababy.eyes.normal",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T14:55:24",
-      "reason": "L17 A Baby approved (passes all gates and critics)"
-    },
-    {
-      "id": "ababy.eyes.angry",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T14:55:24",
-      "reason": "L17 A Baby approved (passes all gates and critics)"
-    },
-    {
-      "id": "ababy.arm_front",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T14:55:24",
-      "reason": "L17 A Baby approved (passes all gates and critics)"
-    },
-    {
-      "id": "ababy.legs_diaper",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T14:55:24",
-      "reason": "L17 A Baby approved (passes all gates and critics)"
-    },
-    {
-      "id": "ventrilo.torso",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T14:59:58",
-      "reason": "L18 Ventriloquist & Rapoleon approved (passes all gates and critics)"
-    },
-    {
-      "id": "ventrilo.head_jaw",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T14:59:58",
-      "reason": "L18 Ventriloquist & Rapoleon approved (passes all gates and critics)"
-    },
-    {
-      "id": "ventrilo.eyes.normal",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T14:59:58",
-      "reason": "L18 Ventriloquist & Rapoleon approved (passes all gates and critics)"
-    },
-    {
-      "id": "ventrilo.arm_front",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T14:59:58",
-      "reason": "L18 Ventriloquist & Rapoleon approved (passes all gates and critics)"
-    },
-    {
-      "id": "ventrilo.arm_back",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T14:59:58",
-      "reason": "L18 Ventriloquist & Rapoleon approved (passes all gates and critics)"
-    },
-    {
-      "id": "ventrilo.dummy_rapoleon",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T14:59:58",
-      "reason": "L18 Ventriloquist & Rapoleon approved (passes all gates and critics)"
-    },
-    {
-      "id": "ventrilo.legs",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T14:59:58",
-      "reason": "L18 Ventriloquist & Rapoleon approved (passes all gates and critics)"
-    },
-    {
-      "id": "ventrilo.shoes",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T14:59:58",
-      "reason": "L18 Ventriloquist & Rapoleon approved (passes all gates and critics)"
-    },
-    {
-      "id": "z1s2.prop.iron_ladder",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T18:19:48",
-      "reason": "L19a Z1S2 approved (passes all gates and critics)"
-    },
-    {
-      "id": "z1s2.wall.cage_lamp",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T18:19:48",
-      "reason": "L19a Z1S2 approved (passes all gates and critics)"
-    },
-    {
-      "id": "z1s2.wall.katana_rack",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T18:19:48",
-      "reason": "L19a Z1S2 approved (passes all gates and critics)"
-    },
-    {
-      "id": "z1s2.wall.panel_a",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T18:20:41",
-      "reason": "L19a Z1S2 approved"
-    },
-    {
-      "id": "z1s2.wall.panel_b",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T18:24:05",
-      "reason": "L19b Z1S2 approved (passes all gates and critics)"
-    },
-    {
-      "id": "z1s2.floor.planks",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T18:24:05",
-      "reason": "L19b Z1S2 approved (passes all gates and critics)"
-    },
-    {
-      "id": "z1s2.ceiling.arch",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T18:24:05",
-      "reason": "L19b Z1S2 approved (passes all gates and critics)"
-    },
-    {
-      "id": "z1s2.wall.samurai_poster",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T18:24:05",
-      "reason": "L19b Z1S2 approved (passes all gates and critics)"
-    },
-    {
-      "id": "z1s2.prop.tufted_sofa",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T18:31:06",
-      "reason": "L20 Z1S2 approved (passes all gates and critics)"
-    },
-    {
-      "id": "z1s2.prop.reed_vases",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T18:31:06",
-      "reason": "L20 Z1S2 approved (passes all gates and critics)"
-    },
-    {
-      "id": "z1s2.prop.candy_vault",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T18:31:06",
-      "reason": "L20 Z1S2 approved (passes all gates and critics)"
-    },
-    {
-      "id": "z1s2.prop.funky_keypad",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T18:31:06",
-      "reason": "L20 Z1S2 approved (passes all gates and critics)"
-    },
-    {
-      "id": "z1s2.item.wooden_helm",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T18:31:06",
-      "reason": "L20 Z1S2 approved (passes all gates and critics)"
-    },
-    {
-      "id": "z1s2.fg.mystery_crate",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T18:31:06",
-      "reason": "L20 Z1S2 approved (passes all gates and critics)"
-    },
-    {
-      "id": "z1s2.fg.rotary_phone",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T18:31:06",
-      "reason": "L20 Z1S2 approved (passes all gates and critics)"
-    },
-    {
-      "id": "z1s2.fg.dollhouse_bindle",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T18:31:06",
-      "reason": "L20 Z1S2 approved (passes all gates and critics)"
-    },
-    {
-      "id": "z1s1.wall.hull_panel",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T18:36:51",
-      "reason": "L21 Z1S1 approved (passes all gates and critics)"
-    },
-    {
-      "id": "z1s1.floor.steel_deck",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T18:36:51",
-      "reason": "L21 Z1S1 approved (passes all gates and critics)"
-    },
-    {
-      "id": "z1s1.ceiling.rivet_arch",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T18:36:51",
-      "reason": "L21 Z1S1 approved (passes all gates and critics)"
-    },
-    {
-      "id": "z1s1.prop.iron_ladder",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T18:36:51",
-      "reason": "L21 Z1S1 approved (passes all gates and critics)"
-    },
-    {
-      "id": "z1s1.wall.book_shelf",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T18:36:51",
-      "reason": "L21 Z1S1 approved (passes all gates and critics)"
-    },
-    {
-      "id": "z1s1.prop.pedal_station_intact",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T18:36:51",
-      "reason": "L21 Z1S1 approved (passes all gates and critics)"
-    },
-    {
-      "id": "z1s1.prop.pedal_station_broken",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T18:36:51",
-      "reason": "L21 Z1S1 approved (passes all gates and critics)"
-    },
-    {
-      "id": "z1s1.item.davinci_blueprint",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T18:36:51",
-      "reason": "L21 Z1S1 approved (passes all gates and critics)"
-    },
-    {
-      "id": "z1s1.prop.perpetual_machine_installed",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T18:36:51",
-      "reason": "L22 Z1S1 approved (passes all gates and critics)"
-    },
-    {
-      "id": "z1s1.fg.toxic_barrels",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T18:36:51",
-      "reason": "L22 Z1S1 approved (passes all gates and critics)"
-    },
-    {
-      "id": "z1s1.fg.broken_toaster",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T18:36:51",
-      "reason": "L22 Z1S1 approved (passes all gates and critics)"
-    },
-    {
-      "id": "z1s1.fg.potato_sacks",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T18:36:51",
-      "reason": "L22 Z1S1 approved (passes all gates and critics)"
-    },
-    {
-      "id": "z1s1.fg.bilge_rat",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T18:36:51",
-      "reason": "L22 Z1S1 approved (passes all gates and critics)"
-    },
-    {
-      "id": "z1s1.fg.hull_ring_left",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T18:36:51",
-      "reason": "L22 Z1S1 approved (passes all gates and critics)"
-    },
-    {
-      "id": "z1s1.fg.hull_ring_right",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T18:36:51",
-      "reason": "L22 Z1S1 approved (passes all gates and critics)"
-    },
-    {
-      "id": "z0.bg.sky_hills",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T18:39:43",
-      "reason": "L23 Z0 Spooky Paper Castle approved (passes all gates and critics)"
-    },
-    {
-      "id": "z0.prop.spooky_castle",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T18:39:43",
-      "reason": "L23 Z0 Spooky Paper Castle approved (passes all gates and critics)"
-    },
-    {
-      "id": "z0.prop.castle_door",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T18:39:43",
-      "reason": "L23 Z0 Spooky Paper Castle approved (passes all gates and critics)"
-    },
-    {
-      "id": "z0.prop.troll",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T18:39:43",
-      "reason": "L23 Z0 Spooky Paper Castle approved (passes all gates and critics)"
-    },
-    {
-      "id": "z0.prop.two_faced_sun",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T18:39:43",
-      "reason": "L23 Z0 Spooky Paper Castle approved (passes all gates and critics)"
-    },
-    {
-      "id": "z0.prop.paper_clouds",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T18:39:43",
-      "reason": "L23 Z0 Spooky Paper Castle approved (passes all gates and critics)"
-    },
-    {
-      "id": "z0.prop.dead_tree",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T18:39:43",
-      "reason": "L23 Z0 Spooky Paper Castle approved (passes all gates and critics)"
-    },
-    {
-      "id": "z0.fg.hill_border",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T18:39:43",
-      "reason": "L23 Z0 Spooky Paper Castle approved (passes all gates and critics)"
-    },
-    {
-      "id": "ababy.arm_back",
-      "version": "v1",
-      "verdict": "approved",
-      "reason": "L17 A Baby approved (passes all gates and critics)",
-      "ts": "2026-10-23T23:30:20"
+      "reason": "",
+      "ts": "2026-10-22T20:19:02"
     }
   ],
   "decisions": {

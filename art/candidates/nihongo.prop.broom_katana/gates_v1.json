@@ -1,6 +1,6 @@
 {
-  "file": "c:\\AntiGravityStuff\\Moonstorm2\\art\\candidates\\nihongo.prop.broom_katana\\v1.png",
-  "ts": "2026-10-23T14:51:18",
+  "file": "C:\\AntiGravityStuff\\Moonstorm2\\art\\candidates\\nihongo.prop.broom_katana\\v1.png",
+  "ts": "2026-10-24T06:05:00",
   "kind": "prop",
   "halo_fraction": 0.0,
   "halo_ok": true,
@@ -15,7 +15,7 @@
   "touches_border_sides": 0,
   "border_ok": true,
   "palette_used": "scenery",
-  "off_palette_fraction": 0.0,
+  "off_palette_fraction": 0.0002,
   "palette_provisional": false,
   "palette_ok": true,
   "ink_thickness_px": 6.0,
@@ -24,7 +24,7 @@
     7
   ],
   "ink_ok": true,
-  "soft_gradient_fraction": 0.1002,
+  "soft_gradient_fraction": 0.1655,
   "gradient_ok": true,
   "measured_height_px": 250,
   "target_height_px": 250,

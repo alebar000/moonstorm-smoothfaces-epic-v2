@@ -1,9 +1,14 @@
 {
-  "piece_id": "troll.arm_front_club",
-  "status": "approved",
-  "selected_variant": "v1.png",
-  "size": [
-    180,
-    216
-  ]
+  "id": "troll.arm_front_club",
+  "category": "z0",
+  "kind": "body_part",
+  "what": "Scissor-cut green paper right arm with brass brad gripping spiked wooden club",
+  "target_height_px": 205,
+  "height_fraction_of_smoothface": 0.651,
+  "allowed_islands": 0,
+  "references": [
+    "ref_canonical_2010"
+  ],
+  "status": "proposed",
+  "proposed_version": "v1"
 }

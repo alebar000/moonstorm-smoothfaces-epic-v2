@@ -1,9 +1,14 @@
 {
-  "piece_id": "troll.arm_back",
-  "status": "approved",
-  "selected_variant": "v1.png",
-  "size": [
-    103,
-    174
-  ]
+  "id": "troll.arm_back",
+  "category": "z0",
+  "kind": "body_part",
+  "what": "Scissor-cut green paper left arm with brass shoulder fastener brad",
+  "target_height_px": 160,
+  "height_fraction_of_smoothface": 0.508,
+  "allowed_islands": 0,
+  "references": [
+    "ref_canonical_2010"
+  ],
+  "status": "proposed",
+  "proposed_version": "v1"
 }

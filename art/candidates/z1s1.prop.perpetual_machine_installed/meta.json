@@ -2,27 +2,15 @@
   "id": "z1s1.prop.perpetual_machine_installed",
   "category": "z1s1",
   "kind": "prop",
-  "what": "Z1S1 assembled and installed Perpetual Movement Machine contraption on the pedal station base",
+  "what": "Canonical da Vinci Overbalanced Hammer Wheel: Wooden Tripod Portrait Stand holding Ship's Helm with 8 Hammers glued to rim over broken pedal station",
   "target_height_px": 380,
   "height_fraction_of_smoothface": 1.206,
-  "pivot_hint": "bottom-center on Z1S1 floor",
   "allowed_islands": 0,
   "references": [
     "art/references/ref_z1s1_machineroom_2010.png",
     "art/references/ref_z1s1_machineroom_psd_composite.png",
     "art/references/palette_scenery.png"
   ],
-  "versions": {
-    "v1": "prompt_v1.txt"
-  },
-  "status": "approved",
-  "proposed_version": "v1",
-  "version": "v1",
-  "approved_version": "v1",
-  "piece_id": "z1s1.prop.perpetual_machine_installed",
-  "selected_variant": "v1.png",
-  "size": [
-    527,
-    388
-  ]
+  "status": "proposed",
+  "proposed_version": "v1"
 }

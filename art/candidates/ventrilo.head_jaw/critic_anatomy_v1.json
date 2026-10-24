@@ -1,8 +1,4 @@
 {
-  "piece": "ventrilo.head_jaw",
-  "version": "v1",
-  "critic": "anatomy-critic",
   "verdict": "sin_objeciones",
-  "defects": [],
-  "notes": "Calibrated to Ventriloquist 340px rig proportions (target_height_px=112)."
+  "defects": []
 }
