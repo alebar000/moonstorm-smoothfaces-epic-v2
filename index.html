@@ -11,61 +11,78 @@
 </head>
 <body>
   <div id="game-root">
-    <!-- Floating Paper Cut-Out Top Inventory & Pouch Strip -->
+    <!-- GUImu003.jpg Authentic Square Cut-Out Icon Racks & Parchment Inventory Box -->
     <header id="hud-top-bar" class="hud-hidden">
-      <button class="hud-brand-badge" id="btn-open-menu" title="Return to Title Stage">
-        <img src="art/approved/z1s3/z1s3.wall.helm_wheel.png" alt="" class="hud-mini-tile" />
-        <span class="brand-title">Title</span>
-      </button>
-
-      <div class="inventory-mode-group">
-        <button id="btn-mode-select" class="inv-mode-btn active" title="Use or Combine Pocket Items">
-          <img src="art/approved/ui/ui.action.use.png" alt="" class="mode-mini-icon" />
-          <span>Use</span>
-        </button>
-        <button id="btn-mode-inspect" class="inv-mode-btn" title="Look Closely at Pocket Item">
-          <img src="art/approved/ui/ui.action.inspect.png" alt="" class="mode-mini-icon" />
-          <span>Look</span>
-        </button>
+      <!-- Top-Left: 3 Square Cut-Out Icon Tiles + Hanging Room Signpost -->
+      <div class="hud-corner-rack">
+        <div class="hud-tile-strip">
+          <button class="hud-square-tile" id="btn-open-menu" title="Return to Title Stage">
+            <img src="art/approved/z1s3/z1s3.wall.helm_wheel.png" alt="Title" />
+            <span class="hud-tile-tag">Title</span>
+          </button>
+          <button id="btn-island-map" class="hud-square-tile" title="Blackspit Island &amp; Submarine Deck Chart (Shortcut: M)">
+            <img src="art/archive_2010/Sparkle_Main_Island_map.png" alt="Map" class="hud-map-thumb" />
+            <span class="hud-tile-tag">Map [M]</span>
+          </button>
+          <button id="btn-evil-agenda" class="hud-square-tile" title="Rupert's Evil Dossier &amp; Da Vinci Schematic (Shortcut: H)">
+            <img src="art/approved/z1s1/z1s1.item.davinci_blueprint.png" alt="Plan" />
+            <span class="hud-tile-tag">Plan [H]</span>
+          </button>
+        </div>
+        <div id="room-banner" class="room-banner">Captain Dread's Cabin</div>
       </div>
 
-      <div class="inventory-strip-wrapper">
-        <button id="inv-scroll-left" class="inv-arrow-btn" aria-label="Scroll Pockets Left">
-          <span>&#9664;</span>
-        </button>
-        <div id="inventory-slots" class="inventory-slots"></div>
-        <button id="inv-scroll-right" class="inv-arrow-btn" aria-label="Scroll Pockets Right">
-          <span>&#9654;</span>
-        </button>
+      <!-- Top-Center: Canonical Aguilar GUImu003.jpg Parchment Inventory Box -->
+      <div class="guimu-inventory-container">
+        <div class="guimu-inventory-box">
+          <div class="inventory-mode-group">
+            <button id="btn-mode-select" class="inv-mode-btn active" title="Select / Use Pocket Item">
+              <img src="art/approved/ui/ui.action.use.png" alt="Use" class="mode-mini-icon" />
+            </button>
+            <button id="btn-mode-inspect" class="inv-mode-btn" title="Inspect Pocket Item">
+              <img src="art/approved/ui/ui.action.inspect.png" alt="Inspect" class="mode-mini-icon" />
+            </button>
+          </div>
+
+          <div class="inventory-strip-wrapper">
+            <button id="inv-scroll-left" class="inv-arrow-btn" aria-label="Scroll Pockets Left">&#9664;</button>
+            <div id="inventory-slots" class="inventory-slots"></div>
+            <button id="inv-scroll-right" class="inv-arrow-btn" aria-label="Scroll Pockets Right">&#9654;</button>
+          </div>
+        </div>
+
+        <!-- Hanging Paper Item Tag (<select icon> hovering shows name from GUImu003.jpg) -->
+        <div id="active-item-banner" class="active-item-banner">
+          <span id="active-item-label">Pockets Empty</span>
+          <button id="btn-clear-item" class="clear-item-btn" style="display:none;" title="Put Away Item">&#10005;</button>
+        </div>
       </div>
 
-      <div id="active-item-banner" class="active-item-banner">
-        <span id="active-item-label">Pockets Empty</span>
-        <button id="btn-clear-item" class="clear-item-btn" style="display:none;" title="Put Away Item">&#10005;</button>
-      </div>
-
-      <div class="hud-utility-group">
-        <button id="btn-open-studio" class="hud-util-btn" title="Layout Studio (F2)" style="display:none;background:#5a381e;color:#ffe596;border-color:#e5b94c;">Studio</button>
-        <button id="btn-street-sense" class="hud-util-btn" title="Peek at Everything in the Room (Hold TAB)">
-          <img src="art/approved/smoothface/smoothface.prop.magnifying_glass.png" alt="" class="hud-mini-tile" /> Peek
-        </button>
-        <button id="btn-evil-agenda" class="hud-util-btn" title="Rupert's Evil Dossier &amp; Da Vinci Schematic (Shortcut: H)">
-          <img src="art/approved/z1s1/z1s1.item.davinci_blueprint.png" alt="" class="hud-mini-tile" /> Plan
-        </button>
-        <button id="btn-island-map" class="hud-util-btn" title="Blackspit Island &amp; Submarine Deck Chart (Shortcut: M)">
-          <img src="art/approved/z1s3/z1s3.wall.helm_wheel.png" alt="" class="hud-mini-tile" /> Map
-        </button>
-        <button id="btn-sketch-mode" class="hud-util-btn sketch-mode-btn" title="Overlay Jose David Aguilar's Original 2010 Sketch Behind the Cut-Out Stage! (Shortcut: K)">
-          &#9998; 2010 Sketch
-        </button>
-        <button id="btn-open-archive" class="hud-util-btn archive-hud-btn" title="MoonStorm Studios 2010-2026 Time Capsule: Founders, Timeline &amp; Original Art Gallery (Shortcut: T)">
-          <img src="art/approved/z1s3/z1s3.wall.poster.png" alt="" class="hud-mini-tile" /> 2010 Museum
-        </button>
-        <button id="btn-hud-music" class="hud-util-btn music-hud-btn" title="Cycle Background Music Mode: Dynamic Room Score / Submarine Ambience Only / 2010 Classic / Muted (Shortcut: N)">
-          &#9835; <span id="hud-music-label">Score: Dynamic</span>
-        </button>
-        <button id="btn-open-config" class="hud-util-btn" title="Gramophone &amp; Stage Options (ESC)">
-          <img src="art/approved/smoothface/smoothface.prop.skeleton_key.png" alt="" class="hud-mini-tile" /> Options
+      <!-- Top-Right: 4 Square Cut-Out Icon Tiles + Hanging Soundtrack Plaque -->
+      <div class="hud-corner-rack hud-corner-right">
+        <div class="hud-tile-strip">
+          <button id="btn-open-studio" class="hud-square-tile" title="Layout Studio (F2)" style="display:none;">
+            <img src="art/approved/smoothface/smoothface.prop.skeleton_key.png" alt="Studio" />
+          </button>
+          <button id="btn-street-sense" class="hud-square-tile" title="Highlight Interactive Hotspots (Hold TAB)">
+            <img src="art/approved/smoothface/smoothface.prop.magnifying_glass.png" alt="Peek" />
+            <span class="hud-tile-tag">Peek [Tab]</span>
+          </button>
+          <button id="btn-sketch-mode" class="hud-square-tile" title="Overlay Jose David Aguilar's Original 2010 Sketch (Shortcut: K)">
+            <img src="art/approved/z1s3/z1s3.prop.easel_portrait.png" alt="2010 Sketch" />
+            <span class="hud-tile-tag">2010 Sketch [K]</span>
+          </button>
+          <button id="btn-open-archive" class="hud-square-tile" title="MoonStorm Studios 2010-2026 Time Capsule Museum (Shortcut: T)">
+            <img src="art/approved/z1s3/z1s3.wall.poster.png" alt="2010 Museum" />
+            <span class="hud-tile-tag">Museum [T]</span>
+          </button>
+          <button id="btn-open-config" class="hud-square-tile" title="Gramophone &amp; Stage Options (ESC)">
+            <img src="art/approved/smoothface/smoothface.prop.skeleton_key.png" alt="Options" />
+            <span class="hud-tile-tag">Options [Esc]</span>
+          </button>
+        </div>
+        <button id="btn-hud-music" class="hud-hanging-music-tag" title="Click or press N to cycle: Dynamic Room Score / Submarine Ambience Only / 2010 Classic / Muted">
+          <span id="hud-music-label">Score: Dynamic</span>
         </button>
       </div>
     </header>
@@ -74,8 +91,7 @@
     <main id="stage-container">
       <canvas id="game-canvas" width="1600" height="900"></canvas>
 
-      <!-- Crooked Paper Cut-Out Room Signpost & Hover Label -->
-      <div id="room-banner" class="room-banner">Captain Dread's Cabin</div>
+      <!-- Hover Hotspot Label -->
       <div id="hotspot-tooltip" class="hotspot-tooltip" style="display:none;"></div>
 
       <!-- Compact Cut-Out Mouse Helper Badge -->
@@ -84,89 +100,84 @@
         <span class="mouse-hint-item">Actions Menu</span>
       </div>
 
-      <!-- Paper Cut-Out Pop-Up Action Menu -->
+      <!-- Canonical Aguilar GUImu003.jpg Vertical 3-Icon Action Strip (Grab, Inspect, Talk) -->
       <div id="rmb-action-menu" class="rmb-action-menu" style="display:none;">
         <div class="rmb-menu-header" id="rmb-target-title">Object</div>
-        <button class="rmb-verb-btn" data-verb="grab">
-          <img src="art/approved/ui/ui.action.use.png" alt="" class="verb-tile-img" />
-          <span>Take / Use</span>
+        <button class="rmb-verb-btn" data-verb="grab" title="Grab / Use">
+          <img src="art/approved/ui/ui.action.use.png" alt="Grab" class="verb-tile-img" />
+          <span class="rmb-verb-tag">grab</span>
         </button>
-        <button class="rmb-verb-btn" data-verb="inspect">
-          <img src="art/approved/ui/ui.action.inspect.png" alt="" class="verb-tile-img" />
-          <span>Look At</span>
+        <button class="rmb-verb-btn" data-verb="inspect" title="Inspect">
+          <img src="art/approved/ui/ui.action.inspect.png" alt="Inspect" class="verb-tile-img" />
+          <span class="rmb-verb-tag">inspect</span>
         </button>
-        <button class="rmb-verb-btn" data-verb="talk">
-          <img src="art/approved/ui/ui.action.talk.png" alt="" class="verb-tile-img" />
-          <span>Talk To</span>
+        <button class="rmb-verb-btn" data-verb="talk" title="Talk To">
+          <img src="art/approved/ui/ui.action.talk.png" alt="Talk" class="verb-tile-img" />
+          <span class="rmb-verb-tag">talk</span>
         </button>
         <button class="rmb-verb-btn rmb-verb-item" data-verb="item" id="rmb-use-item-btn" style="display:none;">
-          <img src="art/approved/ui/ui.action.use.png" alt="" class="verb-tile-img" />
-          <span id="rmb-use-item-text">Use Item</span>
+          <img src="art/approved/ui/ui.action.use.png" alt="Use Item" class="verb-tile-img" />
+          <span class="rmb-verb-tag" id="rmb-use-item-text">use item</span>
         </button>
       </div>
 
-      <!-- Paper Cut-Out Title Screen -->
+      <!-- Live 2.5D Cut-Out Stage Title Screen (Zero SaaS Cards, Live Stage Backdrop!) -->
       <section id="main-menu-overlay" class="overlay-screen">
-        <div class="menu-hero-backdrop" style="background-image: url('review/layout_shots/z1s3_cabin_panorama/no_chars_cam_center.png');"></div>
         <div class="menu-vignette"></div>
-        <div class="menu-content-grid">
-          <div class="menu-left-column">
-            <div class="studio-crest">
-              <img src="art/approved/z1s3/z1s3.wall.poster.png" alt="MoonStorm Studios" class="mss-crest-img" />
-              <div class="studio-meta">
-                <span class="studio-year">MOONSTORM STUDIOS PRESENTS</span>
-                <span class="studio-sub">A TALE OF VILLAINY, MOUSTACHES &amp; SUBMARINES</span>
+        <div class="title-stage-signpost">
+          <!-- Hand-Crafted Multi-Layered Paper Cut-Out Title Marquee Crest -->
+          <div class="title-crest-assembly">
+            <div class="title-crest-medallions">
+              <div class="crest-portrait-coin">
+                <img src="characters/smoothface/portrait.png" alt="Mr. Smoothface" />
+              </div>
+              <div class="crest-studio-ribbon">MOONSTORM STUDIOS &bull; 2010</div>
+              <div class="crest-poster-stamp">
+                <img src="art/approved/z1s3/z1s3.wall.poster.png" alt="MoonStorm 2010" />
               </div>
             </div>
-
-            <div class="game-logo-emblem-wrap">
-              <h1 style="font-family:'Cinzel',serif;font-size:2.7rem;color:#ffe28a;text-shadow:3px 4px 0 #1a100c;margin:6px 0;letter-spacing:2px;">SMOOTHFACE'S EPIC</h1>
+            <div class="title-scroll-plaque">
+              <div class="title-cutout-kicker">SMOOTHFACE'S</div>
+              <h1 class="title-cutout-heading">EPIC</h1>
             </div>
-
-            <div class="menu-tagline-scroll">
-              <p class="menu-tagline">
-                Born without a single whisker while his twin brother grew the most glorious moustache in London, <strong>Rupert &ldquo;Mr. Smoothface&rdquo; Stache</strong> boards the rusty pirate submarine <em>Substampede</em> to join the <strong>Malefic Gentlemen</strong>!
-              </p>
-            </div>
-
-            <div class="menu-button-stack">
-              <button id="btn-menu-start-intro" class="menu-primary-btn">
-                <span>BEGIN THE TALE (4-SCENE INTRO)</span>
-              </button>
-              <button id="btn-menu-quick-play" class="menu-secondary-btn">
-                <img src="art/approved/z1s3/z1s3.wall.helm_wheel.png" alt="" class="btn-cutout-tile" />
-                <span>ENTER CAPTAIN DREAD'S CABIN (Z1S3)</span>
-              </button>
-              <button id="btn-menu-castle" class="menu-secondary-btn" style="background:linear-gradient(180deg,#3d2647 0%,#24152c 100%);border-color:#c98cff;">
-                <img src="art/approved/z0/z0.prop.two_faced_sun.png" alt="" class="btn-cutout-tile" />
-                <span>2010 PROTOTYPE: SPOOKY CASTLE (LOLDEMO1)</span>
-              </button>
-              <button id="btn-menu-studio" class="menu-secondary-btn" style="display:none;background:#3e281b;color:#ffe596;border-color:#e5b94c;">
-                <span>STAGE LAYOUT WORKSHOP</span>
-              </button>
-              <div class="menu-bottom-actions">
-                <button id="btn-menu-credits" class="menu-Action-btn archive-highlight-btn">
-                  <img src="art/approved/z1s3/z1s3.wall.poster.png" alt="" class="btn-cutout-mini" />
-                  <span>MoonStorm 2010 Time Capsule (Crew &amp; Art)</span>
-                </button>
-                <button id="btn-menu-config" class="menu-Action-btn">
-                  <img src="art/approved/smoothface/smoothface.prop.skeleton_key.png" alt="" class="btn-cutout-mini" />
-                  <span>Stage &amp; Gramophone</span>
-                </button>
-              </div>
+            <div class="title-crimson-ribbon">
+              &ldquo;If I cannot grow a moustache, nobody shall!&rdquo;
             </div>
           </div>
 
-          <div class="menu-right-column">
-            <div class="menu-showcase-card">
-              <div class="showcase-top-ribbon">TONIGHT'S SUPERVILLAIN</div>
-              <canvas id="menu-puppet-canvas" width="440" height="480"></canvas>
-              <div class="showcase-caption">
-                <strong>RUPERT &ldquo;MR. SMOOTHFACE&rdquo; STACHE</strong>
-                <span>&ldquo;If I cannot grow a moustache, nobody shall!&rdquo;</span>
-              </div>
-            </div>
-          </div>
+          <nav class="title-wooden-planks">
+            <button id="btn-menu-start-intro" class="title-plank-btn plank-tilt-1">
+              <span class="plank-rivet">&bull;</span>
+              <span class="plank-label">Begin the Tale (Intro)</span>
+              <span class="plank-rivet">&bull;</span>
+            </button>
+            <button id="btn-menu-quick-play" class="title-plank-btn plank-tilt-2">
+              <span class="plank-rivet">&bull;</span>
+              <span class="plank-label">Play Act I: The Substampede</span>
+              <span class="plank-rivet">&bull;</span>
+            </button>
+            <button id="btn-menu-castle" class="title-plank-btn plank-tilt-3">
+              <span class="plank-rivet">&bull;</span>
+              <span class="plank-label">2010 Spooky Castle Prototype</span>
+              <span class="plank-rivet">&bull;</span>
+            </button>
+            <button id="btn-menu-credits" class="title-plank-btn plank-tilt-4">
+              <span class="plank-rivet">&bull;</span>
+              <span class="plank-label">2010 Time Capsule &amp; Art</span>
+              <span class="plank-rivet">&bull;</span>
+            </button>
+            <button id="btn-menu-config" class="title-plank-btn plank-tilt-5">
+              <span class="plank-rivet">&bull;</span>
+              <span class="plank-label">Stage &amp; Gramophone Options</span>
+              <span class="plank-rivet">&bull;</span>
+            </button>
+            <button id="btn-menu-studio" class="title-plank-btn" style="display:none;">
+              <span class="plank-label">Stage Layout Workshop</span>
+            </button>
+          </nav>
+
+          <!-- Hidden canvas kept for backward-compat references in main.ts -->
+          <canvas id="menu-puppet-canvas" width="440" height="480" style="display:none;"></canvas>
         </div>
       </section>
 

@@ -158,8 +158,9 @@ class SmoothfacePilotGame {
       }
     );
 
-    // Canonical Slice 1 Z1S3 Initial Placements (`layout/z1s3.layout.json`: Smoothface 315px, Captain Dread 330px)
-    this.player = this.rigs.createAnimState('smoothface', Z1S3_CHARACTER_SPAWNS.smoothface.x, Z1S3_CHARACTER_SPAWNS.smoothface.y, 1.0, Z1S3_CHARACTER_SPAWNS.smoothface.facing);
+    // Canonical Slice 1 Z1S3 Initial Placements: start Smoothface at center-stage (x=965) while Title Screen is open so both he, Morgan's portrait, and Captain Dread are in full spotlight view!
+    this.player = this.rigs.createAnimState('smoothface', 965, 785, 1.0, 1);
+    this.cameraX = 220;
     this.menuShowcasePuppet = this.rigs.createAnimState('smoothface', 220, 436, 0.82, 1);
 
     this.npcs = {
@@ -420,6 +421,11 @@ class SmoothfacePilotGame {
     // Top HUD controls
     document.getElementById('btn-open-menu')?.addEventListener('click', () => {
       this.audio.playUiClick();
+      this.currentRoom = 'Z1S3';
+      this.player.x = 965;
+      this.player.y = 785;
+      this.player.facing = 1;
+      this.cameraX = 220;
       this.audio.setRoomCue('MENU');
       this.syncMusicHudUi();
       document.getElementById('main-menu-overlay')!.style.display = 'flex';

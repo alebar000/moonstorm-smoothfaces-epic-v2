@@ -3427,3 +3427,25 @@ ef_z1s2_lobby_2010.png), normalizadas, validadas por gates.py (8/8 PASS) y aprob
        2. **`Ambience Only`** (`sub_ambience.wav`: cero melodia, solo el rumor profundo del oceano, crujidos del casco, burbujas y sonar lejano),
        3. **`2010 Classic`** (`stuff2.ogg`),
        4. **`Muted`** (musica en silencio manteniendo voces y efectos).
+
+
+---
+
+## 2026-10-24 - Rediseño Completo de Pantalla de Titulo y HUD estilo `GUImu003.jpg` (Cero Patrones SaaS / AI Web Templates) (`index.html`, `src/styles/main.css`, `src/main.ts`)
+
+- **Problema detectado por Alex (`"Title screen and UI still look to AI-ish"`)**:
+  - La pantalla de titulo anterior utilizaba un layout tipo "Hero Section SaaS de 2 columnas" (columna izquierda con pill badge, titulo, tarjeta de descripcion y botones de colores amarillo/teal/morado; columna derecha con una tarjeta con borde `"TONIGHT'S SUPERVILLAIN"`), tapando ademas el escenario animado en vivo con una captura oscura estatica (`.menu-hero-backdrop`).
+  - El HUD superior utilizaba una barra de navegacion web marron oscura (`#261b16`) de extremo a extremo con 11 botones tipo pildora y emojis Unicode (`✎`, `♫`), un menu contextual ancho con botones rectangulares de texto, y pildoras amarillas/turquesa dentro del pergamino de dialogo.
+- **Rediseño Canonico Implementado ([index.html](file:///C:/AntiGravityStuff/Moonstorm2/index.html), [main.css](file:///C:/AntiGravityStuff/Moonstorm2/src/styles/main.css), [main.ts](file:///C:/AntiGravityStuff/Moonstorm2/src/main.ts))**:
+  1. **Pantalla de Titulo Teatral sobre el Escenario Vivo a 60 FPS (`#main-menu-overlay`)**:
+     - Eliminados por completo `.menu-hero-backdrop`, `.menu-content-grid`, `.menu-showcase-card` (`"TONIGHT'S SUPERVILLAIN"`), `.menu-tagline-scroll` y todos los botones pildora de colores.
+     - El escenario real a 60 FPS (`#game-canvas` en `Z1S3` con **Mr. Smoothface** en `x=965` frente al retrato de Morgan y **Captain Dread** en `x=1525` fumando su pipa con paralaje multicapa) luce directamente detras del menu sin obstrucciones.
+     - Emblema teatral multicapa en recorte de papel (`.title-crest-assembly`): medallon de bronce de Smoothface, placa `MOONSTORM STUDIOS - 2010`, sello del poster original de 2010, pergamino `SMOOTHFACE'S EPIC` (`ui.scroll_banner.png`) y cinta carmesi inclinada (`"If I cannot grow a moustache, nobody shall!"`), acompañado de 5 tablones de madera/pergamino (`ui.button_plate.png`) ligeramente inclinados con remaches de bronce (`.plank-rivet`) y tipografia centrada de una sola linea.
+  2. **Barra Superior de Inventario y Racks de Iconos Cuadrados estilo `GUImu003.jpg` (`#hud-top-bar`)**:
+     - Eliminada la barra web marron oscura de ancho completo y todos los botones rectangulares de texto con emojis Unicode.
+     - **Centro (`.guimu-inventory-container`)**: Caja de inventario fiel al boceto `GUImu003.jpg` de Jose David Aguilar (15 de Octubre de 2010) sobre `ui.scroll_banner.png`, con los 2 cuadros de modo (`Use` e `Inspect` sobre `ui.slot_frame.png`), las 6 ranuras cuadradas de bolsillo (`ui.slot_frame.png`) con flechas laterales, y la etiqueta colgante `#active-item-banner` debajo (`Pockets Empty` / `Held: Bag of Hammers`).
+     - **Esquinas Izquierda y Derecha (`.hud-corner-rack`)**: Racks simetricos de fichas cuadradas `ui.slot_frame.png` (`42x42px`) con iconos cut-out ilustrados (`[Title] [Map] [Plan]` a la izquierda con el cartel inclinado `#room-banner` colgando debajo; `[Peek] [2010 Sketch] [Museum] [Options]` a la derecha con la etiqueta musical inclinada `#btn-hud-music` colgando debajo).
+  3. **Menu Contextual de Clic Derecho en Columna Vertical de 3 Fichas Cuadradas (`#rmb-action-menu`)**:
+     - Reemplazada la caja marron ancha por la tira vertical de 3 fichas cuadradas (`58x58px` `ui.slot_frame.png`) del boceto `GUImu003.jpg` (`grab`, `inspect`, `talk`, mas `Use <Item>` cuando hay un objeto activo) con pequeñas etiquetas de pergamino laterales.
+  4. **Pergamino de Dialogo Inferior con Tinta Directa (`#hud-bottom-box`)**:
+     - Eliminadas las pildoras amarillas/turquesa y el boton rojo cuadrado `[X]`. El nombre del hablante, su estado de animo entre parentesis, el texto y las opciones con viñeta (`• "..."` -> `☞ "..."` en carmesi al pasar el cursor) se imprimen como tinta negra directamente sobre el pergamino `ui.scroll_banner.png`.

@@ -15,53 +15,46 @@ with sync_playwright() as p:
     page.on("response", lambda r: failed_reqs.append(f"{r.status} {r.url}") if r.status >= 400 else None)
 
     page.goto("http://127.0.0.1:8765/play", wait_until="networkidle")
-    page.wait_for_timeout(700)
-    page.screenshot(path=os.path.join(art_dir, "v3_main_menu.png"))
+    page.wait_for_timeout(800)
+    page.screenshot(path=os.path.join(art_dir, "v4_title_screen.png"))
 
     # Open Time Capsule Museum from Main Menu
     page.click("#btn-menu-credits")
     page.wait_for_timeout(500)
     page.screenshot(path=os.path.join(art_dir, "v3_museum_tab1_team.png"))
 
-    # Tab 2: Timeline (Production)
-    page.click('.archive-tab-btn[data-tab="timeline"]')
-    page.wait_for_timeout(400)
-    page.click('.timeline-node-btn[data-node-id="tl_oct_2010"]')
-    page.wait_for_timeout(400)
-    page.screenshot(path=os.path.join(art_dir, "v3_museum_tab2_timeline.png"))
-
-    # Tab 2b: Lore Timeline
-    page.click('.timeline-mode-btn[data-tmode="lore"]')
-    page.wait_for_timeout(400)
-    page.screenshot(path=os.path.join(art_dir, "v3_museum_tab2_lore.png"))
-
-    # Tab 3: Gallery
-    page.click('.archive-tab-btn[data-tab="gallery"]')
-    page.wait_for_timeout(500)
-    page.screenshot(path=os.path.join(art_dir, "v3_museum_tab3_gallery.png"))
-
-    # Open Lightbox on GUImu003
-    page.evaluate('window.__SPARKLE_GAME__.archiveMuseum.openLightbox("guimu003")')
-    page.wait_for_timeout(400)
-    page.screenshot(path=os.path.join(art_dir, "v3_museum_lightbox.png"))
-    page.click("#btn-close-lightbox")
-    page.wait_for_timeout(250)
-
-    # Tab 4: Comparator 2010 vs 2026
-    page.click('.archive-tab-btn[data-tab="compare"]')
-    page.wait_for_timeout(500)
-    page.screenshot(path=os.path.join(art_dir, "v3_museum_tab4_compare.png"))
-
-    # Tab 5: Docs & Easter Eggs
-    page.click('.archive-tab-btn[data-tab="docs"]')
-    page.wait_for_timeout(500)
-    page.screenshot(path=os.path.join(art_dir, "v3_museum_tab5_docs_eggs.png"))
-
     # Close museum and enter Z1S3 gameplay
     page.click("#btn-close-archive")
     page.wait_for_timeout(250)
     page.click("#btn-menu-quick-play")
+    page.wait_for_timeout(700)
+
+    # Give player canonical inventory items, select one, trigger Captain Dread dialogue, and open RMB menu
+    page.evaluate("""() => {
+        const g = window.__SPARKLE_GAME__;
+        g.addInventoryItem('blueprint');
+        g.addInventoryItem('hammer_bag');
+        g.addInventoryItem('glue');
+        g.selectInventoryItem('hammer_bag');
+        const hit = g.getVisibleHotspots().find(h => h.id === 'z1s3_cap_dread');
+        if (hit) {
+            g.executeVerbOnHotspot(hit, 'talk');
+            g.openRmbMenuForHotspot(hit, new MouseEvent('contextmenu', { clientX: 1120, clientY: 360 }));
+        }
+        g.flushDialogueTypewriter();
+    }""")
+    page.wait_for_timeout(500)
+    page.screenshot(path=os.path.join(art_dir, "v4_hud_and_rmb.png"))
+
+    # Close RMB & switch to Z1S2
+    page.evaluate("""() => {
+        const g = window.__SPARKLE_GAME__;
+        document.getElementById('rmb-action-menu').style.display = 'none';
+        g.switchRoom('Z1S2');
+        g.flushDialogueTypewriter();
+    }""")
     page.wait_for_timeout(600)
+    page.screenshot(path=os.path.join(art_dir, "v4_z1s2_hud.png"))
 
     # Open Island Map Modal to verify Aguilar's 2010 map
     page.click("#btn-island-map")
