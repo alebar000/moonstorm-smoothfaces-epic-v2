@@ -165,6 +165,7 @@ class SmoothfacePilotGame {
       nihongo: this.rigs.createAnimState('nihongo', 725, 810, 1.0, 1),
       a_baby: this.rigs.createAnimState('a_baby', 1555, 805, 1.0, -1),
       ventriloquist: this.rigs.createAnimState('ventriloquist', 1175, 805, 1.0, 1),
+      troll: this.rigs.createAnimState('troll', 960, 790, 1.0, 1),
     };
 
     this.preloadSceneAssets();
@@ -238,7 +239,7 @@ class SmoothfacePilotGame {
     }
     const z1s1Ids = [
       'z1s1.wall.hull_panel', 'z1s1.floor.steel_deck', 'z1s1.ceiling.rivet_arch', 'z1s1.prop.iron_ladder',
-      'z1s1.wall.book_shelf', 'z1s1.prop.pedal_station_intact', 'z1s1.prop.pedal_station_broken',
+      'z1s1.wall.book_shelf', 'z1s1.wall.caged_lamp', 'z1s1.prop.pedal_station_intact', 'z1s1.prop.pedal_station_broken',
       'z1s1.item.davinci_blueprint', 'z1s1.prop.perpetual_machine_installed', 'z1s1.fg.toxic_barrels',
       'z1s1.fg.broken_toaster', 'z1s1.fg.potato_sacks', 'z1s1.fg.bilge_rat', 'z1s1.fg.hull_ring_left',
       'z1s1.fg.hull_ring_right',
@@ -2559,6 +2560,7 @@ class SmoothfacePilotGame {
 
     for (const obj of this.getVisibleSceneObjects()) {
       if (this.studio?.hiddenObjectIds.has(obj.id)) continue;
+      if (obj.id === 'z0.prop.troll' && !this.studio?.active) continue;
       if (!this.cfgForeground && obj.sortY >= 850) continue;
       if (this.sketchMode2010 && obj.inSituSeamless) continue;
       renderList.push({
@@ -2591,6 +2593,11 @@ class SmoothfacePilotGame {
       renderList.push({
         sortY: this.npcs.nihongo.y,
         draw: () => this.rigs.renderNpcPuppet(ctx, this.npcs.nihongo),
+      });
+    } else if (this.currentRoom === 'LOLDEMO') {
+      renderList.push({
+        sortY: this.npcs.troll.y,
+        draw: () => this.rigs.renderNpcPuppet(ctx, this.npcs.troll),
       });
     }
 

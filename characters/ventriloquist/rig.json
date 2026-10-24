@@ -81,11 +81,11 @@
       "parent": null,
       "offset": [
         112,
-        96
+        92
       ],
       "size": [
-        92,
-        148
+        95,
+        156
       ],
       "pivots": {
         "neck": [
@@ -111,12 +111,12 @@
       "z_index": 30,
       "parent": "torso",
       "offset": [
-        130,
-        22
+        132,
+        18
       ],
       "size": [
-        76,
-        112
+        65,
+        126
       ],
       "pivots": {
         "neck": [
@@ -135,10 +135,10 @@
       "parent": "head_jaw",
       "offset": [
         152,
-        52
+        54
       ],
       "size": [
-        44,
+        31,
         28
       ],
       "pivots": {
@@ -153,12 +153,12 @@
       "z_index": 38,
       "parent": "torso",
       "offset": [
-        116,
-        114
+        118,
+        134
       ],
       "size": [
-        104,
-        118
+        112,
+        75
       ],
       "pivots": {
         "shoulder": [

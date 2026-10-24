@@ -14,8 +14,14 @@
   "versions": {
     "v1": "prompt_v1.txt"
   },
-  "status": "proposed",
+  "status": "approved",
   "proposed_version": "v1",
   "version": "v1",
-  "approved_version": "v1"
+  "approved_version": "v1",
+  "piece_id": "nihongo.eyes.closed",
+  "selected_variant": "v1.png",
+  "size": [
+    42,
+    20
+  ]
 }

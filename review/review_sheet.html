@@ -299,6 +299,85 @@
     highlightActive: true
   };
 
+  const DEFAULT_NIHONGO_OFFSETS = {
+    shoe_back:        {x: 158, y: 306, w:  72, h:  62},
+    leg_back:         {x: 164, y: 238, w:  60, h:  98},
+    shoe_front:       {x: 118, y: 312, w:  72, h:  62},
+    leg_front:        {x: 130, y: 242, w:  56, h: 104},
+    hand_back:        {x: 214, y: 188, w:  38, h:  41},
+    arm_back:         {x: 156, y: 114, w:  84, h: 108},
+    torso:            {x: 110, y:  98, w: 112, h: 186},
+    head:             {x: 126, y:  18, w:  83, h: 124},
+    eyes_normal:      {x: 152, y:  64, w:  44, h:  18},
+    eyes_squint:      {x: 152, y:  64, w:  44, h:  17},
+    eyes_closed:      {x: 152, y:  64, w:  42, h:  20},
+    brows_normal:     {x: 150, y:  50, w:  48, h:  15},
+    brows_angry:      {x: 150, y:  49, w:  46, h:  18},
+    headband:         {x: 110, y:  30, w: 102, h:  51},
+    broom_katana:     {x: 142, y: 128, w:  76, h: 212},
+    arm_front:        {x:  84, y: 114, w: 101, h: 112},
+    hand_front_fist:  {x: 162, y: 194, w:  36, h:  37},
+    hand_front_open:  {x: 160, y: 190, w:  38, h:  41}
+  };
+  let nihongoRigOffsets = JSON.parse(JSON.stringify(DEFAULT_NIHONGO_OFFSETS));
+  let nihongoRigState = {
+    eyes: 'normal',       // 'normal' | 'squint' | 'closed' | 'none'
+    brows: 'normal',      // 'normal' | 'angry' | 'none'
+    handFront: 'fist',    // 'fist' | 'open' | 'none'
+    headband: true,
+    broom: true,
+    highlightActive: true
+  };
+
+  const DEFAULT_ABABY_OFFSETS = {
+    arm_back:         {x: 174, y: 134, w:  84, h: 168},
+    legs_diaper:      {x: 118, y: 192, w: 101, h: 112},
+    arm_front:        {x:  82, y: 136, w:  78, h: 172},
+    torso:            {x:  88, y:  84, w: 157, h: 154},
+    head:             {x: 132, y:  32, w:  93, h: 112},
+    eyes_normal:      {x: 164, y:  54, w:  44, h:  27},
+    eyes_angry:       {x: 163, y:  54, w:  46, h:  25},
+    bonnet:           {x: 124, y:  18, w:  78, h:  72}
+  };
+  let ababyRigOffsets = JSON.parse(JSON.stringify(DEFAULT_ABABY_OFFSETS));
+  let ababyRigState = {
+    eyes: 'normal',       // 'normal' | 'angry' | 'none'
+    bonnet: true,
+    highlightActive: true
+  };
+
+  const DEFAULT_VENTRILO_OFFSETS = {
+    shoes:            {x: 118, y: 326, w:  99, h:  62},
+    legs:             {x: 112, y: 198, w:  82, h: 170},
+    arm_back:         {x: 168, y: 108, w:  47, h: 132},
+    torso:            {x: 106, y:  86, w:  95, h: 156},
+    head_jaw:         {x: 122, y:   6, w:  65, h: 126},
+    eyes_normal:      {x: 146, y:  44, w:  31, h:  28},
+    arm_front:        {x: 104, y: 118, w: 112, h:  75},
+    dummy_rapoleon:   {x: 148, y:  68, w: 115, h: 168}
+  };
+  let ventriloRigOffsets = JSON.parse(JSON.stringify(DEFAULT_VENTRILO_OFFSETS));
+  let ventriloRigState = {
+    eyes: 'normal',       // 'normal' | 'none'
+    dummy: true,
+    highlightActive: true
+  };
+
+  const DEFAULT_TROLL_OFFSETS = {
+    arm_back:         {x: 182, y: 106, w: 103, h: 174},
+    legs_feet:        {x: 104, y: 232, w: 128, h: 142},
+    torso_tunic:      {x:  88, y:  96, w: 151, h: 202},
+    head_jaw:         {x: 106, y:  16, w: 126, h: 138},
+    eyes:             {x: 148, y:  52, w:  68, h:  44},
+    arm_front_club:   {x:  48, y: 108, w: 180, h: 216}
+  };
+  let trollRigOffsets = JSON.parse(JSON.stringify(DEFAULT_TROLL_OFFSETS));
+  let trollRigState = {
+    eyes: 'normal',       // 'normal' | 'none'
+    club: true,
+    highlightActive: true
+  };
+
   const file = p => '/file/' + encodeURI(p);
   const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
   const toast = m => { const t=$('#toast'); t.textContent=m; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),1400); };
@@ -347,7 +426,38 @@
       else if (it.id === 'smoothface.hand_back.fist') rigState.handBack = 'fist';
       else if (it.id === 'smoothface.hand_back.open') rigState.handBack = 'open';
       else if (it.id === 'smoothface.hand_back.point') rigState.handBack = 'point';
+    } else if (it.id && it.id.startsWith('nihongo.')) {
+      activePuppet = 'nihongo';
+      if (it.id === 'nihongo.eyes.normal') nihongoRigState.eyes = 'normal';
+      else if (it.id === 'nihongo.eyes.squint') nihongoRigState.eyes = 'squint';
+      else if (it.id === 'nihongo.eyes.closed') nihongoRigState.eyes = 'closed';
+      else if (it.id === 'nihongo.brows.normal') nihongoRigState.brows = 'normal';
+      else if (it.id === 'nihongo.brows.angry') nihongoRigState.brows = 'angry';
+      else if (it.id === 'nihongo.hand_front.fist') nihongoRigState.handFront = 'fist';
+      else if (it.id === 'nihongo.hand_front.open') nihongoRigState.handFront = 'open';
+    } else if (it.id && it.id.startsWith('ababy.')) {
+      activePuppet = 'ababy';
+      if (it.id === 'ababy.eyes.normal') ababyRigState.eyes = 'normal';
+      else if (it.id === 'ababy.eyes.angry') ababyRigState.eyes = 'angry';
+    } else if (it.id && it.id.startsWith('ventrilo.')) {
+      activePuppet = 'ventriloquist';
+    } else if (it.id && (it.id === 'z0.prop.troll' || it.id.startsWith('troll.'))) {
+      activePuppet = 'troll';
     }
+  }
+
+  function buildPuppetTabsHTML() {
+    const tabs = [
+      ['smoothface', 'Smoothface'],
+      ['capdread', 'Cap. Dread'],
+      ['nihongo', 'Nihongo'],
+      ['ababy', 'A Baby'],
+      ['ventriloquist', 'Ventrilo'],
+      ['troll', 'Troll Z0']
+    ];
+    return `<div style="display:flex; flex-wrap:wrap; gap:3px">` +
+      tabs.map(([k, lbl]) => `<button type="button" class="${activePuppet===k?'on':''}" data-switch-puppet="${k}">${lbl}</button>`).join('') +
+      `</div>`;
   }
 
   function partImg(id, fallbackPath) {
@@ -470,10 +580,7 @@
       <div class="rig-card">
         <div class="rig-title">
           <span>Marioneta Smoothface</span>
-          <div style="display:flex; gap:4px">
-            <button type="button" class="${activePuppet==='smoothface'?'on':''}" id="puppet-toggle-sf">Smoothface</button>
-            <button type="button" class="${activePuppet==='capdread'?'on':''}" id="puppet-toggle-cd">Captain Dread</button>
-          </div>
+          ${buildPuppetTabsHTML()}
         </div>
         <div class="rig-viewport-wrap" style="width:${wrapW}px; height:${wrapH}px">
           <div class="rig-viewport" id="rig-viewport" style="transform:scale(${scale}); width:340px; height:420px">
@@ -615,10 +722,7 @@
       <div class="rig-card">
         <div class="rig-title">
           <span>Marioneta Captain Dread</span>
-          <div style="display:flex; gap:4px">
-            <button type="button" class="${activePuppet==='smoothface'?'on':''}" id="puppet-toggle-sf">Smoothface</button>
-            <button type="button" class="${activePuppet==='capdread'?'on':''}" id="puppet-toggle-cd">Captain Dread</button>
-          </div>
+          ${buildPuppetTabsHTML()}
         </div>
         <div class="rig-viewport-wrap" style="width:${wrapW}px; height:${wrapH}px">
           <div class="rig-viewport" id="rig-viewport" style="transform:scale(${scale}); width:380px; height:480px">
@@ -670,24 +774,147 @@
       </div>`;
   }
 
+  function buildGenericRigHTML(puppetKey, titleLabel, offsetsObj, stateObj, layers, controlsHTML, activeId, zoomH) {
+    const scale = Math.max(0.55, Math.min(1.5, zoomH / 340));
+    const wrapW = Math.round(340 * scale);
+    const wrapH = Math.round(400 * scale);
+    layers.sort((a, b) => a.z - b.z);
+    const layerImgs = layers.map(l => {
+      const o = offsetsObj[l.key] || {x:120, y:120, w:80, h:80};
+      const isAct = stateObj.highlightActive && l.pid === activeId;
+      return `<img class="rig-layer ${isAct ? 'active-part' : ''}" data-key="${l.key}" data-puppet="${puppetKey}" title="${l.pid || l.key} (arrastrar para mover)"
+        src="${file(l.src)}"
+        style="left:${o.x}px; top:${o.y}px; width:${o.w}px; height:${o.h}px; z-index:${l.z}; opacity:1; ${l.noShadow ? '' : 'filter:drop-shadow(1px 2px 2px rgba(15,12,10,0.45))'}">`;
+    }).join('');
+    return `
+      <div class="rig-card">
+        <div class="rig-title">
+          <span>${titleLabel}</span>
+          ${buildPuppetTabsHTML()}
+        </div>
+        <div class="rig-viewport-wrap" style="width:${wrapW}px; height:${wrapH}px">
+          <div class="rig-viewport" id="rig-viewport" style="transform:scale(${scale}); width:340px; height:400px">
+            ${layerImgs}
+          </div>
+        </div>
+        <div class="rig-controls">${controlsHTML}</div>
+        <div class="rig-footer">
+          <span id="rig-coords">Arrastra cualquier pieza en la marioneta para probar posición</span>
+          <button type="button" id="rig-reset">Reset posiciones</button>
+        </div>
+      </div>`;
+  }
+
+  function buildNihongoRigHTML(activeId, zoomH) {
+    const s = nihongoRigState;
+    const layers = [
+      {key:'shoe_back',  pid:'nihongo.shoe_front', src:partImg('nihongo.shoe_front','art/approved/nihongo/nihongo.shoe_front.png'), z:10},
+      {key:'leg_back',   pid:'nihongo.leg_back',   src:partImg('nihongo.leg_back','art/approved/nihongo/nihongo.leg_back.png'), z:11},
+      {key:'shoe_front', pid:'nihongo.shoe_front', src:partImg('nihongo.shoe_front','art/approved/nihongo/nihongo.shoe_front.png'), z:12},
+      {key:'leg_front',  pid:'nihongo.leg_front',  src:partImg('nihongo.leg_front','art/approved/nihongo/nihongo.leg_front.png'), z:13},
+      {key:'hand_back',  pid:'nihongo.hand_front.open', src:partImg('nihongo.hand_front.open','art/approved/nihongo/nihongo.hand_front.open.png'), z:15},
+      {key:'arm_back',   pid:'nihongo.arm_back',   src:partImg('nihongo.arm_back','art/approved/nihongo/nihongo.arm_back.png'), z:16},
+      {key:'torso',      pid:'nihongo.torso',      src:partImg('nihongo.torso','art/approved/nihongo/nihongo.torso.png'), z:20},
+      {key:'head',       pid:'nihongo.head',       src:partImg('nihongo.head','art/approved/nihongo/nihongo.head.png'), z:25}
+    ];
+    if (s.eyes !== 'none') {
+      layers.push({key:'eyes_'+s.eyes, pid:'nihongo.eyes.'+s.eyes, src:partImg('nihongo.eyes.'+s.eyes,'art/approved/nihongo/nihongo.eyes.'+s.eyes+'.png'), z:26, noShadow:true});
+    }
+    if (s.brows !== 'none') {
+      layers.push({key:'brows_'+s.brows, pid:'nihongo.brows.'+s.brows, src:partImg('nihongo.brows.'+s.brows,'art/approved/nihongo/nihongo.brows.'+s.brows+'.png'), z:27, noShadow:true});
+    }
+    if (s.headband) {
+      layers.push({key:'headband', pid:'nihongo.headband', src:partImg('nihongo.headband','art/approved/nihongo/nihongo.headband.png'), z:28});
+    }
+    if (s.broom) {
+      layers.push({key:'broom_katana', pid:'nihongo.prop.broom_katana', src:partImg('nihongo.prop.broom_katana','art/approved/nihongo/nihongo.prop.broom_katana.png'), z:30});
+    }
+    layers.push({key:'arm_front', pid:'nihongo.arm_front', src:partImg('nihongo.arm_front','art/approved/nihongo/nihongo.arm_front.png'), z:32});
+    if (s.handFront !== 'none') {
+      layers.push({key:'hand_front_'+s.handFront, pid:'nihongo.hand_front.'+s.handFront, src:partImg('nihongo.hand_front.'+s.handFront,'art/approved/nihongo/nihongo.hand_front.'+s.handFront+'.png'), z:34});
+    }
+    const btn = (g, v, lbl) => `<button type="button" class="${s[g]===v?'on':''}" data-rig-puppet="nihongo" data-rig-group="${g}" data-rig-val="${v}">${lbl}</button>`;
+    const ctrl = `
+      <span class="lbl">Ojos (1-3):</span><div class="rig-btns">${btn('eyes','normal','Normal')}${btn('eyes','squint','Squint')}${btn('eyes','closed','Closed')}${btn('eyes','none','Ocultar')}</div>
+      <span class="lbl">Cejas (Q-W):</span><div class="rig-btns">${btn('brows','normal','Normal')}${btn('brows','angry','Angry')}${btn('brows','none','Ocultar')}</div>
+      <span class="lbl">Mano (4-5):</span><div class="rig-btns">${btn('handFront','fist','Fist')}${btn('handFront','open','Open')}${btn('handFront','none','Ocultar')}</div>`;
+    return buildGenericRigHTML('nihongo', 'Marioneta Nihongo Nohondes', nihongoRigOffsets, s, layers, ctrl, activeId, zoomH);
+  }
+
+  function buildAbabyRigHTML(activeId, zoomH) {
+    const s = ababyRigState;
+    const layers = [
+      {key:'arm_back',    pid:'ababy.arm_back',    src:partImg('ababy.arm_back','art/approved/ababy/ababy.arm_back.png'), z:10},
+      {key:'legs_diaper', pid:'ababy.legs_diaper', src:partImg('ababy.legs_diaper','art/approved/ababy/ababy.legs_diaper.png'), z:12},
+      {key:'arm_front',   pid:'ababy.arm_front',   src:partImg('ababy.arm_front','art/approved/ababy/ababy.arm_front.png'), z:15},
+      {key:'torso',       pid:'ababy.torso',       src:partImg('ababy.torso','art/approved/ababy/ababy.torso.png'), z:20},
+      {key:'head',        pid:'ababy.head',        src:partImg('ababy.head','art/approved/ababy/ababy.head.png'), z:25}
+    ];
+    if (s.eyes !== 'none') {
+      layers.push({key:'eyes_'+s.eyes, pid:'ababy.eyes.'+s.eyes, src:partImg('ababy.eyes.'+s.eyes,'art/approved/ababy/ababy.eyes.'+s.eyes+'.png'), z:26, noShadow:true});
+    }
+    if (s.bonnet) {
+      layers.push({key:'bonnet', pid:'ababy.bonnet', src:partImg('ababy.bonnet','art/approved/ababy/ababy.bonnet.png'), z:28});
+    }
+    const btn = (g, v, lbl) => `<button type="button" class="${s[g]===v?'on':''}" data-rig-puppet="ababy" data-rig-group="${g}" data-rig-val="${v}">${lbl}</button>`;
+    const ctrl = `
+      <span class="lbl">Ojos (1-2):</span><div class="rig-btns">${btn('eyes','normal','Normal')}${btn('eyes','angry','Angry')}${btn('eyes','none','Ocultar')}</div>`;
+    return buildGenericRigHTML('ababy', 'Marioneta A Baby (2010)', ababyRigOffsets, s, layers, ctrl, activeId, zoomH);
+  }
+
+  function buildVentriloRigHTML(activeId, zoomH) {
+    const s = ventriloRigState;
+    const layers = [
+      {key:'shoes',           pid:'ventrilo.shoes',           src:partImg('ventrilo.shoes','art/approved/ventriloquist/ventrilo.shoes.png'), z:10},
+      {key:'legs',            pid:'ventrilo.legs',            src:partImg('ventrilo.legs','art/approved/ventriloquist/ventrilo.legs.png'), z:12},
+      {key:'arm_back',        pid:'ventrilo.arm_back',        src:partImg('ventrilo.arm_back','art/approved/ventriloquist/ventrilo.arm_back.png'), z:15},
+      {key:'torso',           pid:'ventrilo.torso',           src:partImg('ventrilo.torso','art/approved/ventriloquist/ventrilo.torso.png'), z:20},
+      {key:'head_jaw',        pid:'ventrilo.head_jaw',        src:partImg('ventrilo.head_jaw','art/approved/ventriloquist/ventrilo.head_jaw.png'), z:25}
+    ];
+    if (s.eyes !== 'none') {
+      layers.push({key:'eyes_normal', pid:'ventrilo.eyes.normal', src:partImg('ventrilo.eyes.normal','art/approved/ventriloquist/ventrilo.eyes.normal.png'), z:26, noShadow:true});
+    }
+    layers.push({key:'arm_front', pid:'ventrilo.arm_front', src:partImg('ventrilo.arm_front','art/approved/ventriloquist/ventrilo.arm_front.png'), z:30});
+    if (s.dummy) {
+      layers.push({key:'dummy_rapoleon', pid:'ventrilo.dummy_rapoleon', src:partImg('ventrilo.dummy_rapoleon','art/approved/ventriloquist/ventrilo.dummy_rapoleon.png'), z:32});
+    }
+    const btn = (g, v, lbl) => `<button type="button" class="${s[g]===v?'on':''}" data-rig-puppet="ventriloquist" data-rig-group="${g}" data-rig-val="${v}">${lbl}</button>`;
+    const ctrl = `
+      <span class="lbl">Ojos:</span><div class="rig-btns">${btn('eyes','normal','Normal')}${btn('eyes','none','Ocultar')}</div>`;
+    return buildGenericRigHTML('ventriloquist', 'Marioneta Ventriloquist & Rapoleon', ventriloRigOffsets, s, layers, ctrl, activeId, zoomH);
+  }
+
+  function buildTrollRigHTML(activeId, zoomH) {
+    const s = trollRigState;
+    const layers = [
+      {key:'arm_back',       pid:'z0.prop.troll', src:'art/approved/z0/troll.arm_back.png', z:10},
+      {key:'legs_feet',      pid:'z0.prop.troll', src:'art/approved/z0/troll.legs_feet.png', z:12},
+      {key:'torso_tunic',    pid:'z0.prop.troll', src:'art/approved/z0/troll.torso_tunic.png', z:20},
+      {key:'head_jaw',       pid:'z0.prop.troll', src:'art/approved/z0/troll.head_jaw.png', z:25},
+      {key:'eyes',           pid:'z0.prop.troll', src:'art/approved/z0/troll.eyes.png', z:26},
+      {key:'arm_front_club', pid:'z0.prop.troll', src:'art/approved/z0/troll.arm_front_club.png', z:30}
+    ];
+    const ctrl = `<span class="lbl">Piezas Cut-Out:</span><div class="rig-btns"><span>6 piezas separadas (arm_back, legs_feet, torso_tunic, head_jaw, eyes, arm_front_club)</span></div>`;
+    return buildGenericRigHTML('troll', 'Marioneta Bridge Troll (Z0 - 6 Piezas)', trollRigOffsets, s, layers, ctrl, activeId, zoomH);
+  }
+
   function wireRigEvents() {
     const vp = $('#rig-viewport');
     if (!vp) return;
 
-    const tSf = $('#puppet-toggle-sf');
-    if (tSf) tSf.onclick = () => { activePuppet = 'smoothface'; renderStage(); };
-    const tCd = $('#puppet-toggle-cd');
-    if (tCd) tCd.onclick = () => { activePuppet = 'capdread'; renderStage(); };
+    document.querySelectorAll('[data-switch-puppet]').forEach(b => {
+      b.onclick = () => { activePuppet = b.dataset.switchPuppet; renderStage(); };
+    });
 
     document.querySelectorAll('[data-rig-puppet]').forEach(b => {
       b.onclick = () => {
         const puppet = b.dataset.rigPuppet;
         const g = b.dataset.rigGroup, v = b.dataset.rigVal;
-        if (puppet === 'capdread') {
-          capdreadRigState[g] = v;
-        } else {
-          rigState[g] = v;
-        }
+        if (puppet === 'capdread') capdreadRigState[g] = v;
+        else if (puppet === 'nihongo') nihongoRigState[g] = v;
+        else if (puppet === 'ababy') ababyRigState[g] = v;
+        else if (puppet === 'ventriloquist') ventriloRigState[g] = v;
+        else rigState[g] = v;
         renderStage();
       };
     });
@@ -713,11 +940,12 @@
     const rs = $('#rig-reset');
     if (rs) {
       rs.onclick = () => {
-        if (activePuppet === 'capdread') {
-          capdreadRigOffsets = JSON.parse(JSON.stringify(DEFAULT_CAPDREAD_OFFSETS));
-        } else {
-          rigOffsets = JSON.parse(JSON.stringify(DEFAULT_OFFSETS));
-        }
+        if (activePuppet === 'capdread') capdreadRigOffsets = JSON.parse(JSON.stringify(DEFAULT_CAPDREAD_OFFSETS));
+        else if (activePuppet === 'nihongo') nihongoRigOffsets = JSON.parse(JSON.stringify(DEFAULT_NIHONGO_OFFSETS));
+        else if (activePuppet === 'ababy') ababyRigOffsets = JSON.parse(JSON.stringify(DEFAULT_ABABY_OFFSETS));
+        else if (activePuppet === 'ventriloquist') ventriloRigOffsets = JSON.parse(JSON.stringify(DEFAULT_VENTRILO_OFFSETS));
+        else if (activePuppet === 'troll') trollRigOffsets = JSON.parse(JSON.stringify(DEFAULT_TROLL_OFFSETS));
+        else rigOffsets = JSON.parse(JSON.stringify(DEFAULT_OFFSETS));
         renderStage();
       };
     }
@@ -729,8 +957,13 @@
       img.onmousedown = e => {
         e.preventDefault();
         const key = img.dataset.key;
-        const isCap = img.dataset.puppet === 'capdread';
-        const offsets = isCap ? capdreadRigOffsets : rigOffsets;
+        const pType = img.dataset.puppet;
+        const offsets = pType === 'capdread' ? capdreadRigOffsets
+          : pType === 'nihongo' ? nihongoRigOffsets
+          : pType === 'ababy' ? ababyRigOffsets
+          : pType === 'ventriloquist' ? ventriloRigOffsets
+          : pType === 'troll' ? trollRigOffsets
+          : rigOffsets;
         if (!offsets[key]) return;
         const startX = e.clientX, startY = e.clientY;
         const origX = offsets[key].x, origY = offsets[key].y;
@@ -760,7 +993,10 @@
     const h = +$('#zoom').value;
     const isSmoothfacePart = it.category === 'smoothface' || (it.id && it.id.startsWith('smoothface.'));
     const isCapdreadPart   = it.category === 'capdread'   || (it.id && it.id.startsWith('capdread.'));
-    const isCharPart       = isSmoothfacePart || isCapdreadPart;
+    const isNihongoPart    = it.category === 'nihongo'    || (it.id && it.id.startsWith('nihongo.'));
+    const isAbabyPart      = it.category === 'ababy'      || (it.id && it.id.startsWith('ababy.'));
+    const isVentriloPart   = it.category === 'ventriloquist' || (it.id && it.id.startsWith('ventrilo.'));
+    const isCharPart       = isSmoothfacePart || isCapdreadPart || isNihongoPart || isAbabyPart || isVentriloPart;
 
     // Respect real relative height for small body parts
     const candH = isCharPart && it.target_height_px
@@ -771,7 +1007,12 @@
       `<figure class="${cls}"><img src="${file(src)}" style="height:${customH}px" alt=""><figcaption>${esc(cap)}</figcaption></figure>`;
 
     const refs = (it.references||[]).slice(0,2).map(r => fig(r, 'ref · ' + r.split('/').pop(), '', Math.round(h * 0.78)));
-    const rigHTML = activePuppet === 'capdread' ? buildCapdreadRigHTML(it.id, h) : buildSmoothfaceRigHTML(it.id, h);
+    const rigHTML = activePuppet === 'capdread' ? buildCapdreadRigHTML(it.id, h)
+      : activePuppet === 'nihongo' ? buildNihongoRigHTML(it.id, h)
+      : activePuppet === 'ababy' ? buildAbabyRigHTML(it.id, h)
+      : activePuppet === 'ventriloquist' ? buildVentriloRigHTML(it.id, h)
+      : activePuppet === 'troll' ? buildTrollRigHTML(it.id, h)
+      : buildSmoothfaceRigHTML(it.id, h);
     const neigh = isCharPart ? [] : (it.neighbors||[]).slice(0,2).map(r => fig(r, 'aprobada · ' + r.split('/').pop()));
 
     st.innerHTML = rigHTML + fig(it.image, `${it.id} · ${it.version} (pieza aislada)`, 'cand', candH) + refs.join('') + neigh.join('');

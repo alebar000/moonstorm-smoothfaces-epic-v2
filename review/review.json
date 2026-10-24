@@ -953,13 +953,6 @@
       "reason": "L17 A Baby approved (passes all gates and critics)"
     },
     {
-      "id": "ababy.arm_back",
-      "version": "v1",
-      "verdict": "approved",
-      "ts": "2026-10-23T14:55:24",
-      "reason": "L17 A Baby approved (passes all gates and critics)"
-    },
-    {
       "id": "ababy.legs_diaper",
       "version": "v1",
       "verdict": "approved",
@@ -1294,6 +1287,13 @@
       "verdict": "approved",
       "ts": "2026-10-23T18:39:43",
       "reason": "L23 Z0 Spooky Paper Castle approved (passes all gates and critics)"
+    },
+    {
+      "id": "ababy.arm_back",
+      "version": "v1",
+      "verdict": "approved",
+      "reason": "L17 A Baby approved (passes all gates and critics)",
+      "ts": "2026-10-23T23:30:20"
     }
   ],
   "decisions": {

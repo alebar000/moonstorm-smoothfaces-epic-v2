@@ -7,7 +7,7 @@
  * coordinates from `characters/<id>/rig.json`.
  */
 
-export type CharacterId = 'smoothface' | 'cap_dread' | 'nihongo' | 'a_baby' | 'ventriloquist';
+export type CharacterId = 'smoothface' | 'cap_dread' | 'nihongo' | 'a_baby' | 'ventriloquist' | 'troll';
 export type EmotionCutoutType = 'anger' | 'lightning' | 'shock' | 'question' | 'idea' | 'sweat';
 
 export interface PuppetAnimState {
@@ -93,46 +93,55 @@ const CAPDREAD_BOXES: Record<string, PartBox> = {
 };
 
 const NIHONGO_BOXES: Record<string, PartBox> = {
-  shoe_back:        { x: 130, y: 310, w:  72, h:  46 },
-  leg_back:         { x: 140, y: 240, w:  56, h:  96 },
-  shoe_front:       { x: 172, y: 312, w:  74, h:  48 },
-  leg_front:        { x: 172, y: 242, w:  56, h:  98 },
-  hand_back:        { x: 254, y: 192, w:  36, h:  38 },
-  arm_back:         { x: 204, y: 138, w:  78, h:  92 },
-  torso:            { x: 108, y: 118, w: 160, h: 164 },
-  head:             { x: 142, y:  42, w:  96, h: 110 },
-  eyes_normal:      { x: 168, y:  86, w:  54, h:  24 },
-  eyes_closed:      { x: 168, y:  86, w:  54, h:  24 },
-  eyes_squint:      { x: 168, y:  86, w:  54, h:  24 },
-  brows_normal:     { x: 164, y:  74, w:  60, h:  22 },
-  brows_angry:      { x: 164, y:  72, w:  60, h:  24 },
-  headband:         { x: 116, y:  56, w: 116, h:  44 },
-  broom_katana:     { x: 138, y: 128, w:  68, h: 228 },
-  hand_front_fist:  { x: 152, y: 194, w:  36, h:  36 },
-  hand_front_open:  { x: 150, y: 190, w:  40, h:  42 },
-  arm_front:        { x: 106, y: 146, w:  82, h:  88 },
+  shoe_back:        { x: 158, y: 306, w:  72, h:  62 },
+  leg_back:         { x: 164, y: 238, w:  60, h:  98 },
+  shoe_front:       { x: 118, y: 312, w:  72, h:  62 },
+  leg_front:        { x: 130, y: 242, w:  56, h: 104 },
+  hand_back:        { x: 214, y: 188, w:  38, h:  41 },
+  arm_back:         { x: 156, y: 114, w:  84, h: 108 },
+  torso:            { x: 110, y:  98, w: 112, h: 186 },
+  head:             { x: 126, y:  18, w:  83, h: 124 },
+  eyes_normal:      { x: 152, y:  64, w:  44, h:  18 },
+  eyes_closed:      { x: 152, y:  64, w:  42, h:  20 },
+  eyes_squint:      { x: 152, y:  64, w:  44, h:  17 },
+  brows_normal:     { x: 150, y:  50, w:  48, h:  15 },
+  brows_angry:      { x: 150, y:  49, w:  46, h:  18 },
+  headband:         { x: 110, y:  30, w: 102, h:  51 },
+  broom_katana:     { x: 142, y: 128, w:  76, h: 212 },
+  hand_front_fist:  { x: 162, y: 194, w:  36, h:  37 },
+  hand_front_open:  { x: 160, y: 190, w:  38, h:  41 },
+  arm_front:        { x:  84, y: 114, w: 101, h: 112 },
 };
 
 const ABABY_BOXES: Record<string, PartBox> = {
-  arm_back:         { x: 182, y: 128, w:  98, h: 144 },
-  legs_diaper:      { x: 108, y: 206, w: 116, h: 102 },
-  torso:            { x:  96, y: 104, w: 156, h: 146 },
-  head:             { x: 146, y:  52, w: 104, h: 106 },
-  eyes_normal:      { x: 174, y:  86, w:  56, h:  26 },
-  eyes_angry:       { x: 174, y:  84, w:  58, h:  28 },
-  bonnet:           { x: 128, y:  36, w: 112, h:  94 },
-  arm_front:        { x:  74, y: 138, w: 106, h: 152 },
+  arm_back:         { x: 174, y: 134, w:  84, h: 168 },
+  legs_diaper:      { x: 118, y: 192, w: 101, h: 112 },
+  arm_front:        { x:  82, y: 136, w:  78, h: 172 },
+  torso:            { x:  88, y:  84, w: 157, h: 154 },
+  head:             { x: 132, y:  32, w:  93, h: 112 },
+  eyes_normal:      { x: 164, y:  54, w:  44, h:  27 },
+  eyes_angry:       { x: 163, y:  54, w:  46, h:  25 },
+  bonnet:           { x: 124, y:  18, w:  78, h:  72 },
 };
 
 const VENTRILO_BOXES: Record<string, PartBox> = {
-  shoes:            { x: 126, y: 332, w: 104, h:  46 },
-  legs:             { x: 118, y: 206, w:  78, h: 146 },
-  arm_back:         { x: 158, y: 118, w:  56, h: 114 },
-  torso:            { x: 112, y:  96, w:  92, h: 148 },
-  head_jaw:         { x: 130, y:  22, w:  76, h: 112 },
-  eyes_normal:      { x: 149, y:  54, w:  38, h:  24 },
-  arm_front:        { x: 118, y: 114, w: 104, h: 118 },
-  dummy_rapoleon:   { x: 146, y:  82, w: 122, h: 142 },
+  shoes:            { x: 118, y: 326, w:  99, h:  62 },
+  legs:             { x: 112, y: 198, w:  82, h: 170 },
+  arm_back:         { x: 168, y: 108, w:  47, h: 132 },
+  torso:            { x: 106, y:  86, w:  95, h: 156 },
+  head_jaw:         { x: 122, y:   6, w:  65, h: 126 },
+  eyes_normal:      { x: 146, y:  44, w:  31, h:  28 },
+  arm_front:        { x: 104, y: 118, w: 112, h:  75 },
+  dummy_rapoleon:   { x: 148, y:  68, w: 115, h: 168 },
+};
+
+const TROLL_BOXES: Record<string, PartBox> = {
+  arm_back:         { x: 182, y: 106, w: 103, h: 174 },
+  legs_feet:        { x: 104, y: 232, w: 128, h: 142 },
+  torso_tunic:      { x:  88, y:  96, w: 151, h: 202 },
+  head_jaw:         { x: 106, y:  16, w: 126, h: 138 },
+  eyes:             { x: 148, y:  52, w:  68, h:  44 },
+  arm_front_club:   { x:  48, y: 108, w: 180, h: 216 },
 };
 
 export class CutoutRigRenderer {
@@ -268,6 +277,18 @@ export class CutoutRigRenderer {
     for (const [k, src] of vtPieces) {
       this.loadImg(k, src);
     }
+
+    const trPieces: Array<[string, string]> = [
+      ['tr_arm_back',         'art/approved/z0/troll.arm_back.png'],
+      ['tr_legs_feet',        'art/approved/z0/troll.legs_feet.png'],
+      ['tr_torso_tunic',      'art/approved/z0/troll.torso_tunic.png'],
+      ['tr_head_jaw',         'art/approved/z0/troll.head_jaw.png'],
+      ['tr_eyes',             'art/approved/z0/troll.eyes.png'],
+      ['tr_arm_front_club',   'art/approved/z0/troll.arm_front_club.png'],
+    ];
+    for (const [k, src] of trPieces) {
+      this.loadImg(k, src);
+    }
   }
 
   public createAnimState(id: CharacterId, x: number, y: number, scale = 1.0, facing: 1 | -1 = 1): PuppetAnimState {
@@ -387,10 +408,18 @@ export class CutoutRigRenderer {
     box: PartBox,
     dx = 0,
     dy = 0,
-    rot = 0
+    rot = 0,
+    cutoutShadow = false
   ): void {
     const im = this.getImg(imgKey);
     if (!im) return;
+    if (cutoutShadow) {
+      ctx.save();
+      ctx.shadowColor = 'rgba(15, 12, 10, 0.48)';
+      ctx.shadowBlur = 2.5;
+      ctx.shadowOffsetX = 1.5;
+      ctx.shadowOffsetY = 2.5;
+    }
     if (rot !== 0) {
       const cx = box.x + box.w * 0.5 + dx;
       const cy = box.y + box.h * 0.5 + dy;
@@ -401,6 +430,9 @@ export class CutoutRigRenderer {
       ctx.restore();
     } else {
       ctx.drawImage(im, box.x + dx, box.y + dy, box.w, box.h);
+    }
+    if (cutoutShadow) {
+      ctx.restore();
     }
   }
 
@@ -532,6 +564,10 @@ export class CutoutRigRenderer {
       this.renderVentriloquistRig(ctx, state);
       return;
     }
+    if (state.id === 'troll') {
+      this.renderTrollRig(ctx, state);
+      return;
+    }
     this.renderCapDreadRig(ctx, state);
   }
 
@@ -637,25 +673,25 @@ export class CutoutRigRenderer {
     ctx.translate(state.x, state.y);
     const cardScaleX = Math.abs(state.flipVisual) < 0.09 ? (state.flipVisual >= 0 ? 0.09 : -0.09) : state.flipVisual;
     ctx.scale(cardScaleX * state.squashX * rigScale, state.squashY * rigScale);
-    ctx.translate(-188, -356);
+    ctx.translate(-168, -368);
 
-    this.drawPart(ctx, 'ni_shoe_front', NIHONGO_BOXES.shoe_back);
-    this.drawPart(ctx, 'ni_leg_back', NIHONGO_BOXES.leg_back);
-    this.drawPart(ctx, 'ni_shoe_front', NIHONGO_BOXES.shoe_front);
-    this.drawPart(ctx, 'ni_leg_front', NIHONGO_BOXES.leg_front);
-    this.drawPart(ctx, 'ni_hand_front_open', NIHONGO_BOXES.hand_back, 0, bodyBob * 0.8);
-    this.drawPart(ctx, 'ni_arm_back', NIHONGO_BOXES.arm_back, 0, bodyBob * 0.8);
-    this.drawPart(ctx, 'ni_torso', NIHONGO_BOXES.torso, 0, bodyBob);
+    this.drawPart(ctx, 'ni_shoe_front', NIHONGO_BOXES.shoe_back, 0, 0, 0, true);
+    this.drawPart(ctx, 'ni_leg_back', NIHONGO_BOXES.leg_back, 0, 0, 0, true);
+    this.drawPart(ctx, 'ni_shoe_front', NIHONGO_BOXES.shoe_front, 0, 0, 0, true);
+    this.drawPart(ctx, 'ni_leg_front', NIHONGO_BOXES.leg_front, 0, 0, 0, true);
+    this.drawPart(ctx, 'ni_hand_front_open', NIHONGO_BOXES.hand_back, 0, bodyBob * 0.8, 0, true);
+    this.drawPart(ctx, 'ni_arm_back', NIHONGO_BOXES.arm_back, 0, bodyBob * 0.8, 0, true);
+    this.drawPart(ctx, 'ni_torso', NIHONGO_BOXES.torso, 0, bodyBob, 0, true);
 
     const headBob = bodyBob * 1.15;
-    this.drawPart(ctx, 'ni_head', NIHONGO_BOXES.head, 0, headBob);
-    this.drawPart(ctx, eyesKey, NIHONGO_BOXES[eyesKey.replace('ni_', '')], 0, headBob);
-    this.drawPart(ctx, browsKey, NIHONGO_BOXES[browsKey.replace('ni_', '')], 0, headBob);
-    this.drawPart(ctx, 'ni_headband', NIHONGO_BOXES.headband, 0, headBob);
+    this.drawPart(ctx, 'ni_head', NIHONGO_BOXES.head, 0, headBob, 0, true);
+    this.drawPart(ctx, eyesKey, NIHONGO_BOXES[eyesKey.replace('ni_', '')], 0, headBob, 0, false);
+    this.drawPart(ctx, browsKey, NIHONGO_BOXES[browsKey.replace('ni_', '')], 0, headBob, 0, false);
+    this.drawPart(ctx, 'ni_headband', NIHONGO_BOXES.headband, 0, headBob, 0, true);
 
-    this.drawPart(ctx, 'ni_broom_katana', NIHONGO_BOXES.broom_katana, 0, bodyBob * 0.9);
-    this.drawPart(ctx, 'ni_arm_front', NIHONGO_BOXES.arm_front, 0, bodyBob);
-    this.drawPart(ctx, handKey, NIHONGO_BOXES[handKey.replace('ni_', '')], 0, bodyBob);
+    this.drawPart(ctx, 'ni_broom_katana', NIHONGO_BOXES.broom_katana, 0, bodyBob * 0.9, 0, true);
+    this.drawPart(ctx, 'ni_arm_front', NIHONGO_BOXES.arm_front, 0, bodyBob, 0, true);
+    this.drawPart(ctx, handKey, NIHONGO_BOXES[handKey.replace('ni_', '')], 0, bodyBob, 0, true);
 
     ctx.restore();
   }
@@ -668,28 +704,28 @@ export class CutoutRigRenderer {
     ctx.translate(state.x, state.y);
     ctx.fillStyle = 'rgba(12, 9, 8, 0.35)';
     ctx.beginPath();
-    ctx.ellipse(0, 0, 68 * normScale, 11 * normScale, 0, 0, Math.PI * 2);
+    ctx.ellipse(0, 0, 74 * normScale, 11 * normScale, 0, 0, Math.PI * 2);
     ctx.fill();
     ctx.restore();
 
-    const bodyBob = Math.sin(state.idlePhase * 1.5) * 2.0 + (state.talkAmp > 0.04 ? Math.sin(state.idlePhase * 7) * state.talkAmp * 2.6 : 0);
+    const bodyBob = Math.sin(state.idlePhase * 1.5) * 2.2 + (state.talkAmp > 0.04 ? Math.sin(state.idlePhase * 7) * state.talkAmp * 2.8 : 0);
     const eyesKey = state.poseIndex === 2 || state.talkAmp > 0.06 ? 'ab_eyes_angry' : 'ab_eyes_normal';
 
     ctx.save();
     ctx.translate(state.x, state.y);
     const cardScaleX = Math.abs(state.flipVisual) < 0.09 ? (state.flipVisual >= 0 ? 0.09 : -0.09) : state.flipVisual;
     ctx.scale(cardScaleX * state.squashX * rigScale, state.squashY * rigScale);
-    ctx.translate(-166, -304);
+    ctx.translate(-168, -306);
 
-    this.drawPart(ctx, 'ab_arm_back', ABABY_BOXES.arm_back, 0, bodyBob * 0.7);
-    this.drawPart(ctx, 'ab_legs_diaper', ABABY_BOXES.legs_diaper);
-    this.drawPart(ctx, 'ab_torso', ABABY_BOXES.torso, 0, bodyBob);
+    this.drawPart(ctx, 'ab_arm_back', ABABY_BOXES.arm_back, 0, bodyBob * 0.5, 0, true);
+    this.drawPart(ctx, 'ab_legs_diaper', ABABY_BOXES.legs_diaper, 0, bodyBob * 0.7, 0, true);
+    this.drawPart(ctx, 'ab_arm_front', ABABY_BOXES.arm_front, 0, bodyBob * 0.5, 0, true);
+    this.drawPart(ctx, 'ab_torso', ABABY_BOXES.torso, 0, bodyBob, 0, true);
 
     const headBob = bodyBob * 1.15;
-    this.drawPart(ctx, 'ab_bonnet', ABABY_BOXES.bonnet, 0, headBob);
-    this.drawPart(ctx, 'ab_head', ABABY_BOXES.head, 0, headBob);
-    this.drawPart(ctx, eyesKey, ABABY_BOXES[eyesKey.replace('ab_', '')], 0, headBob);
-    this.drawPart(ctx, 'ab_arm_front', ABABY_BOXES.arm_front, 0, bodyBob * 0.9);
+    this.drawPart(ctx, 'ab_head', ABABY_BOXES.head, 0, headBob, 0, true);
+    this.drawPart(ctx, eyesKey, ABABY_BOXES[eyesKey.replace('ab_', '')], 0, headBob, 0, false);
+    this.drawPart(ctx, 'ab_bonnet', ABABY_BOXES.bonnet, 0, headBob, 0, true);
 
     ctx.restore();
   }
@@ -714,16 +750,47 @@ export class CutoutRigRenderer {
     ctx.translate(state.x, state.y);
     const cardScaleX = Math.abs(state.flipVisual) < 0.09 ? (state.flipVisual >= 0 ? 0.09 : -0.09) : state.flipVisual;
     ctx.scale(cardScaleX * state.squashX * rigScale, state.squashY * rigScale);
-    ctx.translate(-168, -376);
+    ctx.translate(-164, -386);
 
-    this.drawPart(ctx, 'vt_shoes', VENTRILO_BOXES.shoes);
-    this.drawPart(ctx, 'vt_legs', VENTRILO_BOXES.legs);
-    this.drawPart(ctx, 'vt_arm_back', VENTRILO_BOXES.arm_back, 0, bodyBob);
-    this.drawPart(ctx, 'vt_torso', VENTRILO_BOXES.torso, 0, bodyBob);
-    this.drawPart(ctx, 'vt_head_jaw', VENTRILO_BOXES.head_jaw, 0, bodyBob * 1.1);
-    this.drawPart(ctx, 'vt_eyes_normal', VENTRILO_BOXES.eyes_normal, 0, bodyBob * 1.1);
-    this.drawPart(ctx, 'vt_arm_front', VENTRILO_BOXES.arm_front, 0, bodyBob + dummyBob * 0.3);
-    this.drawPart(ctx, 'vt_dummy_rapoleon', VENTRILO_BOXES.dummy_rapoleon, 0, bodyBob + dummyBob, dummyRot);
+    this.drawPart(ctx, 'vt_shoes', VENTRILO_BOXES.shoes, 0, 0, 0, true);
+    this.drawPart(ctx, 'vt_legs', VENTRILO_BOXES.legs, 0, 0, 0, true);
+    this.drawPart(ctx, 'vt_arm_back', VENTRILO_BOXES.arm_back, 0, bodyBob, 0, true);
+    this.drawPart(ctx, 'vt_torso', VENTRILO_BOXES.torso, 0, bodyBob, 0, true);
+    this.drawPart(ctx, 'vt_head_jaw', VENTRILO_BOXES.head_jaw, 0, bodyBob * 1.1, 0, true);
+    this.drawPart(ctx, 'vt_eyes_normal', VENTRILO_BOXES.eyes_normal, 0, bodyBob * 1.1, 0, false);
+    this.drawPart(ctx, 'vt_arm_front', VENTRILO_BOXES.arm_front, 0, bodyBob + dummyBob * 0.3, 0, true);
+    this.drawPart(ctx, 'vt_dummy_rapoleon', VENTRILO_BOXES.dummy_rapoleon, 0, bodyBob + dummyBob, dummyRot, true);
+
+    ctx.restore();
+  }
+
+  private renderTrollRig(ctx: CanvasRenderingContext2D, state: PuppetAnimState): void {
+    const normScale = state.scale;
+    const rigScale = 0.98 * normScale;
+
+    ctx.save();
+    ctx.translate(state.x, state.y);
+    ctx.fillStyle = 'rgba(12, 9, 8, 0.38)';
+    ctx.beginPath();
+    ctx.ellipse(0, 0, 76 * normScale, 12 * normScale, 0, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.restore();
+
+    const bodyBob = Math.sin(state.idlePhase * 1.4) * 2.4;
+    const clubRot = Math.sin(state.idlePhase * 1.8) * 0.045;
+
+    ctx.save();
+    ctx.translate(state.x, state.y);
+    const cardScaleX = Math.abs(state.flipVisual) < 0.09 ? (state.flipVisual >= 0 ? 0.09 : -0.09) : state.flipVisual;
+    ctx.scale(cardScaleX * state.squashX * rigScale, state.squashY * rigScale);
+    ctx.translate(-165, -372);
+
+    this.drawPart(ctx, 'tr_arm_back', TROLL_BOXES.arm_back, 0, bodyBob * 0.8, -clubRot * 0.4, true);
+    this.drawPart(ctx, 'tr_legs_feet', TROLL_BOXES.legs_feet, 0, 0, 0, true);
+    this.drawPart(ctx, 'tr_torso_tunic', TROLL_BOXES.torso_tunic, 0, bodyBob, 0, true);
+    this.drawPart(ctx, 'tr_head_jaw', TROLL_BOXES.head_jaw, 0, bodyBob * 1.2, clubRot * 0.25, true);
+    this.drawPart(ctx, 'tr_eyes', TROLL_BOXES.eyes, 0, bodyBob * 1.25, 0, true);
+    this.drawPart(ctx, 'tr_arm_front_club', TROLL_BOXES.arm_front_club, 0, bodyBob * 0.9, clubRot, true);
 
     ctx.restore();
   }

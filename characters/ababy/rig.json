@@ -16,11 +16,11 @@
       "parent": "torso",
       "offset": [
         202,
-        146
+        132
       ],
       "size": [
-        98,
-        144
+        84,
+        168
       ],
       "pivots": {
         "shoulder": [
@@ -38,12 +38,12 @@
       "z_index": 15,
       "parent": "torso",
       "offset": [
-        108,
-        206
+        122,
+        198
       ],
       "size": [
-        116,
-        102
+        101,
+        112
       ],
       "pivots": {
         "waist": [
@@ -62,11 +62,11 @@
       "parent": null,
       "offset": [
         96,
-        104
+        100
       ],
       "size": [
-        156,
-        146
+        157,
+        154
       ],
       "pivots": {
         "neck": [
@@ -92,12 +92,12 @@
       "z_index": 30,
       "parent": "torso",
       "offset": [
-        146,
-        52
+        148,
+        48
       ],
       "size": [
-        104,
-        106
+        93,
+        112
       ],
       "pivots": {
         "neck": [
@@ -119,12 +119,12 @@
       "z_index": 32,
       "parent": "head",
       "offset": [
-        174,
-        86
+        178,
+        76
       ],
       "size": [
-        56,
-        26
+        44,
+        27
       ],
       "pivots": {
         "anchor": [
@@ -138,12 +138,12 @@
       "z_index": 32,
       "parent": "head",
       "offset": [
-        174,
-        84
+        178,
+        76
       ],
       "size": [
-        58,
-        28
+        46,
+        25
       ],
       "pivots": {
         "anchor": [
@@ -154,15 +154,15 @@
     },
     "bonnet": {
       "asset": "art/approved/ababy/ababy.bonnet.png",
-      "z_index": 35,
+      "z_index": 28,
       "parent": "head",
       "offset": [
-        128,
+        148,
         36
       ],
       "size": [
-        112,
-        94
+        78,
+        72
       ],
       "pivots": {
         "anchor": [
@@ -176,12 +176,12 @@
       "z_index": 40,
       "parent": "torso",
       "offset": [
-        68,
-        144
+        82,
+        132
       ],
       "size": [
-        106,
-        152
+        78,
+        172
       ],
       "pivots": {
         "shoulder": [
