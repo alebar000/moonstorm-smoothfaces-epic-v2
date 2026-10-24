@@ -1056,30 +1056,30 @@ class SmoothfacePilotGame {
     this.cameraX = 0;
     this.spawnSparks(this.player.x, this.player.y - 80, '#f3d27a', 14);
     if (chap === 0) {
-      this.walkTo(840, 795, () => {
+      this.walkTo(920, 795, () => {
         this.player.facing = 1;
         this.setTemporaryPlayerPose(4, 2200, false);
       });
       this.setOriginStoryMilestone(
-        'YEARS 0-12: THE HAIRLESS TWIN OF STACHE BARBERSHOP',
-        '"Twin brother Morgan was born with a handlebar moustache and shaved our butler Mutton Chops at age one! Click anywhere on the Barbershop floor or portraits to walk around my childhood!"',
+        'YEARS 0-12: STACHE FAMILY BARBERSHOP',
+        '"Twin brother Morgan was born with a handlebar moustache and shaved our butler Mutton Chops at age one! Click anywhere on the Barbershop floor to walk around!"',
         0
       );
     } else if (chap === 1) {
-      this.walkTo(820, 795, () => {
+      this.walkTo(1040, 760, () => {
         this.player.facing = -1;
         this.setTemporaryPlayerPose(6, 2200, true);
       });
       this.setOriginStoryMilestone(
-        'YEARS 13-19: GOSU OF THE STREETS & BIRTH OF MR. SMOOTHFACE',
+        'YEARS 13-19: BIRTH OF MR. SMOOTHFACE',
         '"For 6 years I lived off the streets (magic, juggling, cutpursing, haggling) until Morgan was crowned Doctor Barber! Staring into this barbershop mirror, I became MR. SMOOTHFACE!"',
         1
       );
     } else {
-      this.npcs.cap_dread.x = 1240;
-      this.npcs.cap_dread.y = 795;
+      this.npcs.cap_dread.x = 1260;
+      this.npcs.cap_dread.y = 785;
       this.npcs.cap_dread.facing = -1;
-      this.walkTo(900, 795, () => {
+      this.walkTo(860, 745, () => {
         this.player.facing = 1;
         this.setTemporaryPlayerPose(5, 2200, false);
       });
@@ -1187,6 +1187,24 @@ class SmoothfacePilotGame {
 
   private clampToWalkbox(x: number, y: number): { x: number; y: number } {
     const maxW = this.getRoomWidth();
+    if (this.currentRoom === 'ORIGIN') {
+      if (this.originChapter === 0) {
+        return {
+          x: Math.max(480, Math.min(1520, x)),
+          y: Math.max(730, Math.min(875, y)),
+        };
+      }
+      if (this.originChapter === 1) {
+        return {
+          x: Math.max(480, Math.min(1540, x)),
+          y: Math.max(585, Math.min(875, y)),
+        };
+      }
+      return {
+        x: Math.max(380, Math.min(1520, x)),
+        y: Math.max(585, Math.min(875, y)),
+      };
+    }
     return {
       x: Math.max(160, Math.min(maxW - 160, x)),
       y: Math.max(730, Math.min(850, y)),
@@ -2669,6 +2687,9 @@ class SmoothfacePilotGame {
     if (this.currentRoom === 'LOLDEMO') {
       const lolDepth = (this.player.y - 665) / 170;
       this.player.scale = Math.max(0.80, Math.min(0.95, 0.82 + lolDepth * 0.12));
+    } else if (this.currentRoom === 'ORIGIN') {
+      const originDepth = Math.max(0, Math.min(1, (this.player.y - 585) / 280));
+      this.player.scale = 0.78 + originDepth * 0.26;
     } else {
       const depthRatio = Math.max(0, Math.min(1, (this.player.y - 730) / 125));
       this.player.scale = 0.92 + depthRatio * 0.13;
@@ -2681,21 +2702,31 @@ class SmoothfacePilotGame {
     if (this.studio?.active) {
       // In Studio Mode, camera X is controlled manually by the user!
     } else if (this.currentRoom === 'ORIGIN') {
-      // In the Title Screen Life Story stage, frame Chapter I (Barbershop: 0) or Chapter II (Foggy Street: 1280) cleanly to the right of the Title Signpost!
       this.cameraX = 0;
 
-      // Autonomous Life-Story Stroll when the player hasn't clicked on the Title Stage recently
+      // Gentle autonomous stroll only if idle for 18+ seconds
       if (!this.player.isWalking) {
         this.originIdleTimer += dt;
-        if (this.originIdleTimer >= 5.2) {
+        if (this.originIdleTimer >= 18.0) {
           this.originIdleTimer = 0;
-          const tourHotspots = ['origin_ancestor_portraits', 'origin_barber_chair'];
-          const nextId = tourHotspots[this.originTourStep % tourHotspots.length];
+          const waypoints =
+            this.originChapter === 0
+              ? [
+                  { x: 1080, y: 795 },
+                  { x: 780, y: 810 },
+                ]
+              : this.originChapter === 1
+              ? [
+                  { x: 1180, y: 735 },
+                  { x: 890, y: 805 },
+                ]
+              : [
+                  { x: 980, y: 760 },
+                  { x: 680, y: 730 },
+                ];
+          const wp = waypoints[this.originTourStep % waypoints.length];
           this.originTourStep++;
-          const hit = this.getVisibleHotspots().find((h) => h.id === nextId);
-          if (hit) {
-            this.walkAndExecute(hit, () => this.executeVerbOnHotspot(hit, 'inspect'));
-          }
+          this.walkTo(wp.x, wp.y, null);
         }
       }
     } else if (maxCamX > 0) {
